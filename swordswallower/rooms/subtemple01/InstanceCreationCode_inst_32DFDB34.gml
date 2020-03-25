@@ -1,0 +1,1 @@
+text="you can call the fuchia sword back to you by pressing E when it is in sight"

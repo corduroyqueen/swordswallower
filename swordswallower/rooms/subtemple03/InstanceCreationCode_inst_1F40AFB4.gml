@@ -1,0 +1,1 @@
+tutorial_friend = tutorial_block

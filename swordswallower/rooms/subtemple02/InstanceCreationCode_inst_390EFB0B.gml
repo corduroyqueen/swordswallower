@@ -1,0 +1,1 @@
+text = "secret passage for dropping"

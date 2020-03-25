@@ -1,0 +1,1 @@
+text="press E to pick up the fuchsia sword"

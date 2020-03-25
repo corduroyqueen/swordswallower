@@ -1,0 +1,1 @@
+room_choice = subtemple02

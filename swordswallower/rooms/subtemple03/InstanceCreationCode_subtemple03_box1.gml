@@ -1,0 +1,1 @@
+boss = subtemple03_miniboss1

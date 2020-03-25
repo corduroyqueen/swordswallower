@@ -1,0 +1,1 @@
+text="the sword also appears on your map (shift)"

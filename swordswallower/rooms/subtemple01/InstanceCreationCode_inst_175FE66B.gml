@@ -1,0 +1,1 @@
+text="left click to pull sword back"

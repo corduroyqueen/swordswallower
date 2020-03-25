@@ -1,0 +1,1 @@
+dialogue = "i am a wizard.... i promise "

@@ -1,0 +1,1 @@
+text="aim and left click"

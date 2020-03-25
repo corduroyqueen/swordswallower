@@ -1,0 +1,1 @@
+fumbling_timer = 500

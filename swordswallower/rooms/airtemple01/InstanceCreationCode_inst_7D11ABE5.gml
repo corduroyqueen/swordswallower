@@ -1,0 +1,1 @@
+tear_timer_spawn = 120

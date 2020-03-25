@@ -1,0 +1,1 @@
+text = "story content ovr here"

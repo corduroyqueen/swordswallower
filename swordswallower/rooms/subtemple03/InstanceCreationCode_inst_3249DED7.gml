@@ -1,0 +1,1 @@
+text="talk to characters with space bar"

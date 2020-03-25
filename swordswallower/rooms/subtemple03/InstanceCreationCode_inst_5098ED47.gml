@@ -1,0 +1,1 @@
+text="hold right click to cling to walls"
