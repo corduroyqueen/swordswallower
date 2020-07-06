@@ -17,3 +17,8 @@ lifect = 0
 
 xpreva = x
 ypreva = y
+
+spr = false
+size = 0
+xx = 0
+yy = 0

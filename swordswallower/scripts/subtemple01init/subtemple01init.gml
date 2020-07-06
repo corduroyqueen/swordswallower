@@ -3,14 +3,15 @@ checkpoints[0] = hello
 hello.number = 0
 hello.setpoint = true
 checkpoint_manager.checkpoint = hello
+hello.starting_bool = true
 		
-num_switches = instance_number(switch_wall_switch_obj)
-switches = array_create(num_switches)
-switches_b = array_create(num_switches)
-
+		
 subtemple01ckptbool = false
 
 
+num_switches = instance_number(switch_wall_switch_obj)
+switches = array_create(num_switches)
+switches_b = array_create(num_switches)
 for(i=0;i<num_switches;i++) {
 	switches[i] = instance_find(switch_wall_switch_obj,i)
 	switches_b[i] = false
@@ -24,6 +25,27 @@ for(i=0;i<num_chargers;i++) {
 	chargers[i] = instance_find(charger_obj,i)
 	chargers_b[i] = true
 }
+
+num_keydoors = instance_number(key_door_obj)
+keydoors = array_create(num_keydoors)
+keydoors_b = array_create(num_keydoors)
+
+for(i=0;i<num_keydoors;i++) {
+	keydoors[i] = instance_find(key_door_obj,i)
+	keydoors_b[i] = true
+}
+
+num_keys = instance_number(key_obj)
+keys = array_create(num_keys)
+keys_b = array_create(num_keys)
+keys_b2 = array_create(num_keys)
+
+for(i=0;i<num_keys;i++) {
+	keys[i] = instance_find(key_obj,i)
+	keys_b[i] = false
+	keys_b2[i] = true
+}
+
 
 
 num_boss_box = instance_number(boss_room_collision_obj)

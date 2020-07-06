@@ -32,3 +32,11 @@ refreshpos = 0
 number = 0
 
 thrown = false
+starting_bool = false
+
+fire_sound = firecrackle1
+audio_sound_gain(fire_sound,0,0)
+
+s_fire_emitter = audio_emitter_create()
+audio_play_sound_on(s_fire_emitter,fire_sound,true,0)
+audio_emitter_gain(s_fire_emitter,0)

@@ -30,3 +30,5 @@ leg1out=-10
 maxy = y
 
 okthen = 0
+
+yolo = false

@@ -1,0 +1,1 @@
+text = "the first is to the right and the second is to the left "

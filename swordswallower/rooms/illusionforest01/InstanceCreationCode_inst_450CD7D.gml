@@ -1,0 +1,1 @@
+text = "no npcs have dialogue currently, thats next on the task list "

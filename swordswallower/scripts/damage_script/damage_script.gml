@@ -19,7 +19,6 @@ if player_obj.damage_start && !player_obj.dmg_flashing {
 	player_obj.zoom_timer_bool = false
 	player_obj.zoom_timer = 0
 	player_obj.camera_shake = true
-	audio_manager(ow_0157,0,false,0)
 	reset_intangibility()
 }
 

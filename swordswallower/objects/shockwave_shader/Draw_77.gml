@@ -1,18 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if keyboard_check_pressed(ord("C")) {
-	recording = !recording	
+if level1_master.dev {
+	if keyboard_check_pressed(ord("C")) {
+		recording = !recording	
 	
+		if recording {
+			gif = gif_open(1920,1080)
+		} else {
+			gif_save(gif, "capture2.gif")
+		}
+	}
+
 	if recording {
-		gif = gif_open(1280,720)
-	} else {
-		gif_save(gif, "capture2.gif")
+	
+		gif_add_surface(gif,GUI,2)	
+	
 	}
 }
 
-if recording {
-	
-	gif_add_surface(gif,GUI,2)	
-	
-}

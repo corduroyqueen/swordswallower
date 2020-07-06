@@ -7,7 +7,7 @@ u_fx_strength	= shader_get_uniform(shader, "fx_strength");
 u_aspect		= shader_get_uniform(shader, "aspect");
 u_aberration	= shader_get_uniform(shader, "aberration");
 u_tex_waves		= shader_get_sampler_index(shader, "tex_waves");
-aspect			= 1280 / 720
+aspect			= 1920 / 1080
 tex_waves		= -1;
 
 // wave parameters:
@@ -23,8 +23,8 @@ list_of_waves	= ds_list_create();
 // prepare waves surface
 srf_waves		= -1;
 srf_waves_scale	= 1;
-view_w			= 1280
-view_h			= 720
+view_w			= 1920
+view_h			= 1080
 
 // turn off automatic drawing of the application surface:
 application_surface_draw_enable(false);
@@ -35,4 +35,6 @@ recording = false
 
 
 
-GUI = surface_create(1280,720);
+GUI = surface_create(1920,1080);
+
+strength_input = 0

@@ -10,5 +10,8 @@ if zoom_particle_timer>2 {
 	
 	var shadow = instance_create_depth(x,y,0,boost_shadow)
 	
+	//shockwave_shader.trigger = true
+	//shockwave_shader.strength_input = 0.00
+	
 	
 }

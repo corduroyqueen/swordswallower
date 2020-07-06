@@ -7,8 +7,11 @@ if collision_line(x,y,obj.x,obj.y,wall_obj,false,true)==noone
 && collision_line(x,y,obj.x,obj.y,black_wall_obj,false,true)==noone 
 && collision_line(x,y,obj.x,obj.y,wood_wall_obj,false,true)==noone
 && collision_line(x,y,obj.x,obj.y,switch_wall_obj,false,true)==noone
+&& collision_line(x,y,obj.x,obj.y,illusion_wall_obj,false,true)==noone
+&& collision_line(x,y,obj.x,obj.y,burn_wall_obj,false,true)==noone
 && collision_line(x,y,obj.x,obj.y,voidwall_obj,false,true)==noone
 && collision_line(x,y,obj.x,obj.y,close_wall_obj,false,true)==noone
+&& collision_line(x,y,obj.x,obj.y,key_door_obj,false,true)==noone
 && collision_line(x,y,obj.x,obj.y,double_switch_wall_obj,false,true)==noone {
 	return true	
 } else {

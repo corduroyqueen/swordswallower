@@ -1,0 +1,1 @@
+text = "this npc will tell you that you have to destroy 3 wiggly statues "

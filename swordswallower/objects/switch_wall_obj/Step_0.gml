@@ -36,10 +36,13 @@ if enabled {
 		
 	if point_distance(x,y,endx,endy)>1 {
 		movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
-		move_towards_point(endx,endy,10)
-		if point_distance(x,y,endx,endy)<(1+speed){
+		move_towards_point(endx,endy,15)
+		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
+			audio_play_sound(metal_door,0,false)
+			audio_play_sound(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false)
+			audio_play_sound(hit_wall,0,false)
 		}
 		
 		
@@ -72,8 +75,8 @@ if enabled {
 					}
 				}else if pers==1 {
 					
-					if wall_checker(x,y+other.vspeed) {
-						death = true
+					if wall_checker(x,y+other.vspeed) && !zoom_timer_bool {
+						start_death = true
 					} else {
 						vspeed=0
 						y+=other.vspeed
@@ -87,9 +90,13 @@ if enabled {
 	if point_distance(x,y,startx,starty)>1 {
 		movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
 		move_towards_point(startx,starty,10)
-		if point_distance(x,y,startx,starty)<(1+speed){
+		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y) {
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
+			
+			audio_play_sound(metal_door,0,false)
+			audio_play_sound(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false)
+			audio_play_sound(sword_thud_1,0,false)
 		}
 	} else {
 		x = startx

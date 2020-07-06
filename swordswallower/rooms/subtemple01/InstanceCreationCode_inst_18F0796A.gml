@@ -1,0 +1,1 @@
+sprite_index = gatefront3_spr1

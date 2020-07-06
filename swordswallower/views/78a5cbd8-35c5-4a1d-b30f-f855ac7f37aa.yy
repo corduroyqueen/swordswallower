@@ -17,11 +17,15 @@
         "90229bac-b962-432a-96e6-c4c2f97f78a1",
         "61328f8b-f876-4723-85ce-4218db0ea832",
         "06be9aa7-a2d6-418e-be5c-bf51044ec78b",
+        "e2531c2f-4c25-40de-a100-bf3272cc265b",
         "c4e4dd7b-420b-4e90-b789-dcec954df758",
         "d320802c-ed11-4ff4-afc8-08da01c166da",
         "1a37f422-f8bf-45b5-9500-59549632d1a4",
         "f3b78c82-492a-4c5f-a92b-d37afba70882",
-        "9267dafa-ec27-4a56-801a-202d1c24f6b8"
+        "9267dafa-ec27-4a56-801a-202d1c24f6b8",
+        "6aaf44f0-f1d5-453e-8be7-cdbf067a83ed",
+        "22a32659-ea48-49fe-be42-269e71e2ee5d",
+        "a9a3d97f-afc2-4a3c-82d3-3be23a7a5f45"
     ],
     "filterType": "GMSprite",
     "folderName": "other_art_stuff_iam_2_lazy_2_organize",

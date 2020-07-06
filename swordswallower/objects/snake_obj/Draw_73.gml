@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+/*
 if !death {
 	draw_set_color(c_red)
 	gug = head.image_angle+90

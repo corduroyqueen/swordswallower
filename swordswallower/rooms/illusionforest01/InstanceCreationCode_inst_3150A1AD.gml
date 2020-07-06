@@ -1,0 +1,1 @@
+text = "you can get the map by spending 1 green gem "

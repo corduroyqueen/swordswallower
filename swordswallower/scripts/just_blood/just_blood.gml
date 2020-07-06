@@ -7,6 +7,7 @@ width = argument5
 height = argument6
 //color = argument7
 
+blood_splat_script()
 
 for (i=0;i<(amount+random_range(30,50));i++){
 	var poschangex
@@ -26,7 +27,12 @@ for (i=0;i<(amount+random_range(30,50));i++){
 	var scalevar = random_range(0.1,1)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
-	particle.hspeed = tail_obj.throwxs * reduction + random_range(-3,3)
-	particle.vspeed = tail_obj.throwys * reduction + random_range(-3,3)
+	particle.hspeed = tail_obj.throwxs * reduction + random_range(-3,3) *
+		choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
+			1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
+		
+	particle.vspeed = tail_obj.throwys * reduction + random_range(-3,3) *
+		choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
+			1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
 	
 }

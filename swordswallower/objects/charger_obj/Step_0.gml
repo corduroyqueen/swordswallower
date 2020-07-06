@@ -2,6 +2,9 @@
 // You can write your code in this editor
 
 my_floor = instance_place(x,y+1,wall_obj)
+if !instance_exists(my_floor) {
+	my_floor = instance_place(x,y+1,black_wall_obj)
+}
 player_floor = player_obj.current_platform
 
 if wall_checker(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
@@ -27,7 +30,7 @@ if last_fly_hp==fly_hp {
 	
 } else if fly_hp <= last_fly_hp-1 {
 	for(i=0;i<last_fly_hp-fly_hp;i++){
-		just_blood(random_range(-10,10),random_range(-10,10),0.2,80,true,sprite_width/4,sprite_height)
+		just_blood_input(0,0,-10,-10,80,true,sprite_width/4,sprite_height)
 	}
 	audio_manager(false,0,false,3)
 } 
@@ -59,9 +62,11 @@ if player_obj.tail_pulling && met && sword_present {
 	}
 }
 
+
+
 if state!=state_hitting && state!=state_knockback {
-	if (my_floor==player_floor && my_floor!= -4) || 
-	(abs(y-player_obj.y)<200 && point_distance(x,y,player_obj.x,player_obj.y)<450 && wall_raycast_checker(player_obj)) 
+	if (( my_floor==player_floor && my_floor!= -4) && 
+	wall_raycast_checker(player_obj) )
 	|| sword_present {
 		hunting = true
 	} 
@@ -143,7 +148,7 @@ if sword_present {
 }
 
 if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)<70 
-	&& !grabbing && !grabbed{
+	&& !grabbing && !grabbed  && state!=state_knockback {
 		
 	grabbing = true
 	player_obj.move_locked = true
@@ -189,9 +194,10 @@ if grabbing {
 	hspeed = lerp(hspeed,0,0.02)
 	state=state_hitting
 	hold_timer++
-	if hold_timer<45 {
+	if hold_timer<1 {
 		hit_timer = 0	
 	}
+	hit_timer=5
 	if player_obj.zoom_timer_bool {
 		grabbing = false
 		hold_timer = 0
@@ -265,9 +271,29 @@ if state==state_chasing {
 			
 			hspeed = 5 * -sign(hspeed)
 			vspeed = -3
+			y-=10
+			
+			if player_obj.x<26316 {
+				audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
+				audio_play_sound(sword_thud_1,0,false)
+				audio_play_sound(bullhurt,0,false)
+				audio_stop_sound(bullcharge)
+			} else if in_camera_range_bigger(x,y) {
+				audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
+				audio_play_sound(sword_thud_1,0,false)
+				audio_play_sound(bullhurt,0,false)
+				audio_stop_sound(bullcharge)	
+			}
 		}
 		
 	} else {
+		if charge_timer<=0 {
+			if player_obj.x<26316 {
+				audio_play_sound(bullcharge,0,false)
+			} else if in_camera_range_bigger(x,y) {
+				audio_play_sound(bullcharge,0,false)
+			}
+		}
 		charge_timer++
 		hspeed = lerp(hspeed,0,0.05)
 		image_xscale = -sign(player_obj.x-x)
@@ -285,9 +311,27 @@ if state==state_chasing {
 } 
 
 if state==state_idle {
-	if hunting && grounded {
-		state = state_chasing	
+	if facing_right{
+			
+	} else {
+		image_xscale = 1
 	}
+	image_xscale = -1
+	
+	if hunting && grounded {
+		if fade_in_t<=0 {
+			audio_play_sound(bullphasein,0,false)	
+		}
+		fade_in_t++
+		fade_in_a+=0.01
+		fade_in_a = clamp(fade_in_a,0,alpha_spr)
+		
+		
+		if fade_in_t>200 {
+			state = state_chasing	
+		}
+	}
+	
 	//sprite_index = intimidating	
 }
 
@@ -372,7 +416,6 @@ if locked {
 	hspeed = 0
 	x = startx
 	sprite_index = big_boi_wounded
-	image_speed = 1
 	if player_obj.x<x {
 		image_xscale = 1
 		facing_right = false
@@ -392,10 +435,15 @@ if death {
 		player_obj.tail_planted = false
 		player_obj.tail_pulling = true
 	}
-	just_blood(tail_obj.hspeed,
-	clamp(tail_obj.vspeed-10,2,-30),
-	0.2,
-	80,true,sprite_width/4,sprite_height)
+	just_blood_input(cos(degtorad(ang))*30,-sin(degtorad(ang))*30,
+				
+	tail_obj.throwxs * random_range(-0.08,0.05),
+	random_range(-10,1),
+				
+	200,
+	true,sprite_width/2,sprite_height)
+	//shatter_script()	
+	
 	if instance_exists(hit) {
 		instance_destroy(hit)	
 	}
@@ -417,6 +465,17 @@ if state==state_idle {
 	} else {
 		//image_blend = c_yellow
 	}	
+}
+
+if place_meeting(x,y,tar_obj) {
+	vspeed=0.3	
+	hspeed = lerp(hspeed,0,0.2)
+	tartimer++
+	if tartimer>500 {
+		death = true
+	}
+} else {
+	tartimer=0	
 }
 
 hspeed = clamp(hspeed,-h_max_speed,h_max_speed)

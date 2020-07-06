@@ -1,3 +1,4 @@
 text = argument0
 
-show_debug_message(text)// + "   " + string(self.x) + "    " + string(self.y))
+ok = string(object_get_name(object_index))+ "   " + string(text)
+show_debug_message(ok)// + "   " + string(self.x) + "    " + string(self.y))

@@ -11,18 +11,45 @@ if(!place_meeting(checkx,checky,obj) || (hspeed==0 && vspeed==0)){
 
 local_obj = instance_place(checkx, checky, obj);
 
+if !place_meeting(checkx+hspeed,checky+vspeed,local_obj)
+	&& !collision_line(checkx,checky,checkx+hspeed,checky+vspeed,local_obj,false,true) {
+		return false
+	}
+
 if obj==switch_wall_switch_obj && !local_obj.hit {
 	local_obj.enabled = !local_obj.enabled
 	local_obj.hit = true
+	
 	return false
 } else if obj==switch_wall_switch_obj {
 	return false	
 }
 
 if obj==break_wall_obj {
-	local_obj.broken = true
-	hitpause = true
-	return false
+	//local_obj.broken = true
+	//hitpause = true
+	//return false
+}
+
+if obj==breakable_decoration_obj {
+	if !local_obj.met {
+		with local_obj {
+			if d_type==0 {
+				shatter_mb_script()
+				
+				if !audio_is_playing(Ice_Break__Shatter__Smash_03) {
+					//audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
+				}
+				destroy = true
+			} else if d_type==1{
+				sever_particle_script()
+			}else if d_type==2{
+				sever_g_particle_script()
+			}
+		}
+		local_obj.met = true
+	}
+	return true
 }
 
 /*
@@ -40,22 +67,61 @@ abs(point_direction(checkx,checky,local_obj.x,local_obj.y)-point_direction(xcorn
 	return false
 	
 }*/
+if obj==key_door_obj {
+	
+	if ds_list_size(player_obj.keylist)>=local_obj.lock && !lockcheck && local_obj.closed {
+		var yikes = ds_list_size(player_obj.keylist)
+		for(i=0;i<local_obj.lock;i++) {
+			instance_destroy(player_obj.keylist[| i])
+		}
+		var k = 0
+		templist = ds_list_create()
+		while k<yikes-local_obj.lock {
+			ds_list_add(templist,player_obj.keylist[|k+local_obj.lock])
+			k++
+		}
+		player_obj.keylist = templist
+			
+		local_obj.closed = false
+		hitpause = true
+		lockcheck=true
+		audio_play_sound(door_unlock_2,0,false)
+		sword_reject_script()
+	}	
+	
+	ok = sword_reject_1
+	audio_sound_gain(ok,0.15,0)
+	audio_play_sound(ok,0,false)
+}
+if lockcheck {
+	return false	
+}
 
 if obj==wood_wall_obj && player_obj.fire_active {
 	local_obj.death = true
 	return false;	
 }
-if obj==black_wall_obj {
-	player_obj.tail_pulling = true
-	player_obj.tail_throwing = false
-	x = xpreva
-	y = ypreva
+if obj==black_wall_obj   {
+	sword_reject_script()
 	with (eye_obj) {
 		met = false	
 	}
-	player_obj.shake_d=5
-	player_obj.camera_shake_d = true
 	return false
+}
+
+if obj==snake_head || obj==snakehead_obj {
+	sword_reject_script()
+	return false
+		
+}
+
+if player_obj.fire_active {
+	if obj==burn_wall_obj {
+		with local_obj {
+			instance_destroy()	
+		}
+		return false
+	}
 }
 
 
@@ -144,7 +210,7 @@ while (dist_moved < abs(hspeed)) {
 		insert_hs = hspeed
 		insert_vs = vspeed
 		
-		wall_particle_tail_script(hspeed/2,vspeed/2,0.2,5,true,2,2,c_gray)
+		wall_particle_tail_script(hspeed/2,vspeed/2,0.2,5,true,2,2,rubble_s1)
 		
 		hspeed = 0
 		vspeed = 0
@@ -169,14 +235,28 @@ while (dist_moved < abs(hspeed)) {
 		image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
 		
 		//ang = tempang
-		
-		if obj==moving_platform_obj || obj==falling_rock_obj 
+		if obj==impale_circle_obj {
+			audio_play_sound(sword_reject_1,0,false)	
+		}
+		if obj==impale_circle_moving_obj {
+			local_obj.sword_present = true
+			
+			local_obj.swordx = (x-local_obj.x)
+			local_obj.swordy = (y-local_obj.y)
+			player_obj.tail_dest_x = local_obj.x
+			player_obj.tail_dest_y = local_obj.y
+			audio_play_sound(sword_reject_1,0,false)
+			moving_platform_bool = true
+			
+		}
+		if (obj==moving_platform_obj || obj==falling_rock_obj 
 		|| obj==switch_wall_obj || obj==skiff_obj
 		|| obj==mach_moving_wall_obj
-		|| obj==close_wall_obj || obj==sinking_platform_obj {
+		|| obj==close_wall_obj || obj==sinking_platform_obj) && obj!=skiff_obj{
 			local_obj.sword_present = true
 			local_obj.swordx = (x-local_obj.x)
 			local_obj.swordy = (y-local_obj.y)
+			audio_play_sound(sword_reject_1,0,false)
 			moving_platform_bool = true
 		}
 		if obj==circle_friend_obj {
@@ -225,12 +305,21 @@ while (dist_moved < abs(hspeed)) {
 		
 		audio_sound_pitch(gsound.s_sword_hit_metal_wall,random_range(0.9,1.1))
 		//audio_manager(gsound.s_sword_hit_metal_wall,0,false,0)
-		audio_play_sound_at(gsound.s_sword_hit_metal_wall,mean(player_obj.x,player_obj.x - (tail_obj.x-player_obj.x)),y,0,0,0,0,false,0)
-		
+		var cx = player_obj.camx + player_obj.cam_width_h
+		var cy = player_obj.camy + player_obj.cam_height_h
+		audio_play_sound_at(gsound.s_sword_hit_metal_wall,
+			mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
+			mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
+			10,100,300,1,false,0)
+		//mean(cx,cx + cx - tail_obj.x),
+		//mean(cy,cy + cy - tail_obj.y),
 		
 		audio_sound_pitch(Emergency_Sandbag_Heavy_Hitting_Rocks_02,random_range(0.9,1.1))
 		//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
-		audio_play_sound_at(Emergency_Sandbag_Heavy_Hitting_Rocks_02,mean(player_obj.x,player_obj.x - (tail_obj.x-player_obj.x)),y,0,0,0,0,false,0)
+		audio_play_sound_at(Emergency_Sandbag_Heavy_Hitting_Rocks_02,
+			mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
+			mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
+			10,100,300,1,false,0)
 		
 		
 		audio_manager(clink1mp332,0,false,0)
@@ -251,7 +340,7 @@ while (dist_moved < abs(vspeed)) {
 		insert_hs = hspeed
 		insert_vs = vspeed
 		
-		wall_particle_tail_script(hspeed/2,vspeed/2,0.2,5,true,2,2,c_gray)
+		wall_particle_tail_script(hspeed/2,vspeed/2,0.2,5,true,2,2,rubble_s1)
 		
 		hspeed = 0
 		vspeed = 0;
@@ -274,13 +363,29 @@ while (dist_moved < abs(vspeed)) {
 		
 		//ang = tempang
 		
-		if obj==moving_platform_obj || obj==falling_rock_obj 
-		|| obj==switch_wall_obj|| obj==skiff_obj
+		if obj==impale_circle_obj {
+			audio_play_sound(sword_reject_1,0,false)	
+		}
+		
+		if obj==impale_circle_moving_obj {
+			local_obj.sword_present = true
+			
+			local_obj.swordx = (x-local_obj.x)
+			local_obj.swordy = (y-local_obj.y)
+			player_obj.tail_dest_x = local_obj.x
+			player_obj.tail_dest_y = local_obj.y
+			audio_play_sound(sword_reject_1,0,false)
+			moving_platform_bool = true
+		}
+		
+		if (obj==moving_platform_obj || obj==falling_rock_obj 
+		|| obj==switch_wall_obj || obj==skiff_obj
 		|| obj==mach_moving_wall_obj
-		|| obj==close_wall_obj || obj==sinking_platform_obj {
+		|| obj==close_wall_obj || obj==sinking_platform_obj) && obj!=skiff_obj {
 			local_obj.sword_present = true
 			local_obj.swordx = (x-local_obj.x)
 			local_obj.swordy = (y-local_obj.y)
+			audio_play_sound(sword_reject_1,0,false)
 			moving_platform_bool = true
 		}
 		if obj==circle_friend_obj {

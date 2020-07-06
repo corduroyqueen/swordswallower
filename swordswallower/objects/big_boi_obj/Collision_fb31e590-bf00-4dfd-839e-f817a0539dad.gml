@@ -4,10 +4,10 @@
 
 if vspeed>7 && other.y>y {
 	instance_destroy(other)	
-	vspeed*=0.2
+	vspeed*=0.5
 } else {
 	instance_destroy(other)	
-	state=state_hitting
+	//state=state_hitting
 }
 if grabbing {
 	damage_script(10,sign(player_obj.x-x),0,0)	
@@ -29,7 +29,7 @@ if special_guy == 1 {
 		
 } else if abs(hspeed)>6 {
 	instance_destroy(other)
-	hspeed = sign(hspeed) * 3
+	hspeed = sign(hspeed) * 7
 	
 } else {
 	default_collision(other)

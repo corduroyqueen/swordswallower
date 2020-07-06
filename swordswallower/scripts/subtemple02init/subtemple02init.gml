@@ -11,10 +11,16 @@ num_big_bois = instance_number(big_boi_obj)
 num_stinky_piles = instance_number(stinky_pile_obj)
 		
 wooden_walls = array_create(num_wooden_walls)
+wooden_walls_b = array_create(num_wooden_walls)
+for(i=0;i<num_wooden_walls;i++) {
+	wooden_walls[i] = instance_find(wood_wall_obj,i)
+	wooden_walls_b[i] = true
+}
+
 big_bois = array_create(num_big_bois)
 stinky_piles = array_create(num_stinky_piles)
 
-wooden_walls_b = array_create(num_wooden_walls)
+
 big_bois_b = array_create(num_big_bois)
 stinky_piles_b = array_create(num_stinky_piles)
 big_boi_bool = big_boi_time.special_guy
@@ -27,10 +33,7 @@ for(i=0;i<num_switches;i++) {
 	switches_b[i] = false
 }
 		
-for(i=0;i<num_wooden_walls;i++) {
-	wooden_walls[i] = instance_find(wood_wall_obj,i)
-	wooden_walls_b[i] = true
-}
+
 		
 for(i=0;i<num_big_bois;i++) {
 	big_bois[i] = instance_find(big_boi_obj,i)

@@ -22,7 +22,7 @@ color = argument7
 
 //speedx = (other.normx * other.dot)
 //speedy = (-other.normy * other.dot)
-
+var lelang = point_direction(0,0,throwxs,throwys)+180
 for (i=0;i<(amount+random_range(2,9));i++){
 	var poschangex
 	var poschangey
@@ -37,15 +37,17 @@ for (i=0;i<(amount+random_range(2,9));i++){
 	
 	
 	particle = instance_create_depth(
-	x+poschangex-hspeed/5,
-	y+poschangey-vspeed/5,
+	x+poschangex-throwxs/3,
+	y+poschangey-throwys/3,
 	-1,miscparticle_obj)
 	
-	var scalevar = random_range(0.2,1)
+	var scalevar = random_range(0.1,0.6)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
-	particle.hspeed = -hspeed/3 * (reduction * random_range(-3,3))
-	particle.vspeed = -vspeed/3 * reduction * random_range(-1.5,1.5)
-	particle.image_blend = color
+	var ta = lelang*random_range(0.8,1.2)
+	particle.hspeed = cos(degtorad(ta))*2.5*random_range(0.5,1.5)
+	particle.vspeed = -sin(degtorad(ta))*2.5*random_range(0.5,1.5)
+	particle.image_angle = random_range(0,360)
+	particle.sprite_index = color
 	
 }

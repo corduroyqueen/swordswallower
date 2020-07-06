@@ -1,0 +1,1 @@
+text = "its also rougher around the edges, but playtesting is still helpful "

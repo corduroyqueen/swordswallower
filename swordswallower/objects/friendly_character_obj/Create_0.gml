@@ -11,3 +11,13 @@ o=0
 mapguy = false
 stopped = false
 gravd=true
+
+
+keybool = false
+
+ealpha = 0
+
+boatboy = false
+boatboyenter = false
+
+mapguy_visited = false

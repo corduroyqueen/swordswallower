@@ -20,16 +20,16 @@ knockback_timer = 0
 knockback_amt = 30
 collided_with_friend = false
 
-grav = .50
+grav = 0.6
 yplusb=0
-h_accel = .15
+h_accel = 0.2
 
 h_decel_g = 0.2
 h_decel_a = 0.025
 h_decel = 0
 
-h_walk_speed = 8
-h_max_speed = 15
+h_walk_speed = 50
+h_max_speed = 50
 
 grabbing = false
 
@@ -41,8 +41,6 @@ facing_right = false
 
 sword_present = false
 
-h_accel = .12
-h_walk_speed = 11
 	
 
 hit = noone
@@ -78,3 +76,6 @@ climbing=false
 sword_checked = false
 grabbed = false
 last_grounded_y = y
+
+wallheight=0
+maxheight=300

@@ -64,13 +64,21 @@ x = vBaseX + ((player_obj.camx+640)/parallax_num);
 if ycheck {
 	y = vBaseY + (player_obj.camy/parallax_num);
 }
+
+
+if player_obj.mapout {
+	x = vBaseX
+	y = vBaseY
+}
+
+
 if abs(player_obj.x-x)<distance && !perm {
 	
 	//draw_sprite_ext(sprite43,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha);
-	draw_sprite_ext(sprite,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,1)
+	draw_sprite_ext(sprite,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,1)
 }
 if perm {
-	draw_sprite_ext(sprite,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,1)	
+	draw_sprite_ext(sprite,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,1)	
 }
 
 

@@ -6,7 +6,7 @@ if tail_zooming {
 	
 	if zoom_ctdn<=0 {
 		zspeed = zspeed_normal
-		grav_boost = .15
+		grav_boost = .15//havent changed from size up
 		player_obj.camera_shake_direc = true
 		player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hspeed,player_obj.vspeed))
 		player_obj.shake_dir = 25
@@ -111,17 +111,24 @@ if zoom_timer_bool {
 	//	vspeed += grav_boost
 	//}
 	zoom_timer++
-	if point_distance(x,y,tail_dest_x,tail_dest_y)>25 {
+	if point_distance(x,y,tail_dest_x,tail_dest_y)>37.5 {
 		move_towards_point(tail_dest_x,tail_dest_y,zspeed)
 	}
-	if tail_obj.moving_platform_bool {
+	//sdm(object_get_name(tail_obj.current_wall.object_index))
+	if object_get_name(tail_obj.current_wall.object_index)==impale_circle_moving_obj {
+		tail_dest_x = tail_obj.current_wall.x	
+		tail_dest_y = tail_obj.current_wall.y
+		move_towards_point(tail_dest_x,tail_dest_y,zspeed)
+		//sdm("goooo")
+	} else if tail_obj.moving_platform_bool {
 		tail_dest_x = tail_obj.x
 		tail_dest_y = tail_obj.y
 		move_towards_point(tail_dest_x,tail_dest_y,zspeed)
 	}
 	
-	if mouse_check_button_released(mb_right) || !mouse_check_button(mb_right)
-	|| mouse_check_button_pressed(mb_left) {
+	
+	if k_dash_r || !k_dash
+	|| k_fire_p {
 		zoom_out_of_wall_timer = 20	
 	}
 	
@@ -141,6 +148,18 @@ if zoom_timer_bool {
 		
 		//player_obj.tail_planted = false
 		//player_obj.tail_pulling = true
+		if wall_checker(x+hspeed*2,y+vspeed*2) {
+			if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<speed {
+				x = player_hitbox_check_obj.x
+				y = player_hitbox_check_obj.y
+				hspeed=0
+				vspeed=0
+			} else {
+				hspeed=0
+				vspeed=0
+			}
+		}
+		
 		
 		if distance_to_object(tail_obj)>25 {
 			
@@ -165,7 +184,7 @@ if zoom_timer_bool {
 	
 	
 	
-	audio_sound_gain(Ice_Projectile_Shoot_03,0.65,0)
+	audio_sound_gain(Ice_Projectile_Shoot_03,0.8,0)
 	
 	
 } else {

@@ -4,3 +4,4 @@ death = false
 xoff = 0
 yoff = 0
 mspeed = 0
+met = false

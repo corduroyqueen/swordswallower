@@ -7,3 +7,5 @@ met = false
 
 intangible = false
 pers=0
+
+death = false

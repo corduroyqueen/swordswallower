@@ -125,6 +125,20 @@
             "value": "1",
             "varName": "pers",
             "varType": 1
+        },
+        {
+            "id": "1ab5d89c-f1ff-49a7-9c61-ffdf499498e2",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "auto_aim",
+            "varType": 3
         }
     ],
     "solid": false,

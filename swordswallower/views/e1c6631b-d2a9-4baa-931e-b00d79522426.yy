@@ -15,7 +15,8 @@
         "8708a715-0a67-4111-b4a6-fcdf627ffe01",
         "24990cd1-fb7f-4a76-8007-c8a8d48d0b30",
         "569df341-165f-42ce-8ff6-ab95c541f33c",
-        "5853fec0-ee7f-42ad-b0c2-b29649a52107"
+        "5853fec0-ee7f-42ad-b0c2-b29649a52107",
+        "823ba139-d0ac-4961-a2bd-d6e56bf5a853"
     ],
     "filterType": "GMObject",
     "folderName": "generic walls",

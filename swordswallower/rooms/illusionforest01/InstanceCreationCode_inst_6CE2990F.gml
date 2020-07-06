@@ -1,0 +1,1 @@
+text = "finally, we are testing a system where if you get 3 green gems "

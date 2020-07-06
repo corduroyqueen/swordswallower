@@ -3,11 +3,15 @@
 if keyboard_check_pressed(ord("R")) {
 	audio_stop_sound(s_fly_buzz)
 }
+
+
+	
 if death {
 	
 
 	if death_timer< 1 {
-		just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)audio_stop_sound(s_fly_buzz)
+		just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+		audio_stop_sound(s_fly_buzz)
 		audio_manager(false,0,false,3)
 	
 	
@@ -22,7 +26,10 @@ if death {
 			endx = x
 			endy = y
 		}
-	
+		audio_sound_pitch(eye_scream,random_range(0.2,1))
+		
+		audio_play_sound_at(eye_scream,x,y,0,0,0,0,false,0)
+		
 		ang = arctan((starty-endy)/(startx-endx))
 		tempx = cos(ang) * sign(endx-startx)
 		tempy = sin(ang)  * sign(startx-endx)
@@ -32,16 +39,23 @@ if death {
 	
 		fly1.hspeed = tempy * 7
 		fly1.vspeed = tempx * 7
-		fly1.inv_timer=20
+		fly1.inv_timer=15
 		fly1.state = 1
 		fly1.spawn = true
-	
+		fly1.eyespr = greeneye
+		
 		fly2.hspeed = -tempy * 7
 		fly2.vspeed = -tempx * 7
-		fly2.inv_timer=20
+		fly2.inv_timer=15
 		fly2.state = 1
 		fly2.spawn = true
+		
 		death_timer++
+		
+		just_blood_input(0,0,tail_obj.throwxs,tail_obj.throwys,-30,true,sprite_width/4,sprite_height)
+		
+		instance_destroy()
+		
 	}
 	if instance_exists(fly1) || instance_exists(fly2) {
 		x = -10000
@@ -58,6 +72,7 @@ if death {
 			death_timer=0
 		}
 		image_blend = c_purple
+		image_alpha = 0
 		state=state_idle
 	}
 	mask_index = doublefly_flap
@@ -86,17 +101,17 @@ if state==state_idle {
 		
 		if wall_raycast_checker(player_obj) {
 			state = state_chasing
-			s_fly_buzz = audio_play_sound(fly_sound,0,true)
-			audio_play_sound_on(fly_emitter,s_fly_buzz,true,0)
-			audio_sound_set_track_position(s_fly_buzz,random_range(0,20))
+			//s_fly_buzz = audio_play_sound(fly_sound,0,true)
+			//audio_play_sound_on(fly_emitter,s_fly_buzz,true,0)
+			//audio_sound_set_track_position(s_fly_buzz,random_range(0,20))
 		}
 		
 		if tail_obj.stinky {
 			if wall_raycast_checker(tail_obj) {
 				state = state_chasing
-				s_fly_buzz = audio_play_sound(fly_sound,0,true)
-				audio_play_sound_on(fly_emitter,s_fly_buzz,true,0)
-				audio_sound_set_track_position(s_fly_buzz,random_range(0,20))
+				//s_fly_buzz = audio_play_sound(fly_sound,0,true)
+				//audio_play_sound_on(fly_emitter,s_fly_buzz,true,0)
+				//audio_sound_set_track_position(s_fly_buzz,random_range(0,20))
 			}
 		}
 		
@@ -115,8 +130,24 @@ if state==state_chasing {
 	image_speed = 1.2
 	
 	
+	chirp_timer++
+	
+	if chirp_timer>chirp_timer_m {
+		
+		audio_sound_pitch(chirp,random_range(0.2,1))
+		audio_play_sound_at(
+			chirp,
+			x,y,0,0,0,0,false,0)
+		chirp = choose(eye_chirp1,eye_chirp2,eye_chirp3)
+		
+		chirp_timer = 0
+		chirp_timer_m = random_range(50,100)
+		
+	}
+	
+	
 	fly_target_code(2)
-	image_xscale = sign(x-target.x)
+	//image_xscale = sign(x-target.x)
 	//temp_hs = hspeed
 	//temp_vs = vspeed
 	//hspeed = temp_hs

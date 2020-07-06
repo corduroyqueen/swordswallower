@@ -14,16 +14,16 @@ state_knockback = 3
 knockback_timer = 0
 knockback_amt = 30
 
-grav = .26
+grav = 1
 
-h_accel = .25
+h_accel = .4
 
-h_decel_g = 0.35
-h_decel_a = 0.025
+h_decel_g = 0.45
+h_decel_a = 0.035
 h_decel = 0
 
-h_walk_speed = 2.5
-h_max_speed = 10
+h_walk_speed = 4.75
+h_max_speed = 17
 
 sword_hold_x = false
 sword_hold_y = false
@@ -51,5 +51,11 @@ if !variable_instance_exists(id,"fumbling_timer"){
 	fumbling_timer = 0
 }
 if !variable_instance_exists(id,"detect_range"){
-	detect_range = 500
+	detect_range = 700
 }
+
+sound_timer = 149
+sound_timer_t = 150
+idle_sound = false
+
+image_xscale = -1

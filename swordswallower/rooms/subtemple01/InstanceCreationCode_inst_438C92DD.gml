@@ -1,1 +1,1 @@
-fumbling_timer = 700
+fumbling_timer = 30

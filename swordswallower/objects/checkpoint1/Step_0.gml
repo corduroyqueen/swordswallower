@@ -6,12 +6,19 @@ if firsttime {
 	num_shields = instance_number(shield_spawner_obj)
 	shields = array_create(num_shields)
 	shields_b = array_create(num_shields)
+	
+	 if checkpoint_manager.checkpoint == self {
+		 starting_bool = true
+	 }
+	
+	
 	with level1_master {
 		for(i=0;i<num_shields;i++) {
 			other.shields_b[i] = shields[i].active
 		}	
 	}
 }
+
 if room==subtemple02 {
 	if firsttime {
 		

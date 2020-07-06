@@ -101,4 +101,8 @@ if state==state_chasing {
 
 }
 
+if audio_is_playing(s_fly_buzz) {
+	audio_stop_sound(s_fly_buzz) 
+}	
+
 
