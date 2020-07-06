@@ -9,7 +9,9 @@
         "3b8d9705-0959-4107-88b1-aeaac89a77da",
         "1d1f0b62-57aa-4e8e-afb4-909974e38c58",
         "007eadfa-c2b4-41b1-b9a3-ca9d69713135",
-        "97cc2440-08d7-41cd-89ef-096f3ec25195"
+        "97cc2440-08d7-41cd-89ef-096f3ec25195",
+        "27a78721-68d4-4440-a9b2-88228e3f6fea",
+        "8e061fbe-c960-40ed-9ad0-43212ddcef03"
     ],
     "filterType": "GMScript",
     "folderName": "inits",

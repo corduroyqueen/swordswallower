@@ -5,7 +5,7 @@ my_floor = false
 player_floor = false
 
 state = 0
-
+ang=0
 state_idle = 0
 state_chasing = 1
 state_hitting = 2
@@ -22,30 +22,31 @@ knockback_timer = 0
 knockback_amt = 30
 collided_with_friend = false
 
-grav = .50
+grav = .8
 yplusb=0
-h_accel = .5
+h_accel = 1.2
 
-h_decel_g = 0.2
-h_decel_a = 0.025
+h_decel_g = 0.35
+h_decel_a = 0.0375
 h_decel = 0
 
-h_walk_speed = 8
-h_max_speed = 13
+h_walk_speed = 20
+h_max_speed = 20
 
 grabbing = false
 
 charge_timer = 0 
-charge_go=50
-knockback_end = 200
+charge_go=60
+knockback_end = 220
 direc = false
 charging = false 
+image_speed = 0.8
 
 sword_hold_x = false
 sword_hold_y = false
 sword_ang_temp = 0
 
-facing_right = false
+facing_right = true
 
 sword_present = false
 
@@ -86,3 +87,8 @@ climbing=false
 sword_checked = false
 grabbed = false
 last_grounded_y = y
+
+alpha_spr = 0.85
+
+fade_in_t = 0
+fade_in_a = 0

@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 if mouse_check_button_pressed(mb_right) && player_obj.tail_carry {
-	dest_x = mouse_x
-	dest_y = mouse_y
+	dest_x = global.mousepx
+	dest_y = global.mousepy
 }
 
 if player_obj.tail_pulling || player_obj.tail_throwing {

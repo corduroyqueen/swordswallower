@@ -35,7 +35,7 @@ if txtSpeed >= 15 textSpeed = 15;
 global.maxPrintTimer = txtSpeed;
 
 //For measuring purposes
-draw_set_font(font);
+draw_set_font(font2);
 
 // sample text for spacing purposes
 var sampleTxt = "sample";
@@ -159,7 +159,7 @@ camy = camera_get_view_y(view_camera[0])
 view_xview = camx+560
 view_yview = camy+550
 // Draw dialogue box
-draw_set_color(c_black);
+draw_set_color(c_black)
 draw_rectangle(view_xview,((view_yview+view_hview)-max_height)-(padding*1.5),view_wview,view_yview+view_hview,false);
 
 // Rectangle Borders
@@ -175,6 +175,9 @@ draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview,
 // Draw Text On Screen
 draw_set_color(c_white);
 draw_text_ext(view_xview+padding,((view_yview+view_hview)-max_height)-(padding/2),global.display_txt,sTxt_height,max_width);
+
+
+
 
 // Quit Dialogue/Textbox Event
 if txt == "" && global.placeholderTxt == ""{

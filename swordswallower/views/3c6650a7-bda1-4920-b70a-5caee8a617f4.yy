@@ -9,9 +9,9 @@
         "260484a4-b553-4d33-a482-5bf77eb1d52b",
         "ac6b73c7-1ba0-4ec4-8bf2-3aaab665d89e",
         "f94ab12d-a04a-4cb2-ba19-9eeded0f76fa",
+        "ce714238-39a2-480f-a670-54d193c20af7",
         "eca9e69d-2cfa-46d6-9d98-4b3a185fb631",
         "ed9d9e5c-7fa8-4761-82e7-069555d14b7d",
-        "ce714238-39a2-480f-a670-54d193c20af7",
         "6de149d9-be5b-4f91-ba96-6af588641cae",
         "f1aa7e22-0e1f-4038-8ab6-764db530afa3",
         "b391301d-c1f5-4bbe-84db-96a50e2adaeb",
@@ -29,7 +29,11 @@
         "1ff6e171-4d92-4cb4-a0e0-76d3e9f6eaa3",
         "e46f825d-fb88-4f02-952b-1c11ab21d982",
         "789add52-2cc0-4bd7-8629-4d270c0eb6f7",
-        "621398f4-901c-48b1-b283-e133abce68f3"
+        "621398f4-901c-48b1-b283-e133abce68f3",
+        "d711553f-fa43-4902-a964-a514ea4aebaf",
+        "0d7d4388-4ed5-4b9e-9760-c78c72cbbca1",
+        "4e607296-8065-4f1c-98dc-8b20b810b760",
+        "9efd5402-53a9-4748-976e-c1c9795082a8"
     ],
     "filterType": "GMObject",
     "folderName": "art",

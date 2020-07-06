@@ -16,15 +16,25 @@ state_retracting = 4
 state = state_idle
 
 atk_timer = 0
-atk_speed = 55
+atk_speed = 23
+
+atk_timer_max = 90
+
+
 
 if !variable_instance_exists(instance_place(x,y,all).id, "pers") {
 	local_obj = self
-} else if place_meeting(x,y,all) {
 	
+} else if place_meeting(x,y,all) {
+	//sdm("goooooooooooo")
 	if instance_place(x,y,all).pers==0 {
 		local_obj = instance_place(x,y,all)
+		//sdm("lelelelel")
 	}
+}
+
+if place_meeting(x,y,wall_obj) {
+	local_obj = instance_place(x,y,wall_obj)
 }
 
 tarx = x - local_obj.x
@@ -37,16 +47,15 @@ direcyv = -sin(degtorad(local_obj.image_angle+90));
 
 
 dy = dot_product(tarx,tary,direcxv,direcyv)
-if dy>=(local_obj.image_yscale * 16) { walkang = local_obj.image_angle+90 }
-if dy<=(-local_obj.image_yscale * 16) { walkang = local_obj.image_angle+270 }
+
+
+if dy>=(abs(local_obj.image_yscale) * 16) { walkang = local_obj.image_angle+90 }
+if dy<=(-abs(local_obj.image_yscale) * 16) { walkang = local_obj.image_angle+270 }
 
 dx = dot_product(tarx,tary,direcxh,direcyh)
-if dx>=(local_obj.image_xscale * 16) { walkang = local_obj.image_angle }
-if dx<=(-local_obj.image_xscale * 16) { walkang = local_obj.image_angle+180 }
-sdm(dx)
-sdm(dy)
-sdm(local_obj.image_xscale*16)
-sdm(local_obj.image_yscale*16)
+if dx>=(abs(local_obj.image_xscale) * 16) { walkang = local_obj.image_angle }
+if dx<=(-abs(local_obj.image_xscale) * 16) { walkang = local_obj.image_angle+180 }
+
 
 
 image_angle = walkang+270
@@ -58,3 +67,7 @@ while place_meeting(x,y,local_obj) {
 
 head = instance_create_depth(x,y,0,snakehead_obj)
 head.parent = self
+
+hit = noone
+
+headhit = false

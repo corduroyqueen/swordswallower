@@ -72,9 +72,11 @@ while (dist_moved < abs(vspeed)) {
 	}
 }
 
+
+
 if hspeed!=0 && vspeed!=0 {
 	
-	if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<30 {
+	if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<50 {
 		x = player_hitbox_check_obj.x
 		y = player_hitbox_check_obj.y
 	}

@@ -1,4 +1,4 @@
-if mouse_check_button_pressed(mb_left) {
+if k_fire_p {
 	left_click_buffer = 7
 }
 if zoom_allow>0 {
@@ -12,8 +12,11 @@ if !tail_planted && !tail_held {
 			//	winding = true	
 			//} else {
 			tail_obj.moving_platform_bool = false
-			tail_dest_x = mouse_x
-			tail_dest_y = mouse_y
+			tail_obj.x = player_obj.x
+			tail_obj.y = player_obj.y
+			auto_aim_selection()
+			tail_dest_x = global.mousepx
+			tail_dest_y = global.mousepy
 			tail_carry = false
 			tail_throwing = true
 			left_click_buffer = 0
@@ -30,14 +33,18 @@ if !tail_planted && !tail_held {
 			start_throw_x = x
 			start_throw_y = y
 			//}
-			audio_manager(gsound.s_sword_whoosh,0,true,0)
 			
+			with tail_obj {
+				//audio_manager(gsound.s_sword_whoosh,0,true,0)
+				
+				audio_emitter_gain(s_whoosh_emitter,1)
+			}
 		}
 
 		//if winding {
-		//	if mouse_check_button_released(mb_left) {
-		//		tail_dest_x = mouse_x
-		//		tail_dest_y = mouse_y
+		//	if global.mousepcheck_button_released(mb_left) {
+		//		tail_dest_x = global.mousepx
+		//		tail_dest_y = global.mousepy
 		//		//tail_obj.hspeed = xl //* tail_obj.tspeed
 		//		//tail_obj.vspeed = yl //* tail_obj.tspeed
 		//		tail_carry = false
@@ -48,20 +55,20 @@ if !tail_planted && !tail_held {
 		//		start_throw_y = y
 		//	}
 		//}
-		if tail_throwing && mouse_check_button_pressed(mb_right) && !zoom_timer_bool {
+		if tail_throwing && k_dash_p && !zoom_timer_bool {
 			zoom_buff_timer = 60
 			//tail_planted=false
 		}
 		zoom_buff_timer--
 	}
 } else {
-	//if mouse_check_button_released(mb_left) && !tail_pulling && !tail_throwing && !zoom_timer_bool {
+	//if global.mousepcheck_button_released(mb_left) && !tail_pulling && !tail_throwing && !zoom_timer_bool {
 	//	//if grounded {
 	//	//	winding = true	
 	//	//} else {
 				
-	//		tail_dest_x = mouse_x
-	//		tail_dest_y = mouse_y
+	//		tail_dest_x = global.mousepx
+	//		tail_dest_y = global.mousepy
 	//		tail_planted = false
 	//		tail_throwing = true
 				
@@ -70,7 +77,7 @@ if !tail_planted && !tail_held {
 	//	//}
 	//	audio_manager(gsound.s_sword_whoosh,0,true,0)
 	//} else 
-	if mouse_check_button_pressed(mb_left) && zoom_timer_bool  && !gem_active {
+	if k_fire_p && zoom_timer_bool  && !gem_active {
 		click_out_of_wall_timer = 20
 	}
 	
@@ -91,7 +98,7 @@ if !tail_planted && !tail_held {
 		}
 	}
 	
-	if mouse_check_button_pressed(mb_left) && !tail_held {
+	if k_fire_p && !tail_held {
 		if gem_active {
 			tail_obj.pull_timer = 0
 			tail_obj.inside_flier = false
@@ -107,8 +114,8 @@ if !tail_planted && !tail_held {
 			check_zoom_collision = false
 			
 			
-			tail_dest_x = mouse_x
-			tail_dest_y = mouse_y
+			tail_dest_x = global.mousepx
+			tail_dest_y = global.mousepy
 			tail_planted = false
 			tail_throwing = true
 				
@@ -127,7 +134,7 @@ if !tail_planted && !tail_held {
 			
 		}
 		
-	} else if mouse_check_button_pressed(mb_right) && !zoom_timer_bool {
+	} else if k_dash_p && !zoom_timer_bool {
 		zoom_buff_timer = 10
 		
 	}
@@ -136,7 +143,7 @@ if !tail_planted && !tail_held {
 	
 	
 	if tail_planted && zoom_allow<1 &&
-	zoom_buff_timer>0 && mouse_check_button(mb_right) && !mouse_check_button_released(mb_right) {
+	zoom_buff_timer>0 && k_dash && !k_dash_r {
 		//shockwave_shader.trigger = true
 		
 		zoom_buff_timer = 0

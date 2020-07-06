@@ -7,7 +7,8 @@
         "d5d03053-81a4-4773-8a82-18e743447eaa",
         "cfd5320b-cddb-4093-9555-d6d5cb80689e",
         "817680ce-b5eb-4f26-a604-2f687bd07495",
-        "f3f5eade-7bf5-45f2-b689-cf7deac7f751"
+        "f3f5eade-7bf5-45f2-b689-cf7deac7f751",
+        "c26806ca-ad17-4391-bcca-ee5a2316d3ce"
     ],
     "filterType": "GMObject",
     "folderName": "idk",

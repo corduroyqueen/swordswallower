@@ -5,3 +5,7 @@ lock = 1
 closed = true
 
 intangible = false
+
+mask_index = -1
+
+start = true

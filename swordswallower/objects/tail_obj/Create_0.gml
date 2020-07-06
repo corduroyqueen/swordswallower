@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 cca = 5
-tspeed = 42
-pspeed = 42
+tspeed = 69
+pspeed = 69
 
 planted = false
 
@@ -62,3 +62,13 @@ hitpause_timer = 0
 
 scrape_s = scrape
 audio_sound_pitch(scrape_s,0.5)
+
+s_whoosh_emitter = audio_emitter_create()
+audio_play_sound_on(s_whoosh_emitter,gsound.s_sword_whoosh,true,0)
+audio_emitter_gain(s_whoosh_emitter,0)
+
+held_pos_x= 0
+held_pos_y= 0
+held_pos_ang = 0
+
+thrown_ang = 0

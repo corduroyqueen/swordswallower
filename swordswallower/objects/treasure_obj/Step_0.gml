@@ -9,7 +9,7 @@ if level1_master.lol {
 
 
 if place_meeting(x,y,player_obj) {
-	if keyboard_check_pressed(ord("E")) {
+	if player_obj.k_speak_p {
 		checkpoint_particle_script(player_obj.x,player_obj.y,36)
 		player_obj.treasure_count++
 		level1_master.available_checkpoints++

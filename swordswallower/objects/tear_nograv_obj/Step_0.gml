@@ -5,6 +5,7 @@ if death {
 }
 
 move_towards_point(x+xoff,y+yoff,mspeed)
+image_angle = point_direction(x,y,x+xoff,y+yoff) + 90
 
 if wall_checker(x+hspeed,y+vspeed) || !in_camera_range_bigger(x,y)
 || place_meeting(x,y,tar_obj) {

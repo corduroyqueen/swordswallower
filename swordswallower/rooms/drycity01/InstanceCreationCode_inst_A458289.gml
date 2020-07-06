@@ -1,0 +1,10 @@
+dialogue = "bro i dunno "
+sprite_index = sprite99
+dialogue_array[0] = "O-oh, hello ma'am. You've returned to the city. "
+dialogue_array[1] = "Is there anything you need from me? "
+dialogue_array[2] = "... "
+dialogue_array[3] = "Have I done something wrong again? "
+dialogue_array[4] = "... "
+dialogue_array[5] = "We... are in dire need of water, ma'am. The canals have run dry. "
+dialogue_array[6] = "... "
+dialogue_array[7] = "I'm... just going to stay here then. "

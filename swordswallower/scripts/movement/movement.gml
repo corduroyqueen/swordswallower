@@ -1,45 +1,79 @@
 
 if !zoom_timer_bool && !held_position{
-if keyboard_check(key_left) && hspeed>=-max_hs{
-	if hspeed >= 0 && grounded==true {
-		hspeed-=(h_accel*2)	
-	} else {
-		hspeed-=h_accel
-	}
-} else if keyboard_check(key_right) && hspeed<=max_hs {
-	if hspeed <= 0 && grounded==true {
-		hspeed+=(h_accel*2)	
-	} else {
-		hspeed+=h_accel
-	}
-}
-if abs(hspeed)>max_hs && grounded {
-	hspeed = lerp(hspeed,max_hs * sign(hspeed),0.02)
-}}
-
-if grounded && (keyboard_check(key_left) || keyboard_check(key_right)) {
-	walk_timer+=1
-	if walk_timer>(25-abs(hspeed)) {
-		if !tail_carry {
-			var hey = choose(footstep4)//footstep144,footstep2,footstep3)
-			audio_sound_pitch(hey,random_range(0.25,0.75))
-			audio_manager(hey,0,false,0)
-		
-			hey = footstep5
-			audio_sound_pitch(hey,random_range(0.25,0.75))
-			audio_manager(hey,0,false,0)	
-		} else {
-			var hey = choose(footstep4)//footstep144,footstep2,footstep3)
-			audio_sound_pitch(hey,random_range(0.25,0.75))
-			audio_manager(hey,0,false,0)
-		
-			hey = footstep5
-			audio_sound_pitch(hey,random_range(0.25,0.75))
-			audio_manager(hey,0,false,0)	
+	if grounded {
+		if k_left && hspeed>=-max_hs_g {
+			if hspeed >= 0 {
+				hspeed-=h_accel_g*2
+			} else {
+				hspeed-=h_accel_g
+			}
+		} else if k_right && hspeed<=max_hs_g {
+			if hspeed <= 0  {
+				hspeed+=h_accel_g*2	
+			} else {
+				hspeed+=h_accel_g
+			}
+		}
+	
+	
+		if abs(hspeed)>max_hs_g {
+			hspeed = lerp(hspeed,max_hs_g * sign(hspeed),0.02)
 		}
 		
-		walk_timer=0	
+		h_dir_bool = true
+	} else {
+		if k_left && hspeed>=-max_hs_a {
+			if hspeed >= 0 || !h_dir_bool 
+			{
+				hspeed-=h_accel_a/2
+			} else {
+				hspeed-=h_accel_a
+				h_dir_bool = false
+			}
+		} else if k_right && hspeed<=max_hs_a {
+			if hspeed <= 0 || !h_dir_bool
+			{
+				hspeed+=h_accel_a/2
+			} else {
+				hspeed+=h_accel_a
+				h_dir_bool = false
+			}
+		}
+	
+	
+		if abs(hspeed)>max_hs_a  {
+			hspeed = lerp(hspeed,max_hs_a * sign(hspeed),0.02)
+		}	
 	}
+}
+
+//sdm(player_sprite_obj.image_index)
+if grounded && (k_left || k_right) {
+	//walk_timer+=1
+	//if walk_timer>(25-abs(hspeed)) {
+	if abs(player_sprite_obj.image_index-4)<0.1 ||
+	abs(player_sprite_obj.image_index-1)<0.1 {
+		if !tail_carry {
+			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
+			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_manager(hey,0,false,0)
+		
+			hey = footstep5
+			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_manager(hey,0,false,0)	
+		} else {
+			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
+			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_manager(hey,0,false,0)
+		
+			hey = footstep5
+			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_manager(hey,0,false,0)	
+		}
+	}
+		
+		walk_timer=0	
+	//}
 } else {
 	walk_timer=10
 }
@@ -61,13 +95,14 @@ if grounded && (keyboard_check(key_left) || keyboard_check(key_right)) {
 
 
 wall_collision_xaxis(wall_obj)
+wall_collision_xaxis(burn_wall_obj)
 wall_collision_xaxis(black_wall_obj)
 wall_collision_xaxis(falling_rock_obj)
 
 
 
 if !zoom_timer_bool{
-	if(!keyboard_check(ord("A")) && !keyboard_check(ord("D"))){
+	if(!k_left && !k_right){
 		if(abs(hspeed) < h_decel){
 			hspeed=0;	
 		} else {
@@ -80,9 +115,9 @@ if !zoom_timer_bool{
 if held_release_timer>0 {
 	held_release_timer--
 	grav = 0
-	if vspeed<-1 {
-		held_release_timer = 0
-	}
+	//if vspeed<-1 {
+	//	held_release_timer = 0
+	//}
 } else {
 	grav = start_grav	
 }
@@ -102,7 +137,7 @@ if tail_obj.moving_platform_bool {
 }
 if held_position {
 	if tail_obj.current_wall.object_index==wood_wall_obj {
-		damage_script(10,sign(player_obj.x-x),5,-1)	
+		//damage_script(10,sign(player_obj.x-x),5,-1)	
 	}
 	if tail_obj.moving_platform_bool {
 		held_pos_timer++
@@ -164,7 +199,7 @@ if held_position {
 	
 	
 	
-	if mouse_check_button_pressed(mb_left) || mouse_check_button_released(mb_right) {
+	if (k_fire_p || k_dash_r) {
 		reset_intangibility()
 		held_position = false
 		held_release_timer = 10
@@ -189,7 +224,7 @@ if held_position {
 		held_bounce_timer = 0	
 	} else {
 		
-		if mouse_check_button_released(mb_right) || bounce_buff_timer>0  {
+		if k_dash_r || bounce_buff_timer>0  {
 			
 			reset_intangibility()
 			
@@ -212,7 +247,8 @@ if held_position {
 	held_pos_timer = 0	
 }
 
-if (on_wall_left && keyboard_check(ord("A"))) || (on_wall_right && keyboard_check(ord("D"))){
+/*
+if (on_wall_left && keyoard_check(ord("A"))) || (on_wall_right && keyoard_check(ord("D"))){
 	if !hold_wall_bool && !held_position  {
 		audio_play_sound(rocksfalling,0,true)
 		hold_wall_bool = true

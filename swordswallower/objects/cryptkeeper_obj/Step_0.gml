@@ -4,10 +4,11 @@
 my_floor = instance_place(x,y+1,wall_obj)
 player_floor = player_obj.current_platform
 
-if place_meeting(x,y+1,wall_obj) {
+if wall_checker(x,y+1) {
 	grounded = true
 } else {
 	grounded = false
+	
 }
 
 if player_obj.tail_carry {
@@ -26,7 +27,15 @@ if state!=state_hitting && state!=state_knockback {
 }
 
 if state==state_chasing {
-	
+	sound_timer++
+	if sound_timer>sound_timer_t {
+		sound_timer=0
+		sound_timer_t = 150 + random_range(-10,50)
+		
+		idle_sound = choose(zomb_idle1,zomb_idle2,zomb_idle3)
+		audio_sound_pitch(idle_sound,random_range(0.8,1.2))
+		audio_play_sound(idle_sound,0,false)
+	}
 	if player_obj.x<x {
 		image_xscale = 1
 		facing_right = false
@@ -52,12 +61,16 @@ if state==state_chasing {
 		}
 	} else {
 		fumbling_timer--
-		image_blend = c_red
+		//image_blend = c_red
 	}
 	//sprite_index = intimidating_walk
 	image_speed = 0.75
-	hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
-	
+	if grounded {
+		
+		hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
+	} else {
+		hspeed = lerp(hspeed,0,0.2)	
+	}
 } 
 
 if state==state_idle {
@@ -65,7 +78,7 @@ if state==state_idle {
 }
 
 
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vspeed+=grav}
+if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a hspeed=0 vspeed+=grav}
 
 if state==state_idle || state==state_hitting {
 	if(abs(hspeed) < h_decel){
@@ -131,12 +144,22 @@ if state==state_hitting {
 //	}
 //}
 
+if place_meeting(x,y,tar_obj) {
+	vspeed=0.5
+	hspeed = lerp(hspeed,0,0.2)
+	tartimer++
+	if tartimer>200 {
+		death = true	
+	}
+} else {
+	tartimer=0	
+}
 
 
 if death {
 	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
 	
-	var bruh = lettuce_chop
+	var bruh = lettuce_chop_louder
 	audio_sound_pitch(bruh,random_range(0.75,1.25))
 	audio_play_sound(bruh,0,false)
 	instance_destroy()	

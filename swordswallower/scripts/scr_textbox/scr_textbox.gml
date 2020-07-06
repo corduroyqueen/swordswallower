@@ -28,7 +28,7 @@ if txtSpeed >= 15 textSpeed = 15;
 global.maxPrintTimer = txtSpeed;
 
 //For measuring purposes
-draw_set_font(font);
+draw_set_font(font2);
 
 // sample text for spacing purposes
 var sampleTxt = "sample";
@@ -40,7 +40,7 @@ if global.txtCache == ""{
 }
 
 //Padding for inside dialogue box
-var padding = 32;
+var padding = 64;
 
 //Max width & height
 max_width = view_wview - (padding*2);
@@ -57,8 +57,7 @@ current_txtW = string_width(new_txt);
 ntl = string_length(new_txt); // new_txt_length
 
 //Will group wall of text into paragraph (if necessary); Will only run once
-sdm(txt_width)
-sdm(max_width)
+
 if (txt_width > max_width) {
     
     for (i=1; i < txt_length+1; i++)
@@ -156,21 +155,27 @@ if global.printTimer > 0 global.printTimer--;
 // Draw Variables
 //draw_set_font(font);
 
+
+
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
 view_xview = camx+300
-view_yview = camy+80
-view_wview = 900
-view_hview = 100
-max_width = 600
-max_height = 100
+view_yview = camy+120
+view_wview = 1320 + padding*2
+view_hview = 200
+max_width = 1320
+max_height = 200
+
+if view_visible[1] == true {
+	return txt	
+}
 
 // Draw dialogue box
 draw_set_color(c_black);
 draw_rectangle(view_xview,((view_yview+view_hview)-max_height)-(padding*1.5),view_xview+view_wview,view_yview+view_hview,false);
 
 // Rectangle Borders
-var bw = 4; // Border width
+var bw = 2; // Border width
 draw_set_color(c_white);
 draw_line_width(view_xview, ((view_yview+view_hview)-max_height)-(padding*1.5), view_xview, (view_yview+view_hview), bw);
 draw_line_width(view_xview-(bw/2), ((view_yview+view_hview)-max_height)-(padding*1.5), view_xview+view_wview, ((view_yview+view_hview)-max_height)-(padding*1.5), bw);
@@ -181,6 +186,28 @@ draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview,
 // Draw Text On Screen
 draw_set_color(c_white);
 draw_text_ext(view_xview+padding,((view_yview+view_hview)-max_height)-(padding/2),global.display_txt,20,max_width);
+
+if !printing {
+	ealpha = lerp(ealpha,1,0.2)
+} else {
+	ealpha = 0
+}
+
+txp = view_xview+max_width+20
+typ = view_yview+max_height-10
+
+draw_set_alpha(ealpha)
+
+draw_set_color(c_white)
+draw_rectangle(txp-10.5,typ-sprite_height/2-30,txp+35,typ-sprite_height/2-30+55,true)
+draw_set_color(c_dkgray)
+draw_rectangle(txp-7.5,typ-sprite_height/2-27,txp+32,typ-sprite_height/2-30+52,true)
+
+
+draw_set_color(c_white)
+draw_text(txp,typ-sprite_height/2 - 30,"E")
+
+draw_set_alpha(1)
 
 // Quit Dialogue/Textbox Event
 if txt == "" && global.placeholderTxt == ""{

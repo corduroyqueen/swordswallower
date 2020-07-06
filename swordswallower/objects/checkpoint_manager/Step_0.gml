@@ -5,6 +5,7 @@ if !player_obj.intro {
 } else {
 	if player_obj.tail_carry && !sword_swallower.visible {
 		text_bool = true	
+		text_timer = 1000
 	}
 	if text_bool {
 		text_timer++
@@ -29,8 +30,8 @@ if !player_obj.intro {
 			text_bool = false
 			title_obj.sprite_index = noone
 			audio_stop_sound(its_drum_time_intro)
-			audio_manager(gsound.m_area_one,0,true,0)
-			camera_set_view_size(view_camera[0],1280,720)
+			//audio_manager(gsound.m_area_one,0,true,0)
+			//camera_set_view_size(view_camera[0],1280,720)
 		}
 	}
 	

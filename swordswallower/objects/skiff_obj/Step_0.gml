@@ -3,13 +3,17 @@
 if sword_present {
 	tail_obj.current_obj = self
 	tail_obj.moving_platform_bool = true
+	
 }
 
 
 if !done {
-
+	
 	if go {
-		
+		if !yolo {
+			instance_create_depth(x,y,-999999999999,title_screen_obj)	
+			yolo = true
+		}
 		if loop1 < .4 || loop2 < .4{
 			if loop1<loop2 {
 				lol = loop1 	
@@ -22,7 +26,7 @@ if !done {
 		if loop1<loop2 {
 			lol = loop1 	
 		} else { lol = loop2 }
-		hspeed=lerp(hspeed,sin(lol*6.2831)*6.5,0.15)
+		hspeed = lerp(hspeed,sin(lol*6.2831)*6.5,0.15)
 		hspeed = clamp(hspeed,2,200)
 		
 		if x>(startx+7600) {
@@ -37,6 +41,14 @@ if !done {
 		hspeed = 0
 		if place_meeting(x,y,tail_obj) && player_obj.held_position && x<(startx+10) {
 			go = true
+			player_obj.ending_lock = true
+			with player_obj {
+				x = player_hitbox_check_obj.x	
+				y = player_hitbox_check_obj.y
+				xvheld = x-tail_obj.current_wall.x
+				yvheld = y-tail_obj.current_wall.y
+			}
+			
 		}	
 	}
 
@@ -47,6 +59,7 @@ if !done {
 	}
 	y = lerp(y,starty ,0.1)
 	if init {
+		
 		var lol = dialogue_array[0]
 		while lol!="0" {
 			lol = dialogue_array[o]	
@@ -59,7 +72,7 @@ if !done {
 		}
 		init = false
 	}
-	if x>=(startx+1000) && x<(startx+1000 + hspeed) {
+	if x>=(startx+1000) && x<(startx+1000 + hspeed) && !yolo {
 	
 		ui_manager.speaking = true
 		ui_manager.printing = true
@@ -85,8 +98,8 @@ if !done {
 		}
 	}
 
-	if ui_manager.speaking && x>(startx+1000+hspeed) {
-		if keyboard_check_pressed(level1_master.speaking_button) {
+	if ui_manager.speaking && x>(startx+1000+hspeed) && !yolo {
+		if player_obj.k_speak_p {
 			ui_manager.speaking = true
 			ui_manager.printing = true
 			with ui_manager {
@@ -111,7 +124,7 @@ if !done {
 		}	
 	}
 
-	if sword_present = false && !go && x>(startx+9000) {
+	if sword_present = false && !go && x>(startx+20000) {
 		ui_manager.current_dialogue = "end"
 		current_pick = 0
 		x = startx+7999
@@ -119,3 +132,4 @@ if !done {
 		hspeed = 0
 	}
 }
+

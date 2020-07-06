@@ -9,6 +9,7 @@ stinky_piles[0] = false
 
 wooden_walls_b = array_create(100)
 wooden_walls_b[0] = false
+wooden_walls_b[0] = false
 big_bois_b = array_create(10)
 big_bois_b[0] = false
 stinky_piles_b = array_create(100)
@@ -26,16 +27,21 @@ available_checkpoints = 0
 checkpoint_num = 1
 
 death_num = 0
+death_num_p = 0
 
 num_fog = 1
 fogs = array_create(num_fog)
 fogs_b = array_create(num_fog)
 		
-speaking_button = vk_space
+speaking_button = ord("E")
 
-level0map = true
+level0map = false
 level1map = true
 level2map = true
+
+dc_map_1 = false
+if_map_1 = false
+
 getmap = false
 map = false
 
@@ -46,8 +52,46 @@ hello = noone
 shielded = false
 
 recording = false
-surface_resize(application_surface,1280,720)
+surface_resize(application_surface,1920,1080)
 
-//window_set_fullscreen(true)
 
-screenshotnum = 20
+// 
+
+
+
+screenshotnum = 30
+
+keysave = undefined
+
+audio_listener_set_position(0,0,0,-1)
+
+
+
+walls_visible = false
+black_walls_visible = false
+spikes_visible = false
+thin_floor_visible = false
+
+dev = false
+dev = true
+if dev {
+	//window_set_fullscreen(false)	
+}
+
+//window_set_fullscreen(false)
+randomize()
+
+p_cgems = 0
+
+waterbool = false
+gpu_set_texfilter(true)
+
+
+
+
+
+
+
+
+
+//gpu_set_colorwriteenable(true, true, true, false);

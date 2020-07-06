@@ -1,0 +1,1 @@
+text = "both are very very early in playtesting so some things might not work "

@@ -73,6 +73,56 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "9094bc07-7ce3-4426-afa7-e7b05f9b9627"
+        },
+        {
+            "id": "fefc23ab-27fd-4092-b6c3-89fe93d52014",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "4d0b6ac6-d80f-4a34-ade2-e90b765faa1b",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "9094bc07-7ce3-4426-afa7-e7b05f9b9627"
+        },
+        {
+            "id": "587d4673-df0a-4093-953a-1dc51ec6d18a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "73680289-c8b6-4de8-9cac-d7a27dc94148",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "9094bc07-7ce3-4426-afa7-e7b05f9b9627"
+        },
+        {
+            "id": "abcef4d0-96aa-481c-965e-bcaf2debef88",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "0eedc5ea-9f1d-492c-ba28-bed5f1f42082",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "9094bc07-7ce3-4426-afa7-e7b05f9b9627"
+        },
+        {
+            "id": "807c0273-17f2-4963-ae9c-6a56300455c5",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "726bd3d0-93e7-4831-8a2e-9cf50c7a1dcb",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "9094bc07-7ce3-4426-afa7-e7b05f9b9627"
+        },
+        {
+            "id": "b442a089-0e7d-47e5-99b5-8ebb7fa123cc",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "9094bc07-7ce3-4426-afa7-e7b05f9b9627"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -105,9 +155,23 @@
             "value": "1",
             "varName": "pers",
             "varType": 1
+        },
+        {
+            "id": "b2a8f736-ebfb-42f4-b4b5-71e5eb9e7414",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "auto_aim",
+            "varType": 3
         }
     ],
     "solid": false,
-    "spriteId": "c54d6d95-5119-4392-a35f-a0f682a7ca0b",
+    "spriteId": "53663a6d-7178-4284-bb3a-290dcce969e3",
     "visible": true
 }

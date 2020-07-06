@@ -1,0 +1,1 @@
+text = "you can put down a checkpoint by holding space bar "

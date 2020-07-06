@@ -1,6 +1,6 @@
 flydamage = argument0
 
-if state==state_chasing && point_distance(x,y,player_obj.x,player_obj.y)>1500 {
+if state==state_chasing && point_distance(x,y,player_obj.x,player_obj.y)>1500 && !tail_obj.stinky {
 	death = true
 }	
 
@@ -104,7 +104,13 @@ if tail_obj.stinky {
 	tempx = -cos(ang) * sign(x-target.x)
 	tempy = -sin(ang) * sign(x-target.x)
 	
+	if shriek && !tail_obj.stinky
+	{
+		ang = arctan((targety-y-loltemp)/(targetx-x))
+		tempx = -cos(ang) * sign(x-targetx)
+		tempy = -sin(ang) * sign(x-targetx)
 	
+	}
 	
 	
 	if on_target {
@@ -122,18 +128,21 @@ if tail_obj.stinky {
 			hspeed = lerp(hspeed,tempx*h_accel*0.8,0.15)
 			vspeed = lerp(vspeed,tempy*h_accel*0.8,0.15)
 		} else {
-			ang = arctan((player_obj.tail_dest_y-y-loltemp)/(player_obj.tail_dest_x-x))
-			tempx = -cos(ang) * sign(x-target.x)
-			tempy = -sin(ang) * sign(x-target.x)
+			//ang = arctan((player_obj.tail_dest_y-y-loltemp)/(player_obj.tail_dest_x-x))
+			//tempx = -cos(ang) * sign(x-target.x)
+			//tempy = -sin(ang) * sign(x-target.x)
 			
 			
-			ang = arctan((target.y-y-loltemp)/(target.x-x))
-			tempx = -cos(ang) * sign(x-target.x)
-			tempy = -sin(ang) * sign(x-target.x)
-			//move_towards_point(player_obj.x,player_obj.y,h_accel*0.8)
-			ayy = point_distance(x,y,player_obj.x,player_obj.y)/120
-			hspeed = lerp(hspeed,tempx*h_accel*1.3*ayy,0.1)
-			vspeed = lerp(vspeed,tempy*h_accel*1.3*ayy,0.1)
+			//ang = arctan((target.y-y-loltemp)/(target.x-x))
+			//tempx = -cos(ang) * sign(x-target.x)
+			//tempy = -sin(ang) * sign(x-target.x)
+			////move_towards_point(player_obj.x,player_obj.y,h_accel*0.8)
+			//ayy = 1//point_distance(x,y,player_obj.x,player_obj.y)/120
+			//hspeed = lerp(hspeed,tempx*h_accel*1.3*ayy,0.1)
+			//vspeed = lerp(vspeed,tempy*h_accel*1.3*ayy,0.1)
+			
+			
+			move_towards_point(player_obj.x,player_obj.y,10)
 			
 		}
 	} else {

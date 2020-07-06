@@ -10,7 +10,19 @@ if timer_begin {
 			player_obj.tail_pulling = true
 		}
 		hello = instance_create_depth(x,y,0,temp_obj)
-
+		if !audio_is_playing(Ice_Break__Shatter__Smash_03) {
+			audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
+		}
+		if tail_obj.current_wall==self {
+			tail_obj.current_wall = tail_obj	
+		}
+		if player_obj.held_position  {
+			with player_obj{
+				reset_intangibility()
+				held_position = false
+				held_release_timer = 10	
+			}
+		}	
 		instance_destroy()	
 	}
 }

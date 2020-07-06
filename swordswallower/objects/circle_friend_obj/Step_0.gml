@@ -4,8 +4,8 @@ if active {
 	
 	if !player_obj.zoom_timer_bool {
 		if !wall_checker(x+hspeed,y+vspeed) {
-			if point_distance(x,y,mouse_x,mouse_y)>25 {
-				move_towards_point(mouse_x,mouse_y,point_distance(x,y,mouse_x,mouse_y)*0.1)
+			if point_distance(x,y,global.mousepx,global.mousepy)>25 {
+				move_towards_point(global.mousepx,global.mousepy,point_distance(x,y,global.mousepx,global.mousepy)*0.1)
 			} else {
 				hspeed=0
 				vspeed=0

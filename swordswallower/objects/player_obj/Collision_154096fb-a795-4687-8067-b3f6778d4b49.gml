@@ -1,9 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-sdm(y+sprite_height/2)
-sdm(other.y-other.sprite_height/2)
+
 if !other.intangible && 
-(y+sprite_height)<(other.y-other.sprite_height/2) && !keyboard_check(ord("S"))
+(y+sprite_height)<(other.y-other.sprite_height/2) && !player_obj.k_down
 &&vspeed>0
 && !zoom_timer_bool {
 	

@@ -16,3 +16,5 @@ meeting = false
 bug_friendo = false
 
 death = false
+
+met = false

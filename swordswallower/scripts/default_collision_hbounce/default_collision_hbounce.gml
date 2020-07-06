@@ -10,6 +10,7 @@ while (dist_moved < abs(hspeed)) {
 		hspeed=-hspeed
 		hspeed*=0.2
 		hspeed=0
+		y-=10
 		return;
 	}
 }

@@ -4,7 +4,8 @@
 my_floor = instance_place(x,y+1,wall_obj)
 player_floor = player_obj.current_platform
 
-if wall_checker(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
+if wall_checker(x,y+1) || place_meeting(x,y+1,wood_wall_obj)
+|| place_meeting(x,y+3,thin_floor_obj) {
 	if abs(last_grounded_y-y)>400 {
 		//locked = true
 		//startx = x
@@ -143,7 +144,7 @@ if sword_present {
 	
 }
 
-if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)<70 
+if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)<105
 	&& !grabbing && !grabbed{
 		
 	grabbing = true
@@ -178,7 +179,7 @@ if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vsp
 	//sword_present = false
 }
 
-if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)>70 {
+if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)>105 {
 	grabbed = false	
 }
 	
@@ -188,9 +189,9 @@ if grabbing {
 	player_obj.x = x + 35 * -sign(image_xscale)
 	player_obj.y = y
 	hspeed = lerp(hspeed,0,0.02)
-	state=state_hitting
+	//state=state_hitting
 	hold_timer++
-	if hold_timer<45 {
+	if hold_timer<1 {
 		hit_timer = 0	
 	}
 	if player_obj.zoom_timer_bool {
@@ -216,8 +217,8 @@ if carryingcrab {
 }
 
 if ready {
-	h_accel = .2
-	h_walk_speed = 11
+	//h_accel = .2
+	//h_walk_speed = 11
 }
 if state==state_chasing {
 	if grabbing {
@@ -226,10 +227,16 @@ if state==state_chasing {
 	
 	if player_obj.x<x {
 		hspeed-=h_accel	
+		if hspeed>0 {
+			hspeed-=h_accel*2
+		}
 		image_xscale = 1
 		facing_right = false
 	} else {
 		hspeed+=h_accel	
+		if hspeed<0 {
+			hspeed+=h_accel*2
+		}
 		image_xscale = -1
 		facing_right = true
 	}
@@ -247,18 +254,18 @@ if state==state_chasing {
 		crabfriend = false
 	}
 	
-	if grounded {
-		if (x-player_obj.x)<50 && sign(x-player_obj.x)==1 {
-			state = state_hitting
+	//if grounded {
+	//	if (x-player_obj.x)<50 && sign(x-player_obj.x)==1 {
+	//		state = state_hitting
 		
-		} else if (x-player_obj.x)>-50 && sign(x-player_obj.x)==-1 {
-			state = state_hitting
-		}
-	}
+	//	} else if (x-player_obj.x)>-50 && sign(x-player_obj.x)==-1 {
+	//		state = state_hitting
+	//	}
+	//}
 	//sprite_index = intimidating_walk
 	//image_speed = 0.75
 	
-	hspeed = lerp(hspeed,clamp(hspeed,-h_walk_speed,h_walk_speed),0.05)
+//	hspeed = lerp(hspeed,clamp(hspeed,-h_walk_speed,h_walk_speed),0.05)
 	
 } 
 
@@ -270,7 +277,7 @@ if state==state_idle {
 }
 
 
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vspeed+=grav}
+if grounded && !climbing { h_decel = h_decel_g } else { h_decel = h_decel_a vspeed+=grav}
 
 if state==state_idle || state==state_hitting {
 	if(abs(hspeed) < h_decel){
@@ -282,54 +289,54 @@ if state==state_idle || state==state_hitting {
 	}
 }
 
-if state==state_hitting {
-	if !locked {
-		sprite_index = big_boi_attacking
-	}
-	hit_timer++
+//if state==state_hitting {
+//	if !locked {
+//		sprite_index = big_boi_attacking
+//	}
+//	hit_timer++
 	
 	
-	if hit_timer>5 {
-		if hit_timer<7 {
-			hit = instance_create_depth(x,y,0,golem_atk_collision_obj)
-			hit.image_xscale = image_xscale	
-		}
-		if !instance_exists(hit) && !hit_success {
-			hit_timer=100
-			hit_success = true
+//	if hit_timer>5 {
+//		if hit_timer<7 {
+//			hit = instance_create_depth(x,y,0,golem_atk_collision_obj)
+//			hit.image_xscale = image_xscale	
+//		}
+//		if !instance_exists(hit) && !hit_success {
+//			hit_timer=100
+//			hit_success = true
 			
-		} 
-		if instance_exists(hit) {
-			hit.x = x
-			hit.y = y
-		}
+//		} 
+//		if instance_exists(hit) {
+//			hit.x = x
+//			hit.y = y
+//		}
 		
 		
-		if hit_timer>30 {
-			//sprite_index = intimidating
-			if instance_exists(hit) {
-				instance_destroy(hit)	
-			}
-			//sprite_index = golem_idle
-		} else {
-			//sprite_index = golem_atk
+//		if hit_timer>30 {
+//			//sprite_index = intimidating
+//			if instance_exists(hit) {
+//				instance_destroy(hit)	
+//			}
+//			//sprite_index = golem_idle
+//		} else {
+//			//sprite_index = golem_atk
 		
-		}
-		if hit_timer>50 {
-			state = state_idle
-			hit_timer = 0
-			hit_success = false
-		}
-	}
-} else {
-	if !locked {
-		sprite_index = big_boi
-	}
-	if abs(x-player_obj.x)<250 {
-		//state=state_hitting	
-		//hit_timer = 10
-	}	
-}
+//		}
+//		if hit_timer>50 {
+//			state = state_idle
+//			hit_timer = 0
+//			hit_success = false
+//		}
+//	}
+//} else {
+//	if !locked {
+//		sprite_index = big_boi
+//	}
+//	if abs(x-player_obj.x)<250 {
+//		//state=state_hitting	
+//		//hit_timer = 10
+//	}	
+//}
 
 //if state==state_knockback {
 //	knockback_timer--
@@ -338,13 +345,83 @@ if state==state_hitting {
 //	}
 //}
 
-wall_collision_climbing(wall_obj)
-wall_collision_climbing(black_wall_obj)
+//wall_collision_climbing(wall_obj)
+//wall_collision_climbing(black_wall_obj)
+if wall_checker(x-10,y) {
+	on_wall_left = true	
+} else {
+	on_wall_left = false	
+}
+
+
+
+if wall_checker(x+10,y) {
+	on_wall_right = true	
+} else {
+	on_wall_right = false	
+}
 
 wall_collision_xaxis(wall_obj)
 wall_collision_xaxis(black_wall_obj)
 
 
+if player_obj.y<y && !climbing {
+	if on_wall_left {
+		wallheight = 0
+		while (wall_checker(x-10,y-wallheight) && wallheight <= maxheight) wallheight += 1;
+		if wallheight<=maxheight && wallheight>10 {
+			sdm("ok")
+			climbing=true
+		}
+	} else if on_wall_right {
+		wallheight = 0
+		while (wall_checker(x+10,y-wallheight) && wallheight <= maxheight) wallheight += 1;
+		if wallheight<=maxheight && wallheight>10 {
+			sdm("ok")
+			climbing=true
+		}
+	}
+}
+
+if climbing {
+		sdm("climbing start ")
+	if wall_checker(x-sign(image_xscale)*10,y-wallheight)  {
+		climbing = false	
+		return
+		sdm("climbing f 1 ")
+	}
+
+	
+	if !on_wall_left && !on_wall_right {
+		yplusb = 0
+		y -= yplusb
+		wallheight = 0
+		climbing = false
+		sdm("climbing f 2 ")
+		return
+	} 
+	
+	if (on_wall_left && player_obj.x>x) ||
+	(on_wall_right && player_obj.x<x) {
+		yplusb = 0
+		y -= yplusb
+		wallheight = 0
+		climbing = false
+		sdm("climbing f 3 ")
+		return
+		
+	}
+	
+	y-=9
+	vspeed=-9
+
+	hspeed=0
+			
+	
+}
+if climbing { sdm(vspeed) }
+
+if climbing { sdm(vspeed) }
 
 if locked {
 	hspeed = 0
@@ -363,7 +440,7 @@ if locked {
 
 last_fly_hp = fly_hp
 
-
+if climbing { sdm(vspeed) }
 
 if death {
 	if sword_present {
@@ -385,3 +462,4 @@ if sword_present {
 hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
 
 
+if climbing { sdm(vspeed) }

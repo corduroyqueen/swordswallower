@@ -50,12 +50,20 @@ if loop2<0.04 {
 leg1out = clamp(leg1out,-10,60)
 leg2out = clamp(leg2out,-10,60)
 
+if (floor(leg1out)==50 && loop1<0.04) || 
+ (floor(leg2out)==50 && loop2<0.04) {
+	audio_play_sound(skifffootstep,0,false)	
+}
+
 //loop2out = cos((loop2+0.0)*3.1415/2)
 leg2_ang = cos(0+loop2*6.2831)*22
 
 
-draw_sprite_ext(leg_spr2,0,
-(x)+cos(degtorad(leg2_ang+270)) * leg2out,
-(y-10)-sin(degtorad(leg2_ang+270)) * leg2out,
-1,1,leg2_ang,c_white,1)
-draw_self()
+
+
+draw_sprite_ext(boatgirl2,0,x,y-sprite_get_height(boatgirl2)-sprite_height/2,-sign(hspeed-0.1),1,0,c_white,1)
+
+
+draw_sprite_ext(skifffront,0,x,y,0.75,0.75,0,c_white,1)
+
+

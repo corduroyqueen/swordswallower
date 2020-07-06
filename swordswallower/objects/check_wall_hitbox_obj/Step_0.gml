@@ -11,7 +11,8 @@ if cool_list!=noone{
 	
 	for (i=0;i<ds_list_size(cool_list);i++){
 	
-		cool_list[| i].intangible = true
+		 cool_list[| i].intangible = true
+		//sdm("lel ===" + string(i))
 		//cool_list[| i].image_blend = c_purple
 		//ds_list_add(ui_manager.cool_list,cool_list[| i])
 	
@@ -25,7 +26,7 @@ if point_distance(player_hitbox_check_obj.x,player_hitbox_check_obj.y,player_obj
 	reset_intangibility()	
 }
 
-if !mouse_check_button(mb_right) {
+if !player_obj.k_dash {
 	reset_intangibility()	
 }
 

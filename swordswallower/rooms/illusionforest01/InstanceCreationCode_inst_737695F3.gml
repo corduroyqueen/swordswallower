@@ -1,0 +1,1 @@
+text = "also the background is just a test image, not ours "

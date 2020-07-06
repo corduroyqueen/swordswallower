@@ -1,5 +1,5 @@
 if grounded {
-	if keyboard_check(ord("A")) || keyboard_check(ord("D")) {
+	if k_left || k_right {
 		footstep_timer++
 		if footstep_timer > footstep_timer_m {
 			//audio_play_sound(gsound.s_footstep_stone,0,false)

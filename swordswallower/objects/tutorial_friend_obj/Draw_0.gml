@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+/*
 if tutorial_friend.timer>43 {
 	if tutorial_friend.timer<45 {
 		audio_play_sound(Laser_Cannon,0,false)	
