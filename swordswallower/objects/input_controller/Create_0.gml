@@ -5,7 +5,8 @@ controller = 0
 controller_keyboard = 0
 controller_ds4 = 1
 
-global.mousepx = 0
-global.mousepy = 0
+mang = 0
+global.mousepx = cos(degtorad(mang))*650
+global.mousepy = sin(degtorad(mang))*650
 
 mang = 0

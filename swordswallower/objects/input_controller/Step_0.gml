@@ -16,8 +16,8 @@ if controller = controller_ds4 {
 		
 	
 	
-	global.mousepx = lerp(global.mousepx,player_obj.x+cos(degtorad(mang))*650,0.2)
-	global.mousepy = lerp(global.mousepx,player_obj.y-sin(degtorad(mang))*650,0.2)
+	global.mousepx = lerp(global.mousepx,player_obj.x+cos(degtorad(mang))*650,1)
+	global.mousepy = lerp(global.mousepx,player_obj.y-sin(degtorad(mang))*650,1)
 		
 		
 	player_obj.k_left_r = player_obj.k_left && gamepad_axis_value(0,gp_axislh)>=-0.5
