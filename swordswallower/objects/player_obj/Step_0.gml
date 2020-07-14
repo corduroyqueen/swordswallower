@@ -186,10 +186,13 @@ if death {
 	
 		}	
 	}*/
-	if grounded && !place_meeting(x,y+2,black_wall_obj) {
+	if last_checkpoint == noone || !instance_exists(last_checkpoint)  {
+		last_checkpoint  = lelckpt
+	}
+	if grounded && !place_meeting(x,y+2,black_wall_obj) && !ckpt_bool {
 		
-		if !place_meeting(x,y,checkpoint_manager.checkpoint) {
-			if gems>=1 {
+		if !place_meeting(x,y,checkpoint_manager.checkpoint) && !ckpt_bool {
+			if gems>=1 && !ckpt_bool {
 				if k_ckpt {
 					ckpt_place_timer++	
 					move_locked = true
@@ -200,6 +203,7 @@ if death {
 				}
 				if ckpt_place_timer>ckpt_place_timer_m {
 					ckpt_place_timer=0
+					ckpt_bool = true
 					last_checkpoint = checkpoint_manager.checkpoint
 					oog = instance_create_depth(x,y,0,checkpoint1)	
 					hp=2
@@ -233,7 +237,7 @@ if death {
 					}
 				}
 			}
-		} else if !checkpoint_manager.checkpoint.setpoint {
+		} else if !checkpoint_manager.checkpoint.setpoint && !ckpt_bool {
 			if k_ckpt {
 				ckpt_place_timer++	
 				move_locked = true
@@ -242,14 +246,19 @@ if death {
 				ckpt_place_timer = 0	
 				move_locked = false
 			}
-			if ckpt_place_timer>40 {
+			if ckpt_place_timer>60 {
 				ckpt_place_timer=0
+				ckpt_bool = true
 				instance_destroy(checkpoint_manager.checkpoint)
 				level1_master.checkpoints[checkpoint_num] = 0
 				checkpoint_num--
 				gems+=1
 				//level1_master.available_checkpoints++
 				//checkpoint_manager.checkpoint = level1_master.checkpoints[checkpoint_num-1]
+				
+				if last_checkpoint == noone || !instance_exists(last_checkpoint)  {
+					last_checkpoint  = lelckpt
+				}
 				checkpoint_manager.checkpoint = last_checkpoint
 				checkpoint_manager.rx = checkpoint_manager.checkpoint.x
 				checkpoint_manager.ry = checkpoint_manager.checkpoint.y
@@ -262,7 +271,13 @@ if death {
 		}
 	} else {
 		ckpt_place_timer = 0	
+		if ckpt_bool && !k_ckpt {
+		
+			ckpt_bool = false	
+			ckpt_place_timer=0
+		}
 	}
+	
 }
 
 
@@ -439,7 +454,7 @@ if level1_master.map {
 			checkpoints[i] = instance_find(checkpoint1,i)
 			lol = instance_create_depth(checkpoints[i].x,checkpoints[i].y,-700,checkpoint_marker_obj)
 			if !checkpoints[i].setpoint {
-				lol.sprite_index = current_ckpt_marker
+				//lol.sprite_index = current_ckpt_marker
 			}
 			lol.image_xscale = scale_con * 10
 			lol.image_yscale = scale_con * 10
@@ -595,16 +610,16 @@ if keyboard_check_pressed(ord("T")) && !death && !ending_lock {
 if level1_master.dev {
 
 
-	if keyboard_check_pressed(ord("H")){
-		wall_obj.visible = !wall_obj.visible
-		black_wall_obj.visible = !black_wall_obj.visible
-		spike.visible = !spike.visible
-		thin_floor_obj.visible = !thin_floor_obj.visible
-	}
+	//if keyboard_check_pressed(ord("H")){
+	//	wall_obj.visible = !wall_obj.visible
+	//	black_wall_obj.visible = !black_wall_obj.visible
+	//	spike.visible = !spike.visible
+	//	thin_floor_obj.visible = !thin_floor_obj.visible
+	//}
 	if keyboard_check_pressed(ord("U")){
 		//x = 20680
-		x=2500
-		y=2500
+		//x=2500
+		//y=2500
 		//x=44703
 		//y = 10000
 	}

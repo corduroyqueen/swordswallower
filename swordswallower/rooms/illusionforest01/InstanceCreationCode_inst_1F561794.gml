@@ -1,0 +1,1 @@
+text = "waving flames are checkpoints "

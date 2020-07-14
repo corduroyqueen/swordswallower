@@ -1,1 +1,1 @@
-text = "since its so early in playtesting and things will move around"
+text = "the first is controller support! if you have one you can plug it in "

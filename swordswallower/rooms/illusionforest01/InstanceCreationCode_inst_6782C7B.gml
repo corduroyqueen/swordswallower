@@ -1,1 +1,1 @@
-text = "gem counter is in the top left and maxes at 3 "
+text = "gem counter is in the top left "

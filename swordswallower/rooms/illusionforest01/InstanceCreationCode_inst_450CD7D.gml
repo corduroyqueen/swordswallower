@@ -1,1 +1,1 @@
-text = "no npcs have dialogue currently, thats next on the task list "
+text = "very few npcs have dialogue currently "

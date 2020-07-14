@@ -1,0 +1,1 @@
+text = "left stick to move, right stick to aim, right shoulder to throw/pull, left shoulder to dash "

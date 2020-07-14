@@ -14,13 +14,13 @@ if broken {
 		} else {
 			if(i<20) {
 				if !surface_exists(pieces_surfaces[i]) {
-					pieces_surfaces[i] = surface_create(400,400)	
+					pieces_surfaces[i] = surface_create(4,4)	
 				}
 
 				surface_set_target(pieces_surfaces[i])
 			} else {
 				if !surface_exists(pieces_surfaces2[i-20]) {
-					pieces_surfaces2[i] = surface_create(400,400)	
+					pieces_surfaces2[i] = surface_create(4,4)	
 				}
 
 				surface_set_target(pieces_surfaces2[i-20])

@@ -1,0 +1,1 @@
+text = "in this version there are few permanent checkpoints, so putting down checkpoints is required "

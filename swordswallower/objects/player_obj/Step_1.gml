@@ -8,6 +8,15 @@ if cool {
 	tail_obj.x = x
 	tail_obj.y = y
 	
+	//wall_obj.visible = !wall_obj.visible
+	//black_wall_obj.visible = !black_wall_obj.visible
+	//spike.visible = !spike.visible
+	//thin_floor_obj.visible = !thin_floor_obj.visible
+	
+	wall_obj.visible = true
+	black_wall_obj.visible = true
+	spike.visible = true
+	thin_floor_obj.visible = true
 	
 	if intro {
 		tail_obj.x = sword_swallower.x

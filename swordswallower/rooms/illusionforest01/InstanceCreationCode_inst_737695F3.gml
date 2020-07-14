@@ -1,1 +1,1 @@
-text = "also the background is just a test image, not ours "
+text = "you can also hold space on a checkpoint to gain a gem, but lose the checkpoint "

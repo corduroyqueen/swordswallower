@@ -233,3 +233,5 @@ ckpt_place_timer = 0
 ckpt_place_timer_m = 120
 
 door_enter =false
+
+ckpt_bool = false

@@ -1,0 +1,1 @@
+text = "X for checkpoints, square to talk, circle for map, and still T to restart from last checkpoint "

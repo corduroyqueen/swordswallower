@@ -22,3 +22,6 @@ lel=-1
 font2 = font_add("lato.ttf",32,false,false,32,128)
 
 ealpha = 0
+
+mouse_ui_x = 0
+mouse_ui_y = 0

@@ -1,0 +1,1 @@
+text = "press E or Square near him to get map "

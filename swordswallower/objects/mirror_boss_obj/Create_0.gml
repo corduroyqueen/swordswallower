@@ -22,11 +22,11 @@ pieces_surfaces = array_create(20)
 pieces_surfaces = array_create(19)
 
 for(i=0;i<20;i++) {
-	pieces_surfaces[i] = surface_create(400,400)	
+	pieces_surfaces[i] = surface_create(4,4)	
 }
 
 for(i=0;i<19;i++) {
-	pieces_surfaces2[i] = surface_create(400,400)	
+	pieces_surfaces2[i] = surface_create(4,4)	
 }
 
 

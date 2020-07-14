@@ -14,7 +14,9 @@ if !tail_planted && !tail_held {
 			tail_obj.moving_platform_bool = false
 			tail_obj.x = player_obj.x
 			tail_obj.y = player_obj.y
-			auto_aim_selection()
+			if input_controller.controller = input_controller.controller_ds4 {
+				auto_aim_selection()
+			}
 			tail_dest_x = global.mousepx
 			tail_dest_y = global.mousepy
 			tail_carry = false

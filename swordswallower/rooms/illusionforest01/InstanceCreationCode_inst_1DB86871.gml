@@ -1,1 +1,1 @@
-text = "(that doesnt end the level, but thats the end of the playtestable content)"
+text = "(so in another words, destroy the 3 wiggly statues and come back here and thats it for the playtest "

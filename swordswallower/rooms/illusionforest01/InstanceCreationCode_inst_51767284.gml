@@ -1,0 +1,1 @@
+text = "ctrls for mouse/keyboard: "

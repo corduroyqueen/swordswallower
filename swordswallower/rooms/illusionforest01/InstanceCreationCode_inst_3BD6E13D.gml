@@ -1,1 +1,1 @@
-text = "hello! there are two playtestable levels "
+text = "hello! the playtestable level is to the right "

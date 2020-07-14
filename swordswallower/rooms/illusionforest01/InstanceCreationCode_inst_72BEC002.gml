@@ -1,0 +1,1 @@
+text = "xbox controllers are kind of buggy but dualshock is functioning properly. "

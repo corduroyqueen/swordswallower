@@ -59,7 +59,15 @@ if player_obj.death {
 	draw_set_font(font2)
 	draw_text(player_obj.camx+20,player_obj.camy+20,string(player_obj.gems))	
 	draw_set_color(c_ltgray)
-	draw_circle(global.mousepx,global.mousepy,9,false)
+	
+	if input_controller.controller == input_controller.controller_ds4 {
+		mouse_ui_x = lerp(mouse_ui_x,global.mousepx,0.2)
+		mouse_ui_y = lerp(mouse_ui_y,global.mousepy,0.2)
+	} else if input_controller.controller == input_controller.controller_keyboard {
+		mouse_ui_x = mouse_x
+		mouse_ui_y = mouse_y
+	}
+	draw_circle(mouse_ui_x,mouse_ui_y,9,false)
 	draw_set_color(c_white)
 	
 	//draw_sprite_ext(sword5,0,global.mousepx,global.mousepy,0.5,0.5,point_direction(player_obj.x,player_obj.y,global.mousepx,global.mousepy)-90,c_white,1)

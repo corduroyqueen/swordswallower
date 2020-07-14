@@ -1,1 +1,1 @@
-text = "finally, we are testing a system where if you get 3 green gems "
+text = "the second thing were testing a checkpoint system where if you get 1 green gem "
