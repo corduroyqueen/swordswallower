@@ -1,5 +1,5 @@
 dialogue = "yo bro nj "
-sprite_index = elephant1
+sprite_index = oracle;
 mapguy = true
 dialogue_array[0] = "Greetings. I see you've escaped the tower. "
 dialogue_array[1] = "I can give you a map of the area if you'd like. It might help you in your pursuit. "
