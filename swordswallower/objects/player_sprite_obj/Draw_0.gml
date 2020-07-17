@@ -86,7 +86,7 @@ draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
 
 x=player_obj.x
 y=player_obj.y
-if player_obj.tail_carry && !player_obj.held_position {
+if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_position {
 	player_sword_calc()
 }
 x=150

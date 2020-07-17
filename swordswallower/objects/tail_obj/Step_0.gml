@@ -647,7 +647,9 @@ if player_obj.ending_lock {
 	x=player_obj.x
 	y=player_obj.y-45
 }
-
+if player_obj.out_of_dash_t<0 {
+	visible = false	
+}
 xpreva = x
 ypreva = y
 lockcheck = false

@@ -141,9 +141,14 @@ if zoom_timer_bool {
 		zoom_timer_bool = false
 		zoom_timer = 0
 		bounce_buff_timer = 6
+		out_of_dash_t=10
 		reset_intangibility()
-		hspeed *=0.65
-		vspeed *=0.65
+		hspeed *=0.68
+		if vspeed>0 {
+			vspeed *=0.9
+		} else {
+			vspeed *=0.68
+		}
 		zoom_allow=7
 		
 		//player_obj.tail_planted = false
@@ -193,6 +198,10 @@ if zoom_timer_bool {
 	
 	//gogo = lerp(gogo,0,0.1
 	audio_sound_gain(Ice_Projectile_Shoot_03,0,200)
+}
+
+if out_of_dash_t<0 {
+	zooming_particles()	
 }
 
 bounce_buff_timer--

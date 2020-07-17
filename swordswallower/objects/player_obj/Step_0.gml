@@ -323,7 +323,23 @@ if place_meeting(x,y+1,nightdoor_obj)&& !zoom_timer_bool && sky_obj.day {
 	grounded = true
 
 }
-
+zoom_hitbox_active = false
+if zoom_timer_bool || grounded {
+	out_of_dash_t = out_of_dash_m
+} else {
+	out_of_dash_t++
+	if out_of_dash_t>=out_of_dash_m {
+		out_of_dash_t=out_of_dash_m
+	} else {
+		if out_of_dash_t<20 {
+			zoom_hitbox_active = true	
+		}
+	}
+	
+}
+if zoom_timer_bool {
+	zoom_hitbox_active = true	
+}
 
 if place_meeting(x,y+1,friendo2_obj) {
 	x = x + instance_place(x,y+1,friendo2_obj).hspeed	

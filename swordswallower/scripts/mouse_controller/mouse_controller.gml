@@ -15,7 +15,9 @@ if !tail_planted && !tail_held {
 			tail_obj.x = player_obj.x
 			tail_obj.y = player_obj.y
 			if input_controller.controller = input_controller.controller_ds4 {
-				auto_aim_selection()
+				auto_aim_selection(0.8)
+			} else {
+				auto_aim_selection(0.25)
 			}
 			tail_dest_x = global.mousepx
 			tail_dest_y = global.mousepy
@@ -92,6 +94,7 @@ if !tail_planted && !tail_held {
 			tail_pulling=true
 			hspeed*=0.65
 			vspeed*=0.65
+			
 			reset_intangibility()
 			zoom_timer_bool= false
 			zoom_timer = 0

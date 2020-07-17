@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if !death && !tail_obj.stinky && !player_obj.stinky_check {
 if !inv_timer>0 {
-	if other.zoom_timer_bool {
+	if other.zoom_hitbox_active {
 		death = true
 	} else if !other.dmg_flashing {
 		damage_script(10,sign(player_obj.x-x),5,-1)

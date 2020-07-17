@@ -53,13 +53,7 @@ if player_obj.tail_carry {
 	}
 }
 if !player_obj.tail_carry {
-	if player_obj.zoom_timer_bool {
-		image_angle = point_direction(player_obj.x,	player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)-90
-		image_speed = 1.5
-		sprite_index = s_boost
-	} else {
-		image_angle = 0	
-	}
+	
 	if player_obj.held_position {
 		if player_hitbox_check_obj.wall == 0 ||player_hitbox_check_obj.wall == 2 {
 			sprite_index = wall_p1
@@ -83,7 +77,13 @@ if !player_obj.tail_carry {
 		sprite_index = s_player_idle_e
 	}
 }
-
+if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 {
+		image_angle = point_direction(0,0,player_obj.hspeed,player_obj.vspeed)-90
+		image_speed = 1.5
+		sprite_index = s_boost
+	} else {
+		image_angle = 0	
+	}
 if player_obj.zoom_timer_bool && place_meeting(x,y,wall_obj) {
 	//image_blend = c_purple	
 } else if player_obj.stinky_check {
@@ -115,3 +115,9 @@ if player_obj.death {
 
 image_xscale*=1.5
 image_yscale=1.5
+
+if player_obj.ability_held_release_jump {
+	if player_obj.held_position && player_obj.ability_held_release_t>player_obj.ability_held_release_m {
+		//image_blend = c_purple	
+	}
+}

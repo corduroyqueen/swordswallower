@@ -25,17 +25,17 @@ if !zoom_timer_bool && !held_position{
 		if k_left && hspeed>=-max_hs_a {
 			if hspeed >= 0 || !h_dir_bool 
 			{
-				hspeed-=h_accel_a/2
+				hspeed-=(h_accel_a/2)*(out_of_dash_t/out_of_dash_m)
 			} else {
-				hspeed-=h_accel_a
+				hspeed-=h_accel_a*(out_of_dash_t/out_of_dash_m)
 				h_dir_bool = false
 			}
 		} else if k_right && hspeed<=max_hs_a {
 			if hspeed <= 0 || !h_dir_bool
 			{
-				hspeed+=h_accel_a/2
+				hspeed+=(h_accel_a/2)*(out_of_dash_t/out_of_dash_m)
 			} else {
-				hspeed+=h_accel_a
+				hspeed+=h_accel_a*(out_of_dash_t/out_of_dash_m)
 				h_dir_bool = false
 			}
 		}
@@ -121,7 +121,7 @@ if held_release_timer>0 {
 } else {
 	grav = start_grav	
 }
-if !grounded && !zoom_timer_bool && vspeed<max_vs {
+if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vspeed<max_vs {
 	
 	vspeed += (grav + grav_jv)	
 }
@@ -134,6 +134,26 @@ if tail_obj.moving_platform_bool {
 	tail_dest_y = player_hitbox_check_obj.y
 	//}
 	
+}
+if ability_spin_jump {
+	if grounded || held_position {
+		ability_spin_jump_e = true
+	}
+	if !grounded && ability_spin_jump_e && !held_position {
+		
+		if keyboard_check_pressed(vk_space) {
+			ability_spin_jump_e = false
+			out_of_dash_t=out_of_dash_m
+			if vspeed>0 {
+				vspeed*=0.5
+				vspeed-=25
+				hspeed*=0.60
+			} else {
+				vspeed-=10
+				hspeed*=0.60
+			}
+		}
+	}
 }
 if held_position {
 	if tail_obj.current_wall.object_index==wood_wall_obj {
@@ -197,10 +217,38 @@ if held_position {
 	zoom_timer_bool = false
 	zoom_timer = 0
 	
-	
-	
+	if ability_held_release_jump {
+		ability_held_release_t++	
+	}
+	if ability_held_release_t>ability_held_release_m && (keyboard_check_pressed(vk_space)) {
+		reset_intangibility()
+		ability_held_release_t=0
+		zoom_particle_timer=0
+		move_towards_point(global.mousepx,global.mousepy,60)	
+		out_of_dash_t=-10
+		held_position = false
+		held_release_timer = 10
+		if tail_obj.moving_platform_bool && 
+		(tail_obj.current_obj.object_index == moving_platform_obj
+		|| tail_obj.current_obj.object_index == sinking_platform_obj) {
+			//var h = hspeed
+			//var v = vspeed
+			if tail_obj.current_obj.vertical {
+				y += sign(y-tail_obj.current_obj.y)*10	
+			} else {
+				x += sign(x-tail_obj.current_obj.x)*10		
+			}
+			//move_towards_point(tail_obj.current_obj.x,tail_obj.current_obj.y,2)
+			//default_collision(tail_obj.current_obj)
+		}
+	}
 	if (k_fire_p || k_dash_r) {
 		reset_intangibility()
+		//if ability_held_release_t>ability_held_release_m && (k_dash_r || keyboard_check_pressed(vk_space)) {
+		//	ability_held_release_t=0
+		//	move_towards_point(global.mousepx,global.mousepy,23)	
+		//	out_of_dash_t=10
+		//}
 		held_position = false
 		held_release_timer = 10
 		if tail_obj.moving_platform_bool && 
@@ -244,7 +292,26 @@ if held_position {
 	}
 	
 } else {
+	ability_held_release_t =0 
 	held_pos_timer = 0	
+}
+
+if grounded {
+	
+	if h_accel_reduc<1 {
+		h_accel_reduc+=0.025
+		hspeed *=h_accel_reduc
+	} 
+}
+if out_of_dash_t<0 {
+	ang = point_direction(0,0,hspeed,vspeed)
+	//dist = point_distance(0,0,hspeed,vspeed)
+	hspeed = lerp(hspeed,cos(degtorad(ang))*20,0.30)
+	if vspeed<0 {
+		vspeed = lerp(vspeed,-sin(degtorad(ang))*20,0.30)
+	} else {
+		vspeed = lerp(vspeed,-sin(degtorad(ang))*20,0.20)
+	}
 }
 
 /*

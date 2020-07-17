@@ -31,8 +31,9 @@ if !player_obj.k_dash
 	place_meeting(x,y,hum_food_obj)|| 
 	place_meeting(x,y,circle_friend_obj) {
 		//sdm("lellll")
-		player_obj.hspeed *= 0.6
-		player_obj.vspeed *= 0.6
+		player_obj.hspeed *= 0.65
+		player_obj.vspeed *= 0.65
+		out_of_dash_t=10
 		player_obj.hspeed = clamp(player_obj.hspeed,-25,25)
 		player_obj.vspeed = clamp(player_obj.vspeed,-25,25)
 		if place_meeting(x,y,hum_food_obj) {

@@ -53,6 +53,7 @@ damage_start = false
 h_accel = 0.75
 h_accel_g = 0.75
 h_accel_a =1.5
+h_accel_reduc = 1
 
 h_dir_bool = true
 
@@ -139,6 +140,7 @@ wall_jump_x = 5
 wall_jump_y = 4
 
 zoom_timer_bool = false
+zoom_hitbox_active = false
 zoom_max_interact = 25
 zoom_dist = 125
 zoom_pause = false
@@ -220,6 +222,9 @@ audio_listener_orientation(0,1,0,0,0,1)
 
 prev_pos_t = 0
 
+out_of_dash_t = 0
+out_of_dash_m = 100
+
 shockwave_shader.trigger = true
 shockwave_shader.strength_input = 0.1
 
@@ -235,3 +240,14 @@ ckpt_place_timer_m = 120
 door_enter =false
 
 ckpt_bool = false
+
+
+
+
+///ability bools
+ability_held_release_jump = true
+ability_held_release_t=0
+ability_held_release_m=5
+
+ability_spin_jump = true
+ability_spin_jump_e = true

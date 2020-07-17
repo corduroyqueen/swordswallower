@@ -1,4 +1,4 @@
-
+lamt = argument0
 
 lel = instance_create_depth(x,y,depth,auto_aim_check_obj)
 with lel {
@@ -44,8 +44,8 @@ with lel {
 			}
 		}
 		if instance_exists(target) {
-			global.mousepx = target.x
-			global.mousepy = target.y 
+			global.mousepx = lerp(global.mousepx,target.x,other.lamt)
+			global.mousepy = lerp(global.mousepy,target.y,other.lamt)
 		}
 	} 
 	ds_list_destroy(final_list)

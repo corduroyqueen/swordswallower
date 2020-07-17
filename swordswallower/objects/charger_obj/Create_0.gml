@@ -24,14 +24,14 @@ collided_with_friend = false
 
 grav = .8
 yplusb=0
-h_accel = 1.2
+h_accel = 1.7
 
 h_decel_g = 0.35
 h_decel_a = 0.0375
 h_decel = 0
 
 h_walk_speed = 20
-h_max_speed = 20
+h_max_speed = 33
 
 grabbing = false
 
