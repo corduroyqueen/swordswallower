@@ -14,7 +14,7 @@ if !other.intangible {
 	var th = hspeed
 	var tv = vspeed
 	if tv>15 {
-		if place_meeting(x,y+2,other) {
+		if place_meeting(x-hspeed,y+2,other) {
 			h_accel_reduc = max(0,(100-tv)/100)+0.25
 			player_obj.shake_d=tv/4.5
 			player_obj.camera_shake_d = true
@@ -50,7 +50,16 @@ if !other.intangible {
 			dist_moved++;
 			if (!place_meeting(x, new_y, other)) {
 				y = new_y;
-				vspeed = 0;
+				if floor(abs(other.image_angle)) % 90 != 0 && vspeed<0 {
+					wall_collision_yaxis_up()
+				} else if 
+				floor(abs(other.image_angle)) % 90 != 0 
+				&& vspeed>0
+				&& (!place_meeting(x-20,y+20,other) || !place_meeting(x+20,y+20,other) ){
+					wall_collision_yaxis_down()
+				} else {
+					vspeed = 0;
+				}
 				return;
 			}
 		}

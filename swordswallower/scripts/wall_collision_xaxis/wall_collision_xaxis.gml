@@ -1,6 +1,6 @@
 obj = argument0
 
-if place_meeting(x+hspeed,y,obj) && grounded
+if place_meeting(x+hspeed,y,obj) && grounded && !place_meeting(x+hspeed*1.5,y-abs(hspeed*4.5),obj)
 {
     yplus = 0;
     while (place_meeting(x+hspeed,y-yplus,obj) && yplus <= 20) yplus += 1;

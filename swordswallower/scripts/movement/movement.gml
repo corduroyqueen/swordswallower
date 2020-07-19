@@ -99,9 +99,10 @@ wall_collision_xaxis(burn_wall_obj)
 wall_collision_xaxis(black_wall_obj)
 wall_collision_xaxis(falling_rock_obj)
 
+//wall_collision_yaxis_up(wall_obj)
+//wall_collision_yaxis_up(black_wall_obj)
 
-
-if !zoom_timer_bool{
+if !zoom_timer_bool {
 	if(!k_left && !k_right){
 		if(abs(hspeed) < h_decel){
 			hspeed=0;	

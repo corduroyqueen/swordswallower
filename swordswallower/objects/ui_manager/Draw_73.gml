@@ -105,3 +105,19 @@ if show_checkpoints {
 //draw_sprite(red_pointer,0,
 //player_obj.tail_dest_x,
 //player_obj.tail_dest_y)
+
+draw_sprite(red_pointer,0,
+player_obj.x + cos(degtorad(player_obj.ang1))*50,
+player_obj.y + sin(degtorad(player_obj.ang1))*50)
+
+draw_sprite(red_pointer,0,
+player_obj.x + cos(degtorad(player_obj.ang2))*50,
+player_obj.y + sin(degtorad(player_obj.ang2))*50)
+
+draw_sprite(red_pointer,0,
+player_obj.x + cos(degtorad(180-player_obj.ang1))*50,
+player_obj.y + sin(degtorad(180-player_obj.ang1))*50)
+
+draw_sprite(red_pointer,0,
+player_obj.x + cos(degtorad(180-player_obj.ang2))*50,
+player_obj.y + sin(degtorad(180-player_obj.ang2))*50)

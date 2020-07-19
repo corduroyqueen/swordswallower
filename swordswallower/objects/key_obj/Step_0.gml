@@ -18,4 +18,8 @@ if following {
 		x = player_obj.x-9
 		y = player_obj.y-9
 	}
+	
+	x = player_obj.x+player_obj.hspeed
+	y = player_obj.y+40+player_obj.vspeed/2
+	
 }

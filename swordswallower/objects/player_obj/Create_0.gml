@@ -75,7 +75,7 @@ max_hs_a = 9
 max_vs = 45
 
 //grav = .185
-grav = .7
+grav = .8
 grav_j = .225
 start_grav = grav
 grav_jv = .25
@@ -251,3 +251,7 @@ ability_held_release_m=5
 
 ability_spin_jump = true
 ability_spin_jump_e = true
+
+
+ang1 = 0
+ang2 = 0

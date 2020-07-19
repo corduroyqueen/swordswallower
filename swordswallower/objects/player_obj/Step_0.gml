@@ -96,7 +96,11 @@ if start_death && !death {
 	
 	
 }
-
+if ds_list_size(keylist)>0 {
+	for (i=0;i<ds_list_size(keylist);i++) {
+		keylist[| i].image_angle = 120 - i * 30	
+	}
+}
 if death {
 	move_locked = true
 	tail_carry = true
