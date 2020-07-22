@@ -33,7 +33,9 @@ trigger = false
 
 recording = false
 
-
+blood_surface = -1
+u_blood_trans = shader_get_uniform(shader_blood_alpha, "v_mult");
+u_blood_var = 1
 
 GUI = surface_create(1920,1080);
 

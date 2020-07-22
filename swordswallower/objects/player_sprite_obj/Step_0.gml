@@ -21,7 +21,7 @@ if !player_obj.held_position {
 		facing_right = true	
 	}
 }
-depth=-200
+depth=-1900
 
 if facing_right {
 	image_xscale = 1

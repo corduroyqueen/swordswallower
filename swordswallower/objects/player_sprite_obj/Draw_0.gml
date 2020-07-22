@@ -93,7 +93,7 @@ x=150
 y=150
 
 
-
+//gpu_set_colorwriteenable(true,true,true,false)
 
 //gpu_set_blendmode_ext(bm_one,bm_dest_alpha)
 

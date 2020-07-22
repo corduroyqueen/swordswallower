@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "057e6eac-51aa-460a-8705-4b5070217b44",
+            "Value": {
+                "id": "6d73117c-5f60-43e6-92b5-58a49da4bc86",
+                "resourcePath": "sprites\\blood_sprite_spr\\blood_sprite_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0580354e-d43f-44fc-8057-e1092a0af1cc",
             "Value": {
                 "id": "42b776de-d783-45bd-b2a8-4b967e09daa6",
@@ -1836,6 +1844,14 @@
                 "id": "5ccf044b-6087-4ccf-93eb-d66d0af06ae7",
                 "resourcePath": "objects\/thin_floor_obj\/thin_floor_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "249e3359-48d3-48b0-a2aa-6db7f7be5967",
+            "Value": {
+                "id": "3a9ff47c-055a-40f4-97a0-75a5be8254ef",
+                "resourcePath": "shaders\\shader_blood_alpha\\shader_blood_alpha.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -8836,6 +8852,14 @@
                 "id": "e2625190-598b-4681-b8b9-d237f145e3ed",
                 "resourcePath": "sprites\/player_idle_test3\/player_idle_test3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c24516fb-d757-4e38-9c89-37aa69863953",
+            "Value": {
+                "id": "52b4d0b9-317d-4124-908b-3063027a733d",
+                "resourcePath": "objects\\blood_shader\\blood_shader.yy",
+                "resourceType": "GMObject"
             }
         },
         {
