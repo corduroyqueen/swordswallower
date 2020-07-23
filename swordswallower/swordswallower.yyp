@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "01f2d717-0960-4cd7-809c-80d375b5f189",
+            "Value": {
+                "id": "fbaaffd8-5fa8-4b24-8c38-06052c2fc24d",
+                "resourcePath": "views\/01f2d717-0960-4cd7-809c-80d375b5f189.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "01f471cb-2ce9-40ab-9021-072be506c37c",
             "Value": {
                 "id": "aaacd6b2-c379-4030-a062-a964b669c101",
@@ -306,7 +314,7 @@
             "Key": "057e6eac-51aa-460a-8705-4b5070217b44",
             "Value": {
                 "id": "6d73117c-5f60-43e6-92b5-58a49da4bc86",
-                "resourcePath": "sprites\\blood_sprite_spr\\blood_sprite_spr.yy",
+                "resourcePath": "sprites\/blood_sprite_spr\/blood_sprite_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -858,7 +866,7 @@
             "Key": "0f9b00a6-8e1e-4cbf-a82c-a280b3ff3be7",
             "Value": {
                 "id": "184d0898-f733-4ae4-82d9-48c5538d427f",
-                "resourcePath": "scripts\\wall_collision_yaxis_up\\wall_collision_yaxis_up.yy",
+                "resourcePath": "scripts\/wall_collision_yaxis_up\/wall_collision_yaxis_up.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1850,7 +1858,7 @@
             "Key": "249e3359-48d3-48b0-a2aa-6db7f7be5967",
             "Value": {
                 "id": "3a9ff47c-055a-40f4-97a0-75a5be8254ef",
-                "resourcePath": "shaders\\shader_blood_alpha\\shader_blood_alpha.yy",
+                "resourcePath": "shaders\/shader_blood_alpha\/shader_blood_alpha.yy",
                 "resourceType": "GMShader"
             }
         },
@@ -5114,7 +5122,7 @@
             "Key": "68ebb993-d7be-4648-aafc-af7a7dae94f6",
             "Value": {
                 "id": "a38ce1de-2dd0-4b86-b035-169a85bdb837",
-                "resourcePath": "scripts\\wall_collision_yaxis_down\\wall_collision_yaxis_down.yy",
+                "resourcePath": "scripts\/wall_collision_yaxis_down\/wall_collision_yaxis_down.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -8858,7 +8866,7 @@
             "Key": "c24516fb-d757-4e38-9c89-37aa69863953",
             "Value": {
                 "id": "52b4d0b9-317d-4124-908b-3063027a733d",
-                "resourcePath": "objects\\blood_shader\\blood_shader.yy",
+                "resourcePath": "objects\/blood_shader\/blood_shader.yy",
                 "resourceType": "GMObject"
             }
         },
