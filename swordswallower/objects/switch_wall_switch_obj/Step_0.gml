@@ -20,7 +20,7 @@ if enabled {
 	sprite_index = onlever
 } else {
 	partner.enabled = false
-	sprite_index = offlever
+	sprite_index = switch2
 	
 	if !hit  {
 		if place_meeting(x,y,tail_obj)
