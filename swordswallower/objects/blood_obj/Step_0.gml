@@ -4,6 +4,7 @@
 
 //if place_meeting(x+hwidth,y+hheight,wall_obj) && place_meeting(x+hwidth,y-hheight,wall_obj) 
 //&& place_meeting(x-hwidth,y+hheight,wall_obj) && place_meeting(x-hwidth,y-hheight,wall_obj) {
+if go {
 if rval==0 {
 	rval = image_xscale
 	bounce_vel = rval * random_range(0.4,1.4)
@@ -16,7 +17,7 @@ if place_meeting(x,y,tar_obj) {
 	vspeed=0
 	
 } else if !surrounded {
-	vspeed+=.6
+	vspeed+=0.8+scalevar/6
 	if wall_checker(x,y) || place_meeting(x,y,tar_obj) {
 		x = xpreva + hspeed*0.3
 		y = ypreva + vspeed*0.3
@@ -47,8 +48,8 @@ if place_meeting(x,y,tar_obj) {
 			ok.x = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
 			ok.y = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
 		
-			ok.image_xscale = sxs * 2
-			ok.image_yscale = sys * 2
+			ok.image_xscale = sxs * 2.5
+			ok.image_yscale = sys * 2.5
 			blood_sprite_return(ok,wall)
 		
 		
@@ -57,8 +58,8 @@ if place_meeting(x,y,tar_obj) {
 			ok.x = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
 			ok.y = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
 		
-			ok.image_xscale = sxs * 2
-			ok.image_yscale = sys * 2
+			ok.image_xscale = sxs * 2.5
+			ok.image_yscale = sys * 2.5
 			blood_sprite_return(ok,wall)
 		} else {
 			ok.x = 0
@@ -91,3 +92,5 @@ bounce_vel *= rec_val
 
 image_xscale += bounce_vel
 image_yscale = rval+(rval-image_yscale)
+}
+go = true

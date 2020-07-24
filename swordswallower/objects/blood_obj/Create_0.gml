@@ -30,3 +30,7 @@ bounce_vel = 0
 
 image_angle = random_range(0,360)
 rec_val = random_range(0.6,0.9)
+go = false
+spr = blood_sprite_spr
+scalevar = 0.5
+rot = 50

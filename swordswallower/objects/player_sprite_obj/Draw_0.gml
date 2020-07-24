@@ -5,6 +5,7 @@ if player_obj.death {
 	return	
 }
 
+
 if !surface_exists(player_surface) {
 	player_surface = surface_create(300,300)	
 }
