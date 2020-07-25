@@ -59,3 +59,12 @@ sound_timer_t = 150
 idle_sound = false
 
 image_xscale = -1
+
+tartimer=0
+
+sprites = array_create(10)
+sprites[0] = ghoul816
+sprites[1] = ghoul2845
+sprites[2] = ghoul3
+
+sprite_index = sprites[floor(x) % 3]

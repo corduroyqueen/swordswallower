@@ -9,7 +9,7 @@ if player_obj.intro {
 if setpoint {
 	//draw_text(x-48,y-64,"checkpoint!")
 	//draw_circle(x,y,5,true)
-	draw_sprite_ext(statue3,0,x,y,1,1,0,c_white,1)
+	draw_sprite_ext(s_sprite,0,x,y,1,1,0,c_white,1)
 	
 	
 	if checkpoint_manager.checkpoint == self && !starting_bool {
@@ -62,7 +62,7 @@ if setpoint {
 
     shader_set(shader1)
     shader_set_uniform_f(uTime,current_time/1000)
-	draw_sprite_ext(statue3,0,x,y,1,1,0,c_white,1)
+	draw_sprite_ext(s_sprite,0,x,y,1,1,0,c_white,1)
 	shader_reset()
 }
 if player_obj.death {

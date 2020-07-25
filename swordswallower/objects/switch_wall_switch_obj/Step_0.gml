@@ -16,8 +16,8 @@ if enemy {
 
 if enabled {
 	partner.enabled = true
-	image_alpha = 0.8
-	sprite_index = onlever
+	image_alpha = 0.6
+	sprite_index = switch1
 } else {
 	partner.enabled = false
 	sprite_index = switch2

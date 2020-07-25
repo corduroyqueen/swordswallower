@@ -40,3 +40,14 @@ audio_sound_gain(fire_sound,0,0)
 s_fire_emitter = audio_emitter_create()
 audio_play_sound_on(s_fire_emitter,fire_sound,true,0)
 audio_emitter_gain(s_fire_emitter,0)
+
+
+
+sprites = array_create(10)
+sprites[0] = statue1
+sprites[1] = statue
+sprites[2] = statue4788
+sprites[3] = statue2
+sprites[4] = statue3787
+
+s_sprite = sprites[floor(x) % 5]

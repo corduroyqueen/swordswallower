@@ -39,33 +39,42 @@ if place_meeting(x,y,tar_obj) {
 	var sys = image_yscale
 	
 	//if !place_meeting(x,y,blood_splat_obj) {
-		ok = instance_create_depth(x,y,-3000,blood_splat_obj)
+		//ok = instance_create_depth(x,y,-2000,blood_splat_obj)
+		xt = x
+		yt = y
 		image_xscale = 3
 		image_yscale = 3
 	
 		if place_meeting(x,y,wall_obj) {
 			wall = instance_place(x,y,wall_obj)	
-			ok.x = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
-			ok.y = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
+			xt = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
+			yt = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
 		
-			ok.image_xscale = sxs * 2.5
-			ok.image_yscale = sys * 2.5
-			blood_sprite_return(ok,wall)
+			//ok.image_xscale = sxs * 2.5
+			//ok.image_yscale = sys * 2.5
+			//blood_sprite_return(ok,wall)
 		
 		
 		} else if place_meeting(x,y,black_wall_obj) {
 			wall = instance_place(x,y,black_wall_obj)	
-			ok.x = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
-			ok.y = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
+			xt = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
+			yt = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
 		
-			ok.image_xscale = sxs * 2.5
-			ok.image_yscale = sys * 2.5
-			blood_sprite_return(ok,wall)
+			//ok.image_xscale = sxs * 2.5
+			//ok.image_yscale = sys * 2.5
+			//blood_sprite_return(ok,wall)
 		} else {
-			ok.x = 0
-			ok.y = 0
+			xt = 0
+			yt = 0
 		}
 	//}
+	with art_surface_setter {
+		ds_list_add(splat_list_x,other.xt)
+		ds_list_add(splat_list_y,other.yt)	
+		ds_list_add(splat_list_rot,random_range(0,360))	
+		ds_list_add(splat_list_s,sxs)	
+	}
+	
 	instance_destroy()
 	lifect++
 	

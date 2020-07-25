@@ -37,13 +37,15 @@ for (i=0;i<(amount+40);i++){
 	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
 		
 	particle.vspeed = -sin(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10 - 5
+	particle.hspeed = clamp(particle.hspeed,-20,20)
+	particle.vspeed = clamp(particle.vspeed,-20,20)
 	//+ random_range(-3,3) *
 	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
-	if i%10==0 {
+	if i%10==1 {
 		particle.spr = blood_sprite_spr2
 	} else {
-		particle.spr = blood_sprite_spr
+		particle.spr = blood_sprite_spr1
 	}
 	particle.scalevar = scalevar
 	particle.rot = random_range(0,360)

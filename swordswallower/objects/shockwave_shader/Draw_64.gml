@@ -10,6 +10,7 @@ var wave_list_size = ds_list_size(list_of_waves);
 if (wave_list_size <= 0) {
 	
 	blood_render()
+	//blood_splat_render()
 	//sdm(surface_get_target())
 	//surface_reset_target()
 	
@@ -29,6 +30,8 @@ if (wave_list_size <= 0) {
 	draw_surface(blood_surface, 0,0)
 	shader_reset()
 	
+	//draw_surface(blood_splat_surface,0,0)
+	
 	//gpu_set_colorwriteenable(true,true,true,true)
 	strength_input = 0
 } else {
@@ -46,6 +49,7 @@ if (wave_list_size <= 0) {
 	
 	//surface_reset_target()
 	blood_render()
+	//blood_splat_render()
 	/////////////////////;
 	
 	// draw wave sprite to waves surface:
@@ -86,6 +90,7 @@ if (wave_list_size <= 0) {
 	draw_surface(blood_surface, 0,0)
 	shader_reset()
 	
+	//draw_surface(blood_splat_surface,0,0)
 	//camera_apply(camera_create_view(0,0, view_wport[view_current], view_hport[view_current]));
 	//surface_set_target(application_surface);
 	

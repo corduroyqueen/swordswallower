@@ -535,6 +535,14 @@
             }
         },
         {
+            "Key": "08c0f671-76d7-4592-a064-98c13c6175ee",
+            "Value": {
+                "id": "15318c8b-98e3-4101-8fc6-035eb1dee0cb",
+                "resourcePath": "sprites\\ghoul31\\ghoul31.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "08c29cd9-6c1f-4175-b3c3-b156e626d871",
             "Value": {
                 "id": "bf73d12d-f3cc-479f-89d1-aae40832de48",
@@ -924,6 +932,14 @@
                 "id": "7bff4e90-921c-4ea5-99b8-b51dc6b37232",
                 "resourcePath": "sounds\/footstep5\/footstep5.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "1034ce5c-08ab-4d64-9030-587c91df1999",
+            "Value": {
+                "id": "2aae5ea1-255c-4d71-b200-bcc527773c11",
+                "resourcePath": "sprites\\blood_splat_lel\\blood_splat_lel.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1371,6 +1387,14 @@
             "Value": {
                 "id": "534d78a2-1772-4a7c-935d-73f7152421e3",
                 "resourcePath": "sprites\/area2_wall_tiles\/area2_wall_tiles.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "199d621d-5320-453b-9100-6dc51b87e566",
+            "Value": {
+                "id": "5a84b4eb-8ed1-457d-b2da-1c6a7b80373d",
+                "resourcePath": "sprites\\ghoul28451\\ghoul28451.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3967,6 +3991,14 @@
             }
         },
         {
+            "Key": "4c8cd567-962d-49fe-8225-90356ca13cb5",
+            "Value": {
+                "id": "8418bb3c-c852-4deb-8262-06f0ca325b68",
+                "resourcePath": "sprites\\blood_sprite_spr11\\blood_sprite_spr11.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4cf1ef8c-411c-44db-b75a-05c5d4a38cfd",
             "Value": {
                 "id": "2b4853be-71e8-4401-85c5-6a73949c88f6",
@@ -5135,6 +5167,14 @@
             }
         },
         {
+            "Key": "645bc312-9984-4027-9534-1ca0d313ced6",
+            "Value": {
+                "id": "e0dd9d28-8ecb-43c2-a934-c96f96bd447f",
+                "resourcePath": "scripts\\layer_stop_alpha_start\\layer_stop_alpha_start.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "64971384-323a-4c9a-a82f-def7cfa256c7",
             "Value": {
                 "id": "26580547-b2e2-45a9-b95e-51a5e1804905",
@@ -5636,6 +5676,14 @@
                 "id": "15b7f188-a2b8-44f7-a989-0c6034b9e76d",
                 "resourcePath": "sounds\/squish2\/squish2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "6e897c99-b8ac-4462-aed4-70b7036dda86",
+            "Value": {
+                "id": "f01329b6-d57a-44af-bc02-2f149d64da08",
+                "resourcePath": "sprites\\blood_sprite_spr1\\blood_sprite_spr1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6316,6 +6364,14 @@
                 "id": "8e495a14-11d5-4430-95eb-5636aaadeb99",
                 "resourcePath": "sprites\/nothing\/nothing.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "799e675e-a863-4cd3-b53a-f63fbe938a24",
+            "Value": {
+                "id": "91170210-fccb-47a3-a391-8f14a146a42d",
+                "resourcePath": "scripts\\layer_stop_alpha_end\\layer_stop_alpha_end.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -10826,7 +10882,7 @@
             "Key": "e378dd2e-ece7-4618-9e23-7d9b8be4610f",
             "Value": {
                 "id": "38aef144-068a-41ee-854b-a40ce4760ca4",
-                "resourcePath": "sprites\/floor\/floor.yy",
+                "resourcePath": "sprites\\floor100\\floor100.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11068,6 +11124,14 @@
                 "id": "d4b96e00-8447-441e-8b43-ce7a180a15db",
                 "resourcePath": "sounds\/Knife_Flesh_3\/Knife_Flesh_3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "e8a07ed1-42f8-499d-92a0-d58df5504926",
+            "Value": {
+                "id": "4aac57dd-724b-41d1-a4bf-6e6dba93cb70",
+                "resourcePath": "shaders\\shader_blood_alpha_surface\\shader_blood_alpha_surface.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -11580,6 +11644,14 @@
                 "id": "ff2aa28a-f82f-4e09-a763-a5f5dcd615e5",
                 "resourcePath": "sprites\/wall_n287\/wall_n287.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f1ee041f-0b11-4cd7-91c2-f89d18199bee",
+            "Value": {
+                "id": "d22680a7-5e30-4bc9-b13c-434ca9a464ea",
+                "resourcePath": "scripts\\blood_splat_render\\blood_splat_render.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -12251,6 +12323,7 @@
         "aea0f587-4730-4182-8329-7f49c7c08423",
         "b8c57049-572f-4b79-af38-6a93545db21f",
         "d0c1858e-d863-4da0-9cbd-32858e1cb5ea",
+        "f1ee041f-0b11-4cd7-91c2-f89d18199bee",
         "ebeab94b-93ff-4b49-80e5-f3342bc5f6ac",
         "41c76618-af22-448d-af7b-f94fab74f640",
         "08ec074c-09c7-43fa-811d-cea329acd5f1",
@@ -12297,7 +12370,9 @@
         "5b5e6c38-ad2c-4375-afc9-378baa5597dd",
         "22177146-121b-4780-9ffd-4502256d93cb",
         "7584ae91-4258-4d02-ba6c-190e7b360245",
-        "5b9bb9cd-0a67-4d41-8151-49637c6f648a"
+        "5b9bb9cd-0a67-4d41-8151-49637c6f648a",
+        "645bc312-9984-4027-9534-1ca0d313ced6",
+        "799e675e-a863-4cd3-b53a-f63fbe938a24"
     ],
     "tutorial": ""
 }

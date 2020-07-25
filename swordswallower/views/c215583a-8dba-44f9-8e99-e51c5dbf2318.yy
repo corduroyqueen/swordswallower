@@ -8,7 +8,9 @@
         "dfee020a-edef-46e2-9974-690881098558",
         "c8f2277a-ae95-45e5-a134-0942ee86af20",
         "7584ae91-4258-4d02-ba6c-190e7b360245",
-        "5b9bb9cd-0a67-4d41-8151-49637c6f648a"
+        "5b9bb9cd-0a67-4d41-8151-49637c6f648a",
+        "645bc312-9984-4027-9534-1ca0d313ced6",
+        "799e675e-a863-4cd3-b53a-f63fbe938a24"
     ],
     "filterType": "GMScript",
     "folderName": "Inverse Kinematics",

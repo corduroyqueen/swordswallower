@@ -37,6 +37,10 @@ blood_surface = -1
 u_blood_trans = shader_get_uniform(shader_blood_alpha, "v_mult");
 u_blood_var = 1
 
+blood_splat_surface = -1
+u_blood_splat_trans = shader_get_uniform(shader_blood_alpha, "v_mult");
+u_blood_splat_var = 1
+
 GUI = surface_create(1920,1080);
 
 strength_input = 0
