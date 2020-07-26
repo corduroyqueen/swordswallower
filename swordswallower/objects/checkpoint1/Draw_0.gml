@@ -33,9 +33,9 @@ if setpoint {
 		
 		var ok = random_range(1.1,1.3)
 		
-		draw_sprite_ext(Ellipse_2,0,x-5,y-130,ok*6,ok*6,0,c_white,0.125)
+		draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok*6,ok*6,0,c_white,0.125)
 		
-		draw_sprite_ext(Ellipse_2,0,x-5,y-130,ok,ok,0,c_white,1)
+		draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok,ok,0,c_white,1)
 		
 		
 		
@@ -45,7 +45,7 @@ if setpoint {
 		shader_set(shader1)
 	    shader_set_uniform_f(uTime,current_time/1000)
 	
-		draw_sprite(fire,image_index,x-5,y-130)
+		draw_sprite(fire,image_index,x+s_x,y+s_y)
 	
 		shader_reset()
 	

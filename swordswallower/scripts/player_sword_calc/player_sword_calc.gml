@@ -65,7 +65,7 @@ if sprite_index==player_idle_s_n {
 	
 	
 	
-	ang = point_direction(x+7*facing,y+1,pointx,pointy)-90
+	ang = point_direction(x+11*facing,y+1,pointx,pointy)-90
 	
-	draw_sprite_ext(sword4,0,x+7*facing,y+1,-facing,1,ang,c_white,1)	
+	draw_sprite_ext(sword4,0,x+11*facing,y+1,-facing,1,ang,c_white,1)	
 }

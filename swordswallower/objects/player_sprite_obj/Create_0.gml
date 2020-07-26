@@ -28,3 +28,14 @@ s_player_crouch_s = cc_crouch111
 s_player_run_s = cc_run_s111
 
 s_boost = boost
+
+
+arm_pin_x = 150
+arm_pin_y = 150
+
+arm_hand_x = 150+1
+arm_hand_y = 150-20
+
+arm_max_length = 30
+arm_seg_length_1 = arm_max_length/2
+arm_seg_length_2 = arm_max_length/2

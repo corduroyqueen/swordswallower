@@ -50,4 +50,22 @@ sprites[2] = statue4788
 sprites[3] = statue2
 sprites[4] = statue3787
 
-s_sprite = sprites[floor(x) % 5]
+sprites_x = array_create(10)
+sprites_x[0] = -66
+sprites_x[1] = 50
+sprites_x[2] = 0
+sprites_x[3] = -15
+sprites_x[4] = -47
+
+sprites_y = array_create(10)
+sprites_y[0] = -148
+sprites_y[1] = -45
+sprites_y[2] = -120
+sprites_y[3] = -65
+sprites_y[4] = -145
+
+sv = floor(x) % 5
+
+s_sprite = sprites[sv]
+s_x = sprites_x[sv]
+s_y = sprites_y[sv]

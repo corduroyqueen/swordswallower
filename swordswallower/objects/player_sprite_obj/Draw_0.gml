@@ -31,6 +31,9 @@ if !player_obj.zoom_timer_bool {
 
 	draw_set_alpha(1);
 	draw_self()
+	
+	
+	
 	gpu_set_blendenable(true);
 	gpu_set_colorwriteenable(true,true,true,true);
 
@@ -75,7 +78,9 @@ if !player_obj.zoom_timer_bool {
 	
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
-	
+	arm_pin_x = x
+	arm_pin_y = y-27
+	player_arm_draw()
 
 }
 //gpu_set_colorwriteenable(true,true,true,false);

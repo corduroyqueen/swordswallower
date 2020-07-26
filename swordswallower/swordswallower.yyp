@@ -927,6 +927,14 @@
             }
         },
         {
+            "Key": "0fff3997-028f-4bfc-8a64-030d19beb55e",
+            "Value": {
+                "id": "1576cf65-1c95-40cd-8e5a-fdaef4419b9e",
+                "resourcePath": "scripts\\player_arm_calculate\\player_arm_calculate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "102a035d-0df7-4ac7-9a18-aa7aec5124a4",
             "Value": {
                 "id": "7bff4e90-921c-4ea5-99b8-b51dc6b37232",
@@ -1163,6 +1171,14 @@
             "Value": {
                 "id": "d126604f-929c-497f-8bf6-550733349b38",
                 "resourcePath": "sprites\/floor1\/floor1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "15b68329-a27e-4ca0-9a5e-c5e7ff4c9c99",
+            "Value": {
+                "id": "cae526d5-342b-4fbc-8cc2-f9c4cbf5bd36",
+                "resourcePath": "sprites\\blood_splat_lel1\\blood_splat_lel1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3908,6 +3924,14 @@
                 "id": "90cac5b2-4033-473e-a791-0d9947245085",
                 "resourcePath": "sprites\/pinkeye\/pinkeye.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4aeafd75-1718-4a46-bebd-057c9c81472a",
+            "Value": {
+                "id": "eb51cca1-4c0a-455d-a0c4-037c3473517a",
+                "resourcePath": "scripts\\player_arm_draw\\player_arm_draw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -12372,7 +12396,9 @@
         "7584ae91-4258-4d02-ba6c-190e7b360245",
         "5b9bb9cd-0a67-4d41-8151-49637c6f648a",
         "645bc312-9984-4027-9534-1ca0d313ced6",
-        "799e675e-a863-4cd3-b53a-f63fbe938a24"
+        "799e675e-a863-4cd3-b53a-f63fbe938a24",
+        "4aeafd75-1718-4a46-bebd-057c9c81472a",
+        "0fff3997-028f-4bfc-8a64-030d19beb55e"
     ],
     "tutorial": ""
 }

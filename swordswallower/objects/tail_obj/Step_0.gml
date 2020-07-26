@@ -466,7 +466,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 			
 			collision_iterate_wall(impale_circle_obj) 
 		}
-		temptemptemp = true
+		/*temptemptemp = true
 		if place_meeting(x,y,stinky_pile_obj) || place_meeting(xpreva,ypreva,stinky_pile_obj) {
 			with player_obj {
 				if place_meeting(x,y,instance_place(other.xpreva,other.ypreva,stinky_pile_obj)) && point_distance(x,y,other.x,other.y)<300 {
@@ -484,7 +484,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		if temptemptemp {
 			
 			collision_iterate_wall(stinky_pile_obj)
-		}
+		}*/
 		temptemptemp = true
 		if place_meeting(x,y,circle_friend_obj) || place_meeting(xpreva,ypreva,circle_friend_obj) {
 			with player_obj {
@@ -506,11 +506,11 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		}
 		cca = ccatemp
 		
-		collision_iterate_wall(wood_wall_obj)
-		collision_iterate_wall(wood_wall2_obj)
-		collision_iterate_wall(kill_back_wall_obj)
+		//    collision_iterate_wall(wood_wall_obj)
+		//               collision_iterate_wall(wood_wall2_obj)
+		//            collision_iterate_wall(kill_back_wall_obj)
 		collision_iterate_wall(black_wall_obj)
-		collision_iterate_wall(moving_platform_obj)
+		//               collision_iterate_wall(moving_platform_obj)
 		//collision_iterate_wall(mach_moving_wall_obj)
 		//collision_iterate_wall(draft_obj)
 		if !place_meeting(player_obj.x,player_obj.y,tar_obj) {
@@ -528,12 +528,12 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		//collision_iterate_wall(mach_timed_hazard_obj)
 		//collision_iterate_wall(mach_door_obj)
 		collision_iterate_wall(key_door_obj)
-		collision_iterate_wall(sinking_platform_obj)
+		//           collision_iterate_wall(sinking_platform_obj)
 		
 		
 		collision_iterate_enemy(snakehead_obj)
-		collision_iterate_enemy(tear_nograv_obj)
-		collision_iterate_enemy(thirsty_ghoul_obj)
+		//           collision_iterate_enemy(tear_nograv_obj)
+		//          collision_iterate_enemy(thirsty_ghoul_obj)
 		
 		
 		//collision_iterate_wall(spike)
@@ -546,42 +546,44 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 
 	if player_obj.tail_throwing || player_obj.tail_pulling { 
 		mask_index=sword_whirling_enemy
-		collision_iterate_enemy(fatfly_obj)
-		collision_iterate_enemy(flyswarm_obj)
-		collision_iterate_enemy(hum_food_obj)
-		collision_iterate_enemy(fatfly2_obj)
-		collision_iterate_enemy(bombfly_diagonal_obj)
-		collision_iterate_enemy(bombfly_fat_obj)
+		//      collision_iterate_enemy(fatfly_obj)
+		///   collision_iterate_enemy(flyswarm_obj)
+		//    collision_iterate_enemy(hum_food_obj)
+		//   collision_iterate_enemy(fatfly2_obj)
+		//  collision_iterate_enemy(bombfly_diagonal_obj)
+		//  collision_iterate_enemy(bombfly_fat_obj)
+		
 		//collision_iterate_enemy(crab_obj)
-		collision_iterate_enemy(nucrab_obj)
-		collision_iterate_enemy(handbug_obj)
+		//                           collision_iterate_enemy(nucrab_obj)
+		//                          collision_iterate_enemy(handbug_obj)
 		//collision_iterate_enemy(zombie_obj)
 		//collision_iterate_enemy(kill_back_obj)
 		//collision_iterate_enemy(golem_obj)
 		//collision_iterate_enemy(diamond_obj)
 		//collision_iterate_enemy(chair_obj)
-		collision_iterate_wall(burn_wall_obj)
-		collision_iterate_enemy(ghost_obj)
-		collision_iterate_enemy(arcing_knight_obj)
+		
+		//                          collision_iterate_wall(burn_wall_obj)
+		//                            collision_iterate_enemy(ghost_obj)
+		//                        collision_iterate_enemy(arcing_knight_obj)
 		
 		collision_iterate_wall(breakable_decoration_obj)
 		//collision_iterate_wall(dec_skull_obj)
 		
 		//collision_iterate_enemy(wooden_fly_obj)
 		//collision_iterate_enemy(wooden_fly_dart_obj)
-		collision_iterate_enemy(eye_obj)
+		//                                        collision_iterate_enemy(eye_obj)
 		//collision_iterate_enemy(green_guy_obj)
 		//collision_iterate_enemy(spikyguy_obj)
-		collision_iterate_enemy(dash_guy_obj)
+		//                           collision_iterate_enemy(dash_guy_obj)
 		collision_iterate_enemy(snakeheart_obj)
-		collision_iterate_enemy(fly_pod_obj)
-		collision_iterate_enemy(crimson_soldier_obj)
+		//                            collision_iterate_enemy(fly_pod_obj)
+		//                    collision_iterate_enemy(crimson_soldier_obj)
 		
 		
 		//collision_iterate_wall(switch_wall_switch_obj)
 		
 		if !player_obj.move_locked {
-			collision_iterate_enemy(big_boi_obj)
+			// collision_iterate_enemy(big_boi_obj)
 			if !charger_bool {
 				collision_iterate_enemy(charger_obj)
 			}
@@ -598,10 +600,10 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		}
 		
 		
-		collision_iterate_wall(falling_rock_rope_obj)
+		// collision_iterate_wall(falling_rock_rope_obj)
 		
 		ccatemp = cca
-		cca = 0
+		cca = 0/*
 		if place_meeting(x,y,hummingbird_obj) {
 			with player_obj {
 				if place_meeting(x,y,hummingbird_obj) && point_distance(x,y,other.x,other.y)<150 {
@@ -620,7 +622,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		if temptemptemp {
 			
 			collision_iterate_wall(hummingbird_obj) 
-		}
+		}*/
 		cca = ccatemp
 	}
 }

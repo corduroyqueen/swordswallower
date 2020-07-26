@@ -49,9 +49,10 @@ var cx =player_obj.camx
 var cy =player_obj.camy
 //gpu_set_colorwriteenable(true,true,true,false)
 for (i=0;i<ds_list_size(splat_list_x);i++) {
-	draw_sprite_ext(blood_splat_lel,0,
+	draw_sprite_ext(blood_splat_lel1,0,
 	splat_list_x[| i]-cx,splat_list_y[| i]-cy,
-	splat_list_s[| i]*0.07,splat_list_s[| i]*0.07,splat_list_rot[| i],c_white,1)
+	splat_list_s[| i],splat_list_s[| i],splat_list_rot[| i],c_white,1)
+	
 }
 
 //gpu_set_alphatestenable(false);

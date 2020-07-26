@@ -14,7 +14,9 @@ ydelt = y - ypreva;
 //		break;
 //	}
 //}
-
+if player_obj.tail_planted {
+	return
+}
 for(i=0; i < iteration_num; i++){
 	if collision_wall_check(
 	xpreva + xdelt * (i/iteration_num), 
