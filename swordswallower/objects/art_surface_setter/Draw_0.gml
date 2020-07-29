@@ -52,7 +52,13 @@ for (i=0;i<ds_list_size(splat_list_x);i++) {
 	draw_sprite_ext(blood_splat_lel1,0,
 	splat_list_x[| i]-cx,splat_list_y[| i]-cy,
 	splat_list_s[| i],splat_list_s[| i],splat_list_rot[| i],c_white,1)
-	
+	if point_distance(splat_list_x[| i],splat_list_y[| i],player_obj.x,player_obj.y)>2000 {
+		ds_list_delete(splat_list_x,i)	
+		ds_list_delete(splat_list_y,i)	
+		ds_list_delete(splat_list_rot,i)	
+		ds_list_delete(splat_list_s,i)	
+		
+	}
 }
 
 //gpu_set_alphatestenable(false);

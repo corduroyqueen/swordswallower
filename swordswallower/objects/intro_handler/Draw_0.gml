@@ -132,7 +132,7 @@ if player_obj.intro {
 
 if !player_obj.death {
 	if room==subtemple01 {
-		if player_obj.x>18000 && player_obj.y<6000 {
+		if player_obj.x>18000 && player_obj.y<10000 {
 		
 			if layer_get_visible(level1artm) {
 				layer_set_visible(level1artm,false)

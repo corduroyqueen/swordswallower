@@ -146,7 +146,8 @@ if (plf==true && player_present = false) || player_obj.ending_lock {
 	current_pick = 0
 	
 }
-
-image_xscale = sign(x-player_obj.x)
+if !in_camera_range_bigger(x,y) {
+	image_xscale = sign(x-player_obj.x)
+}
 
 plf = player_present

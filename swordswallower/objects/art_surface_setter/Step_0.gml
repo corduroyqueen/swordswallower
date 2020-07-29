@@ -5,23 +5,60 @@ if !surface_exists(art_surface) {
 }
 
 
+if player_obj.x<27000 && player_obj.y>13000 {
+	lay_id = layer_get_id("level_art");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
 
-lay_id = layer_get_id("level_art");
+	lay_id = layer_get_id("foreground");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+
+	lay_id = layer_get_id("inside_wall_art");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+
+	lay_id = layer_get_id("solid_color");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+
+	lay_id = layer_get_id("misc");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+} else if player_obj.y<5400 {
+	lay_id = layer_get_id("level_art3");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+	
+	lay_id = layer_get_id("inside_wall_art3");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+
+	lay_id = layer_get_id("solid_color3");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+
+	lay_id = layer_get_id("misc3");
+	layer_x(lay_id,-player_obj.camx)
+	layer_y(lay_id,-player_obj.camy)
+}
+
+lay_id = layer_get_id("level_art2");
 layer_x(lay_id,-player_obj.camx)
 layer_y(lay_id,-player_obj.camy)
 
-lay_id = layer_get_id("foreground");
+lay_id = layer_get_id("Assets_2");
 layer_x(lay_id,-player_obj.camx)
 layer_y(lay_id,-player_obj.camy)
 
-lay_id = layer_get_id("inside_wall_art");
+lay_id = layer_get_id("inside_wall_art2");
 layer_x(lay_id,-player_obj.camx)
 layer_y(lay_id,-player_obj.camy)
 
-lay_id = layer_get_id("solid_color");
+lay_id = layer_get_id("solid_color2");
 layer_x(lay_id,-player_obj.camx)
 layer_y(lay_id,-player_obj.camy)
 
-lay_id = layer_get_id("misc");
+lay_id = layer_get_id("misc2");
 layer_x(lay_id,-player_obj.camx)
 layer_y(lay_id,-player_obj.camy)

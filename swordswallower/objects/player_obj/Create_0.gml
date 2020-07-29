@@ -245,11 +245,10 @@ ckpt_bool = false
 
 
 ///ability bools
-ability_held_release_jump = true
-ability_held_release_t=0
+ability_held_release_jump = false
 ability_held_release_m=5
 
-ability_spin_jump = true
+ability_spin_jump = false
 ability_spin_jump_e = true
 
 

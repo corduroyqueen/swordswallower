@@ -1,4 +1,5 @@
 ang1 = other.image_angle
+/*
 while ang1 > 90 {
 	ang1-=90	
 }

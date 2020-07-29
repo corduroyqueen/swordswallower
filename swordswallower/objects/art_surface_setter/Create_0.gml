@@ -28,6 +28,38 @@ layer_script_begin("misc", layer_surface_script_start);
 layer_script_end("misc", layer_surface_script_end);
 
 
+layer_script_begin("level_art2", layer_surface_script_start);
+layer_script_end("level_art2", layer_surface_script_end);
+
+layer_script_begin("Assets_2", layer_surface_script_start);
+layer_script_end("Assets_2", layer_surface_script_end);
+
+layer_script_begin("inside_wall_art2", layer_surface_script_start);
+layer_script_end("inside_wall_art2", layer_surface_script_end);
+
+layer_script_begin("solid_color2", layer_surface_script_start);
+layer_script_end("solid_color2", layer_surface_script_end);
+
+layer_script_begin("misc2", layer_surface_script_start);
+layer_script_end("misc2", layer_surface_script_end);
+
+
+
+layer_script_begin("level_art3", layer_surface_script_start);
+layer_script_end("level_art3", layer_surface_script_end);
+
+layer_script_begin("inside_wall_art3", layer_surface_script_start);
+layer_script_end("inside_wall_art3", layer_surface_script_end);
+
+layer_script_begin("solid_color3", layer_surface_script_start);
+layer_script_end("solid_color3", layer_surface_script_end);
+
+layer_script_begin("misc3", layer_surface_script_start);
+layer_script_end("misc3", layer_surface_script_end);
+
+
+
+
 layer_script_begin("parallax", layer_stop_alpha_start);
 layer_script_end("parallax", layer_stop_alpha_end);
 
