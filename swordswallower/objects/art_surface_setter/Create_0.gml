@@ -60,6 +60,10 @@ layer_script_end("misc3", layer_surface_script_end);
 
 
 
+//layer_script_begin("solid_color", layer_stop_alpha_start);
+//layer_script_end("solid_color", layer_stop_alpha_end);
+
+
 layer_script_begin("parallax", layer_stop_alpha_start);
 layer_script_end("parallax", layer_stop_alpha_end);
 
@@ -71,6 +75,40 @@ layer_script_end("bkd2", layer_stop_alpha_end);
 
 layer_script_begin("bkd3", layer_stop_alpha_start);
 layer_script_end("bkd3", layer_stop_alpha_end);
+
+
+
+layer_script_begin("bkdp2", layer_stop_alpha_start);
+layer_script_end("bkdp2", layer_stop_alpha_end);
+
+layer_script_begin("bkdp22", layer_stop_alpha_start);
+layer_script_end("bkdp22", layer_stop_alpha_end);
+
+layer_script_begin("bkdp23", layer_stop_alpha_start);
+layer_script_end("bkdp23", layer_stop_alpha_end);
+
+layer_script_begin("Assets_3", layer_stop_alpha_start);
+layer_script_end("Assets_3", layer_stop_alpha_end);
+
+
+layer_script_begin("p3bkd1", layer_stop_alpha_start);
+layer_script_end("p3bkd1", layer_stop_alpha_end);
+
+layer_script_begin("p3bkd2", layer_stop_alpha_start);
+layer_script_end("p3bkd2", layer_stop_alpha_end);
+
+layer_script_begin("p3bkd3", layer_stop_alpha_start);
+layer_script_end("p3bkd3", layer_stop_alpha_end);
+
+
+
+
+
+
+
+
+layer_script_begin("background", layer_stop_alpha_start);
+layer_script_end("background", layer_stop_alpha_end);
 
 
 layer_script_begin("gameobjects", layer_stop_alpha_start);

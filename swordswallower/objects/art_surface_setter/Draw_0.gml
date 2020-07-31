@@ -72,7 +72,10 @@ tex_art = surface_get_texture(art_surface)
 texture_set_stage(shader_art_surface, tex_art);
 
 gpu_set_colorwriteenable(true, true, true, false);
+
+//shader_set(shader_alpha_one)
 draw_surface(art_surface,player_obj.camx,player_obj.camy)
+//shader_reset()
 
 shader_set(shader_blood_alpha_surface)
 draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
@@ -87,6 +90,9 @@ gpu_set_colorwriteenable(true, true, true, true)
 
 surface_set_target(art_surface)
 draw_clear_alpha(c_white,0)
+//draw_set_color(c_black)
+//draw_rectangle(0,0,1920,1080,false)
+//draw_set_color(c_white)
 surface_reset_target()
 
 	

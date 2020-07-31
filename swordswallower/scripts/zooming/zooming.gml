@@ -54,7 +54,7 @@ if tail_zooming {
 		}
 		
 		//sdm(point_distance(x,y,tail_dest_x,tail_dest_y))
-		if point_distance(x,y,tail_dest_x,tail_dest_y)>10 {
+		if point_distance(x,y,tail_dest_x,tail_dest_y)>7 {
 			move_towards_point(tail_dest_x,tail_dest_y,ztempspeed)
 		} else {
 				

@@ -257,6 +257,7 @@ if player_obj.tail_planted {
 	&& current_wall.object_index!=door_obj{
 		//sdm("a")
 		reset_intangibility()
+		
 		player_obj.c_slingtimer = 2.5
 		if !current_wall.intangible {
 			//sdm("help")
@@ -292,6 +293,9 @@ if player_obj.tail_planted {
 			player_obj.vspeed*=1
 		}*/
 		
+	} else if point_distance(player_obj.x,player_obj.y,x,y)<30 && player_obj.speed<1
+	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0) {
+		fucking_wall_thing()	
 	}
 	
 	//sword_particle()
@@ -514,7 +518,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		//collision_iterate_wall(mach_moving_wall_obj)
 		//collision_iterate_wall(draft_obj)
 		if !place_meeting(player_obj.x,player_obj.y,tar_obj) {
-			collision_iterate_wall(tar_obj)
+			//collision_iterate_wall(tar_obj)
 		}
 		collision_iterate_wall(skiff_obj)
 		collision_iterate_wall(switch_wall_obj)

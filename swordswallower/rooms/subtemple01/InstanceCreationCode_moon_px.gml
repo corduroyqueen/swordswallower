@@ -1,4 +1,4 @@
-sprite = moon
+sprite = moon853
 parallax_num = 1.01
 
 
