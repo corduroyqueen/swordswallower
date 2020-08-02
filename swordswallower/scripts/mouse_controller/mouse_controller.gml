@@ -148,7 +148,8 @@ if !tail_planted && !tail_held {
 	
 	
 	if tail_planted && zoom_allow<1 &&
-	zoom_buff_timer>0 && k_dash && !k_dash_r {
+	zoom_buff_timer>0 && k_dash && !k_dash_r 
+	&& level1_master.ability_dash {
 		//shockwave_shader.trigger = true
 		
 		zoom_buff_timer = 0

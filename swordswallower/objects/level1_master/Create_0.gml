@@ -88,7 +88,7 @@ gpu_set_texfilter(true)
 
 
 
-
+ability_dash = false
 
 
 
