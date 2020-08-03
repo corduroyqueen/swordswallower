@@ -19,7 +19,7 @@ if following {
 		y = player_obj.y-9
 	}
 	
-	x = player_obj.x+player_obj.hspeed
-	y = player_obj.y+40+player_obj.vspeed/2
+	x = player_obj.x+2+player_obj.hspeed
+	y = player_obj.y+2+player_obj.vspeed/2
 	
 }

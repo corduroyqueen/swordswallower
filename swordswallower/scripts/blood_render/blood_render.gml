@@ -7,8 +7,12 @@ surface_set_target(blood_surface);
 //draw_clear_alpha($FF7F7F, 1);
 //gpu_set_colofrwriteenable(true,true,true,false)
 //draw_sprite(scary_skull,0,50,50)
-draw_clear_alpha(c_white,0)
+if !player_obj.death {
+	draw_clear_alpha(c_white,0)
 	
+} else if player_obj.respawn_timer>58 {
+	draw_clear_alpha(c_white,0)
+}
 //shader_set(shader_blood_alpha)
 //gpu_set_colofrwriteenable(true,true,true,true)
 ////draw_sprite(blood_sprite_spr,0,250,250)

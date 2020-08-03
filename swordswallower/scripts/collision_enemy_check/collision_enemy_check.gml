@@ -242,7 +242,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		
 		ok = choose(zomb_death1,zomb_death2,zomb_death3,zomb_death4)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		audio_sound_gain(ok,10,0)
+		audio_sound_gain(ok,0.5,0)
 		audio_play_sound(ok,0,false)
 		with local_obj {
 			//shatter_mb_input_script(6)

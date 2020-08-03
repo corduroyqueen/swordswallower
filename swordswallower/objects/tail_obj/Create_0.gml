@@ -60,7 +60,7 @@ charger_bool = false
 hitpause = false
 hitpause_timer = 0
 
-scrape_s = scrape
+scrape_s = s_sword_scrape
 audio_sound_pitch(scrape_s,0.5)
 
 s_whoosh_emitter = audio_emitter_create()

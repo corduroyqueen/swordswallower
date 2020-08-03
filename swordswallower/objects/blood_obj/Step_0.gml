@@ -75,24 +75,31 @@ if place_meeting(x,y,tar_obj) {
 		ds_list_add(splat_list_s,sxs)	
 	}
 	
-	instance_destroy()
-	lifect++
+	var eh = gsound.s_blood_drips[floor(random_range(0,9))]
+	audio_sound_pitch(eh,random_range(5,8))
+	if random_range(0,100)>=75 {
+		audio_sound_gain(eh,random_range(0.00,0.40),0)
+	}
+	audio_play_sound(eh,0,false)
 	
-	if lifect >500 {
-		image_alpha-=0.02
-	}
-	if image_alpha<=0 {
-		instance_destroy()	
-	}
-	if locked {
-		if instance_exists(obj) {
-			x = obj.x + xoff
-			y = obj.y + yoff
-		} else {
-			surrounded = false	
-			locked = false
-		}
-	}
+	instance_destroy()
+	//lifect++
+	
+	//if lifect >500 {
+	//	image_alpha-=0.02
+	//}
+	//if image_alpha<=0 {
+	//	instance_destroy()	
+	//}
+	//if locked {
+	//	if instance_exists(obj) {
+	//		x = obj.x + xoff
+	//		y = obj.y + yoff
+	//	} else {
+	//		surrounded = false	
+	//		locked = false
+	//	}
+	//}
 }
 
 

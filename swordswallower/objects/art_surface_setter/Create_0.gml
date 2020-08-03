@@ -28,6 +28,10 @@ layer_script_begin("misc", layer_surface_script_start);
 layer_script_end("misc", layer_surface_script_end);
 
 
+//layer_script_begin("gameobjects", layer_surface_script_start);
+//layer_script_end("gameobjects", layer_surface_script_end);
+
+
 layer_script_begin("level_art2", layer_surface_script_start);
 layer_script_end("level_art2", layer_surface_script_end);
 
@@ -111,5 +115,5 @@ layer_script_begin("background", layer_stop_alpha_start);
 layer_script_end("background", layer_stop_alpha_end);
 
 
-layer_script_begin("gameobjects", layer_stop_alpha_start);
-layer_script_end("gameobjects", layer_stop_alpha_end);
+//layer_script_begin("gameobjects", layer_stop_alpha_start);
+//layer_script_end("gameobjects", layer_stop_alpha_end);

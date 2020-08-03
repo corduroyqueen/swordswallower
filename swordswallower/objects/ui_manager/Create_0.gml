@@ -25,3 +25,5 @@ ealpha = 0
 
 mouse_ui_x = 0
 mouse_ui_y = 0
+
+u_blood_trans = shader_get_uniform(shader_blood_alpha, "v_mult");

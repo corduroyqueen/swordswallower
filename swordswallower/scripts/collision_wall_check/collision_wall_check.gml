@@ -41,10 +41,13 @@ if obj==breakable_decoration_obj {
 					//audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
 				}
 				destroy = true
-			} else if d_type==1{
+			} else if d_type==1 {
 				sever_particle_script()
-			}else if d_type==2{
+			} else if d_type==2 {
 				sever_g_particle_script()
+			} else if d_type==3 {
+				destroy = true
+				
 			}
 		}
 		local_obj.met = true

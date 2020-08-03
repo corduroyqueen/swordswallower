@@ -26,6 +26,8 @@ if (wave_list_size <= 0) {
 	
 	shader_set(shader_blood_alpha)
 	u_blood_var = 4
+	
+	
 	shader_set_uniform_f(u_blood_trans,u_blood_var)
 	draw_surface(blood_surface, 0,0)
 	shader_reset()

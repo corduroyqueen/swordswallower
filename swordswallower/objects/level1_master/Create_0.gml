@@ -90,7 +90,9 @@ gpu_set_texfilter(true)
 
 ability_dash = false
 
-
+blood_cr = 0.9
+blood_cg = 0.0
+blood_cb = 0.3
 
 
 

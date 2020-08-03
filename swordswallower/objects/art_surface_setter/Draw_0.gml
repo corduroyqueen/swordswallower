@@ -70,11 +70,15 @@ surface_reset_target()
 
 tex_art = surface_get_texture(art_surface)
 texture_set_stage(shader_art_surface, tex_art);
-
-gpu_set_colorwriteenable(true, true, true, false);
-
+if !player_obj.death {
+	gpu_set_colorwriteenable(true, true, true, false);
+} else {
+	gpu_set_colorwriteenable(true, true, true, true);
+}
 //shader_set(shader_alpha_one)
+//gpu_set_blendenable(true)
 draw_surface(art_surface,player_obj.camx,player_obj.camy)
+//gpu_set_blendenable(true)
 //shader_reset()
 
 shader_set(shader_blood_alpha_surface)

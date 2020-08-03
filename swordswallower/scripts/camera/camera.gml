@@ -21,6 +21,7 @@ if intro {
 	
 	if respawn_timer<60 {
 		gpu_set_colorwriteenable(true,true,true,true);
+		//instance_activate_object(background)
 		camx = lerp(camx,
 			player_obj.x-cam_width_h,
 			0.01)
@@ -38,6 +39,7 @@ if intro {
 			instance_activate_object(background)
 			gpu_set_colorwriteenable(true,true,true,true);
 			deathParticles = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,1,0,0);
+			deathParticles2 = sprite_create_from_surface(shockwave_shader.blood_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,1,0,0);
 			deathx = camx
 			deathy = camy
 			

@@ -88,9 +88,9 @@ if start_death && !death {
 	}
 	
 	audio_manager(false,0,false,3)
-	just_blood_input(0,0,hspreva*0.2,vspreva* 0.25-10,200,false,sprite_width,sprite_height)
+	just_blood_death(0,0,hspreva*0.2,vspreva* 0.25-10,100,false,sprite_width,sprite_height)
 	sprite_index = sprite310
-	shatter_script()
+	//shatter_script()
 	sprite_index = -1
 	
 	

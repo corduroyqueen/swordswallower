@@ -8,7 +8,9 @@
 //	global.mousepy)
 
 if player_obj.death {
-	draw_set_color(c_red)
+	//draw_set_color( make_color_rgb(255 * level1_master.blood_cr,255  * level1_master.blood_cg,255  * level1_master.blood_cb) )
+	//draw_set_color(c_white)
+	draw_set_color(make_color_rgb(230,0,77))
 	draw_set_alpha(0.8)
 	
 	//zero zero : black
@@ -16,7 +18,7 @@ if player_obj.death {
 	//zero one : normal
 	//gpu_set_colorwriteenable(true,true,true,true);
 	// dark
-	gpu_set_blendmode_ext(bm_zero,bm_dest_color)
+	//gpu_set_blendmode_ext(bm_zero,bm_dest_color)
 
 	//tinted dark
 	gpu_set_blendmode_ext(bm_dest_color,bm_dest_color)
@@ -48,9 +50,36 @@ if player_obj.death {
 	gpu_set_blendmode(bm_normal)
 	draw_set_color(c_white)
 	draw_set_alpha(1)
+	
+	if player_obj.death { 
+		with art_surface_setter {
+			tex_art = surface_get_texture(art_surface)
+			texture_set_stage(shader_art_surface, tex_art);
+			if !player_obj.death {
+				gpu_set_colorwriteenable(true, true, true, false);
+			} else {
+				gpu_set_colorwriteenable(true, true, true, true);
+			}
+			//shader_set(shader_alpha_one)
+			//gpu_set_blendenable(true)
+			draw_surface(art_surface,player_obj.camx,player_obj.camy)
+			//gpu_set_blendenable(true)
+			//shader_reset()
+
+			shader_set(shader_blood_alpha_surface)
+			draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
+			shader_reset()
+		}
+	}
 	//gpu_set_colorwriteenable(true,true,true,true);
 	if player_obj.respawn_timer>58 {
 		draw_sprite(player_obj.deathParticles,0,player_obj.deathx,player_obj.deathy)
+		
+		shader_set(shader_blood_alpha)
+		u_blood_var = 4
+		shader_set_uniform_f(u_blood_trans,u_blood_var)
+		draw_sprite(player_obj.deathParticles2,0,player_obj.deathx,player_obj.deathy)
+		shader_reset()
 	}
 	
 
