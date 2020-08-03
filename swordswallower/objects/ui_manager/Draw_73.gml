@@ -86,7 +86,7 @@ if player_obj.death {
 } else if !player_obj.ending_lock {
 	
 	draw_set_font(font2)
-	draw_text(player_obj.camx+20,player_obj.camy+20,string(player_obj.gems))	
+	//draw_text(player_obj.camx+20,player_obj.camy+20,string(player_obj.gems))	
 	draw_set_color(c_ltgray)
 	
 	if input_controller.controller == input_controller.controller_ds4 {
