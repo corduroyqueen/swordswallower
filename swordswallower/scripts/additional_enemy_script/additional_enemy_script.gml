@@ -157,12 +157,6 @@ if obj==charger_obj {
 	//}
 }
 
-if obj==fly_obj {
-	local_obj.death = true	
-	player_obj.tail_planted = false
-	player_obj.shake_d=5
-	player_obj.camera_shake_d = true
-}
 if obj==fatfly_obj || obj==spikyguy_obj {
 	local_obj.met = true
 	planted = true
@@ -209,7 +203,7 @@ if obj==wooden_fly_obj {
 		local_obj.sword_lock = false
 		player_obj.tail_planted = false
 						
-	} else if !local_obj.death {
+	} else if !local_obj.death {  
 		local_obj.met = true
 		planted=true
 		player_obj.tail_dest_x = x

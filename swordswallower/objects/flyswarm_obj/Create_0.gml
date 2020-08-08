@@ -64,3 +64,6 @@ for(i=0;i<100;i++) {
 	flies_x[i] = x+random_range(-num_of_flies,num_of_flies)
 	flies_y[i] = y+random_range(-num_of_flies,num_of_flies)
 }
+
+hsp=0
+vsp=0

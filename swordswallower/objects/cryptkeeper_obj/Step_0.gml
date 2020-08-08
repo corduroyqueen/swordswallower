@@ -46,11 +46,11 @@ if state==state_chasing {
 	if fumbling_timer<=0{
 		image_blend = c_white
 		if player_obj.x<x {
-			hspeed-=h_accel	
+			hsp-=h_accel	
 			image_xscale = 1
 			facing_right = false
 		} else {
-			hspeed+=h_accel	
+			hsp+=h_accel	
 			image_xscale = -1
 			facing_right = true
 		}
@@ -67,9 +67,9 @@ if state==state_chasing {
 	image_speed = 0.75
 	if grounded {
 		
-		hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
+		hsp = clamp(hsp,-h_walk_speed,h_walk_speed)
 	} else {
-		hspeed = lerp(hspeed,0,0.2)	
+		hsp = lerp(hsp,0,0.2)	
 	}
 } 
 
@@ -78,19 +78,19 @@ if state==state_idle {
 }
 
 
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a hspeed=0 vspeed+=grav}
+if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a hsp=0 vsp+=grav}
 
 if state==state_idle || state==state_hitting {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
 		
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 		
 	}
 }
 
-wall_collision_xaxis(wall_obj)
+//wall_collision_xaxis(wall_obj)
 
 if state==state_hitting {
 	hit_timer++
@@ -145,8 +145,8 @@ if state==state_hitting {
 //}
 
 if place_meeting(x,y,tar_obj) {
-	vspeed=0.5
-	hspeed = lerp(hspeed,0,0.2)
+	vsp=0.5
+	hsp = lerp(hsp,0,0.2)
 	tartimer++
 	if tartimer>200 {
 		death = true	
@@ -165,6 +165,9 @@ if death {
 	instance_destroy()	
 }
 
-hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+hsp = clamp(hsp,-h_max_speed,h_max_speed)
+
+moveX(hsp)
+moveY(vsp)
 
 //sdm(my_floor)

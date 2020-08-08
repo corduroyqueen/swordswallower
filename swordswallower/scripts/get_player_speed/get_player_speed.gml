@@ -1,0 +1,1 @@
+return sqrt(sqr(player_obj.hsp) + sqr(player_obj.vsp))

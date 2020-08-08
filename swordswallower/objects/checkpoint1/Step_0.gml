@@ -193,11 +193,11 @@ if player_obj.tail_carry {
 
 if !setpoint {
 	with player_obj {
-		if wall_checker(other.x,other.y+2){
-			other.vspeed=0	
+		if place_meeting(other.x,other.y+2,wall_parent_obj){
+			other.vsp=0	
 		} else {
-			other.vspeed+=0.2
-			other.vspeed = clamp(other.vspeed,0,15)
+			other.vsp+=0.2
+			other.vsp = clamp(other.vspeed,0,15)
 		}
 	}
 }

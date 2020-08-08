@@ -78,7 +78,7 @@ if dev {
 	//window_set_fullscreen(false)	
 }
 
-//window_set_fullscreen(false)
+window_set_fullscreen(false)
 randomize()
 
 p_cgems = 0
@@ -88,7 +88,7 @@ gpu_set_texfilter(true)
 
 
 
-ability_dash = false
+ability_dash = true
 
 blood_cr = 0.9
 blood_cg = 0.0

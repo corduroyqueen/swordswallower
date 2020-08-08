@@ -19,7 +19,7 @@
 if //position_meeting(player_obj.x+84 * -player_sprite_obj.image_xscale, player_obj.y+34, wall_obj) && 
 player_obj.tail_carry &&
 player_obj.grounded && 
-abs(player_obj.hspeed)>1 {
+abs(player_obj.hsp)>1 {
 	
 	particle = instance_create_depth(
 	player_obj.x+84 * -player_sprite_obj.image_xscale,
@@ -31,7 +31,7 @@ abs(player_obj.hspeed)>1 {
 	particle.image_xscale = scalevar*3
 	particle.image_yscale = scalevar*0.5
 	var speedstart = choose(2,1.5,1.25,1.2,1.15,1.1,1.05,1,1,1,1,0.95,0.9,0.85,0.8,0.75,0.5,0.4,0.2,0.1,0,-0.1,-0.2)
-	particle.hspeed = player_obj.hspeed/3 * speedstart * random_range(0.9,1.05)
+	particle.hspeed = player_obj.hsp/3 * speedstart * random_range(0.9,1.05)
 	
 	particle.vspeed = -6* random_range(0.9,1.1)
 	

@@ -12,11 +12,11 @@ if gravd {
 	if stopped {
 		
 	} else {
-		vspeed+=0.4
-		if wall_checker(x,y+1) {
-			stopped = true	
-			vspeed = 0
-		}
+		//vspeed+=0.4
+		//if wall_checker(x,y+1) {
+		//	stopped = true	
+		//	vspeed = 0
+		//}
 	}
 } else {
 	y = starty
@@ -26,37 +26,37 @@ if mapguy {
 	if ds_list_size(player_obj.keylist)>0 {
 		keybool = true	
 	}
-	if keybool && mapguy_visited {
-		dialogue_array[0] = "There it is! Well done. "
-		dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
-		dialogue_array[2] = "There's no other way out of this valley, so I'm sure she went that way. "
-		dialogue_array[3] = "Good luck! Hopefully our paths cross again sometime soon. "
-		dialogue_array[4] = "end"
+	//if keybool && mapguy_visited {
+	//	dialogue_array[0] = "There it is! Well done. "
+	//	dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
+	//	dialogue_array[2] = "There's no other way out of this valley, so I'm sure she went that way. "
+	//	dialogue_array[3] = "Good luck! Hopefully our paths cross again sometime soon. "
+	//	dialogue_array[4] = "end"
 		
-	} else if keybool && !mapguy_visited {
-		dialogue_array[0] = "Greetings! I see you obtained the key from over there. "
-		dialogue_array[1] = "I was trying to get your attention earlier, but were in such a rush. I can give you a map of the tower. "
-		dialogue_array[2] = "Here you go. Press 'SHIFT' to look at it. "
-		dialogue_array[3] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
-		dialogue_array[4] = "There's no other way out of this valley, so I'm sure she went that way. "
-		dialogue_array[5] = "Good luck! Hopefully our paths cross again sometime soon. "
-		dialogue_array[6] = "end"
+	//} else if keybool && !mapguy_visited {
+	//	dialogue_array[0] = "Greetings! I see you obtained the key from over there. "
+	//	dialogue_array[1] = "I was trying to get your attention earlier, but were in such a rush. I can give you a map of the tower. "
+	//	dialogue_array[2] = "Here you go. Press 'SHIFT' to look at it. "
+	//	dialogue_array[3] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
+	//	dialogue_array[4] = "There's no other way out of this valley, so I'm sure she went that way. "
+	//	dialogue_array[5] = "Good luck! Hopefully our paths cross again sometime soon. "
+	//	dialogue_array[6] = "end"
 		
-		if current_pick==2 {
-			level1_master.getmap = true	
-		}
-	} else {
-		dialogue_array[0] = "Greetings. I see you've escaped the tower. "
-		dialogue_array[1] = "I can give you a map of the area if you'd like. It might help you in your pursuit. "
-		dialogue_array[2] = "Here you go. Press 'SHIFT' to look at it. "
-		dialogue_array[3] = "You're going to need a key to open the door above us. If you keep going left you'll find one. "
-		dialogue_array[4] = "Good luck. "
-		dialogue_array[5] = "end"
+	//	if current_pick==2 {
+	//		level1_master.getmap = true	
+	//	}
+	//} else {
+	//	dialogue_array[0] = "Greetings. I see you've escaped the tower. "
+	//	dialogue_array[1] = "I can give you a map of the area if you'd like. It might help you in your pursuit. "
+	//	dialogue_array[2] = "Here you go. Press 'SHIFT' to look at it. "
+	//	dialogue_array[3] = "You're going to need a key to open the door above us. If you keep going left you'll find one. "
+	//	dialogue_array[4] = "Good luck. "
+	//	dialogue_array[5] = "end"
 		
-		if current_pick==2 {
-			level1_master.getmap = true	
-		}
-	}
+	//	if current_pick==2 {
+	//		level1_master.getmap = true	
+	//	}
+	//}
 	
 }
 

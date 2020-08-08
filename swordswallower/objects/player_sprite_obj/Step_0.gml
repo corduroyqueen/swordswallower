@@ -71,14 +71,14 @@ if !player_obj.tail_carry {
 		sprite_index = s_player_crouch_e
 	} else if player_obj.grounded {
 		sprite_index = s_player_idle_e
-	} else if player_obj.vspeed>=0 && !player_obj.zoom_timer_bool {
+	} else if player_obj.vsp>=0 && !player_obj.zoom_timer_bool {
 		sprite_index = s_player_idle_e
-	} else if player_obj.vspeed<0 && !player_obj.zoom_timer_bool {
+	} else if player_obj.vsp<0 && !player_obj.zoom_timer_bool {
 		sprite_index = s_player_idle_e
 	}
 }
 if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 {
-		image_angle = point_direction(0,0,player_obj.hspeed,player_obj.vspeed)-90
+		image_angle = point_direction(0,0,player_obj.hsp,player_obj.vsp)-90
 		image_speed = 1.5
 		sprite_index = s_boost
 	} else {

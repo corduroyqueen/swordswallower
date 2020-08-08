@@ -11,10 +11,10 @@ if(!place_meeting(checkx,checky,obj) || (hspeed==0 && vspeed==0)){
 
 local_obj = instance_place(checkx, checky, obj);
 
-if !place_meeting(checkx+hspeed,checky+vspeed,local_obj)
-	&& !collision_line(checkx,checky,checkx+hspeed,checky+vspeed,local_obj,false,true) {
-		return false
-	}
+//if !place_meeting(checkx+hspeed,checky+vspeed,local_obj)
+//&& !collision_line(checkx,checky,checkx+hspeed,checky+vspeed,local_obj,false,true) {
+//	return false
+//}
 
 if obj==switch_wall_switch_obj && !local_obj.hit {
 	local_obj.enabled = !local_obj.enabled

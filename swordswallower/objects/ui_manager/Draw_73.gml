@@ -120,8 +120,8 @@ if show_checkpoints {
 	} else {
 		tempcolor = c_ltgray
 	}
-	px = player_obj.x - player_obj.hspeed
-	py = player_obj.y - player_obj.vspeed
+	px = player_obj.x - player_obj.hsp
+	py = player_obj.y - player_obj.vsp
 	
 	draw_set_color(tempcolor)
 	draw_ellipse(px-8,py-52,px+8,py-42,false)

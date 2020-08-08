@@ -4,6 +4,8 @@
 my_floor = false
 player_floor = false
 
+hitbox_on = false
+
 state = 0
 ang=0
 state_idle = 0
@@ -92,3 +94,6 @@ alpha_spr = 0.85
 
 fade_in_t = 0
 fade_in_a = 0
+
+hsp=0
+vsp=0

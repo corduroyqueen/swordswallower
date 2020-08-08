@@ -5,16 +5,6 @@
     "name": "illusion_wall_off_obj",
     "eventList": [
         {
-            "id": "bc23edfa-4941-43cd-aa35-f7ead4ad75ea",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "fcff8c2b-960f-4cab-afea-dd88fde6345c"
-        },
-        {
             "id": "f0bc5326-b1c5-44e5-bedf-8200e0e7bd03",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -32,6 +22,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
+            "m_owner": "fcff8c2b-960f-4cab-afea-dd88fde6345c"
+        },
+        {
+            "id": "edd49ce7-bea7-4797-a8d8-934feadccfd6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
             "m_owner": "fcff8c2b-960f-4cab-afea-dd88fde6345c"
         }
     ],

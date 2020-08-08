@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "thin_floor_obj",
     "eventList": [
-        {
-            "id": "32570d5c-a64c-43e8-bffe-036d7f439fc8",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "24990cd1-fb7f-4a76-8007-c8a8d48d0b30"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

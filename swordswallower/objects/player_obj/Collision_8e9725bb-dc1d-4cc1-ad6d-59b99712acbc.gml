@@ -1,12 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 if other.state = 0 {
 	if (bounce_buff_timer>0 || zoom_timer_bool) && other.met {
 	
-		hspeed*=0.5
+		hsp*=0.5
 		vspeed*=0.5
-		hspeed = clamp(hspeed,-zspeed,zspeed)
+		hsp = clamp(hsp,-zspeed,zspeed)
 		vspeed = clamp(vspeed,-zspeed,zspeed)
 		//sdm("FLY collision")
 	
@@ -31,9 +32,9 @@ if other.state = 0 {
 		other.death = true
 		zoom_timer_bool = false
 		zoom_timer = 0
-		hspeed*=0.5
+		hsp*=0.5
 		vspeed*=0.5
-		hspeed = clamp(hspeed,-zspeed,zspeed)
+		hsp = clamp(hsp,-zspeed,zspeed)
 		vspeed = clamp(vspeed,-zspeed,zspeed)
 		//default_collision(other)
 	} 

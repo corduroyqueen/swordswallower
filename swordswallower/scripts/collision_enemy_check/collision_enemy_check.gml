@@ -71,7 +71,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	}
 	
 	
-	if obj==fly_obj || obj==flyfree_obj || obj==doublefly_obj {
+	if obj==flyfree_obj || obj==doublefly_obj {
 		if local_obj.inv_timer>0 || local_obj.death {
 			player_obj.tail_planted = false
 			x = oldx

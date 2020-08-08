@@ -22,9 +22,7 @@ if player_obj.fire_active {
 
 if active {
 	image_index = 4
-	if place_meeting(x,y,player_obj) {
-		damage_script(10,1,1,1)
-	}	
+	hitbox_on = true
 	if !perm {
 		reawake_t++
 		if reawake_t>120 {
@@ -34,6 +32,8 @@ if active {
 			wake_timer_t=0
 		}
 	}	
+} else {
+	hitbox_on = false	
 }
 if wake_timer_t>wake_timer_m {
 	image_speed = 1

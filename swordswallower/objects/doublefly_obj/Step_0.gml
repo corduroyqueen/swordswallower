@@ -4,7 +4,6 @@ if keyboard_check_pressed(ord("R")) {
 	audio_stop_sound(s_fly_buzz)
 }
 
-
 	
 if death {
 	
@@ -37,15 +36,15 @@ if death {
 		fly1 = instance_create_depth(x,y,depth,flyfree_obj)
 		fly2 = instance_create_depth(x,y,depth,flyfree_obj)
 	
-		fly1.hspeed = tempy * 7
-		fly1.vspeed = tempx * 7
+		fly1.hsp = tempy * 7
+		fly1.vsp = tempx * 7
 		fly1.inv_timer=15
 		fly1.state = 1
 		fly1.spawn = true
 		fly1.eyespr = greeneye
 		
-		fly2.hspeed = -tempy * 7
-		fly2.vspeed = -tempx * 7
+		fly2.hsp = -tempy * 7
+		fly2.vsp = -tempx * 7
 		fly2.inv_timer=15
 		fly2.state = 1
 		fly2.spawn = true
@@ -65,8 +64,8 @@ if death {
 	
 		x = startpx
 		y = startpy
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		if in_camera_range(x,y) && (player_obj.stinky_check || tail_obj.stinky) {
 			death = false
 			death_timer=0
@@ -148,13 +147,16 @@ if state==state_chasing {
 	
 	fly_target_code(2)
 	//image_xscale = sign(x-target.x)
-	//temp_hs = hspeed
-	//temp_vs = vspeed
-	//hspeed = temp_hs
-	//vspeed = temp_vs
+	//temp_hs = hsp
+	//temp_vs = vsp
+	//hsp = temp_hs
+	//vsp = temp_vs
 	
 }
 
 }
+
+moveX(hsp)
+moveY(vsp)
 
 audio_emitter_position(fly_emitter,x,y,0)

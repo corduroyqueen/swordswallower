@@ -16,7 +16,7 @@ for (i=0;i<(100);i++){
 	
 	
 	var scalevar = random_range(0.1,1)
-	var angle = point_direction(0,0,player_obj.hspeed,player_obj.vspeed)+90
+	var angle = point_direction(0,0,player_obj.hsp,player_obj.vsp)+90
 	
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar

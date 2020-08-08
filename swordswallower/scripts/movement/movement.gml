@@ -1,48 +1,54 @@
+if grounded && !zoom_timer_bool { 
+	h_decel = h_decel_g 
+} else { 
+	h_decel = h_decel_a 
+}
+
 
 if !zoom_timer_bool && !held_position{
 	if grounded {
-		if k_left && hspeed>=-max_hs_g {
-			if hspeed >= 0 {
-				hspeed-=h_accel_g*2
+		if k_left && hsp>=-max_hs_g {
+			if hsp >= 0 {
+				hsp-=h_accel_g*2
 			} else {
-				hspeed-=h_accel_g
+				hsp-=h_accel_g
 			}
-		} else if k_right && hspeed<=max_hs_g {
-			if hspeed <= 0  {
-				hspeed+=h_accel_g*2	
+		} else if k_right && hsp<=max_hs_g {
+			if hsp <= 0  {
+				hsp+=h_accel_g*2	
 			} else {
-				hspeed+=h_accel_g
+				hsp+=h_accel_g
 			}
 		}
 	
 	
-		if abs(hspeed)>max_hs_g {
-			hspeed = lerp(hspeed,max_hs_g * sign(hspeed),0.02)
+		if abs(hsp)>max_hs_g {
+			hsp = lerp(hsp,max_hs_g * sign(hsp),0.02)
 		}
 		
 		h_dir_bool = true
 	} else {
-		if k_left && hspeed>=-max_hs_a {
-			if hspeed >= 0 || !h_dir_bool 
+		if k_left && hsp>=-max_hs_a {
+			if hsp >= 0 || !h_dir_bool 
 			{
-				hspeed-=(h_accel_a/2)*(out_of_dash_t/out_of_dash_m)
+				hsp-=(h_accel_a/2)*(out_of_dash_t/out_of_dash_m)
 			} else {
-				hspeed-=h_accel_a*(out_of_dash_t/out_of_dash_m)
+				hsp-=h_accel_a*(out_of_dash_t/out_of_dash_m)
 				h_dir_bool = false
 			}
-		} else if k_right && hspeed<=max_hs_a {
-			if hspeed <= 0 || !h_dir_bool
+		} else if k_right && hsp<=max_hs_a {
+			if hsp <= 0 || !h_dir_bool
 			{
-				hspeed+=(h_accel_a/2)*(out_of_dash_t/out_of_dash_m)
+				hsp+=(h_accel_a/2)*(out_of_dash_t/out_of_dash_m)
 			} else {
-				hspeed+=h_accel_a*(out_of_dash_t/out_of_dash_m)
+				hsp+=h_accel_a*(out_of_dash_t/out_of_dash_m)
 				h_dir_bool = false
 			}
 		}
 	
 	
-		if abs(hspeed)>max_hs_a  {
-			hspeed = lerp(hspeed,max_hs_a * sign(hspeed),0.02)
+		if abs(hsp)>max_hs_a  {
+			hsp = lerp(hsp,max_hs_a * sign(hsp),0.02)
 		}	
 	}
 }
@@ -50,7 +56,7 @@ if !zoom_timer_bool && !held_position{
 //sdm(player_sprite_obj.image_index)
 if grounded && (k_left || k_right) {
 	//walk_timer+=1
-	//if walk_timer>(25-abs(hspeed)) {
+	//if walk_timer>(25-abs(hsp)) {
 	if abs(player_sprite_obj.image_index-4)<0.1 ||
 	abs(player_sprite_obj.image_index-1)<0.1 {
 		if !tail_carry {
@@ -83,31 +89,26 @@ if grounded && (k_left || k_right) {
 //}
 
 //if keyboard_check_pressed(key_jump) && jump_able {
-//	vspeed-=jump_height		
+//	vsp-=jump_height		
 //	jump_buff_timer = 0
 //	jump_able = false
 //}
 
 //if jump_able && jump_buff_timer>0 {
-//	vspeed-=jump_height		
+//	vsp-=jump_height		
 //	jump_buff_timer = 0
 //}
 
-
-wall_collision_xaxis(wall_obj)
-wall_collision_xaxis(burn_wall_obj)
-wall_collision_xaxis(black_wall_obj)
-wall_collision_xaxis(falling_rock_obj)
 
 //wall_collision_yaxis_up(wall_obj)
 //wall_collision_yaxis_up(black_wall_obj)
 
 if !zoom_timer_bool {
 	if(!k_left && !k_right){
-		if(abs(hspeed) < h_decel){
-			hspeed=0;	
+		if(abs(hsp) < h_decel){
+			hsp=0;	
 		} else {
-			hspeed-=sign(hspeed) * h_decel;	
+			hsp-=sign(hsp) * h_decel;	
 		}
 	}
 }
@@ -116,15 +117,15 @@ if !zoom_timer_bool {
 if held_release_timer>0 {
 	held_release_timer--
 	grav = 0
-	//if vspeed<-1 {
+	//if vsp<-1 {
 	//	held_release_timer = 0
 	//}
 } else {
 	grav = start_grav	
 }
-if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vspeed<max_vs {
+if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vsp<max_vs {
 	
-	vspeed += (grav + grav_jv)	
+	vsp += (grav + grav_jv)	
 }
 
 if tail_obj.moving_platform_bool {
@@ -145,13 +146,13 @@ if ability_spin_jump {
 		if keyboard_check_pressed(vk_space) {
 			ability_spin_jump_e = false
 			out_of_dash_t=out_of_dash_m
-			if vspeed>0 {
-				vspeed*=0.5
-				vspeed-=25
-				hspeed*=0.60
+			if vsp>0 {
+				vsp*=0.5
+				vsp-=25
+				hsp*=0.60
 			} else {
-				vspeed-=10
-				hspeed*=0.60
+				vsp-=10
+				hsp*=0.60
 			}
 		}
 	}
@@ -174,8 +175,8 @@ if held_position {
 		
 		x = tail_obj.current_wall.x + xvheld
 		y = tail_obj.current_wall.y + yvheld
-		hspeed = held_start_hspeed
-		vspeed = held_start_vspeed
+		hsp = held_start_hspeed
+		vsp = held_start_vspeed
 		collision_swordpos(moving_platform_obj)
 		collision_swordpos(switch_wall_obj)
 		collision_swordpos(sinking_platform_obj)
@@ -191,17 +192,17 @@ if held_position {
 		}
 		
 		if place_meeting(x,y,wall_obj) || place_meeting(x,y,black_wall_obj) {
-			hspeed = tail_obj.current_wall.hspeed
-			vspeed = tail_obj.current_wall.vspeed
+			hsp = tail_obj.current_wall.hspeed
+			vsp = tail_obj.current_wall.vspeed
 			default_collision(wall_obj)
 			default_collision(black_wall_obj)
 			xvheld = x-tail_obj.current_wall.x
 			yvheld = y-tail_obj.current_wall.y
-			hspeed = 0
-			vspeed = 0
+			hsp = 0
+			vsp = 0
 		} 
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		
 		
 		
@@ -209,8 +210,8 @@ if held_position {
 		
 	} else {
 	
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		
 		//x = tail_dest_x
 		//y = tail_dest_y
@@ -225,7 +226,9 @@ if held_position {
 		reset_intangibility()
 		ability_held_release_t=0
 		zoom_particle_timer=0
-		move_towards_point(global.mousepx,global.mousepy,60)	
+		
+		hsp = cos(degtorad(point_direction(x,y,global.mousepx,global.mousepy))) * 60
+		vsp = -sin(degtorad(point_direction(x,y,global.mousepx,global.mousepy))) * 60
 		out_of_dash_t=-10
 		held_position = false
 		held_release_timer = 10
@@ -233,7 +236,7 @@ if held_position {
 		(tail_obj.current_obj.object_index == moving_platform_obj
 		|| tail_obj.current_obj.object_index == sinking_platform_obj) {
 			//var h = hspeed
-			//var v = vspeed
+			//var v = vsp
 			if tail_obj.current_obj.vertical {
 				y += sign(y-tail_obj.current_obj.y)*10	
 			} else {
@@ -256,7 +259,7 @@ if held_position {
 		(tail_obj.current_obj.object_index == moving_platform_obj
 		|| tail_obj.current_obj.object_index == sinking_platform_obj) {
 			//var h = hspeed
-			//var v = vspeed
+			//var v = vsp
 			if tail_obj.current_obj.vertical {
 				y += sign(y-tail_obj.current_obj.y)*10	
 			} else {
@@ -279,8 +282,8 @@ if held_position {
 			
 			if !place_meeting(x,y,wall_obj) {
 				
-				hspeed = held_start_hspeed
-				vspeed = held_start_vspeed
+				hsp = held_start_hspeed
+				vsp = held_start_vspeed
 			
 				held_bounce_timer = 0
 				held_position = false
@@ -301,17 +304,18 @@ if grounded {
 	
 	if h_accel_reduc<1 {
 		h_accel_reduc+=0.025
-		hspeed *=h_accel_reduc
+		hsp *=h_accel_reduc
 	} 
+	vsp = min(vsp,0)
 }
 if out_of_dash_t<0 {
-	ang = point_direction(0,0,hspeed,vspeed)
-	//dist = point_distance(0,0,hspeed,vspeed)
-	hspeed = lerp(hspeed,cos(degtorad(ang))*20,0.30)
-	if vspeed<0 {
-		vspeed = lerp(vspeed,-sin(degtorad(ang))*20,0.30)
+	ang = point_direction(0,0,hsp,vsp)
+	//dist = point_distance(0,0,hsp,vsp)
+	hsp = lerp(hsp,cos(degtorad(ang))*20,0.30)
+	if vsp<0 {
+		vsp = lerp(vsp,-sin(degtorad(ang))*20,0.30)
 	} else {
-		vspeed = lerp(vspeed,-sin(degtorad(ang))*20,0.20)
+		vsp = lerp(vsp,-sin(degtorad(ang))*20,0.20)
 	}
 }
 
@@ -327,7 +331,7 @@ if (on_wall_left && keyoard_check(ord("A"))) || (on_wall_right && keyoard_check(
 	}
 	}
 	
-	vspeed = lerp(vspeed,clamp(vspeed,-100,2.75),0.3)	
+	vsp = lerp(vsp,clamp(vsp,-100,2.75),0.3)	
 	
 } else {
 	if audio_is_playing(rocksfalling) {
@@ -342,12 +346,12 @@ if (on_wall_left && keyoard_check(ord("A"))) || (on_wall_right && keyoard_check(
 //if !grounded {
 //	if on_wall_left && jump_buff_timer>0 {
 //		hspeed+=wall_jump_x
-//		vspeed-=wall_jump_y
+//		vsp-=wall_jump_y
 //		jump_buff_timer = 0
 //	}
 //	if on_wall_right && jump_buff_timer>0 {
 //		hspeed-=wall_jump_x
-//		vspeed-=wall_jump_y
+//		vsp-=wall_jump_y
 //		jump_buff_timer = 0
 //	}
 //}
@@ -358,5 +362,5 @@ if (on_wall_left && keyoard_check(ord("A"))) || (on_wall_right && keyoard_check(
 
 
 //hspeed = clamp(hspeed,-max_hs,max_hs)
-//vspeed = clamp(vspeed,-max_vs,max_vs)
+//vsp = clamp(vsp,-max_vs,max_vs)
 

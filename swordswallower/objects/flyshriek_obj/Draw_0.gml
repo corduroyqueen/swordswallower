@@ -52,3 +52,6 @@ if death {
 		
 	}
 }
+
+moveX(hsp)
+moveY(vsp)

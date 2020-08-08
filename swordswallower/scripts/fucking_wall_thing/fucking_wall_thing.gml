@@ -31,11 +31,11 @@ if !player_obj.k_dash
 	place_meeting(x,y,hum_food_obj)|| 
 	place_meeting(x,y,circle_friend_obj) {
 		//sdm("lellll")
-		player_obj.hspeed *= 0.65
-		player_obj.vspeed *= 0.65
+		player_obj.hsp *= 0.65
+		player_obj.vsp *= 0.65
 		out_of_dash_t=10
-		player_obj.hspeed = clamp(player_obj.hspeed,-25,25)
-		player_obj.vspeed = clamp(player_obj.vspeed,-25,25)
+		player_obj.hsp = clamp(player_obj.hsp,-25,25)
+		player_obj.vsp = clamp(player_obj.vsp,-25,25)
 		if place_meeting(x,y,hum_food_obj) {
 			current_wall.death = true
 		}
@@ -62,8 +62,8 @@ else if current_wall.object_index!=impale_circle_obj
 	
 	player_obj.held_position_ready = true	
 	player_obj.held_position = true
-	player_obj.held_start_hspeed = player_obj.hspeed
-	player_obj.held_start_vspeed = player_obj.vspeed
+	player_obj.held_start_hspeed = player_obj.hsp
+	player_obj.held_start_vspeed = player_obj.vsp
 	
 	player_obj.shake_d=13.5
 	player_obj.camera_shake_d = true
@@ -73,15 +73,15 @@ else if current_wall.object_index!=impale_circle_obj
 	//audio_sound_gain(swsw1,1,200)
 	
 	player_obj.camera_shake_direc = true
-	player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hspeed,player_obj.vspeed))
+	player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hsp,player_obj.vsp))
 	player_obj.shake_dir = 35
 
 	shockwave_shader.trigger = true
 	shockwave_shader.strength_input = 0.1
 	
 	wall_particle_script(player_obj.held_start_hspeed,player_obj.held_start_vspeed,0.2,5,true,1,1,rubble_s1)
-	player_obj.hspeed = 0
-	player_obj.vspeed = 0
+	player_obj.hsp = 0
+	player_obj.vsp = 0
 	player_obj.check_zoom_collision = true
 	player_obj.held_bounce_timer=0
 	

@@ -22,8 +22,8 @@ if player_detected {
 		floatspeed = floatspeed_reloading
 	} else {
 		sniping_timer++
-		targetx = lerp(targetx,player_obj.x+player_obj.hspeed*3,0.1)
-		targety = lerp(targety,player_obj.y+player_obj.vspeed*3,0.1)
+		targetx = lerp(targetx,player_obj.x+player_obj.hsp*3,0.1)
+		targety = lerp(targety,player_obj.y+player_obj.vsp*3,0.1)
 		if sniping_timer>sniping_timer_m {
 			shoot = true
 			sniping_timer=0

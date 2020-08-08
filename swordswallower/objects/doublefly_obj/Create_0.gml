@@ -43,3 +43,8 @@ within_bound = false
 bound_box = false
 
 shriek = false
+
+hp=1
+
+hsp=0
+vsp=0

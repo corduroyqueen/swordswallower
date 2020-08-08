@@ -14,8 +14,8 @@ var xs
 var ys
 
 if lel {
-	xs = player_obj.hspeed
-	ys = player_obj.vspeed
+	xs = player_obj.hsp
+	ys = player_obj.vsp
 } else {
 	xs = tail_obj.throwxs
 	ys = tail_obj.throwys

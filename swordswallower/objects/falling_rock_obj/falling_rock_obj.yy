@@ -5,16 +5,6 @@
     "name": "falling_rock_obj",
     "eventList": [
         {
-            "id": "ae188171-0b02-4041-a0b0-c5a99abcff50",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "4da7d8ad-6c76-4a36-98dd-8dcebf41c2af"
-        },
-        {
             "id": "033619be-70ae-45d3-a4ac-2a98ffa757ec",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -53,11 +43,21 @@
             "enumb": 0,
             "eventtype": 4,
             "m_owner": "4da7d8ad-6c76-4a36-98dd-8dcebf41c2af"
+        },
+        {
+            "id": "9c78c39e-a7a3-41b0-8d8c-8298b727c073",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "4da7d8ad-6c76-4a36-98dd-8dcebf41c2af"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "82e36967-9774-44b0-9eec-9e93371d43e5",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

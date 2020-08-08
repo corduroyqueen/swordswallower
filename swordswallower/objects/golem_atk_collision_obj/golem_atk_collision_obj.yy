@@ -4,20 +4,11 @@
     "mvc": "1.0",
     "name": "golem_atk_collision_obj",
     "eventList": [
-        {
-            "id": "8d88a94d-3f0a-448f-bf3d-f2cb49f88a47",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "c5d2fe27-d274-44c6-8a13-369b494330e8"
-        }
+        
     ],
     "maskSpriteId": "1f8d6a1b-5061-46db-b808-781495f5ba1a",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "da7d007f-1dd7-47f3-abe4-dc99062459c0",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

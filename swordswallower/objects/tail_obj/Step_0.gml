@@ -251,7 +251,7 @@ if player_obj.tail_planted {
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
-	if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<player_obj.speed+1
+	if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<get_player_speed()+1
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0)
 	&& !inside_flier && instance_exists(current_wall)
 	&& current_wall.object_index!=door_obj{
@@ -280,20 +280,20 @@ if player_obj.tail_planted {
 		player_obj.tail_pulling = true
 		
 		//if !player_obj.grounded {
-		//	player_obj.vspeed*=0.6
+		//	player_obj.vsp*=0.6
 		//	player_obj.held_release_timer = 10
 		//}
 		/*
 		if current_wall.object_index==impale_circle_obj {
-			player_obj.hspeed*=0.8
-			player_obj.vspeed*=0.8
+			player_obj.hsp*=0.8
+			player_obj.vsp*=0.8
 		} else {
 		
-			player_obj.hspeed*=1
-			player_obj.vspeed*=1
+			player_obj.hsp*=1
+			player_obj.vsp*=1
 		}*/
 		
-	} else if point_distance(player_obj.x,player_obj.y,x,y)<30 && player_obj.speed<1
+	} else if point_distance(player_obj.x,player_obj.y,x,y)<30 && sqrt(sqr(player_obj.hsp) + sqr(player_obj.vsp))<1
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0) {
 		fucking_wall_thing()	
 	}
@@ -598,7 +598,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 		if player_obj.stinky_check || (tail_obj.stinky && !player_obj.tail_carry) {
 			
 		} else {
-			//collision_iterate_enemy(fly_obj)
+			
 			collision_iterate_enemy(flyfree_obj)
 			collision_iterate_enemy(doublefly_obj)
 		}

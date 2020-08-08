@@ -118,7 +118,7 @@ if tail_obj.moving_platform_bool && (place_meeting(x,y,wall_obj)||place_meeting(
 x = player_hitbox_check_obj.x - hspeed
 y = player_hitbox_check_obj.y - vspeed
 
-if vspeed>0 && ang==90 {
+if vsp>0 && ang==90 {
 	vspeed/=2	
 }
 	

@@ -5,6 +5,29 @@
 //if place_meeting(x+hwidth,y+hheight,wall_obj) && place_meeting(x+hwidth,y-hheight,wall_obj) 
 //&& place_meeting(x-hwidth,y+hheight,wall_obj) && place_meeting(x-hwidth,y-hheight,wall_obj) {
 if go {
+	
+	if place_meeting(x,y,player_obj) {
+		if !player_obj.start_death && !player_obj.death && player_sprite_obj.spr_bloodied_a<0.5 {
+			player_got = true
+			hspeed=0
+			vspeed=0
+			surrounded = true
+			obj = player_obj				
+			locked = true
+			lockedobj = obj
+
+			xoff = x-obj.x
+			yoff = y-obj.y
+
+			x=150+xoff
+			y=150+yoff
+	
+			instance_destroy()
+	
+			player_sprite_obj.spr_bloodied = true
+			player_sprite_obj.spr_bloodied_a = 1
+		}
+	}
 if rval==0 {
 	rval = image_xscale
 	bounce_vel = rval * random_range(0.4,1.4)

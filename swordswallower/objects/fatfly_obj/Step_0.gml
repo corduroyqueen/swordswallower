@@ -24,7 +24,7 @@ if keyboard_check_pressed(ord("R")) {
 }
 if death {
 	if distance_to_object(player_obj)<575 {
-		just_blood(player_obj.hspeed,player_obj.vspeed,0.9,60,true,sprite_width/1.5,sprite_height/1.5)
+		just_blood(player_obj.hsp,player_obj.vsp,0.9,60,true,sprite_width/1.5,sprite_height/1.5)
 	}
 	//reset_zoom()
 	if audio_is_playing(s_fly_buzz) {

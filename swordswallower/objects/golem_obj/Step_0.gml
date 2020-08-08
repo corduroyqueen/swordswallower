@@ -97,14 +97,14 @@ if sword_present {
 	
 	if point_distance(x,y,player_obj.x,player_obj.y)<20 && player_obj.zoom_timer_bool {
 		
-		player_obj.hspeed*=0.55
-		player_obj.vspeed*=0.55
+		player_obj.hsp*=0.55
+		player_obj.vsp*=0.55
 		
-		hspeed = player_obj.hspeed * 1.5
-		vspeed = player_obj.vspeed * 0.8
+		hspeed = player_obj.hsp * 1.5
+		vspeed = player_obj.vsp * 0.8
 		
-		player_obj.hspeed*=-0.25
-		player_obj.vspeed*=-0.35
+		player_obj.hsp*=-0.25
+		player_obj.vsp*=-0.35
 		
 		state = state_knockback
 		collided_with_friend = false

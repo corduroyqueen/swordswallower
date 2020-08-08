@@ -14,10 +14,10 @@ if place_meeting(x,y+2,obj) {
 			}
 			
 			if place_meeting(x,y,wall_obj) {
-				var h = hspeed
-				var v = vspeed
-				hspeed = instance_place(x,y+2,obj).hspeed
-				vspeed = instance_place(x,y+2,obj).vspeed
+				var h = hsp
+				var v = vsp
+				hsp = instance_place(x,y+2,obj).hspeed
+				vsp = instance_place(x,y+2,obj).vspeed
 				default_collision(wall_obj)
 			}
 		} else {
@@ -35,7 +35,7 @@ if place_meeting(x,y+2,obj) {
 			
 			
 			//(instance_place(x,y+2,obj).y-instance_place(x,y+2,obj).ypreva)/2
-			//vspeed=0
+			//vsp=0
 		}
 	} else {
 		var xt = x + instance_place(x,y+2,obj).hspeed
@@ -43,10 +43,10 @@ if place_meeting(x,y+2,obj) {
 		x = xt
 		y = yt
 		if place_meeting(x,y,wall_obj) {
-			var h = hspeed
-			var v = vspeed
-			hspeed = instance_place(x,y+2,obj).hspeed
-			vspeed = instance_place(x,y+2,obj).vspeed
+			var h = hsp
+			var v = vsp
+			hsp = instance_place(x,y+2,obj).hspeed
+			vsp = instance_place(x,y+2,obj).vspeed
 			default_collision(wall_obj)
 		}	
 	}
@@ -56,6 +56,6 @@ if place_meeting(x,y+2,obj) {
 }
 
 if !held_position && place_meeting(x,y-2,obj) {
-	//x = x + instance_place(x,y+1,moving_platform_obj).hspeed	
-	//y = y + instance_place(x,y-2,obj).vspeed * 1.2
+	//x = x + instance_place(x,y+1,moving_platform_obj).hsp	
+	//y = y + instance_place(x,y-2,obj).vsp * 1.2
 }

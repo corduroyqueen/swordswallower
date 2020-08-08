@@ -19,9 +19,9 @@ if sword_present {
 }
 
 
-if place_meeting(x,y-player_obj.vspeed-7,player_obj) && player_obj.vspeed>=0 {
+if place_meeting(x,y-player_obj.vsp-7,player_obj) && player_obj.vsp>=0 {
 	onedirec = true	
-	//player_obj.vspeed+=vspeed
+	//player_obj.vsp+=vspeed
 } else if !place_meeting(x,y-64,player_obj) {
 	onedirec = false	
 }

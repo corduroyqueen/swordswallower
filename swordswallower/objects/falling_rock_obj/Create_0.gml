@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+
 held=true
 grav = 0.25
 intangible = false

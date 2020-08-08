@@ -4,20 +4,11 @@
     "mvc": "1.0",
     "name": "black_wall_obj",
     "eventList": [
-        {
-            "id": "da025978-2682-4a60-93bc-020705d3d09b",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "73680289-c8b6-4de8-9cac-d7a27dc94148"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "65785b68-cc47-4c97-866f-a07cf2f0ae93",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

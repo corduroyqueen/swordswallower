@@ -54,38 +54,38 @@ if enabled {
 		hspeed = 0  
 		vspeed = 0
 	}
-	if instance_place(x,y+vspeed,all) {
-		list = collision_list(x,y+vspeed,all)
+	//if instance_place(x,y+vspeed,all) {
+	//	list = collision_list(x,y+vspeed,all)
 			
-		for (i=0;i<ds_list_size(list);i++) {
-			obj = ds_list_find_value(list,i)
+	//	for (i=0;i<ds_list_size(list);i++) {
+	//		obj = ds_list_find_value(list,i)
 				
-			with(obj){
+	//		with(obj){
 					
-				if abs(x - other.x) > other.sprite_width/2 + 2 { return false }
+	//			if abs(x - other.x) > other.sprite_width/2 + 2 { return false }
 					
-				if !variable_instance_exists(id, "pers") {
+	//			if !variable_instance_exists(id, "pers") {
 					
-				} else if pers==0 {
+	//			} else if pers==0 {
 					
-					if wall_checker(x,y+other.vspeed) {
-						//perform_player_damage(1000)
-					} else {
-						//vspeed+=other.vspeed
-					}
-				}else if pers==1 {
+	//				if wall_checker(x,y+other.vspeed) {
+	//					//perform_player_damage(1000)
+	//				} else {
+	//					//vspeed+=other.vspeed
+	//				}
+	//			}else if pers==1 {
 					
-					if wall_checker(x,y+other.vspeed) && !zoom_timer_bool {
-						start_death = true
-					} else {
-						vspeed=0
-						y+=other.vspeed
-						hspeed=0
-					}
-				}
-			}
-		}
-	}
+	//				if wall_checker(x,y+other.vspeed) && !zoom_timer_bool {
+	//					start_death = true
+	//				} else {
+	//					vspeed=0
+	//					y+=other.vspeed
+	//					hspeed=0
+	//				}
+	//			}
+	//		}
+	//	}
+	//}
 } else {
 	if point_distance(x,y,startx,starty)>1 {
 		movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3

@@ -13,7 +13,7 @@ if !in_camera_range_bigger(x,y) {
 if death {
 	if death_timer< 1 {
 		if player_obj.zoom_timer_bool {
-			just_blood(player_obj.hspeed,player_obj.vspeed*2,0.3,10,false,sprite_width/4,sprite_height)
+			just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 		} else {
 			just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
 		}

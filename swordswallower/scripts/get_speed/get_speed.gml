@@ -1,0 +1,1 @@
+return sqrt(sqr(hsp) + sqr(vsp))

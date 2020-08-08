@@ -27,8 +27,8 @@ if death {
 	} else if state==state_searching {
 		atk_timer++
 		head.image_angle = lerp(head.image_angle,point_direction(x,y,
-		player_obj.x+player_obj.hspeed,
-		player_obj.y+player_obj.vspeed)-90,1)
+		player_obj.x+player_obj.hsp,
+		player_obj.y+player_obj.vsp)-90,1)
 		if !wall_raycast_checker(player_obj) {
 			atk_timer=-1
 			if audio_is_playing(venus_searching_1) {

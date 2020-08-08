@@ -2,7 +2,7 @@
 // You can write your code in this editor
 dont_attack = false	
 if hp<=0 {
-	just_blood(player_obj.hspeed,player_obj.vspeed,0.65,30,true,sprite_width/4,sprite_height)
+	just_blood(player_obj.hsp,player_obj.vsp,0.65,30,true,sprite_width/4,sprite_height)
 	instance_destroy()
 	reset_intangibility()
 } else {

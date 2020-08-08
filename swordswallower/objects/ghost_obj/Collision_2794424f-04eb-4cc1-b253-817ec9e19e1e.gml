@@ -15,9 +15,9 @@ if other.zoom_timer_bool && sword_present {
 	reset_intangibility()
 				
 	if player_obj.bounce_buff_timer==0 || place_meeting(x,y,impale_circle_obj) || place_meeting(x,y,ghost_obj) {
-		//player_obj.hspeed *= 0.75
-		//player_obj.vspeed *= 0.75
-		player_obj.hspeed = clamp(player_obj.hspeed,-17,17)
-		player_obj.vspeed = clamp(player_obj.vspeed,-17,17)
+		//player_obj.hsp *= 0.75
+		//player_obj.vsp *= 0.75
+		player_obj.hsp = clamp(player_obj.hsp,-17,17)
+		player_obj.vsp = clamp(player_obj.vsp,-17,17)
 	}
 }

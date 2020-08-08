@@ -5,7 +5,7 @@ my_floor = false
 player_floor = false
 
 state = 0
-
+hp = 1
 state_idle = 0
 state_chasing = 1
 state_hitting = 2
@@ -68,3 +68,6 @@ sprites[1] = ghoul2845
 sprites[2] = ghoul3
 
 sprite_index = sprites[floor(x) % 3]
+
+hsp=0
+vsp=0

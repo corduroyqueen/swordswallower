@@ -92,8 +92,8 @@ if !tail_planted && !tail_held {
 				
 			tail_planted=false
 			tail_pulling=true
-			hspeed*=0.65
-			vspeed*=0.65
+			hsp*=0.65
+			vsp*=0.65
 			
 			reset_intangibility()
 			zoom_timer_bool= false

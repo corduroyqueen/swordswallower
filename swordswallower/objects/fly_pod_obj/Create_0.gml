@@ -12,3 +12,5 @@ bounce_vel = 0.5 * rval
 
 met=false
 check2 = true
+
+hp = 1

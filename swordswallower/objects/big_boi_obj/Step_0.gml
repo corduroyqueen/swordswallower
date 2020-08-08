@@ -144,24 +144,24 @@ if sword_present {
 	
 }
 
-if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)<105
+if point_distance(x,y,player_obj.x+player_obj.hsp,player_obj.y+player_obj.vsp)<105
 	&& !grabbing && !grabbed{
 		
 	grabbing = true
 	player_obj.move_locked = true
 	player_obj.zoom_timer_bool = false
-	player_obj.hspeed = 0
-	player_obj.vspeed = 0
+	player_obj.hsp = 0
+	player_obj.vsp = 0
 	grabbed = true
 	reset_zoom()
-	//player_obj.hspeed*=0.55
-	//player_obj.vspeed*=0.55
+	//player_obj.hsp*=0.55
+	//player_obj.vsp*=0.55
 		
-	//hspeed = player_obj.hspeed * 1.5
-	//vspeed = player_obj.vspeed * 0.8
+	//hspeed = player_obj.hsp * 1.5
+	//vspeed = player_obj.vsp * 0.8
 		
-	//player_obj.hspeed*=-0.25
-	//player_obj.vspeed*=-0.35
+	//player_obj.hsp*=-0.25
+	//player_obj.vsp*=-0.35
 		
 	//state = state_knockback
 	//collided_with_friend = false
@@ -179,7 +179,7 @@ if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vsp
 	//sword_present = false
 }
 
-if point_distance(x,y,player_obj.x+player_obj.hspeed,player_obj.y+player_obj.vspeed)>105 {
+if point_distance(x,y,player_obj.x+player_obj.hsp,player_obj.y+player_obj.vsp)>105 {
 	grabbed = false	
 }
 	

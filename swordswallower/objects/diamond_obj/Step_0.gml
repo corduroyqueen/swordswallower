@@ -116,14 +116,14 @@ if sword_present {
 	
 	if point_distance(x,y,player_obj.x,player_obj.y)<20 && (player_obj.bounce_buff_timer>0 || player_obj.zoom_timer_bool) {
 		
-		player_obj.hspeed*=0.55
-		player_obj.vspeed*=0.55
+		player_obj.hsp*=0.55
+		player_obj.vsp*=0.55
 		
-		hspeed = player_obj.hspeed * 1.5
-		vspeed = player_obj.vspeed * 1.5
+		hspeed = player_obj.hsp * 1.5
+		vspeed = player_obj.vsp * 1.5
 		
-		player_obj.hspeed*=-0.25
-		player_obj.vspeed*=-0.35
+		player_obj.hsp*=-0.25
+		player_obj.vsp*=-0.35
 		
 		audio_sound_pitch(hit_wall,1.3)
 		audio_play_sound(hit_wall,0,false)	

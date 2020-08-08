@@ -1,6 +1,6 @@
 flydamage = argument0
 
-if state==state_chasing && point_distance(x,y,player_obj.x,player_obj.y)>1500 && !tail_obj.stinky {
+if state==state_chasing && point_distance(x,y,player_obj.x,player_obj.y)>2000 && !tail_obj.stinky {
 	death = true
 }	
 
@@ -28,7 +28,7 @@ if tail_obj.stinky {
 		} else if tail_obj.current_wall {
 			
 			target_obj = tail_obj.current_wall
-			if instance_exists(target_obj) && place_meeting(x+hspeed,y+vspeed,target_obj) {
+			if instance_exists(target_obj) && place_meeting(x+hsp,y+vsp,target_obj) {
 				if !variable_instance_exists(target_obj.id, "pers") {
 			
 				} else if target_obj.pers==2 {
@@ -58,8 +58,8 @@ if tail_obj.stinky {
 			death = false
 			inv_timer=5
 			on_wall = false
-			hspeed=random_range(-5,5)
-			vspeed=random_range(-5,5)
+			hsp=random_range(-5,5)
+			vsp=random_range(-5,5)
 			return false
 			
 		} else {
@@ -115,18 +115,18 @@ if tail_obj.stinky {
 	
 	if on_target {
 		image_blend = c_red
-		hspeed = lerp(hspeed,tempx*h_accel*7,0.2)
-		vspeed = lerp(vspeed,tempy*h_accel*7,0.2)
+		hsp = lerp(hsp,tempx*h_accel*7,0.2)
+		vsp = lerp(vsp,tempy*h_accel*7,0.2)
 	} else if tail_obj.stinky {
 		
 		if player_obj.tail_planted {
-			//move_towards_point(player_obj.x,player_obj.y,h_accel*4)
-			hspeed = lerp(hspeed,tempx*h_accel*4.5,0.15)
-			vspeed = lerp(vspeed,tempy*h_accel*4.5,0.15)
+			//_towards_point(player_obj.x,player_obj.y,h_accel*4)
+			hsp = lerp(hsp,tempx*h_accel*4.5,0.15)
+			vsp = lerp(vsp,tempy*h_accel*4.5,0.15)
 		} else if player_obj.tail_pulling {
-			//move_towards_point(player_obj.x,player_obj.y,h_accel*4)
-			hspeed = lerp(hspeed,tempx*h_accel*0.8,0.15)
-			vspeed = lerp(vspeed,tempy*h_accel*0.8,0.15)
+			//_towards_point(player_obj.x,player_obj.y,h_accel*4)
+			hsp = lerp(hsp,tempx*h_accel*0.8,0.15)
+			vsp = lerp(vsp,tempy*h_accel*0.8,0.15)
 		} else {
 			//ang = arctan((player_obj.tail_dest_y-y-loltemp)/(player_obj.tail_dest_x-x))
 			//tempx = -cos(ang) * sign(x-target.x)
@@ -136,13 +136,17 @@ if tail_obj.stinky {
 			//ang = arctan((target.y-y-loltemp)/(target.x-x))
 			//tempx = -cos(ang) * sign(x-target.x)
 			//tempy = -sin(ang) * sign(x-target.x)
-			////move_towards_point(player_obj.x,player_obj.y,h_accel*0.8)
+			////_towards_point(player_obj.x,player_obj.y,h_accel*0.8)
 			//ayy = 1//point_distance(x,y,player_obj.x,player_obj.y)/120
-			//hspeed = lerp(hspeed,tempx*h_accel*1.3*ayy,0.1)
-			//vspeed = lerp(vspeed,tempy*h_accel*1.3*ayy,0.1)
+			//hsp = lerp(hsp,tempx*h_accel*1.3*ayy,0.1)
+			//vsp = lerp(vsp,tempy*h_accel*1.3*ayy,0.1)
 			
+			ang = arctan((player_obj.y-y-loltemp)/(player_obj.x-x))
+			tempx = -cos(ang) * sign(x-player_obj.x)
+			tempy = -sin(ang) * sign(x-player_obj.x)
 			
-			move_towards_point(player_obj.x,player_obj.y,10)
+			hsp = lerp(hsp,tempx*h_accel*1.5,0.15)
+			vsp = lerp(vsp,tempy*h_accel*1.5,0.15)
 			
 		}
 	} else {
@@ -151,10 +155,10 @@ if tail_obj.stinky {
 		}
 		if player_obj.stinky_check {
 			ayy = point_distance(x,y,player_obj.x,player_obj.y)/120
-			hspeed = lerp(hspeed,tempx*h_accel*1.3*ayy,0.1)
-			vspeed = lerp(vspeed,tempy*h_accel*1.3*ayy,0.1)
+			hsp = lerp(hsp,tempx*h_accel*1.3*ayy,0.1)
+			vsp = lerp(vsp,tempy*h_accel*1.3*ayy,0.1)
 		} else {
-			hspeed = lerp(hspeed,tempx*h_accel*1.1,0.07)
-			vspeed = lerp(vspeed,tempy*h_accel*1.1,0.07)
+			hsp = lerp(hsp,tempx*h_accel*1.1,0.07)
+			vsp = lerp(vsp,tempy*h_accel*1.1,0.07)
 		}
 	}

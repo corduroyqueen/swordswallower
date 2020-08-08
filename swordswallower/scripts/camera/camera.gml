@@ -102,8 +102,8 @@ if intro {
 } else if tail_planted {
 	
 	
-	var xspeed = player_obj.x+(hspeed*20)
-	var yspeed = player_obj.y+(vspeed*20)
+	var xspeed = player_obj.x+(hsp*20)
+	var yspeed = player_obj.y+(vsp*20)
 	
 	//if tail_obj.outside {
 	//	camx = lerp(camx,mean(xspeed,xspeed,xspeed,xspeed,xspeed,tail_obj.x,global.mousepx)-cam_width_h,0.05)
@@ -137,8 +137,8 @@ if intro {
 } else {
 	
 	
-	var xspeed = x+(hspeed*20)
-	var yspeed = y+(vspeed*20)
+	var xspeed = x+(hsp*20)
+	var yspeed = y+(vsp*20)
 	
 	
 	camx = lerp(camx,mean(xspeed,global.mousepx)-cam_width_h,0.05)

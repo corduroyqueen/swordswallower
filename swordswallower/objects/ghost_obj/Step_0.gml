@@ -63,8 +63,8 @@ if sword_present {
 	
 	//if point_distance(x,y,player_obj.x,player_obj.y)<30 && player_obj.zoom_timer_bool {
 		
-	//	player_obj.hspeed*=0.5
-	//	player_obj.vspeed*=0.5
+	//	player_obj.hsp*=0.5
+	//	player_obj.vsp*=0.5
 		
 	//	reset_zoom()
 	//	reset_intangibility()

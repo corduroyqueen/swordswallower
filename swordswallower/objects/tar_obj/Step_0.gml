@@ -4,8 +4,8 @@ if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 	
 	player_sprite_obj.spr_tarheight = (player_obj.y+32)  - (y-sprite_height/2)
-	//player_obj.vspeed=0.3
-	player_obj.hspeed/= 1.05 + max(player_sprite_obj.spr_tarheight,0)/50
+	//player_obj.vsp=0.3
+	player_obj.hsp/= 1.05 + max(player_sprite_obj.spr_tarheight,0)/50
 	
 	
 	

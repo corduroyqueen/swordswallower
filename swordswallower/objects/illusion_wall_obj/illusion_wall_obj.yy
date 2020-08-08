@@ -5,7 +5,7 @@
     "name": "illusion_wall_obj",
     "eventList": [
         {
-            "id": "ad947022-aa32-45e7-90aa-f96ea9efc8e4",
+            "id": "3ea98258-77bd-4b1c-bbac-921a2e213666",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -17,7 +17,7 @@
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "65785b68-cc47-4c97-866f-a07cf2f0ae93",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

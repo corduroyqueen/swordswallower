@@ -149,8 +149,6 @@ zoom_particle_timer = 0
 check_zoom_collision = false
 click_out_of_wall_timer = 0
 
-line_go = 0
-
 hit_pause = 0
 
 bounced = false
@@ -254,3 +252,14 @@ ability_spin_jump_e = true
 
 ang1 = 0
 ang2 = 0
+
+hsp = 0
+vsp = 0
+
+xRemainder = 0
+yRemainder = 0
+move = 0
+move_dir = 0
+
+enemy_collided_list = ds_list_create()
+enemy_collided_total_list = ds_list_create()

@@ -1,11 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Inherit the parent event
+event_inherited();
+
 broken = false
-
-met = false
-
-intangible = false
-pers=0
-
 death = false
+met = false

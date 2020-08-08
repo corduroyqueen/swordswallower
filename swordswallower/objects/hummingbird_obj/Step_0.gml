@@ -6,7 +6,7 @@ if player_obj.tail_carry {
 }
 
 if sword_present {
-	hspeed=0
+	hsp=0
 	vspeed=0
 	
 	image_blend = c_red
@@ -25,7 +25,7 @@ if sword_present {
 	wait_timer--
 	image_blend = c_white
 	if wait_timer>0 {
-		hspeed=0
+		hsp=0
 		vspeed=0
 		x = nodes[current_node].x
 		y = nodes[current_node].y

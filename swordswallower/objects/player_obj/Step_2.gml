@@ -2,8 +2,8 @@
 // You can write your code in this editor
 if level1_master.dev {
 	if keyboard_check_pressed(ord("B")) {
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		x = tail_dest_x
 		y = tail_dest_y
 	}

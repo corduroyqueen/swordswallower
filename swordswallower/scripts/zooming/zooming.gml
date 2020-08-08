@@ -1,14 +1,14 @@
 var gogo
 if tail_zooming {
 	zoom_ctdn--
-	hspeed = 0
-	vspeed = 0
+	hsp = 0
+	vsp = 0
 	
 	if zoom_ctdn<=0 {
 		zspeed = zspeed_normal
 		grav_boost = .15//havent changed from size up
 		player_obj.camera_shake_direc = true
-		player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hspeed,player_obj.vspeed))
+		player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hsp,player_obj.vsp))
 		player_obj.shake_dir = 25
 		
 		if tail_obj.inside_flier {
@@ -54,13 +54,15 @@ if tail_zooming {
 		}
 		
 		//sdm(point_distance(x,y,tail_dest_x,tail_dest_y))
-		if point_distance(x,y,tail_dest_x,tail_dest_y)>7 {
-			move_towards_point(tail_dest_x,tail_dest_y,ztempspeed)
+		if point_distance(x,y,tail_dest_x,tail_dest_y)>2 {
+			//move_towards_point(tail_dest_x,tail_dest_y,ztempspeed)
+			hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * ztempspeed
+			vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * ztempspeed
 		} else {
 				
 		}
 		
-		speed_temp = speed
+		speed_temp = get_speed()
 		zoom_timer_bool = true
 		zoom_timer = 0
 	
@@ -112,18 +114,22 @@ if zoom_timer_bool {
 	//}
 	zoom_timer++
 	if point_distance(x,y,tail_dest_x,tail_dest_y)>37.5 {
-		move_towards_point(tail_dest_x,tail_dest_y,zspeed)
+		//move_towards_point(tail_dest_x,tail_dest_y,zspeed)
+		hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
+		vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
 	}
 	//sdm(object_get_name(tail_obj.current_wall.object_index))
 	if object_get_name(tail_obj.current_wall.object_index)==impale_circle_moving_obj {
 		tail_dest_x = tail_obj.current_wall.x	
 		tail_dest_y = tail_obj.current_wall.y
-		move_towards_point(tail_dest_x,tail_dest_y,zspeed)
+		hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
+		vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
 		//sdm("goooo")
 	} else if tail_obj.moving_platform_bool {
 		tail_dest_x = tail_obj.x
 		tail_dest_y = tail_obj.y
-		move_towards_point(tail_dest_x,tail_dest_y,zspeed)
+		hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
+		vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
 	}
 	
 	
@@ -136,32 +142,32 @@ if zoom_timer_bool {
 		//reset_intangibility()
 	}
 	
-	if zoom_out_of_wall_timer>0 && !wall_checker(x,y) {
+	if zoom_out_of_wall_timer>0 && !place_meeting(x,y,wall_parent_obj) {
 		
 		zoom_timer_bool = false
 		zoom_timer = 0
 		bounce_buff_timer = 6
 		out_of_dash_t=10
 		reset_intangibility()
-		hspeed *=0.68
-		if vspeed>0 {
-			vspeed *=0.9
+		hsp *=0.68
+		if vsp>0 {
+			vsp *=0.9
 		} else {
-			vspeed *=0.68
+			vsp *=0.68
 		}
 		zoom_allow=7
 		
 		//player_obj.tail_planted = false
 		//player_obj.tail_pulling = true
-		if wall_checker(x+hspeed*2,y+vspeed*2) {
-			if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<speed {
+		if place_meeting(x+hsp*2,y+vsp*2,wall_parent_obj) {
+			if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<get_speed() {
 				x = player_hitbox_check_obj.x
 				y = player_hitbox_check_obj.y
-				hspeed=0
-				vspeed=0
+				hsp=0
+				vsp=0
 			} else {
-				hspeed=0
-				vspeed=0
+				hsp=0
+				vsp=0
 			}
 		}
 		

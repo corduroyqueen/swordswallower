@@ -44,3 +44,12 @@ bound_box = false
 eyespr = pinkeye
 
 shriek = false
+
+hp=1
+
+hsp=0
+vsp=0
+
+//while !wall_detect(x,y-1) {
+//	y-=1	
+//}

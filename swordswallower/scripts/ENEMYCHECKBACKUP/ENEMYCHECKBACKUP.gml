@@ -14,7 +14,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	x = checkx;
 	y = checky;
 	
-	if obj==fly_obj || obj==flyfree_obj {
+	if obj==flyfree_obj {
 		
 		audio_play_sound(Knife_Pull_140,0,false)
 		local_obj.death = true	

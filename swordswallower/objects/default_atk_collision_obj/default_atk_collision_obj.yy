@@ -4,20 +4,11 @@
     "mvc": "1.0",
     "name": "default_atk_collision_obj",
     "eventList": [
-        {
-            "id": "2556abbd-f19c-4844-a979-4f674bb617ee",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 3,
-            "m_owner": "6deb6288-088f-44a5-8aaf-4ade3e36d88f"
-        }
+        
     ],
     "maskSpriteId": "1f8d6a1b-5061-46db-b808-781495f5ba1a",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "da7d007f-1dd7-47f3-abe4-dc99062459c0",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

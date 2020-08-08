@@ -11,7 +11,7 @@ if inv_timer>0 {
 if death {
 	if death_timer< 1 {
 		if player_obj.zoom_timer_bool {
-			just_blood(player_obj.hspeed,player_obj.vspeed*2,0.3,10,false,sprite_width/4,sprite_height)
+			just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 		} else {
 			just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
 		}
@@ -27,7 +27,7 @@ if death {
 } else if swarming {
 	if swarm_respawn_t<1 {
 		if player_obj.zoom_timer_bool {
-			just_blood(player_obj.hspeed,player_obj.vspeed*2,0.3,10,false,sprite_width/4,sprite_height)
+			just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 		} else {
 			just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
 		}
@@ -48,7 +48,8 @@ if death {
 		swarm_respawn_t=0
 		swarming = false	
 	}
-	move_towards_point(targetx,targety,4)
+	sp_towards_target(targetx,targety,4,0.5)
+	
 	
 	
 } else {
@@ -121,10 +122,10 @@ if death {
 		h_accel = h_accel_base + 3/hp
 		fly_target_code(1)
 		//move_towards_point(player_obj.x,player_obj.y,h_accel)
-		//temp_hs = hspeed
-		//temp_vs = vspeed
-		//hspeed = temp_hs
-		//vspeed = temp_vs
+		//temp_hs = hsp
+		//temp_vs = vsp
+		//hsp = temp_hs
+		//vsp = temp_vs
 	
 	}
 

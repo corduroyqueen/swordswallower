@@ -20,8 +20,8 @@ if distance_to_object(player_obj)<40 && player_obj.zoom_timer_bool && met {
 	player_obj.tail_pulling = true
 	tail_obj.pull_timer = tail_obj.pull_wall_t
 	player_obj.zoom_timer_bool = false
-	player_obj.hspeed *=0.5
-	player_obj.vspeed *=0.5
+	player_obj.hsp *=0.5
+	player_obj.vsp *=0.5
 	player_obj.held_position = false
 	reset_intangibility()
 	instance_destroy()

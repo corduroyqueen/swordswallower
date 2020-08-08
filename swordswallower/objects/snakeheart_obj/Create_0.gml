@@ -4,3 +4,4 @@ image_xscale = 0.07
 image_yscale = 0.5
 death = false
 met = false
+hp = 1

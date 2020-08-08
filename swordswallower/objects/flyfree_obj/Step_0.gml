@@ -6,10 +6,11 @@ if inv_timer>0 {
 if keyboard_check_pressed(ord("R")) {
 	//audio_stop_sound(s_fly_buzz)
 }
+
 if death {
 	if death_timer< 1 {
 		if player_obj.zoom_timer_bool {
-			just_blood(player_obj.hspeed,player_obj.vspeed*2,0.3,10,false,sprite_width/4,sprite_height)
+			just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 		} else {
 			just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
 		}
@@ -27,8 +28,8 @@ if death {
 		death_timer++
 		x = startx
 		y = starty
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		if in_camera_range(x,y) && (player_obj.stinky_check || tail_obj.stinky) {
 			death = false
 			death_timer=0
@@ -108,15 +109,18 @@ if state==state_chasing {
 	
 	fly_target_code(1)
 	//move_towards_point(player_obj.x,player_obj.y,h_accel)
-	//temp_hs = hspeed
-	//temp_vs = vspeed
-	//hspeed = temp_hs
-	//vspeed = temp_vs
+	//temp_hs = hsp
+	//temp_vs = vsp
+	//hsp = temp_hs
+	//vsp = temp_vs
 	
 }
 
 
 }
+
+moveX(hsp)
+moveY(vsp)
 
 if audio_is_playing(s_fly_buzz) {
 	audio_stop_sound(s_fly_buzz) 
