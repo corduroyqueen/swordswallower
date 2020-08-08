@@ -18,7 +18,7 @@ if hanging {
 } else {
 	vsp+=0.4
 	
-	if wall_sword_detect(x,y+1) {
+	if wall_detect_solids(x,y+1) {
 		death = true	
 		spawn = true
 		player_obj.shake_d=6

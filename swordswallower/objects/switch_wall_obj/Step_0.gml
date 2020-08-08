@@ -29,7 +29,7 @@ if enabled {
 	if point_distance(x,y,endx,endy)>1 {
 		movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
 		//move_towards_point(endx,endy,15)
-		sp_towards_target(endx,endy,1,1)
+		sp_towards_target(endx,endy,15,1)
 		
 		
 		

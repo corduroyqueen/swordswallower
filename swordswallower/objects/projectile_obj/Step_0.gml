@@ -6,6 +6,6 @@ if death {
 
 move_towards_point(x+xoff,y+yoff,mspeed)
 
-if wall_sword_detect(x+hsp,y+vsp) {
+if wall_detect_solids(x+hsp,y+vsp) {
 	death = true	
 }

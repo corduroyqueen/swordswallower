@@ -218,7 +218,7 @@ if zoom_timer_bool {
 	moveX(hsp)
 	moveY(vsp)	
 }
-if !zoom_timer_bool && wall_sword_detect(x,y) {
+if !zoom_timer_bool && wall_detect_solids(x,y) {
 	hp-=100
 }
 

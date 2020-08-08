@@ -1,5 +1,6 @@
 local_obj = argument0
 
+
 get_angle(local_obj)
 insert_hs = hsp
 insert_vs = vsp

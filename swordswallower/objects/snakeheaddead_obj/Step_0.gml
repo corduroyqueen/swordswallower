@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if sword_bool {
-	if wall_sword_detect(x+hsp,y+vsp) && !done {
+	if wall_detect_solids(x+hsp,y+vsp) && !done {
 		image_angle = point_direction(x,y,x+hsp,y+vsp)-90
 		x+=hsp*1.3
 		y+=vsp*1.3

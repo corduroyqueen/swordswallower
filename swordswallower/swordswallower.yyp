@@ -4847,6 +4847,14 @@
             }
         },
         {
+            "Key": "58d632b9-e524-4799-97b6-041cf37dd4c8",
+            "Value": {
+                "id": "5704f03b-3add-458f-a9f3-b32ac7f5d751",
+                "resourcePath": "objects\\nonsolid_parent_obj\\nonsolid_parent_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "58e8877e-eabf-441a-be5c-0046bc5bb7fe",
             "Value": {
                 "id": "e736a371-5e03-4806-8e27-5c1411c5d637",
@@ -9239,6 +9247,14 @@
             }
         },
         {
+            "Key": "b18b25db-57c3-4493-9664-7d75c5a18017",
+            "Value": {
+                "id": "f4762a75-db83-4ccd-85c2-899d8a7ba691",
+                "resourcePath": "scripts\\wall_detect_solids\\wall_detect_solids.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b1b24f78-6691-47cf-82e4-48e6957b033d",
             "Value": {
                 "id": "db27a7d6-c8d5-4d9e-9a8b-97cea93cb3c5",
@@ -11295,6 +11311,14 @@
             }
         },
         {
+            "Key": "e0b4c2b1-9336-40e8-9db0-e5e7d7fd0061",
+            "Value": {
+                "id": "fef93a3d-f470-470a-a9d0-248a15ceb9e9",
+                "resourcePath": "objects\\all_walls_parent_obj\\all_walls_parent_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e12c5d5f-9f4a-416f-9187-b996a6895ad6",
             "Value": {
                 "id": "46ec1cdc-29d4-4d2c-ae1d-2050a7898f28",
@@ -12996,6 +13020,7 @@
         "cfdb7e6f-fc46-4958-ac62-e46c02f7e210",
         "cecf7a68-4f2a-4c6c-ba20-9e41b16eefef",
         "66005e90-a9be-4570-9ce5-043b601e254d",
+        "b18b25db-57c3-4493-9664-7d75c5a18017",
         "079e1b58-7425-44de-b8f2-fd51de219136",
         "1ece7cb8-e7d1-4c94-b64c-d562bc118d21",
         "3f98014e-962f-41e9-8e61-a54e90257ad5",

@@ -82,11 +82,11 @@ if sword_lock {
 
 
 
-if wall_sword_detect(x+2,y) {
+if wall_detect_solids(x+2,y) {
 	move_right = false
 }
 
-if wall_sword_detect(x-2,y) {
+if wall_detect_solids(x-2,y) {
 	move_right = true
 }
 

@@ -1,6 +1,6 @@
 
 
-iteration_num = 5;
+iteration_num = 8;
 xdelt = x - xpreva;
 ydelt = y - ypreva;
 

@@ -12,7 +12,7 @@ if move!=0 {
 			move -= move_dir
 		} else {
 			hsp=0
-			sword_plant(instance_place(x+move_dir, y, wall_parent_obj))
+			sword_plant(instance_place(x+move_dir, y, all_walls_parent_obj))
 			break;
 		}
 	}

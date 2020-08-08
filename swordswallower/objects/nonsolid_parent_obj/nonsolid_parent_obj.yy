@@ -1,19 +1,10 @@
 {
-    "id": "65785b68-cc47-4c97-866f-a07cf2f0ae93",
+    "id": "58d632b9-e524-4799-97b6-041cf37dd4c8",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "wall_parent_obj",
+    "name": "nonsolid_parent_obj",
     "eventList": [
-        {
-            "id": "7933e4bc-c9e1-4b88-b739-e6e7ff9006f4",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "65785b68-cc47-4c97-866f-a07cf2f0ae93"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
