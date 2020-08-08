@@ -4,7 +4,7 @@
 my_floor = instance_place(x,y+1,wall_obj)
 player_floor = player_obj.current_platform
 
-if wall_checker(x,y+1) {
+if wall_detect(x,y+1) {
 	grounded = true
 } else {
 	grounded = false
@@ -157,7 +157,7 @@ if place_meeting(x,y,tar_obj) {
 
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 	
 	var bruh = lettuce_chop_louder
 	audio_sound_pitch(bruh,random_range(0.75,1.25))

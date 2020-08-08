@@ -45,8 +45,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			
 			current_obj = local_obj	
 			
-			hspeed = 0
-			vspeed = 0
+			hsp = 0
+			vsp = 0
 			planted=true
 			player_obj.tail_dest_x = local_obj.x
 			player_obj.tail_dest_y = local_obj.y
@@ -64,8 +64,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		
 		dist_moved = 0;
 		new_x = x;
-		while (dist_moved < abs(hspeed)) {
-			new_x -= sign(hspeed);
+		while (dist_moved < abs(hsp)) {
+			new_x -= sign(hsp);
 			dist_moved++;
 			if (!place_meeting(new_x, y, local_obj)) {
 				if obj==crab_obj {
@@ -85,14 +85,14 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				x = new_x
 				
 				image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
-				//hspeed = 0
-				//vspeed = 0
+				//hsp = 0
+				//vsp = 0
 				
 				if obj==ghost_obj {
 					//if player_obj.tail_throwing {
 						//sdmn()
-					hspeed = 0
-					vspeed = 0
+					hsp = 0
+					vsp = 0
 					zombie_interact_script(local_obj)
 					planted=true
 					player_obj.tail_dest_x = x
@@ -107,8 +107,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				if obj==zombie_obj {
 					//if player_obj.tail_throwing {
 						//sdmn()
-					hspeed = 0
-					vspeed = 0
+					hsp = 0
+					vsp = 0
 					zombie_interact_script(local_obj)
 					planted=true
 					player_obj.tail_dest_x = x
@@ -122,8 +122,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 					//if player_obj.tail_throwing {
 						//sdmn()
 					
-						hspeed = 0
-						vspeed = 0
+						hsp = 0
+						vsp = 0
 					zombie_interact_script(local_obj)
 					planted=true
 					player_obj.tail_dest_x = x
@@ -137,8 +137,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 					//if player_obj.tail_throwing {
 						//sdmn()
 					
-						hspeed = 0
-						vspeed = 0
+						hsp = 0
+						vsp = 0
 					
 					zombie_interact_script(local_obj)
 					planted=true
@@ -192,8 +192,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 
 		dist_moved = 0;
 		new_y = y;
-		while (dist_moved < abs(vspeed)) {
-			new_y -= sign(vspeed);
+		while (dist_moved < abs(vsp)) {
+			new_y -= sign(vsp);
 			dist_moved++;
 			if (!place_meeting(x, new_y, local_obj)) {
 				if obj==crab_obj {
@@ -211,8 +211,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				y = new_y;
 				
 				image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
-				//hspeed = 0
-				//vspeed = 0;
+				//hsp = 0
+				//vsp = 0;
 				player_obj.tail_dest_x = x
 				player_obj.tail_dest_y = y
 				player_obj.tail_planted = true
@@ -221,8 +221,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				if obj==ghost_obj {
 					//if player_obj.tail_throwing {
 						//sdmn()
-					hspeed = 0
-					vspeed = 0
+					hsp = 0
+					vsp = 0
 					zombie_interact_script(local_obj)
 					planted=true
 					player_obj.tail_dest_x = x
@@ -236,8 +236,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				if obj==zombie_obj {
 					//if player_obj.tail_throwing {
 						//sdmn()
-					hspeed = 0
-					vspeed = 0
+					hsp = 0
+					vsp = 0
 					zombie_interact_script(local_obj)
 					planted=true
 					player_obj.tail_dest_x = x
@@ -250,8 +250,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 					//if player_obj.tail_throwing {
 						//sdmn()
 					
-						hspeed = 0
-						vspeed = 0
+						hsp = 0
+						vsp = 0
 					
 					zombie_interact_script(local_obj)
 					planted=true
@@ -266,8 +266,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 					//if player_obj.tail_throwing {
 						//sdmn()
 					
-						hspeed = 0
-						vspeed = 0
+						hsp = 0
+						vsp = 0
 					
 					zombie_interact_script(local_obj)
 					planted=true
@@ -324,12 +324,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	
 //	dist_moved = 0;
 //	new_x = x;
-//	while (dist_moved < abs(hspeed)) {
-//		new_x -= sign(hspeed);
+//	while (dist_moved < abs(hsp)) {
+//		new_x -= sign(hsp);
 //		dist_moved++;
 //		if (!place_meeting(new_x, y, local_obj)) {
 //			x = new_x
-//			hspeed = 0
+//			hsp = 0
 //			return;
 //		}
 //	}
@@ -337,12 +337,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 
 //	dist_moved = 0;
 //	new_y = y;
-//	while (dist_moved < abs(vspeed)) {
-//		new_y -= sign(vspeed);
+//	while (dist_moved < abs(vsp)) {
+//		new_y -= sign(vsp);
 //		dist_moved++;
 //		if (!place_meeting(x, new_y, local_obj)) {
 //			y = new_y;
-//			vspeed = -1;
+//			vsp = -1;
 //			return;
 //		}
 //	}

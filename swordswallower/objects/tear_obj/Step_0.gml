@@ -7,9 +7,9 @@ if death {
 if in_camera_range_bigger(x,y) {
 	seen = true	
 }
-if wall_checker(x+hspeed,y+vspeed) || (!in_camera_range_bigger(x,y) && seen) {
+if wall_detect(x+hsp,y+vsp) || (!in_camera_range_bigger(x,y) && seen) {
 	death = true	
 }
 
-vspeed+=0.75
-vspeed = clamp(vspeed,0,20)
+vsp+=0.75
+vsp = clamp(vsp,0,20)

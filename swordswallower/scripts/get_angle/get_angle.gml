@@ -1,3 +1,4 @@
+local_obj = argument0
 
 tarx = x - local_obj.x
 tary = y - local_obj.y

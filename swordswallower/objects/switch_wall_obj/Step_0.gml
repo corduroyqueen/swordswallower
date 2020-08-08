@@ -19,25 +19,21 @@ if starty<endy {
 	y2 = starty
 }
 if master!=noone {
-	if master.enabled {
-		enabled = true	
-	} else {
-		enabled = false	
-	}
+	enabled = master.enabled
 } else if enemytoggle {
-	if instance_exists(character) {
-		enabled = false
-	} else {
-		enabled = true	
-	}
+	enabled = !instance_exists(character)
 }
 if enabled {
 	
 		
 	if point_distance(x,y,endx,endy)>1 {
 		movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
-		move_towards_point(endx,endy,15)
-		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y){
+		//move_towards_point(endx,endy,15)
+		sp_towards_target(endx,endy,1,1)
+		
+		
+		
+		if point_distance(x,y,endx,endy)<(1+15) && in_camera_range_bigger(x,y){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
 			audio_play_sound(metal_door,0,false)
@@ -51,11 +47,11 @@ if enabled {
 		x = endx
 		y = endy
 		movespeed = 0
-		hspeed = 0  
-		vspeed = 0
+		hsp = 0  
+		vsp = 0
 	}
-	//if instance_place(x,y+vspeed,all) {
-	//	list = collision_list(x,y+vspeed,all)
+	//if instance_place(x,y+vsp,all) {
+	//	list = collision_list(x,y+vsp,all)
 			
 	//	for (i=0;i<ds_list_size(list);i++) {
 	//		obj = ds_list_find_value(list,i)
@@ -68,19 +64,19 @@ if enabled {
 					
 	//			} else if pers==0 {
 					
-	//				if wall_checker(x,y+other.vspeed) {
+	//				if wall_checker(x,y+other.vsp) {
 	//					//perform_player_damage(1000)
 	//				} else {
-	//					//vspeed+=other.vspeed
+	//					//vsp+=other.vsp
 	//				}
 	//			}else if pers==1 {
 					
-	//				if wall_checker(x,y+other.vspeed) && !zoom_timer_bool {
+	//				if wall_checker(x,y+other.vsp) && !zoom_timer_bool {
 	//					start_death = true
 	//				} else {
-	//					vspeed=0
-	//					y+=other.vspeed
-	//					hspeed=0
+	//					vsp=0
+	//					y+=other.vsp
+	//					hsp=0
 	//				}
 	//			}
 	//		}
@@ -89,8 +85,9 @@ if enabled {
 } else {
 	if point_distance(x,y,startx,starty)>1 {
 		movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
-		move_towards_point(startx,starty,10)
-		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y) {
+		//move_towards_point(startx,starty,10)
+		sp_towards_target(startx,starty,10,1)
+		if point_distance(x,y,endx,endy)<(1+10) && in_camera_range_bigger(x,y) {
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
 			
@@ -102,25 +99,30 @@ if enabled {
 		x = startx
 		y = starty
 		movespeed = 0
-		hspeed = 0  
-		vspeed = 0
+		hsp = 0  
+		vsp = 0
 	}
 }
+
 x = clamp(x,x1,x2)
 y = clamp(y,y1,y2)
 
-if hspeed>0 {
-	hspeed = clamp(hspeed,4,100)
-} else if hspeed<0 {
-	hspeed = clamp(hspeed,-100,-4)
+//if hsp>0 {
+//	hsp = clamp(hsp,4,100)
+//} else if hsp<0 {
+//	hsp = clamp(hsp,-100,-4)
+//}
+
+
+//if vsp>0 {
+//	vsp = clamp(vsp,4,100)
+//} else if vsp<0 {
+//	vsp = clamp(vsp,-100,-4)
+//}
+
+if in_camera_range_bigger(x,y) {
+	moving_plat_move(hsp,vsp)
+} else {
+	moveZoomX(hsp)	
+	moveZoomY(vsp)	
 }
-
-
-if vspeed>0 {
-	vspeed = clamp(vspeed,4,100)
-} else if vspeed<0 {
-	vspeed = clamp(vspeed,-100,-4)
-}
-
-
-

@@ -23,7 +23,7 @@ if move_right {
 }
 
 if state==state_idle {
-	hspeed=0
+	hsp=0
 	state_timer--
 	if state_timer<=0 {
 		if abs(player_obj.x-x)<60 
@@ -33,21 +33,21 @@ if state==state_idle {
 			if random_range(0,100)>50 {
 				state=state_running	
 			} else {
-				vspeed=-15
+				vsp=-15
 				state=state_jumping	
 			}
 		}
 		state_timer=random_range(50,100)
 	}
 } else if state==state_running {
-	hspeed=h_vel*h_direc
+	hsp=h_vel*h_direc
 	state_timer--
 	if state_timer<=0 {
 		state=state_idle
 		state_timer=random_range(20,40)	
 	}
 } else {
-	hspeed=h_vel*h_direc*0.6666
+	hsp=h_vel*h_direc*0.6666
 	if grounded {
 		state=state_idle	
 		state_timer=random_range(20,40)	
@@ -55,5 +55,5 @@ if state==state_idle {
 }
 
 if !grounded {
-	vspeed+=0.5
+	vsp+=0.5
 }

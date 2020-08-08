@@ -29,8 +29,8 @@ if state!=state_hitting && state!=state_knockback {
 
 if state==state_knockback {
 	if player_obj.zoom_timer_bool && sword_present {
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 	}
 	
 	if grounded {
@@ -44,11 +44,11 @@ if place_meeting(x,y,golem_obj) && collided_with_friend==false {
 	var friendo = instance_place(x,y,golem_obj)
 	if friendo.state!=state_knockback {
 		
-		friendo.hspeed = hspeed * 1.2
-		friendo.vspeed = vspeed * 1 * -sign(vspeed)
+		friendo.hsp = hsp * 1.2
+		friendo.vsp = vsp * 1 * -sign(vsp)
 		
-		hspeed *= 0.4
-		vspeed *= 0.4
+		hsp *= 0.4
+		vsp *= 0.4
 		
 		friendo.state = state_knockback
 		friendo.hit_timer = 0
@@ -69,8 +69,8 @@ if sword_present {
 	if facing_right { lmao = -1 } else { lmao = 1 }
 	
 	
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -87,8 +87,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * lmao + hspeed
-		particle.vspeed = random_range(0.01,1) * lmao + vspeed
+		particle.hsp = random_range(0.01,1) * lmao + hsp
+		particle.vsp = random_range(0.01,1) * lmao + vsp
 		particlect = false
 	} 
 	if particlect>120{
@@ -100,8 +100,8 @@ if sword_present {
 		player_obj.hsp*=0.55
 		player_obj.vsp*=0.55
 		
-		hspeed = player_obj.hsp * 1.5
-		vspeed = player_obj.vsp * 0.8
+		hsp = player_obj.hsp * 1.5
+		vsp = player_obj.vsp * 0.8
 		
 		player_obj.hsp*=-0.25
 		player_obj.vsp*=-0.35
@@ -129,11 +129,11 @@ if sword_present {
 if state==state_chasing {
 	
 	if player_obj.x<x {
-		hspeed-=h_accel	
+		hsp-=h_accel	
 		image_xscale = 1
 		facing_right = false
 	} else {
-		hspeed+=h_accel	
+		hsp+=h_accel	
 		image_xscale = -1
 		facing_right = true
 	}
@@ -148,7 +148,7 @@ if state==state_chasing {
 	}
 	//sprite_index = intimidating_walk
 	image_speed = 0.75
-	hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
+	hsp = clamp(hsp,-h_walk_speed,h_walk_speed)
 	
 } 
 
@@ -160,14 +160,14 @@ if state==state_idle {
 }
 
 
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vspeed+=grav}
+if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vsp+=grav}
 
 if state==state_idle || state==state_hitting {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
 		
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 		
 	}
 }
@@ -228,10 +228,10 @@ if death {
 		player_obj.tail_planted = false
 		player_obj.tail_pulling = true
 	}
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 	instance_destroy()	
 }
 
-hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+hsp = clamp(hsp,-h_max_speed,h_max_speed)
 
 //sdm(my_floor)

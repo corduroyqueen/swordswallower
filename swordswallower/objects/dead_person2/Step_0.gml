@@ -3,12 +3,12 @@
 
 // Inherit the parent event
 event_inherited();
-vspeed=0
+vsp=0
 image_xscale = 1
 
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 		audio_play_sound(Knife_Pull_140,0,false)
 		var ok = sword_thud_1
 		audio_sound_gain(ok,random_range(0.18,0.26),0)

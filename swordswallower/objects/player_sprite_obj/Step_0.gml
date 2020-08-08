@@ -45,7 +45,7 @@ if player_obj.tail_carry {
 		
 	} else if player_obj.grounded && (player_obj.k_right || player_obj.k_left) {
 		sprite_index = s_player_run_s
-		image_speed= 0.7 + hspeed
+		image_speed= 0.7 + hsp
 	} else if player_obj.grounded && player_obj.k_down {
 		sprite_index = s_player_crouch_s
 	} else {
@@ -66,7 +66,7 @@ if !player_obj.tail_carry {
 		}
 	} else if player_obj.grounded && (player_obj.k_right || player_obj.k_left) {
 		sprite_index = s_player_run_e
-		image_speed= 0.7 + hspeed
+		image_speed= 0.7 + hsp
 	} else if player_obj.grounded && player_obj.k_down {
 		sprite_index = s_player_crouch_e
 	} else if player_obj.grounded {

@@ -5,14 +5,14 @@ i = argument3;
 xcorner = argument4
 ycorner = argument5
 
-if(!place_meeting(checkx,checky,obj) || (hspeed==0 && vspeed==0)){
+if(!place_meeting(checkx,checky,obj) || (hsp==0 && vsp==0)){
 	return false;
 }
 
 local_obj = instance_place(checkx, checky, obj);
 
-//if !place_meeting(checkx+hspeed,checky+vspeed,local_obj)
-//&& !collision_line(checkx,checky,checkx+hspeed,checky+vspeed,local_obj,false,true) {
+//if !place_meeting(checkx+hsp,checky+vsp,local_obj)
+//&& !collision_line(checkx,checky,checkx+hsp,checky+vsp,local_obj,false,true) {
 //	return false
 //}
 
@@ -204,19 +204,19 @@ oldx = x
 oldy = y
 dist_moved = 0;
 new_x = x;
-while (dist_moved < abs(hspeed)) {
-	new_x -= sign(hspeed);
+while (dist_moved < abs(hsp)) {
+	new_x -= sign(hsp);
 	dist_moved++;
 	if (!place_meeting(new_x, y, local_obj)) {
 		x = new_x
-		get_angle()
-		insert_hs = hspeed
-		insert_vs = vspeed
+		//get_angle()
+		insert_hs = hsp
+		insert_vs = vsp
 		
-		wall_particle_tail_script(hspeed/2,vspeed/2,0.2,5,true,2,2,rubble_s1)
+		wall_particle_tail_script(hsp/2,vsp/2,0.2,5,true,2,2,rubble_s1)
 		
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		planted=true
 		
 		player_hitbox_check_obj.go = true
@@ -334,19 +334,19 @@ while (dist_moved < abs(hspeed)) {
 
 dist_moved = 0;
 new_y = y;
-while (dist_moved < abs(vspeed)) {
-	new_y -= sign(vspeed);
+while (dist_moved < abs(vsp)) {
+	new_y -= sign(vsp);
 	dist_moved++;
 	if (!place_meeting(x, new_y, local_obj)) {
 		y = new_y;
-		get_angle()
-		insert_hs = hspeed
-		insert_vs = vspeed
+	//	get_angle()
+		insert_hs = hsp
+		insert_vs = vsp
 		
-		wall_particle_tail_script(hspeed/2,vspeed/2,0.2,5,true,2,2,rubble_s1)
+		wall_particle_tail_script(hsp/2,vsp/2,0.2,5,true,2,2,rubble_s1)
 		
-		hspeed = 0
-		vspeed = 0;
+		hsp = 0
+		vsp = 0;
 		planted=true
 		//player_obj.tail_dest_x = x
 		//player_obj.tail_dest_y = y

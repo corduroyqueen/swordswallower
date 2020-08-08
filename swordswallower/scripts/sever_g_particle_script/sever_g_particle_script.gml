@@ -21,8 +21,8 @@ if abs(other.checky  - (y - sprite_get_yoffset(sprite_index)))<h {
 	particle.w = sprite_width
 	particle.h = oldh-h
 	particle.step = 0.5
-	particle.hspeed = 0
-	particle.vspeed = 0
+	particle.hsp = 0
+	particle.vsp = 0
 
 	
 	//particle.speed=0

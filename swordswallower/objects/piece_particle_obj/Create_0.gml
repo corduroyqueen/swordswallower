@@ -14,12 +14,12 @@ image_speed=0
  alarm[0] = random_range(1000,1000); //this will determine how long a particle exists before destroying it
 // motion_set(direction,speed); //this tells the particle to start moving
 
-hspeed = tail_obj.throwxs * 0.3 + random_range(-3,3) *
+hsp = tail_obj.throwxs * 0.3 + random_range(-3,3) *
 	choose(-1,-1,
 	0,1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
 
-vspeed = tail_obj.throwys * 0.1 *
+vsp = tail_obj.throwys * 0.1 *
 	choose(-1,-1,
 	0,1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4) - random_range(4,10)

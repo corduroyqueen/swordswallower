@@ -9,8 +9,8 @@ if go {
 	if place_meeting(x,y,player_obj) {
 		if !player_obj.start_death && !player_obj.death && player_sprite_obj.spr_bloodied_a<0.5 {
 			player_got = true
-			hspeed=0
-			vspeed=0
+			hsp=0
+			vsp=0
 			surrounded = true
 			obj = player_obj				
 			locked = true
@@ -36,22 +36,23 @@ if rval==0 {
 if place_meeting(x,y,tar_obj) {
 	var yo = instance_place(x,y,tar_obj)
 	y = lerp(y,yo.y - yo.sprite_height/2,0.01)
-	hspeed *=0.97
-	vspeed=0
+	hsp *=0.97
+	vsp=0
 	
 } else if !surrounded {
-	vspeed+=0.8+scalevar/6
-	if wall_checker(x,y) || place_meeting(x,y,tar_obj) {
-		x = xpreva + hspeed*0.3
-		y = ypreva + vspeed*0.3
-		hs = hspeed
-		vs = vspeed
-		hspeed=0
-		vspeed=0
+	vsp+=0.8+scalevar/6
+	if moveBoolX(hsp) || moveBoolY(vsp) {
+		x = xpreva + hsp*0.3
+		y = ypreva + vsp*0.3
+		hs = hsp
+		vs = vsp
+		hsp=0
+		vsp=0
 		depth = -1000
 		
 		surrounded = true
 	}
+
 	xpreva = x
 	ypreva = y
 } else {
@@ -133,3 +134,4 @@ image_xscale += bounce_vel
 image_yscale = rval+(rval-image_yscale)
 }
 go = true
+

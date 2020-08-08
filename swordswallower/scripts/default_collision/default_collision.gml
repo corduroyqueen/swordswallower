@@ -3,12 +3,12 @@ obj = argument0
 ang = tail_obj.ang
 
 /*
-ang = point_direction(x,y,x+hspeed,y+vspeed)
+ang = point_direction(x,y,x+hsp,y+vsp)
 dist_movedx = 0
 dist_movedy = 0
 new_x = x
 new_y = y
-while dist_movedx < abs(hspeed) && dist_movedy < abs(vspeed) {
+while dist_movedx < abs(hsp) && dist_movedy < abs(vsp) {
 	new_x-=cos(degtorad(ang))	
 	new_y+=sin(degtorad(ang))
 	dist_movedx++
@@ -16,8 +16,8 @@ while dist_movedx < abs(hspeed) && dist_movedy < abs(vspeed) {
 	if !place_meeting(new_x,new_y,obj) {
 		x = new_x
 		y = new_y
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		return
 	}
 }
@@ -29,7 +29,7 @@ dist_moved=0
 new_x = x
 new_y = y
 direc = get_angle_plug(x,y,obj)
-direc2 = point_direction(0,0,hspeed,vspeed)
+direc2 = point_direction(0,0,hsp,vsp)
 
 while dist_moved < abs(speed)+5  {
 	new_x -= cos(degtorad(direc)) * 2
@@ -39,8 +39,8 @@ while dist_moved < abs(speed)+5  {
 	if !place_meeting(new_x,new_y,obj) {
 		x = new_x
 		y = new_y
-		hspeed=0
-		vspeed=0
+		hsp=0
+		vsp=0
 		
 		return
 	}
@@ -49,12 +49,12 @@ while dist_moved < abs(speed)+5  {
 
 dist_moved = 0;
 new_x = x;
-while (dist_moved < abs(hspeed)) {
-	new_x -= sign(hspeed);
+while (dist_moved < abs(hsp)) {
+	new_x -= sign(hsp);
 	dist_moved++;
 	if (!place_meeting(new_x, y, obj)) {
 		x = new_x
-		hspeed=0
+		hsp=0
 		return;
 	}
 }
@@ -62,24 +62,24 @@ while (dist_moved < abs(hspeed)) {
 
 dist_moved = 0;
 new_y = y;
-while (dist_moved < abs(vspeed)) {
-	new_y -= sign(vspeed);
+while (dist_moved < abs(vsp)) {
+	new_y -= sign(vsp);
 	dist_moved++;
 	if (!place_meeting(x, new_y, obj)) {
 		y = new_y;
-		vspeed = 0;
+		vsp = 0;
 		return;
 	}
 }
 
 
 
-if hspeed!=0 && vspeed!=0 {
+if hsp!=0 && vsp!=0 {
 	
 	if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<50 {
 		x = player_hitbox_check_obj.x
 		y = player_hitbox_check_obj.y
 	}
-	hspeed = 0
-	vspeed = 0
+	hsp = 0
+	vsp = 0
 }

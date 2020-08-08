@@ -9,8 +9,8 @@ if player_obj.tail_carry {
 		x = held_pos_x
 		y = held_pos_y
 		image_angle = held_pos_ang
-		hspeed=0
-		vspeed=0
+		hsp=0
+		vsp=0
 	} else {
 		
 		visible = false 	
@@ -26,8 +26,8 @@ if player_obj.tail_carry {
 			//player_obj.bounced = true
 		}
 		mask_index= noone
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		planted_wall = false	
 		player_obj.boosting_collision_check = false
 		player_obj.bounce_buff_timer = 0
@@ -64,9 +64,10 @@ if (player_obj.tail_pulling && !player_obj.held_position) {
 if player_obj.tail_pulling {
 	pull_timer++
 	
-	move_towards_point(player_obj.x,player_obj.y,pspeed+player_obj.speed/1.5)
-	throwxs = hspeed
-	throwys = vspeed
+	//move_towards_point(player_obj.x,player_obj.y,pspeed+player_obj.speed/1.5)
+	sp_towards_target(player_obj.x,player_obj.y,pspeed+get_player_speed(),1)
+	throwxs = hsp
+	throwys = vsp
 	
 	if (distance_to_object(player_obj)<20 && pull_timer>pull_wall_t) {
 		player_obj.tail_pulling=false
@@ -113,9 +114,11 @@ if player_obj.tail_pulling {
 	}	
 	
 	if pull_timer<=pull_wall_t {
-		hspeed=0
-		vspeed=0
-		move_towards_point(player_obj.x,player_obj.y,pspeed/15)
+		hsp=0
+		vsp=0
+		//move_towards_point(player_obj.x,player_obj.y,pspeed/15)
+		
+		sp_towards_target(player_obj.x,player_obj.y,pspeed/15,1)
 		
 		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)-90,0.1)
 		image_angle = held_image_angle + random_range(-(5+pull_timer),5+pull_timer)
@@ -141,15 +144,17 @@ if player_obj.tail_throwing {
 	throw_timer++
 	throw_count++
 	if throw_timer<=1 {
-		move_towards_point(player_obj.tail_dest_x,player_obj.tail_dest_y,tspeed)
-		throwxs=hspeed
-		throwys=vspeed
+		//move_towards_point(player_obj.tail_dest_x,player_obj.tail_dest_y,tspeed)
+		x = player_obj.x
+		y = player_obj.y
+		sp_towards_target(player_obj.tail_dest_x,player_obj.tail_dest_y,tspeed,1)
+		throwxs=hsp
+		throwys=vsp
 	} 
-	hspeed = throwxs
-	vspeed = throwys
+	hsp = throwxs
+	vsp = throwys
 	
 	thrown_ang = ang
-	
 } 
 
 
@@ -165,9 +170,6 @@ if player_obj.tail_throwing {
 		mask_index = sword_whirling
 		image_speed = 3		
 	}
-	
-	
-	
 } else if !player_obj.tail_pulling {
 	
 	//audio_manager(gsound.s_sword_whoosh,0,false,1)
@@ -194,8 +196,6 @@ if player_obj.tail_held {
 	}
 	player_obj.tail_dest_x = x
 	player_obj.tail_dest_y = y
-	
-	
 }
 
 if player_obj.tail_planted {
@@ -228,15 +228,15 @@ if player_obj.tail_planted {
 		player_obj.tail_pulling = true
 		
 	}
-	if speed>0 {
+	if get_speed()>0 {
 		
-		hspeed = insert_hs/15
-		vspeed = insert_vs/15
+		hsp = insert_hs/15
+		vsp = insert_vs/15
 		
-		insert_hs = hspeed
-		insert_vs = vspeed
+		insert_hs = hsp
+		insert_vs = vsp
 		
-		if speed<1 {
+		if get_speed()<1 {
 			insert_hs = 0
 			insert_vs = 0
 		}
@@ -338,15 +338,15 @@ if moving_platform_bool {
 	/*
 	if place_meeting(x,y,wall_obj) || place_meeting(x,y,black_wall_obj) {
 		//platform_movingout = true
-		hspeed = current_wall.hspeed*10
-		vspeed = current_wall.vspeed*10
+		hsp = current_wall.hsp*10
+		vsp = current_wall.vsp*10
 		if place_meeting(x,y,wall_obj) {
 			default_collision(wall_obj)
 		} else {
 			default_collision(black_wall_obj)
 		}
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		current_wall.swordx = x-current_wall.x
 		current_wall.swordy = y-current_wall.y
 		if tail_obj.current_wall.vertical {
@@ -383,175 +383,26 @@ if player_obj.tail_throwing || player_obj.tail_pulling {
 	audio_emitter_gain(s_whoosh_emitter,0)
 }
 
+xpreva = x
+ypreva = y
+mask_index=sword_whirling
+if player_obj.tail_throwing {
+	moveSwordX(hsp)
+	moveSwordY(vsp)
+} else if player_obj.tail_pulling {
+	moveZoomX(hsp)
+	moveZoomY(vsp)	
+}
+
 if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
-	
 	player_obj.tail_throwing = false
 	player_obj.tail_planted = false
 	player_obj.tail_pulling = true
-
-	
 } else {
-	if player_obj.tail_throwing {
-		mask_index=sword_whirling
-		if player_obj.gem_active {
-			if throw_timer<3 {
-				//if place_meeting(x+hspeed,y+vspeed,wall_obj) {
-				if collision_line(player_hitbox_check_obj.x,player_hitbox_check_obj.y,player_hitbox_check_obj.x+hspeed,player_hitbox_check_obj.y+vspeed,current_wall,false,true) {
-					//x = x+hspeed/4
-					//y = y+vspeed/4
-					//collision_iterate_wall(wall_obj)
-					
-					collision_iterate_wall(wall_obj)
-					player_obj.tail_throwing = false
-					player_obj.tail_planted = true
-					
-				} else {
-					x = player_hitbox_check_obj.x
-					y = player_hitbox_check_obj.y
-					throw_timer=3
-				}
-			} else {
-				collision_iterate_wall(wall_obj)	
-			}
-			
-		} else {
-			collision_iterate_wall(wall_obj)	
-			//collision_iterate_wall(voidwall_obj)
-		}
-		
-		//collision_iterate_wall(passwall_obj)
-		collision_iterate_wall(illusion_wall_obj)
-		collision_iterate_wall(break_wall_obj)
-		collision_iterate_wall(door_obj)
-		collision_iterate_wall(close_wall_obj)
-		//collision_iterate_wall(fatfly_spawner_left_obj)
-		//collision_iterate_wall(fatfly_spawner_right_obj)
-		//collision_iterate_wall(fatfly_destroyer)
-		temptemptemp = true
-		ccatemp = cca
-		cca = 0
-		if place_meeting(x,y,impale_circle_moving_obj) || place_meeting(xpreva,ypreva,impale_circle_moving_obj) {
-			with player_obj {
-				if place_meeting(x,y,instance_place(other.xpreva,other.ypreva,impale_circle_moving_obj)) && point_distance(x,y,other.x,other.y)<300 {
-					other.temptemptemp = false
-					
-				} 
-			}
-		} else {
-			if !temptemptemp {
-				xpreva = x
-				ypreva = y
-				temptemptemp = true		
-			}
-			
-		}
-		if temptemptemp {
-			
-			collision_iterate_wall(impale_circle_moving_obj) 
-		}
-		
-		temptemptemp = true
-		if place_meeting(x,y,impale_circle_obj) || place_meeting(xpreva,ypreva,impale_circle_obj) {
-			with player_obj {
-				if place_meeting(x,y,instance_place(other.xpreva,other.ypreva,impale_circle_obj)) && point_distance(x,y,other.x,other.y)<300 {
-					other.temptemptemp = false
-					
-				} 
-			}
-		} else {
-			if !temptemptemp {
-				xpreva = x
-				ypreva = y
-				temptemptemp = true		
-			}
-			
-		}
-		if temptemptemp {
-			
-			collision_iterate_wall(impale_circle_obj) 
-		}
-		/*temptemptemp = true
-		if place_meeting(x,y,stinky_pile_obj) || place_meeting(xpreva,ypreva,stinky_pile_obj) {
-			with player_obj {
-				if place_meeting(x,y,instance_place(other.xpreva,other.ypreva,stinky_pile_obj)) && point_distance(x,y,other.x,other.y)<300 {
-					other.temptemptemp = false
-					
-				}
-			}
-		} else {
-			if !temptemptemp {
-				xpreva = x
-				ypreva = y
-				temptemptemp = true		
-			}
-		}
-		if temptemptemp {
-			
-			collision_iterate_wall(stinky_pile_obj)
-		}*/
-		temptemptemp = true
-		if place_meeting(x,y,circle_friend_obj) || place_meeting(xpreva,ypreva,circle_friend_obj) {
-			with player_obj {
-				if place_meeting(x,y,instance_place(other.xpreva,other.ypreva,circle_friend_obj)) && point_distance(x,y,other.x,other.y)<300 {
-					other.temptemptemp = false
-					
-				}
-			}
-		} else {
-			if !temptemptemp {
-				xpreva = x
-				ypreva = y
-				temptemptemp = true		
-			}
-		}
-		if temptemptemp {
-			
-			collision_iterate_wall(circle_friend_obj)
-		}
-		cca = ccatemp
-		
-		//    collision_iterate_wall(wood_wall_obj)
-		//               collision_iterate_wall(wood_wall2_obj)
-		//            collision_iterate_wall(kill_back_wall_obj)
-		collision_iterate_wall(black_wall_obj)
-		//               collision_iterate_wall(moving_platform_obj)
-		//collision_iterate_wall(mach_moving_wall_obj)
-		//collision_iterate_wall(draft_obj)
-		if !place_meeting(player_obj.x,player_obj.y,tar_obj) {
-			//collision_iterate_wall(tar_obj)
-		}
-		collision_iterate_wall(skiff_obj)
-		collision_iterate_wall(switch_wall_obj)
-		//collision_iterate_wall(double_switch_wall_obj)
-		//collision_iterate_wall(skyswitcher_obj)
-		//collision_iterate_wall(falling_rock_obj)
-		//collision_iterate_wall(headtest_obj)
-		collision_iterate_wall(touch_die_block_obj)
-		//collision_iterate_wall(break_block_obj)
-		//collision_iterate_wall(mach_hazard_obj)
-		//collision_iterate_wall(mach_timed_hazard_obj)
-		//collision_iterate_wall(mach_door_obj)
-		collision_iterate_wall(key_door_obj)
-		//           collision_iterate_wall(sinking_platform_obj)
-		
-		
-		collision_iterate_enemy(snakehead_obj)
-		//           collision_iterate_enemy(tear_nograv_obj)
-		//          collision_iterate_enemy(thirsty_ghoul_obj)
-		
-		
-		//collision_iterate_wall(spike)
-		//if sky_obj.day {
-		//	collision_iterate_wall(nightdoor_obj)
-		//}
-		
-		
-	}
-
 	if player_obj.tail_throwing || player_obj.tail_pulling { 
 		mask_index=sword_whirling_enemy
 		//      collision_iterate_enemy(fatfly_obj)
-		///   collision_iterate_enemy(flyswarm_obj)
+		//     collision_iterate_enemy(flyswarm_obj)
 		//    collision_iterate_enemy(hum_food_obj)
 		//   collision_iterate_enemy(fatfly2_obj)
 		//  collision_iterate_enemy(bombfly_diagonal_obj)
@@ -632,13 +483,15 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 }
 if hitpause {
 	hitpause_timer++
-	hspeed=0
-	vspeed=0
+	hsp=0
+	vsp=0
 	if hitpause_timer>2 {
 		hitpause_timer=0
 		hitpause = false
 	}
 }
+
+
 if current_obj = false {
 	//if something goes seriously wrong with tail code
 	//change this
@@ -656,16 +509,17 @@ if player_obj.ending_lock {
 if player_obj.out_of_dash_t<0 {
 	visible = false	
 }
-xpreva = x
-ypreva = y
+
 lockcheck = false
+
+
 
 
 //sdm("TAIL DEST  :   " + string(player_obj.tail_dest_x) + "   :   " + string(player_obj.tail_dest_y))
 //sdm("TAIL POSI :   " + string(x) + "   :   " + string(y))
 
-//sdm("H: " + string(hspeed))
-//sdm("V: " + string(vspeed))
+//sdm("H: " + string(hsp))
+//sdm("V: " + string(vsp))
 
 //sdm("THROW:" + string(throw_timer))
 //sdm("X:   " + string(player_obj.tail_dest_x))

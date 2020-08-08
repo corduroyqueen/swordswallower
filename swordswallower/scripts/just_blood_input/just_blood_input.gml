@@ -33,16 +33,16 @@ for (i=0;i<(amount+40);i++){
 	}
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
-	particle.hspeed = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10
+	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10
 	
 	
 	//+ random_range(-3,3) *
 	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
 		
-	particle.vspeed = -sin(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10 - 5
-	particle.hspeed = clamp(particle.hspeed,-20,20)
-	particle.vspeed = clamp(particle.vspeed,-20,20)
+	particle.vsp = -sin(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10 - 5
+	particle.hsp = clamp(particle.hsp,-20,20)
+	particle.vsp = clamp(particle.vsp,-20,20)
 	//+ random_range(-3,3) *
 	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)

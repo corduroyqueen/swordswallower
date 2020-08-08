@@ -19,16 +19,16 @@ if death {
 	return false	
 }
 
-if wall_checker(x,y+1) {
+if wall_detect(x,y+1) {
 	grounded = true	
 } else {
 	grounded = false	
 }
 
 if grounded {
-	vspeed=0
+	vsp=0
 } else {
-	vspeed+=grav	
+	vsp+=grav	
 }
 
 if state==state_idle {
@@ -40,12 +40,12 @@ if state==state_idle {
 } else if state==state_tossing {
 	
 	if walking_right {
-		hspeed=walk_speed
+		hsp=walk_speed
 		if x>=player_obj.x+800 {
 			walking_right = false	
 		}
 	} else {
-		hspeed=-walk_speed
+		hsp=-walk_speed
 		if x<=player_obj.x+250 {
 			walking_right = true	
 		}
@@ -55,8 +55,8 @@ if state==state_idle {
 	if toss_timer_t>toss_timer_m {
 		toss_timer_t = 0
 		axe = instance_create_depth(x,y,depth+1,axe_obj)
-		axe.hspeed = (6 * xs) + hspeed/2
-		axe.vspeed = -20
+		axe.hsp = (6 * xs) + hsp/2
+		axe.vsp = -20
 		axe.grav = .3
 	}
 	
@@ -85,7 +85,7 @@ if state==state_idle {
 		state = state_tossing
 	}
 } else if state==state_defense {
-	hspeed = lerp(hspeed,0,0.05)
+	hsp = lerp(hsp,0,0.05)
 	if player_obj.y>y-100 && abs(player_obj.x-x)>70 {
 		state = state_tossing	
 	}
@@ -100,8 +100,8 @@ if state==state_idle {
 	ang = point_direction(x,y,player_obj.x,player_obj.y)
 	
 	axe = instance_create_depth(x,y,depth+1,axe_obj)
-	axe.hspeed = cos(degtorad(ang)) * 30
-	axe.vspeed = -sin(degtorad(ang)) * 30
+	axe.hsp = cos(degtorad(ang)) * 30
+	axe.vsp = -sin(degtorad(ang)) * 30
 	axe.grav = .1
 	
 	state = state_defense

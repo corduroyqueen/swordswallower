@@ -6,8 +6,8 @@ if death {
 	for (i=0;i<24;i++){
 		yo = instance_create_depth(x,y,101,fire_particle_obj)	
 		yo.rval = irandom_range(3,4)
-		yo.hspeed = cos(degtorad(i*30)) * 5 + tail_obj.hspeed/20
-		yo.vspeed = sin(degtorad(i*30)) * 5 + tail_obj.vspeed/20
+		yo.hsp = cos(degtorad(i*30)) * 5 + tail_obj.hsp/20
+		yo.vsp = sin(degtorad(i*30)) * 5 + tail_obj.vsp/20
 		yo.deprate=0.1
 	}
 }
@@ -18,8 +18,8 @@ if player_obj.tail_pulling && met {
 	
 	player_obj.pull_timer = 0
 	sword_lock = false
-	hspeed = tail_obj.hspeed/7
-	vspeed = tail_obj.vspeed/7
+	hsp = tail_obj.hsp/7
+	vsp = tail_obj.vsp/7
 	
 }
 
@@ -67,23 +67,23 @@ if active {
 			atk_timer=0
 		}
 		if go_right {
-			hspeed = lerp(hspeed,hs_max,0.1)
+			hsp = lerp(hsp,hs_max,0.1)
 			if place_meeting(x+100,y,wall_obj) || (x-player_obj.x)>400 {
 				go_right = false	
 			}
 		} else {
-			hspeed = lerp(hspeed,-hs_max,0.1)	
+			hsp = lerp(hsp,-hs_max,0.1)	
 			if place_meeting(x-100,y,wall_obj) || (x-player_obj.x)<-400  {
 				go_right = true	
 			}
 		}
 		if go_down {
-			vspeed = lerp(vspeed,vs_max,0.1)
+			vsp = lerp(vsp,vs_max,0.1)
 			if distance_to_object(player_obj)<100 || place_meeting(x,y+150,wall_obj) {
 				go_down = false	
 			}
 		} else {
-			vspeed = lerp(vspeed,-vs_max,0.1)
+			vsp = lerp(vsp,-vs_max,0.1)
 			if distance_to_object(player_obj)>500 || place_meeting(x,y-50,wall_obj) {
 				go_down = true
 			}

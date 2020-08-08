@@ -21,8 +21,8 @@ if player_obj.tail_planted {
 				intangible = false
 				angry_timer_m = 65
 				sprite_index = follow_guy
-				hspeed =0
-				vspeed= 0
+				hsp =0
+				vsp= 0
 			}
 		}
 		

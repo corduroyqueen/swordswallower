@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 if sword_bool {
-	if wall_checker(x+hspeed,y+vspeed) && !done {
-		image_angle = point_direction(x,y,x+hspeed,y+vspeed)-90
-		x+=hspeed*1.3
-		y+=vspeed*1.3
-		hspeed=0
-		vspeed=0
+	if wall_sword_detect(x+hsp,y+vsp) && !done {
+		image_angle = point_direction(x,y,x+hsp,y+vsp)-90
+		x+=hsp*1.3
+		y+=vsp*1.3
+		hsp=0
+		vsp=0
 		done = true
 		
 		
@@ -39,21 +39,21 @@ if sword_bool {
 	}
 }
 
-if !wall_checker(x,y+1) && !done {
-	vspeed+=0.6
+if !wall_detect(x,y+1) && !done {
+	vsp+=0.6
 } else {
-	vspeed=0
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	vsp=0
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 	}
 	
 }
 if abs(spinspeed)>2 && !done {
 	image_angle+=spinspeed
 	spinspeed-=sign(spinspeed)
-	if wall_checker(x+1,y) || wall_checker(x-1,y) {
+	if wall_detect(x+1,y) || wall_detect(x-1,y) {
 		spinspeed=0	
 	}
 }

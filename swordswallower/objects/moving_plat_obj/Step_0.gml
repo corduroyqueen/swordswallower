@@ -4,7 +4,12 @@
 timer++
 if timer>200 {
 	timer = 0
-	polarity = -polarity
+	hsp = -sign(hsp) * mspeed
 }
 
-moving_plat_move(polarity,0)
+if in_camera_range_bigger(x,y) {
+	moving_plat_move(hsp,vsp)
+} else {
+	moveZoomX(hsp)	
+	moveZoomY(vsp)	
+}

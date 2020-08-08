@@ -2,16 +2,16 @@
 // You can write your code in this editor
 
 
-if vspeed>7 && other.y>y {
+if vsp>7 && other.y>y {
 	//instance_destroy(other)	
-	//vspeed*=1
+	//vsp*=1
 }
 
 if special_guy == 1 {
 	if phase1 {
 		if sword_checked {
 			instance_destroy(other)
-			hspeed = sign(hspeed) * 3
+			hsp = sign(hsp) * 3
 			special_guy = 0
 			state=state_chasing
 		} else {
@@ -22,9 +22,9 @@ if special_guy == 1 {
 		
 	}
 		
-} else if sword_checked && abs(hspeed)>7 {
+} else if sword_checked && abs(hsp)>7 {
 	instance_destroy(other)
-	hspeed = sign(hspeed) * 3
+	hsp = sign(hsp) * 3
 	
 } else {
 	default_collision(other)

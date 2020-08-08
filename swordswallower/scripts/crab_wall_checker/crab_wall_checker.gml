@@ -2,9 +2,9 @@ if dir_ground {
  }
 
 if dir_ceiling {
-if tail_obj.y<(y+20) && tail_obj.vspeed>0 && !met {
+if tail_obj.y<(y+20) && tail_obj.vsp>0 && !met {
 	death = true
-} else if tail_obj.vspeed<0 {
+} else if tail_obj.vsp<0 {
 	sword_present = true
 	sword_hold_x = (tail_obj.x-x)
 	sword_hold_y = (tail_obj.y-y)
@@ -15,9 +15,9 @@ if tail_obj.y<(y+20) && tail_obj.vspeed>0 && !met {
 } }
 
 if dir_lwall {
-if tail_obj.x<(x+20) && tail_obj.hspeed>0 && !met {
+if tail_obj.x<(x+20) && tail_obj.hsp>0 && !met {
 	death = true
-} else if tail_obj.hspeed<0 {
+} else if tail_obj.hsp<0 {
 	sword_present = true
 	sword_hold_x = (tail_obj.x-x)
 	sword_hold_y = (tail_obj.y-y)
@@ -28,9 +28,9 @@ if tail_obj.x<(x+20) && tail_obj.hspeed>0 && !met {
 } }
 
 if dir_rwall {
-if tail_obj.x>(x-20) && tail_obj.hspeed<0 && !met {
+if tail_obj.x>(x-20) && tail_obj.hsp<0 && !met {
 	death = true
-} else if tail_obj.hspeed>0 {
+} else if tail_obj.hsp>0 {
 	sword_present = true
 	sword_hold_x = (tail_obj.x-x)
 	sword_hold_y = (tail_obj.y-y)

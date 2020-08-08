@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 
-if vspeed>7 && other.y>y {
+if vsp>7 && other.y>y {
 	instance_destroy(other)	
-	vspeed*=0.2
+	vsp*=0.2
 }
 if grabbing {
 	damage_script(10,sign(player_obj.x-x),0,0)	
@@ -13,7 +13,7 @@ if special_guy == 1 {
 	if phase1 {
 		if sword_checked {
 			instance_destroy(other)
-			hspeed = sign(hspeed) * 3
+			hsp = sign(hsp) * 3
 			special_guy = 0
 			state=state_chasing
 		} else {
@@ -24,9 +24,9 @@ if special_guy == 1 {
 		
 	}
 		
-} else if abs(hspeed)>6 {
+} else if abs(hsp)>6 {
 	instance_destroy(other)
-	hspeed = sign(hspeed) * 3
+	hsp = sign(hsp) * 3
 	
 } else {
 	default_collision(other)

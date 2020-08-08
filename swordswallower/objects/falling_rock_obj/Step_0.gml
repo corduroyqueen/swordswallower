@@ -42,24 +42,24 @@ if held {
 						if wall_checker(x,y+1) {
 							perform_player_damage(1000)
 						} else {
-							vspeed+=other.vspeed
+							vsp+=other.vsp
 						}
 					}else if pers==1 {
 					
 						if wall_checker(x,y+1) {
 							death = true
 						} else {
-							vspeed=0
-							y+=other.vspeed
-							hspeed=0
+							vsp=0
+							y+=other.vsp
+							hsp=0
 						}
 					}
 				}
 			}
 		}
-		vspeed+=grav
+		vsp+=grav
 	} else {
-		vspeed = 0	
+		vsp = 0	
 	}
 	
 }

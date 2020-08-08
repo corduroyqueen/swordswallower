@@ -31,12 +31,12 @@ if !wall_checker(x+cos(degtorad(ang1)),y+sin(degtorad(ang1))) {
 	}
 }
 
-if abs(cang-point_direction(0,0,hspeed,vspeed))<=90 {
-	hspeed = cos(degtorad(cang))*abs(vspeed)*0.3
-	vspeed = sin(degtorad(cang))*abs(vspeed)*0.3
+if abs(cang-point_direction(0,0,hsp,vsp))<=90 {
+	hsp = cos(degtorad(cang))*abs(vsp)*0.3
+	vsp = sin(degtorad(cang))*abs(vsp)*0.3
 } else {
-	hspeed = cos(degtorad(cang))*abs(vspeed)*0.3
-	vspeed = sin(degtorad(cang))*abs(vspeed)*0.3
+	hsp = cos(degtorad(cang))*abs(vsp)*0.3
+	vsp = sin(degtorad(cang))*abs(vsp)*0.3
 }
 						
 			

@@ -29,8 +29,8 @@ if sword_present {
 	if facing_right { lmao = -1 } else { lmao = 1 }
 	
 	
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -55,8 +55,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * lmao + hspeed
-		particle.vspeed = random_range(0.01,1) * lmao + vspeed
+		particle.hsp = random_range(0.01,1) * lmao + hsp
+		particle.vsp = random_range(0.01,1) * lmao + vsp
 		particlect = false
 	} 
 	if particlect>120{
@@ -68,8 +68,8 @@ if sword_present {
 		player_obj.hsp*=0.55
 		player_obj.vsp*=0.55
 		
-		hspeed = player_obj.hsp * 1.5
-		vspeed = player_obj.vsp * 0.75
+		hsp = player_obj.hsp * 1.5
+		vsp = player_obj.vsp * 0.75
 		
 		player_obj.hsp*=-0.25
 		player_obj.vsp*=-0.35
@@ -88,11 +88,11 @@ if sword_present {
 if state==state_chasing {
 	
 	if player_obj.x<x {
-		hspeed-=h_accel	
+		hsp-=h_accel	
 		image_xscale = 1
 		facing_right = false
 	} else {
-		hspeed+=h_accel	
+		hsp+=h_accel	
 		image_xscale = -1
 		facing_right = true
 	}
@@ -103,7 +103,7 @@ if state==state_chasing {
 	}
 	//sprite_index = intimidating_walk
 	image_speed = 0.75
-	hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
+	hsp = clamp(hsp,-h_walk_speed,h_walk_speed)
 	
 } 
 
@@ -112,14 +112,14 @@ if state==state_idle {
 }
 
 
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vspeed+=grav}
+if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vsp+=grav}
 
 if state==state_idle || state==state_hitting {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
 		
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 		
 	}
 }
@@ -153,10 +153,10 @@ if state==state_hitting {
 
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 	instance_destroy()	
 }
 
-hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+hsp = clamp(hsp,-h_max_speed,h_max_speed)
 
 //sdm(my_floor)

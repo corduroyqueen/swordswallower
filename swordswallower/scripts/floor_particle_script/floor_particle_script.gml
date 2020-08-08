@@ -31,11 +31,11 @@ abs(player_obj.hsp)>1 {
 	particle.image_xscale = scalevar*3
 	particle.image_yscale = scalevar*0.5
 	var speedstart = choose(2,1.5,1.25,1.2,1.15,1.1,1.05,1,1,1,1,0.95,0.9,0.85,0.8,0.75,0.5,0.4,0.2,0.1,0,-0.1,-0.2)
-	particle.hspeed = player_obj.hsp/3 * speedstart * random_range(0.9,1.05)
+	particle.hsp = player_obj.hsp/3 * speedstart * random_range(0.9,1.05)
 	
-	particle.vspeed = -6* random_range(0.9,1.1)
+	particle.vsp = -6* random_range(0.9,1.1)
 	
-	particle.image_angle = point_direction(0,0,particle.hspeed,particle.vspeed)+90
+	particle.image_angle = point_direction(0,0,particle.hsp,particle.vsp)+90
 	particle.color_timer = 0.5-scalevar
 	if !audio_is_playing(scrape_s) {
 		

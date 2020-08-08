@@ -7,3 +7,5 @@ event_inherited();
 timer = 0
 polarity = -1
 mask_index = sprite_index
+mspeed = 2
+hsp = -mspeed

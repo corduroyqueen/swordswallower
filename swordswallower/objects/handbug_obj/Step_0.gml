@@ -6,8 +6,8 @@ if fly_hp<=0 {
 }
 
 if place_meeting(x,y,tar_obj) {
-	vspeed=0.3	
-	hspeed = lerp(hspeed,0,0.2)
+	vsp=0.3	
+	hsp = lerp(hsp,0,0.2)
 	tartimer++
 	if tartimer>200 {
 		death = false	
@@ -35,8 +35,8 @@ if writhing = true {
 	place_meeting(x,y+1,thin_floor_obj) || 
 	place_meeting(x,y+1,door_obj) ||
 	place_meeting(x,y+1,black_wall_obj) {
-		hspeed = lerp(hspeed,0,0.2)
-		vspeed = 0
+		hsp = lerp(hsp,0,0.2)
+		vsp = 0
 	}
 	if !heldbymonster {
 		if fallingoverride {
@@ -102,8 +102,8 @@ if sword_present {
 	if going_right { lmao = -1 } else { lmao = 1 }
 	
 	met = true
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -113,17 +113,17 @@ if sword_present {
 		sword_present = false	
 		audio_play_sound(Knife_Pull_140,0,false)	
 		fallingoverride = true
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		move_towards_point(player_obj.x,player_obj.y,6)
-		hspeed*=0.2
-		vspeed-=2
+		hsp*=0.2
+		vsp-=2
 		
 	}
 }
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.1,20,true,sprite_width,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.1,20,true,sprite_width,sprite_height)
 	audio_manager(false,0,false,3)
 	if sword_present {
 		player_obj.tail_planted = false
@@ -173,23 +173,23 @@ if !fallingoverride {
 
 	if !falling && !writhing {
 		if going_right {
-			hspeed = lerp(hspeed,h_max_speed * sin(degtorad(walkang)),0.1)
-			vspeed = lerp(vspeed,h_max_speed * cos(degtorad(walkang)),0.1)
+			hsp = lerp(hsp,h_max_speed * sin(degtorad(walkang)),0.1)
+			vsp = lerp(vsp,h_max_speed * cos(degtorad(walkang)),0.1)
 			//if !going_right { return }
 			image_xscale = -1
 		} else {
 			
-			hspeed = lerp(hspeed,h_max_speed * -sin(degtorad(walkang)),0.1)
-			vspeed = lerp(vspeed,h_max_speed * -cos(degtorad(walkang)),0.1)
+			hsp = lerp(hsp,h_max_speed * -sin(degtorad(walkang)),0.1)
+			vsp = lerp(vsp,h_max_speed * -cos(degtorad(walkang)),0.1)
 			image_xscale = 1
 			
 			//if going_right { return }
 		}
-		if wall_checker(x+hspeed*10,y+vspeed*10)
+		if wall_checker(x+hsp*10,y+vsp*10)
 		|| !place_meeting(
-		x+hspeed*20+(-10 * cos(degtorad(walkang))),
-		y+vspeed*20+(10 * sin(degtorad(walkang))),
-		local_obj)  || place_meeting(x+hspeed*30,y+vspeed*30,handbug_obj)
+		x+hsp*20+(-10 * cos(degtorad(walkang))),
+		y+vsp*20+(10 * sin(degtorad(walkang))),
+		local_obj)  || place_meeting(x+hsp*30,y+vsp*30,handbug_obj)
 		 {
 				going_right = !going_right
 		}
@@ -201,7 +201,7 @@ if !fallingoverride {
 		x+=cos(degtorad(walkang))
 		y+=-sin(degtorad(walkang))
 	}
-	vspeed+=grav
+	vsp+=grav
 	
 	if (place_meeting(x,y+1,wall_obj) && 
 	!place_meeting(x,y+1,break_wall_obj) && 
@@ -221,9 +221,9 @@ if !fallingoverride {
 
 last_fly_hp = fly_hp
 
-//if(abs(hspeed) < h_decel){
-//	hspeed=0;	
+//if(abs(hsp) < h_decel){
+//	hsp=0;	
 //} else {
-//	hspeed-=sign(hspeed) * h_decel;	
+//	hsp-=sign(hsp) * h_decel;	
 //}
 

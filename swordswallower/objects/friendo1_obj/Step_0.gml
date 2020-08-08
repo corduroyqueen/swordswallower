@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 	instance_destroy()
 }
 
@@ -16,24 +16,24 @@ if my_floor==player_floor {
 
 if state==state_chasing {
 	if player_obj.x<x {
-		hspeed-=h_accel	
+		hsp-=h_accel	
 		image_xscale = -1
 	} else {
-		hspeed+=h_accel	
+		hsp+=h_accel	
 		image_xscale = 1
 	}
 } 
 
 if state==state_idle {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 	}
 }
 
 
-//vspeed+=grav
-hspeed=0
+//vsp+=grav
+hsp=0
 
-hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+hsp = clamp(hsp,-h_max_speed,h_max_speed)

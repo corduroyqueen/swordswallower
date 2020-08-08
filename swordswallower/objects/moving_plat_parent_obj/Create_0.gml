@@ -5,3 +5,5 @@
 event_inherited();
 
 riding_list = ds_list_create();
+hsp=0
+vsp=0

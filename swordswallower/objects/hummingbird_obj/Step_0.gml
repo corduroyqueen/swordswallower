@@ -7,7 +7,7 @@ if player_obj.tail_carry {
 
 if sword_present {
 	hsp=0
-	vspeed=0
+	vsp=0
 	
 	image_blend = c_red
 	player_obj.inside_flier = true
@@ -26,7 +26,7 @@ if sword_present {
 	image_blend = c_white
 	if wait_timer>0 {
 		hsp=0
-		vspeed=0
+		vsp=0
 		x = nodes[current_node].x
 		y = nodes[current_node].y
 		if current_node>node_count-1 {

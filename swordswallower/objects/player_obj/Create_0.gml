@@ -156,8 +156,8 @@ bounce_buff_timer = 0
 
 left_click_buffer = 0
 
-held_start_hspeed = 0
-held_start_vspeed = 0
+held_start_hsp = 0
+held_start_vsp = 0
 held_bounce_timer = 0
 
 cool = true

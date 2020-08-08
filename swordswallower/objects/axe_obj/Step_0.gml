@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-vspeed+=grav
+vsp+=grav
 
-if wall_checker(x,y) {
+if wall_sword_detect(x,y) {
 	instance_destroy()	
 }

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_xscale = sign(hspeed)
-if hspeed==0 {
+image_xscale = sign(hsp)
+if hsp==0 {
 	image_xscale=1
 }
 if charging {

@@ -33,8 +33,8 @@ if abs(other.checky  - (y - sprite_get_yoffset(sprite_index)))>yy {
 	particle.w = sprite_width
 	particle.h = yy-oldyy
 	particle.step = 0.5
-	particle.hspeed = tail_obj.hspeed * 0.01
-	particle.vspeed = tail_obj.vspeed * 0.02-1
+	particle.hsp = tail_obj.hsp * 0.01
+	particle.vsp = tail_obj.vsp * 0.02-1
 
 	with particle {
 		//sprite_set_offset(spr,sprite_width/2,yy/2)	

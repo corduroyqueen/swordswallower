@@ -6,7 +6,7 @@ event_inherited();
 
 if player_detected {
 	
-	vspeed-=(0.5 + random_range(-0.3,0.3))
+	vsp-=(0.5 + random_range(-0.3,0.3))
 	if preparing_sniper {
 		preparing_sniper_timer++
 		if preparing_sniper_timer>preparing_sniper_timer_m {
@@ -33,9 +33,9 @@ if player_detected {
 	}
 	
 	if go_home {
-		hspeed = lerp(hspeed,floatspeed,0.1)	
+		hsp = lerp(hsp,floatspeed,0.1)	
 	} else {
-		hspeed = lerp(hspeed,-floatspeed,0.1)	
+		hsp = lerp(hsp,-floatspeed,0.1)	
 	}
 	
 	if wall_checker_enemy(x+4,y) {
@@ -84,10 +84,10 @@ if player_detected {
 }
 
 if !wall_checker(x,y+10) {
-	vspeed+=0.5
+	vsp+=0.5
 }
 if player_obj.grounded {
 	if y>player_obj.y-50 {
-		vspeed=lerp(vspeed,-3,0.15)	
+		vsp=lerp(vsp,-3,0.15)	
 	}
 }

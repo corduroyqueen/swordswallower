@@ -50,7 +50,7 @@ if angry {
 	//		going_up = false
 	//		return
 	//	} else {
-	//		vspeed = -vs
+	//		vsp = -vs
 	//	}
 	//} else {
 	
@@ -58,7 +58,7 @@ if angry {
 	//		going_up = true
 	//		return
 	//	} else {
-	//		vspeed = vs
+	//		vsp = vs
 	//	}
 	//}
 	

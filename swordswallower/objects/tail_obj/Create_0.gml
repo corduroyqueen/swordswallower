@@ -72,3 +72,6 @@ held_pos_y= 0
 held_pos_ang = 0
 
 thrown_ang = 0
+
+hsp=0
+vsp=0

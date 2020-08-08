@@ -23,7 +23,7 @@ if player_obj.tail_pulling || player_obj.tail_throwing {
 		
 			boop = instance_create_depth(x+rx,y+ry,-1,particle_obj)
 			boop.deprate = 0.01
-			boop.vspeed = -1
+			boop.vsp = -1
 			fire_timer = 0
 		
 	}

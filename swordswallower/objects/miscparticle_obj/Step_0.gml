@@ -6,16 +6,16 @@
 //&& place_meeting(x-hwidth,y+hheight,wall_obj) && place_meeting(x-hwidth,y-hheight,wall_obj) {
 	
 if !surrounded {
-	vspeed+=.4
-	if wall_checker(x,y) {
-		hspeed=0
-			vspeed=0
-			x = xpreva
-			y = ypreva
-			surrounded = true
+	vsp+=.4
+	if moveBoolX(hsp) || moveBoolY(vsp) {
+		hsp=0
+		vsp=0
+		x = xpreva
+		y = ypreva
+		surrounded = true
 		 /*else if obj.pers==1 {
-			hspeed=0
-			vspeed=0
+			hsp=0
+			vsp=0
 			sdm("FUUUUUUUUUUUUUCK")
 			surrounded = true
 				

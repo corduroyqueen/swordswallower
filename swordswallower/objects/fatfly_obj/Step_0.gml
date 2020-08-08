@@ -82,20 +82,20 @@ if sword_lock {
 
 
 
-if wall_checker(x+2,y) {
+if wall_sword_detect(x+2,y) {
 	move_right = false
 }
 
-if wall_checker(x-2,y) {
+if wall_sword_detect(x-2,y) {
 	move_right = true
 }
 
 if move_right {
 	image_xscale = 1
-	hspeed = 0.82
+	hsp = 0.82
 } else {
 	image_xscale = -1
-	hspeed = -0.82
+	hsp = -0.82
 }
 
 

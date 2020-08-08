@@ -33,7 +33,7 @@ if hit {
 	if player_obj.zoom_timer_bool {
 		just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 	} else {
-		just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
+		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,sprite_width/4,sprite_height)	
 	}
 	//audio_stop_sound(s_fly_buzz)
 		
@@ -44,8 +44,8 @@ if hit {
 	instance_destroy()
 	
 } else if charging {
-	hspeed = lerp(hspeed,0,0.05)
-	vspeed = lerp(vspeed,0,0.05)
+	hsp = lerp(hsp,0,0.05)
+	vsp = lerp(vsp,0,0.05)
 	tear_timer++
 	if tear_timer>tear_timer_spawn {
 		tear_timer=0
@@ -57,16 +57,16 @@ if hit {
 } else if dodging {
 	
 	if dodge_init {
-		ang = arctan(tail_obj.vspeed/tail_obj.hspeed) + pi/2
-		tempx = cos(ang) * sign(tail_obj.hspeed)
-		tempy = sin(ang)  * sign(-tail_obj.hspeed)
+		ang = arctan(tail_obj.vsp/tail_obj.hsp) + pi/2
+		tempx = cos(ang) * sign(tail_obj.hsp)
+		tempy = sin(ang)  * sign(-tail_obj.hsp)
 		
 		
-		//var tx= y/(tail_obj.vspeed/tail_obj.hspeed)
+		//var tx= y/(tail_obj.vsp/tail_obj.hsp)
 		pol = sign(x-player_obj.tail_dest_x)
 		
-		hspeed = tempx * dspeed * pol
-		vspeed = tempy * dspeed * -sign(tempy) * 0.25
+		hsp = tempx * dspeed * pol
+		vsp = tempy * dspeed * -sign(tempy) * 0.25
 		
 		dodge_init = false
 	}
@@ -75,7 +75,7 @@ if hit {
 	if abs(speed)<2 {
 		traveling = true
 		dodging = false
-		seek_dir = sign(hspeed)
+		seek_dir = sign(hsp)
 	}
 } else if traveling {
 	
@@ -112,7 +112,7 @@ if hit {
 	//	var tpx = image_xscale
 	//	image_xscale*=2
 	//	with tail_obj {
-	//		if collision_line(x,y,x+hspeed*4,y+vspeed*4,other,false,true) {
+	//		if collision_line(x,y,x+hsp*4,y+vsp*4,other,false,true) {
 	//			other.dodging = true
 	//			other.tear_timer=100
 	//			other.tear_timer_spawn=100

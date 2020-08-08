@@ -20,12 +20,12 @@ if sword_present {
 
 if horizontal == true {
 	if onedirec {
-		hspeed = lerp(hspeed,speedv,0.2)
+		hsp = lerp(hsp,speedv,0.2)
 		if x >= startx + dist2 {
 			onedirec = false
 		}
 	} else {
-		hspeed = lerp(hspeed,-speedv,0.2)
+		hsp = lerp(hsp,-speedv,0.2)
 		if x <= startx + dist1 {
 			onedirec = true
 		}	
@@ -34,14 +34,14 @@ if horizontal == true {
 
 if vertical == true {
 	if onedirec {
-		vspeed = lerp(vspeed,speedv,0.2)
-		vspeed = speedv
+		vsp = lerp(vsp,speedv,0.2)
+		vsp = speedv
 		if y >= starty + dist2 {
 			onedirec = false
 		}
 	} else {
-		vspeed = lerp(vspeed,-speedv,0.2)
-		vspeed = -speedv
+		vsp = lerp(vsp,-speedv,0.2)
+		vsp = -speedv
 		if y <= starty + dist1 {
 			onedirec = true
 		}	

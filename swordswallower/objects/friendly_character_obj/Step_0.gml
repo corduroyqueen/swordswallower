@@ -12,10 +12,10 @@ if gravd {
 	if stopped {
 		
 	} else {
-		//vspeed+=0.4
+		//vsp+=0.4
 		//if wall_checker(x,y+1) {
 		//	stopped = true	
-		//	vspeed = 0
+		//	vsp = 0
 		//}
 	}
 } else {

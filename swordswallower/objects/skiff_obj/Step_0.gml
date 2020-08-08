@@ -18,27 +18,27 @@ if !done {
 			if loop1<loop2 {
 				lol = loop1 	
 			} else { lol = loop2 }
-			hspeed=lerp(hspeed,cos(lol*3.1415)*5,0.15)
+			hsp=lerp(hsp,cos(lol*3.1415)*5,0.15)
 		}  else {
-			hspeed=lerp(hspeed,2,0.1)
+			hsp=lerp(hsp,2,0.1)
 		}
 		
 		if loop1<loop2 {
 			lol = loop1 	
 		} else { lol = loop2 }
-		hspeed = lerp(hspeed,sin(lol*6.2831)*6.5,0.15)
-		hspeed = clamp(hspeed,2,200)
+		hsp = lerp(hsp,sin(lol*6.2831)*6.5,0.15)
+		hsp = clamp(hsp,2,200)
 		
 		if x>(startx+7600) {
 			go = false	
 		}
 		if loop1>0.8 || loop2>0.8 || loop1<0.05 || loop2<0.05 {
-			vspeed = lerp(vspeed,10,0.01)
+			vsp = lerp(vsp,10,0.01)
 		} else {
-			vspeed = lerp(vspeed,0,0.05)	
+			vsp = lerp(vsp,0,0.05)	
 		}
 	} else {
-		hspeed = 0
+		hsp = 0
 		if place_meeting(x,y,tail_obj) && player_obj.held_position && x<(startx+10) {
 			go = true
 			player_obj.ending_lock = true
@@ -72,7 +72,7 @@ if !done {
 		}
 		init = false
 	}
-	if x>=(startx+1000) && x<(startx+1000 + hspeed) && !yolo {
+	if x>=(startx+1000) && x<(startx+1000 + hsp) && !yolo {
 	
 		ui_manager.speaking = true
 		ui_manager.printing = true
@@ -98,7 +98,7 @@ if !done {
 		}
 	}
 
-	if ui_manager.speaking && x>(startx+1000+hspeed) && !yolo {
+	if ui_manager.speaking && x>(startx+1000+hsp) && !yolo {
 		if player_obj.k_speak_p {
 			ui_manager.speaking = true
 			ui_manager.printing = true
@@ -129,7 +129,7 @@ if !done {
 		current_pick = 0
 		x = startx+7999
 		done = true
-		hspeed = 0
+		hsp = 0
 	}
 }
 

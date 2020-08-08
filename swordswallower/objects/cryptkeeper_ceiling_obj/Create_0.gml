@@ -91,11 +91,11 @@ if place_meeting(x,y+creat_cd,wall_obj) || place_meeting(x,y+creat_cd,break_wall
 }
 
 if dir_ground || dir_ceiling {
-	walk_dir = hspeed
-	walk_perp = vspeed
+	walk_dir = hsp
+	walk_perp = vsp
 } else {
-	walk_perp = hspeed
-	walk_dir = vspeed
+	walk_perp = hsp
+	walk_dir = vsp
 }
 
 if dir_ground {

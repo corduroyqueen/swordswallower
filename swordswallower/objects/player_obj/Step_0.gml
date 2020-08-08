@@ -96,10 +96,6 @@ if place_meeting(x,y+1,friendo2_obj) {
 //x = x + instance_place(x,y+1,friendo2_obj).hsped	
 }
 
-moving_platform_script(moving_platform_obj)
-moving_platform_script(switch_wall_obj)
-moving_platform_script(sinking_platform_obj)
-
 if place_meeting(x+1,y,wall_parent_obj) {
 	on_wall_right = true
 } else {
@@ -196,8 +192,8 @@ if ending_lock {
 	tail_obj.x = x
 	tail_obj.y = y
 	
-	hsp = held_start_hspeed
-	vsp = held_start_vspeed
+	hsp = held_start_hsp
+	vsp = held_start_vsp
 }
 
 
@@ -221,6 +217,9 @@ if zoom_timer_bool {
 } else {
 	moveX(hsp)
 	moveY(vsp)	
+}
+if !zoom_timer_bool && wall_sword_detect(x,y) {
+	hp-=100
 }
 
 enemy_collision()

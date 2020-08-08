@@ -27,11 +27,11 @@ if state==state_chasing {
 	if fumbling_timer<=0{
 		image_blend = c_white
 		if player_obj.x<x {
-			hspeed-=h_accel	
+			hsp-=h_accel	
 			image_xscale = 1
 			facing_right = false
 		} else {
-			hspeed+=h_accel	
+			hsp+=h_accel	
 			image_xscale = -1
 			facing_right = true
 		}
@@ -46,7 +46,7 @@ if state==state_chasing {
 	}
 	//sprite_index = intimidating_walk
 	image_speed = 0.75
-	hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
+	hsp = clamp(hsp,-h_walk_speed,h_walk_speed)
 	
 } 
 
@@ -56,11 +56,11 @@ if state==state_idle {
 
 
 if state==state_idle || state==state_hitting {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
 		
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 		
 	}
 }
@@ -120,7 +120,7 @@ if state==state_hitting {
 
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.1,20,true,sprite_width,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.1,20,true,sprite_width,sprite_height)
 	audio_manager(false,0,false,3)
 	//audio_manager(gsound.s_sword_hit_shell,0,false,0)
 	instance_destroy()	
@@ -128,9 +128,9 @@ if death {
 }
 
 
-//if(abs(hspeed) < h_decel){
-//	hspeed=0;	
+//if(abs(hsp) < h_decel){
+//	hsp=0;	
 //} else {
-//	hspeed-=sign(hspeed) * h_decel;	
+//	hsp-=sign(hsp) * h_decel;	
 //}
 

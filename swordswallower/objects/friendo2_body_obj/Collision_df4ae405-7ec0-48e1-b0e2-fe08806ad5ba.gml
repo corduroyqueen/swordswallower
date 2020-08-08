@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 if other.x < x {
-	other.hspeed = -20
+	other.hsp = -20
 } else {
-	other.hspeed = 20
+	other.hsp = 20
 }
 
-other.vspeed = -5
+other.vsp = -5

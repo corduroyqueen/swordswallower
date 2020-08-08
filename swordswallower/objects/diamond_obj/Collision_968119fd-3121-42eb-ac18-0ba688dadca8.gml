@@ -6,12 +6,12 @@
 
 dist_moved = 0;
 new_x = x;
-while (dist_moved < abs(hspeed)) {
-	new_x -= sign(hspeed);
+while (dist_moved < abs(hsp)) {
+	new_x -= sign(hsp);
 	dist_moved++;
 	if (!place_meeting(new_x, y, other)) {
 		x = new_x
-		hspeed=(-hspeed*0.8)
+		hsp=(-hsp*0.8)
 		audio_play_sound(clink1mp3,0,false)
 		return;
 	}
@@ -19,12 +19,12 @@ while (dist_moved < abs(hspeed)) {
 
 dist_moved = 0;
 new_y = y;
-while (dist_moved < abs(vspeed)) {
-	new_y -= sign(vspeed);
+while (dist_moved < abs(vsp)) {
+	new_y -= sign(vsp);
 	dist_moved++;
 	if (!place_meeting(x, new_y, other)) {
 		y = new_y;
-		vspeed = (-vspeed*0.8)
+		vsp = (-vsp*0.8)
 		audio_play_sound(clink1mp3,0,false)
 		return;
 	}

@@ -13,7 +13,7 @@ if death {
 		if player_obj.zoom_timer_bool {
 			just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 		} else {
-			just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
+			just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,sprite_width/4,sprite_height)	
 		}
 		audio_stop_sound(s_fly_buzz)
 		
@@ -29,7 +29,7 @@ if death {
 		if player_obj.zoom_timer_bool {
 			just_blood(player_obj.hsp,player_obj.vsp*2,0.3,10,false,sprite_width/4,sprite_height)
 		} else {
-			just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,10,false,sprite_width/4,sprite_height)	
+			just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,sprite_width/4,sprite_height)	
 		}
 		ang = random_range(0,180)
 		scale = random_range(70,300)

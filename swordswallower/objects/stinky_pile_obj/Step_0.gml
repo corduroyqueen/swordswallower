@@ -10,7 +10,7 @@ if lit {
 		yset = random_range(-sprite_height,sprite_height)/2
 		boop = instance_create_depth(x+xset,y+yset,-1,stinky_particle_obj)
 		boop.deprate = 0.01
-		boop.vspeed = -1
+		boop.vsp = -1
 		boop.rval = irandom_range(1,1.5)
 		particle_spawn = 0
 		

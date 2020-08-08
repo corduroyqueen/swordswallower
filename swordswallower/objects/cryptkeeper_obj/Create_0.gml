@@ -68,6 +68,6 @@ sprites[1] = ghoul2845
 sprites[2] = ghoul3
 
 sprite_index = sprites[floor(x) % 3]
-
+mask_index = sprite_index
 hsp=0
 vsp=0

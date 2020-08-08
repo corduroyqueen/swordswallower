@@ -17,7 +17,7 @@ if state!=state_hitting {
 }
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 	title_obj.sprite_index = sprite90
 	instance_destroy()	
 }
@@ -61,8 +61,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * facingdir + hspeed
-		particle.vspeed = random_range(0.01,1) * facingdir + vspeed
+		particle.hsp = random_range(0.01,1) * facingdir + hsp
+		particle.vsp = random_range(0.01,1) * facingdir + vsp
 		particlect = false
 	} 
 	if particlect>120{
@@ -74,11 +74,11 @@ if sword_present {
 if state==state_chasing {
 	
 	if player_obj.x<x {
-		hspeed-=h_accel	
+		hsp-=h_accel	
 		image_xscale = -1
 		facing_right = false
 	} else {
-		hspeed+=h_accel	
+		hsp+=h_accel	
 		image_xscale = 1
 		facing_right = true
 	}
@@ -96,10 +96,10 @@ if state==state_idle {
 
 
 if state==state_idle || state==state_hitting {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
-		hspeed-=sign(hspeed) * h_decel;	
+		hsp-=sign(hsp) * h_decel;	
 	}
 }
 
@@ -135,7 +135,7 @@ if state==state_hitting {
 if place_meeting(x,y+1,wall_obj) {
 	
 } else {
-	vspeed+=grav
+	vsp+=grav
 }
 
-hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+hsp = clamp(hsp,-h_max_speed,h_max_speed)

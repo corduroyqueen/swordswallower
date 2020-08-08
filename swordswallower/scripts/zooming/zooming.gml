@@ -31,17 +31,17 @@ if tail_zooming {
 		
 		//if zoom_timer<=0 {
 			
-		//	//zoom_speedx = hspeed
-		//	//zoom_speedy = vspeed
+		//	//zoom_speedx = hsp
+		//	//zoom_speedy = vsp
 			
-		//	//hspeed = oldspeedx
-		//	//vspeed = oldspeedy
+		//	//hsp = oldspeedx
+		//	//vsp = oldspeedy
 		//} 
 	
 		//dot_product(oldspeedx,oldspeedy,zoom_speedx,zoom_speedy)
 	
-		//hspeed = zoom_speedx
-		//vspeed = zoom_speedy
+		//hsp = zoom_speedx
+		//vsp = zoom_speedy
 		
 		var ztempspeed = zspeed
 		
@@ -110,7 +110,7 @@ if zoom_timer_bool {
 	
 	
 	//if zoom_timer>3 {
-	//	vspeed += grav_boost
+	//	vsp += grav_boost
 	//}
 	zoom_timer++
 	if point_distance(x,y,tail_dest_x,tail_dest_y)>37.5 {
@@ -174,8 +174,8 @@ if zoom_timer_bool {
 		
 		if distance_to_object(tail_obj)>25 {
 			
-			//hspeed = clamp(hspeed,-10,10)
-			//vspeed = clamp(vspeed,-10,10)
+			//hsp = clamp(hsp,-10,10)
+			//vsp = clamp(vsp,-10,10)
 		}	
 		
 		zoom_out_of_wall_timer = 0

@@ -68,7 +68,7 @@ if state!=state_hitting && state!=state_knockback {
 }
 
 if state == state_knockback {
-	hspeed = lerp(hspeed,0,0.05)
+	hsp = lerp(hsp,0,0.05)
 	charge_timer++
 	
 	if charge_timer>knockback_end {
@@ -85,11 +85,11 @@ if place_meeting(x,y,golem_obj) && collided_with_friend==false {
 	var friendo = instance_place(x,y,golem_obj)
 	if friendo.state!=state_knockback {
 		
-		friendo.hspeed = hspeed * 1.2
-		friendo.vspeed = vspeed * 1 * -sign(vspeed)
+		friendo.hsp = hsp * 1.2
+		friendo.vsp = vsp * 1 * -sign(vsp)
 		
-		hspeed *= 0.4
-		vspeed *= 0.4
+		hsp *= 0.4
+		vsp *= 0.4
 		
 		friendo.state = state_knockback
 		friendo.hit_timer = 0
@@ -110,8 +110,8 @@ if sword_present {
 	if facing_right { lmao = 1 } else { lmao = -1 }
 	
 	
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -128,8 +128,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * lmao + hspeed
-		particle.vspeed = random_range(0.01,1) * lmao + vspeed
+		particle.hsp = random_range(0.01,1) * lmao + hsp
+		particle.vsp = random_range(0.01,1) * lmao + vsp
 		particlect = false
 	} 
 	if particlect>120{
@@ -155,8 +155,8 @@ if point_distance(x,y,player_obj.x+player_obj.hsp,player_obj.y+player_obj.vsp)<7
 	//player_obj.hsp*=0.55
 	//player_obj.vsp*=0.55
 		
-	//hspeed = player_obj.hsp * 1.5
-	//vspeed = player_obj.vsp * 0.8
+	//hsp = player_obj.hsp * 1.5
+	//vsp = player_obj.vsp * 0.8
 		
 	//player_obj.hsp*=-0.25
 	//player_obj.vsp*=-0.35
@@ -186,7 +186,7 @@ if grabbing {
 	
 	player_obj.x = x + 35 * -sign(image_xscale)
 	player_obj.y = y
-	hspeed = lerp(hspeed,0,0.02)
+	hsp = lerp(hsp,0,0.02)
 	state=state_hitting
 	hold_timer++
 	if hold_timer<1 {
@@ -205,8 +205,8 @@ if !instance_exists(crabfriend) {
 if carryingcrab {
 	
 	
-	crabfriend.hspeed = 0
-	crabfriend.vspeed = 0
+	crabfriend.hsp = 0
+	crabfriend.vsp = 0
 	var lmao
 	if facing_right { lmao = 1 } else { lmao = -1 }
 	
@@ -227,11 +227,11 @@ if state==state_chasing {
 	if charging {
 		charge_timer=0
 		if direc {
-			hspeed+=h_accel	
+			hsp+=h_accel	
 			image_xscale = -1
 			facing_right = true
 		} else {
-			hspeed-=h_accel	
+			hsp-=h_accel	
 			image_xscale = 1
 			facing_right = false
 			
@@ -239,7 +239,7 @@ if state==state_chasing {
 		fly_spawn++
 		if fly_spawn>20 {
 			fly1 = instance_create_depth(x,y,0,flyfree_obj)
-			fly1.vspeed = 2
+			fly1.vsp = 2
 			fly1.inv_timer=10
 			fly1.state = 1
 			fly1.spawn = true
@@ -250,8 +250,8 @@ if state==state_chasing {
 			carryingcrab = false
 			crabxv = cos(degtorad(point_direction(x,y,player_obj.x,player_obj.y)))
 			crabyv = -sin(degtorad(point_direction(x,y,player_obj.x,player_obj.y-20)))
-			crabfriend.hspeed = crabxv * 22
-			crabfriend.vspeed = crabyv * 22
+			crabfriend.hsp = crabxv * 22
+			crabfriend.vsp = crabyv * 22
 			crabfriend.thrown = true
 			crabfriend.heldbymonster = false
 			crabfriend.grav = 0.1
@@ -260,25 +260,25 @@ if state==state_chasing {
 		//sprite_index = intimidating_walk
 		//image_speed = 0.75
 	
-		hspeed = lerp(hspeed,clamp(hspeed,-h_walk_speed,h_walk_speed),0.05)
+		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		
-		if wall_checker(x+hspeed,y-10) {
+		if wall_checker(x+hsp,y-10) {
 			state = state_knockback
 			
 			player_obj.shake_d=9
 			player_obj.camera_shake_d = true
 			
 			player_obj.camera_shake_direc = true
-			player_obj.cam_ang = degtorad(point_direction(0,0,hspeed,vspeed))
+			player_obj.cam_ang = degtorad(point_direction(0,0,hsp,vsp))
 			player_obj.shake_dir = 45
 			
-			hspeed = 5 * -sign(hspeed)
-			vspeed = -3
+			hsp = 5 * -sign(hsp)
+			vsp = -3
 		}
 		
 	} else {
 		charge_timer++
-		hspeed = lerp(hspeed,0,0.05)
+		hsp = lerp(hsp,0,0.05)
 		image_xscale = -sign(player_obj.x-x)
 		if charge_timer>charge_go {
 			charge_timer=0
@@ -301,14 +301,14 @@ if state==state_idle {
 }
 
 
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vspeed+=grav }
+if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vsp+=grav }
 
 if state==state_idle || state==state_hitting {
-	if(abs(hspeed) < h_decel){
-		hspeed=0;	
+	if(abs(hsp) < h_decel){
+		hsp=0;	
 	} else {
 		
-		hspeed-=sign(hspeed) * h_decel
+		hsp-=sign(hsp) * h_decel
 		
 	}
 }
@@ -378,7 +378,7 @@ wall_collision_xaxis(black_wall_obj)
 
 
 if locked {
-	hspeed = 0
+	hsp = 0
 	x = startx
 	//sprite_index = big_boi_wounded
 	image_speed = 1
@@ -415,7 +415,7 @@ if death {
 }
 if sword_present {
 	sword_checked = true
-} else if hspeed<4 {
+} else if hsp<4 {
 	sword_checked = false	
 }
 
@@ -431,6 +431,6 @@ if state==state_idle {
 	}	
 }
 
-hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+hsp = clamp(hsp,-h_max_speed,h_max_speed)
 
 

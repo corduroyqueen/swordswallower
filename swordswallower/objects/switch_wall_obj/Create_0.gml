@@ -25,3 +25,6 @@ onedirec = true
 
 dist1 = 0
 dist2 = 0
+
+hsp=0
+vsp=0

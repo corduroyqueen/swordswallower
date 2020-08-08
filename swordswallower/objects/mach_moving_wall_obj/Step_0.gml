@@ -34,8 +34,8 @@ if on {
 		if point_distance(x,y,points[pos_index+1,0],points[pos_index+1,1])<move_speed {
 			pause = true
 			
-			hspeed=0
-			vspeed=0
+			hsp=0
+			vsp=0
 			
 			x = points[pos_index+1,0]
 			y = points[pos_index+1,1]
@@ -48,6 +48,6 @@ if on {
 	
 	}
 } else {
-	hspeed=0
-	vspeed=0	
+	hsp=0
+	vsp=0	
 }

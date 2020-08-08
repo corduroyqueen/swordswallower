@@ -124,11 +124,11 @@ if intro {
 	
 } else if tail_throwing {
 	
-	var xspeed = player_obj.x+(hspeed*20)
-	var yspeed = player_obj.y+(vspeed*20)
+	var xspeed = player_obj.x+(hsp*20)
+	var yspeed = player_obj.y+(vsp*20)
 	
-	camx = lerp(camx,mean(xspeed,xspeed,global.mousepx,tail_obj.x+tail_obj.hspeed*8,tail_obj.x+tail_obj.hspeed*8)-cam_width_h,0.03)
-	camy = lerp(camy,mean(yspeed,yspeed,global.mousepy,tail_obj.y+tail_obj.vspeed*8,tail_obj.y+tail_obj.vspeed*8)-cam_height_h,0.03)	
+	camx = lerp(camx,mean(xspeed,xspeed,global.mousepx,tail_obj.x+tail_obj.hsp*8,tail_obj.x+tail_obj.hsp*8)-cam_width_h,0.03)
+	camy = lerp(camy,mean(yspeed,yspeed,global.mousepy,tail_obj.y+tail_obj.vsp*8,tail_obj.y+tail_obj.vsp*8)-cam_height_h,0.03)	
 	
 	camx = lerp(camx,clamp(camx,player_obj.x-405-cam_width_h,player_obj.x+405-cam_width_h),0.2)
 	camy = lerp(camy,clamp(camy,player_obj.y-345-cam_height_h,player_obj.y+345-cam_height_h),0.2)

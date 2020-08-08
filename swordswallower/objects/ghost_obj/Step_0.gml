@@ -35,8 +35,8 @@ if sword_present {
 	if facing_right { lmao = -1 } else { lmao = 1 }
 	
 	
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -53,8 +53,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * lmao + hspeed
-		particle.vspeed = random_range(0.01,1) * lmao + vspeed
+		particle.hsp = random_range(0.01,1) * lmao + hsp
+		particle.vsp = random_range(0.01,1) * lmao + vsp
 		particlect = false
 	} 
 	if particlect>120{

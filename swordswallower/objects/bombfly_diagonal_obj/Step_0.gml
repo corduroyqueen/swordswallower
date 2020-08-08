@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 	
 	at=instance_create_depth(x,y,depth+1,default_atk_obj)	
 	at.timer = 5
@@ -16,23 +16,23 @@ if death {
 } else {
 
 	if hrev {
-		hspeed = hgo 
+		hsp = hgo 
 	
 	} else {
-		hspeed = -hgo 
+		hsp = -hgo 
 	}
 
 	if vrev {
-		vspeed = vgo 
+		vsp = vgo 
 	
 	} else {
-		vspeed = -vgo 
+		vsp = -vgo 
 	}
-	image_xscale = 1 * sign(hspeed)
-	if wall_checker_enemy(x+hspeed*2,y) {
+	image_xscale = 1 * sign(hsp)
+	if wall_checker_enemy(x+hsp*2,y) {
 		hrev = !hrev	
 	}
-	if wall_checker_enemy(x,y+vspeed*2) {
+	if wall_checker_enemy(x,y+vsp*2) {
 		vrev = !vrev	
 	}
 
@@ -46,6 +46,6 @@ if death {
 	if !place_meeting(x,y,nucrab_obj) {
 		inv_hit = false	
 	}
-	hspeed = clamp(hspeed,-maxspeed,maxspeed)
-	vspeed = clamp(vspeed,-maxspeed,maxspeed)
+	hsp = clamp(hsp,-maxspeed,maxspeed)
+	vsp = clamp(vsp,-maxspeed,maxspeed)
 }

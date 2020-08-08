@@ -24,8 +24,8 @@ if sword_present {
 	tail_obj.x = x + swordx
 	tail_obj.y = y + swordy
 	if player_obj.zoom_timer_bool {
-		hspeed=0
-		vspeed=0
+		hsp=0
+		vsp=0
 	}
 }
 

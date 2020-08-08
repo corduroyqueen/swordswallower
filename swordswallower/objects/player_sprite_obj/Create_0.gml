@@ -39,3 +39,6 @@ arm_hand_y = 150-20
 arm_max_length = 30
 arm_seg_length_1 = arm_max_length/2
 arm_seg_length_2 = arm_max_length/2
+
+hsp=0
+vsp=0

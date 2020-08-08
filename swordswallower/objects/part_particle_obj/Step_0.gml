@@ -2,18 +2,18 @@
 // You can write your code in this editor
 
 if locked {
-	vspeed=0
-	hspeed=lerp(hspeed,0,0.15)
+	vsp=0
+	hsp=lerp(hsp,0,0.15)
 } else {
 	if step==0 {
 		step=0.5	
 	}
-	vspeed+=step
+	vsp+=step
 	if place_meeting(x,y,wall_obj) {
 		rotation_speed/=5
 		while(place_meeting(x,y,wall_obj)) {
-			x-=hspeed/2
-			y-=vspeed/2
+			x-=hsp/2
+			y-=vsp/2
 		}
 	}
 	if place_meeting(x,y+1,wall_obj) {

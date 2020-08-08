@@ -112,10 +112,10 @@ if wall_checker(x-2,y) {
 
 if move_right {
 	image_xscale = 1
-	hspeed = 0.82
+	hsp = 0.82
 } else {
 	image_xscale = -1
-	hspeed = -0.82
+	hsp = -0.82
 }
 
 

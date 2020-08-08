@@ -45,8 +45,8 @@ for (i=0;i<(amount+random_range(2,9));i++){
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
 	var ta = lelang*random_range(0.8,1.2)
-	particle.hspeed = cos(degtorad(ta))*2.5*random_range(0.5,1.5)
-	particle.vspeed = -sin(degtorad(ta))*2.5*random_range(0.5,1.5)
+	particle.hsp = cos(degtorad(ta))*2.5*random_range(0.5,1.5)
+	particle.vsp = -sin(degtorad(ta))*2.5*random_range(0.5,1.5)
 	particle.image_angle = random_range(0,360)
 	particle.sprite_index = color
 	

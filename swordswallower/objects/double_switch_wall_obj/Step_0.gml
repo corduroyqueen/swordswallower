@@ -43,8 +43,8 @@ if enabled {
 		x = endx
 		y = endy
 		movespeed = 0
-		hspeed = 0  
-		vspeed = 0
+		hsp = 0  
+		vsp = 0
 	}
 } else {
 	if point_distance(x,y,startx,starty)>1 {
@@ -58,8 +58,8 @@ if enabled {
 		x = startx
 		y = starty
 		movespeed = 0
-		hspeed = 0  
-		vspeed = 0
+		hsp = 0  
+		vsp = 0
 	}
 }
 x = clamp(x,x1,x2)

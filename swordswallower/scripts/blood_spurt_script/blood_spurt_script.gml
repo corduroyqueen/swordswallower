@@ -12,6 +12,6 @@ ypos = argument5
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
 		
-	particle.hspeed = ispeed*cos(degtorad(ang*random_range(0.95,1.05)))*random_range(0.9,1.1)
+	particle.hsp = ispeed*cos(degtorad(ang*random_range(0.95,1.05)))*random_range(0.9,1.1)
 			
-	particle.vspeed = ispeed*-sin(degtorad(ang*random_range(0.95,1.05)))*random_range(0.9,1.1)
+	particle.vsp = ispeed*-sin(degtorad(ang*random_range(0.95,1.05)))*random_range(0.9,1.1)

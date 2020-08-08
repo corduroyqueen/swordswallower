@@ -10,8 +10,8 @@ if hp<=0 {
 	if distance_to_object(player_obj)<750 && !player_detected {
 		if wall_raycast_checker(player_obj) {
 			player_detected = true	
-			hspeed=0
-			vspeed=0
+			hsp=0
+			vsp=0
 			targetx = player_obj.x
 			targety = player_obj.y
 			sniping_timer=0
@@ -25,8 +25,8 @@ if hp<=0 {
 		player_detected = true
 		var lmao = sign(image_xscale)
 		met = true
-		tail_obj.hspeed = 0
-		tail_obj.vspeed = 0
+		tail_obj.hsp = 0
+		tail_obj.vsp = 0
 		tail_obj.y = y + swordy
 		tail_obj.x = x + (swordx * lmao)
 		player_obj.tail_dest_x = x

@@ -33,12 +33,12 @@ for (i=0;i<11;i++) { //we loop 4 pixel at a time all the way across
 	particle.image_yscale = image_yscale
 	particle.step = 0.8
 		
-	particle.hspeed = xs * 0.10 + irandom_range(-6,6) *
+	particle.hsp = xs * 0.10 + irandom_range(-6,6) *
 	choose(-1,-1,
 	0,1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7)
 
-	particle.vspeed = ys * 0.17 + irandom_range(-3,3) *
+	particle.vsp = ys * 0.17 + irandom_range(-3,3) *
 	choose(-1,-1,
 	0,1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7) - random_range(4,10)

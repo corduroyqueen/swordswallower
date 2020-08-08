@@ -19,8 +19,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	
 	dist_moved = 0;
 	new_x = x;
-	while (dist_moved < abs(hspeed)) {
-		new_x -= sign(hspeed);
+	while (dist_moved < abs(hsp)) {
+		new_x -= sign(hsp);
 		dist_moved++;
 		if (!place_meeting(new_x, y, local_obj)) {
 			
@@ -34,8 +34,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			current_obj = local_obj
 			
 			x = new_x
-			hspeed = 0
-			vspeed = 0
+			hsp = 0
+			vsp = 0
 			planted=true
 			player_obj.tail_dest_x = x
 			player_obj.tail_dest_y = y
@@ -52,8 +52,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 
 	dist_moved = 0;
 	new_y = y;
-	while (dist_moved < abs(vspeed)) {
-		new_y -= sign(vspeed);
+	while (dist_moved < abs(vsp)) {
+		new_y -= sign(vsp);
 		dist_moved++;
 		if (!place_meeting(x, new_y, local_obj)) {
 			
@@ -66,8 +66,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			current_obj = local_obj
 			
 			y = new_y;
-			hspeed = 0
-			vspeed = 0;
+			hsp = 0
+			vsp = 0;
 			planted=true
 			player_obj.tail_dest_x = x
 			player_obj.tail_dest_y = y
@@ -82,12 +82,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	
 	dist_moved = 0;
 	new_x = x;
-	while (dist_moved < abs(hspeed)) {
-		new_x -= sign(hspeed);
+	while (dist_moved < abs(hsp)) {
+		new_x -= sign(hsp);
 		dist_moved++;
 		if (!place_meeting(new_x, y, local_obj)) {
 			x = new_x
-			hspeed = 0
+			hsp = 0
 			return;
 		}
 	}
@@ -95,12 +95,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 
 	dist_moved = 0;
 	new_y = y;
-	while (dist_moved < abs(vspeed)) {
-		new_y -= sign(vspeed);
+	while (dist_moved < abs(vsp)) {
+		new_y -= sign(vsp);
 		dist_moved++;
 		if (!place_meeting(x, new_y, local_obj)) {
 			y = new_y;
-			vspeed = -1;
+			vsp = -1;
 			return;
 		}
 	}

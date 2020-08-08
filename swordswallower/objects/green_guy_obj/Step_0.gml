@@ -3,7 +3,7 @@
 
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 	audio_stop_sound(s_fly_buzz)
 	audio_manager(false,0,false,3)
 	instance_destroy()
@@ -47,10 +47,10 @@ if state==state_chasing {
 	image_speed = 1.2
 	
 	move_towards_point(player_obj.x,player_obj.y,h_accel)
-	//temp_hs = hspeed
-	//temp_vs = vspeed
-	//hspeed = temp_hs
-	//vspeed = temp_vs
+	//temp_hs = hsp
+	//temp_vs = vsp
+	//hsp = temp_hs
+	//vsp = temp_vs
 	
 }
 

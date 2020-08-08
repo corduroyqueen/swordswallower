@@ -4,8 +4,8 @@ with other {
 		
 	if (bounce_buff_timer>0 || zoom_timer_bool) && other.met {
 	
-		hspeed *=0.65
-		vspeed *=0.65
+		hsp *=0.65
+		vsp *=0.65
 		
 		//sdm("FLY collision")
 	
@@ -34,10 +34,10 @@ with other {
 		
 		zoom_timer_bool = false
 		zoom_timer = 0
-		hspeed*=0.5
-		vspeed*=0.5
-		hspeed = clamp(hspeed,-zspeed,zspeed)
-		vspeed = clamp(vspeed,-zspeed,zspeed)
+		hsp*=0.5
+		vsp*=0.5
+		hsp = clamp(hsp,-zspeed,zspeed)
+		vsp = clamp(vsp,-zspeed,zspeed)
 		//default_collision(other)
 	} else  {
 	

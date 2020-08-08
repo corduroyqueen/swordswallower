@@ -1,5 +1,5 @@
 
-bounce_vel=(-vspeed/30)
+bounce_vel=(-vsp/30)
 
 bounce_vel += (rval-sprite_scale_x)
 bounce_vel *= 0.9

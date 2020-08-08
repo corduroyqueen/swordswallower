@@ -197,7 +197,7 @@ if !setpoint {
 			other.vsp=0	
 		} else {
 			other.vsp+=0.2
-			other.vsp = clamp(other.vspeed,0,15)
+			other.vsp = clamp(other.vsp,0,15)
 		}
 	}
 }

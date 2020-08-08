@@ -16,5 +16,5 @@ if !player_obj.held_position  {
 }
 if place_meeting(x,y-64,flyfree_obj) {
 	var hallo = instance_place(x,y-64,flyfree_obj)
-	hallo.vspeed -= v_accel*2
+	hallo.vsp -= v_accel*2
 }

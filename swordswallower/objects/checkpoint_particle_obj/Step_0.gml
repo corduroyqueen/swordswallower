@@ -15,4 +15,4 @@ rval-=deprate
 if image_xscale<=0 || image_yscale<=0 {
 	instance_destroy()	
 }
-hspeed = lerp(hspeed,0,0.1)
+hsp = lerp(hsp,0,0.1)

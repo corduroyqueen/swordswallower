@@ -44,8 +44,8 @@ for (i=0;i<(amount+random_range(5,15));i++){
 	var scalevar = random_range(0.1,0.6)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
-	particle.hspeed = -player_obj.held_start_hspeed * reduction + random_range(-3,3)
-	particle.vspeed = -player_obj.held_start_vspeed/20 + random_range(-3,3)
+	particle.hsp = -player_obj.held_start_hsp * reduction + random_range(-3,3)
+	particle.vsp = -player_obj.held_start_vsp/20 + random_range(-3,3)
 	particle.image_angle = random_range(0,360)
 	particle.sprite_index = color
 	

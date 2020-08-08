@@ -20,7 +20,7 @@ if go {
 	ogx = x
 	ogy = y
 	
-	if wall_checker(x,y) {
+	if wall_sword_detect(x,y) {
 		presentwall = instance_place(x,y,wall_obj)
 		if presentwall==noone {
 			presentwall = instance_place(x,y,black_wall_obj)	
@@ -65,37 +65,37 @@ if go {
 		}
 	}
 	
-	if wall_checker(x,y) {
+	if wall_sword_detect(x,y) {
 		new_x = x
 		new_y = y
 		diffx1 = 0
 		diffx2 = 0
 		diffy1 = 0
 		diffy2 = 0
-		while wall_checker(new_x,y) {
+		while wall_sword_detect(new_x,y) {
 			new_x--
-			if !wall_checker(new_x,y) {
+			if !wall_sword_detect(new_x,y) {
 				diffx1=new_x-x
 			}
 		}
 		new_x = x
-		while wall_checker(new_x,y) {
+		while wall_sword_detect(new_x,y) {
 			new_x++
-			if !wall_checker(new_x,y) {
+			if !wall_sword_detect(new_x,y) {
 				diffx2=new_x-x
 			}
 		}
 		
-		while wall_checker(x,new_y) {
+		while wall_sword_detect(x,new_y) {
 			new_y--
-			if !wall_checker(x,new_y) {
+			if !wall_sword_detect(x,new_y) {
 				diffy1=new_y-y
 			}
 		}
 		new_y = y
-		while wall_checker(x,new_y) {
+		while wall_sword_detect(x,new_y) {
 			new_y++
-			if !wall_checker(x,new_y) {
+			if !wall_sword_detect(x,new_y) {
 				diffy2=new_y-y
 			}
 		}

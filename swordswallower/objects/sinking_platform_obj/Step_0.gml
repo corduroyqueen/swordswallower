@@ -21,7 +21,7 @@ if sword_present {
 
 if place_meeting(x,y-player_obj.vsp-7,player_obj) && player_obj.vsp>=0 {
 	onedirec = true	
-	//player_obj.vsp+=vspeed
+	//player_obj.vsp+=vsp
 } else if !place_meeting(x,y-64,player_obj) {
 	onedirec = false	
 }
@@ -37,19 +37,19 @@ with player_obj {
 }
 
 if onedirec {
-	//vspeed = lerp(vspeed,speedv,0.2)
+	//vsp = lerp(vsp,speedv,0.2)
 	if point_distance(x,y,x,starty+dist2)>speedv {
-		vspeed = speedv
+		vsp = speedv
 	} else {
-		vspeed=0	
+		vsp=0	
 	}
 } else {
-	//vspeed = lerp(vspeed,-speedv,0.2)
+	//vsp = lerp(vsp,-speedv,0.2)
 	if !place_meeting(x,y-speedv,player_obj) 
 	&& point_distance(x,y,x,starty)>speedv+1 {
-		vspeed = -speedv
+		vsp = -speedv
 	} else {
-		vspeed=0	
+		vsp=0	
 	}
 	
 }	

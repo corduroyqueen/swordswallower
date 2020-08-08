@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 //if surrounded {
-//	hspeed=0
-//	vspeed=0
+//	hsp=0
+//	vsp=0
 //	lifect++
 	
 //	if lifect >200 {

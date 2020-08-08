@@ -21,14 +21,14 @@ if player_obj.tail_pulling && met && sword_present {
 	tail_obj.pull_timer=tail_obj.pull_wall_t
 	sword_present = false
 	yanked = true
-	hspeed = tail_obj.hspeed * 5
-	vspeed = tail_obj.vspeed * 5
+	hsp = tail_obj.hsp * 5
+	vsp = tail_obj.vsp * 5
 	audio_play_sound(Knife_Pull_140,0,false)
 }
 
 if yanked {
-	hspeed = lerp(hspeed,0,0.05)
-	vspeed = lerp(vspeed,0,0.05)
+	hsp = lerp(hsp,0,0.05)
+	vsp = lerp(vsp,0,0.05)
 	
 	if speed<1 {
 		yanked = false
@@ -46,12 +46,12 @@ if state!=state_hitting && state!=state_knockback {
 
 if state==state_knockback {
 	if player_obj.zoom_timer_bool && sword_present {
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 	}
 	
-	hspeed = lerp(hspeed,0,0.07)
-	vspeed = lerp(vspeed,0,0.07)
+	hsp = lerp(hsp,0,0.07)
+	vsp = lerp(vsp,0,0.07)
 	
 	if speed<1 {
 		state = state_idle
@@ -64,11 +64,11 @@ if place_meeting(x,y,diamond_obj) && collided_with_friend==false {
 	var friendo = instance_place(x,y,diamond_obj)
 	if friendo.state!=state_knockback {
 		
-		friendo.hspeed = hspeed * 1.2
-		friendo.vspeed = vspeed * 1 * -sign(vspeed)
+		friendo.hsp = hsp * 1.2
+		friendo.vsp = vsp * 1 * -sign(vsp)
 		
-		hspeed *= 0.4
-		vspeed *= 0.4
+		hsp *= 0.4
+		vsp *= 0.4
 		
 		friendo.state = state_knockback
 		friendo.hit_timer = 0
@@ -88,8 +88,8 @@ if sword_present {
 	if facing_right { lmao = -1 } else { lmao = 1 }
 	
 	
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -106,8 +106,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * lmao + hspeed
-		particle.vspeed = random_range(0.01,1) * lmao + vspeed
+		particle.hsp = random_range(0.01,1) * lmao + hsp
+		particle.vsp = random_range(0.01,1) * lmao + vsp
 		particlect = false
 	} 
 	if particlect>120{
@@ -119,8 +119,8 @@ if sword_present {
 		player_obj.hsp*=0.55
 		player_obj.vsp*=0.55
 		
-		hspeed = player_obj.hsp * 1.5
-		vspeed = player_obj.vsp * 1.5
+		hsp = player_obj.hsp * 1.5
+		vsp = player_obj.vsp * 1.5
 		
 		player_obj.hsp*=-0.25
 		player_obj.vsp*=-0.35
@@ -169,7 +169,7 @@ if state==state_chasing {
 	
 	//sprite_index = intimidating_walk
 	image_speed = 0.75
-	//hspeed = clamp(hspeed,-h_walk_speed,h_walk_speed)
+	//hsp = clamp(hsp,-h_walk_speed,h_walk_speed)
 	
 } 
 
@@ -187,18 +187,18 @@ if state==state_idle {
 if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a }
 
 if state==state_idle || state==state_hitting {
-	//if(abs(hspeed) < h_decel){
-	//	hspeed=0;	
+	//if(abs(hsp) < h_decel){
+	//	hsp=0;	
 	//} else {
 		
-	//	hspeed-=sign(hspeed) * h_decel;	
+	//	hsp-=sign(hsp) * h_decel;	
 		
 	//}
 }
 
 if state==state_hitting {
-	//hspeed = lerp(hspeed,0,0.2)
-	//vspeed = lerp(vspeed,0,0.2)
+	//hsp = lerp(hsp,0,0.2)
+	//vsp = lerp(vsp,0,0.2)
 	if !yanked {
 		move_towards_point(player_obj.x,player_obj.y-32,h_walk_speed/5)
 	}
@@ -267,10 +267,10 @@ if death {
 	if instance_exists(hit) {
 			instance_destroy(hit)	
 		}
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 	instance_destroy()	
 }
 
-//hspeed = clamp(hspeed,-h_max_speed,h_max_speed)
+//hsp = clamp(hsp,-h_max_speed,h_max_speed)
 
 //sdm(my_floor)

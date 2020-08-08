@@ -6,8 +6,8 @@ if angry {
 	if angry_timer<200 {
 		y = lerp(y,player_obj.y,0.1)
 	} else {
-		vspeed = 0
-		hspeed = 15 * -image_xscale
+		vsp = 0
+		hsp = 15 * -image_xscale
 		sprite_index = follow_guy_angry
 	}
 	
@@ -18,7 +18,7 @@ if angry {
 			going_up = false
 			return
 		} else {
-			vspeed = -vs
+			vsp = -vs
 		}
 	} else {
 	
@@ -26,7 +26,7 @@ if angry {
 			going_up = true
 			return
 		} else {
-			vspeed = vs
+			vsp = vs
 		}
 	}
 	if distance_to_object(player_obj)<500 {

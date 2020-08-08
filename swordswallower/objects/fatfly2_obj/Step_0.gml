@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 	
 	audio_manager(false,0,false,3)
 	instance_destroy()
@@ -14,23 +14,23 @@ if death {
 		mult = 1	
 	}
 	if hrev {
-		hspeed = hgo * mult
+		hsp = hgo * mult
 	
 	} else {
-		hspeed = -hgo * mult
+		hsp = -hgo * mult
 	}
 
 	if vrev {
-		vspeed = vgo * mult
+		vsp = vgo * mult
 	
 	} else {
-		vspeed = -vgo * mult
+		vsp = -vgo * mult
 	}
-	image_xscale = 0.75 * sign(hspeed)
-	if wall_checker_enemy(x+hspeed*2,y) {
+	image_xscale = 0.75 * sign(hsp)
+	if wall_checker_enemy(x+hsp*2,y) {
 		hrev = !hrev	
 	}
-	if wall_checker_enemy(x,y+vspeed*2) {
+	if wall_checker_enemy(x,y+vsp*2) {
 		vrev = !vrev	
 	}
 
@@ -43,8 +43,8 @@ if death {
 			var scalevar = random_range(0.3,1)
 			particle.image_xscale = scalevar
 			particle.image_yscale = scalevar
-			particle.hspeed = random_range(0.01,1)
-			particle.vspeed = random_range(0.01,1) 
+			particle.hsp = random_range(0.01,1)
+			particle.vsp = random_range(0.01,1) 
 			particlect = false
 		} 
 		if particlect>20{
@@ -59,6 +59,6 @@ if death {
 	if !place_meeting(x,y,nucrab_obj) {
 		inv_hit = false	
 	}
-	hspeed = clamp(hspeed,-maxspeed*mult,maxspeed*mult)
-	vspeed = clamp(vspeed,-maxspeed*mult,maxspeed*mult)
+	hsp = clamp(hsp,-maxspeed*mult,maxspeed*mult)
+	vsp = clamp(vsp,-maxspeed*mult,maxspeed*mult)
 }

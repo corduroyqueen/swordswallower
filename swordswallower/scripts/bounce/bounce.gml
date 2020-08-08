@@ -1,7 +1,7 @@
-//if place_meeting(xpreva,ypreva+vspeed,other) {
+//if place_meeting(xpreva,ypreva+vsp,other) {
 //	ang = 270
 //} 
-//if place_meeting(xpreva+hspeed,ypreva,other) {
+//if place_meeting(xpreva+hsp,ypreva,other) {
 //	ang = 0
 //}
 
@@ -13,9 +13,9 @@ ang = tail_obj.ang
 
 normx = cos(degtorad(ang));
 normy = -sin(degtorad(ang));
-hspeed*=0.5
-vspeed*=0.5
-dot = dot_product(-normx,-normy,hspeed,vspeed)
+hsp*=0.5
+vsp*=0.5
+dot = dot_product(-normx,-normy,hsp,vsp)
 
 
 
@@ -30,17 +30,17 @@ with (player_hitbox_check_obj) {
 	
 		
 		
-		other.hspeed += (other.normx * other.dot * 2)
-		other.vspeed += (other.normy * other.dot * 2)
+		other.hsp += (other.normx * other.dot * 2)
+		other.vsp += (other.normy * other.dot * 2)
 		//speed = clamp(speed,0,0.5)
 		
 		//if !(place_meeting(x,y-10,wall_obj) || place_meeting(x,y+10,wall_obj)) {
-		//	other.vspeed += (other.normy * other.dot * 2)
-		//	other.vspeed*=0.6
+		//	other.vsp += (other.normy * other.dot * 2)
+		//	other.vsp*=0.6
 		//}
 		//if !(place_meeting(x-10,y,wall_obj) || place_meeting(x+10,y,wall_obj)) {
-		//	other.hspeed += (other.normx * other.dot * 2)
-		//	other.hspeed*=0.6
+		//	other.hsp += (other.normx * other.dot * 2)
+		//	other.hsp*=0.6
 		//} 
 		
 	
@@ -51,14 +51,14 @@ with (player_hitbox_check_obj) {
 //if ang==0 {
 	
 //	if place_meeting(x,y-5,wall_obj) || place_meeting(x,y+5,wall_obj) {
-//		vspeed = 0	
+//		vsp = 0	
 //	}
 	
 	
 //} else {
 	
 //	if place_meeting(x-5,y,wall_obj) || place_meeting(x+5,y,wall_obj) {
-//		hspeed = 0	
+//		hsp = 0	
 //	}
 //}
 
@@ -104,22 +104,22 @@ if tail_obj.ang==0 {
 
 if tail_obj.moving_platform_bool && (place_meeting(x,y,wall_obj)||place_meeting(x,y,black_wall_obj)) {
 
-	hspeed = tail_obj.current_wall.hspeed
-	vspeed = tail_obj.current_wall.vspeed
+	hsp = tail_obj.current_wall.hsp
+	vsp = tail_obj.current_wall.vsp
 	default_collision(wall_obj)
 	default_collision(black_wall_obj)
 	xvheld = x-tail_obj.current_wall.x
 	yvheld = y-tail_obj.current_wall.y
-	hspeed = 0
-	vspeed = 0	
+	hsp = 0
+	vsp = 0	
 	
 }
 
-x = player_hitbox_check_obj.x - hspeed
-y = player_hitbox_check_obj.y - vspeed
+x = player_hitbox_check_obj.x - hsp
+y = player_hitbox_check_obj.y - vsp
 
 if vsp>0 && ang==90 {
-	vspeed/=2	
+	vsp/=2	
 }
 	
 reset_intangibility()

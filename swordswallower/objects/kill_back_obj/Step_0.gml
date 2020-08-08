@@ -6,6 +6,6 @@ wall_friend.image_angle = point_direction(x,y,player_obj.x,player_obj.y) + 270
 
 if death {
 	instance_destroy(wall_friend)	
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,80,true,sprite_width/2,sprite_height/2)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/2,sprite_height/2)
 	instance_destroy()	
 }

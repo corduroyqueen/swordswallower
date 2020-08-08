@@ -46,8 +46,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			local_obj.hit = true
 		} else {
 			local_obj.charge_state_t_m-=20
-			local_obj.hspeed += cos(tail_obj.hspeed) * 0.5
-			local_obj.vspeed -= sin(tail_obj.vspeed) * 0.5
+			local_obj.hsp += cos(tail_obj.hsp) * 0.5
+			local_obj.vsp -= sin(tail_obj.vsp) * 0.5
 			sword_reject_script()
 		}
 		return false
@@ -139,7 +139,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		local_obj.hp--
 		if local_obj.hp>0 {
 			with local_obj {
-				just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)	
+				just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)	
 			}
 		}
 		player_obj.tail_planted = false
@@ -189,8 +189,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			x = xpreva
 			y = ypreva
 			if instance_exists(local_obj.parent.head) {
-				x+=local_obj.parent.head.hspeed*2
-				y+=local_obj.parent.head.vspeed*2
+				x+=local_obj.parent.head.hsp*2
+				y+=local_obj.parent.head.vsp*2
 			}
 		}
 		//local_obj.death = true
@@ -270,8 +270,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			
 			current_obj = local_obj	
 			
-			hspeed = 0
-			vspeed = 0
+			hsp = 0
+			vsp = 0
 			planted=true
 			player_obj.tail_dest_x = local_obj.x
 			player_obj.tail_dest_y = local_obj.y
@@ -307,26 +307,26 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		} else if local_obj.state!=local_obj.state_knockback {
 			//sword_reject_script()
 			//x = oldx
-			//x += local_obj.hspeed*5
+			//x += local_obj.hsp*5
 			
 			//local_obj.met = true
 			//audio_manager(false,0,false,3)
 			if player_obj.tail_pulling {
-				if round(local_obj.hspeed)==0 {
+				if round(local_obj.hsp)==0 {
 					with local_obj {
 						while place_meeting(x,y,tail_obj) {
-							other.x+=sign(other.hspeed)
+							other.x+=sign(other.hsp)
 						}
 					}
 				} else {
-					x += 1 + local_obj.hspeed*5 * sign(local_obj.hspeed*hspeed)
+					x += 1 + local_obj.hsp*5 * sign(local_obj.hsp*hsp)
 				}
 			}
 			if player_obj.tail_throwing {
-				if round(local_obj.hspeed)==0 {
+				if round(local_obj.hsp)==0 {
 					with local_obj {
 						while place_meeting(x,y,tail_obj) {
-							other.x+=sign(other.hspeed)
+							other.x+=sign(other.hsp)
 						}
 					}
 				}
@@ -386,8 +386,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		
 		dist_moved = 0;
 		new_x = x;
-		while (dist_moved < abs(hspeed)) {
-			new_x -= sign(hspeed);
+		while (dist_moved < abs(hsp)) {
+			new_x -= sign(hsp);
 			dist_moved++;
 			if (!place_meeting(new_x, y, local_obj)) {
 				if obj==crab_obj || obj==nucrab_obj || obj==handbug_obj {
@@ -413,8 +413,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				x = new_x
 				
 				image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
-				//hspeed = 0
-				//vspeed = 0
+				//hsp = 0
+				//vsp = 0
 				
 				additional_enemy_script()
 			
@@ -427,8 +427,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 
 		dist_moved = 0;
 		new_y = y;
-		while (dist_moved < abs(vspeed)) {
-			new_y -= sign(vspeed);
+		while (dist_moved < abs(vsp)) {
+			new_y -= sign(vsp);
 			dist_moved++;
 			if (!place_meeting(x, new_y, local_obj)) {
 				if obj==crab_obj || obj==nucrab_obj || obj==handbug_obj {
@@ -453,8 +453,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				y = new_y;
 				
 				image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
-				//hspeed = 0
-				//vspeed = 0;
+				//hsp = 0
+				//vsp = 0;
 				player_obj.tail_dest_x = x
 				player_obj.tail_dest_y = y
 				player_obj.tail_planted = true
@@ -474,12 +474,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	
 //	dist_moved = 0;
 //	new_x = x;
-//	while (dist_moved < abs(hspeed)) {
-//		new_x -= sign(hspeed);
+//	while (dist_moved < abs(hsp)) {
+//		new_x -= sign(hsp);
 //		dist_moved++;
 //		if (!place_meeting(new_x, y, local_obj)) {
 //			x = new_x
-//			hspeed = 0
+//			hsp = 0
 //			return;
 //		}
 //	}
@@ -487,12 +487,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 
 //	dist_moved = 0;
 //	new_y = y;
-//	while (dist_moved < abs(vspeed)) {
-//		new_y -= sign(vspeed);
+//	while (dist_moved < abs(vsp)) {
+//		new_y -= sign(vsp);
 //		dist_moved++;
 //		if (!place_meeting(x, new_y, local_obj)) {
 //			y = new_y;
-//			vspeed = -1;
+//			vsp = -1;
 //			return;
 //		}
 //	}

@@ -12,8 +12,8 @@ if player_obj.tail_throwing {
 	obj.sword_present = true
 
 	
-	//obj.hspeed = 0
-	//obj.vspeed = 0
+	//obj.hsp = 0
+	//obj.vsp = 0
 	
 	obj.sword_hold_x = (x-obj.x)
 	obj.sword_hold_y = (y-obj.y)
@@ -38,8 +38,8 @@ if player_obj.tail_throwing {
 	obj.sword_present = true
 
 	
-	//obj.hspeed = 0
-	//obj.vspeed = 0
+	//obj.hsp = 0
+	//obj.vsp = 0
 	
 	obj.sword_hold_x = (x-obj.x)
 	obj.sword_hold_y = (y-obj.y)

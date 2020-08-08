@@ -18,8 +18,8 @@ for (i=0;i<(amount+random_range(10,60));i++){
 	var scalevar = random_range(0.2,2)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
-	particle.hspeed = speedx * reduction + random_range(-3,3)
-	particle.vspeed = speedy * reduction + random_range(-3,3)
+	particle.hsp = speedx * reduction + random_range(-3,3)
+	particle.vsp = speedy * reduction + random_range(-3,3)
 	particle.image_blend = color
 	
 }

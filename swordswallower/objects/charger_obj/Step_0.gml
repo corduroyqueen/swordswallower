@@ -7,7 +7,7 @@ if !instance_exists(my_floor) {
 }
 player_floor = player_obj.current_platform
 
-if wall_checker(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
+if wall_detect(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
 	if abs(last_grounded_y-y)>400 {
 		//locked = true
 		//startx = x
@@ -90,8 +90,8 @@ if place_meeting(x,y,golem_obj) && collided_with_friend==false {
 	var friendo = instance_place(x,y,golem_obj)
 	if friendo.state!=state_knockback {
 		
-		friendo.hspeed = hspeed * 1.2
-		friendo.vspeed = vspeed * 1 * -sign(vspeed)
+		friendo.hsp = hsp * 1.2
+		friendo.vsp = vsp * 1 * -sign(vsp)
 		
 		hsp *= 0.4
 		vsp *= 0.4
@@ -115,8 +115,8 @@ if sword_present {
 	if facing_right { lmao = 1 } else { lmao = -1 }
 	
 	
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -133,8 +133,8 @@ if sword_present {
 		var scalevar = random_range(0.2,2)
 		particle.image_xscale = scalevar
 		particle.image_yscale = scalevar
-		particle.hspeed = random_range(0.01,1) * lmao + hsp
-		particle.vspeed = random_range(0.01,1) * lmao + vsp
+		particle.hsp = random_range(0.01,1) * lmao + hsp
+		particle.vsp = random_range(0.01,1) * lmao + vsp
 		particlect = false
 	} 
 	if particlect>120{
@@ -210,8 +210,8 @@ if !instance_exists(crabfriend) {
 if carryingcrab {
 	
 	
-	crabfriend.hspeed = 0
-	crabfriend.vspeed = 0
+	crabfriend.hsp = 0
+	crabfriend.vsp = 0
 	var lmao
 	if facing_right { lmao = 1 } else { lmao = -1 }
 	
@@ -247,8 +247,8 @@ if state==state_chasing {
 			carryingcrab = false
 			crabxv = cos(degtorad(point_direction(x,y,player_obj.x,player_obj.y)))
 			crabyv = -sin(degtorad(point_direction(x,y,player_obj.x,player_obj.y-20)))
-			crabfriend.hspeed = crabxv * 22
-			crabfriend.vspeed = crabyv * 22
+			crabfriend.hsp = crabxv * 22
+			crabfriend.vsp = crabyv * 22
 			crabfriend.thrown = true
 			crabfriend.heldbymonster = false
 			crabfriend.grav = 0.1

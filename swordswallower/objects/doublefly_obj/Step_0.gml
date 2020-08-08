@@ -9,7 +9,7 @@ if death {
 	
 
 	if death_timer< 1 {
-		just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 		audio_stop_sound(s_fly_buzz)
 		audio_manager(false,0,false,3)
 	

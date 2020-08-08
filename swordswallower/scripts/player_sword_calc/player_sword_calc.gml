@@ -15,14 +15,14 @@ if sprite_index==player_idle_s_n {
 	pointx = 68 * facing + x
 	pointy=0
 	for (i=0;i<48;i+=2) {
-		if wall_checker(pointx,y-16+i) || place_meeting(pointx,y-16+i,thin_floor_obj) {
+		if wall_detect(pointx,y-16+i) || place_meeting(pointx,y-16+i,thin_floor_obj) {
 			pointy = y+i
 			break
 		}
 	}
 	if pointy==0 {
 		for (i=128;i>0;i-=2) {
-			if !wall_checker(pointx,y-32+i) && !place_meeting(pointx,y-32+i,thin_floor_obj) {
+			if !wall_detect(pointx,y-32+i) && !place_meeting(pointx,y-32+i,thin_floor_obj) {
 				pointy = y+i-5
 				break
 			}
@@ -36,14 +36,14 @@ if sprite_index==player_idle_s_n {
 	pointx = 78 * facing + x
 	pointy=0
 	for (i=0;i<48;i+=2) {
-		if wall_checker(pointx,y-16+i) || place_meeting(pointx,y-16+i,thin_floor_obj) {
+		if wall_detect(pointx,y-16+i) || place_meeting(pointx,y-16+i,thin_floor_obj) {
 			pointy = y+i
 			break
 		}
 	}
 	if pointy==0 {
 		for (i=128;i>0;i-=2) {
-			if !wall_checker(pointx,y-32+i) && !place_meeting(pointx,y-32+i,thin_floor_obj) {
+			if !wall_detect(pointx,y-32+i) && !place_meeting(pointx,y-32+i,thin_floor_obj) {
 				pointy = y+i-5
 				break
 			}

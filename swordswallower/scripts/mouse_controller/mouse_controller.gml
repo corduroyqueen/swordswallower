@@ -14,7 +14,7 @@ if !tail_planted && !tail_held {
 			tail_obj.moving_platform_bool = false
 			tail_obj.x = player_obj.x
 			tail_obj.y = player_obj.y
-			if input_controller.controller = input_controller.controller_ds4 {
+			if input_controller.controller == input_controller.controller_ds4 {
 				auto_aim_selection(0.8)
 			} else {
 				auto_aim_selection(0.25)
@@ -23,11 +23,12 @@ if !tail_planted && !tail_held {
 			tail_dest_y = global.mousepy
 			tail_carry = false
 			tail_throwing = true
+			
 			left_click_buffer = 0
 			held_release_timer=10
 			if !grounded{
-				//vspeed=0
-				//hspeed=0
+				//vsp=0
+				//hsp=0
 			}
 			if stinky_check {
 				tail_obj.stinky_when_thrown = true
@@ -49,8 +50,8 @@ if !tail_planted && !tail_held {
 		//	if global.mousepcheck_button_released(mb_left) {
 		//		tail_dest_x = global.mousepx
 		//		tail_dest_y = global.mousepy
-		//		//tail_obj.hspeed = xl //* tail_obj.tspeed
-		//		//tail_obj.vspeed = yl //* tail_obj.tspeed
+		//		//tail_obj.hsp = xl //* tail_obj.tspeed
+		//		//tail_obj.vsp = yl //* tail_obj.tspeed
 		//		tail_carry = false
 		//		tail_throwing = true
 		//		winding = false

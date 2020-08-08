@@ -8,8 +8,8 @@ if !met && !player_obj.tail_carry && !player_obj.tail_planted {
 
 	sword_present = true
 
-	other.hspeed = 0
-	other.vspeed = 0
+	other.hsp = 0
+	other.vsp = 0
 
 	sword_hold_x = (other.x-x)
 	sword_hold_y = (other.y-y)

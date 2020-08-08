@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if hanging {
-	vspeed = 0 	
+	vsp = 0 	
 	if point_distance(x,y,player_obj.x,player_obj.y)<700 && in_camera_range(x,y) {
 		if (abs(player_obj.x-x)<130 && (player_obj.y-y)>=0)
 		|| (abs(tail_obj.x-x)<60 && (tail_obj.y-y)>=0) {
@@ -16,9 +16,9 @@ if hanging {
 	}
 	
 } else {
-	vspeed+=0.4
+	vsp+=0.4
 	
-	if wall_checker(x,y+1) {
+	if wall_sword_detect(x,y+1) {
 		death = true	
 		spawn = true
 		player_obj.shake_d=6
@@ -34,8 +34,8 @@ if death {
 			var scalevar = random_range(0.1,1)
 			particle.image_xscale = scalevar
 			particle.image_yscale = scalevar
-			particle.hspeed = random_range(-2,2)
-			particle.vspeed = -5 + random_range(-3.5,3.5)
+			particle.hsp = random_range(-2,2)
+			particle.vsp = -5 + random_range(-3.5,3.5)
 		}
 		
 		if place_meeting(x,y,player_obj) {
@@ -47,8 +47,8 @@ if death {
 		} else {
 			startx = x
 			starty = y
-			endx = x + hspeed
-			endy = y + vspeed + 3
+			endx = x + hsp
+			endy = y + vsp + 3
 			flyrange = -10
 		}
 	
@@ -60,11 +60,11 @@ if death {
 		for (i=0;i<fly_num;i++){
 			fly = instance_create_depth(x,y-30,depth,flyfree_obj)
 	
-			fly.hspeed = tempy * random_range(5,10) * choose(-1,1)
-			fly.vspeed = tempx * random_range(5,10) * -1
+			fly.hsp = tempy * random_range(5,10) * choose(-1,1)
+			fly.vsp = tempx * random_range(5,10) * -1
 			
-			fly.hspeed = random_range(-flyrange,flyrange)
-			fly.vspeed = random_range(-flyrange,-2)
+			fly.hsp = random_range(-flyrange,flyrange)
+			fly.vsp = random_range(-flyrange,-2)
 				
 			
 			fly.inv_timer=20
@@ -79,10 +79,10 @@ if death {
 			var scalevar = random_range(0.1,1)
 			particle.image_xscale = scalevar
 			particle.image_yscale = scalevar
-			particle.hspeed = tail_obj.hspeed*0.24 + random_range(-3.5,3.5)
-			particle.vspeed = tail_obj.vspeed*0.24 + random_range(-3.5,3.5)
+			particle.hsp = tail_obj.hsp*0.24 + random_range(-3.5,3.5)
+			particle.vsp = tail_obj.vsp*0.24 + random_range(-3.5,3.5)
 		}
-		just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width,sprite_height)
+		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width,sprite_height)
 	}
 	instance_destroy()	
 }

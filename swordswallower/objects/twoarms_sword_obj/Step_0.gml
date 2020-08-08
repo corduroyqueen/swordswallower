@@ -20,9 +20,9 @@ if state == state_held {
 	if wall_checker(x,y) {
 		state = state_planted
 		timer=0
-		image_angle = point_direction(0,0,hspeed,vspeed)-90
-		hspeed=0
-		vspeed=0
+		image_angle = point_direction(0,0,hsp,vsp)-90
+		hsp=0
+		vsp=0
 		timer=0
 	}
 } else if state == state_planted {

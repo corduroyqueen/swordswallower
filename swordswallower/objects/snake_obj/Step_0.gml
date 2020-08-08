@@ -6,9 +6,9 @@ if death {
 			instance_destroy(hit)	
 		}
 		go = instance_create_depth(head.x,head.y,0,snakeheaddead_obj)
-		go.hspeed = tail_obj.throwxs*0.4
-		go.vspeed = tail_obj.throwys*0.4
-		go.spinspeed = random_range(20,100) * -sign(go.hspeed)
+		go.hsp = tail_obj.throwxs*0.4
+		go.vsp = tail_obj.throwys*0.4
+		go.spinspeed = random_range(20,100) * -sign(go.hsp)
 	
 		instance_destroy(head)
 		deathinit = false
@@ -89,8 +89,8 @@ if death {
 		
 		
 		if point_distance(head.x,head.y,targetx,targety) < head.speed {
-			head.hspeed = 0
-			head.vspeed = 0
+			head.hsp = 0
+			head.vsp = 0
 		
 			
 			//weak_spot.distance = random_range(20,point_distance(x,y,head.x,head.y)-10)s
@@ -129,8 +129,8 @@ if death {
 			atk_timer = 0
 			head.x = x
 			head.y = y
-			head.hspeed = 0
-			head.vspeed = 0
+			head.hsp = 0
+			head.vsp = 0
 		}
 	}
 }

@@ -18,8 +18,8 @@ if writhing = true {
 	walk_dir = 0	
 	walk_perp = 0
 	if place_meeting(x,y+1,wall_obj) || place_meeting(x,y+1,break_wall_obj) || place_meeting(x,y+1,door_obj) {
-		hspeed = lerp(hspeed,0,0.2)
-		vspeed = 0
+		hsp = lerp(hsp,0,0.2)
+		vsp = 0
 	}
 	
 	if fallingoverride {
@@ -50,7 +50,7 @@ if player_obj.tail_carry {
 if place_meeting(x,y+1,wall_obj) {
 	
 } else {
-	//vspeed+=grav
+	//vsp+=grav
 }
 
 walk_dir = clamp(walk_dir,-h_max_speed,h_max_speed)	
@@ -59,8 +59,8 @@ if sword_present {
 	if going_right { lmao = -1 } else { lmao = 1 }
 	
 	met = true
-	tail_obj.hspeed = 0
-	tail_obj.vspeed = 0
+	tail_obj.hsp = 0
+	tail_obj.vsp = 0
 	tail_obj.y = y + sword_hold_y
 	tail_obj.x = x + (sword_hold_x * lmao)
 	tail_obj.inside_flier = true
@@ -70,15 +70,15 @@ if sword_present {
 		sword_present = false	
 		audio_play_sound(Knife_Pull_140,0,false)	
 		fallingoverride = true
-		hspeed = 0
-		vspeed = 0
+		hsp = 0
+		vsp = 0
 		move_towards_point(player_obj.x,player_obj.y,6)
-		hspeed*=0.5
+		hsp*=0.5
 		if dir_ground {
-			vspeed-=2	
+			vsp-=2	
 		}
 		if dir_ceiling {
-			vspeed*=0.5	
+			vsp*=0.5	
 		}
 		
 	}
@@ -86,7 +86,7 @@ if sword_present {
 
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.1,20,true,sprite_width,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.1,20,true,sprite_width,sprite_height)
 	audio_manager(false,0,false,3)
 	if sword_present {
 		player_obj.tail_planted = false
@@ -154,15 +154,15 @@ if !fallingoverride {
 	}
 	
 	if dir_ground || dir_ceiling {
-		hspeed = walk_dir
-		vspeed = walk_perp
+		hsp = walk_dir
+		vsp = walk_perp
 	
 	} else {
-		hspeed = walk_perp
-		vspeed = walk_dir
+		hsp = walk_perp
+		vsp = walk_dir
 	}
 } else {
-	vspeed+=grav
+	vsp+=grav
 	
 	if place_meeting(x,y+1,wall_obj) && !place_meeting(x,y+1,break_wall_obj) && !place_meeting(x,y+1,door_obj) {
 		writhing = true
@@ -177,9 +177,9 @@ if !fallingoverride {
 
 last_fly_hp = fly_hp
 
-//if(abs(hspeed) < h_decel){
-//	hspeed=0;	
+//if(abs(hsp) < h_decel){
+//	hsp=0;	
 //} else {
-//	hspeed-=sign(hspeed) * h_decel;	
+//	hsp-=sign(hsp) * h_decel;	
 //}
 

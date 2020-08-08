@@ -2,13 +2,13 @@
 // You can write your code in this editor
 
 if locked {
-	vspeed=0
-	hspeed=0
+	vsp=0
+	hsp=0
 } else {
 	if step==0 {
 		step=0.5	
 	}
-	vspeed+=step
+	vsp+=step
 	
 	
 }

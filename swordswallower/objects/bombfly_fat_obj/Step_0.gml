@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if death {
-	just_blood(tail_obj.hspeed,tail_obj.vspeed,0.2,30,false,sprite_width/4,sprite_height)
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 	
 	at=instance_create_depth(x,y,depth+1,default_atk_obj)	
 	at.timer =5
@@ -18,6 +18,6 @@ if death {
 		death = true
 	}
 
-	hspeed = 0
-	vspeed = 0
+	hsp = 0
+	vsp = 0
 }
