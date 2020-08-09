@@ -9,14 +9,8 @@ if locked {
 		step=0.5	
 	}
 	vsp+=step
-	if place_meeting(x,y,wall_obj) {
-		rotation_speed/=5
-		while(place_meeting(x,y,wall_obj)) {
-			x-=hsp/2
-			y-=vsp/2
-		}
-	}
-	if place_meeting(x,y+1,wall_obj) {
+	moveX(hsp)
+	if vsp>=0 && moveBoolY(vsp) {
 		locked = true	
 	}
 	

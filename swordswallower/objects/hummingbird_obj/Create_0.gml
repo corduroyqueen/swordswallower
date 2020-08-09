@@ -8,4 +8,3 @@ current_node = 0
 
 sword_present = false
 met= false
-intangible = false

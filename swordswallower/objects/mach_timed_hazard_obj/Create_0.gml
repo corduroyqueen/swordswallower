@@ -3,7 +3,7 @@
 
 master = noone
 on = false
-intangible = false
+
 
 pers=0
 act = false

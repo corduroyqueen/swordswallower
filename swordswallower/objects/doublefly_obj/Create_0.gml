@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+event_inherited()
 chirp_timer = 0 
 chirp_timer_m = random_range(10,20)
 chirp = choose(eye_chirp1,eye_chirp2,eye_chirp3)

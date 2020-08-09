@@ -1,6 +1,6 @@
 
 	if tail_obj.ang==0 {
-		if sign(tail_obj.x-tail_obj.current_wallx)<0 {
+		if sign(tail_obj.x-tail_obj.current_objx)<0 {
 			while place_meeting(x,y,c_w) {
 				x-=2
 			}
@@ -23,7 +23,7 @@
 			}
 		}
 	} else {
-		if sign(tail_obj.y-tail_obj.current_wally)<0 {
+		if sign(tail_obj.y-tail_obj.current_objy)<0 {
 			while place_meeting(x,y,c_w) {
 				y-=1
 			}
@@ -50,7 +50,7 @@
 	
 	if place_meeting(x,y,black_wall_obj) {
 		if tail_obj.ang==0 {
-			if sign(tail_obj.x-tail_obj.current_wallx)<0 {
+			if sign(tail_obj.x-tail_obj.current_objx)<0 {
 				while place_meeting(x,y,c_w) {
 					x-=2
 				}
@@ -73,7 +73,7 @@
 				}
 			}
 		} else {
-			if sign(tail_obj.y-tail_obj.current_wally)<0 {
+			if sign(tail_obj.y-tail_obj.current_objy)<0 {
 				while place_meeting(x,y,c_w) {
 					y-=1
 				}
@@ -101,7 +101,7 @@
 	
 	if tail_obj.moving_platform_bool {
 		if tail_obj.ang==0 {
-			if sign(tail_obj.x-tail_obj.current_wallx)<0 {
+			if sign(tail_obj.x-tail_obj.current_objx)<0 {
 				while place_meeting(x,y,c_w) {
 					x-=2
 				}
@@ -124,7 +124,7 @@
 				}
 			}
 		} else {
-			if sign(tail_obj.y-tail_obj.current_wally)<0 {
+			if sign(tail_obj.y-tail_obj.current_objy)<0 {
 				while place_meeting(x,y,c_w) {
 					y-=1
 				}

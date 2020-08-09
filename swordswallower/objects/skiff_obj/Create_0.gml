@@ -2,7 +2,7 @@
 // You can write your code in this editor
 go = false
 startx = x
-intangible = false
+
 sword_present = false
 
 dialogue=""

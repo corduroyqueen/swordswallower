@@ -7,6 +7,12 @@
 //	global.mousepx,
 //	global.mousepy)
 
+
+
+
+//draw_circle(tail_obj.x+tail_hilt_x,tail_obj.y+tail_hilt_y,5,false)
+//draw_circle(tail_obj.x,tail_obj.y,5,true)
+
 if player_obj.death {
 	//draw_set_color( make_color_rgb(255 * level1_master.blood_cr,255  * level1_master.blood_cg,255  * level1_master.blood_cb) )
 	//draw_set_color(c_white)
@@ -151,3 +157,24 @@ player_obj.y + sin(degtorad(180-player_obj.ang1))*50)
 draw_sprite(red_pointer,0,
 player_obj.x + cos(degtorad(180-player_obj.ang2))*50,
 player_obj.y + sin(degtorad(180-player_obj.ang2))*50)
+
+
+draw_circle(bbox_right,y,4,false)
+draw_circle(bbox_left,y,4,false)
+
+
+with player_obj {
+	draw_circle(bbox_right,y,4,false)
+	draw_circle(bbox_left,y,4,false)	
+	draw_circle(x,bbox_bottom,4,false)
+	draw_circle(x,bbox_top,4,false)	
+}
+
+with tail_obj {
+	draw_circle(bbox_right,y,4,false)
+	draw_circle(bbox_left,y,4,false)
+	draw_circle(x,bbox_bottom,4,false)
+	draw_circle(x,bbox_top,4,false)	
+	
+	
+}

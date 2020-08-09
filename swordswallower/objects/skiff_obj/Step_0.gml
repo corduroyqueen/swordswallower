@@ -45,8 +45,8 @@ if !done {
 			with player_obj {
 				x = player_hitbox_check_obj.x	
 				y = player_hitbox_check_obj.y
-				xvheld = x-tail_obj.current_wall.x
-				yvheld = y-tail_obj.current_wall.y
+				xvheld = x-tail_obj.current_obj.x
+				yvheld = y-tail_obj.current_obj.y
 			}
 			
 		}	

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
+
 cca = 5
 tspeed = 69
 pspeed = 69
@@ -37,13 +39,15 @@ insert_vs = 0
 
 planted_wall = false
 
-current_wall = false
-current_wallx = 0
-current_wally = 0
+current_obj = false
+current_objx = 0
+current_objy = 0
 ang=0
 outside=false
 
 stinky = false
+
+current_obj = noone
 
 
 sword_particle_spawn = 30
@@ -75,3 +79,8 @@ thrown_ang = 0
 
 hsp=0
 vsp=0
+
+current_obj = instance_place(x,y,wall_obj)
+
+hilt_x = 0
+hilt_y = 0

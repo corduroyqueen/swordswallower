@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-intangible = false
+
 startx = x
 starty = y
 length = 0

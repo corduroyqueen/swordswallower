@@ -33,6 +33,8 @@ if (moveXPos != 0 || moveYPos != 0) {
 	oy = y
 	x=0
 	y=0
+	
+	//sdm(player_obj.tail_planted)
 	//sdm(riding_list[| 0])
 	//Make this Solid non-collidable for Actors, 
 	//so that Actors moved by it do not get stuck on it 
@@ -45,7 +47,10 @@ if (moveXPos != 0 || moveYPos != 0) {
 		    for (i=0; i<instance_number(actor_parent_obj); i++) { 
 				var actor = instance_find(actor_parent_obj,i)
 				//sdm(ds_list_find_index(riding_list,actor))
-		        if (place_meeting(ox,oy,actor)) { 
+		        if (place_meeting(ox,oy,actor)) && !actor.intangible
+				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self) { 
+				
+					
 			        //Push right 
 					with actor {
 						moveX(other.o_bbox_right - bbox_left + other.moveXPos + 1)
@@ -61,8 +66,10 @@ if (moveXPos != 0 || moveYPos != 0) {
 		    for (i=0; i<instance_number(actor_parent_obj); i++) { 
 				var actor = instance_find(actor_parent_obj,i)
 				
-		        if (place_meeting(ox,oy,actor)) 
+		        if (place_meeting(ox,oy,actor) && !actor.intangible) 
+				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self)
 		        { 
+					sdm("ok2")
 					//Push left 
 					with actor {
 						moveX(other.o_bbox_left - bbox_right + other.moveXPos - 1)
@@ -76,7 +83,6 @@ if (moveXPos != 0 || moveYPos != 0) {
 				} 
 			}
 		}
-		
 	}     
 	
 	if (moveYPos != 0) 
@@ -88,7 +94,9 @@ if (moveXPos != 0 || moveYPos != 0) {
 	    if (moveYPos > 0) { 
 		    for (i=0; i<instance_number(actor_parent_obj); i++) { 
 				var actor = instance_find(actor_parent_obj,i)
-		        if (place_meeting(ox,oy,actor)) { 
+		        if (place_meeting(ox,oy,actor) && !actor.intangible) 
+				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self) { 
+					sdm("ok3")
 			        //Push down
 					with actor {
 						moveY(other.o_bbox_bottom - bbox_top + other.moveYPos+ 1)
@@ -103,9 +111,10 @@ if (moveXPos != 0 || moveYPos != 0) {
 		 } else { 
 		    for (i=0; i<instance_number(actor_parent_obj); i++) { 
 				var actor = instance_find(actor_parent_obj,i)
-				
-		        if (place_meeting(ox,oy,actor)) 
+		        if (place_meeting(ox,oy,actor) && !actor.intangible) 
+				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self)
 		        { 
+					sdm("ok4")
 					//Push up
 					with actor {
 						moveY(other.o_bbox_top - bbox_bottom + other.moveYPos - 1)
@@ -119,12 +128,15 @@ if (moveXPos != 0 || moveYPos != 0) {
 				} 
 			}
 		}
-		
 	}     
+	//amoving_plat_carry_sword()
+	
 	//Re-enable collisions for this Solid 
 	x = ox
 	y = oy
 	
 	ds_list_clear(riding_list)
+	
+	
 	//Collidable = true; 
 } 

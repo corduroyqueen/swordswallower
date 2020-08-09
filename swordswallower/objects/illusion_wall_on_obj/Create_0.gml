@@ -5,5 +5,5 @@
 event_inherited();
 
 active = true
-intangible = false
+
 num = 0

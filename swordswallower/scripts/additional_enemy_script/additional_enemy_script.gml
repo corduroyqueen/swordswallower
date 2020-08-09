@@ -30,7 +30,7 @@ if obj==hum_food_obj {
 	player_obj.tail_pulling = false
 	player_obj.shake_d=5
 	player_obj.camera_shake_d = true
-	current_wall = local_obj
+	current_obj = local_obj
 	//tail_obj.x = local_obj.x
 	//tail_obj.y = local_obj.y
 	audio_manager(false,0,false,3)

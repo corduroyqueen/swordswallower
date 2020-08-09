@@ -6,7 +6,7 @@ event_inherited();
 
 held=true
 grav = 0.25
-intangible = false
+
 sword_present = false
 vertical = true
 horizontal = false

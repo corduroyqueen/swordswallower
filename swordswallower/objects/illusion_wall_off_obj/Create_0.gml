@@ -5,7 +5,7 @@
 event_inherited();
 
 active = false
-intangible = false
+
 startx = x
 starty = y
 num = 0

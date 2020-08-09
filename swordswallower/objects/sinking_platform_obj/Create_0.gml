@@ -7,7 +7,7 @@ event_inherited();
 startx = x
 starty = y
 sword_present = false
-intangible = false
+
 pers=0
 
 horizontal = false

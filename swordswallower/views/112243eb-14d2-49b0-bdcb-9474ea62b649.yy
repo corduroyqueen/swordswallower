@@ -34,8 +34,7 @@
         "5f0d5a89-f8de-4a77-af8b-2742e157ec18",
         "cbfd402c-317d-4e67-803c-606c95a04ab0",
         "9f863481-ff3f-4775-b923-7979517b9f3b",
-        "ef041dca-b9a0-4349-a099-67117bf73753",
-        "b9d000fa-ad4b-46c4-8933-b960431ab8f4"
+        "ef041dca-b9a0-4349-a099-67117bf73753"
     ],
     "filterType": "GMSprite",
     "folderName": "level_mechanics",

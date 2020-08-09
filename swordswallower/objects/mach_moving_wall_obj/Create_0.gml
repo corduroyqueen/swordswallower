@@ -13,5 +13,5 @@ pause_length = 40
 
 move_speed = 5
 
-intangible = false
+
 sword_present = false

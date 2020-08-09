@@ -18,7 +18,7 @@ if player_obj.tail_planted {
 				angry_timer= 0
 				death = false
 				met = false
-				intangible = false
+				
 				angry_timer_m = 65
 				sprite_index = follow_guy
 				hsp =0

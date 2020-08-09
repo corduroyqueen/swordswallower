@@ -27,7 +27,7 @@ while !wall_checker(x,yc) {
 
 ok = make_color_hsv(11,67,95)
 
-intangible = false
+
 
 
 

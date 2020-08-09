@@ -183,8 +183,8 @@ hspreva = hsp
 vspreva = vsp
 
 if ending_lock {
-	x = tail_obj.current_wall.x + xvheld
-	y = tail_obj.current_wall.y + yvheld
+	x = tail_obj.current_obj.x + xvheld
+	y = tail_obj.current_obj.y + yvheld
 	
 	x = clamp(x,skiff_obj.x-30,skiff_obj.x+30)
 	y = skiff_obj.y+64
@@ -214,13 +214,13 @@ if view_visible[1] {
 if zoom_timer_bool {
 	moveZoomX(hsp)
 	moveZoomY(vsp)
+	intangible = true
 } else {
 	moveX(hsp)
-	moveY(vsp)	
+	moveY(vsp)
+	intangible = false
 }
-if !zoom_timer_bool && wall_detect_solids(x,y) {
-	hp-=100
-}
+
 
 enemy_collision()
 
@@ -264,7 +264,7 @@ sdm("TAIL PLANTED:  " + string(tail_planted))
 sdm("TAIL CARRYING: " + string(tail_carry))
 
 
-("TAIL ZOOMING:  " + string(tail_zooming))
-sdm("TAIL HELD:     " + string(tail_held))
+//sdm("TAIL ZOOMING:  " + string(tail_zooming))
+//sdm("TAIL HELD:     " + string(tail_held))
 
 //sdm(zoom_timer)

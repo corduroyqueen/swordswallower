@@ -8,7 +8,7 @@ if sword_present {
 	//tail_obj.y = y + swordy
 	
 	//tail_obj.current_obj = self
-	tail_obj.current_wall = self
+	tail_obj.current_obj = self
 	tail_obj.moving_platform_bool = true
 	//if player_obj.tail_pulling {
 	//	sword_present = false

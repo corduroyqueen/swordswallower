@@ -129,9 +129,9 @@ if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vsp<max_vs {
 }
 
 if tail_obj.moving_platform_bool {
-	//if instance_exists(tail_obj.current_wall) {
-	player_hitbox_check_obj.x = player_hitbox_check_obj.x + tail_obj.current_wall.hsp
-	player_hitbox_check_obj.y = player_hitbox_check_obj.y + tail_obj.current_wall.vsp
+	//if instance_exists(tail_obj.current_obj) {
+	player_hitbox_check_obj.x = player_hitbox_check_obj.x + tail_obj.current_obj.hsp
+	player_hitbox_check_obj.y = player_hitbox_check_obj.y + tail_obj.current_obj.vsp
 	tail_dest_x = player_hitbox_check_obj.x
 	tail_dest_y = player_hitbox_check_obj.y
 	//}
@@ -158,7 +158,7 @@ if ability_spin_jump {
 	}
 }
 if held_position {
-	if tail_obj.current_wall.object_index==wood_wall_obj {
+	if tail_obj.current_obj.object_index==wood_wall_obj {
 		//damage_script(10,sign(player_obj.x-x),5,-1)	
 	}
 	if tail_obj.moving_platform_bool {
@@ -167,14 +167,14 @@ if held_position {
 		if held_pos_timer<3 {
 			x = player_hitbox_check_obj.x	
 			y = player_hitbox_check_obj.y
-			xvheld = x-tail_obj.current_wall.x
-			yvheld = y-tail_obj.current_wall.y
+			xvheld = x-tail_obj.current_obj.x
+			yvheld = y-tail_obj.current_obj.y
 			
 			
 		}
 		
-		x = tail_obj.current_wall.x + xvheld
-		y = tail_obj.current_wall.y + yvheld
+		x = tail_obj.current_obj.x + xvheld
+		y = tail_obj.current_obj.y + yvheld
 		hsp = held_start_hsp
 		vsp = held_start_vsp
 		collision_swordpos(moving_platform_obj)
@@ -187,17 +187,17 @@ if held_position {
 		
 		
 		if !(place_meeting(x,y,wall_obj) || place_meeting(x,y,black_wall_obj)) {
-			x = x + tail_obj.current_wall.hsp	
-			y = y + tail_obj.current_wall.vsp		
+			x = x + tail_obj.current_obj.hsp	
+			y = y + tail_obj.current_obj.vsp		
 		}
 		
 		if place_meeting(x,y,wall_obj) || place_meeting(x,y,black_wall_obj) {
-			hsp = tail_obj.current_wall.hsp
-			vsp = tail_obj.current_wall.vsp
+			hsp = tail_obj.current_obj.hsp
+			vsp = tail_obj.current_obj.vsp
 			default_collision(wall_obj)
 			default_collision(black_wall_obj)
-			xvheld = x-tail_obj.current_wall.x
-			yvheld = y-tail_obj.current_wall.y
+			xvheld = x-tail_obj.current_obj.x
+			yvheld = y-tail_obj.current_obj.y
 			hsp = 0
 			vsp = 0
 		} 
@@ -232,19 +232,7 @@ if held_position {
 		out_of_dash_t=-10
 		held_position = false
 		held_release_timer = 10
-		if tail_obj.moving_platform_bool && 
-		(tail_obj.current_obj.object_index == moving_platform_obj
-		|| tail_obj.current_obj.object_index == sinking_platform_obj) {
-			//var h = hsp
-			//var v = vsp
-			if tail_obj.current_obj.vertical {
-				y += sign(y-tail_obj.current_obj.y)*10	
-			} else {
-				x += sign(x-tail_obj.current_obj.x)*10		
-			}
-			//move_towards_point(tail_obj.current_obj.x,tail_obj.current_obj.y,2)
-			//default_collision(tail_obj.current_obj)
-		}
+		
 	}
 	if (k_fire_p || k_dash_r) {
 		reset_intangibility()
@@ -255,19 +243,7 @@ if held_position {
 		//}
 		held_position = false
 		held_release_timer = 10
-		if tail_obj.moving_platform_bool && 
-		(tail_obj.current_obj.object_index == moving_platform_obj
-		|| tail_obj.current_obj.object_index == sinking_platform_obj) {
-			//var h = hsp
-			//var v = vsp
-			if tail_obj.current_obj.vertical {
-				y += sign(y-tail_obj.current_obj.y)*10	
-			} else {
-				x += sign(x-tail_obj.current_obj.x)*10		
-			}
-			//move_towards_point(tail_obj.current_obj.x,tail_obj.current_obj.y,2)
-			//default_collision(tail_obj.current_obj)
-		}
+		
 	}
 	
 	held_bounce_timer--

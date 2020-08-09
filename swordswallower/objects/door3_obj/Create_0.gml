@@ -5,7 +5,7 @@ broken = false
 
 met = false
 pers=0
-intangible = false
+
 friendo = self
 if place_meeting(x,y,wall_obj) {
 	if distance_to_object(instance_nearest(x,y,wall_obj))<5 {

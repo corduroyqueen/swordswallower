@@ -9,14 +9,18 @@ if level1_master.dev {
 	}
 }
 
-
-if held_position && !ending_lock {
+if !zoom_timer_bool && wall_detect_solids(x,y) {
+	x = xpreva
+	y = ypreva
+	if wall_detect_solids(x+1,y) 
+	&& wall_detect_solids(x-1,y) 
+	&& wall_detect_solids(x,y+1) 
+	&& wall_detect_solids(x,y-1) {
+		hp-=100
+	}
 	
-	if tail_obj.moving_platform_bool { 
-		x = player_hitbox_check_obj.x
-		y = player_hitbox_check_obj.y
-	}	
 }
+
 if door_enter {
 	door_enter = false
 }

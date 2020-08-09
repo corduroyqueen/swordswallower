@@ -1,6 +1,6 @@
 /// @description Insert description here
 death = false
-intangible = false
+
 
 fly_hp = 3
 

@@ -27,7 +27,7 @@ if master.ended {
 if enabled {
 	if point_distance(x,y,endx,endy)>1 {
 		//movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
-		move_towards_point(endx,endy,movespeed)
+		sp_towards_target(endx,endy,movespeed,1)
 		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
@@ -45,7 +45,7 @@ if enabled {
 } else {
 	if point_distance(x,y,startx,starty)>1 {
 		//movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
-		move_towards_point(startx,starty,movespeed)
+		sp_towards_target(startx,starty,movespeed,1)
 		if point_distance(x,y,startx,starty)<(1+speed){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
@@ -60,3 +60,10 @@ if enabled {
 }
 x = clamp(x,x1,x2)
 y = clamp(y,y1,y2)
+
+if in_camera_range_bigger(x,y) {
+	moving_plat_move(hsp,vsp)
+} else {
+	moveZoomX(hsp)	
+	moveZoomY(vsp)	
+}

@@ -3,7 +3,7 @@
 enabled = false
 partner = noone
 hit = false
-intangible = false
+
 
 enemy = false
 enemy_list = array_create(30)

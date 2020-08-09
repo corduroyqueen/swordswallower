@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
 camera_set_view_pos(view_camera[0],x-640,y-360)
+
 key_left = ord("A")
 key_right = ord("D")
 key_jump = vk_space

@@ -72,7 +72,7 @@ with (player_hitbox_check_obj) {
 
 
 
-c_w=tail_obj.current_wall
+c_w=tail_obj.current_obj
 if tail_obj.ang==0 {
 	
 	if place_meeting(x,y,wall_obj) {
@@ -104,12 +104,12 @@ if tail_obj.ang==0 {
 
 if tail_obj.moving_platform_bool && (place_meeting(x,y,wall_obj)||place_meeting(x,y,black_wall_obj)) {
 
-	hsp = tail_obj.current_wall.hsp
-	vsp = tail_obj.current_wall.vsp
+	hsp = tail_obj.current_obj.hsp
+	vsp = tail_obj.current_obj.vsp
 	default_collision(wall_obj)
 	default_collision(black_wall_obj)
-	xvheld = x-tail_obj.current_wall.x
-	yvheld = y-tail_obj.current_wall.y
+	xvheld = x-tail_obj.current_obj.x
+	yvheld = y-tail_obj.current_obj.y
 	hsp = 0
 	vsp = 0	
 	

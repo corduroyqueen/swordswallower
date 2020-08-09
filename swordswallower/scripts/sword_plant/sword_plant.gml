@@ -2,24 +2,24 @@ local_obj = argument0
 
 
 get_angle(local_obj)
-insert_hs = hsp
-insert_vs = vsp
-		
+
 wall_particle_tail_script(hsp/2,vsp/2,0.2,5,true,2,2,rubble_s1)
 		
-hsp = 0
-vsp = 0
-planted=true
+planted=true	
+hilt_x = x+cos(degtorad(tail_obj.image_angle+270)) * 66
+hilt_y = y-sin(degtorad(tail_obj.image_angle+270)) * 66
+
+with player_hitbox_check_obj {
+	event_user(1)
+}
 		
-player_hitbox_check_obj.go = true
 		
+player_obj.tail_dest_x = player_hitbox_check_obj.x
+player_obj.tail_dest_y = player_hitbox_check_obj.y
 		
-//player_obj.tail_dest_x = player_hitbox_check_obj.x
-//player_obj.tail_dest_y = player_hitbox_check_obj.y
-		
-current_wall = local_obj
-current_wallx = local_obj.x
-current_wally = local_obj.y
+current_obj = local_obj
+current_objx = local_obj.x
+current_objy = local_obj.y
 		
 		
 player_obj.tail_throwing = false

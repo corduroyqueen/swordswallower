@@ -10,13 +10,13 @@ player_obj.y = player_obj.tail_dest_y
 reset_intangibility()
 
 if !player_obj.k_dash
-|| current_wall.object_index==impale_circle_obj
-|| current_wall.object_index==impale_circle_moving_obj
-|| current_wall.object_index==skyswitcher_obj 
+|| current_obj.object_index==impale_circle_obj
+|| current_obj.object_index==impale_circle_moving_obj
+|| current_obj.object_index==skyswitcher_obj 
 || place_meeting(x,y,ghost_obj) 
-|| current_wall.object_index==hummingbird_obj
-|| current_wall.object_index==hum_food_obj
-|| current_wall.object_index==circle_friend_obj {
+|| current_obj.object_index==hummingbird_obj
+|| current_obj.object_index==hum_food_obj
+|| current_obj.object_index==circle_friend_obj {
 	player_obj.zoom_timer_bool = false
 	player_obj.zoom_timer = 0
 	player_obj.bounced = false
@@ -37,10 +37,10 @@ if !player_obj.k_dash
 		player_obj.hsp = clamp(player_obj.hsp,-25,25)
 		player_obj.vsp = clamp(player_obj.vsp,-25,25)
 		if place_meeting(x,y,hum_food_obj) {
-			current_wall.death = true
+			current_obj.death = true
 		}
-		if current_wall.object_index==circle_friend_obj {
-			current_wall.active = false
+		if current_obj.object_index==circle_friend_obj {
+			current_obj.active = false
 		}
 	}
 	if player_hitbox_check_obj.down_wall && abs(player_hitbox_check_obj.y-player_obj.y)<8 {
@@ -49,15 +49,16 @@ if !player_obj.k_dash
 	
 	
 } 
-else if current_wall.object_index!=impale_circle_obj 
-&& current_wall.object_index!=impale_circle_moving_obj 
-&& current_wall.object_index!=hummingbird_obj 
-&& current_wall.object_index!=hum_food_obj 
-&& current_wall.object_index!=door_obj
-&& current_wall.object_index!=circle_friend_obj//if point_distance(player_obj.start_throw_x,player_obj.start_throw_y,player_obj.tail_dest_x,player_obj.tail_dest_y)>50 || player_obj.gem_active 
+else if current_obj.object_index!=impale_circle_obj 
+&& current_obj.object_index!=impale_circle_moving_obj 
+&& current_obj.object_index!=hummingbird_obj 
+&& current_obj.object_index!=hum_food_obj 
+&& current_obj.object_index!=door_obj
+&& current_obj.object_index!=circle_friend_obj//if point_distance(player_obj.start_throw_x,player_obj.start_throw_y,player_obj.tail_dest_x,player_obj.tail_dest_y)>50 || player_obj.gem_active 
 {
-	held_pos_x = x
-	held_pos_y = y
+	held_pos_x = player_obj.x-x
+	held_pos_y = player_obj.y-y
+	
 	held_pos_ang = image_angle
 	
 	player_obj.held_position_ready = true	

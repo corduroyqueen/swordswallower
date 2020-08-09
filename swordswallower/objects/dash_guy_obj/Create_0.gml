@@ -7,7 +7,7 @@ angry = false
 angry_timer= 0
 death = false
 met = false
-intangible = false
+
 angry_timer_m = 65
 x_lock = x
 	y_lock = y

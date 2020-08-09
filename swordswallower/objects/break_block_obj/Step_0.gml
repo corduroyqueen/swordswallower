@@ -20,7 +20,7 @@ if gone {
 			timer=0
 			gone = true
 			timer_begin = false
-			if tail_obj.current_wall==self {
+			if tail_obj.current_obj==self {
 				player_obj.tail_planted = false
 				player_obj.tail_pulling = true
 				if player_obj.held_position {

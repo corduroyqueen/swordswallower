@@ -11,21 +11,6 @@ if tail_zooming {
 		player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hsp,player_obj.vsp))
 		player_obj.shake_dir = 25
 		
-		if tail_obj.inside_flier {
-			
-			
-			
-			if instance_exists(tail_obj.current_obj) {
-				tail_dest_x = tail_obj.current_obj.x
-				tail_dest_y = tail_obj.current_obj.y
-			}
-			
-			
-			if zoom_timer_bool && distance_to_object(tail_obj.current_obj)<zoom_dist {
-				zspeed = zspeed_enemy
-				grav_boost = 0
-			}
-		}
 		
 		
 		
@@ -46,7 +31,7 @@ if tail_zooming {
 		var ztempspeed = zspeed
 		
 		if grounded {
-			if instance_place(x,y+1,wall_obj)==tail_obj.current_wall {
+			if instance_place(x,y+1,wall_obj)==tail_obj.current_obj {
 				tail_dest_y=y	
 				ztempspeed=abs(x-player_hitbox_check_obj.x)/5
 				ztempspeed = clamp(ztempspeed,-zspeed,zspeed)
@@ -113,25 +98,22 @@ if zoom_timer_bool {
 	//	vsp += grav_boost
 	//}
 	zoom_timer++
+	
+	//sdm(object_get_name(tail_obj.current_obj.object_index))
+	if object_get_name(tail_obj.current_obj.object_index)==impale_circle_moving_obj {
+		player_hitbox_check_obj.x = tail_obj.current_obj.x	
+		player_hitbox_check_obj.y = tail_obj.current_obj.y
+		//sdm("goooo")
+	}
+	
+	tail_dest_x = player_hitbox_check_obj.x
+	tail_dest_y = player_hitbox_check_obj.y
+	
 	if point_distance(x,y,tail_dest_x,tail_dest_y)>37.5 {
 		//move_towards_point(tail_dest_x,tail_dest_y,zspeed)
 		hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
 		vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
 	}
-	//sdm(object_get_name(tail_obj.current_wall.object_index))
-	if object_get_name(tail_obj.current_wall.object_index)==impale_circle_moving_obj {
-		tail_dest_x = tail_obj.current_wall.x	
-		tail_dest_y = tail_obj.current_wall.y
-		hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
-		vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
-		//sdm("goooo")
-	} else if tail_obj.moving_platform_bool {
-		tail_dest_x = tail_obj.x
-		tail_dest_y = tail_obj.y
-		hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
-		vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * zspeed
-	}
-	
 	
 	if k_dash_r || !k_dash
 	|| k_fire_p {

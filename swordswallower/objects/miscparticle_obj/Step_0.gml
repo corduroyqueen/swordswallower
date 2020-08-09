@@ -7,7 +7,8 @@
 	
 if !surrounded {
 	vsp+=.4
-	if moveBoolX(hsp) || moveBoolY(vsp) {
+	moveX(hsp)
+	if vsp>=0 && moveBoolY(vsp) {
 		hsp=0
 		vsp=0
 		x = xpreva

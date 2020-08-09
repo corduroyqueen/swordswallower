@@ -3,7 +3,7 @@
 
 
 if hit {
-	intangible = true
+	ghosty = true
 	traveling = false
 	seeking = true
 	divs = 12
@@ -18,7 +18,7 @@ if hit {
 	intang_max = 50 + random_range(0,50)
 	hit = false
 	notears= false
-} else if intangible {
+} else if ghosty {
 	mspeed=2
 	divs = 8
 	intang_timer++
@@ -31,7 +31,7 @@ if hit {
 		if intang_timer>90+intang_max {
 			intang_timer=0
 			intang_proj_timer=0
-			intangible = false
+			ghosty = false
 			divs = 12
 			spawn_projectiles = true
 		}

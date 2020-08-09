@@ -158,7 +158,7 @@ if !tail_planted && !tail_held {
 		tail_zooming=true
 		zoom_pause = true
 		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
-		var check_obj = instance_create_depth(x,y,0,check_wall_hitbox_obj)
+		
 		
 		draw_line_obj.go = true	
 		draw_line_obj.gotimer=50

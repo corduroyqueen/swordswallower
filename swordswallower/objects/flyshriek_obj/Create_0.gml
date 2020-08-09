@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-
+event_inherited()
 fuck = 0
 h_accel = 3.75
 v_accel = .1

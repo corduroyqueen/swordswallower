@@ -5,6 +5,6 @@ broken = false
 
 met = false
 pers=0
-intangible = false
+
 friendo = self
 die = false

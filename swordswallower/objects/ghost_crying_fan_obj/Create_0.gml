@@ -5,7 +5,7 @@ tear_timer_spawn = 100
 
 spawn_projectiles = false
 
-intangible = false
+ghosty = false
 
 hp = 3
 

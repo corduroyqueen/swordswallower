@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-intangible = false
+
 startx = x
 starty = y
 length = 0

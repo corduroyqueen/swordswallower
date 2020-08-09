@@ -25,9 +25,9 @@ if tail_obj.stinky {
 					}
 				}
 			}
-		} else if tail_obj.current_wall {
+		} else if tail_obj.current_obj {
 			
-			target_obj = tail_obj.current_wall
+			target_obj = tail_obj.current_obj
 			if instance_exists(target_obj) && place_meeting(x+hsp,y+vsp,target_obj) {
 				if !variable_instance_exists(target_obj.id, "pers") {
 			

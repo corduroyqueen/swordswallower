@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+event_inherited()
 
 fuck = 0
 h_accel = 3.75

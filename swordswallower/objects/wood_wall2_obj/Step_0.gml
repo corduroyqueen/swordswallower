@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if fly_hp<=0 {
 	death = true	
-	if player_obj.tail_planted && tail_obj.current_wall==self {
+	if player_obj.tail_planted && tail_obj.current_obj==self {
 		player_obj.tail_planted = false
 		player_obj.tail_pulling = true
 	}

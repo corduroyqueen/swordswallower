@@ -3,4 +3,3 @@
 enabled = false
 partner = noone
 hit = false
-intangible = false

@@ -225,9 +225,9 @@ while (dist_moved < abs(hsp)) {
 		//player_obj.tail_dest_x = player_hitbox_check_obj.x
 		//player_obj.tail_dest_y = player_hitbox_check_obj.y
 		
-		current_wall = local_obj
-		current_wallx = local_obj.x
-		current_wally = local_obj.y
+		current_obj = local_obj
+		current_objx = local_obj.x
+		current_objy = local_obj.y
 		
 		
 		player_obj.tail_throwing = false
@@ -353,9 +353,9 @@ while (dist_moved < abs(vsp)) {
 		
 		player_hitbox_check_obj.go = true
 		
-		current_wall = local_obj
-		current_wallx = local_obj.x
-		current_wally = local_obj.y
+		current_obj = local_obj
+		current_objx = local_obj.x
+		current_objy = local_obj.y
 		
 		player_obj.tail_throwing = false
 		player_obj.tail_planted = true

@@ -6,8 +6,9 @@ if pickup_timer>0 {
 if player_obj.tail_carry {
 	if player_obj.held_position {
 		visible = true
-		x = held_pos_x
-		y = held_pos_y
+		x = player_obj.x-held_pos_x
+		y = player_obj.y-held_pos_y
+		
 		image_angle = held_pos_ang
 		hsp=0
 		vsp=0
@@ -201,6 +202,8 @@ if player_obj.tail_held {
 if player_obj.tail_planted {
 	throw_timer=0
 	throw_count=0
+	hilt_x = x+cos(degtorad(tail_obj.image_angle+270)) * 66
+	hilt_y = y-sin(degtorad(tail_obj.image_angle+270)) * 66
 	if pickup_timer>0 {
 		pickup_timer--	
 		if mouse_check_button(mb_left) {
@@ -253,17 +256,13 @@ if player_obj.tail_planted {
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<get_player_speed()+1
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0)
-	&& !inside_flier && instance_exists(current_wall)
-	&& current_wall.object_index!=door_obj{
+	&& !inside_flier && instance_exists(current_obj)
+	&& current_obj.object_index!=door_obj{
 		//sdm("a")
 		reset_intangibility()
 		
 		player_obj.c_slingtimer = 2.5
-		if !current_wall.intangible {
-			//sdm("help")
-			fucking_wall_thing()
-	//	sdm("c")
-		} else if !collision_line(player_obj.tail_dest_x,player_obj.tail_dest_y,player_obj.x,player_obj.y,wall_obj,false,true){
+		if !collision_line(player_obj.tail_dest_x,player_obj.tail_dest_y,player_obj.x,player_obj.y,wall_obj,false,true){
 			//sdm("d")
 			fucking_wall_thing()
 			
@@ -273,8 +272,8 @@ if player_obj.tail_planted {
 		}
 	
 	} else if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<165 
-	&& !inside_flier && current_obj!=dash_guy_obj  && current_wall.object_index!=door_obj
-	&& current_wall.object_index!=circle_friend_obj && !player_obj.zoom_timer_bool && pickup_timer<1 && !player_obj.intro
+	&& !inside_flier && current_obj!=dash_guy_obj  && current_obj.object_index!=door_obj
+	&& current_obj.object_index!=circle_friend_obj && !player_obj.zoom_timer_bool && pickup_timer<1 && !player_obj.intro
 	{ //sdm(" b")
 		player_obj.tail_planted = false
 		player_obj.tail_pulling = true
@@ -284,7 +283,7 @@ if player_obj.tail_planted {
 		//	player_obj.held_release_timer = 10
 		//}
 		/*
-		if current_wall.object_index==impale_circle_obj {
+		if current_obj.object_index==impale_circle_obj {
 			player_obj.hsp*=0.8
 			player_obj.vsp*=0.8
 		} else {
@@ -303,8 +302,6 @@ if player_obj.tail_planted {
 } else {
 	
 	if throw_timer>4 {
-		current_wall = false
-		current_obj = false
 	}
 	sword_particle_spawn = 30
 }
@@ -318,7 +315,7 @@ if player_obj.fire_active {
 	fire_timer = 0
 }
 
-if current_wall==moving_platform_obj {
+if current_obj==moving_platform_obj {
 			
 		
 		
@@ -327,41 +324,6 @@ if current_wall==moving_platform_obj {
 		
 			
 			
-	
-}
-
-if moving_platform_bool {
-	if current_wall.sword_present {
-		x = current_wall.x + current_wall.swordx
-		y = current_wall.y + current_wall.swordy
-	}
-	/*
-	if place_meeting(x,y,wall_obj) || place_meeting(x,y,black_wall_obj) {
-		//platform_movingout = true
-		hsp = current_wall.hsp*10
-		vsp = current_wall.vsp*10
-		if place_meeting(x,y,wall_obj) {
-			default_collision(wall_obj)
-		} else {
-			default_collision(black_wall_obj)
-		}
-		hsp = 0
-		vsp = 0
-		current_wall.swordx = x-current_wall.x
-		current_wall.swordy = y-current_wall.y
-		if tail_obj.current_wall.vertical {
-			player_hitbox_check_obj.y = y
-			tail_dest_x = player_hitbox_check_obj.x
-			tail_dest_y = player_hitbox_check_obj.y
-		} else {
-			player_hitbox_check_obj.x = x
-			tail_dest_x = player_hitbox_check_obj.x
-			tail_dest_y = player_hitbox_check_obj.y
-		}
-		
-	} else {
-		//platform_movingout = false
-	}*/
 	
 }
 
@@ -385,102 +347,134 @@ if player_obj.tail_throwing || player_obj.tail_pulling {
 
 xpreva = x
 ypreva = y
-mask_index=sword_whirling
-if player_obj.tail_throwing {
-	moveSwordX(hsp)
-	moveSwordY(vsp)
-} else if player_obj.tail_pulling {
-	moveZoomX(hsp)
-	moveZoomY(vsp)	
-}
 
 if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 	player_obj.tail_throwing = false
 	player_obj.tail_planted = false
 	player_obj.tail_pulling = true
+}
+
+mask_index=sword_whirling
+if player_obj.tail_planted {
+	//if instance_exists(current_obj) {
+	//	moveX(round(current_obj.hsp))
+	//	moveY(round(current_obj.vsp)) 
+	//} else {
+	//	current_obj = self	
+	//}
+	
+	if !instance_exists(current_obj) {
+		current_obj = noone	
+	} else {
+		
+	}
+	
+	intangible = false	
+} else if player_obj.tail_throwing {
+	current_obj=noone
+	temp_hs = hsp
+	temp_vs = vsp
+	moveSwordX(hsp)
+	moveSwordY(vsp)
+	if current_obj!=noone {
+		sword_plant(current_obj)	
+	}
+	intangible = false
+	
+} else if player_obj.tail_pulling {
+	moveZoomX(hsp)
+	moveZoomY(vsp)	
+	intangible = true
+} else if player_obj.tail_carry {
+	intangible = true
+}
+if instance_exists(current_obj) {
+	//sdm(object_get_name(current_obj.object_index))
 } else {
-	if player_obj.tail_throwing || player_obj.tail_pulling { 
-		mask_index=sword_whirling_enemy
-		//      collision_iterate_enemy(fatfly_obj)
-		//     collision_iterate_enemy(flyswarm_obj)
-		//    collision_iterate_enemy(hum_food_obj)
-		//   collision_iterate_enemy(fatfly2_obj)
-		//  collision_iterate_enemy(bombfly_diagonal_obj)
-		//  collision_iterate_enemy(bombfly_fat_obj)
+	//sdm("lelll")	
+}
+mask_index=sword_whirling_enemy
+	
+//      collision_iterate_enemy(fatfly_obj)
+//     collision_iterate_enemy(flyswarm_obj)
+//    collision_iterate_enemy(hum_food_obj)
+//   collision_iterate_enemy(fatfly2_obj)
+//  collision_iterate_enemy(bombfly_diagonal_obj)
+//  collision_iterate_enemy(bombfly_fat_obj)
 		
-		//collision_iterate_enemy(crab_obj)
-		//                           collision_iterate_enemy(nucrab_obj)
-		//                          collision_iterate_enemy(handbug_obj)
-		//collision_iterate_enemy(zombie_obj)
-		//collision_iterate_enemy(kill_back_obj)
-		//collision_iterate_enemy(golem_obj)
-		//collision_iterate_enemy(diamond_obj)
-		//collision_iterate_enemy(chair_obj)
+//collision_iterate_enemy(crab_obj)
+//                           collision_iterate_enemy(nucrab_obj)
+//                          collision_iterate_enemy(handbug_obj)
+//collision_iterate_enemy(zombie_obj)
+//collision_iterate_enemy(kill_back_obj)
+//collision_iterate_enemy(golem_obj)
+//collision_iterate_enemy(diamond_obj)
+//collision_iterate_enemy(chair_obj)
 		
-		//                          collision_iterate_wall(burn_wall_obj)
-		//                            collision_iterate_enemy(ghost_obj)
-		//                        collision_iterate_enemy(arcing_knight_obj)
+//                          collision_iterate_wall(burn_wall_obj)
+//                            collision_iterate_enemy(ghost_obj)
+//                        collision_iterate_enemy(arcing_knight_obj)
 		
-		collision_iterate_wall(breakable_decoration_obj)
-		//collision_iterate_wall(dec_skull_obj)
+collision_iterate_wall(breakable_decoration_obj)
+//collision_iterate_wall(dec_skull_obj)
 		
-		//collision_iterate_enemy(wooden_fly_obj)
-		//collision_iterate_enemy(wooden_fly_dart_obj)
-		//                                        collision_iterate_enemy(eye_obj)
-		//collision_iterate_enemy(green_guy_obj)
-		//collision_iterate_enemy(spikyguy_obj)
-		//                           collision_iterate_enemy(dash_guy_obj)
-		collision_iterate_enemy(snakeheart_obj)
-		//                            collision_iterate_enemy(fly_pod_obj)
-		//                    collision_iterate_enemy(crimson_soldier_obj)
-		
-		
-		//collision_iterate_wall(switch_wall_switch_obj)
-		
-		if !player_obj.move_locked {
-			// collision_iterate_enemy(big_boi_obj)
-			if !charger_bool {
-				collision_iterate_enemy(charger_obj)
-			}
-		}
-		collision_iterate_enemy(cryptkeeper_obj)
-		collision_iterate_enemy(cryptkeeper_ceiling_obj)
-		
-		if player_obj.stinky_check || (tail_obj.stinky && !player_obj.tail_carry) {
-			
-		} else {
-			
-			collision_iterate_enemy(flyfree_obj)
-			collision_iterate_enemy(doublefly_obj)
-		}
+//collision_iterate_enemy(wooden_fly_obj)
+//collision_iterate_enemy(wooden_fly_dart_obj)
+//                                        collision_iterate_enemy(eye_obj)
+//collision_iterate_enemy(green_guy_obj)
+//collision_iterate_enemy(spikyguy_obj)
+//                           collision_iterate_enemy(dash_guy_obj)
+collision_iterate_enemy(snakeheart_obj)
+//                            collision_iterate_enemy(fly_pod_obj)
+//                    collision_iterate_enemy(crimson_soldier_obj)
 		
 		
-		// collision_iterate_wall(falling_rock_rope_obj)
+//collision_iterate_wall(switch_wall_switch_obj)
 		
-		ccatemp = cca
-		cca = 0/*
-		if place_meeting(x,y,hummingbird_obj) {
-			with player_obj {
-				if place_meeting(x,y,hummingbird_obj) && point_distance(x,y,other.x,other.y)<150 {
-					other.temptemptemp = false
-					
-				} 
-			}
-		} else {
-			if !temptemptemp {
-				xpreva = x
-				ypreva = y
-				temptemptemp = true		
-			}
-			
-		}
-		if temptemptemp {
-			
-			collision_iterate_wall(hummingbird_obj) 
-		}*/
-		cca = ccatemp
+if !player_obj.move_locked {
+	// collision_iterate_enemy(big_boi_obj)
+	if !charger_bool {
+		collision_iterate_enemy(charger_obj)
 	}
 }
+collision_iterate_enemy(cryptkeeper_obj)
+collision_iterate_enemy(cryptkeeper_ceiling_obj)
+		
+if player_obj.stinky_check || (tail_obj.stinky && !player_obj.tail_carry) {
+			
+} else {
+			
+	collision_iterate_enemy(flyfree_obj)
+	collision_iterate_enemy(doublefly_obj)
+}
+		
+		
+// collision_iterate_wall(falling_rock_rope_obj)
+		
+ccatemp = cca
+cca = 0/*
+if place_meeting(x,y,hummingbird_obj) {
+	with player_obj {
+		if place_meeting(x,y,hummingbird_obj) && point_distance(x,y,other.x,other.y)<150 {
+			other.temptemptemp = false
+					
+		} 
+	}
+} else {
+	if !temptemptemp {
+		xpreva = x
+		ypreva = y
+		temptemptemp = true		
+	}
+			
+}
+if temptemptemp {
+			
+	collision_iterate_wall(hummingbird_obj) 
+}*/
+cca = ccatemp
+	
+
 if hitpause {
 	hitpause_timer++
 	hsp=0
@@ -489,13 +483,6 @@ if hitpause {
 		hitpause_timer=0
 		hitpause = false
 	}
-}
-
-
-if current_obj = false {
-	//if something goes seriously wrong with tail code
-	//change this
-	//current_obj = self	
 }
 
 if player_obj.death {
@@ -509,9 +496,9 @@ if player_obj.ending_lock {
 if player_obj.out_of_dash_t<0 {
 	visible = false	
 }
+mask_index = sword_whirling
 
 lockcheck = false
-
 
 
 

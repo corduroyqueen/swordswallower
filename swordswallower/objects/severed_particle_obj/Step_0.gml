@@ -6,10 +6,9 @@ if locked {
 	hsp=0
 } else {
 	vsp+=0.5
-	if position_meeting(x,y+vsp+1,wall_obj) {
-		 alarm[0] = random_range(100,200)
+	moveX(hsp)
+	if vsp>=0 && moveBoolY(vsp) {
+		alarm[0] = random_range(100,200)
 		locked = true
-		//y-=vsp
-		vsp=0
 	}
 }
