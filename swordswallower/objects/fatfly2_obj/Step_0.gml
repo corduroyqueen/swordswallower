@@ -27,10 +27,10 @@ if death {
 		vsp = -vgo * mult
 	}
 	image_xscale = 0.75 * sign(hsp)
-	if wall_checker_enemy(x+hsp*2,y) {
+	if wall_detect(x+hsp*2,y) {
 		hrev = !hrev	
 	}
-	if wall_checker_enemy(x,y+vsp*2) {
+	if wall_detect(x,y+vsp*2) {
 		vrev = !vrev	
 	}
 

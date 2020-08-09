@@ -10,7 +10,7 @@ if locked {
 	}
 	vsp+=step
 	
-	moveX(hsp)
+	moveSolidsX(hsp)
 	if vsp>=0 && moveBoolY(vsp) {
 		locked = true	
 	}

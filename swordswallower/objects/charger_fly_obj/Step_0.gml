@@ -4,7 +4,7 @@
 my_floor = instance_place(x,y+1,wall_obj)
 player_floor = player_obj.current_platform
 
-if wall_checker(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
+if wall_detect(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
 	if abs(last_grounded_y-y)>400 {
 		//locked = true
 		//startx = x
@@ -262,7 +262,7 @@ if state==state_chasing {
 	
 		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		
-		if wall_checker(x+hsp,y-10) {
+		if wall_detect(x+hsp,y-10) {
 			state = state_knockback
 			
 			player_obj.shake_d=9

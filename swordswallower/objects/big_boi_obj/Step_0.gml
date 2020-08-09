@@ -4,7 +4,7 @@
 my_floor = instance_place(x,y+1,wall_obj)
 player_floor = player_obj.current_platform
 
-if wall_checker(x,y+1) || place_meeting(x,y+1,wood_wall_obj)
+if wall_detect(x,y+1) || place_meeting(x,y+1,wood_wall_obj)
 || place_meeting(x,y+3,thin_floor_obj) {
 	if abs(last_grounded_y-y)>400 {
 		//locked = true
@@ -347,7 +347,7 @@ if state==state_idle || state==state_hitting {
 
 //wall_collision_climbing(wall_obj)
 //wall_collision_climbing(black_wall_obj)
-if wall_checker(x-10,y) {
+if wall_detect(x-10,y) {
 	on_wall_left = true	
 } else {
 	on_wall_left = false	
@@ -355,7 +355,7 @@ if wall_checker(x-10,y) {
 
 
 
-if wall_checker(x+10,y) {
+if wall_detect(x+10,y) {
 	on_wall_right = true	
 } else {
 	on_wall_right = false	
@@ -368,14 +368,14 @@ wall_collision_xaxis(black_wall_obj)
 if player_obj.y<y && !climbing {
 	if on_wall_left {
 		wallheight = 0
-		while (wall_checker(x-10,y-wallheight) && wallheight <= maxheight) wallheight += 1;
+		while (wall_detect(x-10,y-wallheight) && wallheight <= maxheight) wallheight += 1;
 		if wallheight<=maxheight && wallheight>10 {
 			sdm("ok")
 			climbing=true
 		}
 	} else if on_wall_right {
 		wallheight = 0
-		while (wall_checker(x+10,y-wallheight) && wallheight <= maxheight) wallheight += 1;
+		while (wall_detect(x+10,y-wallheight) && wallheight <= maxheight) wallheight += 1;
 		if wallheight<=maxheight && wallheight>10 {
 			sdm("ok")
 			climbing=true
@@ -385,7 +385,7 @@ if player_obj.y<y && !climbing {
 
 if climbing {
 		sdm("climbing start ")
-	if wall_checker(x-sign(image_xscale)*10,y-wallheight)  {
+	if wall_detect(x-sign(image_xscale)*10,y-wallheight)  {
 		climbing = false	
 		return
 		sdm("climbing f 1 ")

@@ -182,7 +182,7 @@ if !fallingoverride {
 			
 			//if going_right { return }
 		}
-		if wall_checker(x+hsp*10,y+vsp*10)
+		if wall_detect(x+hsp*10,y+vsp*10)
 		|| !place_meeting(
 		x+hsp*20+(-10 * cos(degtorad(walkang))),
 		y+vsp*20+(10 * sin(degtorad(walkang))),

@@ -69,7 +69,6 @@ if (moveXPos != 0 || moveYPos != 0) {
 		        if (place_meeting(ox,oy,actor) && !actor.intangible) 
 				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self)
 		        { 
-					sdm("ok2")
 					//Push left 
 					with actor {
 						moveX(other.o_bbox_left - bbox_right + other.moveXPos - 1)
@@ -96,7 +95,6 @@ if (moveXPos != 0 || moveYPos != 0) {
 				var actor = instance_find(actor_parent_obj,i)
 		        if (place_meeting(ox,oy,actor) && !actor.intangible) 
 				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self) { 
-					sdm("ok3")
 			        //Push down
 					with actor {
 						moveY(other.o_bbox_bottom - bbox_top + other.moveYPos+ 1)
@@ -114,7 +112,6 @@ if (moveXPos != 0 || moveYPos != 0) {
 		        if (place_meeting(ox,oy,actor) && !actor.intangible) 
 				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self)
 		        { 
-					sdm("ok4")
 					//Push up
 					with actor {
 						moveY(other.o_bbox_top - bbox_bottom + other.moveYPos - 1)

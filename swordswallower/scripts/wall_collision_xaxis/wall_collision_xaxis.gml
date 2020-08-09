@@ -15,10 +15,10 @@ if place_meeting(x+hsp,y,obj) && grounded && !place_meeting(x+hsp*1.5,y-abs(hsp*
     }
 }
 
-if !wall_checker(x+hsp,y+vsp+1) && grounded
+if !wall_detect(x+hsp,y+vsp+1) && grounded
 {
 	yplus = 1;
-	while (!wall_checker(x+hsp,y+vsp+yplus) && yplus <=20) yplus += 1;
+	while (!wall_detect(x+hsp,y+vsp+yplus) && yplus <=20) yplus += 1;
 	
 	if yplus<21	{
 	    y += yplus-1

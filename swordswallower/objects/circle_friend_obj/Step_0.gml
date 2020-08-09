@@ -3,7 +3,7 @@
 if active {
 	
 	if !player_obj.zoom_timer_bool {
-		if !wall_checker(x+hsp,y+vsp) {
+		if !wall_detect(x+hsp,y+vsp) {
 			if point_distance(x,y,global.mousepx,global.mousepy)>25 {
 				move_towards_point(global.mousepx,global.mousepy,point_distance(x,y,global.mousepx,global.mousepy)*0.1)
 			} else {

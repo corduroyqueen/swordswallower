@@ -21,7 +21,7 @@ met = false
 
 
 yc = y
-while !wall_checker(x,yc) {
+while !wall_detect(x,yc) {
 	yc-=8	
 }
 

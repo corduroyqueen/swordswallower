@@ -1,18 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if wall_checker(x,y+1) {
+if wall_detect(x,y+1) {
 	grounded = true	
 } else {
 	grounded = false	
 }
 
 
-if wall_checker(x+2,y) {
+if wall_detect(x+2,y) {
 	move_right = false
 }
 
-if wall_checker(x-2,y) {
+if wall_detect(x-2,y) {
 	move_right = true
 }
 

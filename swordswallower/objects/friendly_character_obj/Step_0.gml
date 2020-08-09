@@ -13,7 +13,7 @@ if gravd {
 		
 	} else {
 		//vsp+=0.4
-		//if wall_checker(x,y+1) {
+		//if wall_detect(x,y+1) {
 		//	stopped = true	
 		//	vsp = 0
 		//}

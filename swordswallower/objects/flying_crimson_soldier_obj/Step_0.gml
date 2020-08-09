@@ -38,10 +38,10 @@ if player_detected {
 		hsp = lerp(hsp,-floatspeed,0.1)	
 	}
 	
-	if wall_checker_enemy(x+4,y) {
+	if wall_detect(x+4,y) {
 		go_home = false	
 	}
-	if wall_checker_enemy(x-4,y) {
+	if wall_detect(x-4,y) {
 		go_home = true
 	}
 	
@@ -83,7 +83,7 @@ if player_detected {
 	}
 }
 
-if !wall_checker(x,y+10) {
+if !wall_detect(x,y+10) {
 	vsp+=0.5
 }
 if player_obj.grounded {

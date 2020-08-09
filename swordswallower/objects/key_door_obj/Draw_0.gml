@@ -14,7 +14,7 @@ if closed {
 	//draw_text(x,y,string(lock))
 } else {
 	image_speed = 2
-	mask_index = noone
+	mask_index = nothing
 	
 	if sprite_index!=-4 {
 		draw_self()	

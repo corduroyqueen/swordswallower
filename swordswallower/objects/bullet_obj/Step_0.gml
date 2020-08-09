@@ -14,7 +14,7 @@ for(i=0; i < iteration_num; i++){
 		break;
 	}
 	
-	if wall_checker(xpreva1 + xdelt * (i/iteration_num), 
+	if wall_detect(xpreva1 + xdelt * (i/iteration_num), 
 	ypreva1 + ydelt * (i/iteration_num)) {
 		endx = xpreva1 + xdelt * (i/iteration_num)
 		endy = ypreva1 + ydelt * (i/iteration_num)

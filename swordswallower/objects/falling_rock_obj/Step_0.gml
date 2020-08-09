@@ -17,7 +17,7 @@ if held {
 		}
 	}
 } else {
-	if wall_checker(x,y+1) {
+	if wall_detect(x,y+1) {
 		grounded = true
 	} else {
 		grounded = false
@@ -39,14 +39,14 @@ if held {
 					
 					} else if pers==0 {
 					
-						if wall_checker(x,y+1) {
+						if wall_detect(x,y+1) {
 							perform_player_damage(1000)
 						} else {
 							vsp+=other.vsp
 						}
 					}else if pers==1 {
 					
-						if wall_checker(x,y+1) {
+						if wall_detect(x,y+1) {
 							death = true
 						} else {
 							vsp=0

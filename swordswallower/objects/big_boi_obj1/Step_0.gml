@@ -4,7 +4,7 @@
 my_floor = instance_place(x,y+1,wall_obj)
 player_floor = player_obj.current_platform
 
-if wall_checker(x,y+1) {
+if wall_detect(x,y+1) {
 	if abs(last_grounded_y-y)>400 {
 		//locked = true
 		//startx = x

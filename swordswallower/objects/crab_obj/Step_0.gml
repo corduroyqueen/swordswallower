@@ -35,7 +35,7 @@ if writhing = true {
 if !fallingoverride {
 	if (player_obj.tail_throwing || tail_obj.pull_timer>=tail_obj.pull_wall_t) && !met && !death {
 		if place_meeting(x,y,tail_obj) {
-			crab_wall_checker()
+			//crab_wall_detect()
 		}
 	} 
 }

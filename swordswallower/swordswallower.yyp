@@ -6959,6 +6959,14 @@
             }
         },
         {
+            "Key": "7f5758b2-66ba-47f0-a394-b90e3fea4bae",
+            "Value": {
+                "id": "a62cd084-6e1c-459c-94ea-5fa831d85ebd",
+                "resourcePath": "scripts\\sword_wall_collision\\sword_wall_collision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7f84e673-9b18-47fd-99ec-4f320a508232",
             "Value": {
                 "id": "7ab54bbd-ddac-4fca-8865-f11175e9da94",
@@ -9391,6 +9399,14 @@
             }
         },
         {
+            "Key": "b49ebf67-e289-4f72-b0a9-318caf243cb1",
+            "Value": {
+                "id": "56f4aec3-4245-4505-90e4-cc88412df0ae",
+                "resourcePath": "objects\\key_wall_parent_obj\\key_wall_parent_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b51c31c9-6e72-4460-aaa7-6370bf0e7f74",
             "Value": {
                 "id": "4a22cddd-2bae-4738-8f78-6ca29bc23e85",
@@ -10314,7 +10330,7 @@
             "Key": "cc1be22d-c268-41ce-8bb2-01fe0d5a6226",
             "Value": {
                 "id": "bc310970-fc92-45d7-8c50-1de0acd3472e",
-                "resourcePath": "scripts\\carry_sword\\carry_sword.yy",
+                "resourcePath": "scripts\\carry_sword_x\\carry_sword_x.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -10556,6 +10572,14 @@
                 "id": "d572dc78-8a70-4af8-9cd4-f675e418ac97",
                 "resourcePath": "datafiles_yy\/lato.ttf.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "d06cde46-5236-422d-89c0-6bcb85414849",
+            "Value": {
+                "id": "bc406857-eb44-47a5-a2c4-0ba1a2448e32",
+                "resourcePath": "objects\\wall_destructible_parent_obj\\wall_destructible_parent_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12895,6 +12919,7 @@
         "1b75c20c-9d47-4cca-bd0e-8714a4ac0daf",
         "3fdde76f-53af-4894-8b31-27a106982bc3",
         "f9d5302a-78aa-47ee-b832-d957f1509dbb",
+        "7f5758b2-66ba-47f0-a394-b90e3fea4bae",
         "6fafe3f1-2dc0-40c9-b1b2-accea643a458",
         "b3407b6b-df18-4f9c-bb7e-81430bcd6c95",
         "0f9b00a6-8e1e-4cbf-a82c-a280b3ff3be7",

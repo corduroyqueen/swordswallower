@@ -6,7 +6,7 @@ if death {
 
 move_towards_point(x+xoff,y+yoff,mspeed)
 
-if wall_checker(x+hsp,y+vsp) {
+if wall_detect(x+hsp,y+vsp) {
 	death = true	
 }
 

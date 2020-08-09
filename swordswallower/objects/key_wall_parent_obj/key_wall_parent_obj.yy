@@ -1,18 +1,18 @@
 {
-    "id": "6a9cef14-e4f6-4f8f-b891-d93a865b2968",
+    "id": "b49ebf67-e289-4f72-b0a9-318caf243cb1",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "wall_obj",
+    "name": "key_wall_parent_obj",
     "eventList": [
         {
-            "id": "60ed4958-a99f-447e-8a30-f8206723cecc",
+            "id": "547fd438-1b76-48b8-ad38-277e5007493f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "6a9cef14-e4f6-4f8f-b891-d93a865b2968"
+            "m_owner": "b49ebf67-e289-4f72-b0a9-318caf243cb1"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -31,23 +31,8 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": [
-        {
-            "id": "e2faa3ed-356f-4377-8622-e091225aadf0",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "pers",
-            "varType": 1
-        }
-    ],
+    "properties": null,
     "solid": false,
-    "spriteId": "74ece9d2-aa6c-4b5b-ab03-e7478c41291f",
-    "visible": false
+    "spriteId": "00000000-0000-0000-0000-000000000000",
+    "visible": true
 }

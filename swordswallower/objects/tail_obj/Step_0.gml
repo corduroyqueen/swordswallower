@@ -377,7 +377,7 @@ if player_obj.tail_planted {
 	moveSwordX(hsp)
 	moveSwordY(vsp)
 	if current_obj!=noone {
-		sword_plant(current_obj)	
+		sword_wall_collision(current_obj)	
 	}
 	intangible = false
 	

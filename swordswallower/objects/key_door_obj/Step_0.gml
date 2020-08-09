@@ -3,7 +3,7 @@
 if closed {
 	
 } else {
-	mask_index = noone
+	mask_index = nothing
 	
 }
 

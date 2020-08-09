@@ -64,14 +64,14 @@ if enabled {
 					
 	//			} else if pers==0 {
 					
-	//				if wall_checker(x,y+other.vsp) {
+	//				if wall_detect(x,y+other.vsp) {
 	//					//perform_player_damage(1000)
 	//				} else {
 	//					//vsp+=other.vsp
 	//				}
 	//			}else if pers==1 {
 					
-	//				if wall_checker(x,y+other.vsp) && !zoom_timer_bool {
+	//				if wall_detect(x,y+other.vsp) && !zoom_timer_bool {
 	//					start_death = true
 	//				} else {
 	//					vsp=0

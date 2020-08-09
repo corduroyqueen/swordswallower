@@ -17,7 +17,7 @@ if state == state_held {
 	}
 	timer++
 	sprite_index = big_sword_whirling_t
-	if wall_checker(x,y) {
+	if wall_detect(x,y) {
 		state = state_planted
 		timer=0
 		image_angle = point_direction(0,0,hsp,vsp)-90

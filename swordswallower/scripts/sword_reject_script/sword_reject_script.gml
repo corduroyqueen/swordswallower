@@ -3,9 +3,6 @@ player_obj.tail_pulling = true
 player_obj.tail_planted = false
 player_obj.tail_throwing = false
 
-tail_obj.x = tail_obj.xpreva
-tail_obj.y = tail_obj.ypreva
-
 player_obj.shake_d=5
 player_obj.camera_shake_d = true
 	

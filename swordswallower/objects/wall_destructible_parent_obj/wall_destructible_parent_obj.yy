@@ -1,14 +1,14 @@
 {
-    "id": "0698e379-662a-4e72-bdf4-0fbb2dcf72ea",
+    "id": "d06cde46-5236-422d-89c0-6bcb85414849",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "burn_wall_obj",
+    "name": "wall_destructible_parent_obj",
     "eventList": [
         
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "d06cde46-5236-422d-89c0-6bcb85414849",
+    "parentObjectId": "65785b68-cc47-4c97-866f-a07cf2f0ae93",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "4b24b581-190a-4411-87d3-896b12ee685c",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }
