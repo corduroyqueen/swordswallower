@@ -33,10 +33,15 @@ if setpoint {
 		
 		var ok = random_range(1.1,1.3)
 		
-		draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok*6,ok*6,0,c_white,0.125)
+		//draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok*6,ok*6,0,c_white,0.125)
 		
-		draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok,ok,0,c_white,1)
+		//draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok,ok,0,c_white,1)
 		
+		ok = random_range(0.2,0.7)
+		gpu_set_colorwriteenable(true,true,true,false)
+		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
+		
+		draw_sprite_ext(redblur,0,x+s_x,y+s_y,0.5,0.5,0,c_white,ok)
 		
 		
 		gpu_set_blendmode(bm_normal)
@@ -44,9 +49,9 @@ if setpoint {
 		var uTime = shader_get_uniform(shader1,"Time");
 		shader_set(shader1)
 	    shader_set_uniform_f(uTime,current_time/1000)
-	
-		draw_sprite(fire,image_index,x+s_x,y+s_y)
-	
+		
+		draw_sprite_ext(redflame,image_index,x+s_x,y+s_y,0.5,0.5,0,c_white,1)
+		gpu_set_colorwriteenable(true,true,true,true)
 		shader_reset()
 	
 	}

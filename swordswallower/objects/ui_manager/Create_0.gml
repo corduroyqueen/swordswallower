@@ -27,3 +27,11 @@ mouse_ui_x = 0
 mouse_ui_y = 0
 
 u_blood_trans = shader_get_uniform(shader_blood_alpha, "v_mult");
+
+u_blood_r = shader_get_uniform(shader_blood_alpha, "blood_r");
+u_blood_g = shader_get_uniform(shader_blood_alpha, "blood_g");
+u_blood_b = shader_get_uniform(shader_blood_alpha, "blood_b");
+
+u_blood_r2 = shader_get_uniform(shader_blood_alpha_surface, "blood_r");
+u_blood_g2 = shader_get_uniform(shader_blood_alpha_surface, "blood_g");
+u_blood_b2 = shader_get_uniform(shader_blood_alpha_surface, "blood_b");

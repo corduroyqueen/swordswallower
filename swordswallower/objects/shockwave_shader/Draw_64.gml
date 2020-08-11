@@ -29,6 +29,10 @@ if (wave_list_size <= 0) {
 	
 	
 	shader_set_uniform_f(u_blood_trans,u_blood_var)
+	shader_set_uniform_f(u_blood_r,global.blood_cr)
+	shader_set_uniform_f(u_blood_g,global.blood_cg)
+	shader_set_uniform_f(u_blood_b,global.blood_cb)
+		
 	draw_surface(blood_surface, 0,0)
 	shader_reset()
 	

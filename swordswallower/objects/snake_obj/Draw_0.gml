@@ -1,13 +1,25 @@
 /// @description Insert description here
 // You can write your code in this editor
 if !death {
-	draw_set_color(c_dkgray)
-	draw_line_width(x,y,head.x,head.y,10)
+	if state!=state_idle && state!=state_searching {
+		draw_set_color(c_white)
+		var angles = point_direction(x,y,head.x,head.y)
+		var ct = floor(point_distance(x,y,head.x,head.y)/64)
+		for (i=0;i<ct;i++) {
+			draw_sprite_ext(venusstem,0,x+cos(degtorad(angles))*i*64,y-sin(degtorad(angles))*i*64,0.6,1,angles+270,c_white,1)
+		}
+		with head {
+			draw_sprite_ext(venusstem,0,x+cos(degtorad(angles+180))*64,y-sin(degtorad(angles+180))*64,0.6,1,angles+270,c_white,1)
+		}
+	}
+	
+	//draw_set_color(c_dkgray)
+	//draw_line_width(x,y,head.x,head.y,10)
 
 	draw_sprite_ext(venusbase_n,0,x,y,1,1,image_angle,c_white,1)
 	
 	
-
+	
 	if state==state_searching || state==state_idle {
 		//draw_set_color(c_black)
 

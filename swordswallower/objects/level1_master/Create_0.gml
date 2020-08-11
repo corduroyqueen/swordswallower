@@ -90,10 +90,13 @@ gpu_set_texfilter(true)
 
 ability_dash = true
 
-blood_cr = 0.9
-blood_cg = 0.0
-blood_cb = 0.3
+global.blood_cr = 0.9
+global.blood_cg = 0.0
+global.blood_cb = 0.3
 
+
+
+//0.9, 0.0, 0.3 neon pink
 
 
 //gpu_set_colorwriteenable(true, true, true, false);

@@ -39,3 +39,6 @@ if parent.state!=parent.state_searching {
 
 met = parent.met
 mask_index = snake_head
+
+moveX(hsp)
+moveY(vsp)

@@ -1,7 +1,12 @@
 local_obj = argument0
 
 
-if object_get_parent(local_obj.object_index)==key_wall_parent_obj {
+
+if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
+	
+} else if object_get_parent(local_obj.object_index)==wall_destructible_parent_obj {
+	
+} else if object_get_parent(local_obj.object_index)==key_wall_parent_obj {
 	
 	if ds_list_size(player_obj.keylist)>=local_obj.lock && !lockcheck && local_obj.closed {
 		var yikes = ds_list_size(player_obj.keylist)

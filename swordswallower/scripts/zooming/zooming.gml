@@ -100,7 +100,7 @@ if zoom_timer_bool {
 	zoom_timer++
 	
 	//sdm(object_get_name(tail_obj.current_obj.object_index))
-	if object_get_name(tail_obj.current_obj.object_index)==impale_circle_moving_obj {
+	if object_get_name(tail_obj.current_obj.object_index)==impale_circle_obj {
 		player_hitbox_check_obj.x = tail_obj.current_obj.x	
 		player_hitbox_check_obj.y = tail_obj.current_obj.y
 		//sdm("goooo")

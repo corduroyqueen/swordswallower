@@ -759,7 +759,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": false,
+            "hierarchyVisible": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -776,7 +776,7 @@
                     "grid_x": 32,
                     "grid_y": 32,
                     "hierarchyFrozen": false,
-                    "hierarchyVisible": false,
+                    "hierarchyVisible": true,
                     "inheritLayerDepth": false,
                     "inheritLayerSettings": false,
                     "inheritSubLayers": false,
@@ -1106,7 +1106,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -1119,7 +1119,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -1533,7 +1533,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -1546,7 +1546,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -1716,7 +1716,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -1729,7 +1729,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -1746,7 +1746,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -1759,7 +1759,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         }
                     ],
                     "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -1767,7 +1767,7 @@
                     "modelName": "GMRAssetLayer",
                     "mvc": "1.0",
                     "userdefined_depth": false,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -1780,7 +1780,7 @@
                     "grid_x": 32,
                     "grid_y": 32,
                     "hierarchyFrozen": false,
-                    "hierarchyVisible": false,
+                    "hierarchyVisible": true,
                     "inheritLayerDepth": false,
                     "inheritLayerSettings": false,
                     "inheritSubLayers": false,
@@ -1820,7 +1820,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -1833,7 +1833,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -2131,7 +2131,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -2144,7 +2144,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -2758,7 +2758,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -2771,7 +2771,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -3197,7 +3197,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -3210,7 +3210,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -3295,7 +3295,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -3308,7 +3308,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         }
                     ],
                     "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -3316,7 +3316,7 @@
                     "modelName": "GMRAssetLayer",
                     "mvc": "1.0",
                     "userdefined_depth": false,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -3329,7 +3329,7 @@
                     "grid_x": 32,
                     "grid_y": 32,
                     "hierarchyFrozen": false,
-                    "hierarchyVisible": false,
+                    "hierarchyVisible": true,
                     "inheritLayerDepth": false,
                     "inheritLayerSettings": false,
                     "inheritSubLayers": false,
@@ -3372,7 +3372,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -3385,7 +3385,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -3725,7 +3725,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -3738,7 +3738,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -4293,7 +4293,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -4306,7 +4306,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -4444,7 +4444,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -4457,7 +4457,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -4605,7 +4605,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -4618,7 +4618,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         }
                     ],
                     "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -4626,7 +4626,7 @@
                     "modelName": "GMRAssetLayer",
                     "mvc": "1.0",
                     "userdefined_depth": false,
-                    "visible": false
+                    "visible": true
                 }
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -4634,7 +4634,7 @@
             "modelName": "GMRAssetLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
-            "visible": false
+            "visible": true
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
@@ -5293,7 +5293,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": false,
+            "hierarchyVisible": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -5310,7 +5310,7 @@
                     "grid_x": 32,
                     "grid_y": 32,
                     "hierarchyFrozen": false,
-                    "hierarchyVisible": false,
+                    "hierarchyVisible": true,
                     "inheritLayerDepth": false,
                     "inheritLayerSettings": false,
                     "inheritSubLayers": false,
@@ -5557,7 +5557,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -5570,7 +5570,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -6626,7 +6626,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -6639,7 +6639,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -6691,7 +6691,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -6704,7 +6704,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         }
                     ],
                     "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -6712,7 +6712,7 @@
                     "modelName": "GMRAssetLayer",
                     "mvc": "1.0",
                     "userdefined_depth": false,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -6725,7 +6725,7 @@
                     "grid_x": 32,
                     "grid_y": 32,
                     "hierarchyFrozen": false,
-                    "hierarchyVisible": false,
+                    "hierarchyVisible": true,
                     "inheritLayerDepth": false,
                     "inheritLayerSettings": false,
                     "inheritSubLayers": false,
@@ -6747,7 +6747,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -6760,7 +6760,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -7141,7 +7141,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -7154,7 +7154,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -7177,7 +7177,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -7190,7 +7190,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         }
                     ],
                     "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -7198,7 +7198,7 @@
                     "modelName": "GMRAssetLayer",
                     "mvc": "1.0",
                     "userdefined_depth": false,
-                    "visible": false
+                    "visible": true
                 },
                 {
                     "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -7211,7 +7211,7 @@
                     "grid_x": 32,
                     "grid_y": 32,
                     "hierarchyFrozen": false,
-                    "hierarchyVisible": false,
+                    "hierarchyVisible": true,
                     "inheritLayerDepth": false,
                     "inheritLayerSettings": false,
                     "inheritSubLayers": false,
@@ -7284,7 +7284,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -7297,7 +7297,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -8539,7 +8539,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -8552,7 +8552,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -8623,7 +8623,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": false,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -8636,7 +8636,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         },
                         {
                             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
@@ -8671,7 +8671,7 @@
                             "grid_x": 32,
                             "grid_y": 32,
                             "hierarchyFrozen": true,
-                            "hierarchyVisible": false,
+                            "hierarchyVisible": true,
                             "inheritLayerDepth": false,
                             "inheritLayerSettings": false,
                             "inheritSubLayers": false,
@@ -8684,7 +8684,7 @@
                             "modelName": "GMRAssetLayer",
                             "mvc": "1.0",
                             "userdefined_depth": false,
-                            "visible": false
+                            "visible": true
                         }
                     ],
                     "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -8692,7 +8692,7 @@
                     "modelName": "GMRAssetLayer",
                     "mvc": "1.0",
                     "userdefined_depth": false,
-                    "visible": false
+                    "visible": true
                 }
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
@@ -8700,7 +8700,7 @@
             "modelName": "GMRAssetLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
-            "visible": false
+            "visible": true
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
@@ -8833,7 +8833,7 @@
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": true,
+            "hierarchyVisible": false,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -8846,7 +8846,7 @@
             "modelName": "GMRAssetLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
-            "visible": true
+            "visible": false
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",

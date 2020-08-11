@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "067b706d-ef46-4559-99e6-479caa8a6b1a",
+            "Value": {
+                "id": "62f90ed1-c73c-4a56-ad92-6bd27b6fc0d9",
+                "resourcePath": "sprites\\purpleblur\\purpleblur.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0698e379-662a-4e72-bdf4-0fbb2dcf72ea",
             "Value": {
                 "id": "262e86a4-57c2-4d5a-ad6f-bd4a6dbb6645",
@@ -735,6 +743,14 @@
             }
         },
         {
+            "Key": "0be02ea7-799f-4ae6-ad28-b241ac5071a0",
+            "Value": {
+                "id": "119778a3-4e6a-4466-aada-6c8400f62cf9",
+                "resourcePath": "sprites\\venusleaf2\\venusleaf2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0c5d19c5-7f0d-4349-b238-5cbcb2ddf37d",
             "Value": {
                 "id": "10611a77-821e-4a69-8de0-8fcd64cc46ce",
@@ -820,6 +836,14 @@
                 "id": "b23e58ea-b6a7-4c04-bc88-99bfa15881c1",
                 "resourcePath": "sounds\/meat9mp3\/meat9mp3.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "0e472347-42db-434d-9af3-29161514e9ca",
+            "Value": {
+                "id": "a716a829-338f-4330-85f0-f1844d8f545a",
+                "resourcePath": "sprites\\purpbleflame\\purpbleflame.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -4359,6 +4383,14 @@
             }
         },
         {
+            "Key": "4fcfb1fd-132b-4d89-a763-c8fd20ecbbfc",
+            "Value": {
+                "id": "463d647d-5412-406f-b7f4-66c83a8175c1",
+                "resourcePath": "sprites\\venusleaf\\venusleaf.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4fddbbe7-100e-4d84-993a-5221ad402921",
             "Value": {
                 "id": "56fd30b3-4d20-4d2d-8888-37e0c2b652fc",
@@ -5023,6 +5055,14 @@
             }
         },
         {
+            "Key": "5b828fad-f9c3-4019-8c38-d3b6231b94e4",
+            "Value": {
+                "id": "a608229b-9be6-4173-91be-b0ded2bfc946",
+                "resourcePath": "sprites\\sword878\\sword878.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5b8f4d1e-313e-4347-81b2-c2d5021c797c",
             "Value": {
                 "id": "70c98c21-db13-4c78-9244-78f510b9f297",
@@ -5227,6 +5267,14 @@
             "Value": {
                 "id": "6510080e-e660-484d-8c20-1e6ce048aa91",
                 "resourcePath": "sprites\/cc_boost\/cc_boost.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5eae03a5-7b98-4e94-ba85-b2951ca8236c",
+            "Value": {
+                "id": "40b85641-e0d5-4517-b044-be752bd21983",
+                "resourcePath": "sprites\\venusstem\\venusstem.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6595,6 +6643,14 @@
             "Value": {
                 "id": "9e807bf4-2758-45bf-9829-3a764c28f714",
                 "resourcePath": "scripts\/get_hit\/get_hit.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "77bd2f08-db28-439e-9e3d-11ae1d656401",
+            "Value": {
+                "id": "02a4b5a6-e08d-4963-902e-73b4e6c52869",
+                "resourcePath": "scripts\\pythag\\pythag.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -9607,6 +9663,14 @@
             }
         },
         {
+            "Key": "bb500eba-0060-4486-8ad7-1f8f5a230984",
+            "Value": {
+                "id": "0b4c3ac1-0b10-4d34-b591-01ccdee82cfb",
+                "resourcePath": "objects\\wall_rejecting_parent_obj\\wall_rejecting_parent_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bb75b4c8-cde2-42b4-8e31-e230261764b7",
             "Value": {
                 "id": "6446ad6a-1b03-4e2c-9238-d94d6382f13a",
@@ -9919,6 +9983,14 @@
             }
         },
         {
+            "Key": "c385f4c8-52f8-4e59-8a1c-ba28975de7bb",
+            "Value": {
+                "id": "58a245dc-66bc-4f3b-82ac-6561e7b1482e",
+                "resourcePath": "sprites\\redblur\\redblur.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c39c7a34-0aba-4bd4-8fd1-5a3a18979bec",
             "Value": {
                 "id": "905eff38-cb62-4abb-94c8-d6fbbb1b42ef",
@@ -10147,6 +10219,14 @@
             "Value": {
                 "id": "fe02128b-daca-4c46-95f5-d17441ac8ee2",
                 "resourcePath": "sprites\/venus3_old\/venus3_old.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c89b475b-bb29-4d29-81a3-9dabb215925d",
+            "Value": {
+                "id": "08971e58-4d98-45f4-882c-c62c53431cbe",
+                "resourcePath": "sprites\\redflame\\redflame.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12906,6 +12986,7 @@
         "beb1d4cd-8f9a-4f10-b355-d7ca24706ee1",
         "2f0cb048-c5ac-4c64-ae87-eaba4c9d1629",
         "3c443ea2-2f3d-438e-9741-c4878370151c",
+        "77bd2f08-db28-439e-9e3d-11ae1d656401",
         "e12c5d5f-9f4a-416f-9187-b996a6895ad6",
         "ee1bc31b-c5e5-471e-8e1b-51485996f3a6",
         "782dcf9d-b230-4860-8c5b-117e425d620a",

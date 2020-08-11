@@ -73,6 +73,9 @@ if player_obj.death {
 			//shader_reset()
 
 			shader_set(shader_blood_alpha_surface)
+			shader_set_uniform_f(u_blood_r2,global.blood_cr)
+			shader_set_uniform_f(u_blood_g2,global.blood_cg)
+			shader_set_uniform_f(u_blood_b2,global.blood_cb)
 			draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 			shader_reset()
 		}
@@ -84,6 +87,9 @@ if player_obj.death {
 		shader_set(shader_blood_alpha)
 		u_blood_var = 4
 		shader_set_uniform_f(u_blood_trans,u_blood_var)
+		shader_set_uniform_f(u_blood_r,global.blood_cr)
+		shader_set_uniform_f(u_blood_g,global.blood_cg)
+		shader_set_uniform_f(u_blood_b,global.blood_cb)
 		draw_sprite(player_obj.deathParticles2,0,player_obj.deathx,player_obj.deathy)
 		shader_reset()
 	}

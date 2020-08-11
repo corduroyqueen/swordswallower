@@ -106,7 +106,9 @@ layer_script_end("p3bkd3", layer_stop_alpha_end);
 
 
 
-
+u_blood_r2 = shader_get_uniform(shader_blood_alpha_surface, "blood_r");
+u_blood_g2 = shader_get_uniform(shader_blood_alpha_surface, "blood_g");
+u_blood_b2 = shader_get_uniform(shader_blood_alpha_surface, "blood_b");
 
 
 

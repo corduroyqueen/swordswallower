@@ -79,7 +79,7 @@ if death {
 		} 
 	} else if state==state_attacking {
 		with head {
-			move_towards_point(other.targetx,other.targety,other.atk_speed)
+			sp_towards_target(other.targetx,other.targety,other.atk_speed,1)
 		}
 		
 		weak_spot.x = mean(x,head.x)
@@ -87,8 +87,7 @@ if death {
 		weak_spot.image_angle = point_direction(x,y,head.x,head.y)
 		weak_spot.image_xscale = point_distance(x,y,head.x,head.y) * 0.04
 		
-		
-		if point_distance(head.x,head.y,targetx,targety) < head.speed {
+		if point_distance(head.x,head.y,targetx,targety) < pythag(head.hsp,head.vsp) {
 			head.hsp = 0
 			head.vsp = 0
 		
@@ -122,9 +121,9 @@ if death {
 	
 	} else if state==state_retracting {
 		with head {
-			move_towards_point(other.x,other.y,other.atk_speed*1.4)
+			sp_towards_target(other.x,other.y,other.atk_speed*1.4,1)
 		}	
-		if point_distance(x,y,head.x,head.y)<head.speed*1.2 {
+		if point_distance(x,y,head.x,head.y)<pythag(head.hsp*1.2,head.vsp*1.5) {
 			state=state_searching
 			atk_timer = 0
 			head.x = x

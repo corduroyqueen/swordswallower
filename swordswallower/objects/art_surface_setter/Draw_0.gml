@@ -76,13 +76,16 @@ if !player_obj.death {
 } else {
 	gpu_set_colorwriteenable(true, true, true, true);
 }
+
 //shader_set(shader_alpha_one)
 //gpu_set_blendenable(true)
 draw_surface(art_surface,player_obj.camx,player_obj.camy)
 //gpu_set_blendenable(true)
 //shader_reset()
-
 shader_set(shader_blood_alpha_surface)
+shader_set_uniform_f(u_blood_r2,global.blood_cr)
+shader_set_uniform_f(u_blood_g2,global.blood_cg)
+shader_set_uniform_f(u_blood_b2,global.blood_cb)
 draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 shader_reset()
 
