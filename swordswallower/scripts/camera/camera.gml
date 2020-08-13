@@ -1,4 +1,12 @@
-
+if place_meeting(x,y,camera_fix_bounds_parent_obj) {
+	camera_fix_bounds = true
+	if cam_fix_obj==noone {
+		cam_fix_obj = instance_place(x,y,camera_fix_bounds_parent_obj)
+	}
+} else {
+	camera_fix_bounds = false
+	cam_fix_obj = noone
+}
 
 if intro {
 	if !checkpoint_manager.text_bool {
@@ -118,6 +126,9 @@ if intro {
 	
 } else if tail_zooming {
 	
+	var xspeed = player_obj.x+(hsp*20)
+	var yspeed = player_obj.y+(vsp*20)
+	
 	camx = lerp(camx,mean(xspeed,xspeed,xspeed,global.mousepx)-cam_width_h,0.05)
 	camy = lerp(camy,mean(yspeed,yspeed,yspeed,global.mousepy)-cam_height_h,0.05)
 	
@@ -149,6 +160,14 @@ if intro {
 	
 }
 
+if camera_fix_bounds && !player_obj.death {
+	if cam_fix_obj.xtarget>0 {
+		camx = lerp(camx,cam_fix_obj.xtarget - cam_width_h,0.12)
+	} 
+	if cam_fix_obj.ytarget>0 {
+		camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,0.12)
+	} 
+}
 
 if respawn_timer<10{
 	if camera_shake {

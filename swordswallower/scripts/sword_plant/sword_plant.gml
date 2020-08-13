@@ -13,7 +13,9 @@ with player_hitbox_check_obj {
 	event_user(1)
 }
 		
-		
+player_obj.shake_d=10
+player_obj.camera_shake_d = true
+
 player_obj.tail_dest_x = player_hitbox_check_obj.x
 player_obj.tail_dest_y = player_hitbox_check_obj.y
 		
@@ -46,6 +48,26 @@ audio_play_sound_at(Emergency_Sandbag_Heavy_Hitting_Rocks_02,
 	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
 	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
 	10,100,300,1,false,0)
+	
+	
+var ello = impact_1
+audio_sound_gain(ello,0.5,0)
+audio_sound_pitch(ello,random_range(0.9,1.1))
+//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+audio_play_sound_at(ello,
+	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
+	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
+	10,100,300,1,false,0)
+	
+ello = sword_strike_1
+audio_sound_gain(ello,0.3,0)
+audio_sound_pitch(ello,random_range(0.9,1.1))
+//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+audio_play_sound_at(ello,
+	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
+	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
+	10,100,300,1,false,0)
+		
 		
 		
 audio_manager(clink1mp332,0,false,0)

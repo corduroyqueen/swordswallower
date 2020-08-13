@@ -19,7 +19,8 @@ ealpha = 0
 
 boatboy = false
 boatboyenter = false
-
+hsp=0
+vsp=0
 mapguy_visited = false
 
 alive = true

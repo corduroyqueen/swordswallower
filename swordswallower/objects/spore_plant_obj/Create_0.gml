@@ -75,3 +75,6 @@ while place_meeting(x,y,local_obj) {
 hit = noone
 
 headhit = false
+
+hsp=0
+vsp=0

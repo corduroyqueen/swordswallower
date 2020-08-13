@@ -73,6 +73,9 @@ climbing_bool = false
 wallheight = 0
 climbing=false
 
+hsp=0
+vsp=0
+
 sword_checked = false
 grabbed = false
 last_grounded_y = y

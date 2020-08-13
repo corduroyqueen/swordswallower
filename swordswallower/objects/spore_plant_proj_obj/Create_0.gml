@@ -14,3 +14,5 @@ parent_speed = 20
 parent = noone
 
 death = false
+hsp=0
+vsp=0

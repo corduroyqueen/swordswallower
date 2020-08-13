@@ -3,7 +3,8 @@
 
 dest_x = x
 dest_y = y
-
+hsp=0
+vsp=0
 going = false
 met = false
 sword_present = false

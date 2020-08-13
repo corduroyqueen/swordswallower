@@ -154,9 +154,10 @@ if !tail_planted && !tail_held {
 		//shockwave_shader.trigger = true
 		
 		zoom_buff_timer = 0
-		zoom_ctdn = 2
+		zoom_ctdn = 4
 		tail_zooming=true
 		zoom_pause = true
+		
 		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
 		
 		

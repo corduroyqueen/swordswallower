@@ -277,6 +277,9 @@ if player_obj.tail_planted {
 	{ //sdm(" b")
 		player_obj.tail_planted = false
 		player_obj.tail_pulling = true
+		if !player_obj.grounded {
+			player_obj.held_release_timer = 15
+		}
 		
 		//if !player_obj.grounded {
 		//	player_obj.vsp*=0.6
@@ -353,6 +356,16 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 	player_obj.tail_planted = false
 	player_obj.tail_pulling = true
 }
+if hitpause {
+	hitpause_timer++
+	hsp=0
+	vsp=0
+	if hitpause_timer>2 {
+		hitpause_timer=0
+		hitpause = false
+	}
+}
+
 
 mask_index=sword_whirling
 if player_obj.tail_planted {
@@ -475,15 +488,6 @@ if temptemptemp {
 cca = ccatemp
 	
 
-if hitpause {
-	hitpause_timer++
-	hsp=0
-	vsp=0
-	if hitpause_timer>2 {
-		hitpause_timer=0
-		hitpause = false
-	}
-}
 
 if player_obj.death {
 	audio_emitter_gain(s_whoosh_emitter,0)	

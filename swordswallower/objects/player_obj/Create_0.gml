@@ -77,8 +77,7 @@ max_hs_a = 9
 max_vs = 45
 
 //grav = .185
-grav = .8
-grav_j = .225
+grav = 1.05
 start_grav = grav
 grav_jv = .25
 grav_boost = .2775
@@ -265,3 +264,6 @@ move_dir = 0
 
 enemy_collided_list = ds_list_create()
 enemy_collided_total_list = ds_list_create()
+
+camera_fix_bounds = false
+camera_fix = false

@@ -77,8 +77,8 @@ if !player_obj.tail_carry {
 		sprite_index = s_player_idle_e
 	}
 }
-if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 {
-		image_angle = point_direction(0,0,player_obj.hsp,player_obj.vsp)-90
+if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 || player_obj.zoom_ctdn>0 {
+		image_angle = point_direction(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)-90
 		image_speed = 1.5
 		sprite_index = s_boost
 	} else {

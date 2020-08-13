@@ -117,6 +117,7 @@ if !zoom_timer_bool {
 if held_release_timer>0 {
 	held_release_timer--
 	grav = 0
+	vsp = lerp(vsp,0,0.05)
 	//if vsp<-1 {
 	//	held_release_timer = 0
 	//}
@@ -125,7 +126,7 @@ if held_release_timer>0 {
 }
 if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vsp<max_vs {
 	
-	vsp += (grav + grav_jv)	
+	vsp += grav
 }
 
 if tail_obj.moving_platform_bool {

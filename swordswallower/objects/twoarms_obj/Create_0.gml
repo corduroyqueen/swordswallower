@@ -11,6 +11,8 @@ armstate_pulling = 4
 
 arm1_timer = 0
 
+hsp=0
+vsp=0
 
 arm1 = instance_create_depth(x,y,depth+1,twoarms_arm_obj)
 arm1.parent = self

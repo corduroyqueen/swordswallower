@@ -5,3 +5,4 @@
 event_inherited();
 
 init = true
+d_type = 3

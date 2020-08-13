@@ -9,9 +9,10 @@ if tail_zooming {
 		grav_boost = .15//havent changed from size up
 		player_obj.camera_shake_direc = true
 		player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hsp,player_obj.vsp))
-		player_obj.shake_dir = 25
+		player_obj.shake_dir = 30
 		
-		
+		shockwave_shader.trigger = true
+		shockwave_shader.strength_input = 0.1
 		
 		
 		//if zoom_timer<=0 {
@@ -59,6 +60,12 @@ if tail_zooming {
 		zoom_pause = false
 		
 		
+		var ello = gunshot_1
+		audio_sound_gain(ello,0.7,0)
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+		audio_play_sound(ello,0,false)
+		
 	}
 	
 	
@@ -100,7 +107,7 @@ if zoom_timer_bool {
 	zoom_timer++
 	
 	//sdm(object_get_name(tail_obj.current_obj.object_index))
-	if object_get_name(tail_obj.current_obj.object_index)==impale_circle_obj {
+	if tail_obj.current_obj.object_index==impale_circle_obj {
 		player_hitbox_check_obj.x = tail_obj.current_obj.x	
 		player_hitbox_check_obj.y = tail_obj.current_obj.y
 		//sdm("goooo")
@@ -177,7 +184,7 @@ if zoom_timer_bool {
 	
 	
 	
-	audio_sound_gain(Ice_Projectile_Shoot_03,0.8,0)
+	audio_sound_gain(Ice_Projectile_Shoot_03,1,0)
 	
 	
 } else {

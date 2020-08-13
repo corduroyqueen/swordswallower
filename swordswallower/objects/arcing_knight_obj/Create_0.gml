@@ -8,6 +8,8 @@ state_tossing = 1
 state_melee = 2
 state_defense = 3
 state_harpoon = 4
+hsp=0
+vsp=0
 
 facing_right = false
 
