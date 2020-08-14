@@ -242,7 +242,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		
 		ok = choose(zomb_death1,zomb_death2,zomb_death3,zomb_death4)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		audio_sound_gain(ok,0.3,0)
+		audio_sound_gain(ok,0.4,0)
 		audio_play_sound(ok,0,false)
 		with local_obj {
 			//shatter_mb_input_script(6)
@@ -251,6 +251,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			}
 		}
 		
+		var ello = impact_2
+		audio_sound_gain(ello,0.25,0)
+		audio_sound_pitch(ello,random_range(1.4,1.7))
+		audio_play_sound(ello,0,false)
 		
 		local_obj.death = true	
 		player_obj.tail_planted = false

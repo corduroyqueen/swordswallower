@@ -51,7 +51,7 @@ if !variable_instance_exists(id,"fumbling_timer"){
 	fumbling_timer = 0
 }
 if !variable_instance_exists(id,"detect_range"){
-	detect_range = 700
+	detect_range = 1200
 }
 
 sound_timer = 149

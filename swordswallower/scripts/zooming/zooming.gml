@@ -62,7 +62,7 @@ if tail_zooming {
 		
 		var ello = gunshot_1
 		audio_sound_gain(ello,0.7,0)
-		audio_sound_pitch(ello,random_range(0.9,1.1))
+		audio_sound_pitch(ello,random_range(1.3,1.5))
 		//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
 		audio_play_sound(ello,0,false)
 		

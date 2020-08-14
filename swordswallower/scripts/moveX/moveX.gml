@@ -26,6 +26,11 @@ if (move != 0) {
 			x += move_dir;
 			y -= 2;
 			amt_of_move -= 2; 
+		} else if (!wall_detect(x+move_dir*2, y-3)) {
+			//this is stairs moving up
+			x += move_dir;
+			y -= 3;
+			amt_of_move -= 2; 
 		} else {
 			hsp=0
 			break;

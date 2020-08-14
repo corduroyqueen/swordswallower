@@ -31,7 +31,7 @@ if action = 3 {
 	
 	var ello = impact_2
 	audio_sound_gain(ello,0.3,0)
-	audio_sound_pitch(ello,random_range(0.9,1.1))
+	audio_sound_pitch(ello,random_range(1.3,1.5))
 	audio_play_sound(ello,0,false)
 	
 	audio_play_sound(Knife_Pull_louder,0,false)
