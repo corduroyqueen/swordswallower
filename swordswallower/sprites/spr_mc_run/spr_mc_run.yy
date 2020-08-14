@@ -2,7 +2,7 @@
     "id": "187b0772-5a77-45fc-aea0-5505d13e5e73",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "run",
+    "name": "spr_mc_run",
     "For3D": false,
     "HTile": false,
     "VTile": false,
@@ -164,7 +164,7 @@
             "visible": true
         }
     ],
-    "origin": 0,
+    "origin": 9,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
@@ -175,6 +175,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 60,
-    "xorig": 0,
-    "yorig": 0
+    "xorig": 30,
+    "yorig": 27
 }

@@ -1,10 +1,5 @@
 var facing
-if facing_right {
-	facing = -1
-} else {
-	facing = 1
-}
-
+facing = sign(image_xscale)
 
 ang = 0
 if sprite_index==player_idle_s_n {

@@ -24,57 +24,54 @@ if !player_obj.held_position {
 depth=-1901
 
 if facing_right {
-	image_xscale = 1
-} else {
 	image_xscale = -1
+} else {
+	image_xscale = 1
 }
 
 if player_obj.tail_carry {
 	if player_obj.held_position {
-		if abs(tail_obj.ang)>60 && abs(tail_obj.ang)<120 {
-			sprite_index = wall_p1	
-		} else if (abs(tail_obj.ang)>=120 && abs(tail_obj.ang)<=220) ||
-		
-		(abs(tail_obj.ang)>=60 || abs(tail_obj.ang)>310)
-		{
-			sprite_index = slanted1
+		if floor(tail_obj.ang)==0 || floor(tail_obj.ang)==180 {
+			sprite_index = s_player_wall_cling
+		} else if floor(tail_obj.ang)==270 {
+			sprite_index = s_player_idle_e
 		} else {
-			sprite_index = wall_p1	
+			sprite_index = s_player_ceil_cling
 		}
-		
-		
 	} else if player_obj.grounded && (player_obj.k_right || player_obj.k_left) {
 		sprite_index = s_player_run_s
-		image_speed= 0.7 + hsp
+		image_speed= abs(player_obj.hsp) * 0.1
 	} else if player_obj.grounded && player_obj.k_down {
 		sprite_index = s_player_crouch_s
+	} else if !player_obj.grounded {
+		sprite_index = s_player_falling_s
 	} else {
 		sprite_index = s_player_idle_s
 	}
 }
+
 if !player_obj.tail_carry {
 	
 	if player_obj.held_position {
-		if player_hitbox_check_obj.wall == 0 ||player_hitbox_check_obj.wall == 2 {
-			sprite_index = wall_p1
-		}
-		if player_hitbox_check_obj.wall ==1 {
-			sprite_index = slanted
-		}
-		if player_hitbox_check_obj.wall == 3 {
+		if floor(tail_obj.ang)==0 || floor(tail_obj.ang)==180 {
+			sprite_index = s_player_wall_cling
+		} else if floor(tail_obj.ang)==270 {
 			sprite_index = s_player_idle_e
+		} else {
+			sprite_index = s_player_ceil_cling
 		}
+		
 	} else if player_obj.grounded && (player_obj.k_right || player_obj.k_left) {
 		sprite_index = s_player_run_e
-		image_speed= 0.7 + hsp
+		image_speed= abs(player_obj.hsp) * 0.1
 	} else if player_obj.grounded && player_obj.k_down {
 		sprite_index = s_player_crouch_e
 	} else if player_obj.grounded {
 		sprite_index = s_player_idle_e
 	} else if player_obj.vsp>=0 && !player_obj.zoom_timer_bool {
-		sprite_index = s_player_idle_e
+		sprite_index = s_player_falling_e
 	} else if player_obj.vsp<0 && !player_obj.zoom_timer_bool {
-		sprite_index = s_player_idle_e
+		sprite_index = s_player_falling_e
 	}
 }
 if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 || player_obj.zoom_ctdn>0 {
@@ -113,8 +110,6 @@ if player_obj.death {
 	image_xscale = 0
 }
 
-image_xscale*=1.5
-image_yscale=1.5
 
 if player_obj.ability_held_release_jump {
 	if player_obj.held_position && player_obj.ability_held_release_t>player_obj.ability_held_release_m {

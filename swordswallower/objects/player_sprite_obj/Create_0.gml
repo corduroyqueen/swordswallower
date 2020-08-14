@@ -30,6 +30,24 @@ s_player_run_s = cc_run_s111
 s_boost = boost
 
 
+
+s_player_idle_e = spr_mc_idle
+s_player_crouch_e = spr_mc_crouch
+s_player_run_e = spr_mc_run
+s_player_falling_e = spr_mc_falling
+
+
+s_player_idle_s = spr_mc_idle
+s_player_crouch_s = spr_mc_crouch
+s_player_run_s = spr_mc_run
+s_player_falling_s = spr_mc_falling
+
+s_player_wall_cling = spr_mc_wall_cling
+s_player_ceil_cling = spr_mc_tophang
+
+s_player_dash = spr_mc_dash
+s_boost = boost
+
 arm_pin_x = 150
 arm_pin_y = 150
 

@@ -93,6 +93,7 @@ ability_dash = true
 global.blood_cr = 0.9
 global.blood_cg = 0.0
 global.blood_cb = 0.3
+global.blood_color = make_color_rgb(255*global.blood_cr,255*global.blood_cg,255*global.blood_cb)
 
 
 

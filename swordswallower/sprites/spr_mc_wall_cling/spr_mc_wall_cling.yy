@@ -2,7 +2,7 @@
     "id": "63de8f4d-f540-44a8-9670-952a86fccd81",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "wall_cling",
+    "name": "spr_mc_wall_cling",
     "For3D": false,
     "HTile": false,
     "VTile": false,
@@ -54,7 +54,7 @@
             "visible": true
         }
     ],
-    "origin": 0,
+    "origin": 9,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
@@ -65,6 +65,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 60,
-    "xorig": 0,
-    "yorig": 0
+    "xorig": 30,
+    "yorig": 26
 }

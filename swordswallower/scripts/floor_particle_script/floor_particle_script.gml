@@ -22,7 +22,7 @@ player_obj.grounded &&
 abs(player_obj.hsp)>1 {
 	
 	particle = instance_create_depth(
-	player_obj.x+84 * -player_sprite_obj.image_xscale,
+	player_obj.x+84 * player_sprite_obj.image_xscale,
 	player_obj.y+33,
 	-1000,
 	spark_particle_obj)

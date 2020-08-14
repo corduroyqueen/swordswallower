@@ -1234,7 +1234,7 @@
             "Key": "142606e4-5b62-4b87-86c9-3dfdff2b8ea9",
             "Value": {
                 "id": "1c1198b9-1abf-49a2-b4c1-c72df6878212",
-                "resourcePath": "sprites\\dash\\dash.yy",
+                "resourcePath": "sprites\\spr_mc_dash\\spr_mc_dash.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1458,7 +1458,7 @@
             "Key": "187b0772-5a77-45fc-aea0-5505d13e5e73",
             "Value": {
                 "id": "7b9331c3-6938-42ed-8fbd-61d6801d56fd",
-                "resourcePath": "sprites\\run\\run.yy",
+                "resourcePath": "sprites\\spr_mc_run\\spr_mc_run.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2458,7 +2458,7 @@
             "Key": "2c6b1964-677e-4bdb-a368-87a713e5a563",
             "Value": {
                 "id": "d0b3ba8f-ee8a-43e5-8d48-bde7ab7dc839",
-                "resourcePath": "sprites\\gettingupaftercrouch\\gettingupaftercrouch.yy",
+                "resourcePath": "sprites\\spr_mc_gettingupaftercrouch\\spr_mc_gettingupaftercrouch.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4370,7 +4370,7 @@
             "Key": "4f4480ed-29e7-411f-a9f2-abf96c4d6a66",
             "Value": {
                 "id": "a0042119-d591-42d7-a6c1-e2e46ec89d52",
-                "resourcePath": "sprites\\face2\\face2.yy",
+                "resourcePath": "sprites\\spr_mc_face_idle\\spr_mc_face_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5554,7 +5554,7 @@
             "Key": "63de8f4d-f540-44a8-9670-952a86fccd81",
             "Value": {
                 "id": "b7329706-57fe-4dc1-ad38-abccc19f30f0",
-                "resourcePath": "sprites\\wall_cling\\wall_cling.yy",
+                "resourcePath": "sprites\\spr_mc_wall_cling\\spr_mc_wall_cling.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7010,7 +7010,7 @@
             "Key": "7da0e259-087d-42aa-92de-29280d9738d0",
             "Value": {
                 "id": "76e108c2-632a-4c81-871d-b77bc62ed6f2",
-                "resourcePath": "sprites\\face1\\face1.yy",
+                "resourcePath": "sprites\\spr_mc_face_facing\\spr_mc_face_facing.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8474,7 +8474,7 @@
             "Key": "9d32b927-05ce-4349-8927-ad4001d6c2d8",
             "Value": {
                 "id": "432e5181-0f20-4e3e-b971-9c146562a2de",
-                "resourcePath": "sprites\\tophang9\\tophang9.yy",
+                "resourcePath": "sprites\\spr_mc_tophang\\spr_mc_tophang.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11274,7 +11274,7 @@
             "Key": "daa62f11-b629-4407-a632-c17c37a41569",
             "Value": {
                 "id": "59d05aa0-3953-4f05-8aa4-9dfd622efb84",
-                "resourcePath": "sprites\\idle\\idle.yy",
+                "resourcePath": "sprites\\spr_mc_idle\\spr_mc_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11314,7 +11314,7 @@
             "Key": "db4b54ce-d779-4858-962f-35d5f1c6442e",
             "Value": {
                 "id": "c92d35fb-f4fd-4f0b-8c15-978524115b08",
-                "resourcePath": "sprites\\walk\\walk.yy",
+                "resourcePath": "sprites\\spr_mc_walk\\spr_mc_walk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11482,7 +11482,7 @@
             "Key": "dec020fc-1813-4244-815b-d37dcf286d3c",
             "Value": {
                 "id": "96880dc9-4f14-4fa3-836c-e50f7ca94f75",
-                "resourcePath": "sprites\\falling\\falling.yy",
+                "resourcePath": "sprites\\spr_mc_falling\\spr_mc_falling.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11818,7 +11818,7 @@
             "Key": "e4623f91-9a3d-469a-a4b1-d43c0c132a80",
             "Value": {
                 "id": "11df7d8f-38fa-4e40-8e98-2fc2471d578f",
-                "resourcePath": "sprites\\crouch\\crouch.yy",
+                "resourcePath": "sprites\\spr_mc_crouch\\spr_mc_crouch.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12043,6 +12043,14 @@
             "Value": {
                 "id": "c56a5020-3fea-4bcc-8679-541027f9ce3a",
                 "resourcePath": "sprites\/leaf3\/leaf3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e9b73c1d-f25f-42d4-8ee6-f47b4fd3753f",
+            "Value": {
+                "id": "01c0b67f-76db-4fc1-962c-13abaa9b88d2",
+                "resourcePath": "sprites\\white_circle\\white_circle.yy",
                 "resourceType": "GMSprite"
             }
         },
