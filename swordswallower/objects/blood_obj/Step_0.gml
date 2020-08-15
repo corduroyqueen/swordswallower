@@ -41,9 +41,11 @@ if place_meeting(x,y,tar_obj) {
 	
 } else if !surrounded {
 	vsp+=0.8+scalevar/6
-	if moveBoolX(hsp) || moveBoolY(vsp) {
-		x = xpreva + hsp*0.3
-		y = ypreva + vsp*0.3
+	xpreva = x
+	ypreva = y
+	moveActivateX(hsp)
+	moveActivateY(vsp)
+	if on_wall {
 		hs = hsp
 		vs = vsp
 		hsp=0
@@ -53,48 +55,17 @@ if place_meeting(x,y,tar_obj) {
 		surrounded = true
 	}
 
-	xpreva = x
-	ypreva = y
+	
 } else {
 	if player_got {
 		return
 	}
 	var sxs = image_xscale
-	var sys = image_yscale
 	
-	//if !place_meeting(x,y,blood_splat_obj) {
-		//ok = instance_create_depth(x,y,-2000,blood_splat_obj)
-		xt = x
-		yt = y
-		image_xscale = 3
-		image_yscale = 3
 	
-		if place_meeting(x,y,wall_obj) {
-			wall = instance_place(x,y,wall_obj)	
-			xt = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
-			yt = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
-		
-			//ok.image_xscale = sxs * 2.5
-			//ok.image_yscale = sys * 2.5
-			//blood_sprite_return(ok,wall)
-		
-		
-		} else if place_meeting(x,y,black_wall_obj) {
-			wall = instance_place(x,y,black_wall_obj)	
-			xt = clamp(x,wall.x-wall.sprite_width/2,wall.x+wall.sprite_width/2)
-			yt = clamp(y,wall.y-wall.sprite_height/2,wall.y+wall.sprite_height/2)
-		
-			//ok.image_xscale = sxs * 2.5
-			//ok.image_yscale = sys * 2.5
-			//blood_sprite_return(ok,wall)
-		} else {
-			xt = 0
-			yt = 0
-		}
-	//}
 	with art_surface_setter {
-		ds_list_add(splat_list_x,other.xt)
-		ds_list_add(splat_list_y,other.yt)	
+		ds_list_add(splat_list_x,other.x)
+		ds_list_add(splat_list_y,other.y)	
 		ds_list_add(splat_list_rot,random_range(0,360))	
 		ds_list_add(splat_list_s,sxs)	
 	}

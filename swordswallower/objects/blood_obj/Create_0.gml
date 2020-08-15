@@ -34,3 +34,5 @@ go = false
 spr = blood_sprite_spr1
 scalevar = 0.5
 rot = 50
+
+on_wall = false

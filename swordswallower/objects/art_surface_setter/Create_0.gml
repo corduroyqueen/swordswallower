@@ -81,6 +81,16 @@ layer_script_begin("bkd3", layer_stop_alpha_start);
 layer_script_end("bkd3", layer_stop_alpha_end);
 
 
+layer_script_begin("px_bkd2", layer_stop_alpha_start);
+layer_script_end("px_bkd2", layer_stop_alpha_end);
+
+layer_script_begin("px_bkd", layer_stop_alpha_start);
+layer_script_end("px_bkd", layer_stop_alpha_end);
+
+layer_script_begin("px_sky", layer_stop_alpha_start);
+layer_script_end("px_sky", layer_stop_alpha_end);
+
+
 
 layer_script_begin("bkdp2", layer_stop_alpha_start);
 layer_script_end("bkdp2", layer_stop_alpha_end);

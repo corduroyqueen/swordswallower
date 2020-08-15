@@ -29,6 +29,7 @@ if getmap {
 
 if room==subtemple01 {
 	map = level0map	
+	
 	//sdm(ds_list_size(player_obj.keylist))
 }
 
@@ -55,6 +56,7 @@ if room==voidtemple01 {
 		
 	}
 }
+
 
 
 /*

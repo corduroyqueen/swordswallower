@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
+outline_init()
 
 cca = 5
 tspeed = 69
@@ -32,7 +33,7 @@ xpreva = x
 ypreva = y
 
 pull_timer = 0
-pull_wall_t = 5
+pull_wall_t = 7
 
 insert_hs = 0
 insert_vs = 0

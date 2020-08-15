@@ -267,3 +267,5 @@ enemy_collided_total_list = ds_list_create()
 
 camera_fix_bounds = false
 camera_fix = false
+
+footstep_audio_bool = true

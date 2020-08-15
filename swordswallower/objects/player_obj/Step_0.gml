@@ -138,6 +138,8 @@ if !tail_planted && !tail_pulling && !held_position {
 
 camera()
 
+layer_px()
+
 if start_death || death {
 	return	
 }

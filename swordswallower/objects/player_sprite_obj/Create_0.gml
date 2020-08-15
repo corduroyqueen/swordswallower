@@ -48,8 +48,8 @@ s_player_ceil_cling = spr_mc_tophang
 s_player_dash = spr_mc_dash
 s_boost = boost
 
-arm_pin_x = 150
-arm_pin_y = 150
+arm_pin_x = 152
+arm_pin_y = 166
 
 arm_hand_x = 150+1
 arm_hand_y = 150-20

@@ -57,8 +57,9 @@ if !zoom_timer_bool && !held_position{
 if grounded && (k_left || k_right) {
 	//walk_timer+=1
 	//if walk_timer>(25-abs(hsp)) {
-	if abs(player_sprite_obj.image_index-4)<0.1 ||
-	abs(player_sprite_obj.image_index-1)<0.1 {
+	if //abs(player_sprite_obj.image_index-4)<0.1 ||
+	floor(player_sprite_obj.image_index)==0 && footstep_audio_bool
+	{
 		if !tail_carry {
 			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
 			audio_sound_pitch(hey,random_range(0.5,1))
@@ -76,6 +77,9 @@ if grounded && (k_left || k_right) {
 			audio_sound_pitch(hey,random_range(0.5,1))
 			audio_manager(hey,0,false,0)	
 		}
+		footstep_audio_bool = false
+	} else {
+		footstep_audio_bool = true	
 	}
 		
 		walk_timer=0	

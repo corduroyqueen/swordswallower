@@ -87,8 +87,8 @@ if !player_obj.zoom_timer_bool {
 	
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
-	arm_pin_x = x
-	arm_pin_y = y-27
+	arm_pin_x = x+2
+	arm_pin_y = y-24
 	player_arm_draw()
 
 }

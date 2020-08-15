@@ -22,7 +22,7 @@ list_of_waves	= ds_list_create();
 
 // prepare waves surface
 srf_waves		= -1;
-srf_waves_scale	= 1;
+srf_waves_scale	= 0.5;
 view_w			= 1920
 view_h			= 1080
 

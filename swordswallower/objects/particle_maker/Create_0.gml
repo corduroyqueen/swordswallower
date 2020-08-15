@@ -12,3 +12,7 @@ for (i=0;i<10;i++){
 }
 
 location_timer = 0
+
+player_positions_x = ds_list_create()
+player_positions_y = ds_list_create()
+life_timer=0

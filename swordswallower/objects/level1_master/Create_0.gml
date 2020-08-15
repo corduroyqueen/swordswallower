@@ -95,7 +95,10 @@ global.blood_cg = 0.0
 global.blood_cb = 0.3
 global.blood_color = make_color_rgb(255*global.blood_cr,255*global.blood_cg,255*global.blood_cb)
 
-
+global.magic_cr = 0.55
+global.magic_cg = 0.21
+global.magic_cb = 0.9
+global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*global.magic_cb)
 
 //0.9, 0.0, 0.3 neon pink
 

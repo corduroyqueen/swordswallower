@@ -2,11 +2,14 @@
 // You can write your code in this editor
 
 
-image_xscale = 1.15
-image_yscale = 1.15
 image_alpha -= 0.05
+gpu_set_colorwriteenable(true,true,true,false)
+image_xscale = sign(player_obj.hsp)
+image_yscale = -sign(player_obj.hsp)
 
-draw_sprite_ext(player_cloud,0,x,y,1,1,0,c_white,image_alpha)
+
+draw_sprite_ext(spr_mc_dash,0,x,y,1,image_yscale,image_angle+180,c_white,image_alpha)
+gpu_set_colorwriteenable(true,true,true,true)
 
 if image_alpha<=0 {
 	instance_destroy()	

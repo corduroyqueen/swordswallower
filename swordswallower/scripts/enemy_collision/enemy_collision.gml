@@ -10,11 +10,17 @@ for(i=0; i < iteration_num; i++) {
 	if !place_meeting(xc,yc,enemy_parent_obj) {
 			
 	} else {
+		//ds_list_clear(enemy_collided_list)
 		enemy_collided_list = instance_place_list(xc,yc,enemy_parent_obj,enemy_collided_list,false)
 		//sdm("en")
+		//sdm(ds_list_size(enemy_collided_list))
+		//for (i = 0; i<ds_list_size(enemy_collided_list); i++) {
+		//	sdm(object_get_name(enemy_collided_list[| i].object_index))
+		//}
 		for (i = 0; i<ds_list_size(enemy_collided_list); i++) {
 			var collision = enemy_collided_list[| i]
 			ds_list_add(enemy_collided_total_list,collision)
+			
 			if object_get_parent(collision.object_index)==fly_parent_obj {
 				//flies
 				if !tail_obj.stinky && !player_obj.stinky_check {
@@ -47,6 +53,7 @@ for(i=0; i < iteration_num; i++) {
 				}
 			}
 			instance_deactivate_object(collision)	
+			
 		}
 		ds_list_clear(enemy_collided_list)
 	}

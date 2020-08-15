@@ -60,7 +60,7 @@ if shader_mask_active {
 	
 }
 	
-x = vBaseX + ((player_obj.camx+640)/parallax_num);
+x = vBaseX + ((player_obj.camx+960)/parallax_num);
 if ycheck {
 	y = vBaseY + (player_obj.camy/parallax_num);
 }

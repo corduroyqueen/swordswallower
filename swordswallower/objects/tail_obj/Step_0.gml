@@ -119,10 +119,11 @@ if player_obj.tail_pulling {
 		vsp=0
 		//move_towards_point(player_obj.x,player_obj.y,pspeed/15)
 		
-		sp_towards_target(player_obj.x,player_obj.y,pspeed/15,1)
+		//sp_towards_target(player_obj.x,player_obj.y,pspeed/15,1)
 		
 		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)-90,0.1)
 		image_angle = held_image_angle + random_range(-(5+pull_timer),5+pull_timer)
+		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)+90,0.1)
 		//if player_obj.zoom_timer_bool {
 		//	pull_timer=pull_wall_t+1	
 		//}
@@ -278,8 +279,10 @@ if player_obj.tail_planted {
 		player_obj.tail_planted = false
 		player_obj.tail_pulling = true
 		if !player_obj.grounded {
-			player_obj.held_release_timer = 15
+			player_obj.held_release_timer = 7
 		}
+		player_obj.hsp = lerp(player_obj.hsp,0,0.3)
+		player_obj.vsp = lerp(player_obj.vsp,0,0.3)
 		
 		//if !player_obj.grounded {
 		//	player_obj.vsp*=0.6
