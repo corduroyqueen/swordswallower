@@ -19,6 +19,9 @@ for(i=0; i < iteration_num; i++) {
 		//}
 		for (i = 0; i<ds_list_size(enemy_collided_list); i++) {
 			var collision = enemy_collided_list[| i]
+			if !instance_exists(collision) {
+				continue	
+			}
 			ds_list_add(enemy_collided_total_list,collision)
 			
 			if object_get_parent(collision.object_index)==fly_parent_obj {

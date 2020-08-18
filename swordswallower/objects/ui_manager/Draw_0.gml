@@ -34,7 +34,7 @@ if speaking {
 	    global.maxPrintTimer = txtSpeed;
 		printing = false
 	} else {
-		scr_textbox(current_dialogue, font1, ord("J"), 0.1)	
+		scr_textbox(current_dialogue, font1, player_obj.k_speak_p, 0.1)	
 	}
 }
 

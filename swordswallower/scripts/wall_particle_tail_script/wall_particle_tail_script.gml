@@ -20,6 +20,8 @@ color = argument7
 //	normy *= -1;
 //}
 
+/*
+
 //speedx = (other.normx * other.dot)
 //speedy = (-other.normy * other.dot)
 var lelang = point_direction(0,0,throwxs,throwys)+180

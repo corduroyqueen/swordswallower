@@ -65,6 +65,7 @@ else if current_obj.object_index!=impale_circle_obj
 	player_obj.held_position = true
 	player_obj.held_start_hsp = player_obj.hsp
 	player_obj.held_start_vsp = player_obj.vsp
+	player_obj.held_position_start= true
 	
 	player_obj.shake_d=13.5
 	player_obj.camera_shake_d = true

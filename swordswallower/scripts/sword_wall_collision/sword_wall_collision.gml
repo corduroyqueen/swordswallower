@@ -3,9 +3,12 @@ local_obj = argument0
 
 
 if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
-	
+	sword_reject_script()
+	return
 } else if object_get_parent(local_obj.object_index)==wall_destructible_parent_obj {
-	
+	with local_obj {
+		event_user(0)	
+	}
 } else if object_get_parent(local_obj.object_index)==key_wall_parent_obj {
 	
 	if ds_list_size(player_obj.keylist)>=local_obj.lock && !lockcheck && local_obj.closed {

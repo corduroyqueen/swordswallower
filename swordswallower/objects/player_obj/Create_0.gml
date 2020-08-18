@@ -269,3 +269,4 @@ camera_fix_bounds = false
 camera_fix = false
 
 footstep_audio_bool = true
+held_position_start = false
