@@ -19,7 +19,14 @@
         "382dc041-42f2-40dd-9844-f9ed08b2cb81",
         "f02bc7ff-f646-4697-886c-f6b4bd462b9b",
         "2f27dc7e-dfad-4208-b8c4-b6e48de2dfbf",
-        "46f9229c-9e15-47f1-a281-b7ce70e92ce1"
+        "46f9229c-9e15-47f1-a281-b7ce70e92ce1",
+        "ef23f684-212b-42ec-81c9-4a8a6f45aaa2",
+        "f157475b-9029-4f32-936e-d2debc493292",
+        "145a67fb-fa3c-4dcf-b0e4-fa6899fff905",
+        "d3e92595-5f15-4ee3-b036-142b805060fd",
+        "bc460f85-6f07-4a08-9c4a-fca161fc9fc1",
+        "c92605a3-ce77-41ea-ac33-a01584bfa212",
+        "6c4d47a3-546d-40fe-b848-21f24904e56d"
     ],
     "filterType": "GMSprite",
     "folderName": "new",
