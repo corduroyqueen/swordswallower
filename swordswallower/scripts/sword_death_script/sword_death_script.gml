@@ -1,4 +1,4 @@
-sword_spr = sword5
+sword_spr = newsword_center
 if tail_planted {
 
 	hey = instance_create_depth(tail_obj.x,tail_obj.y,0,snakeheaddead_obj)

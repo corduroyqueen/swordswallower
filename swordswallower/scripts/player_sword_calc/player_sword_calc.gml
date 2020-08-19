@@ -2,6 +2,40 @@ var facing
 facing = sign(image_xscale)
 
 ang = 0
+
+
+var temp_pin_x = arm_pin_x - 150 + player_obj.x
+var temp_pin_y = arm_pin_y - 150 + player_obj.y
+
+var dist = point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y)
+
+if !player_obj.grounded || sword_pos_y<temp_pin_y+30 {
+	sword_pos_y+=4
+} else {
+	
+}
+
+if (dist > arm_max_length) //If the distance is less than the radius, it is already within the circle.
+{
+	var fromOriginToObject_x = sword_pos_x - temp_pin_x; //~GreenPosition~ - *BlackCenter*
+	var fromOriginToObject_y = sword_pos_y - temp_pin_y; //~GreenPosition~ - *BlackCenter*
+	fromOriginToObject_x *= arm_max_length / dist; 
+	fromOriginToObject_y *= arm_max_length / dist; 
+	
+	sword_pos_x = temp_pin_x + fromOriginToObject_x
+	sword_pos_y = temp_pin_y + fromOriginToObject_y
+	
+}
+
+if abs(temp_pin_x-sword_pos_x) > 28 {
+	sword_facing = sign(temp_pin_x-sword_pos_x)
+}
+//sword_pos_x = x
+//sword_pos_y = y
+
+//sword_pos_x = clamp(
+//draw_sprite_ext(newsword_hilt,0,x-2,y+3,-facing,1,ang,c_white,1)
+/*
 if sprite_index==player_idle_s_n {
 	//93 32
 	//91 34
@@ -26,7 +60,7 @@ if sprite_index==player_idle_s_n {
 	
 	ang = point_direction(x+2*facing,y+3,pointx,pointy)-90
 	
-	draw_sprite_ext(sword4,0,x-2,y+3,-facing,1,ang,c_white,1)
+	draw_sprite_ext(newsword_hilt,0,x-2,y+3,-facing,1,ang,c_white,1)
 } else {
 	pointx = 78 * facing + x
 	pointy=0
@@ -62,5 +96,5 @@ if sprite_index==player_idle_s_n {
 	
 	ang = point_direction(x+11*facing,y+1,pointx,pointy)-90
 	
-	draw_sprite_ext(sword4,0,x+11*facing,y+1,-facing,1,ang,c_white,1)	
+	draw_sprite_ext(newsword_hilt,0,x+11*facing,y+1,-facing,1,ang,c_white,1)	
 }

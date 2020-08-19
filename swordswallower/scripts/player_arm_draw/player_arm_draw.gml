@@ -8,7 +8,7 @@ if player_obj.k_fire_p && !player_obj.tail_planted && !player_obj.tail_throwing 
 	player_arm_calculate(tail_obj.x,tail_obj.y)
 } else if player_obj.tail_carry  {
 	arm_lerp_speed = 0.25
-	player_arm_calculate(player_obj.x + 20 * -image_xscale,player_obj.y+70)
+	player_arm_calculate(sword_pos_x,sword_pos_y)
 } else if  player_obj.tail_planted {
 	arm_lerp_speed = 0.025
 	player_arm_calculate(player_obj.x + 20 * -image_xscale,player_obj.y+70)

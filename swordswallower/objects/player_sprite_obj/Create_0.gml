@@ -49,14 +49,18 @@ s_player_dash = spr_mc_dash
 s_boost = boost
 
 arm_pin_x = 152
-arm_pin_y = 166
+arm_pin_y = 170
 
 arm_hand_x = 150+1
 arm_hand_y = 150-20
 
-arm_max_length = 30
+arm_max_length = 34
 arm_seg_length_1 = arm_max_length/2
 arm_seg_length_2 = arm_max_length/2
 
 hsp=0
 vsp=0
+
+sword_pos_x = x
+sword_pos_y = y
+sword_facing = 1

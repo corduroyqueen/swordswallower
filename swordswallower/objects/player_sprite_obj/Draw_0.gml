@@ -88,7 +88,8 @@ if !player_obj.zoom_timer_bool {
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
 	arm_pin_x = x+2
-	arm_pin_y = y-24
+	arm_pin_y = y-18
+	player_sword_calc()
 	player_arm_draw()
 
 }
@@ -102,7 +103,15 @@ draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
 x=player_obj.x
 y=player_obj.y
 if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_position {
-	player_sword_calc()
+	//draw_circle(temp_pin_x,temp_pin_y,arm_max_length,true
+	var tang
+	if sword_facing>0 {
+		tang = 110
+	} else {
+		tang = -110
+	}
+	draw_sprite_ext(newsword_hilt,0,sword_pos_x,sword_pos_y,sword_facing,1,tang,c_white,1)
+	
 }
 x=150
 y=150

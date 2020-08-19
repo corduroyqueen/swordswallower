@@ -6,13 +6,22 @@ y = 150
 
 //x = player_obj.x
 //y = player_obj.y
-
-if !player_obj.held_position {
+if player_obj.zoom_timer_bool {
+	if player_obj.hsp>0 {
+		facing_right = true
+	} else {
+		facing_right = false	
+	}
+} else if !player_obj.held_position {
 	if player_obj.k_right {
+		facing_right = true
+	} else if player_obj.k_fire_p && player_obj.tail_dest_x>player_obj.x {
 		facing_right = true
 	}
 	if player_obj.k_left {
 		facing_right = false	
+	} else if player_obj.k_fire_p && player_obj.tail_dest_x<player_obj.x {
+		facing_right = false
 	}
 } else {
 	if player_obj.on_wall_right {
@@ -42,7 +51,8 @@ if player_obj.tail_carry {
 		sprite_index = s_player_run_s
 		image_speed= abs(player_obj.hsp) * 0.1
 	} else if player_obj.grounded && player_obj.k_down {
-		sprite_index = s_player_crouch_s
+		sprite_index = spr_mc_gettingupaftercrouch
+		image_speed = 1
 	} else if !player_obj.grounded {
 		sprite_index = s_player_falling_s
 	} else {
@@ -65,7 +75,8 @@ if !player_obj.tail_carry {
 		sprite_index = s_player_run_e
 		image_speed= abs(player_obj.hsp) * 0.1
 	} else if player_obj.grounded && player_obj.k_down {
-		sprite_index = s_player_crouch_e
+		sprite_index=spr_mc_gettingupaftercrouch
+		image_speed = 1
 	} else if player_obj.grounded {
 		sprite_index = s_player_idle_e
 	} else if player_obj.vsp>=0 && !player_obj.zoom_timer_bool {
@@ -83,6 +94,9 @@ if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 || player_obj.zoom_ct
 	}
 if player_obj.zoom_timer_bool && place_meeting(x,y,wall_obj) {
 	//image_blend = c_purple	
+} else if !player_obj.zoom_timer_bool && player_obj.zoom_hitbox_active {
+	sprite_index = spr_mc_somersault
+	image_index = floor(current_time/2) % 5
 } else if player_obj.stinky_check {
 	image_blend = c_blue
 } else {
