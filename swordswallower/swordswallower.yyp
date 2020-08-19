@@ -783,6 +783,14 @@
             }
         },
         {
+            "Key": "0c8b8ea7-141a-495e-9719-9a204f6215a3",
+            "Value": {
+                "id": "7d3172f2-f246-4cc8-b4a4-091869ef69a0",
+                "resourcePath": "sprites\\pressetotalk\\pressetotalk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0cdc75e2-1ded-47cf-82dc-3afdea470289",
             "Value": {
                 "id": "e4d2c711-64d6-44cf-bf5b-fd255738a214",
@@ -1631,6 +1639,14 @@
             }
         },
         {
+            "Key": "1afe7b0b-a127-4d56-929c-62af139125d9",
+            "Value": {
+                "id": "e418a032-e509-496f-9c72-e690a748cda8",
+                "resourcePath": "sprites\\leftclick\\leftclick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1b11c10f-d56a-432c-8c54-547850e73164",
             "Value": {
                 "id": "4de7cf7f-0345-4da9-8d8b-bf5655ccd833",
@@ -2343,6 +2359,14 @@
             }
         },
         {
+            "Key": "28053901-96ac-4f94-9328-4067b50a37f8",
+            "Value": {
+                "id": "061c303f-b86f-4a68-a72c-c1be3c15f71c",
+                "resourcePath": "sprites\\etotalk\\etotalk.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "28751e42-4039-44dc-bd2f-2497ad87c4ad",
             "Value": {
                 "id": "a3f8807f-306f-4e95-ab73-dd5acc70ef36",
@@ -2771,6 +2795,14 @@
             "Value": {
                 "id": "4a8057db-db17-4017-9998-d4e78eade7aa",
                 "resourcePath": "sprites\/switchdoor\/switchdoor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "30c6dfe2-c344-4331-956f-59279f7523c1",
+            "Value": {
+                "id": "577e801b-53e5-408e-a905-d2dcf7c44fb8",
+                "resourcePath": "sprites\\textbox\\textbox.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3891,6 +3923,14 @@
             "Value": {
                 "id": "fc3166e7-7813-4b23-a929-0655031deec7",
                 "resourcePath": "sprites\/flower1\/flower1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "45d57a47-6b60-4ff2-91ea-626bd1d1d122",
+            "Value": {
+                "id": "e18dd0ee-2fe9-4a36-9c6e-960b9eccae00",
+                "resourcePath": "sprites\\holdright\\holdright.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7799,6 +7839,14 @@
             }
         },
         {
+            "Key": "8c050f81-6c52-42ea-aa80-93725a0e0b61",
+            "Value": {
+                "id": "2c692f9d-7980-4b1c-807a-053f44adc44e",
+                "resourcePath": "sprites\\rightclick\\rightclick.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8c361526-c06d-4069-976b-2afbb7af870a",
             "Value": {
                 "id": "da4440da-295f-4d60-9ddc-4ff47196e740",
@@ -10823,6 +10871,14 @@
             }
         },
         {
+            "Key": "cc2731e9-5f95-465c-a7aa-2663af23b8e6",
+            "Value": {
+                "id": "20a6cb80-b2cb-4433-b3b1-b2dcbf7034a3",
+                "resourcePath": "sprites\\textboxoverlay\\textboxoverlay.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cc2bdc8d-61e7-4780-8832-8937a68f02fc",
             "Value": {
                 "id": "5bae9ffa-6b47-4ba5-9278-5f7910be82d2",
@@ -13388,6 +13444,14 @@
                 "id": "6c58ee41-550a-4295-8d96-ed04c905d537",
                 "resourcePath": "objects\/arcing_knight_obj\/arcing_knight_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fc7458c8-699b-4116-a84d-56cd84d1db5b",
+            "Value": {
+                "id": "141f936a-44fd-4fbb-97f1-f2af00748c4c",
+                "resourcePath": "views\\fc7458c8-699b-4116-a84d-56cd84d1db5b.yy",
+                "resourceType": "GMFolder"
             }
         },
         {

@@ -18,7 +18,8 @@
         "e354595b-a229-45b6-a35f-adc6ddba2d72",
         "49afc2b5-808d-40d8-b020-4d46bdd7525c",
         "f9341fd0-280b-4f3e-9c53-ca5ac480f54c",
-        "cc7fd1cf-3fb6-4b7f-94a4-e10debca04e8"
+        "cc7fd1cf-3fb6-4b7f-94a4-e10debca04e8",
+        "7741e717-281b-4da0-97d8-658f54fabc20"
     ],
     "filterType": "GMObject",
     "folderName": "moving walls",
