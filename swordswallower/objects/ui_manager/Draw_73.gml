@@ -99,7 +99,11 @@ if player_obj.death {
 	
 	draw_set_font(font2)
 	//draw_text(player_obj.camx+20,player_obj.camy+20,string(player_obj.gems))	
-	draw_set_color(c_ltgray)
+	if player_obj.k_dash || player_obj.k_fire {
+		draw_set_color(c_dkgray)
+	} else {
+		draw_set_color(c_ltgray)
+	}
 	
 	if input_controller.controller == input_controller.controller_ds4 {
 		mouse_ui_x = lerp(mouse_ui_x,global.mousepx,0.2)
@@ -121,6 +125,19 @@ if player_obj.ckpt_place_timer>0 && !position_meeting(player_obj.x,player_obj.y,
 } else if player_obj.ckpt_place_timer>0 {
 	draw_sprite_ext(statue3,0,checkpoint_manager.checkpoint.x,checkpoint_manager.checkpoint.y,current_time % 2, 1,0,c_red,1)	
 }
+//with player_sprite_obj {
+//	draw_set_color(c_red)
+//	draw_circle(player_sprite_obj.sword_tx,player_sprite_obj.sword_ty,10,false)
+	
+//	draw_set_color(c_white)
+//	draw_circle(arm_hand_x - 150 + player_obj.x //+ arm_hand_x
+//	,
+//	arm_hand_y - 150 + player_obj.y// + arm_hand_y
+//	,
+//	7,false)
+
+//}
+
 /*
 if show_checkpoints {
 	

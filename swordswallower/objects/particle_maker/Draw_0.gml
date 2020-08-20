@@ -24,7 +24,7 @@ if size>1 {
 	draw_set_alpha(0.5 - life_timer/25)
 	
 	for(u=0;u<size-1;u++) {
-		sdm(player_positions_x[| u])
+		//sdm(player_positions_x[| u])
 		draw_line_width(
 			player_positions_x[| u],
 			player_positions_y[| u],

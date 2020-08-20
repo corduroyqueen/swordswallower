@@ -21,10 +21,18 @@ if player_obj.shielded {
 draw_set_color(c_white)
 draw_set_alpha(1)
 draw_self()
-if pythag(player_obj.hsp,player_obj.vsp)<5 {
-	draw_sprite_ext(spr_mc_face_idle,0,x,y-26,image_xscale,image_yscale,0,c_white,1)
+if pythag(player_obj.hsp,player_obj.vsp)<1 {
+	if player_obj.k_down {
+		draw_sprite_ext(spr_mc_face_idle,0,x,y,image_xscale,image_yscale,0,c_white,1)
+	} else {
+		draw_sprite_ext(spr_mc_face_idle,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
+	}
 } else {
-	draw_sprite_ext(spr_mc_face_facing,0,x,y-26,image_xscale,image_yscale,0,c_white,1)
+	if player_obj.k_left || player_obj.k_right {
+		draw_sprite_ext(spr_mc_face_facing,0,x+head_pos_table_x[image_index]*-image_xscale,y+head_pos_table_y[image_index],image_xscale,image_yscale,0,c_white,1)
+	} else {
+		draw_sprite_ext(spr_mc_face_facing,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
+	}
 }
 
 if !player_obj.zoom_timer_bool {
@@ -36,10 +44,18 @@ if !player_obj.zoom_timer_bool {
 
 	draw_set_alpha(1);
 	draw_self()
-	if pythag(player_obj.hsp,player_obj.vsp)<5 {
-		draw_sprite_ext(spr_mc_face_idle,0,x,y-26,image_xscale,image_yscale,0,c_white,1)
+	if pythag(player_obj.hsp,player_obj.vsp)<1 {
+		if player_obj.k_down {
+			draw_sprite_ext(spr_mc_face_idle,0,x,y,image_xscale,image_yscale,0,c_white,1)
+		} else {
+			draw_sprite_ext(spr_mc_face_idle,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
+		}
 	} else {
-		draw_sprite_ext(spr_mc_face_facing,0,x,y-26,image_xscale,image_yscale,0,c_white,1)
+		if player_obj.k_left || player_obj.k_right {
+			draw_sprite_ext(spr_mc_face_facing,0,x+head_pos_table_x[image_index]*-image_xscale,y+head_pos_table_y[image_index],image_xscale,image_yscale,0,c_white,1)
+		} else {
+			draw_sprite_ext(spr_mc_face_facing,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
+		}
 	}
 	
 	gpu_set_blendenable(true);
@@ -87,8 +103,16 @@ if !player_obj.zoom_timer_bool {
 	
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
-	arm_pin_x = x+2
-	arm_pin_y = y-18
+	if player_obj.k_down {
+		arm_pin_x = x + 2 * image_xscale
+		arm_pin_y = y + 4
+	} else if player_obj.k_left || player_obj.k_right {
+		arm_pin_x = x + arm_pos_table_x[image_index] * -image_xscale
+		arm_pin_y = y + arm_pos_table_y[image_index]
+	} else {
+		arm_pin_x = x + 2 * image_xscale
+		arm_pin_y = y - 18	
+	}
 	player_sword_calc()
 	player_arm_draw()
 
@@ -104,13 +128,10 @@ x=player_obj.x
 y=player_obj.y
 if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_position {
 	//draw_circle(temp_pin_x,temp_pin_y,arm_max_length,true
-	var tang
-	if sword_facing>0 {
-		tang = 110
-	} else {
-		tang = -110
-	}
-	draw_sprite_ext(newsword_hilt,0,sword_pos_x,sword_pos_y,sword_facing,1,tang,c_white,1)
+	
+	//sword_angle_calc()
+	//draw_circle(sword_pos_x,sword_pos_y,5,false)
+	draw_sprite_ext(newsword_hilt,0,sword_pos_x,sword_pos_y,sword_facing,1,sword_ang,c_white,1)
 	
 }
 x=150

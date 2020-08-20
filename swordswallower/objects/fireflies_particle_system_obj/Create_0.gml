@@ -17,7 +17,7 @@ part_type_direction(part_type, 0, 360, 0, 10);
 //part_emitter_region(part_system,part_emitter,50,100,50,100,ps_shape_rectangle,ps_distr_linear)
 
 //part_emitter_stream(part_system,part_emitter,part_type,4)
-
+/*
 for(a=0;a<room_width;a+=random_range(300,600)) {
 	for(b=0;b<room_height;b+=random_range(300,600)) {
 		a+=random_range(-200,200)
