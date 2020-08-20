@@ -54,7 +54,7 @@ if sword_s==sword_s_planted {
 		////var lely = arm_hand_y - 150 + player_obj.y
 		var angs = degtorad(point_direction(sword_tx,sword_ty,temp_pin_x,temp_pin_y))	
 		var length = point_distance(sword_tx,sword_ty,sword_pos_x,sword_pos_y)
-		sdm(point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y))
+		//sdm(point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y))
 		if point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y)>80 { sword_planted_held = false }
 		if point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y)>80  { sword_planted_bounds = false }
 		if point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y)>24 

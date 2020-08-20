@@ -23,6 +23,21 @@ if firsttime {
 	}
 		
 	if room==subtemple01 {
+		px_layer_sky = layer_get_id("px_sky")
+		px_layer_sky_amt = 1.01
+		px_layer_bkd1 = layer_get_id("px_bkd1")
+		px_layer_bkd1_amt = 3
+		px_layer_bkd2 = layer_get_id("px_bkd2")
+		px_layer_bkd2_amt = 5
+		px_layer_near1 = layer_get_id("px_near1")
+		px_layer_near1_amt = 15
+		px_layer_near2 = layer_get_id("px_near2")
+		px_layer_near2_amt = 30
+		
+		//layer_parallax_normalize_x(px_layer_sky_amt,px_layer_sky)
+		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)
+		layer_parallax_normalize_x(px_layer_near2_amt,px_layer_near2)
+		
 		subtemple01init()	
 		fireflies_particle_system_obj.spawn = true
 		//audio_play_sound(gmc,0,1)
@@ -106,6 +121,8 @@ if firsttime {
 
 
 if initialize {
+	
+	
 	player_obj.camx = checkpoint_manager.checkpoint.x - player_obj.cam_width_h
 	player_obj.camy = checkpoint_manager.checkpoint.y - player_obj.cam_height_h
 	
@@ -162,6 +179,8 @@ if initialize {
 		}	
 	}
 	if room==subtemple01 {
+		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)
+		layer_parallax_normalize_x(px_layer_near2_amt,px_layer_near2)
 		if subtemple01ckptbool {
 			instance_destroy(checkpointlol)	
 		}

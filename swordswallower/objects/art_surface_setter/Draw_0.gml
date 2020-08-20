@@ -76,12 +76,11 @@ if !player_obj.death {
 } else {
 	gpu_set_colorwriteenable(true, true, true, true);
 }
-if keyboard_check(ord("P")) {
-	gpu_set_colorwriteenable(true, true, true, false);
-} else {
-	gpu_set_colorwriteenable(true, true, true, true);
-}
-gpu_set_colorwriteenable(true, true, true, true);
+//if keyboard_check(ord("P")) {
+//	gpu_set_colorwriteenable(true, true, true, false);
+//} else {
+//	gpu_set_colorwriteenable(true, true, true, true);
+//}
 
 //shader_set(shader_alpha_one)
 //gpu_set_blendenable(true)

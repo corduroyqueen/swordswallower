@@ -180,7 +180,7 @@ if view_visible[1] == true {
 
 // Draw dialogue box
 draw_set_color(c_black);
-draw_rectangle(view_xview,
+draw_roundrect(view_xview,
 view_yview,
 view_xview+view_wview,
 view_yview+view_hview,false);
@@ -188,11 +188,11 @@ view_yview+view_hview,false);
 // Rectangle Borders
 var bw = 2; // Border width
 draw_set_color(c_white);
-draw_line_width(view_xview, view_yview, view_xview, (view_yview+view_hview), bw);
-draw_line_width(view_xview-(bw/2), view_yview, view_xview+view_wview, view_yview, bw);
-draw_line_width(view_xview+view_wview-bw/2, view_yview, view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
-draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview, (view_yview+view_hview)-bw/2, bw);
-
+//draw_line_width(view_xview, view_yview, view_xview, (view_yview+view_hview), bw);
+//draw_line_width(view_xview-(bw/2), view_yview, view_xview+view_wview, view_yview, bw);
+//draw_line_width(view_xview+view_wview-bw/2, view_yview, view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
+//draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview, (view_yview+view_hview)-bw/2, bw);
+draw_sprite_ext(textboxoverlay,0,view_xview,view_yview-30,1,1,0,c_white,1)
 
 // Draw Text On Screen
 draw_set_color(c_white);

@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 mask_index = player_idle
 //if sprite.sprite_index == player_crouching || sprite.sprite_index == player_crouching_s {
 //	mask_index = player_crouching

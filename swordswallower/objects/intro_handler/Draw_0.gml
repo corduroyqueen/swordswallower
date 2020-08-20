@@ -9,6 +9,7 @@ if player_obj.intro {
 	draw_set_alpha(alpha)
 	
 	intro_timer++
+	intro_timer=2000
 	
 	if intro_timer<black_timer_m {
 		

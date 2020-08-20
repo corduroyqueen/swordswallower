@@ -1807,6 +1807,14 @@
             }
         },
         {
+            "Key": "1d9c0229-c11f-492c-9ec0-7d8907380e78",
+            "Value": {
+                "id": "b11feb20-8b77-4efb-854d-9b92ef021111",
+                "resourcePath": "scripts\\layer_parallax_normalize_x\\layer_parallax_normalize_x.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1d9dc26e-f3a0-429f-b8dd-41486f662791",
             "Value": {
                 "id": "82164691-ede5-4d92-8fae-5ab96e74e12b",
@@ -4290,7 +4298,7 @@
             "Key": "4a83bb9e-a097-4ca7-a06d-e160920aaa1c",
             "Value": {
                 "id": "2c1adf30-c3a7-4c04-bfe9-b827e72f3781",
-                "resourcePath": "sprites\\sprite928\\sprite928.yy",
+                "resourcePath": "sprites\\light_circle\\light_circle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7660,6 +7668,14 @@
                 "id": "5566eaf5-39a9-4d2d-aa42-cb850f3f5b74",
                 "resourcePath": "sprites\/area2_wall1\/area2_wall1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "87e5e541-81d6-4dce-b105-e951c2765cc8",
+            "Value": {
+                "id": "cee401ec-71c3-4803-9b36-60b5134a85ef",
+                "resourcePath": "scripts\\layer_parallax_normalize_y\\layer_parallax_normalize_y.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -13841,7 +13857,9 @@
         "81cb8d99-c980-4cc7-8b53-30f465d98b2a",
         "3497709d-1b6a-4848-8ff5-ccf04d19de32",
         "f3c8cd19-abd3-46c4-938c-47290688b883",
-        "93e39194-252e-4b27-8ca4-f68a741948af"
+        "93e39194-252e-4b27-8ca4-f68a741948af",
+        "1d9c0229-c11f-492c-9ec0-7d8907380e78",
+        "87e5e541-81d6-4dce-b105-e951c2765cc8"
     ],
     "tutorial": ""
 }

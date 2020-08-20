@@ -9,7 +9,7 @@ if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 	
 	
-	sdm(player_sprite_obj.spr_tarheight)
+	//sdm(player_sprite_obj.spr_tarheight)
 	player_sprite_obj.spr_tarred_a = 0
 	player_sprite_obj.spr_tarred = true
 	

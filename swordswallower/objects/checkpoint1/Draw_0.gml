@@ -41,7 +41,7 @@ if setpoint {
 		gpu_set_colorwriteenable(true,true,true,false)
 		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
 		
-		draw_sprite_ext(redblur,0,x+s_x,y+s_y,0.5,0.5,0,c_white,ok)
+		draw_sprite_ext(light_circle,0,x+s_x,y+s_y,0.5,0.5,0,c_white,ok)
 		
 		
 		gpu_set_blendmode(bm_normal)
