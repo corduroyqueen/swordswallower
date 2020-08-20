@@ -147,7 +147,7 @@ if sword_present {
 	
 }
 
-if point_distance(x,y,player_obj.x+player_obj.hsp,player_obj.y+player_obj.vsp)<70 
+if point_distance(x,y,player_obj.x+player_obj.hsp,player_obj.y+player_obj.vsp)<0 
 	&& !grabbing && !grabbed  && state!=state_knockback {
 		
 	grabbing = true
@@ -191,8 +191,8 @@ if grabbing {
 	
 	player_obj.x = x + 35 * -sign(image_xscale)
 	player_obj.y = y
-	hsp = lerp(hsp,0,0.02)
-	state=state_hitting
+	//hsp = lerp(hsp,0,0.02)
+	//state=state_hitting
 	hold_timer++
 	if hold_timer<1 {
 		hit_timer = 0	
@@ -232,10 +232,12 @@ if state==state_chasing {
 	if charging {
 		charge_timer=0
 		if direc {
+			
 			hsp+=h_accel	
 			image_xscale = -1
 			facing_right = true
 		} else {
+			
 			hsp-=h_accel	
 			image_xscale = 1
 			facing_right = false
@@ -256,10 +258,12 @@ if state==state_chasing {
 		}
 		//sprite_index = intimidating_walk
 		//image_speed = 0.75
-	
-		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		
-		if wall_detect(x+hsp,y-10) {
+		
+		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
+		sdm(hsp)
+		if wall_detect(x+hsp,y-5) {
+			
 			state = state_knockback
 			
 			player_obj.shake_d=9
@@ -271,8 +275,9 @@ if state==state_chasing {
 			
 			hsp = 5 * -sign(hsp)
 			vsp = -3
-			y-=10
+			//y-=10
 			
+			sdm(hsp)
 			if player_obj.x<26316 {
 				audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
 				audio_play_sound(sword_thud_1,0,false)
@@ -286,6 +291,7 @@ if state==state_chasing {
 			}
 		}
 		
+		
 	} else {
 		if charge_timer<=0 {
 			if player_obj.x<26316 {
@@ -295,7 +301,10 @@ if state==state_chasing {
 			}
 		}
 		charge_timer++
+		
 		hsp = lerp(hsp,0,0.05)
+		
+		
 		image_xscale = -sign(player_obj.x-x)
 		if charge_timer>charge_go {
 			charge_timer=0
@@ -314,6 +323,7 @@ if state==state_chasing {
 
 
 if state==state_idle {
+	
 	if facing_right{
 			
 	} else {
@@ -343,6 +353,7 @@ if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vsp+=grav }
 
 if state==state_idle || state==state_hitting {
 	if(abs(hsp) < h_decel){
+		
 		hsp=0;	
 	} else {
 		
@@ -385,7 +396,7 @@ if state==state_hitting {
 		
 		}
 		if hit_timer>50 {
-			state = state_idle
+		//	state = state_idle
 			hit_timer = 0
 			hit_success = false
 		}
@@ -432,7 +443,6 @@ if locked {
 last_fly_hp = fly_hp
 
 
-
 if death {
 	if sword_present {
 		player_obj.tail_planted = false
@@ -472,6 +482,7 @@ if state==state_idle {
 
 if place_meeting(x,y,tar_obj) {
 	vsp=0.3	
+	
 	hsp = lerp(hsp,0,0.2)
 	tartimer++
 	if tartimer>500 {
@@ -485,5 +496,4 @@ hsp = clamp(hsp,-h_max_speed,h_max_speed)
 
 moveX(hsp)
 moveY(vsp)
-
 

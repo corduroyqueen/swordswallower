@@ -1,43 +1,53 @@
 {
-    "id": "db5923a7-3a6d-4ca0-aa00-439417354ec0",
+    "id": "ea5ddc67-eeee-4546-8a48-db47831c23dd",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "breakable_pot_obj",
+    "name": "coffin_treasure",
     "eventList": [
         {
-            "id": "1c831bde-bb66-47d6-bd31-68593bf27c61",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "db5923a7-3a6d-4ca0-aa00-439417354ec0"
-        },
-        {
-            "id": "c4307599-7c5b-46fb-b48d-bd88de21f2a9",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 1,
-            "m_owner": "db5923a7-3a6d-4ca0-aa00-439417354ec0"
-        },
-        {
-            "id": "0fed08f2-2a4f-44b8-b53f-1317cbad27ab",
+            "id": "fad2ad42-e8db-4a5d-9976-23846e99c07f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 8,
-            "m_owner": "db5923a7-3a6d-4ca0-aa00-439417354ec0"
+            "m_owner": "ea5ddc67-eeee-4546-8a48-db47831c23dd"
+        },
+        {
+            "id": "998c37ff-fcd2-4a63-a5ff-2601742b90b6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "ea5ddc67-eeee-4546-8a48-db47831c23dd"
+        },
+        {
+            "id": "00d15d4e-a7eb-4b9f-afee-c637d70a25d8",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "ea5ddc67-eeee-4546-8a48-db47831c23dd"
+        },
+        {
+            "id": "ea6c1714-6b3b-41b1-a1b6-49d3a3c2bff1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 7,
+            "eventtype": 7,
+            "m_owner": "ea5ddc67-eeee-4546-8a48-db47831c23dd"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "46db92f5-d8b2-43b6-bc8b-7dc92039907a",
+    "parentObjectId": "00000000-0000-0000-0000-000000000000",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
@@ -53,6 +63,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "973e976a-ec29-471b-bc49-96110f4010a6",
+    "spriteId": "563eeb72-560f-4a0d-8be9-2d54fc5e3eba",
     "visible": true
 }

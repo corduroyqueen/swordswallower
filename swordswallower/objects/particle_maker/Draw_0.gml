@@ -25,12 +25,15 @@ if size>1 {
 	
 	for(u=0;u<size-1;u++) {
 		//sdm(player_positions_x[| u])
-		draw_line_width(
-			player_positions_x[| u],
-			player_positions_y[| u],
-			player_positions_x[| (u+1)],
-			player_positions_y[| (u+1)],
-			6)	
+		if is_real(player_positions_x[| u]) && is_real(player_positions_x[| (u+1)]) 
+		&& is_real(player_positions_y[| u]) && is_real(player_positions_y[| (u+1)]) {
+			draw_line_width(
+				player_positions_x[| u],
+				player_positions_y[| u],
+				player_positions_x[| (u+1)],
+				player_positions_y[| (u+1)],
+				6)	
+		}
 		
 	}
 	draw_set_color(c_white)

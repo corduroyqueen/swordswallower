@@ -61,6 +61,8 @@ arm_seg_length_2 = arm_max_length/2
 hsp=0
 vsp=0
 
+head_sprite = noone
+
 sword_pos_x = x
 sword_pos_y = y
 sword_facing = 1

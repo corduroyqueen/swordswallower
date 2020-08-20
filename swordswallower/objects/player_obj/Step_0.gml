@@ -249,6 +249,10 @@ if level1_master.dev {
 		x = mouse_x
 		y = mouse_y
 	}
+	if keyboard_check_pressed(ord("L")){
+		x = 25500
+		y = 7000
+	}
 }
 
 

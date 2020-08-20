@@ -24,6 +24,7 @@ if firsttime {
 		
 	if room==subtemple01 {
 		subtemple01init()	
+		fireflies_particle_system_obj.spawn = true
 		//audio_play_sound(gmc,0,1)
 	}
 	if room==subtemple02 {

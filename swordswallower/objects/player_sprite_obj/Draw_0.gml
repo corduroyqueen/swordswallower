@@ -21,14 +21,18 @@ if player_obj.shielded {
 draw_set_color(c_white)
 draw_set_alpha(1)
 draw_self()
-if pythag(player_obj.hsp,player_obj.vsp)<1 {
+if sprite_index==spr_mc_somersault {
+	
+} else if pythag(player_obj.hsp,player_obj.vsp)<1 {
 	if player_obj.k_down {
 		draw_sprite_ext(spr_mc_face_idle,0,x,y,image_xscale,image_yscale,0,c_white,1)
 	} else {
 		draw_sprite_ext(spr_mc_face_idle,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
 	}
 } else {
-	if player_obj.k_left || player_obj.k_right {
+	if player_obj.k_down {
+		draw_sprite_ext(spr_mc_face_idle,0,x,y,image_xscale,image_yscale,0,c_white,1)
+	} else if player_obj.k_left || player_obj.k_right {
 		draw_sprite_ext(spr_mc_face_facing,0,x+head_pos_table_x[image_index]*-image_xscale,y+head_pos_table_y[image_index],image_xscale,image_yscale,0,c_white,1)
 	} else {
 		draw_sprite_ext(spr_mc_face_facing,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
@@ -44,14 +48,18 @@ if !player_obj.zoom_timer_bool {
 
 	draw_set_alpha(1);
 	draw_self()
-	if pythag(player_obj.hsp,player_obj.vsp)<1 {
+	if sprite_index==spr_mc_somersault {
+		
+	} else if pythag(player_obj.hsp,player_obj.vsp)<1 {
 		if player_obj.k_down {
 			draw_sprite_ext(spr_mc_face_idle,0,x,y,image_xscale,image_yscale,0,c_white,1)
 		} else {
 			draw_sprite_ext(spr_mc_face_idle,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
 		}
 	} else {
-		if player_obj.k_left || player_obj.k_right {
+		if player_obj.k_down {
+			draw_sprite_ext(spr_mc_face_idle,0,x,y,image_xscale,image_yscale,0,c_white,1)
+		} else if player_obj.k_left || player_obj.k_right {
 			draw_sprite_ext(spr_mc_face_facing,0,x+head_pos_table_x[image_index]*-image_xscale,y+head_pos_table_y[image_index],image_xscale,image_yscale,0,c_white,1)
 		} else {
 			draw_sprite_ext(spr_mc_face_facing,0,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)

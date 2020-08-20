@@ -31,8 +31,8 @@ if !player_obj.k_dash
 	place_meeting(x,y,hum_food_obj)|| 
 	place_meeting(x,y,circle_friend_obj) {
 		//sdm("lellll")
-		player_obj.hsp *= 0.65
-		player_obj.vsp *= 0.65
+		player_obj.hsp *= 0.75
+		player_obj.vsp *= 0.75
 		out_of_dash_t=10
 		player_obj.hsp = clamp(player_obj.hsp,-25,25)
 		player_obj.vsp = clamp(player_obj.vsp,-25,25)
@@ -76,7 +76,7 @@ else if current_obj.object_index!=impale_circle_obj
 	
 	player_obj.camera_shake_direc = true
 	player_obj.cam_ang = degtorad(point_direction(0,0,player_obj.hsp,player_obj.vsp))
-	player_obj.shake_dir = 35
+	player_obj.shake_dir = 55
 
 	shockwave_shader.trigger = true
 	shockwave_shader.strength_input = 0.1

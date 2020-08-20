@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "02cfb28e-104f-469a-afd2-fa825674d09c",
+            "Value": {
+                "id": "3fd955a9-e1c3-4a9f-8652-286084ba1a75",
+                "resourcePath": "sprites\\coffin_open\\coffin_open.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "030f41a0-faab-4ba4-bb64-440f9cdb9838",
             "Value": {
                 "id": "49193111-6506-4bb8-94e8-629deb928257",
@@ -4946,7 +4954,7 @@
             "Key": "563eeb72-560f-4a0d-8be9-2d54fc5e3eba",
             "Value": {
                 "id": "18fce44c-85f5-4d0f-941e-5f63ae377bb4",
-                "resourcePath": "sprites\\sprite929\\sprite929.yy",
+                "resourcePath": "sprites\\coffin_closed\\coffin_closed.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8410,7 +8418,7 @@
             "Key": "973e976a-ec29-471b-bc49-96110f4010a6",
             "Value": {
                 "id": "2383f989-92ab-44c5-adee-28125e4be4e2",
-                "resourcePath": "sprites\\newpot\\newpot.yy",
+                "resourcePath": "sprites\\spr_pot\\spr_pot.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10194,7 +10202,7 @@
             "Key": "bc460f85-6f07-4a08-9c4a-fca161fc9fc1",
             "Value": {
                 "id": "fd4477bd-8cd5-4ea2-83aa-a710c7e55dfe",
-                "resourcePath": "sprites\\spr_pot\\spr_pot.yy",
+                "resourcePath": "sprites\\spr_pot_old\\spr_pot_old.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12492,6 +12500,14 @@
                 "id": "1e1749a6-40d4-4279-b778-b175c23bf41c",
                 "resourcePath": "sprites\/notsmoothline\/notsmoothline.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ea5ddc67-eeee-4546-8a48-db47831c23dd",
+            "Value": {
+                "id": "4376e70c-ca93-47ec-b3f3-21777809a34e",
+                "resourcePath": "objects\\coffin_treasure\\coffin_treasure.yy",
+                "resourceType": "GMObject"
             }
         },
         {
