@@ -1479,6 +1479,14 @@
             }
         },
         {
+            "Key": "18327979-38cd-4295-ac9e-f8cbf4a8fcb2",
+            "Value": {
+                "id": "8496eb33-2917-42fd-b75c-6a47d2021f39",
+                "resourcePath": "objects\\landing_particle_obj\\landing_particle_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1840628c-c4a8-4a43-9c97-3124d43875fa",
             "Value": {
                 "id": "40bf7b96-5bd4-4db2-b189-373463c739ee",
@@ -3051,6 +3059,14 @@
             "Value": {
                 "id": "3a6d50f0-9d1c-4308-b509-f2392df998fe",
                 "resourcePath": "sprites\/plant3757\/plant3757.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "35868829-a650-4739-a060-a5d7ae68e643",
+            "Value": {
+                "id": "6cfd2a60-50c5-4622-83df-77e84914033f",
+                "resourcePath": "sprites\\firefliesspawn\\firefliesspawn.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5379,6 +5395,14 @@
             "Value": {
                 "id": "8c289b11-a850-46f0-bede-4250bc3961c4",
                 "resourcePath": "sprites\/platform\/platform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5ce94582-ec6b-430d-b603-ae98dba20503",
+            "Value": {
+                "id": "3e8c9fdc-c257-42ed-b287-ac5f55091986",
+                "resourcePath": "sprites\\dust_sprite_spr\\dust_sprite_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8263,6 +8287,14 @@
             }
         },
         {
+            "Key": "92a89b51-be0f-4dfd-a9db-b227c76a8f62",
+            "Value": {
+                "id": "4b77d3e1-5802-4883-a76e-e968303135c8",
+                "resourcePath": "objects\\wall_piece_particle_spawn_obj\\wall_piece_particle_spawn_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "92a923da-11ea-44b6-b84e-e6b4e2d67cf3",
             "Value": {
                 "id": "5eedd4c8-08dd-439f-b34b-0f6f020ddc00",
@@ -9196,6 +9228,14 @@
                 "id": "3bbf0773-7032-4fc8-9cbd-754893ae1859",
                 "resourcePath": "scripts\/wall_particle_tail_script\/wall_particle_tail_script.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a4dedaef-9524-4d44-ba04-e347f72f07e1",
+            "Value": {
+                "id": "5282f63d-a925-46e4-af16-95ed25edbec5",
+                "resourcePath": "objects\\fireflies_particles_spawn_obj\\fireflies_particles_spawn_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11871,6 +11911,14 @@
             }
         },
         {
+            "Key": "dd6bab22-e245-414e-b3e4-7d24720bae6d",
+            "Value": {
+                "id": "298f9fc4-5f3f-4e33-b9b3-7c46852806b3",
+                "resourcePath": "objects\\firefly_particles_bounds_obj\\firefly_particles_bounds_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "dd8583ef-4bc9-4b27-bc8e-e1a89edc4246",
             "Value": {
                 "id": "3d980e9e-841e-48de-8f59-4bf7042f2086",
@@ -12698,7 +12746,7 @@
             "Key": "ec37c5a8-2370-40e5-aaa7-42ac8d26613d",
             "Value": {
                 "id": "63b6f1f6-d41d-4ae9-b63f-62acf63592cd",
-                "resourcePath": "objects\\fireflies_particle_system_obj\\fireflies_particle_system_obj.yy",
+                "resourcePath": "objects\\dust_particle_system_obj\\dust_particle_system_obj.yy",
                 "resourceType": "GMObject"
             }
         },

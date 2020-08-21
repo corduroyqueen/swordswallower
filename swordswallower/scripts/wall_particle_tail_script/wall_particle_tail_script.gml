@@ -20,7 +20,23 @@ color = argument7
 //	normy *= -1;
 //}
 
-/*
+//lell_ang = point_direction(0,0,speedxp,speedyp)+180
+//with wall_piece_particle_spawn_obj {
+//	iang = other.lell_ang
+//	ix = other.x
+//	iy = other.y
+	
+//	part_type_life(part_type, 100,150);
+//	part_type_gravity(part_type, 0.7, 270);
+//	part_type_speed(part_type, random_range(-2,0) - sin(iang) * 5,random_range(0,2)-sin(iang) * 5, 0, 0.1);
+//	part_type_direction(part_type, iang-60, iang+60, 0, 0);
+
+//	part_type_orientation( part_type, 0,359, 3, 1, false );
+//	part_emitter_region(part_system, part_emitter, ix-10, ix+30, iy-10, iy+10, ps_shape_ellipse,ps_distr_gaussian);
+//	part_emitter_burst(part_system, part_emitter, part_type, 50);
+//}
+
+
 
 //speedx = (other.normx * other.dot)
 //speedy = (-other.normy * other.dot)

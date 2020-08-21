@@ -81,7 +81,7 @@ else if current_obj.object_index!=impale_circle_obj
 	shockwave_shader.trigger = true
 	shockwave_shader.strength_input = 0.1
 	
-	wall_particle_script(player_obj.held_start_hsp,player_obj.held_start_vsp,0.2,5,true,1,1,rubble_s1)
+	wall_particle_tail_script(player_obj.held_start_hsp,player_obj.held_start_vsp,0.2,5,true,1,1,rubble_s1)
 	player_obj.hsp = 0
 	player_obj.vsp = 0
 	player_obj.check_zoom_collision = true

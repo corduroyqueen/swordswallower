@@ -3,7 +3,9 @@ if available_checkpoints>1 {
 	lol = true	
 }
 
-
+if keyboard_check_pressed(ord("G")) {
+	window_set_fullscreen(!window_get_fullscreen())
+}
 
 if getmap {
 	if room==subtemple02 {

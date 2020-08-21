@@ -39,7 +39,7 @@ if firsttime {
 		layer_parallax_normalize_x(px_layer_near2_amt,px_layer_near2)
 		
 		subtemple01init()	
-		fireflies_particle_system_obj.spawn = true
+		//fireflies_particle_system_obj.spawn = true
 		//audio_play_sound(gmc,0,1)
 	}
 	if room==subtemple02 {

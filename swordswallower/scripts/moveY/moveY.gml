@@ -20,6 +20,9 @@ if move!=0 {
 			x += 1
 			amt_of_move -= 1
 		} else  {
+			if object_index==player_obj && vsp>0 {
+				instance_create_depth(x,y+32,depth-1,landing_particle_obj)	
+			}
 			vsp=0
 			break;
 		}
