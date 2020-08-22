@@ -70,7 +70,7 @@ if player_obj.tail_pulling {
 	throwxs = hsp
 	throwys = vsp
 	
-	if (distance_to_object(player_obj)<20 && pull_timer>pull_wall_t) {
+	if (distance_to_object(player_obj)<20) {
 		player_obj.tail_pulling=false
 		player_obj.tail_carry=true
 		player_obj.fire_active = false
@@ -178,10 +178,10 @@ if player_obj.tail_throwing {
 	audio_emitter_gain(s_whoosh_emitter,0)
 	
 	if player_obj.fire_active {
-		sprite_index = sword5
+		sprite_index = newsword_center
 		//sprite_index = swordfire
 	} else {
-		sprite_index = sword5		
+		sprite_index = newsword_center		
 		mask_index = sword
 	}
 } 

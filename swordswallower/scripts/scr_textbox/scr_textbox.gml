@@ -20,6 +20,7 @@ txt = argument0;
 font = argument1;
 key_press = argument2;
 txtSpeed = argument3;
+
 //Normalize speed of text
 if txtSpeed <= 1 textSpeed = 1;
 if txtSpeed >= 15 textSpeed = 15;
@@ -32,7 +33,7 @@ draw_set_font(font2);
 
 // sample text for spacing purposes
 var sampleTxt = "sample";
-var sTxt_height = string_height(sampleTxt)*2;
+var sTxt_height = string_height(sampleTxt)*5;
 
 // Store the txt in a cache "folder" for recalling purposes
 if global.txtCache == ""{
@@ -40,12 +41,19 @@ if global.txtCache == ""{
 }
 
 //Padding for inside dialogue box
-var padding = 64;
+var padding = 32;
 
 //Max width & height
-max_width = view_wview - (padding*2);
-max_width = 9999999
-max_height = (view_hview/4)-(.25*(view_hview/4));
+
+camx = camera_get_view_x(view_camera[0])
+camy = camera_get_view_y(view_camera[0])
+view_xview = friendly_x-250
+view_yview = friendly_y-350
+view_wview = 500
+view_hview = 300
+max_width = view_wview - (padding*2)
+max_height = 250
+
 
 // Txt measurements
 txt_length = string_length(txt);
@@ -157,14 +165,7 @@ if global.printTimer > 0 global.printTimer--;
 
 
 
-camx = camera_get_view_x(view_camera[0])
-camy = camera_get_view_y(view_camera[0])
-view_xview = camx+300
-view_yview = camy+120
-view_wview = 1320 + padding*2
-view_hview = 200
-max_width = 1320
-max_height = 200
+
 
 if view_visible[1] == true {
 	return txt	
@@ -172,20 +173,24 @@ if view_visible[1] == true {
 
 // Draw dialogue box
 draw_set_color(c_black);
-draw_rectangle(view_xview,((view_yview+view_hview)-max_height)-(padding*1.5),view_xview+view_wview,view_yview+view_hview,false);
+draw_rectangle(view_xview,
+view_yview,
+view_xview+view_wview,
+view_yview+view_hview,false);
 
 // Rectangle Borders
 var bw = 2; // Border width
 draw_set_color(c_white);
-draw_line_width(view_xview, ((view_yview+view_hview)-max_height)-(padding*1.5), view_xview, (view_yview+view_hview), bw);
-draw_line_width(view_xview-(bw/2), ((view_yview+view_hview)-max_height)-(padding*1.5), view_xview+view_wview, ((view_yview+view_hview)-max_height)-(padding*1.5), bw);
-draw_line_width(view_xview+view_wview-bw/2, ((view_yview+view_hview)-max_height)-(padding*1.5), view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
+draw_line_width(view_xview, view_yview, view_xview, (view_yview+view_hview), bw);
+draw_line_width(view_xview-(bw/2), view_yview, view_xview+view_wview, view_yview, bw);
+draw_line_width(view_xview+view_wview-bw/2, view_yview, view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
 draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview, (view_yview+view_hview)-bw/2, bw);
 
 
 // Draw Text On Screen
 draw_set_color(c_white);
-draw_text_ext(view_xview+padding,((view_yview+view_hview)-max_height)-(padding/2),global.display_txt,20,max_width);
+draw_text_ext(view_xview+padding,((view_yview+view_hview)-max_height)-(padding/2),
+global.display_txt,50,max_width);
 
 if !printing {
 	ealpha = lerp(ealpha,1,0.2)

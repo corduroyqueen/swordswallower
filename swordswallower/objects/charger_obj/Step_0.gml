@@ -259,7 +259,7 @@ if state==state_chasing {
 	
 		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		
-		if wall_detect(x+hsp,y-10) {
+		if wall_detect(x+hsp,y-5) {
 			state = state_knockback
 			
 			player_obj.shake_d=9

@@ -313,28 +313,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			//x = oldx
 			//x += local_obj.hsp*5
 			
-			//local_obj.met = true
+			local_obj.met = true
 			//audio_manager(false,0,false,3)
-			if player_obj.tail_pulling {
-				if round(local_obj.hsp)==0 {
-					with local_obj {
-						while place_meeting(x,y,tail_obj) {
-							other.x+=sign(other.hsp)
-						}
-					}
-				} else {
-					x += 1 + local_obj.hsp*5 * sign(local_obj.hsp*hsp)
-				}
-			}
-			if player_obj.tail_throwing {
-				if round(local_obj.hsp)==0 {
-					with local_obj {
-						while place_meeting(x,y,tail_obj) {
-							other.x+=sign(other.hsp)
-						}
-					}
-				}
-			}
+			
+			
 			return false
 		} else {
 			player_obj.shake_d=5

@@ -26,7 +26,7 @@ for (i=0;i<(amount+40);i++){
 	
 	
 	var scalevar = (amount+40-i)/(amount+40)
-	var angle = point_direction(0,0,tail_obj.throwxs,tail_obj.throwys)
+	var angle = point_direction(0,0,speedx,speedy)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
 	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10

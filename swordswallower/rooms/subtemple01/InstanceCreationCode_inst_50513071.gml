@@ -1,0 +1,1 @@
+treasure = upgrade_dash_obj
