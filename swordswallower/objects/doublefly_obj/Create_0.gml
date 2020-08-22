@@ -6,7 +6,7 @@ chirp_timer_m = random_range(10,20)
 chirp = choose(eye_chirp1,eye_chirp2,eye_chirp3)
 
 
-h_accel = 2.5
+h_accel = 3.75
 v_accel = .1
 
 state = 0

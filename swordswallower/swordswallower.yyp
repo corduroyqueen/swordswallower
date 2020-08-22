@@ -6367,14 +6367,6 @@
             }
         },
         {
-            "Key": "6ec15502-12f1-440a-a7e5-a4c3a190802c",
-            "Value": {
-                "id": "26ee2011-cbf7-4462-86c1-5dc1c20c4b74",
-                "resourcePath": "views\\6ec15502-12f1-440a-a7e5-a4c3a190802c.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "6ed0c7b5-ed10-4016-90bb-c04311d6c505",
             "Value": {
                 "id": "fe9aa369-7cef-4439-a99f-0b0a9ba3e7c6",
@@ -6540,14 +6532,6 @@
                 "id": "2dd375f7-b0b4-4673-965c-45a3cf886206",
                 "resourcePath": "sprites\/vine3\/vine3.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "70fb7ce1-43c6-419c-821f-ab1e01dd6ae1",
-            "Value": {
-                "id": "e78985e6-1c28-4ab8-b591-32774627c5dd",
-                "resourcePath": "views\\70fb7ce1-43c6-419c-821f-ab1e01dd6ae1.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -13588,14 +13572,6 @@
                 "id": "6c58ee41-550a-4295-8d96-ed04c905d537",
                 "resourcePath": "objects\/arcing_knight_obj\/arcing_knight_obj.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "fc7458c8-699b-4116-a84d-56cd84d1db5b",
-            "Value": {
-                "id": "141f936a-44fd-4fbb-97f1-f2af00748c4c",
-                "resourcePath": "views\\fc7458c8-699b-4116-a84d-56cd84d1db5b.yy",
-                "resourceType": "GMFolder"
             }
         },
         {

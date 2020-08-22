@@ -9,7 +9,13 @@ if enemy {
 	enabled = true
 	for(i=0;i<30;i++) {
 		if instance_exists(enemy_list[i]) {
-			enabled = false	
+			if variable_instance_exists(enemy_list[i],"death") {
+				if !enemy_list[i].death {
+					enabled = false	
+				}
+			} else {
+				enabled = false		
+			}
 		}
 	}
 }

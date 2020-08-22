@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 if parent.state==parent.state_hitting {
-	if (current_time % 4) <= 1 {
-		image_index = 4
-	} else {
-		image_index = 1
+	if (current_time % 5) == 0 {
+		if image_index==4 {
+			image_index = 1
+		} else {
+			image_index = 4	
+		}
+		
 	}
 	
 } else if parent.state==parent.state_attacking {

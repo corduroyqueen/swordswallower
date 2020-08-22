@@ -58,3 +58,6 @@ if abs(spinspeed)>2 && !done {
 	}
 }
 
+
+moveSolidsX(hsp)
+moveSolidsY(vsp)

@@ -68,7 +68,7 @@ sword_pos_y = y
 sword_facing = 1
 sword_ang = -120
 
-sword_s = 0
+sword_s = 2
 sword_s_planted = 1
 sword_s_dragging = 2
 sword_s_air = 3

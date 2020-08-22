@@ -36,7 +36,7 @@ color = argument7
 //	part_emitter_burst(part_system, part_emitter, part_type, 50);
 //}
 
-
+/*
 
 //speedx = (other.normx * other.dot)
 //speedy = (-other.normy * other.dot)

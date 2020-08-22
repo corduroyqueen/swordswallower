@@ -37,6 +37,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		if player_obj.fire_active {
 			local_obj.parent.death = true	
 		}
+		local_obj.met = true
 		return false
 		
 	}

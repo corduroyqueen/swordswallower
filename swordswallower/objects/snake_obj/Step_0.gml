@@ -26,15 +26,18 @@ if death {
 		}	
 	} else if state==state_searching {
 		atk_timer++
-		head.image_angle = lerp(head.image_angle,point_direction(x,y,
-		player_obj.x+player_obj.hsp,
-		player_obj.y+player_obj.vsp)-90,1)
+		
 		if !wall_raycast_checker(player_obj) {
 			atk_timer=-1
 			if audio_is_playing(venus_searching_1) {
 				audio_stop_sound(venus_searching_1)	
 				audio_stop_sound(venus_searching_2)	
 			}
+			head.image_angle = lerp(head.image_angle,image_angle,1)
+		} else {
+			head.image_angle = lerp(head.image_angle,point_direction(x,y,
+			player_obj.x+player_obj.hsp,
+			player_obj.y+player_obj.vsp)-90,1)	
 		}
 		if atk_timer>0 && atk_timer<2 {
 			

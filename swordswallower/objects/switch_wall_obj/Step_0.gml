@@ -27,9 +27,9 @@ if enabled {
 	
 		
 	if point_distance(x,y,endx,endy)>1 {
-		movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
+		//movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
 		//move_towards_point(endx,endy,15)
-		sp_towards_target(endx,endy,15,1)
+		sp_towards_target(endx,endy,movespeed,1)
 		
 		
 		
@@ -46,7 +46,7 @@ if enabled {
 	} else {
 		x = endx
 		y = endy
-		movespeed = 0
+		//movespeed = 0
 		hsp = 0  
 		vsp = 0
 	}
@@ -84,9 +84,9 @@ if enabled {
 	//}
 } else {
 	if point_distance(x,y,startx,starty)>1 {
-		movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
+		//movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
 		//move_towards_point(startx,starty,10)
-		sp_towards_target(startx,starty,10,1)
+		sp_towards_target(startx,starty,movespeed,1)
 		if point_distance(x,y,endx,endy)<(1+10) && in_camera_range_bigger(x,y) {
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
@@ -98,7 +98,7 @@ if enabled {
 	} else {
 		x = startx
 		y = starty
-		movespeed = 0
+		//movespeed = 0
 		hsp = 0  
 		vsp = 0
 	}

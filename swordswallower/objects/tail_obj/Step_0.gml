@@ -466,6 +466,10 @@ collision_iterate_wall(breakable_decoration_obj)
 //collision_iterate_enemy(spikyguy_obj)
 //                           collision_iterate_enemy(dash_guy_obj)
 collision_iterate_enemy(snakeheart_obj)
+
+if player_obj.tail_throwing {
+	collision_iterate_enemy(snakehead_obj)
+}	
 //                            collision_iterate_enemy(fly_pod_obj)
 //                    collision_iterate_enemy(crimson_soldier_obj)
 		
