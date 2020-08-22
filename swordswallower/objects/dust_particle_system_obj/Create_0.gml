@@ -17,12 +17,12 @@ part_system_automatic_draw(part_system, false);
 
 part_particles_clear(part_system)
 
-for(a=12000;a<32500;a+=random_range(200,400)) {
-	for(b=4555;b<room_height;b+=random_range(200,400)) {
+//for(a=12000;a<32500;a+=random_range(200,400)) {
+//	for(b=4555;b<room_height;b+=random_range(200,400)) {
 		
-		part_particles_create(part_system,a+random_range(-100,100),b,part_type,1)
-	}	
-}	
+//		part_particles_create(part_system,a+random_range(-100,100),b,part_type,1)
+//	}	
+//}	
 //part_emitter_region(part_system,part_emitter,50,100,50,100,ps_shape_rectangle,ps_distr_linear)
 
 //part_emitter_stream(part_system,part_emitter,part_type,4)

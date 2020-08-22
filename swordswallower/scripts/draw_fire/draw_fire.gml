@@ -7,6 +7,13 @@ var ok = random_range(0.7,0.9)
 	
 gpu_set_blendmode(bm_normal)
 gpu_set_colorwriteenable(true,true,true,false)
+
+draw_set_alpha(0.5)
+draw_set_color(global.blood_color)
+draw_circle(xi,yi,30+random_range(-5,5),false)
+
+draw_set_color(c_white)
+draw_set_alpha(1)
 draw_sprite_ext(light_circle,0,xi,yi,ok,ok,0,c_white,1)
 	
 gpu_set_blendmode(bm_normal)

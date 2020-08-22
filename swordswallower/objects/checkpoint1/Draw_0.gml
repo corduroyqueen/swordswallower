@@ -5,6 +5,7 @@ draw_set_color(c_white)
 if player_obj.intro {
 	return	
 }
+gpu_set_colorwriteenable(true,true,true,false)
 
 if setpoint {
 	//draw_text(x-48,y-64,"checkpoint!")
@@ -38,20 +39,31 @@ if setpoint {
 		//draw_sprite_ext(Ellipse_2,0,x+s_x,y+s_y,ok,ok,0,c_white,1)
 		
 		ok = random_range(0.2,0.7)
-		gpu_set_colorwriteenable(true,true,true,false)
-		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
 		
+		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
+		draw_set_alpha(0.2)
+		draw_set_color(global.blood_color)
+		flame_object.tx = x+s_x
+		flame_object.ty = y+s_y
+		//draw_circle(x+s_x,y+s_y,70+random_range(-5,5),false)
+		var s = random_range(0.1,0.2)
+		draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.blood_color,0.8)
+		draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s,s,0,c_fuchsia,1)
+
+		draw_set_color(c_white)
+		draw_set_alpha(1)
+
 		draw_sprite_ext(light_circle,0,x+s_x,y+s_y,0.5,0.5,0,c_white,ok)
 		
 		
 		gpu_set_blendmode(bm_normal)
-	
-		var uTime = shader_get_uniform(shader1,"Time");
-		shader_set(shader1)
-	    shader_set_uniform_f(uTime,current_time/1000)
 		
-		draw_sprite_ext(redflame,image_index,x+s_x,y+s_y,0.5,0.5,0,c_white,1)
-		gpu_set_colorwriteenable(true,true,true,true)
+		//var uTime = shader_get_uniform(shader1,"Time");
+		//shader_set(shader1)
+	    //shader_set_uniform_f(uTime,current_time/1000)
+		
+		//draw_sprite_ext(redflame,image_index,x+s_x,y+s_y,0.5,0.5,0,c_white,1)
+		
 		shader_reset()
 	
 	}
@@ -88,3 +100,4 @@ if refreshtext {
 } else {
 	refreshpos = 0	
 }
+gpu_set_colorwriteenable(true,true,true,true)

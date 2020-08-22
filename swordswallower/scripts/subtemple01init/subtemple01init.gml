@@ -1,4 +1,4 @@
-hello = instance_create_depth(checkpoint_manager.x,checkpoint_manager.y,0,checkpoint1)	
+hello = instance_create_depth(checkpoint_manager.x,checkpoint_manager.y,100,checkpoint1)	
 checkpoints[0] = hello
 hello.number = 0
 hello.setpoint = true
