@@ -76,6 +76,11 @@ if !player_obj.death {
 } else {
 	gpu_set_colorwriteenable(true, true, true, true);
 }
+//if keyboard_check(ord("P")) {
+//	gpu_set_colorwriteenable(true, true, true, false);
+//} else {
+//	gpu_set_colorwriteenable(true, true, true, true);
+//}
 
 //shader_set(shader_alpha_one)
 //gpu_set_blendenable(true)
@@ -92,8 +97,7 @@ shader_reset()
 
 
 gpu_set_colorwriteenable(true, true, true, true)
-
-
+gpu_set_blendenable(true)
 
 
 surface_set_target(art_surface)
@@ -102,6 +106,9 @@ draw_clear_alpha(c_white,0)
 //draw_rectangle(0,0,1920,1080,false)
 //draw_set_color(c_white)
 surface_reset_target()
+
+
+
 
 	
 //draw_surface(art_surface,player_obj.camx,player_obj.camy)

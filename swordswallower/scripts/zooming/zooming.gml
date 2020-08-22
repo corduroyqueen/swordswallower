@@ -5,6 +5,7 @@ if tail_zooming {
 	vsp = 0
 	
 	if zoom_ctdn<=0 {
+		
 		zspeed = zspeed_normal
 		grav_boost = .15//havent changed from size up
 		player_obj.camera_shake_direc = true
@@ -51,6 +52,8 @@ if tail_zooming {
 		speed_temp = get_speed()
 		zoom_timer_bool = true
 		zoom_timer = 0
+		var smoke = instance_create_depth(x,y,depth+1,dash_smoke_particle_obj)
+		smoke.image_angle = point_direction(0,0,hsp,vsp)-90
 	
 		tail_zooming = false
 		//if !tail_held {

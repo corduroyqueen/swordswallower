@@ -41,18 +41,23 @@ if global.txtCache == ""{
 }
 
 //Padding for inside dialogue box
-var padding = 32;
+var padding = 48;
 
 //Max width & height
 
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
-view_xview = friendly_x-250
-view_yview = friendly_y-350
 view_wview = 500
 view_hview = 300
+
+var mid_pos = friendly_x-view_wview/2
+
+view_xview = lerp(view_xview,mean(mid_pos,mid_pos,mid_pos,camx+player_obj.cam_width_h-view_wview/2),0.2)
+
+view_yview = friendly_y-350
+
 max_width = view_wview - (padding*2)
-max_height = 250
+max_height = 5000
 
 
 // Txt measurements
@@ -66,37 +71,39 @@ ntl = string_length(new_txt); // new_txt_length
 
 //Will group wall of text into paragraph (if necessary); Will only run once
 
-if (txt_width > max_width) {
+//if (txt_width > 9999999999999999999999999) {
     
-    for (i=1; i < txt_length+1; i++)
-    {
-        new_txt += string_copy(txt,i,1); //do not register enter presses, youre gonna need a temp var
-        current_txtW = string_width(new_txt);
-        ntl = string_length(new_txt); // new txt length
-        
-        if current_txtW > max_width
-        {
-            if string_char_at(new_txt,ntl) == " " {
-                new_txt = string_delete(new_txt,ntl,1);
-                new_txt += "#";
-                new_txt += string_copy(txt,i,1);
-                ntl = string_length(new_txt);
-                if string_char_at(new_txt,ntl) == " "
-                {
-                    new_txt = string_delete(new_txt,ntl,1);    
-                }
-            } else {
-                for (n = ntl; string_char_at(new_txt,n) != " "; n--){
-                    var num = n;   
-                }
-                var temp_txt =  string_copy(new_txt,num,30);
-                new_txt =  string_delete(new_txt,num,30);
-                new_txt += "#";
-                new_txt += temp_txt;           
-            }
-        }
-    }
-}
+//    for (i=1; i < txt_length+1; i++)
+//    {
+//        new_txt += string_copy(txt,i,1); //do not register enter presses, youre gonna need a temp var
+//        current_txtW = string_width(new_txt);
+//        ntl = string_length(new_txt); // new txt length
+      
+//        if current_txtW > max_width
+//        {
+//            if string_char_at(new_txt,ntl) == " " {
+//                new_txt = string_delete(new_txt,ntl,1);
+//                new_txt += "#";
+//                new_txt += string_copy(txt,i,1);
+//                ntl = string_length(new_txt);
+//                if string_char_at(new_txt,ntl) == " "
+//                {
+//                    new_txt = string_delete(new_txt,ntl,1);    
+//                }
+//            } else {
+//                for (n = ntl; string_char_at(new_txt,n) != " "; n--){
+//                    var num = n;   
+//                }
+//                var temp_txt =  string_copy(new_txt,num,100);
+//                new_txt =  string_delete(new_txt,num,100);
+//                new_txt += "#";
+//                new_txt += temp_txt;           
+//            }
+//        }
+//    }
+//}
+
+
 
 
 //Conversion
@@ -130,7 +137,7 @@ if (new_txt_height > max_height){
 if new_txt != "" {txt = new_txt;}
 
 //If you can skip/speed up the text...
-if !keyboard_check(key_press)
+if !key_press
 {
     if global.maxPrintTimer >= 1 global.maxPrintTimer = 0;
 } else {
@@ -173,7 +180,7 @@ if view_visible[1] == true {
 
 // Draw dialogue box
 draw_set_color(c_black);
-draw_rectangle(view_xview,
+draw_roundrect(view_xview,
 view_yview,
 view_xview+view_wview,
 view_yview+view_hview,false);
@@ -181,16 +188,28 @@ view_yview+view_hview,false);
 // Rectangle Borders
 var bw = 2; // Border width
 draw_set_color(c_white);
-draw_line_width(view_xview, view_yview, view_xview, (view_yview+view_hview), bw);
-draw_line_width(view_xview-(bw/2), view_yview, view_xview+view_wview, view_yview, bw);
-draw_line_width(view_xview+view_wview-bw/2, view_yview, view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
-draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview, (view_yview+view_hview)-bw/2, bw);
-
+//draw_line_width(view_xview, view_yview, view_xview, (view_yview+view_hview), bw);
+//draw_line_width(view_xview-(bw/2), view_yview, view_xview+view_wview, view_yview, bw);
+//draw_line_width(view_xview+view_wview-bw/2, view_yview, view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
+//draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview, (view_yview+view_hview)-bw/2, bw);
+draw_sprite_ext(textboxoverlay,0,view_xview,view_yview-30,1,1,0,c_white,1)
 
 // Draw Text On Screen
 draw_set_color(c_white);
-draw_text_ext(view_xview+padding,((view_yview+view_hview)-max_height)-(padding/2),
+draw_set_alpha(1)
+draw_text_ext(view_xview+padding,
+view_yview+(padding),
 global.display_txt,50,max_width);
+
+//arrow
+arrow_base_width = 50
+arrow_base_width_h = arrow_base_width/2
+arrow_x = clamp(view_xview+arrow_base_width_h,mean(view_xview,friendly_x),view_xview+view_wview-arrow_base_width_h)
+draw_set_color(c_black)
+draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,arrow_x+arrow_base_width_h,view_yview+view_hview,10)
+draw_set_color(c_white)
+draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
+draw_line_width(arrow_x+arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
 
 if !printing {
 	ealpha = lerp(ealpha,1,0.2)
@@ -198,8 +217,8 @@ if !printing {
 	ealpha = 0
 }
 
-txp = view_xview+max_width+20
-typ = view_yview+max_height-10
+txp = view_xview+view_wview-20
+typ = view_yview+view_hview-10
 
 draw_set_alpha(ealpha)
 
@@ -208,11 +227,12 @@ draw_rectangle(txp-10.5,typ-sprite_height/2-30,txp+35,typ-sprite_height/2-30+55,
 draw_set_color(c_dkgray)
 draw_rectangle(txp-7.5,typ-sprite_height/2-27,txp+32,typ-sprite_height/2-30+52,true)
 
-
 draw_set_color(c_white)
+draw_set_font(font3lato)
 draw_text(txp,typ-sprite_height/2 - 30,"E")
 
 draw_set_alpha(1)
+
 
 // Quit Dialogue/Textbox Event
 if txt == "" && global.placeholderTxt == ""{

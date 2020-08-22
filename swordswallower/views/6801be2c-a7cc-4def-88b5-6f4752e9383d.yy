@@ -14,7 +14,8 @@
         "e4623f91-9a3d-469a-a4b1-d43c0c132a80",
         "db4b54ce-d779-4858-962f-35d5f1c6442e",
         "187b0772-5a77-45fc-aea0-5505d13e5e73",
-        "9d32b927-05ce-4349-8927-ad4001d6c2d8"
+        "9d32b927-05ce-4349-8927-ad4001d6c2d8",
+        "123537c9-8f16-4a4e-89fb-963ae33263d4"
     ],
     "filterType": "GMSprite",
     "folderName": "animations",

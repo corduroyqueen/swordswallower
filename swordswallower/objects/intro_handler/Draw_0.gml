@@ -9,6 +9,7 @@ if player_obj.intro {
 	draw_set_alpha(alpha)
 	
 	intro_timer++
+	intro_timer=2000
 	
 	if intro_timer<black_timer_m {
 		
@@ -132,7 +133,7 @@ if player_obj.intro {
 
 if !player_obj.death {
 	if room==subtemple01 {
-		if player_obj.x>18000 && player_obj.y<10000 {
+		if player_obj.x>24000 && player_obj.y<10000 {
 		
 			if layer_get_visible(level1artm) {
 				layer_set_visible(level1artm,false)

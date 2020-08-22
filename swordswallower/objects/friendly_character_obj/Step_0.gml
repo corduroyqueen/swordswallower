@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<150
-&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<150{
+if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<300
+&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<300{
 	player_present = true
 } else {
 	player_present = false
@@ -78,12 +78,18 @@ if init {
 if boatboy {
 	y = skiff_obj - sprite_height/2 -skiff_obj.sprite_height/2
 	y = skiff_obj - 10
+	
 	starty = y
 	if player_obj.x>38448 && !player_obj.ending_lock {
 		if !boatboyenter {
 			boatboyenter = true
 			ui_manager.speaking = true
 			ui_manager.printing = true
+			with ui_manager {
+				friendly_x = other.x
+				friendly_y = other.y - other.sprite_height/2	
+				view_xview = friendly_x-view_wview/2
+			}
 		
 			with ui_manager {
 				current_dialogue = ""
@@ -114,6 +120,11 @@ if boatboy {
 }
 
 if player_present {
+	with ui_manager {
+		friendly_x = other.x
+		friendly_y = other.y - other.sprite_height/2	
+		view_xview = friendly_x-view_wview/2
+	}
 	if player_obj.k_speak_p {
 		ui_manager.speaking = true
 		ui_manager.printing = true
@@ -131,6 +142,7 @@ if player_present {
 		    global.placeholderTxt = "";
 		    global.temp_placeholderTxt = "";
 		    global.txtIndex = 1;
+			
 		}
 		
 		dialogue = dialogue_array[current_pick]

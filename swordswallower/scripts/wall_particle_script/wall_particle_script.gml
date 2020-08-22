@@ -22,7 +22,7 @@ if (dot<0) {
 
 speedx = (other.normx * other.dot)
 speedy = (-other.normy * other.dot)
-
+/*
 for (i=0;i<(amount+random_range(5,15));i++){
 	var poschangex
 	var poschangey

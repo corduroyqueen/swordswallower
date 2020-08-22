@@ -157,8 +157,11 @@ if place_meeting(x,y,tar_obj) {
 
 
 if death {
-	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
-	
+	if player_obj.zoom_timer_bool {
+		just_blood(player_obj.hsp*2,player_obj.vsp*2,0.2,80,true,sprite_width/4,sprite_height)
+	} else {
+		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
+	}
 	var bruh = lettuce_chop_louder
 	audio_sound_pitch(bruh,random_range(0.75,1.25))
 	audio_play_sound(bruh,0,false)

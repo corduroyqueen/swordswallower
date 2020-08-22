@@ -4,6 +4,7 @@
 
 //if place_meeting(x+hwidth,y+hheight,wall_obj) && place_meeting(x+hwidth,y-hheight,wall_obj) 
 //&& place_meeting(x-hwidth,y+hheight,wall_obj) && place_meeting(x-hwidth,y-hheight,wall_obj) {
+
 if go {
 	
 	if place_meeting(x,y,player_obj) {
@@ -41,8 +42,15 @@ if place_meeting(x,y,tar_obj) {
 	
 } else if !surrounded {
 	vsp+=0.8+scalevar/6
-	xpreva = x
-	ypreva = y
+	//xpreva = x
+	//ypreva = y
+	
+	if player_obj.held_position_start {
+		var angle = point_direction(player_obj.x,player_obj.y,x,y) + random_range(-3,3)
+		var dist = max(10,35-point_distance(player_obj.x,player_obj.y,x,y)/10)
+		hsp+=cos(degtorad(angle)) * dist * random_range(0.8,1.2)
+		vsp-=sin(degtorad(angle)) * dist * random_range(0.8,1.2)
+	}
 	moveActivateX(hsp)
 	moveActivateY(vsp)
 	if on_wall {

@@ -81,6 +81,12 @@ layer_script_begin("bkd3", layer_stop_alpha_start);
 layer_script_end("bkd3", layer_stop_alpha_end);
 
 
+layer_script_begin("px_near1", layer_stop_alpha_start);
+layer_script_end("px_near1", layer_stop_alpha_end);
+
+layer_script_begin("px_near2", layer_stop_alpha_start);
+layer_script_end("px_near2", layer_stop_alpha_end);
+
 layer_script_begin("px_bkd2", layer_stop_alpha_start);
 layer_script_end("px_bkd2", layer_stop_alpha_end);
 

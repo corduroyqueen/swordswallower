@@ -62,85 +62,7 @@ if (player_obj.tail_pulling && !player_obj.held_position) {
 	moving_platform_bool = false
 }
 	
-if player_obj.tail_pulling {
-	pull_timer++
-	
-	//move_towards_point(player_obj.x,player_obj.y,pspeed+player_obj.speed/1.5)
-	sp_towards_target(player_obj.x,player_obj.y,pspeed+get_player_speed(),1)
-	throwxs = hsp
-	throwys = vsp
-	
-	if (distance_to_object(player_obj)<20) {
-		player_obj.tail_pulling=false
-		player_obj.tail_carry=true
-		player_obj.fire_active = false
-		visible = false
-		pull_timer = 0
-		
-		
-		
-		if stinky && stinky_when_thrown {
-			player_obj.stinky_check = false
-			//stinky = false
-		}
-		if stinky && !stinky_when_thrown {
-			player_obj.stinky_check = true
-			//stinky = false
-		}
-		//stinky_when_thrown = false
-		player_obj.jump_able = true
-		
-		audio_play_sound(grab1,0,false)
-	}
-	planted=false
-	player_obj.tail_planted=false
-	throw_timer=0
-	
-	if player_obj.zoom_timer_bool {
-		player_obj.zoom_timer_bool = false
-		reset_intangibility()
-	}
-	
-	if pull_timer<=1 {
-		held_image_angle = image_angle	
-		if place_meeting(x,y,crab_obj) {
-			audio_play_sound(Knife_Pull_140,0,false)	
-		}
-	}
-	
-	if floor(pull_timer)==floor(pull_wall_t) && !inside_flier {
-		held_image_angle = image_angle	
-		//audio_manager(gsound.s_sword_whoosh,0,true,0)	
-		
-	}	
-	
-	if pull_timer<=pull_wall_t {
-		hsp=0
-		vsp=0
-		//move_towards_point(player_obj.x,player_obj.y,pspeed/15)
-		
-		//sp_towards_target(player_obj.x,player_obj.y,pspeed/15,1)
-		
-		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)-90,0.1)
-		image_angle = held_image_angle + random_range(-(5+pull_timer),5+pull_timer)
-		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)+90,0.1)
-		//if player_obj.zoom_timer_bool {
-		//	pull_timer=pull_wall_t+1	
-		//}
-	} else {
-		if player_obj.fire_active {
-			sprite_index = sword_whirling
-			//sprite_index = sword_whirlingfire
-			image_speed = 3	
-		} else {
-			sprite_index = sword_whirling
-			mask_index = sword_whirling
-			image_speed = 3		
-		}
-	}
-	//sdm(pull_timer)
-	
-}
+
 
 if player_obj.tail_throwing {
 	throw_timer++
@@ -283,7 +205,6 @@ if player_obj.tail_planted {
 		}
 		player_obj.hsp = lerp(player_obj.hsp,0,0.3)
 		player_obj.vsp = lerp(player_obj.vsp,0,0.3)
-		
 		//if !player_obj.grounded {
 		//	player_obj.vsp*=0.6
 		//	player_obj.held_release_timer = 10
@@ -312,6 +233,110 @@ if player_obj.tail_planted {
 	sword_particle_spawn = 30
 }
 
+
+if player_obj.tail_pulling {
+	pull_timer++
+	
+	//move_towards_point(player_obj.x,player_obj.y,pspeed+player_obj.speed/1.5)
+	sp_towards_target(player_obj.x,player_obj.y,pspeed+get_player_speed(),1)
+	throwxs = hsp
+	throwys = vsp
+	
+	if (distance_to_object(player_obj)<20) {
+		player_obj.tail_pulling=false
+		player_obj.tail_carry=true
+		player_obj.fire_active = false
+		visible = false
+		pull_timer = 0
+		
+		
+		
+		if stinky && stinky_when_thrown {
+			player_obj.stinky_check = false
+			//stinky = false
+		}
+		if stinky && !stinky_when_thrown {
+			player_obj.stinky_check = true
+			//stinky = false
+		}
+		//stinky_when_thrown = false
+		player_obj.jump_able = true
+		
+		audio_play_sound(grab1,0,false)
+	}
+	planted=false
+	player_obj.tail_planted=false
+	throw_timer=0
+	
+	if player_obj.zoom_timer_bool {
+		player_obj.zoom_timer_bool = false
+		reset_intangibility()
+	}
+	
+	if pull_timer<=1 {
+		held_image_angle = image_angle	
+		if place_meeting(x,y,crab_obj) {
+			audio_play_sound(Knife_Pull_140,0,false)	
+		}
+	}
+	
+	if floor(pull_timer)==floor(pull_wall_t) && !inside_flier {
+		held_image_angle = image_angle	
+		//audio_manager(gsound.s_sword_whoosh,0,true,0)	
+		
+	}	
+	
+	if pull_timer<=pull_wall_t {
+		hsp=0
+		vsp=0
+		//move_towards_point(player_obj.x,player_obj.y,pspeed/15)
+		
+		//sp_towards_target(player_obj.x,player_obj.y,pspeed/15,1)
+		
+		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)-90,0.1)
+		image_angle = held_image_angle + random_range(-(5+pull_timer),5+pull_timer)
+		//held_image_angle = lerp(held_image_angle,point_direction(x,y,player_obj.x,player_obj.y)+90,0.1)
+		//if player_obj.zoom_timer_bool {
+		//	pull_timer=pull_wall_t+1	
+		//}
+		
+		if (distance_to_object(player_obj)<66) {
+			player_obj.tail_pulling=false
+			player_obj.tail_carry=true
+			player_obj.fire_active = false
+			visible = false
+			pull_timer = 0
+		
+		
+		
+			if stinky && stinky_when_thrown {
+				player_obj.stinky_check = false
+				//stinky = false
+			}
+			if stinky && !stinky_when_thrown {
+				player_obj.stinky_check = true
+				//stinky = false
+			}
+			//stinky_when_thrown = false
+			player_obj.jump_able = true
+		
+			audio_play_sound(grab1,0,false)
+		}
+		
+	} else {
+		if player_obj.fire_active {
+			sprite_index = sword_whirling
+			//sprite_index = sword_whirlingfire
+			image_speed = 3	
+		} else {
+			sprite_index = sword_whirling
+			mask_index = sword_whirling
+			image_speed = 3		
+		}
+	}
+	//sdm(pull_timer)
+	
+}
 
 if player_obj.fire_active {
 	fire_particles(fire_particle_obj)

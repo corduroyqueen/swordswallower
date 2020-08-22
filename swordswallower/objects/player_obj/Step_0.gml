@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 mask_index = player_idle
 //if sprite.sprite_index == player_crouching || sprite.sprite_index == player_crouching_s {
 //	mask_index = player_crouching
@@ -88,7 +87,7 @@ if out_of_dash_t>=out_of_dash_m {
 }
 	
 }
-if zoom_timer_bool {
+if zoom_timer_bool || tail_zooming {
 	zoom_hitbox_active = true	
 }
 
@@ -223,7 +222,9 @@ if zoom_timer_bool {
 	intangible = false
 }
 
-
+if held_position_start {
+	held_position_start = false	
+}
 enemy_collision()
 
 if place_meeting(x,y,gem_obj) {
@@ -246,6 +247,10 @@ if level1_master.dev {
 	if keyboard_check_pressed(ord("U")){
 		x = mouse_x
 		y = mouse_y
+	}
+	if keyboard_check_pressed(ord("L")){
+		x = 25500
+		y = 7000
 	}
 }
 

@@ -19,7 +19,8 @@ show_checkpoints = true
 
 lel=-1
 
-font2 = font_add("lato.ttf",32,false,false,32,128)
+font2 = font_add("lato.ttf",24,false,false,32,128)
+font3lato = font_add("lato.ttf",32,false,false,32,128)
 
 ealpha = 0
 
@@ -35,3 +36,9 @@ u_blood_b = shader_get_uniform(shader_blood_alpha, "blood_b");
 u_blood_r2 = shader_get_uniform(shader_blood_alpha_surface, "blood_r");
 u_blood_g2 = shader_get_uniform(shader_blood_alpha_surface, "blood_g");
 u_blood_b2 = shader_get_uniform(shader_blood_alpha_surface, "blood_b");
+
+friendly_x = 0
+friendly_y = 0
+
+view_wview = 500
+view_hview = 300

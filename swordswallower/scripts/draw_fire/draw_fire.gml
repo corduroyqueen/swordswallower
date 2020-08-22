@@ -7,7 +7,7 @@ var ok = random_range(0.7,0.9)
 	
 gpu_set_blendmode(bm_normal)
 gpu_set_colorwriteenable(true,true,true,false)
-draw_sprite_ext(purpleblur,0,xi,yi,ok,ok,0,c_white,1)
+draw_sprite_ext(light_circle,0,xi,yi,ok,ok,0,c_white,1)
 	
 gpu_set_blendmode(bm_normal)
 	

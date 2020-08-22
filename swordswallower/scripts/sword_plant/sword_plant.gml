@@ -1,9 +1,9 @@
 local_obj = argument0
 
 
+wall_particle_tail_script(x-xpreva,y-ypreva,0.2,5,true,2,2,rubble_s1)
 get_angle(local_obj)
 
-wall_particle_tail_script(hsp/2,vsp/2,0.2,5,true,2,2,rubble_s1)
 		
 planted=true	
 hilt_x = x+cos(degtorad(tail_obj.image_angle+270)) * 66
