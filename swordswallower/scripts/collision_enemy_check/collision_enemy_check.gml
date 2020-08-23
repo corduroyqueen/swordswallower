@@ -16,12 +16,13 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	y = checky;
 	bleh = false
 	
-	if obj==tear_nograv_obj {
+	
+	if local_obj.object_index==tear_nograv_obj {
 		local_obj.death = true
 		return false	
 	}
 
-	if obj==nucrab_obj || obj==handbug_obj {
+	if local_obj.object_index==nucrab_obj || local_obj.object_index==handbug_obj {
 		
 		if local_obj.pickedup {
 			x = oldx
@@ -31,7 +32,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			return false
 		}
 	}
-	if obj==snakehead_obj {
+	if local_obj.object_index==snakehead_obj {
 		sword_reject_script()
 		local_obj.parent.headhit = true
 		if player_obj.fire_active {
@@ -41,7 +42,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		return false
 		
 	}
-	if obj==thirsty_ghoul_obj {
+	if local_obj.object_index==thirsty_ghoul_obj {
 		local_obj.met = true
 		if local_obj.charging {
 			local_obj.hit = true
@@ -57,7 +58,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	
 	
 	
-	if obj==arcing_knight_obj {
+	if local_obj.object_index==arcing_knight_obj {
 		if ((y<local_obj.y-64 && abs(x-local_obj.x)<=56)
 		//|| sign(local_obj.x-x)==local_obj.xs
 		)
@@ -72,7 +73,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	}
 	
 	
-	if obj==flyfree_obj || obj==doublefly_obj {
+	if local_obj.object_index==flyfree_obj || local_obj.object_index==doublefly_obj {
 		if local_obj.inv_timer>0 || local_obj.death {
 			player_obj.tail_planted = false
 			x = oldx
@@ -98,7 +99,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		x = xpreva
 		y = ypreva
 		//hitpause = true
-	} else if obj==flyswarm_obj {
+	} else if local_obj.object_index==flyswarm_obj {
 		if local_obj.inv_timer>0 || local_obj.death || local_obj.swarming {
 			player_obj.tail_planted = false
 			x = oldx
@@ -132,7 +133,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			
 		
 		//hitpause = true
-	} else if obj==fatfly2_obj || obj==bombfly_diagonal_obj|| obj==bombfly_fat_obj {
+	} else if local_obj.object_index==fatfly2_obj || local_obj.object_index==bombfly_diagonal_obj|| local_obj.object_index==bombfly_fat_obj {
 		player_obj.shake_d=3
 		player_obj.camera_shake_d = true
 		audio_play_sound(Knife_Pull_140,0,false)
@@ -149,14 +150,14 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		local_obj.met = true
 		hitpause = true
 		
-	} else if obj==kill_back_obj {
+	} else if local_obj.object_index==kill_back_obj {
 		
 		audio_play_sound(Knife_Pull_140,0,false)
 		local_obj.death = true	
 		player_obj.tail_planted = false
 		hitpause = true
 		
-	} else if obj==snakeheart_obj {
+	} else if local_obj.object_index==snakeheart_obj {
 		if !local_obj.parent.headhit {
 			local_obj.death = true
 			x = xpreva
@@ -200,14 +201,14 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		//	player_obj.shake_d=5
 		//	player_obj.camera_shake_d = true
 		//	hitpause = true
-	} else if obj==fly_pod_obj {
+	} else if local_obj.object_index==fly_pod_obj {
 		local_obj.death = true
 		x = xpreva
 		y = ypreva
 		player_obj.shake_d=5
 		player_obj.camera_shake_d = true
 		hitpause = true
-	} else if obj==green_guy_obj {
+	} else if local_obj.object_index==green_guy_obj {
 		
 		audio_play_sound(Knife_Pull_140,0,false)
 		local_obj.death = true	
@@ -217,14 +218,14 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		player_obj.gem_active = true
 		player_obj.gem_thrown = false
 		hitpause = true
-	} else if obj==wooden_fly_dart_obj {
+	} else if local_obj.object_index==wooden_fly_dart_obj {
 		audio_play_sound(Knife_Pull_140,0,false)
 		local_obj.death = true	
 		x = oldx
 		y = oldy
 		player_obj.tail_planted = false	
 		hitpause = true
-	} else if obj==eye_obj {
+	} else if local_obj.object_index==eye_obj {
 		local_obj.hp-=1	
 		local_obj.image_blend = c_red
 		local_obj.met = true
@@ -232,7 +233,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		player_obj.camera_shake_d = true
 		hitpause = true
 		
-	} else if obj==cryptkeeper_obj || obj==cryptkeeper_ceiling_obj {
+	} else if local_obj.object_index==cryptkeeper_obj || local_obj.object_index==cryptkeeper_ceiling_obj {
 		x = oldx
 		y = oldy
 		audio_play_sound(Knife_Pull_140,0,false)
@@ -264,7 +265,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		audio_manager(false,0,false,3)
 		hitpause = true
 		
-	} else if obj==dash_guy_obj {
+	} else if local_obj.object_index==dash_guy_obj {
 		if local_obj.sprite_index == follow_guy_angry {
 			local_obj.death = true
 			
@@ -290,7 +291,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		hitpause = true
 		local_obj.met = true
 		return false
-	} else if obj==charger_obj {
+	} else if local_obj.object_index==charger_obj {
 		//hitpause = true
 		if local_obj.hp-10<0 && local_obj.state==local_obj.state_knockback {
 			audio_play_sound(Knife_Pull_140,0,false)
@@ -377,7 +378,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			new_x -= sign(hsp);
 			dist_moved++;
 			if (!place_meeting(new_x, y, local_obj)) {
-				if obj==crab_obj || obj==nucrab_obj || obj==handbug_obj {
+				if local_obj.object_index==crab_obj || local_obj.object_index==nucrab_obj || local_obj.object_index==handbug_obj {
 					if local_obj.fallingoverride {
 						local_obj.death = true
 						player_obj.shake_d=3
@@ -418,7 +419,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			new_y -= sign(vsp);
 			dist_moved++;
 			if (!place_meeting(x, new_y, local_obj)) {
-				if obj==crab_obj || obj==nucrab_obj || obj==handbug_obj {
+				if local_obj.object_index==crab_obj || local_obj.object_index==nucrab_obj || local_obj.object_index==handbug_obj {
 					if local_obj.fallingoverride {
 						local_obj.death = true
 						player_obj.shake_d=3

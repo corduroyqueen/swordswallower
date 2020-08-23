@@ -133,7 +133,7 @@ if player_obj.intro {
 
 if !player_obj.death {
 	if room==subtemple01 {
-		if player_obj.x>24000 && player_obj.y<10000 {
+		if player_obj.x>23000 && player_obj.y<10000 {
 		
 			if layer_get_visible(level1artm) {
 				layer_set_visible(level1artm,false)
@@ -148,19 +148,11 @@ if !player_obj.death {
 				layer_set_visible(level1bg2,false)
 				layer_set_visible(level1bg3,false)
 			
-				layer_set_visible(level3artm,true)
-				layer_set_visible(level3art1,true)
-				layer_set_visible(level3art2,true)
-				layer_set_visible(level3art3,true)
-				layer_set_visible(level3art4,true)
-			
-				layer_set_visible(level3bgm,true)
-				layer_set_visible(level3bg1,true)
-				layer_set_visible(level3bg2,true)
-				layer_set_visible(level3bg3,true)
+				
+				
+				instance_deactivate_layer(layer_get_id("gameobjects_area1"))
 			}
 		} else {
-		
 			if !layer_get_visible(level1artm) {
 				layer_set_visible(level1artm,true)
 				layer_set_visible(level1art1,true)
@@ -173,6 +165,15 @@ if !player_obj.death {
 				layer_set_visible(level1bg1,true)
 				layer_set_visible(level1bg2,true)
 				layer_set_visible(level1bg3,true)
+				
+				instance_activate_layer(layer_get_id("gameobjects_area1"))
+			}
+		}
+		
+		if player_obj.y>5200 {
+		
+			if layer_get_visible(level3artm) {
+				
 			
 				layer_set_visible(level3artm,false)
 				layer_set_visible(level3art1,false)
@@ -184,6 +185,61 @@ if !player_obj.death {
 				layer_set_visible(level3bg1,false)
 				layer_set_visible(level3bg2,false)
 				layer_set_visible(level3bg3,false)
+				
+				instance_deactivate_layer(layer_get_id("gameobjects_area3"))
+			}
+		} else {
+			if !layer_get_visible(level3artm) {
+				layer_set_visible(level3artm,true)
+				layer_set_visible(level3art1,true)
+				layer_set_visible(level3art2,true)
+				layer_set_visible(level3art3,true)
+				layer_set_visible(level3art4,true)
+			
+				layer_set_visible(level3bgm,true)
+				layer_set_visible(level3bg1,true)
+				layer_set_visible(level3bg2,true)
+				layer_set_visible(level3bg3,true)
+				
+				instance_activate_layer(layer_get_id("gameobjects_area3"))
+			}
+		}
+		
+		if player_obj.x<23000 || (player_obj.y<4300 && player_obj.x>28000) {
+			if layer_get_visible(level2artm) {
+				layer_set_visible(level2artm,false)
+				
+				layer_set_visible(level2art1,false)
+				layer_set_visible(level2art2,false)
+				layer_set_visible(level2art3,false)
+				layer_set_visible(level2art4,false)
+				layer_set_visible(level2art5,false)
+			
+				layer_set_visible(level2bgm,false)
+				layer_set_visible(level2bg1,false)
+				layer_set_visible(level2bg2,false)
+				layer_set_visible(level2bg3,false)
+				layer_set_visible(level2bg4,false)
+				
+				instance_deactivate_layer(layer_get_id("gameobjects_area2"))
+			}
+		} else {
+			if !layer_get_visible(level2artm) {
+				layer_set_visible(level2artm,true)
+				
+				layer_set_visible(level2art1,true)
+				layer_set_visible(level2art2,true)
+				layer_set_visible(level2art3,true)
+				layer_set_visible(level2art4,true)
+				layer_set_visible(level2art5,true)
+			
+				layer_set_visible(level2bgm,true)
+				layer_set_visible(level2bg1,true)
+				layer_set_visible(level2bg2,true)
+				layer_set_visible(level2bg3,true)
+				layer_set_visible(level2bg4,true)
+				
+				instance_activate_layer(layer_get_id("gameobjects_area2"))
 			}
 		}
 	}

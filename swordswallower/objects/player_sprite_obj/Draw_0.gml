@@ -140,7 +140,7 @@ if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_pos
 	//sword_angle_calc()
 	//draw_circle(sword_pos_x,sword_pos_y,5,false)
 	draw_sprite_ext(newsword_hilt,0,sword_pos_x,sword_pos_y,sword_facing,1,sword_ang,c_white,1)
-	
+	floor_particle_script()	
 }
 x=150
 y=150

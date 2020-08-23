@@ -1,8 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-instance_deactivate_object(enemy_parent_obj)
 
-var cx = player_obj.camx
-var cy = player_obj.camy
-instance_activate_region(cx,cy,cx+1920,cy+1080,true)
-alarm[0] = 2
+num = instance_number(enemy_parent_obj)
+
+
+for(var a=0;a<num;a++) {
+	var addition = instance_find(enemy_parent_obj,a)
+	
+	ds_list_add(enemy_list,addition)
+	ds_list_add(enemy_seen,false)
+	//ds_list_add(enemy_x,addition.x)
+	//ds_list_add(enemy_y,addition.y)
+}
+instance_deactivate_object(enemy_parent_obj)
+alarm[1] = 2

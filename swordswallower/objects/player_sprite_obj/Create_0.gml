@@ -81,6 +81,12 @@ sword_ty = tail_obj.y
 
 outline_init()
 
+scrape_s = s_sword_scrape
+audio_sound_pitch(scrape_s,0.5)
+
+part_floor_spawnx = x
+part_floor_spawny = y
+
 head_pos_table_x = array_create(6)
 head_pos_table_y = array_create(6)
 

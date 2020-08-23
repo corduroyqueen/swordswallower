@@ -30,3 +30,4 @@ texel_w					= 1 / app_w;
 texel_h					= 1 / app_h;
 
 application_surface_draw_enable(false);
+on = false

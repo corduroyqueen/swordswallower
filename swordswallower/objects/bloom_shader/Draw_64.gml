@@ -2,6 +2,15 @@
 // You can write your code in this editor
 /// @description MAIN
 
+var t_surf = shockwave_shader.target_surface
+if keyboard_check_pressed(ord("I")) {
+	on = !on	
+}
+if !on {
+	draw_surface(t_surf,0,0)	
+	return
+}
+
 // SET VALUES:
 //-----------------------------------------------------------------------------
 var blur_steps		= round(0.3 * 15) + 1;
@@ -11,7 +20,6 @@ var bloom_range		= 0.00;
 var bloom_intensity	= 0.3 * 2;
 var bloom_darken	= 1 - 0.0;
 var bloom_saturation= 1 * 2;
-var t_surf = shockwave_shader.target_surface
 // DRAW:
 //-----------------------------------------------------------------------------
 if (!surface_exists(srf_ping)) {

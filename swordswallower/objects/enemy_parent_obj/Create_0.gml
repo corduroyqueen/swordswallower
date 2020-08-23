@@ -5,3 +5,4 @@ death = false
 hp = 1
 hsp=0
 vsp=0
+met = false

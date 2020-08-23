@@ -65,8 +65,7 @@ charger_bool = false
 hitpause = false
 hitpause_timer = 0
 
-scrape_s = s_sword_scrape
-audio_sound_pitch(scrape_s,0.5)
+
 
 s_whoosh_emitter = audio_emitter_create()
 audio_play_sound_on(s_whoosh_emitter,gsound.s_sword_whoosh,true,0)

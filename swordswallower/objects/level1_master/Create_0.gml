@@ -73,14 +73,15 @@ spikes_visible = false
 thin_floor_visible = false
 
 dev = false
-dev = true
+
 if dev {
+	show_debug_overlay(true)
 	//window_set_fullscreen(false)	
 }
 
 window_set_fullscreen(true)
 randomize()
-show_debug_overlay(true)
+
 
 p_cgems = 0
 

@@ -1,34 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-//if place_meeting(x+hwidth,y+hheight,wall_obj) && place_meeting(x+hwidth,y-hheight,wall_obj) 
-//&& place_meeting(x-hwidth,y+hheight,wall_obj) && place_meeting(x-hwidth,y-hheight,wall_obj) {
-
 if go {
 	
-	if place_meeting(x,y,player_obj) {
-		if !player_obj.start_death && !player_obj.death && player_sprite_obj.spr_bloodied_a<0.5 {
-			player_got = true
-			hsp=0
-			vsp=0
-			surrounded = true
-			obj = player_obj				
-			locked = true
-			lockedobj = obj
-
-			xoff = x-obj.x
-			yoff = y-obj.y
-
-			x=150+xoff
-			y=150+yoff
-	
-			instance_destroy()
-	
-			player_sprite_obj.spr_bloodied = true
-			player_sprite_obj.spr_bloodied_a = 1
-		}
-	}
 if rval==0 {
 	rval = image_xscale
 	bounce_vel = rval * random_range(0.4,1.4)
@@ -51,14 +25,14 @@ if place_meeting(x,y,tar_obj) {
 		hsp+=cos(degtorad(angle)) * dist * random_range(0.8,1.2)
 		vsp-=sin(degtorad(angle)) * dist * random_range(0.8,1.2)
 	}
-	moveActivateX(hsp)
-	moveActivateY(vsp)
+	moveParticlesX(hsp)
+	moveParticlesY(vsp)
 	if on_wall {
 		hs = hsp
 		vs = vsp
 		hsp=0
 		vsp=0
-		depth = -1000
+		//depth = -1000
 		
 		surrounded = true
 	}
@@ -66,6 +40,7 @@ if place_meeting(x,y,tar_obj) {
 	
 } else {
 	if player_got {
+		instance_destroy()
 		return
 	}
 	var sxs = image_xscale

@@ -122,6 +122,3 @@ if (wave_list_size <= 0) {
 
 shader_reset();
 
-if !instance_exists(bloom_shader) {
-	draw_surface(target_surface,0,0)	
-}

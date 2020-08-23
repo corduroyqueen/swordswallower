@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+if !checkpoint_manager.intro_start {
+	visible = false	
+}
 if death && visible {
 	
 	
