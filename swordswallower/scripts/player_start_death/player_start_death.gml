@@ -18,10 +18,10 @@ shockwave_shader.trigger = true
 shockwave_shader.strength_input = 0.2
 	
 	
-instance_deactivate_object(background)
+//instance_deactivate_object(background)
 //layer_destroy(layertwo)
 	
-	
+instance_deactivate_layer(layer_get_id("background_layer"))
 //layerbk1 = layer_get_id("bkd")
 //layerbk2 = layer_get_id("bkd2")
 //layer_set_visible(layerbk1,false)

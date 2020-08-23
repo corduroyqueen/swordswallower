@@ -23,8 +23,8 @@ srf_pong				= -1;
 gui_w					= display_get_gui_width();
 gui_h					= display_get_gui_height();
 
-app_w					= gui_w / 3;
-app_h					= gui_h / 3;
+app_w					= gui_w / 1;
+app_h					= gui_h / 1;
 
 texel_w					= 1 / app_w;
 texel_h					= 1 / app_h;

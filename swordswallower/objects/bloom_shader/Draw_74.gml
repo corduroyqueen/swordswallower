@@ -5,12 +5,12 @@
 // SET VALUES:
 //-----------------------------------------------------------------------------
 var blur_steps		= round(0.3 * 15) + 1;
-var sigma			= max(0.5, 0.0001);
-var bloom_threshold = 0.0001;
-var bloom_range		= 0.55;
-var bloom_intensity	= 0.5 * 2;
-var bloom_darken	= 1 - 0.5;
-var bloom_saturation= 0.5 * 2;
+var sigma			= max(0.3, 0.0001);
+var bloom_threshold = 0.3;
+var bloom_range		= 0.0;
+var bloom_intensity	= 0.3 * 2;
+var bloom_darken	= 1 - 0.0;
+var bloom_saturation= 0.4 * 2;
 
 // DRAW:
 //-----------------------------------------------------------------------------

@@ -137,10 +137,7 @@ if get_deaths {
 }
 
 if dev {
-	if keyboard_check_pressed(ord("V")) {
-		screen_save("shot" + string(screenshotnum) + ".png")	
-		screenshotnum++
-	}
+	
 	if keyboard_check_pressed(ord("Z")) {
 		ability_dash = true
 	}

@@ -4,10 +4,8 @@
     "mvc": "1.1",
     "name": "9ebf8955-2320-4613-b2c5-c84b7e5f230f",
     "children": [
-        "3cbbab85-e4e3-48eb-9e50-0aea168d1bef",
         "eb72c7e1-1620-4a9b-b598-58cc736e29af",
         "bbb7eaf6-7799-49c5-8081-27bd66b1b66d",
-        "e4163e33-135a-4dd7-bb7a-928e38496430",
         "0f027e2a-dacd-4a75-904f-b641d328906d",
         "cac1249d-20c1-4447-9a1b-45eef8828fdd",
         "5a95822e-5ef4-4771-aa54-c772e927ae87",
@@ -31,7 +29,6 @@
         "99985158-18ca-40f9-a1ba-5565cedb3e56",
         "ac45977c-3fc4-4265-b77a-70eb7a68f697",
         "773819a1-f6a4-41a8-b850-fad070d8f164",
-        "8a58e419-a7c0-44e6-860e-f2c26b28185a",
         "63e0b195-eec8-481d-89d1-dbb2e1041fb7",
         "4675644c-c77d-4571-a09b-508d98dde145",
         "0c8a3d30-e7e2-4fce-a02c-2045b3bf1b1d",
@@ -49,8 +46,6 @@
         "945903ae-c982-4cf2-ad49-acbafbcfbf4b",
         "5ede1838-dc76-4ef8-8ad5-8748a19d36e7",
         "9c97210b-2b9d-4e05-9130-0ddc3db6e184",
-        "bb27a94b-1e03-4e87-a192-5a5fb34ed2fd",
-        "1fff152b-3aa1-4a50-bcdb-38788e55c994",
         "10e35fe4-e7e4-42f0-8d3d-df6db1add1cd"
     ],
     "filterType": "GMSprite",
