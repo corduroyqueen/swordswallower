@@ -43,7 +43,7 @@ if !player_obj.zoom_timer_bool {
 	gpu_set_blendenable(false)
 	gpu_set_colorwriteenable(false,false,false,true);
 	draw_set_alpha(0);
-	draw_rectangle(0,0, 300, 300, false);
+	draw_sprite_stretched(rect,0,0,0,300,300)
 
 
 	draw_set_alpha(1);
@@ -79,7 +79,7 @@ if !player_obj.zoom_timer_bool {
 		spr_tarred_a+=0.002
 		draw_set_alpha(spr_tarred_a)
 		draw_set_color(c_gray)
-		draw_rectangle(0,182-spr_tarheight,300,300,false)
+		draw_sprite_stretched(rect,0,0,182-spr_tarheight,0,118+spr_tarheight)
 		
 		if spr_tarred_a>=0 {
 			spr_tarred = false
@@ -129,7 +129,7 @@ if !player_obj.zoom_timer_bool {
 surface_reset_target()
 //gpu_set_colorwriteenable(true,true,true,true);
 
-
+gpu_set_colorwriteenable(true,true,true,false)
 draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
 
 x=player_obj.x
@@ -144,6 +144,7 @@ if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_pos
 }
 x=150
 y=150
+gpu_set_colorwriteenable(true,true,true,true)
 
 
 //gpu_set_colorwriteenable(true,true,true,false)

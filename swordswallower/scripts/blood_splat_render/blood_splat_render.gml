@@ -15,7 +15,7 @@ surface_set_target(blood_splat_surface);
 gpu_set_blendenable(false)
 gpu_set_colorwriteenable(false,false,false,true);
 draw_set_alpha(0);
-draw_rectangle(0,0, 1920,1080, false);
+draw_sprite_stretched(rect,0,0,0,1920,1080)
 
 draw_set_alpha(1);
 draw_surface(art_surface_setter.art_surface,0,0)

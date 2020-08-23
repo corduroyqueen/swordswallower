@@ -9,7 +9,9 @@ if player_obj.tail_carry || player_obj.tail_planted {
 
 
 if !destroy {
-	draw_fire(x,y)
+	if in_camera_range_bigger(x,y) {
+		draw_fire(x,y)
+	}
 	
 } else {
 	if init {

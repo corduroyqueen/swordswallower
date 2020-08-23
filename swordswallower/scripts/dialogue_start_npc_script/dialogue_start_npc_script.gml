@@ -1,3 +1,4 @@
+/*
 if point_distance(x,y,player_obj.x,player_obj.y)<500 && !ui_manager.speaking {
 	ealpha = lerp(ealpha,1,0.05)
 } else {

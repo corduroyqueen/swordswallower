@@ -23,8 +23,11 @@ var cy =player_obj.camy
 //gpu_set_colorwriteenable(true,true,true,false)
 for (i=0;i<blood_n;i++) {
 	var o = instance_find(blood_obj,i)
-	draw_sprite_ext(o.spr,0,o.x-cx,o.y-cy,o.image_xscale*0.075,o.image_yscale*0.075,o.rot,c_white,0.6)
+	draw_sprite_ext(blood_sprite_new1,0,o.x-cx,o.y-cy,o.image_xscale*0.95,o.image_yscale*0.95,o.rot,c_white,0.55)
 }
+//with blood_obj {
+//	draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.75,image_yscale*0.75,rot,c_white,0.8)
+//}
 //shader_reset()
 //gpu_set_colorwriteenable(true,true,true,true)
 surface_reset_target()

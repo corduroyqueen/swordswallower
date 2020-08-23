@@ -10,19 +10,11 @@ height = argument6
 blood_splat_script()
 
 for (i=0;i<(amount+40);i++){
-	var poschangex
-	var poschangey
-	if vary_pos {
-		poschangex = random_range(-width/2,width/2)
-		poschangey = random_range(-height/2,height/2)
-	} else {
-		poschangex = 0
-		poschangey = 0
-	}
 	
 	
 	
-	particle = instance_create_depth(x+poschangex,y+poschangey,-1,blood_obj)
+	
+	particle = instance_create_depth(x,y,-1,blood_obj)
 	
 	
 	var scalevar = (amount+40-i)/(amount+40)
@@ -43,9 +35,9 @@ for (i=0;i<(amount+40);i++){
 	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
 	if i%10==1 {
-		particle.spr = blood_sprite_spr2
+		particle.spr = blood_sprite_new1
 	} else {
-		particle.spr = blood_sprite_spr1
+		particle.spr = blood_sprite_new2
 	}
 	particle.scalevar = scalevar
 	particle.rot = random_range(0,360)

@@ -7,3 +7,5 @@ sprite_index = -4
 
 	
 image_speed=0
+x=-100
+y=-100

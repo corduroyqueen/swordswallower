@@ -27,12 +27,12 @@ if size>1 {
 		//sdm(player_positions_x[| u])
 		if is_real(player_positions_x[| u]) && is_real(player_positions_x[| (u+1)]) 
 		&& is_real(player_positions_y[| u]) && is_real(player_positions_y[| (u+1)]) {
-			draw_line_width(
-				player_positions_x[| u],
-				player_positions_y[| u],
-				player_positions_x[| (u+1)],
-				player_positions_y[| (u+1)],
-				6)	
+			//draw_line_width(
+			//	player_positions_x[| u],
+			//	player_positions_y[| u],
+			//	player_positions_x[| (u+1)],
+			//	player_positions_y[| (u+1)],
+			//	6)	
 		}
 		
 	}

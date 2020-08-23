@@ -1,8 +1,10 @@
-/// @description Insert description here
+/// @description Insert description here/
 // You can write your code in this editor
+
+/*
 if ready && !thrown {
 	
-	checkpoint_particle_script(x,y,24)
+	//checkpoint_particle_script(x,y,24)
 	
 	
 	if player_obj.hp<2 && !player_obj.tail_carry {

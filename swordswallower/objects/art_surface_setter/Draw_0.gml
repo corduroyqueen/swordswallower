@@ -48,6 +48,7 @@ draw_clear_alpha(c_white,0)
 var cx =player_obj.camx
 var cy =player_obj.camy
 //gpu_set_colorwriteenable(true,true,true,false)
+//var spal
 for (i=0;i<ds_list_size(splat_list_x);i++) {
 	
 	draw_sprite_ext(blood_splat_lel1,0,

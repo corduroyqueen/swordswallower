@@ -42,13 +42,14 @@ if setpoint {
 		
 		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
 		draw_set_alpha(0.2)
-		draw_set_color(global.blood_color)
+		draw_set_color(global.magic_color)
 		flame_object.tx = x+s_x
 		flame_object.ty = y+s_y
 		//draw_circle(x+s_x,y+s_y,70+random_range(-5,5),false)
-		var s = random_range(0.1,0.2)
-		draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.blood_color,0.8)
-		draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s,s,0,c_fuchsia,1)
+		var s = random_range(0.8,1.5)
+		draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.magic_color,0.08)
+		draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s*0.1,s*0.1,0,global.magic_color,0.1)
+		draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s,s,0,c_fuchsia,0.05)
 
 		draw_set_color(c_white)
 		draw_set_alpha(1)

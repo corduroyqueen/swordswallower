@@ -26,7 +26,7 @@ shader_set(shader);
 	shader_set_uniform_f(u_time, time);
 	shader_set_uniform_f(u_strength,	strength_x, strength_y);
 	shader_set_uniform_f(u_size,		size);
-	shader_set_uniform_f(u_bend,		bend);
+	//shader_set_uniform_f(u_bend,		bend);
 	
 	draw_sprite(sprites[sprite], 0, tx, ty);
 shader_reset();

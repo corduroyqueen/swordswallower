@@ -123,7 +123,7 @@ if player_obj.intro {
 		intro_timer=2001
 	}
 	
-	draw_text(15547,9315,"WASD to move")
+	//draw_text(15547,9315,"WASD to move")
 	
 }
 
