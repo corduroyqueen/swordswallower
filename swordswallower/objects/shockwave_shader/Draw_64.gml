@@ -14,7 +14,7 @@ if (wave_list_size <= 0) {
 	//sdm(surface_get_target())
 	//surface_reset_target()
 	
-	draw_surface(application_surface, 0, 0);
+	//draw_surface(application_surface, 0, 0);
 	//gpu_set_colorwriteenable(true,true,true,false)
 	
 	//if keyboard_check(ord("K")) { u_blood_var -= 0.01 }

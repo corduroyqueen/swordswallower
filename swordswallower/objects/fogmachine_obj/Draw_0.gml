@@ -4,9 +4,9 @@
 
 
 if player_obj.y>20000 {
-	time			+= 0.1 * 0.02;
-	var size		= 0.1 * 4;
-	var strength	= 0.1 * 0.01;
+	time			+=  0.0001;
+	var size		= 0.05 * 4;
+	var strength	= 3 * 0.01;
 
 
 	// DRAW:
@@ -21,10 +21,10 @@ if player_obj.y>20000 {
 		shader_set_uniform_f(u_strength, strength);			// should be turned into a constant once you're happy with the setting
 		
 
-	gpu_set_tex_filter(false);
+	
 
 
-	//draw_set_alpha(0.06)
+	draw_set_alpha(0.1)
 	draw_sprite(fog_spr1,0,player_obj.camx-40,y)
 	//for (i=0;i<num;i++) {
 	//	xs[i]-=0.2
@@ -36,7 +36,7 @@ if player_obj.y>20000 {
 	//	draw_sprite(fog_spr1,0,xs[i],y)
 	//	//}
 	//}
-	//draw_set_alpha(1)
-	
 	shader_reset();
+	gpu_set_tex_filter(false);
+	draw_set_alpha(1)
 }

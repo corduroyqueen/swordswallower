@@ -88,9 +88,6 @@ void main() {
 	
 	//// grab the base colour at the distorted texture coordinate:
 	gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord + distort);
-	
-	 // debug only. remove this:
-	gl_FragColor.rgb = mix(vec3(distort/max(strength,0.0001), 0.0), gl_FragColor.rgb, show_result);
 }
 
 

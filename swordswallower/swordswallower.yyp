@@ -2391,6 +2391,14 @@
             }
         },
         {
+            "Key": "27926d8f-adfd-492d-b2d2-323a9906fa9b",
+            "Value": {
+                "id": "5f72b8cb-6283-42d4-8640-9009cbbb30d7",
+                "resourcePath": "shaders\\shader_bloom_blend\\shader_bloom_blend.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "279deba5-cfb4-4b38-aaeb-faef47af81b8",
             "Value": {
                 "id": "1addc663-bd57-49cb-b403-387daed2845c",
@@ -3068,6 +3076,14 @@
                 "id": "c43feb77-0e9a-4f27-9641-241d55310345",
                 "resourcePath": "sprites\/sprite312\/sprite312.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "34781971-76e5-4e6d-9f6e-b574a7ae09a6",
+            "Value": {
+                "id": "78a6ef4e-ea04-4a21-853f-f2f80279feb8",
+                "resourcePath": "objects\\bloom_shader\\bloom_shader.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7292,6 +7308,14 @@
                 "id": "bdf7fb45-883b-41a0-b14c-7a15426e3cc8",
                 "resourcePath": "sprites\\newsword_hilt\\newsword_hilt.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7d14a3f9-6d9c-4e2f-b078-be1dad7f68a6",
+            "Value": {
+                "id": "73835c3e-7387-43cb-9dec-8c63a76b5de5",
+                "resourcePath": "shaders\\shader_blur_2_pass_gauss_lerp\\shader_blur_2_pass_gauss_lerp.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -11716,6 +11740,14 @@
                 "id": "55794bd8-8553-44db-ab5d-504d199e6f90",
                 "resourcePath": "sprites\/edgeline\/edgeline.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d956c9fd-de71-4f4a-a8ed-2461a649aa7b",
+            "Value": {
+                "id": "f674e577-72ab-4705-ad2c-8832a85b1d4f",
+                "resourcePath": "shaders\\shader_bloom_filter_luminance\\shader_bloom_filter_luminance.yy",
+                "resourceType": "GMShader"
             }
         },
         {

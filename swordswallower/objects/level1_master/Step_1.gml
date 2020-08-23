@@ -25,14 +25,15 @@ if firsttime {
 	if room==subtemple01 {
 		px_layer_sky = layer_get_id("px_sky")
 		px_layer_sky_amt = 1.01
-		px_layer_bkd1 = layer_get_id("px_bkd1")
-		px_layer_bkd1_amt = 3
 		px_layer_bkd2 = layer_get_id("px_bkd2")
-		px_layer_bkd2_amt = 5
-		px_layer_near1 = layer_get_id("px_near1")
-		px_layer_near1_amt = 15
+		px_layer_bkd2_amt = 3
+		px_layer_bkd1 = layer_get_id("px_bkd1")
+		px_layer_bkd1_amt = 5
 		px_layer_near2 = layer_get_id("px_near2")
-		px_layer_near2_amt = 30
+		px_layer_near2_amt = 15
+		px_layer_near1 = layer_get_id("px_near1")
+		px_layer_near1_amt = 30
+		
 		
 		//layer_parallax_normalize_x(px_layer_sky_amt,px_layer_sky)
 		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)

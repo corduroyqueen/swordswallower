@@ -3,7 +3,7 @@
     "modelName": "GMSprite",
     "mvc": "1.12",
     "name": "spr_heat_haze_leopard",
-    "For3D": false,
+    "For3D": true,
     "HTile": false,
     "VTile": false,
     "bbox_bottom": 255,
