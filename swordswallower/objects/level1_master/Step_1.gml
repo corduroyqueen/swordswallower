@@ -127,10 +127,10 @@ if initialize {
 	player_obj.camx = checkpoint_manager.checkpoint.x - player_obj.cam_width_h
 	player_obj.camy = checkpoint_manager.checkpoint.y - player_obj.cam_height_h
 	
-	wall_obj.visible = walls_visible
-	black_wall_obj.visible = black_walls_visible
-	spike.visible = spikes_visible
-	thin_floor_obj.visible = thin_floor_visible
+	//wall_obj.visible = walls_visible
+	//black_wall_obj.visible = black_walls_visible
+	//spike.visible = spikes_visible
+	//thin_floor_obj.visible = thin_floor_visible
 	
 	player_obj.shielded = shielded
 	

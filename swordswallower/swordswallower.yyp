@@ -7623,6 +7623,14 @@
             }
         },
         {
+            "Key": "888aa48b-a95a-4a3b-9e02-8fa0e30cbcd1",
+            "Value": {
+                "id": "79d774c5-9d39-460c-93d0-c350872d213d",
+                "resourcePath": "objects\\wall_activation_handler\\wall_activation_handler.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8894d17c-d891-4f77-9563-2820334f81fa",
             "Value": {
                 "id": "3db469e2-59e0-41f3-b5c3-6b7a13f813b9",
@@ -10348,14 +10356,6 @@
                 "id": "e2625190-598b-4681-b8b9-d237f145e3ed",
                 "resourcePath": "sprites\/player_idle_test3\/player_idle_test3.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "c24516fb-d757-4e38-9c89-37aa69863953",
-            "Value": {
-                "id": "52b4d0b9-317d-4124-908b-3063027a733d",
-                "resourcePath": "objects\/blood_shader\/blood_shader.yy",
-                "resourceType": "GMObject"
             }
         },
         {

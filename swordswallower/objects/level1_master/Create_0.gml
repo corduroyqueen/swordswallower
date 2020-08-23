@@ -78,8 +78,9 @@ if dev {
 	//window_set_fullscreen(false)	
 }
 
-window_set_fullscreen(false)
+window_set_fullscreen(true)
 randomize()
+show_debug_overlay(true)
 
 p_cgems = 0
 

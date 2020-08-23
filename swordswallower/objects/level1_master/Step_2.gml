@@ -6,10 +6,10 @@ if get_deaths {
 	get_deaths = false
 	initialize = true
 	shielded = player_obj.shielded
-	walls_visible = wall_obj.visible
-	black_walls_visible = black_wall_obj.visible
-	spikes_visible = spike.visible
-	thin_floor_visible = thin_floor_obj.visible
+	//walls_visible = wall_obj.visible
+	//black_walls_visible = black_wall_obj.visible
+	//spikes_visible = spike.visible
+	//thin_floor_visible = thin_floor_obj.visible
 	if instance_exists(big_boi_time) {
 		big_boi_bool = big_boi_time.special_guy
 	}
