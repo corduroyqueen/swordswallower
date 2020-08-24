@@ -20,14 +20,26 @@ var bloom_range		= 0.00;
 var bloom_intensity	= 0.3 * 2;
 var bloom_darken	= 1 - 0.0;
 var bloom_saturation= 1 * 2;
+
+//gui_w					= window_get_width()
+//gui_h					= window_get_height()
+
+//app_w					= gui_w / 1;
+//app_h					= gui_h / 1;
+
+//sdm(app_w)
+//sdm(app_h)
+//1854
+//1043
+
 // DRAW:
 //-----------------------------------------------------------------------------
 if (!surface_exists(srf_ping)) {
-	srf_ping = surface_create(app_w, app_h);
+	srf_ping = surface_create(1920, 1080);
 	bloom_texture = surface_get_texture(srf_ping);
 }
 if (!surface_exists(srf_pong)) {
-	srf_pong = surface_create(app_w, app_h);
+	srf_pong = surface_create(1080, 1080);
 }
 
 // 1st pass: Draw brights to bloom surface:
@@ -37,7 +49,7 @@ shader_set(shader_bloom_lum);
 	shader_set_uniform_f(u_bloom_range,			bloom_range);
 	
 	surface_set_target(srf_ping);
-		draw_surface(t_surf, 0, 0);
+	draw_surface(t_surf, 0, 0);
 	surface_reset_target();
 	
 // 2nd pass: blur horizontally
