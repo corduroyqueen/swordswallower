@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-draw_texture_flush();
+
+//draw_texture_flush();
 
 wooden_walls = array_create(100)
 wooden_walls[0] = false
