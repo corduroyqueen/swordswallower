@@ -30,4 +30,11 @@ texel_w					= 1 / app_w;
 texel_h					= 1 / app_h;
 
 application_surface_draw_enable(false);
-on = false
+on = true
+
+sigma_v = 0.4
+blur_steps_v = 0.3
+
+//0.09 is really cool
+bloom_threshold_v = 0.29
+bloom_range_v = 0

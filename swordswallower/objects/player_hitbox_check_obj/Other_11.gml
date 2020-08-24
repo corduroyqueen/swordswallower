@@ -9,7 +9,7 @@ y = tail_obj.y
 	
 //old_player_hitbox_code()
 ang = tail_obj.ang
-	
+	//sdm(ang)
 while place_meeting(x,y,tail_obj.current_obj) {
 	x+=cos(degtorad(ang))
 	y+=-sin(degtorad(ang))
@@ -19,14 +19,7 @@ ogx = x
 ogy = y
 	
 if wall_detect_solids(x,y) {
-	presentwall = instance_place(x,y,wall_obj)
-	if presentwall==noone {
-		presentwall = instance_place(x,y,black_wall_obj)	
-	}
-	if presentwall==noone {
-		//break;
-		presentwall = tail_obj.current_obj
-	}
+	presentwall = tail_obj.current_obj
 	if presentwall.y>y{
 		while place_meeting(x,y,presentwall) {
 			y-=2

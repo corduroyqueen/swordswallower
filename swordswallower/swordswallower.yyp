@@ -5567,6 +5567,14 @@
             }
         },
         {
+            "Key": "6173e9a9-8060-4151-a6c3-d1cfa1ae5fee",
+            "Value": {
+                "id": "c52755a7-e89f-4943-bba1-c3d229bc10e5",
+                "resourcePath": "scripts\\layer_blood_splat_start\\layer_blood_splat_start.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "619558f6-7cb2-45d4-8b5c-51cc88fe721b",
             "Value": {
                 "id": "08e30673-c67e-47b9-b40e-712092e5475c",
@@ -13782,7 +13790,8 @@
         "93e39194-252e-4b27-8ca4-f68a741948af",
         "1d9c0229-c11f-492c-9ec0-7d8907380e78",
         "87e5e541-81d6-4dce-b105-e951c2765cc8",
-        "7621715b-711f-4170-9e93-02a19328fe2a"
+        "7621715b-711f-4170-9e93-02a19328fe2a",
+        "6173e9a9-8060-4151-a6c3-d1cfa1ae5fee"
     ],
     "tutorial": ""
 }

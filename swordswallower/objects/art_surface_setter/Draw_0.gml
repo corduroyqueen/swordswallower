@@ -12,12 +12,9 @@
 //   }
    
 //
-if (!surface_exists(blood_splat_surface)) {
-	blood_splat_surface = surface_create(1920,1080)
-}
 
 
-surface_set_target(blood_splat_surface);
+//surface_set_target(blood_splat_surface);
 //surface_set_target(blood_surface)
 //draw_clear_alpha($FF7F7F, 1);
 //gpu_set_colofrwriteenable(true,true,true,false)
@@ -35,7 +32,7 @@ surface_set_target(blood_splat_surface);
 //gpu_set_blendenable(true);
 //gpu_set_colorwriteenable(true,true,true,true);
 
-draw_clear_alpha(c_white,0)
+//draw_clear_alpha(c_white,0)
 	
 //shader_set(shader_blood_alpha)
 //gpu_set_colofrwriteenable(true,true,true,true)
@@ -45,33 +42,35 @@ draw_clear_alpha(c_white,0)
 //gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
 //gpu_set_alphatestenable(true);
 
-var cx =player_obj.camx
-var cy =player_obj.camy
-//gpu_set_colorwriteenable(true,true,true,false)
-//var spal
-for (i=0;i<ds_list_size(splat_list_x);i++) {
+//var cx =player_obj.camx
+//var cy =player_obj.camy
+////gpu_set_colorwriteenable(true,true,true,false)
+////var spal
+//for (i=0;i<ds_list_size(splat_list_x);i++) {
 	
-	draw_sprite_ext(blood_splat_lel1,0,
-	splat_list_x[| i]-cx,splat_list_y[| i]-cy,
-	splat_list_s[| i],splat_list_s[| i],splat_list_rot[| i],c_white,1)
-	if point_distance(splat_list_x[| i],splat_list_y[| i],player_obj.x,player_obj.y)>2000 {
-		ds_list_delete(splat_list_x,i)	
-		ds_list_delete(splat_list_y,i)	
-		ds_list_delete(splat_list_rot,i)	
-		ds_list_delete(splat_list_s,i)	
+//	draw_sprite_ext(blood_splat_lel1,0,
+//	splat_list_x[| i]-cx,splat_list_y[| i]-cy,
+//	splat_list_s[| i],splat_list_s[| i],splat_list_rot[| i],c_white,1)
+//	if point_distance(splat_list_x[| i],splat_list_y[| i],player_obj.x,player_obj.y)>2000 {
+//		ds_list_delete(splat_list_x,i)	
+//		ds_list_delete(splat_list_y,i)	
+//		ds_list_delete(splat_list_rot,i)	
+//		ds_list_delete(splat_list_s,i)	
 		
-	}
-}
+//	}
+//}
 
 //gpu_set_alphatestenable(false);
 //gpu_set_blendmode(bm_normal);
 //shader_reset()
 //gpu_set_colorwriteenable(true,true,true,true)
-surface_reset_target()
+//surface_reset_target()
 
 
-tex_art = surface_get_texture(art_surface)
-texture_set_stage(shader_art_surface, tex_art);
+
+
+//tex_art = surface_get_texture(art_surface)
+//texture_set_stage(shader_art_surface, tex_art);
 if !player_obj.death {
 	gpu_set_colorwriteenable(true, true, true, false);
 } else {
@@ -88,6 +87,9 @@ if !player_obj.death {
 draw_surface(art_surface,player_obj.camx,player_obj.camy)
 //gpu_set_blendenable(true)
 //shader_reset()
+
+tex_art = surface_get_texture(art_surface)
+texture_set_stage(shader_art_surface, tex_art);
 shader_set(shader_blood_alpha_surface)
 shader_set_uniform_f(u_blood_r2,global.blood_cr)
 shader_set_uniform_f(u_blood_g2,global.blood_cg)
@@ -97,9 +99,11 @@ shader_reset()
 
 
 
+
 gpu_set_colorwriteenable(true, true, true, true)
 gpu_set_blendenable(true)
 
+//draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 
 surface_set_target(art_surface)
 draw_clear_alpha(c_white,0)

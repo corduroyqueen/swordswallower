@@ -13,13 +13,28 @@ if !on {
 
 // SET VALUES:
 //-----------------------------------------------------------------------------
-var blur_steps		= round(0.3 * 15) + 1;
-var sigma			= max(0.3, 0.0001);
-var bloom_threshold = 0.28;
-var bloom_range		= 0.00;
-var bloom_intensity	= 0.3 * 2;
+var blur_steps		= round(blur_steps_v * 15) + 1;
+var sigma			= max(sigma_v, 0.0001);
+var bloom_threshold = bloom_threshold_v;
+var bloom_range		= bloom_range_v;
+var bloom_intensity	= 0.5 * 2;
 var bloom_darken	= 1 - 0.0;
 var bloom_saturation= 1 * 2;
+
+if keyboard_check(vk_left) {
+	bloom_threshold_v-=0.01
+}
+if keyboard_check(vk_right) {
+	bloom_threshold_v+=0.01
+}
+if keyboard_check(vk_down) {
+	bloom_range_v-=0.01
+}
+if keyboard_check(vk_up) {
+	bloom_range_v+=0.01
+}
+
+
 
 //gui_w					= window_get_width()
 //gui_h					= window_get_height()
@@ -39,7 +54,7 @@ if (!surface_exists(srf_ping)) {
 	bloom_texture = surface_get_texture(srf_ping);
 }
 if (!surface_exists(srf_pong)) {
-	srf_pong = surface_create(1080, 1080);
+	srf_pong = surface_create(1920, 1080);
 }
 
 // 1st pass: Draw brights to bloom surface:

@@ -1,3 +1,4 @@
+if object_index==level1_master { return }
 if grounded && !zoom_timer_bool { 
 	h_decel = h_decel_g 
 } else { 

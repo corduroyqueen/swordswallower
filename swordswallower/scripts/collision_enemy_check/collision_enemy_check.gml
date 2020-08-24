@@ -7,6 +7,9 @@ if(!place_meeting(checkx,checky,obj)){
 }
 
 local_obj = instance_place(checkx, checky, obj);
+if object_get_parent(local_obj.object_index)==killalways_parent_obj {
+	return
+}
 
 
 if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {

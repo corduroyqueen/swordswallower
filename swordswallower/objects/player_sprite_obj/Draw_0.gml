@@ -18,8 +18,8 @@ if player_obj.shielded {
 
 
 //gpu_set_colorwriteenable(true,true,true,true);
-draw_set_color(c_white)
-draw_set_alpha(1)
+//draw_set_color(c_white)
+//draw_set_alpha(1)
 draw_self()
 if sprite_index==spr_mc_somersault {
 	
@@ -101,12 +101,7 @@ if !player_obj.zoom_timer_bool {
 		//vertical   : 118 to 182
 		
 		var c_blood = global.blood_color
-		draw_sprite_ext(white_circle,0, 140,140,0.375,0.375,1,c_blood,spr_bloodied_a);
-		draw_sprite_ext(white_circle,0, 150,150,0.1875,0.1875,1,c_blood,spr_bloodied_a);
-		draw_sprite_ext(white_circle,0, 153,160,0.1875,0.21,0,c_blood,spr_bloodied_a);
-		draw_sprite_ext(white_circle,0, 150,160,0.2625,0.2625,0,c_blood,spr_bloodied_a);
-		draw_sprite_ext(white_circle,0, 170,115,0.4875,0.4875,0,c_blood,spr_bloodied_a);
-		draw_sprite_ext(white_circle,0, 163,140,0.4875,0.4875,0,c_blood,spr_bloodied_a);
+		draw_sprite_ext(white_circle,0, 150,150,0.8,0.8,1,c_blood,spr_bloodied_a);
 	}
 	
 	gpu_set_alphatestenable(false);
