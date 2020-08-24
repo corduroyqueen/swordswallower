@@ -96,14 +96,30 @@ gpu_set_texfilter(true)
 
 ability_dash = false
 
-global.blood_cr = 0.9
-global.blood_cg = 0.0
-global.blood_cb = 0.3
+//global.blood_cr = 0.9
+//global.blood_cg = 0.0
+//global.blood_cb = 0.3
+//global.blood_cr = 0.73
+//global.blood_cg = 0.19
+//global.blood_cb = 0.43
+
+//global.blood_cr = 0.55
+//global.blood_cg = 0.13
+//global.blood_cb = 0.32
+
+
+global.blood_cr = 0.7176
+global.blood_cg = 0.23
+global.blood_cb = 0.439
+
 global.blood_color = make_color_rgb(255*global.blood_cr,255*global.blood_cg,255*global.blood_cb)
 
-global.magic_cr = 0.55
-global.magic_cg = 0.21
-global.magic_cb = 0.9
+//global.magic_cr = 0.55
+//global.magic_cg = 0.21
+//global.magic_cb = 0.9
+global.magic_cr = 0.184
+global.magic_cg = 0.78
+global.magic_cb = 0.69
 global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*global.magic_cb)
 
 //0.9, 0.0, 0.3 neon pink
