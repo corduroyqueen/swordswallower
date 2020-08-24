@@ -36,5 +36,10 @@ sigma_v = 0.4
 blur_steps_v = 0.3
 
 //0.09 is really cool
+//0.29 with 0.5 intensit
+//blood happens at 0.23
 bloom_threshold_v = 0.29
 bloom_range_v = 0
+
+bloom_darken_v = 0.0
+bloom_sat_v = 0.9
