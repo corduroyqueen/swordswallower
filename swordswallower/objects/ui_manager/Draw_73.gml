@@ -112,7 +112,7 @@ if player_obj.death {
 		mouse_ui_x = mouse_x
 		mouse_ui_y = mouse_y
 	}
-	draw_circle(mouse_ui_x,mouse_ui_y,9,false)
+	//draw_circle(mouse_ui_x,mouse_ui_y,9,false)
 	draw_set_color(c_white)
 	
 	//draw_sprite_ext(sword5,0,global.mousepx,global.mousepy,0.5,0.5,point_direction(player_obj.x,player_obj.y,global.mousepx,global.mousepy)-90,c_white,1)
