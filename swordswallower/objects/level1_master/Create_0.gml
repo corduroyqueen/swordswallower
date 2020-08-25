@@ -76,11 +76,11 @@ spikes_visible = false
 thin_floor_visible = false
 
 dev = false
-
+dev = true
 
 if dev {
 	show_debug_overlay(true)
-	//window_set_fullscreen(false)	
+	window_set_fullscreen(false)	
 }
 
 window_set_fullscreen(true)
@@ -117,9 +117,14 @@ global.blood_color = make_color_rgb(255*global.blood_cr,255*global.blood_cg,255*
 //global.magic_cr = 0.55
 //global.magic_cg = 0.21
 //global.magic_cb = 0.9
-global.magic_cr = 0.184
-global.magic_cg = 0.78
-global.magic_cb = 0.69
+
+//global.magic_cr = 0.184
+//global.magic_cg = 0.78
+//global.magic_cb = 0.69
+
+global.magic_cr = 0.29
+global.magic_cg = 0.47
+global.magic_cb = 0.46
 global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*global.magic_cb)
 
 //0.9, 0.0, 0.3 neon pink

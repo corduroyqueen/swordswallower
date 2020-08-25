@@ -169,6 +169,10 @@ if player_obj.tail_planted {
 		
 	}
 	
+	if !instance_exists(current_obj) {
+		player_obj.tail_planted = false	
+		player_obj.tail_pulling = false	
+	}
 	
 	//sdm("ZOOM BOOL: " + string(player_obj.zoom_timer_bool))
 	//sdm("INSIDE FLIER: " + string(inside_flier))

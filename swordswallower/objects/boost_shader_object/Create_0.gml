@@ -7,7 +7,7 @@
 //-----------------------------------------------------------------------------
 #region SPRITE & SHADER (mandatory):
 //-----------------------------------------------------------------------------
-sprites			= [spr_flame_simple_s, spr_flame_jagged_s, spr_flame_gradient];
+sprites			= [spr_boost_simple_s, spr_flame_jagged_s, spr_flame_gradient];
 sprite			= 0;
 distort_sprite	= spr_flame_distortion_map;
 distort_tex		= sprite_get_texture(distort_sprite, 0);

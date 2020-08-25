@@ -5,6 +5,5 @@
 event_inherited();
 
 
-ello = surface_create(200,200)
 
 death = false

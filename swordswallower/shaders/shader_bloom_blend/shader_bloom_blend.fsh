@@ -22,7 +22,8 @@ void main()
 	bloom_col			= mix(vec3(lum), bloom_col, bloom_saturation);
 	
 	// add (linear dodge):
-	base_col.rgb		= base_col.rgb * bloom_darken + bloom_col * bloom_intensity;
+	base_col.rgb		= base_col.rgb + bloom_col * bloom_intensity;
+	//base_col.rgb		= base_col.rgb * bloom_darken + bloom_col * bloom_intensity;
 	
 	gl_FragColor		= v_vColour * base_col;
 }

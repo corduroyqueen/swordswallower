@@ -11,8 +11,9 @@ if move!=0 {
 			y += move_dir
 			move -= move_dir
 		} else {
+			hsp=0
 			vsp=0
-			on_wall = true
+			surrounded = true
 			break;
 		}
 	}

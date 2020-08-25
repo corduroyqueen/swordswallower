@@ -12,7 +12,8 @@ if move!=0 {
 			move -= move_dir
 		} else {
 			hsp=0
-			on_wall = true
+			vsp=0
+			surrounded = true
 			break;
 		}
 	}

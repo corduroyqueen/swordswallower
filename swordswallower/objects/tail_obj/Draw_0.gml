@@ -3,7 +3,7 @@
 
 
 if player_obj.tail_pulling || player_obj.zoom_timer_bool {
-	outline_start(3,global.magic_color)
+	outline_start(2,global.magic_color)
 }
 
 draw_self()

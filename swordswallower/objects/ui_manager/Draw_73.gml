@@ -100,9 +100,9 @@ if player_obj.death {
 	draw_set_font(font2)
 	//draw_text(player_obj.camx+20,player_obj.camy+20,string(player_obj.gems))	
 	if player_obj.k_dash || player_obj.k_fire {
-		draw_set_color(c_dkgray)
+		//draw_set_color(c_dkgray)
 	} else {
-		draw_set_color(c_ltgray)
+		//draw_set_color(c_ltgray)
 	}
 	
 	if input_controller.controller == input_controller.controller_ds4 {
@@ -112,6 +112,9 @@ if player_obj.death {
 		mouse_ui_x = mouse_x
 		mouse_ui_y = mouse_y
 	}
+	if !keyboard_check_pressed(ord("V")) {
+		draw_sprite(mouse_ui_spr,player_obj.k_dash || player_obj.k_fire,mouse_ui_x,mouse_ui_y)
+	}
 	//draw_circle(mouse_ui_x,mouse_ui_y,9,false)
 	draw_set_color(c_white)
 	
@@ -120,11 +123,12 @@ if player_obj.death {
 	
 }
 
-if player_obj.ckpt_place_timer>0 && !position_meeting(player_obj.x,player_obj.y,checkpoint_manager.checkpoint) {
-	draw_sprite_ext(statue3,0,player_obj.x,player_obj.y,current_time % 2, 1,0,c_white,1)	
-} else if player_obj.ckpt_place_timer>0 {
-	draw_sprite_ext(statue3,0,checkpoint_manager.checkpoint.x,checkpoint_manager.checkpoint.y,current_time % 2, 1,0,c_red,1)	
-}
+//if player_obj.ckpt_place_timer>0 && !position_meeting(player_obj.x,player_obj.y,checkpoint_manager.checkpoint) {
+//	draw_sprite_ext(statue3,0,player_obj.x,player_obj.y,current_time % 2, 1,0,c_white,1)	
+//} else if player_obj.ckpt_place_timer>0 {
+//	draw_sprite_ext(statue3,0,checkpoint_manager.checkpoint.x,checkpoint_manager.checkpoint.y,current_time % 2, 1,0,c_red,1)	
+//}
+
 //with player_sprite_obj {
 //	draw_set_color(c_red)
 //	draw_circle(player_sprite_obj.sword_tx,player_sprite_obj.sword_ty,10,false)

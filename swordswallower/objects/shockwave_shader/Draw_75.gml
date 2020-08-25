@@ -1,10 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
-surface_reset_target();
-//gpu_set_colorwriteenable(true, true, true, false);
-draw_surface(GUI,0,0); //draw gui to game!
+if level1_master.dev {
+	if keyboard_check_pressed(ord("C")) {
+		recording = !recording	
+	
+		if recording {
+			gif = gif_open(1920,1080)
+		} else {
+			gif_save(gif, "gif_" + string(current_month) + "_" + string(current_day) + "_" + string(current_hour) + "_" + string(current_minute) + "_" + string(current_second) + ".gif")
+		}
+	}
+	if keyboard_check_pressed(ord("V")) {
+		screen_save("screen_" + string(current_month) + "_" + string(current_day) + "_" + string(current_hour) + "_" + string(current_minute) + "_" + string(current_second)+ ".png")
+	}
+	if recording {
+	
+		gif_add_surface(gif,GUI,2)	
+	
+	}
+}
 
-surface_set_target(application_surface);
-
-//draw_surface(GUI,0,0);
-surface_reset_target();

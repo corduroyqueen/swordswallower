@@ -32,3 +32,7 @@ maxy = y
 okthen = 0
 
 yolo = false
+
+hsp=0
+vsp=0
+riding_list = ds_list_create();

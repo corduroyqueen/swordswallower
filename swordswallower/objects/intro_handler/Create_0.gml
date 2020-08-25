@@ -62,3 +62,15 @@ level3bgm = layer_get_id("p3bkd")
 level3bg1 = layer_get_id("p3bkd1")
 level3bg2 = layer_get_id("p3bkd2")
 level3bg3 = layer_get_id("p3bkd3")
+
+layer_1_tog = true
+layer_1p5_tog = false
+layer_2_tog = false
+layer_3_tog = false
+
+layer_obj_1 = layer_get_id("gameobjects_area1")
+layer_obj_1p5 = layer_get_id("gameobjects_area1p5")
+layer_obj_2 = layer_get_id("gameobjects_area2")
+layer_obj_3 = layer_get_id("gameobjects_area3")
+
+alarm[0] = 2

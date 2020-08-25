@@ -23,10 +23,10 @@ if enemy {
 if enabled {
 	partner.enabled = true
 	image_alpha = 0.6
-	sprite_index = spr_switch_on
+	image_index = 1
 } else {
 	partner.enabled = false
-	sprite_index = spr_switch_off
+	image_index = 0
 	
 	if !hit  {
 		if place_meeting(x,y,tail_obj)

@@ -8,9 +8,7 @@ draw_self()
 //	with ui_manager {
 //		lelx = 100
 //		lely = 31
-//		if !surface_exists(lel) {
-//			lel = surface_create(200,200)	
-//		}
+//		
 		
 		
 //		draw_set_color(c_black)
