@@ -15,7 +15,7 @@ if level1_master.dev {
 	}
 	if recording {
 	
-		gif_add_surface(gif,GUI,2)	
+		gif_add_surface(gif,gif_surface,2)	
 	
 	}
 }

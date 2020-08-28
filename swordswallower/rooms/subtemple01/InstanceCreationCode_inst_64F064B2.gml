@@ -1,4 +1,3 @@
 endx = x-300
 endy = y
-character = miniboss1
-enemytoggle = true
+master = coffin_boss_1

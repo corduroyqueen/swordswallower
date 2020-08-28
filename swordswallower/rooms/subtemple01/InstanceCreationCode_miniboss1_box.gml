@@ -1,1 +1,1 @@
-boss = miniboss1
+master = coffin_boss_1

@@ -81,16 +81,16 @@ if boatboy {
 	
 	starty = y
 	if player_obj.x>38448 && !player_obj.ending_lock {
+		with ui_manager {
+			friendly_x = other.x
+			friendly_y = other.y - 50
+			view_xview = friendly_x-view_wview/2
+		}
 		if !boatboyenter {
 			boatboyenter = true
 			ui_manager.speaking = true
 			ui_manager.printing = true
-			with ui_manager {
-				friendly_x = other.x
-				friendly_y = other.y - other.sprite_height/2	
-				view_xview = friendly_x-view_wview/2
-			}
-		
+			
 			with ui_manager {
 				current_dialogue = ""
 				global.display_txt = ""
@@ -122,7 +122,7 @@ if boatboy {
 if player_present {
 	with ui_manager {
 		friendly_x = other.x
-		friendly_y = other.y - other.sprite_height/2	
+		friendly_y = other.y - other.sprite_height/2
 		view_xview = friendly_x-view_wview/2
 	}
 	if player_obj.k_speak_p {

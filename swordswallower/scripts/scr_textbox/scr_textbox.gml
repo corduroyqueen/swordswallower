@@ -202,14 +202,14 @@ view_yview+(padding),
 global.display_txt,50,max_width);
 
 //arrow
-arrow_base_width = 50
-arrow_base_width_h = arrow_base_width/2
-arrow_x = clamp(view_xview+arrow_base_width_h,mean(view_xview,friendly_x),view_xview+view_wview-arrow_base_width_h)
-draw_set_color(c_black)
-draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,arrow_x+arrow_base_width_h,view_yview+view_hview,10)
-draw_set_color(c_white)
-draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
-draw_line_width(arrow_x+arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
+//arrow_base_width = 50
+//arrow_base_width_h = arrow_base_width/2
+//arrow_x = clamp(view_xview+arrow_base_width_h,mean(view_xview,friendly_x),view_xview+view_wview-arrow_base_width_h)
+//draw_set_color(c_black)
+//draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,arrow_x+arrow_base_width_h,view_yview+view_hview,10)
+//draw_set_color(c_white)
+//draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
+//draw_line_width(arrow_x+arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
 
 if !printing {
 	ealpha = lerp(ealpha,1,0.2)

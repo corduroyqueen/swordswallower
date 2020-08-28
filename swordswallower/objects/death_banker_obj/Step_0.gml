@@ -41,6 +41,11 @@ if init {
 	init = false
 }
 if player_present {
+	with ui_manager {
+		friendly_x = other.x
+		friendly_y = other.y - other.sprite_height/2 - 40	
+		view_xview = friendly_x-view_wview/2
+	}
 	if player_obj.k_speak_p {
 		ui_manager.speaking = true
 		ui_manager.printing = true

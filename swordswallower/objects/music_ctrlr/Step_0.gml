@@ -31,8 +31,8 @@ if room==subtemple01 {
 		}
 	}
 	
-	if instance_exists(miniboss1) {
-		if miniboss1.state!=miniboss1.state_idle {
+	if instance_exists(coffin_boss_1) {
+		if coffin_boss_1.music_cue {
 			if go2 {
 				audio_stop_sync_group(subtemple_mc)
 				part2_mc = audio_create_sync_group(true)

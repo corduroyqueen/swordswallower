@@ -5,6 +5,7 @@ dialogue=""
 player_present = false
 plf = false
 starty =y
+startx = x
 dialogue_array = array_create(100)
 current_pick = 0
 init = true

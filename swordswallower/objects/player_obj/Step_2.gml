@@ -9,7 +9,7 @@ if level1_master.dev {
 	}
 }
 
-if !zoom_timer_bool && wall_detect_solids(x,y) {
+if !ending_lock && !zoom_timer_bool && wall_detect_solids(x,y) {
 	x = xpreva
 	y = ypreva
 	if wall_detect_solids(x+1,y) 

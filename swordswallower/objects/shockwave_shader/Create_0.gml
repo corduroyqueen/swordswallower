@@ -98,9 +98,13 @@ blur_steps_v = 0.3
 bloom_threshold_v = 0.29
 bloom_range_v = 0
 
+bloom_intensity_v = 0.35
+
 bloom_darken_v = 0.0
-bloom_sat_v = 0.9
+bloom_sat_v = 0.6
+
 
 
 //target_surface = surface_create(1920,1080)
 
+gif_surface = surface_create(1920,1080)

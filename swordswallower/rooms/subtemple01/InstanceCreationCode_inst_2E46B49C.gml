@@ -1,4 +1,4 @@
 endx = x-660
 endy = y
-master = subtemple01_switch1
+master = subtemple_bridge_trigger
 movespeed = 40

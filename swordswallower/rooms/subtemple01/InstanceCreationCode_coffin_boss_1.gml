@@ -1,0 +1,1 @@
+boss_type = charger_obj

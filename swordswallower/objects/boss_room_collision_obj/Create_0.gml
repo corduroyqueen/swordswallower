@@ -3,3 +3,4 @@
 enter = false
 ended = false
 boss = noone
+master = noone

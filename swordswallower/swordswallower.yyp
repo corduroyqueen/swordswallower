@@ -2303,6 +2303,14 @@
             }
         },
         {
+            "Key": "26740d00-28e7-4435-936d-f8c85be7aabb",
+            "Value": {
+                "id": "c94b1ea8-f118-4707-ba17-687165074d7c",
+                "resourcePath": "objects\\switch_event_trigger_obj\\switch_event_trigger_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "26965ddb-d9da-4486-9279-5226b2ee874b",
             "Value": {
                 "id": "e5ddd928-68cc-4b92-bde5-566332e9a3c1",
@@ -8388,6 +8396,14 @@
                 "id": "1e06bfd3-e6b3-43c0-8885-dac786fe6c24",
                 "resourcePath": "sprites\/bgvines254311\/bgvines254311.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "96756bd0-e708-450d-84a2-203dd9163f5b",
+            "Value": {
+                "id": "83ad05f5-0b83-42af-9aa1-11f5d07f49e6",
+                "resourcePath": "objects\\coffin_boss\\coffin_boss.yy",
+                "resourceType": "GMObject"
             }
         },
         {

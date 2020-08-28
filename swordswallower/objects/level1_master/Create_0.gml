@@ -96,6 +96,10 @@ gpu_set_texfilter(true)
 
 ability_dash = false
 
+st_coffin_boss_1_opened = false
+st_coffin_boss_1_beaten = false
+st_bridge_moment = false
+
 //global.blood_cr = 0.9
 //global.blood_cg = 0.0
 //global.blood_cb = 0.3

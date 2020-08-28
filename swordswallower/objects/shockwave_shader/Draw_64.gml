@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 /// @description MAIN
-
+//surface_set_target(gif_surface)
 
 if keyboard_check_pressed(ord("I")) {
 	on = !on	
@@ -17,7 +17,7 @@ var blur_steps		= round(blur_steps_v * 15) + 1;
 var sigma			= max(sigma_v, 0.0001);
 var bloom_threshold = bloom_threshold_v;
 var bloom_range		= bloom_range_v;
-var bloom_intensity	= 0.45 * 2;
+var bloom_intensity	= bloom_intensity_v * 2;
 //var bloom_darken	= 1 - bloom_darken_v;
 var bloom_saturation= bloom_sat_v * 2;
 
@@ -89,3 +89,6 @@ shader_set(shad_bloom_blend);
 	
 shader_reset();
 
+
+//surface_reset_target()
+//draw_surface(gif_surface,0,0)
