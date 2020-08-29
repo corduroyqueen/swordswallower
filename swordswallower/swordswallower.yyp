@@ -2247,6 +2247,14 @@
             }
         },
         {
+            "Key": "257c19bf-4a08-479c-8c32-049ae1999dda",
+            "Value": {
+                "id": "7cac1e1e-85ae-41bf-a6a7-584e9e205c9b",
+                "resourcePath": "sprites\\pus4\\pus4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "25893ed5-0c11-4b00-8c14-42a313af2418",
             "Value": {
                 "id": "907ba7d4-94e5-496f-88c5-721fe8f7ba63",
@@ -4383,6 +4391,14 @@
             }
         },
         {
+            "Key": "4cd58443-5b3e-4c17-bf41-9a01df408446",
+            "Value": {
+                "id": "318d312d-bbf4-4b6d-ba68-180cbe73d951",
+                "resourcePath": "sprites\\pus3\\pus3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4cf1ef8c-411c-44db-b75a-05c5d4a38cfd",
             "Value": {
                 "id": "2b4853be-71e8-4401-85c5-6a73949c88f6",
@@ -4799,6 +4815,14 @@
             }
         },
         {
+            "Key": "53bb5736-9838-4675-9648-7a77603db92b",
+            "Value": {
+                "id": "01614f40-5cc6-47d7-83e8-a0f1af1b4461",
+                "resourcePath": "sprites\\pus1\\pus1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "53e282db-83e4-475f-bac1-69f7b2bc2764",
             "Value": {
                 "id": "dea718e7-8666-4ad5-a7e2-62f740960cc9",
@@ -5020,6 +5044,14 @@
                 "id": "e1788d09-f13f-4784-856e-a822e29fec82",
                 "resourcePath": "sprites\\spr_pot_t\\spr_pot_t.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "578cbcdf-cd37-4520-9704-00143d719bcb",
+            "Value": {
+                "id": "b81bdfc0-158b-4cae-9c40-befaecec3d9a",
+                "resourcePath": "views\\578cbcdf-cd37-4520-9704-00143d719bcb.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -5524,6 +5556,14 @@
                 "id": "9b1b0fea-e1dd-45bf-8fcd-e9e7bd7ca7b9",
                 "resourcePath": "sounds\/meat7\/meat7.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5f98d137-94cb-46a2-a7c2-e11bd6f3bdaa",
+            "Value": {
+                "id": "41da2868-7a60-4572-bdd8-dc02cf3d26f2",
+                "resourcePath": "sprites\\pus2\\pus2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8507,6 +8547,14 @@
             "Value": {
                 "id": "f34230a8-c6ca-405d-9e7d-b14538f5fe06",
                 "resourcePath": "sprites\/bgvines2\/bgvines2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "981b786c-23e0-47f9-8569-38d3eb481a07",
+            "Value": {
+                "id": "ec9ba193-a703-4252-99b4-d1a1d7dbc822",
+                "resourcePath": "sprites\\sprite912\\sprite912.yy",
                 "resourceType": "GMSprite"
             }
         },
