@@ -1,6 +1,6 @@
 amt = argument0
 
-amt *= dt
+//amt *= dt
 
 xRemainder = 0;
 xRemainder += amt;

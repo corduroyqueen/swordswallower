@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+//dt = delta_time/(1/60 * 1000000)
 if pickup_timer>0 {
 	pickup_timer--
 }
