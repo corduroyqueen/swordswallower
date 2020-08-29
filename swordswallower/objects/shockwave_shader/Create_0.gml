@@ -97,7 +97,7 @@ blur_steps_v = 0.3
 bloom_threshold_v = 0.29
 bloom_range_v = 0
 
-bloom_intensity_v = 0.35
+bloom_intensity_v = 0.375
 
 bloom_darken_v = 0.0
 bloom_sat_v = 0.6

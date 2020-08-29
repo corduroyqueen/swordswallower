@@ -118,6 +118,8 @@ if player_obj.intro {
 		with music_ctrlr {
 			audio_start_sync_group(subtemple_mc)	
 		}
+		player_obj.x = 19707
+		player_obj.y = 13900
 		intro_timer=2001
 	}
 	

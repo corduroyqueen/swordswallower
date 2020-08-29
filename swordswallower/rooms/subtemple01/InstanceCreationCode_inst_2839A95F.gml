@@ -1,1 +1,0 @@
-text = "use the mouse to look around"

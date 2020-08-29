@@ -24,8 +24,8 @@ if !player_obj.k_dash
 	player_obj.held_position_ready = false
 	
 	//sdm("ok")
-	player_obj.hsp *= 0.75
-		player_obj.vsp *= 0.75
+	player_obj.hsp *= 0.8
+		player_obj.vsp *= 0.8
 		out_of_dash_t=10
 		player_obj.hsp = clamp(player_obj.hsp,-25,25)
 		player_obj.vsp = clamp(player_obj.vsp,-25,25)

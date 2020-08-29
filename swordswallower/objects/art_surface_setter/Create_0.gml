@@ -81,6 +81,9 @@ layer_script_begin("background", layer_stop_alpha_start);
 layer_script_end("Instances_2", layer_stop_alpha_end);
 
 
+//layer_script_begin("actors", layer_stop_alpha_start);
+//layer_script_begin("actors", layer_stop_alpha_end);
+
 //layer_script_begin("px_near1", layer_stop_alpha_start);
 //layer_script_end("px_near1", layer_stop_alpha_end);
 
