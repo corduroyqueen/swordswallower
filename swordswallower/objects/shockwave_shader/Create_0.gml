@@ -49,8 +49,7 @@ u_blood_r = shader_get_uniform(shader_blood_alpha, "blood_r");
 u_blood_g = shader_get_uniform(shader_blood_alpha, "blood_g");
 u_blood_b = shader_get_uniform(shader_blood_alpha, "blood_b");
 
-
-
+GUI = surface_create(1920,1080);
 
 
 
@@ -103,8 +102,18 @@ bloom_intensity_v = 0.35
 bloom_darken_v = 0.0
 bloom_sat_v = 0.6
 
-
+srf_ping = surface_create(1920, 1080);
+srf_pong = surface_create(1920, 1080);
+bloom_texture = surface_get_texture(srf_ping);
 
 //target_surface = surface_create(1920,1080)
 
 gif_surface = surface_create(1920,1080)
+
+ blur_steps		= round(blur_steps_v * 15) + 1;
+ sigma			= max(sigma_v, 0.0001);
+ bloom_threshold = bloom_threshold_v;
+ bloom_range		= bloom_range_v;
+ bloom_intensity	= bloom_intensity_v * 2;
+// bloom_darken	= 1 - bloom_darken_v;
+ bloom_saturation= bloom_sat_v * 2;

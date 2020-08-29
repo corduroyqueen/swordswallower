@@ -3,7 +3,7 @@
 
 //audio_group_load(subtemple_music)
 
-
+//subtemple_mc = audio_create_sync_group(true)
 
 start = true
 

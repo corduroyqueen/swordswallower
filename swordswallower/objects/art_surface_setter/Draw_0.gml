@@ -101,7 +101,7 @@ shader_reset()
 
 
 gpu_set_colorwriteenable(true, true, true, true)
-gpu_set_blendenable(true)
+//gpu_set_blendenable(true)
 
 //draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 

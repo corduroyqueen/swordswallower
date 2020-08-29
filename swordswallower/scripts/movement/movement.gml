@@ -79,7 +79,7 @@ if grounded && (k_left || k_right) {
 			audio_manager(hey,0,false,0)	
 		}
 		footstep_audio_bool = false
-	} else {
+	} else if floor(player_sprite_obj.image_index)!=0 {
 		footstep_audio_bool = true	
 	}
 		

@@ -24,14 +24,7 @@ if !player_obj.k_dash
 	player_obj.held_position_ready = false
 	
 	//sdm("ok")
-	if place_meeting(x,y,impale_circle_obj) ||
-	place_meeting(x,y,impale_circle_moving_obj) ||
-	place_meeting(x,y,ghost_obj) || 
-	place_meeting(x,y,hummingbird_obj)|| 
-	place_meeting(x,y,hum_food_obj)|| 
-	place_meeting(x,y,circle_friend_obj) {
-		//sdm("lellll")
-		player_obj.hsp *= 0.75
+	player_obj.hsp *= 0.75
 		player_obj.vsp *= 0.75
 		out_of_dash_t=10
 		player_obj.hsp = clamp(player_obj.hsp,-25,25)
@@ -42,7 +35,6 @@ if !player_obj.k_dash
 		if current_obj.object_index==circle_friend_obj {
 			current_obj.active = false
 		}
-	}
 	if player_hitbox_check_obj.down_wall && abs(player_hitbox_check_obj.y-player_obj.y)<8 {
 		hsp*=0.2
 	}

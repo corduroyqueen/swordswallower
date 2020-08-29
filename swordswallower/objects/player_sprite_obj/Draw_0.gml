@@ -5,7 +5,8 @@ if player_obj.death {
 	return	
 }
 
-
+gpu_set_blendmode(bm_normal)
+	draw_set_alpha(1);
 if !surface_exists(player_surface) {
 	player_surface = surface_create(300,300)	
 }

@@ -21,8 +21,6 @@
         "70df43a7-d272-4d7d-b656-c12c25d6e0ec",
         "90d0e02c-128c-48e1-a89f-a0d792ff01a1",
         "54917a8b-738e-42b0-ada0-67ad298f5ebd",
-        "fdd11338-051a-404e-b8d8-cbc833647440",
-        "fe9f736a-be17-4984-8490-c3fafc1bb143",
         "abd27c56-354f-4ab3-aca2-fa3e8c79531f",
         "079109c9-ab5e-48ad-852c-a6ab3f4a5200",
         "ee18dc5e-f8d3-46b6-91f5-7de510351717",

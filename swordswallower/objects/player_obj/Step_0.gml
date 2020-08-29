@@ -4,6 +4,12 @@ mask_index = player_idle
 //if sprite.sprite_index == player_crouching || sprite.sprite_index == player_crouching_s {
 //	mask_index = player_crouching
 //}
+//sdm("fuck")
+//with parallaxed_obj {
+//	sdm("allo")
+//	sdm(vBaseX)
+//	sdm(y)
+//}
 audio_listener_position(x,y,0)
 
 //sprite.sprite_index

@@ -10,7 +10,7 @@ height = argument7
 
 //blood_splat_script()
 
-for (i=0;i<(100);i++){
+for (i=0;i<(80);i++){
 	
 	particle = instance_create_depth(x,y,-1,blood_obj)
 	
@@ -33,7 +33,7 @@ for (i=0;i<(100);i++){
 	//+ random_range(-3,3) *
 	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
 	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
-	particle.spr = blood_sprite_spr1
+	//particle.spr = blood_sprite_spr1
 	particle.scalevar = scalevar
 	particle.rot = random_range(0,360)
 	

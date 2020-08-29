@@ -5,7 +5,7 @@ with lel {
 	x = player_obj.x
 	y = player_obj.y
 	image_angle = point_direction(player_obj.x,player_obj.y,global.mousepx,global.mousepy)
-	image_xscale = 400
+	image_xscale = 30
 	image_yscale = 1.5
 	img=0
 

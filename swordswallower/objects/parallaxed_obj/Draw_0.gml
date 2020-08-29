@@ -82,6 +82,6 @@ if perm {
 }
 
 
-gpu_set_fog(false, 0,0,0);
-gpu_set_blendmode( bm_normal)
+//gpu_set_fog(false, 0,0,0);
+//gpu_set_blendmode( bm_normal)
 shader_reset()

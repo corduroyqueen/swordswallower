@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//draw_texture_flush();
+
 
 wooden_walls = array_create(100)
 wooden_walls[0] = false
@@ -80,7 +80,7 @@ dev = true
 
 if dev {
 	show_debug_overlay(true)
-	window_set_fullscreen(false)	
+	//window_set_fullscreen(false)	
 }
 
 window_set_fullscreen(true)

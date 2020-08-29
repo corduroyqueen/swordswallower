@@ -120,6 +120,8 @@ y = clamp(y,y1,y2)
 //	vsp = clamp(vsp,-100,-4)
 //}
 
+moving_plat_move(hsp,vsp)
+/*
 if in_camera_range_bigger(x,y) {
 	if pythag(hsp,vsp)>0 {
 		moving_plat_move(hsp,vsp)

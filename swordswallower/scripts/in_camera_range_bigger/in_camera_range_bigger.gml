@@ -1,7 +1,7 @@
 xc = argument0
 yc = argument1
 
-expand=150
+//expand=150
 
 //sdm(xc)
 //sdm(yc)
@@ -15,10 +15,18 @@ expand=150
 
 var cx = player_obj.camx
 var cy = player_obj.camy
-if xc<(cx+player_obj.cam_width+2+expand)
-&& xc>(cx-2-expand)
-&& yc<(cy+player_obj.cam_height+2+expand)
-&& yc>(cy-2-expand) {
+if abs(xc-(cx+960))<960+150 &&
+abs(yc-(cy+540))<540+150 {
+	return true	
+} else {
+	return false
+}
+
+/*
+if xc<(cx+1920+2+150)
+&& xc>(cx-2-150)
+&& yc<(cy+1080+2+150)
+&& yc>(cy-2-150) {
 	return true
 } else {
 	return false	

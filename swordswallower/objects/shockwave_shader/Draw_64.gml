@@ -13,14 +13,12 @@ if !on {
 
 // SET VALUES:
 //-----------------------------------------------------------------------------
-var blur_steps		= round(blur_steps_v * 15) + 1;
-var sigma			= max(sigma_v, 0.0001);
-var bloom_threshold = bloom_threshold_v;
-var bloom_range		= bloom_range_v;
-var bloom_intensity	= bloom_intensity_v * 2;
-//var bloom_darken	= 1 - bloom_darken_v;
-var bloom_saturation= bloom_sat_v * 2;
 
+if player_obj.death {
+	bloom_threshold_v = 0.15
+	bloom_intensity = 0.7
+	
+}
 
 //gui_w					= window_get_width()
 //gui_h					= window_get_height()

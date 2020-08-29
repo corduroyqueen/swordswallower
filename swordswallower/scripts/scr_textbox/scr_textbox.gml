@@ -180,10 +180,11 @@ if view_visible[1] == true {
 
 // Draw dialogue box
 draw_set_color(c_black);
-draw_roundrect(view_xview,
-view_yview,
-view_xview+view_wview,
-view_yview+view_hview,false);
+draw_sprite_ext(textbox,0,view_xview,view_yview,1,1,0,c_white,1)
+//draw_roundrect(view_xview,
+//view_yview,
+//view_xview+view_wview,
+//view_yview+view_hview,false);
 
 // Rectangle Borders
 var bw = 2; // Border width

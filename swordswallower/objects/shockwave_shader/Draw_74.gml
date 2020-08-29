@@ -25,7 +25,6 @@ surface_set_target(GUI);
 
 //gpu_set_colorwriteenable(true, true, true, true)
 draw_clear_alpha(c_black,0);
-
 /// @description Insert description here
 // You can write your code in this editor
 /// @description Insert description here
@@ -57,7 +56,7 @@ if (wave_list_size <= 0) {
 	// set values based on sliders. In a game you'd use constants inside the shader instead
 	var fx_strength	= strength_input
 	//var aberration	= 0.0
-	var subimage	= 0
+	//var subimage	= 0
 		
 	// create waves surface:
 	if (!surface_exists(srf_waves)) {
@@ -81,7 +80,7 @@ if (wave_list_size <= 0) {
 	//var wave_list_size = ds_list_size(list_of_waves);
 	for (w = 0; w < wave_list_size; w++) {
 		this_wave = list_of_waves[|w];
-		draw_sprite_ext(sprite, subimage,
+		draw_sprite_ext(sprite, 0,
 						(this_wave[|waveparam.xx] - player_obj.camx) * srf_waves_scale,
 						(this_wave[|waveparam.yy] - player_obj.camy) * srf_waves_scale,
 						this_wave[|waveparam.scale] * srf_waves_scale,

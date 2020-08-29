@@ -37,8 +37,8 @@ var cx =player_obj.camx
 var cy =player_obj.camy
 //gpu_set_colorwriteenable(true,true,true,false)
 for (i=0;i<blood_n;i++) {
-	var o = instance_find(blood_splat_obj,i)
-	draw_sprite_ext(blood_sprite_spr,0,o.x-cx,o.y-cy,1,1,0,c_white,0.6)
+	//var o = instance_find(blood_splat_obj,i)
+	//draw_sprite_ext(blood_sprite_spr,0,o.x-cx,o.y-cy,1,1,0,c_white,0.6)
 }
 
 gpu_set_alphatestenable(false);

@@ -19,6 +19,36 @@
                     "mipsToGenerate": 0,
                     "scaled": true
                 }
+            },
+            {
+                "Key": 2,
+                "Value": {
+                    "id": "2223b9ef-87fe-4c88-b45a-56f91ab94c35",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Player",
+                    "targets": 461609314234257646,
+                    "autocrop": false,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
+            },
+            {
+                "Key": 3,
+                "Value": {
+                    "id": "d2f383f8-0483-4a5b-b5ca-60ea4483e3a8",
+                    "modelName": "GMTextureGroup",
+                    "mvc": "1.0",
+                    "groupName": "Enemies",
+                    "targets": 461609314234257646,
+                    "autocrop": true,
+                    "border": 2,
+                    "groupParent": "00000000-0000-0000-0000-000000000000",
+                    "mipsToGenerate": 0,
+                    "scaled": true
+                }
             }
         ],
         "Checksum": "ࢺ懜璙ᓆ锯翋꤯맫",
