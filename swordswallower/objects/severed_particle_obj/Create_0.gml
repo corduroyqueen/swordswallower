@@ -4,7 +4,7 @@ spr = false
 size = 0
 xx = 0
 yy = 0
-
+dt=1
 
 
 locked = false

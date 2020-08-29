@@ -65,6 +65,9 @@ if state==state_chasing {
 	}
 	//sprite_index = intimidating_walk
 	image_speed = 0.75
+	if image_index>2 || image_index<1 {
+		image_index = clamp(2,image_index,6)
+	}
 	if grounded {
 		
 		hsp = clamp(hsp,-h_walk_speed,h_walk_speed)
@@ -74,6 +77,8 @@ if state==state_chasing {
 } 
 
 if state==state_idle {
+	image_speed = 0
+	//image_index = clamp(-1,image_index,2)
 	//sprite_index = intimidating	
 }
 

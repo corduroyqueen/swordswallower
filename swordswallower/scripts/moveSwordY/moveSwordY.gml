@@ -1,5 +1,7 @@
 amt = argument0
 
+//amt *= dt
+
 yRemainder = 0
 yRemainder += amt
 move = round(yRemainder)

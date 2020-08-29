@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 mask_index = player_idle
+//dt = room_speed/fps
+dt = delta_time/(1/room_speed * 1000000)
 //if sprite.sprite_index == player_crouching || sprite.sprite_index == player_crouching_s {
 //	mask_index = player_crouching
 //}

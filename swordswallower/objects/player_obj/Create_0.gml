@@ -270,3 +270,5 @@ camera_fix = false
 
 footstep_audio_bool = true
 held_position_start = false
+
+dt = 1

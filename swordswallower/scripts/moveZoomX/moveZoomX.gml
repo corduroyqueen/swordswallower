@@ -1,5 +1,7 @@
 amt = argument0
 
+amt *= dt
+
 xRemainder = 0;
 xRemainder += amt;
 move = round(xRemainder);

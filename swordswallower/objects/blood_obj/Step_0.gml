@@ -63,7 +63,7 @@ if go {
 	bounce_vel *= rec_val
 
 	image_xscale += bounce_vel
-	image_yscale = rval+(rval-image_yscale)
+	image_yscale = rval+(rval-image_xscale)
 }
 go = true
 

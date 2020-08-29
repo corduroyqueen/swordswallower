@@ -1495,6 +1495,14 @@
             }
         },
         {
+            "Key": "189bae50-7cfa-4883-8ee1-3cc100aebfea",
+            "Value": {
+                "id": "a1e756a2-33e4-4994-a29c-6849bc1d0ec7",
+                "resourcePath": "sprites\\new_ghoul\\new_ghoul.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18a3241b-6b2c-4ff5-bd1f-4684f102c644",
             "Value": {
                 "id": "13e01fda-f58e-4713-9c59-dce95b013dcf",
