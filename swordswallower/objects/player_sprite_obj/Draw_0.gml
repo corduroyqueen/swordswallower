@@ -5,8 +5,7 @@ if player_obj.death {
 	return	
 }
 
-gpu_set_blendmode(bm_normal)
-	draw_set_alpha(1);
+
 if !surface_exists(player_surface) {
 	player_surface = surface_create(300,300)	
 }
@@ -140,9 +139,11 @@ if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_pos
 }
 x=150
 y=150
+
+
 gpu_set_colorwriteenable(true,true,true,true)
 
-
+draw_circle(part_floor_spawnx,part_floor_spawny,10,false)
 //gpu_set_colorwriteenable(true,true,true,false)
 
 //gpu_set_blendmode_ext(bm_one,bm_dest_alpha)

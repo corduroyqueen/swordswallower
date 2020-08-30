@@ -34,11 +34,11 @@ if start_death && !death {
 	player_start_death()
 }
 
-if ds_list_size(keylist)>0 {
-	for (i=0;i<ds_list_size(keylist);i++) {
-		keylist[| i].image_angle = 120 - i * 30	
-	}
-}
+//if ds_list_size(keylist)>0 {
+//	for (i=0;i<ds_list_size(keylist);i++) {
+//		keylist[| i].image_angle = 120 - i * 30	
+//	}
+//}
 if death {
 	move_locked = true
 	tail_carry = true
@@ -198,8 +198,8 @@ if ending_lock {
 	x = clamp(x,skiff_obj.x-30,skiff_obj.x+30)
 	y = skiff_obj.y+64
 	
-	tail_obj.x = x
-	tail_obj.y = y
+	//tail_obj.x = x
+	//tail_obj.y = y
 	
 	hsp = held_start_hsp
 	vsp = held_start_vsp
@@ -230,9 +230,7 @@ if zoom_timer_bool {
 	intangible = false
 }
 
-if held_position_start {
-	held_position_start = false	
-}
+
 enemy_collision()
 
 if place_meeting(x,y,gem_obj) {

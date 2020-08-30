@@ -21,9 +21,9 @@ player_obj.tail_carry &&
 player_obj.grounded && 
 abs(player_obj.hsp)>1 {
 	particle = instance_create_depth(
-	part_floor_spawnx * player_sprite_obj.image_xscale,
+	part_floor_spawnx,
 	part_floor_spawny,
-	-1000,
+	-3000,
 	spark_particle_obj)
 	
 	

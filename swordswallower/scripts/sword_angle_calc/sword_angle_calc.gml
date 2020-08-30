@@ -9,8 +9,8 @@ for(t=60;t<180;t+=2) {
 	//draw_circle(sword_pos_x+cos(degtorad(ang))*108,sword_pos_y-sin(degtorad(ang))*108,t,false)
 	if collision_line(sword_pos_x,sword_pos_y,sword_pos_x+cos(degtorad(ang))*108,sword_pos_y-sin(degtorad(ang))*108,all_walls_parent_obj,false,true) {
 		sword_ang = ((t-5)*facing)
-		part_floor_spawnx = sword_pos_x + cos(degtorad(sword_ang))*108
-		part_floor_spawny = sword_pos_y - sin(degtorad(sword_ang))*108
+		part_floor_spawnx = sword_pos_x + dcos(sword_ang+90)*108
+		part_floor_spawny = sword_pos_y - dsin(sword_ang+90)*108
 		break
 	}	
 }

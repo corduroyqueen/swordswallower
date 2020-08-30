@@ -5,7 +5,7 @@ facing_right = false
 
 image_xscale = 1
 image_yscale = 1
-depth = 500
+//depth = 500
 
 player_surface = surface_create(300,300)
 

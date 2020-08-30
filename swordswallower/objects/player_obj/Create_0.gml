@@ -86,7 +86,7 @@ grounded=false
 
 step_height=10
 
-sprite = instance_create_depth(x,y,-1800,player_sprite_obj)
+sprite = player_sprite_obj
 
 startx = x
 starty = y

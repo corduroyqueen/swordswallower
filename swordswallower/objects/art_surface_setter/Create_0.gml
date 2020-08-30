@@ -78,7 +78,7 @@ layer_script_begin("background", layer_stop_alpha_start);
 //layer_script_end("bkd2", layer_stop_alpha_end);
 
 //layer_script_begin("bkd3", layer_stop_alpha_start);
-layer_script_end("Instances_2", layer_stop_alpha_end);
+layer_script_end("checkpoints", layer_stop_alpha_end);
 
 
 //layer_script_begin("actors", layer_stop_alpha_start);

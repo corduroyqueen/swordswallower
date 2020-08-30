@@ -18,7 +18,7 @@ if !tail_planted && !tail_held {
 				//auto_aim_selection(0.8)
 				auto_aim_selection(0.8)
 			} else {
-				auto_aim_selection(0.25)
+				//auto_aim_selection(0.25)
 				//auto_aim_selection(1)
 			}
 			tail_dest_x = global.mousepx

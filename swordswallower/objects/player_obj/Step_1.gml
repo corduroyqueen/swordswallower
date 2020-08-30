@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 intro = checkpoint_manager.intro_start
-
+if held_position_start {
+	held_position_start = false	
+}
 
 if cool {
 	tail_obj.x = x

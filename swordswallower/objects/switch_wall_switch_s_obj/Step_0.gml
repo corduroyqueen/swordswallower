@@ -16,9 +16,9 @@ if partner==noone {
 }
 if enabled {
 	partner.enabled = true
-	sprite_index = onlever
+	image_index = 1
 } else {
 	partner.enabled = false
-	sprite_index = offlever
+	image_index = 0
 }
 

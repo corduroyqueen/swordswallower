@@ -30,7 +30,7 @@ if player_obj.zoom_timer_bool {
 		facing_right = true	
 	}
 }
-depth=-1901
+depth=-2301
 
 if facing_right {
 	image_xscale = -1

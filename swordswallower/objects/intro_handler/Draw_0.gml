@@ -9,6 +9,9 @@ if player_obj.intro {
 	intro_timer++
 	intro_timer=2000
 	
+	player_obj.x = 19707
+		player_obj.y = 13900
+		
 	if intro_timer<black_timer_m {
 		
 		timer_audio_script(metal_door,intro_timer,-25)
@@ -118,8 +121,7 @@ if player_obj.intro {
 		with music_ctrlr {
 			audio_start_sync_group(subtemple_mc)	
 		}
-		player_obj.x = 19707
-		player_obj.y = 13900
+		
 		intro_timer=2001
 	}
 	
