@@ -15,14 +15,14 @@ lel = false
 
 sprites_pot = array_create(11)
 
-sprites_pot[0] = spr_pot_broken_t0
-sprites_pot[1] = spr_pot_broken_t1
-sprites_pot[2] = spr_pot_broken_t2
-sprites_pot[3] = spr_pot_broken_t3
-sprites_pot[4] = spr_pot_broken_t4
-sprites_pot[5] = spr_pot_broken_t5
-sprites_pot[6] = spr_pot_broken_t6
-sprites_pot[7] = spr_pot_broken_t7
-sprites_pot[8] = spr_pot_broken_t8
-sprites_pot[9] = spr_pot_broken_t9
-sprites_pot[10] = spr_pot_broken_t10
+sprites_pot[0] = spr_pot_b_t0
+sprites_pot[1] = spr_pot_b_t1
+sprites_pot[2] = spr_pot_b_t2
+sprites_pot[3] = spr_pot_b_t3
+sprites_pot[4] = spr_pot_b_t4
+sprites_pot[5] = spr_pot_b_t5
+sprites_pot[6] = spr_pot_b_t6
+sprites_pot[7] = spr_pot_b_t7
+sprites_pot[8] = spr_pot_b_t8
+sprites_pot[9] = spr_pot_b_t9
+sprites_pot[10] = spr_pot_b_t10

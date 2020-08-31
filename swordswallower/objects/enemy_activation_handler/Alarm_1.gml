@@ -8,6 +8,7 @@ for(var a=0;a<num;a++) {
 		continue	
 	}
 	var inst = enemy_list[| a]
+	
 	if in_camera_range_bigger(inst.x,inst.y) {
 		enemy_seen[| a] = true
 		instance_activate_object(inst)
@@ -16,5 +17,8 @@ for(var a=0;a<num;a++) {
 	//	enemy_seen[| a] = true
 	//	instance_activate_object(enemy_list[| a])
 	//}
+}
+if instance_exists(boss) {
+instance_activate_object(boss)
 }
 alarm[1] = 2

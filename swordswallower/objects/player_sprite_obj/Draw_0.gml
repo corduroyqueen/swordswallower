@@ -143,7 +143,7 @@ y=150
 
 gpu_set_colorwriteenable(true,true,true,true)
 
-draw_circle(part_floor_spawnx,part_floor_spawny,10,false)
+//draw_circle(part_floor_spawnx,part_floor_spawny,10,false)
 //gpu_set_colorwriteenable(true,true,true,false)
 
 //gpu_set_blendmode_ext(bm_one,bm_dest_alpha)

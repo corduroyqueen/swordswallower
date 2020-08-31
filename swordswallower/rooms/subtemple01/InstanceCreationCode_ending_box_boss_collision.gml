@@ -1,1 +1,1 @@
-boss = self
+boss = boss2

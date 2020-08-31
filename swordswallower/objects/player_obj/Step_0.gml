@@ -190,7 +190,11 @@ xpreva = x
 ypreva = y
 hspreva = hsp
 vspreva = vsp
-
+if fps<50 {
+	with blood_obj {
+		instance_destroy()
+	}
+}
 if ending_lock {
 	x = tail_obj.current_obj.x + xvheld
 	y = tail_obj.current_obj.y + yvheld
@@ -198,8 +202,10 @@ if ending_lock {
 	x = clamp(x,skiff_obj.x-30,skiff_obj.x+30)
 	y = skiff_obj.y+64
 	
-	//tail_obj.x = x
-	//tail_obj.y = y
+	x = skiff_obj.x + 20
+	
+	tail_obj.x = x
+	tail_obj.y = y
 	
 	hsp = held_start_hsp
 	vsp = held_start_vsp

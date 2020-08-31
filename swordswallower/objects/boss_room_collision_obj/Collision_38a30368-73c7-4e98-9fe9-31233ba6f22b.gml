@@ -14,4 +14,6 @@ if master!=noone && !enter {
 			player_present = true
 		}
 	}
+} else if boss!=noone {
+	enter = true
 }

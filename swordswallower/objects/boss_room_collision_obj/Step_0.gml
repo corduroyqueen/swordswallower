@@ -7,5 +7,7 @@ if master!=noone {
 } else if boss!=noone {
 	if !instance_exists(boss) {
 		ended = true	
-	}	
+	} else {
+		ended = false
+	}
 }

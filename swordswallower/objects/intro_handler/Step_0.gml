@@ -1,5 +1,7 @@
 
-
+with blood_obj {
+	blood_step_code()
+}
 
 
 

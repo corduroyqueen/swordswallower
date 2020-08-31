@@ -261,7 +261,7 @@ if state==state_chasing {
 		
 		
 		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
-		sdm(hsp)
+		//sdm(hsp)
 		if wall_detect(x+hsp,y-5) {
 			
 			state = state_knockback
@@ -277,7 +277,7 @@ if state==state_chasing {
 			vsp = -3
 			//y-=10
 			
-			sdm(hsp)
+			//sdm(hsp)
 			if player_obj.x<26316 {
 				audio_play_sound(Ice_Break__Shatter__Smash_03,0,false)
 				audio_play_sound(sword_thud_1,0,false)

@@ -4,7 +4,7 @@ varsetter.oi = true
 
 //doors_num = array_create(instance_number(door_obj))
 
-draw_texture_flush();
+
 
 //for (i=0; i<instance_number(door_obj);i++ ){
 //	var temp = instance_find(door_obj,i)

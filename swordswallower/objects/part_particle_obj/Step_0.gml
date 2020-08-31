@@ -4,9 +4,10 @@
 if locked {
 	vsp=0
 	hsp=lerp(hsp,0,0.15)
+	rotation_speed-=0.1
 } else {
 	if step==0 {
-		step=0.5	
+		step=1	
 	}
 	vsp+=step
 	moveX(hsp)
