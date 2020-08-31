@@ -55,7 +55,7 @@ if room==subtemple01 {
 	layerbk = layer_get_id("bkd3")
 	layer_set_visible(layerbk,false)
 	
-	px = layer_get_id("parallax")
+	px = layer_get_id("parallax_layers")
 	layer_set_visible(px,false)
 }
 	

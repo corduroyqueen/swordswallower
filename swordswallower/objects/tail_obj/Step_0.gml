@@ -389,6 +389,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 	player_obj.tail_planted = false
 	player_obj.tail_pulling = true
 }
+//sdm(hitpause)
 if hitpause {
 	hitpause_timer++
 	hsp=0

@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if sword_present {
-	tail_obj.current_obj = self
-	tail_obj.moving_platform_bool = true
-	
-}
+
 
 
 if !done {
@@ -39,7 +35,7 @@ if !done {
 		}
 	} else {
 		hsp = 0
-		if place_meeting(x,y,tail_obj) && player_obj.held_position && x<(startx+10) {
+		if tail_obj.current_obj==id && player_obj.held_position && x<(startx+10) {
 			go = true
 			player_obj.ending_lock = true
 			with player_obj {
@@ -133,9 +129,4 @@ if !done {
 	}
 }
 
-if in_camera_range_bigger(x,y) {
-	moving_plat_move(hsp,vsp)
-} else {
-	moveZoomX(hsp)	
-	moveZoomY(vsp)	
-}
+moving_plat_move(hsp,vsp)

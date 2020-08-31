@@ -7,7 +7,8 @@ if(!place_meeting(checkx,checky,obj)){
 }
 
 local_obj = instance_place(checkx, checky, obj);
-if object_get_parent(local_obj.object_index)==killalways_parent_obj {
+if object_get_parent(local_obj.object_index)==killalways_parent_obj
+&& local_obj.object_index!=snakehead_obj {
 	return
 }
 
@@ -36,14 +37,24 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		}
 	}
 	if local_obj.object_index==snakehead_obj {
-		sword_reject_script()
-		local_obj.parent.headhit = true
-		if player_obj.fire_active {
-			local_obj.parent.death = true	
+		if  player_obj.tail_throwing {
+			sword_reject_script()
+			local_obj.parent.headhit = true
+			if player_obj.fire_active {
+				local_obj.parent.death = true	
+			}
+			var thsp = local_obj.hsp
+			var tvsp = local_obj.vsp
+			x = oldx
+			y = oldy
+			local_obj.met = true
+			//itpause = false
+			return
+		} else {
+			x = oldx
+			y = oldy
+			local_obj.met = true
 		}
-		local_obj.met = true
-		return false
-		
 	}
 	if local_obj.object_index==thirsty_ghoul_obj {
 		local_obj.met = true
