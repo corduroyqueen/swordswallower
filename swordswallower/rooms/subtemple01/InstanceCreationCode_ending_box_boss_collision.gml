@@ -1,1 +1,1 @@
-boss = boss2
+master = boss2_spawn_box

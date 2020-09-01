@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<300
-&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<300{
-	player_present = true
-} else {
-	player_present = false
+if !boatboy {
+	if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<300
+	&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<300{
+		player_present = true
+	} else {
+		player_present = false
+	}
 }
+
 if gravd {
 	if stopped {
 		
@@ -115,11 +117,12 @@ if boatboy {
 		
 	} else {
 		boatboyenter = false
+		player_present = false
 	}
 	
 }
 
-if player_present {
+if player_present && !boatboy {
 	with ui_manager {
 		friendly_x = other.x
 		friendly_y = other.y - other.sprite_height/2
@@ -153,6 +156,7 @@ if player_present {
 		}
 	}
 }
+
 if (plf==true && player_present = false) || player_obj.ending_lock {
 	ui_manager.current_dialogue = "end"
 	current_pick = 0

@@ -348,9 +348,9 @@ if state==state_idle {
 	//sprite_index = intimidating	
 }
 
-
-if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vsp+=grav }
-
+if point_distance(player_obj.x,player_obj.y,x,y)<3000 {
+	if grounded { h_decel = h_decel_g } else { h_decel = h_decel_a vsp+=grav }
+}
 if state==state_idle || state==state_hitting {
 	if(abs(hsp) < h_decel){
 		

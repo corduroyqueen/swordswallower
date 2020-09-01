@@ -3,9 +3,6 @@ with blood_obj {
 	blood_step_code()
 }
 
-
-
-
 if !player_obj.death {
 	if room==subtemple01 {
 		

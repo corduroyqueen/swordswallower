@@ -18,7 +18,5 @@ for(var a=0;a<num;a++) {
 	//	instance_activate_object(enemy_list[| a])
 	//}
 }
-if instance_exists(boss) {
-instance_activate_object(boss)
-}
+
 alarm[1] = 2

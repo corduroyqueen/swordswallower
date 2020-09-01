@@ -37,8 +37,9 @@ with lel {
 		distance = 3000
 		target = noone
 		for (i=0;i<ds_list_size(final_list);i++) {
+			
 			agh = point_distance(player_obj.x,player_obj.y,final_list[| i].x,final_list[| i].y)
-			if agh<distance && agh>300 {
+			if agh<distance && agh>300 && wall_raycast_checker(final_list[| i]) {
 				distance=agh
 				target = final_list[| i]
 			}

@@ -14,7 +14,7 @@ if controller = controller_ds4 {
 			gamepad_axis_value(0,gp_axisrv))
 	}
 		
-	
+	gamepad_set_axis_deadzone(0, 0.1)
 	
 	global.mousepx = lerp(global.mousepx,player_obj.x+cos(degtorad(mang))*650,1)
 	global.mousepy = lerp(global.mousepx,player_obj.y-sin(degtorad(mang))*650,1)

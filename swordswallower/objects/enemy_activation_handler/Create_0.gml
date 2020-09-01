@@ -6,4 +6,4 @@ enemy_seen = ds_list_create()
 enemy_x = ds_list_create()
 enemy_y = ds_list_create()
 
-boss = boss2
+
