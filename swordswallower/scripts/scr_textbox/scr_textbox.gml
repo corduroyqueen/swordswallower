@@ -20,7 +20,6 @@ txt = argument0;
 font = argument1;
 key_press = argument2;
 txtSpeed = argument3;
-
 //Normalize speed of text
 if txtSpeed <= 1 textSpeed = 1;
 if txtSpeed >= 15 textSpeed = 15;
@@ -174,9 +173,9 @@ if global.printTimer > 0 global.printTimer--;
 
 
 
-if view_visible[1] == true {
-	return txt	
-}
+//if view_visible[1] == true {
+//	return txt	
+//}
 
 // Draw dialogue box
 draw_set_color(c_black);
@@ -233,6 +232,7 @@ draw_set_font(font3lato)
 draw_text(txp,typ-sprite_height/2 - 30,"E")
 
 draw_set_alpha(1)
+
 
 
 // Quit Dialogue/Textbox Event

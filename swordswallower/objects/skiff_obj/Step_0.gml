@@ -56,42 +56,42 @@ if !done {
 	y = lerp(y,starty ,0.1)
 	if init {
 		
-		var lol = dialogue_array[0]
-		while lol!="0" {
-			lol = dialogue_array[o]	
-			o++
-		}
-		if o>0 {
-			dialogue_array[o-1] = "end"
-		} else {
-			dialogue_array[0] = "end"	
-		}
-		init = false
+		//var lol = dialogue_array[0]
+		//while lol!="0" {
+		//	lol = dialogue_array[o]	
+		//	o++
+		//}
+		//if o>0 {
+		//	dialogue_array[o-1] = "end"
+		//} else {
+		//	dialogue_array[0] = "end"	
+		//}
+		//init = false
 	}
 	if x>=(startx+1000) && x<(startx+1000 + hsp) && !yolo {
 	
-		ui_manager.speaking = true
-		ui_manager.printing = true
+		//ui_manager.speaking = true
+		//ui_manager.printing = true
 	
-		with ui_manager {
-			current_dialogue = ""
-			global.display_txt = ""
-			global.tboxActive = false;
-			txt = global.txtCache;
-			global.txtCache = "";
+		//with ui_manager {
+		//	current_dialogue = ""
+		//	global.display_txt = ""
+		//	global.tboxActive = false;
+		//	txt = global.txtCache;
+		//	global.txtCache = "";
 		
-			txt = global.placeholderTxt;
-			global.placeholderTxt = "";
-			global.temp_placeholderTxt = "";
-			global.txtIndex = 1;
-		}
+		//	txt = global.placeholderTxt;
+		//	global.placeholderTxt = "";
+		//	global.temp_placeholderTxt = "";
+		//	global.txtIndex = 1;
+		//}
 		
-		dialogue = dialogue_array[current_pick]
-		current_pick++
-		ui_manager.current_dialogue = dialogue
-		if dialogue="end" {
-			current_pick = 0	
-		}
+		//dialogue = dialogue_array[current_pick]
+		//current_pick++
+		//ui_manager.current_dialogue = dialogue
+		//if dialogue="end" {
+		//	current_pick = 0	
+		//}
 	}
 
 	if ui_manager.speaking && x>(startx+1000+hsp) && !yolo {
@@ -121,7 +121,7 @@ if !done {
 	}
 
 	if sword_present = false && !go && x>(startx+20000) {
-		ui_manager.current_dialogue = "end"
+		//ui_manager.current_dialogue = "end"
 		current_pick = 0
 		x = startx+7999
 		done = true

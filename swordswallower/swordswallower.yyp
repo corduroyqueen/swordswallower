@@ -1271,6 +1271,14 @@
             }
         },
         {
+            "Key": "14456c79-d058-4e7d-beeb-3c9b405baec1",
+            "Value": {
+                "id": "45d3088b-f3b0-49a7-af9f-951d2e4be878",
+                "resourcePath": "objects\\boatboy_obj\\boatboy_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "145a67fb-fa3c-4dcf-b0e4-fa6899fff905",
             "Value": {
                 "id": "19289097-894c-4b6a-9814-bf937cdcd1ef",

@@ -1,14 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if !boatboy {
-	if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<300
-	&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<300{
-		player_present = true
-	} else {
-		player_present = false
-	}
+if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<300
+&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<300{
+	player_present = true
+} else {
+	player_present = false
 }
+
 
 if gravd {
 	if stopped {
@@ -77,50 +76,7 @@ if init {
 	init = false
 }
 
-if boatboy {
-	y = skiff_obj - sprite_height/2 -skiff_obj.sprite_height/2
-	y = skiff_obj - 10
-	
-	starty = y
-	if player_obj.x>38448 && !player_obj.ending_lock {
-		with ui_manager {
-			friendly_x = other.x
-			friendly_y = other.y - 50
-			view_xview = friendly_x-view_wview/2
-		}
-		if !boatboyenter {
-			boatboyenter = true
-			ui_manager.speaking = true
-			ui_manager.printing = true
-			
-			with ui_manager {
-				current_dialogue = ""
-				global.display_txt = ""
-				global.tboxActive = false;
-			    txt = global.txtCache;
-			    global.txtCache = "";
-		
-				txt = global.placeholderTxt;
-			    global.placeholderTxt = "";
-			    global.temp_placeholderTxt = "";
-			    global.txtIndex = 1;
-			}
-		
-			dialogue = dialogue_array[current_pick]
-			current_pick++
-			ui_manager.current_dialogue = dialogue
-			if dialogue="end" {
-				current_pick = 0	
-			}
-		}
-		player_present = true
-		
-	} else {
-		boatboyenter = false
-		player_present = false
-	}
-	
-}
+
 
 if player_present && !boatboy {
 	with ui_manager {
@@ -158,6 +114,7 @@ if player_present && !boatboy {
 }
 
 if (plf==true && player_present = false) || player_obj.ending_lock {
+	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
 	

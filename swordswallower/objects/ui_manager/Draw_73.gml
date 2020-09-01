@@ -29,7 +29,10 @@ if player_obj.death {
 }
 
 if speaking {
+	//sdm("speek")
+	
 	if current_dialogue == "end" {
+		//sdm("lellllllllllllllllllllllllllllllllllllllll")
 		speaking = false	
 		printing = false
 		current_dialogue = ""
@@ -45,6 +48,7 @@ if speaking {
 	    global.maxPrintTimer = txtSpeed;
 		printing = false
 	} else {
+		//sdm("ok fuck")
 		scr_textbox(current_dialogue, font1, player_obj.k_speak_p, 0.1)	
 	}
 }

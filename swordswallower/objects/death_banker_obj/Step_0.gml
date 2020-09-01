@@ -20,7 +20,7 @@ if level1_master.death_num>=50{
 }
 
 
-if place_meeting(x,y,player_obj) && y>2375 {
+if abs(x-player_obj.x)<300 && player_obj.y>2375 && player_obj.y<3600 {
 	player_present = true
 } else {
 	player_present = false
