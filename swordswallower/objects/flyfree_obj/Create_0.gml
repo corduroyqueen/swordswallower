@@ -50,6 +50,12 @@ hp=1
 hsp=0
 vsp=0
 
+
+idle_eye_ang = random_range(0,360)
+idle_eye_x = x
+idle_eye_y = y-6
+idle_t = 0
+idle_t_m = random_range(30,70)
 //while !wall_detect(x,y-1) {
 //	y-=1	
 //}

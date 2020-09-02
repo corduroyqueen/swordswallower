@@ -19,6 +19,11 @@ if go {
 			hsp+=cos(degtorad(angle)) * dist * random_range(0.8,1.2)
 			vsp-=sin(degtorad(angle)) * dist * random_range(0.8,1.2)
 		}
+		if player_obj.death {
+			hsp+=random_range(-10,10)
+			vsp+=random_range(-10,10)
+		}
+		
 		moveParticlesX(hsp)
 		moveParticlesY(vsp)
 		

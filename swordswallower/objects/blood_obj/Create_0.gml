@@ -15,3 +15,5 @@ scalevar = 0.5
 rot = random_range(0,360)
 
 on_wall = false
+
+alarm[0] = 120

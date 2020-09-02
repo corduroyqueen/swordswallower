@@ -79,11 +79,12 @@ dev = false
 dev = true
 
 if dev {
-	show_debug_overlay(true)
+	//show_debug_overlay(true)
+	
 	//window_set_fullscreen(false)	
 }
 
-window_set_fullscreen(false)
+window_set_fullscreen(true)
 randomize()
 
 

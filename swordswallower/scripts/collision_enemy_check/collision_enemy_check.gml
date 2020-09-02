@@ -51,8 +51,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			//itpause = false
 			return
 		} else {
-			x = oldx
-			y = oldy
+			//x = oldx
+			//y = oldy
 			local_obj.met = true
 		}
 	}
@@ -97,7 +97,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		}
 		with local_obj {
 			sprite_index = eyebat_flying3
-			shatter_mb_input_script(sprite_width/2)	
+			//shatter_mb_input_script(sprite_width/2)	
 		}
 		player_obj.shake_d=4.5
 		player_obj.camera_shake_d = true

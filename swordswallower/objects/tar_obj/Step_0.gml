@@ -22,4 +22,4 @@ if player_obj.y - player_obj.sprite_height - 40 > y - sprite_height/2
 && place_meeting(x,y,player_obj) {
 	damage_script(10,sign(player_obj.x-x),5,-1)
 }
-depth = -1550
+depth = -2303

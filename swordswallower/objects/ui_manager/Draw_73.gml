@@ -64,7 +64,7 @@ if speaking {
 if player_obj.death {
 	//draw_set_color( make_color_rgb(255 * level1_master.blood_cr,255  * level1_master.blood_cg,255  * level1_master.blood_cb) )
 	//draw_set_color(c_white)
-	draw_set_color(make_color_rgb(230,0,77))
+	draw_set_color(global.blood_color)
 	draw_set_alpha(0.8)
 	
 	//zero zero : black
@@ -106,40 +106,40 @@ if player_obj.death {
 	draw_set_alpha(1)
 	
 	if player_obj.death { 
-		with art_surface_setter {
-			tex_art = surface_get_texture(art_surface)
-			texture_set_stage(shader_art_surface, tex_art);
-			if !player_obj.death {
-				gpu_set_colorwriteenable(true, true, true, false);
-			} else {
-				gpu_set_colorwriteenable(true, true, true, true);
-			}
-			//shader_set(shader_alpha_one)
-			//gpu_set_blendenable(true)
-			draw_surface(art_surface,player_obj.camx,player_obj.camy)
-			//gpu_set_blendenable(true)
-			//shader_reset()
+		//with art_surface_setter {
+			//tex_art = surface_get_texture(art_surface)
+			//texture_set_stage(shader_art_surface, tex_art);
+			//if !player_obj.death {
+			//	gpu_set_colorwriteenable(true, true, true, false);
+			//} else {
+			//	gpu_set_colorwriteenable(true, true, true, true);
+			//}
+			////shader_set(shader_alpha_one)
+			////gpu_set_blendenable(true)
+			//draw_surface(art_surface,player_obj.camx,player_obj.camy)
+			////gpu_set_blendenable(true)
+			////shader_reset()
 
-			shader_set(shader_blood_alpha_surface)
-			shader_set_uniform_f(u_blood_r2,global.blood_cr)
-			shader_set_uniform_f(u_blood_g2,global.blood_cg)
-			shader_set_uniform_f(u_blood_b2,global.blood_cb)
-			draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
-			shader_reset()
-		}
+			//shader_set(shader_blood_alpha_surface)
+			//shader_set_uniform_f(u_blood_r2,global.blood_cr)
+			//shader_set_uniform_f(u_blood_g2,global.blood_cg)
+			//shader_set_uniform_f(u_blood_b2,global.blood_cb)
+			//draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
+			//shader_reset()
+		//}
 	}
 	//gpu_set_colorwriteenable(true,true,true,true);
 	if player_obj.respawn_timer>58 {
 		draw_sprite(player_obj.deathParticles,0,player_obj.deathx,player_obj.deathy)
 		
-		shader_set(shader_blood_alpha)
-		u_blood_var = 4
-		shader_set_uniform_f(u_blood_trans,u_blood_var)
-		shader_set_uniform_f(u_blood_r,global.blood_cr)
-		shader_set_uniform_f(u_blood_g,global.blood_cg)
-		shader_set_uniform_f(u_blood_b,global.blood_cb)
-		draw_sprite(player_obj.deathParticles2,0,player_obj.deathx,player_obj.deathy)
-		shader_reset()
+		//shader_set(shader_blood_alpha)
+		//u_blood_var = 4
+		//shader_set_uniform_f(u_blood_trans,u_blood_var)
+		//shader_set_uniform_f(u_blood_r,global.blood_cr)
+		//shader_set_uniform_f(u_blood_g,global.blood_cg)
+		//shader_set_uniform_f(u_blood_b,global.blood_cb)
+		////draw_sprite(player_obj.deathParticles2,0,player_obj.deathx,player_obj.deathy)
+		//shader_reset()
 	}
 	
 
@@ -161,7 +161,7 @@ if player_obj.death {
 		mouse_ui_y = mouse_y
 	}
 	if !keyboard_check_pressed(ord("V")) {
-		draw_sprite(mouse_ui_spr,player_obj.k_dash || player_obj.k_fire,mouse_ui_x,mouse_ui_y)
+		//draw_sprite(mouse_ui_spr,player_obj.k_dash || player_obj.k_fire,mouse_ui_x,mouse_ui_y)
 	}
 	//draw_circle(mouse_ui_x,mouse_ui_y,9,false)
 	draw_set_color(c_white)

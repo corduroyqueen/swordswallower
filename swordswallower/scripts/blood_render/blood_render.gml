@@ -26,8 +26,8 @@ var cy =player_obj.camy
 //	draw_sprite_ext(blood_sprite_new1,0,o.x-cx,o.y-cy,o.image_xscale*0.95,o.image_yscale*0.95,o.rot,c_white,0.55)
 //}
 with blood_obj {
-	draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.95,image_yscale*0.95,rot,c_white,0.55)
-}
+		draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.95,image_yscale*0.95,rot,c_white,0.55)
+	}
 //shader_reset()
 //gpu_set_colorwriteenable(true,true,true,true)
 surface_reset_target()

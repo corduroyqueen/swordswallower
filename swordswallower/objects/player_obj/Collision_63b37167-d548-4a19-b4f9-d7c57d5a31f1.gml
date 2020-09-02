@@ -1,5 +1,5 @@
 //fuck yes
-if !zoom_timer_bool {
+if !zoom_timer_bool && !player_sprite_obj.spr_bloodied {
 	with other {
 		player_got = true
 		hsp=0

@@ -13,7 +13,7 @@
 
 //draw_self();
 
-if player_obj.zoom_timer_bool {
+if player_obj.zoom_timer_bool && !player_obj.death {
 	time			= (time + 1 * 0.05) mod 1;
 
 	var ang = point_direction(0,0,player_obj.hsp,player_obj.vsp)

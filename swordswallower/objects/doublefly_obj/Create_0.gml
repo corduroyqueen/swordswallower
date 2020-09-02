@@ -48,3 +48,15 @@ hp=1
 
 hsp=0
 vsp=0
+
+idle_eye_ang1 = random_range(0,360)
+idle_eye_x1 = x-12
+idle_eye_y1 = y-6
+idle_t1 = 0
+idle_t_m1 = random_range(30,70)
+
+idle_eye_ang2 = random_range(0,360)
+idle_eye_x2 = x+12
+idle_eye_y2 = y-6
+idle_t2 = 0
+idle_t_m2 = random_range(30,70)

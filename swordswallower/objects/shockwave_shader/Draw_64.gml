@@ -15,6 +15,8 @@ if !on {
 //-----------------------------------------------------------------------------
 
 if player_obj.death {
+	//bloom_threshold_v = 0.15
+	//bloom_intensity = 0.7
 	bloom_threshold_v = 0.15
 	bloom_intensity = 0.7
 	

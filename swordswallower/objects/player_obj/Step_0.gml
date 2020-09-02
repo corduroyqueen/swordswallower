@@ -200,9 +200,9 @@ if ending_lock {
 	y = tail_obj.current_obj.y + yvheld
 	
 	x = clamp(x,skiff_obj.x-30,skiff_obj.x+30)
-	y = skiff_obj.y+64
+	y = skiff_obj.y+66
 	
-	x = skiff_obj.x + 20
+	x = skiff_obj.x+20
 	
 	tail_obj.x = x
 	tail_obj.y = y

@@ -30,14 +30,21 @@ if intro {
 	if respawn_timer<60 {
 		gpu_set_colorwriteenable(true,true,true,true);
 		//instance_activate_object(background)
-		camx = lerp(camx,
-			player_obj.x-cam_width_h,
-			0.01)
 		
-		camy = lerp(camy,
-			player_obj.y-cam_height_h,
-			0.01)
-			
+		//camx = lerp(camx,
+		//	player_obj.x-cam_width_h,
+		//	0.01)
+		
+		//camy = lerp(camy,
+		//	player_obj.y-cam_height_h,
+		//	0.01)
+		
+		//player_obj.shake_d=10
+		camera_shake = true
+		camera_shake_direc = false
+		shake_dir =0
+		cam_ang = 0
+		
 		death_cam_dist = point_distance(
 			camx,
 			camy,
@@ -46,15 +53,16 @@ if intro {
 		if respawn_timer>=59 {
 			instance_activate_object(background)
 			gpu_set_colorwriteenable(true,true,true,true);
-			deathParticles = sprite_create_from_surface(application_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,1,0,0);
+			deathParticles = sprite_create_from_surface(shockwave_shader.GUI,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,1,0,0);
 			deathParticles2 = sprite_create_from_surface(shockwave_shader.blood_surface,0,0,surface_get_width(application_surface),surface_get_height(application_surface),0,1,0,0);
 			deathx = camx
 			deathy = camy
 			
+			
 		}
 	} else if respawn_timer>=60 {
 		
-		
+		camera_shake = false
 		destx = checkpoint_manager.checkpoint.x-cam_width_h
 		desty = checkpoint_manager.checkpoint.y-cam_height_h
 		
@@ -67,32 +75,34 @@ if intro {
 		camx += cos(degtorad(point_direction(camx,camy,destx,desty))) * ms
 		camy -= sin(degtorad(point_direction(camx,camy,destx,desty))) * ms
 		
-	}
-	
-	
+		if point_distance(camx,camy,
+		checkpoint_manager.checkpoint.x-cam_width_h,
+		checkpoint_manager.checkpoint.y-cam_height_h)<50 {
 		
-	if point_distance(camx,camy,
-	checkpoint_manager.checkpoint.x-cam_width_h,
-	checkpoint_manager.checkpoint.y-cam_height_h)<50 {
-		
-		sprite_delete(deathParticles)
-		sprite_delete(deathParticles2)
-		level1_master.get_deaths = true
-		level1_master.death_num++
-		level1_master.death_num_p++
-		with (checkpoint_manager.checkpoint) {
-				savegame_script()	
-			}
-		respawn_timer=0
-		if death {
-			if room==subtemple02 {
-				if instance_exists(big_boi_time) {
-					big_boi_bool = big_boi_time.special_guy
+			sprite_delete(deathParticles)
+			sprite_delete(deathParticles2)
+			level1_master.get_deaths = true
+			level1_master.death_num++
+			level1_master.death_num_p++
+			with (checkpoint_manager.checkpoint) {
+					savegame_script()	
 				}
-			}
+			respawn_timer=0
+			if death {
+				if room==subtemple02 {
+					if instance_exists(big_boi_time) {
+						big_boi_bool = big_boi_time.special_guy
+					}
+				}
 		
+			}
 		}
+		
 	}
+	
+	
+		
+	
 } else if ending_lock {
 	
 	camx = lerp(camx,
@@ -171,45 +181,44 @@ if camera_fix_bounds && !player_obj.death {
 	} 
 }
 
-if respawn_timer<10{
-	if camera_shake {
-		camx += random_range(-10,10)
-		camy += random_range(-10,10)
-		if inv_count>1 {
-			camera_shake = false	
-		}
-	}
-
-
-	if camera_shake_direc {
-		shake_dir-=10
-		camx += cos(cam_ang) * shake_dir
-		camy += -sin(cam_ang) * shake_dir
-		if shake_dir<1 {
-			camera_shake_direc = false	
-			shake_dir=0
-		}	
-	}
-
-
-	if camera_shake_d {
-		shake_d-=0.5
-		camx += random_range(-shake_d,shake_d)
-		camy += random_range(-shake_d,shake_d)
-		if shake_d<0 {
-			camera_shake_d = false	
-		}
+if camera_shake {
+	var rang = random_range(0,360)
+	camx += dcos(rang) * 3
+	camy += dsin(rang) * 3
+	if inv_count>1 {
+		camera_shake = false	
 	}
 }
 
 
+if camera_shake_direc {
+	shake_dir-=10
+	camx += cos(cam_ang) * shake_dir
+	camy += -sin(cam_ang) * shake_dir
+	if shake_dir<1 {
+		camera_shake_direc = false	
+		shake_dir=0
+	}	
+}
 
-if zoom_timer_bool {
+
+if camera_shake_d {
+	shake_d-=0.5
+	camx += random_range(-shake_d,shake_d)
+	camy += random_range(-shake_d,shake_d)
+	if shake_d<0 {
+		camera_shake_d = false	
+	}
+}
+
+
+if zoom_timer_bool && !player_obj.death {
 	tempadd = 5-(zoom_timer/2)
 	tempadd = clamp(tempadd,0,5)
 	camx += random_range(-3+tempadd,3+tempadd)
 	camy += random_range(-3+tempadd,3+tempadd)
 }
+
 
 if c_slingtimer>0 {
 	c_slingtimer-=0.2

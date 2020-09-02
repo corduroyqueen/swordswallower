@@ -74,18 +74,18 @@ sprite_index = choose(new_ghoul,new_ghoul2)
 number_of_pus = 4
 pus_x = array_create(number_of_pus)
 
-pus_x[0] = 0
-pus_x[1] = 22
-pus_x[2] = 27
-pus_x[3] = 2
+pus_x[0] = 6
+pus_x[1] = -10
+pus_x[2] = 0
+pus_x[3] = -30
 
 pus_y = array_create(number_of_pus)
 
 
-pus_y[0] = -4
-pus_y[1] = -31
-pus_y[2] = -60
-pus_y[3] = -40
+pus_y[0] = -30
+pus_y[1] = -55
+pus_y[2] = -50
+pus_y[3] = -20
 
 
 pus_s = array_create(number_of_pus)
@@ -95,7 +95,7 @@ pus_s[2] = pus3
 pus_s[3] = pus4
 
 
-pus_starting_sc = 0.6
+pus_starting_sc = 0.5
 
 pus_sc = array_create(number_of_pus,pus_starting_sc)
 pus_bv = array_create(number_of_pus,random_range(0.001,0.01))

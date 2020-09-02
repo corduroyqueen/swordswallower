@@ -16,7 +16,7 @@ for(i=0;i<number_of_pus;i++) {
 	sc += bv
 	var ys = pus_starting_sc+(pus_starting_sc-sc)
 	
-	draw_sprite_ext(pus_s[i],0,x+pus_x[i]*-image_xscale,y+pus_y[i],sc,ys,0,c_white,1)
+	draw_sprite_ext(pus_s[i],0,x+pus_x[i]*image_xscale,y+pus_y[i],sc*image_xscale,ys,0,c_white,1)
 	
 	
 	if abs(bv)<0.0001 {

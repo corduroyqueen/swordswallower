@@ -9,6 +9,12 @@ if level1_master.dev {
 	}
 }
 
+if ending_lock {
+	y = skiff_obj.y+66
+	
+	x = skiff_obj.x
+}
+
 if !ending_lock && !zoom_timer_bool && wall_detect_solids(x,y) {
 	x = xpreva
 	y = ypreva
