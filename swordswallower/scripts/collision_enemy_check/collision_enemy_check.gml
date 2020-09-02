@@ -51,8 +51,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			//itpause = false
 			return
 		} else {
-			//x = oldx
-			//y = oldy
+			if player_obj.tail_throwing {
+				x = oldx
+				y = oldy
+			}
 			local_obj.met = true
 		}
 	}
