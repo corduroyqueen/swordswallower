@@ -10,7 +10,7 @@ if death && visible {
 }
 
 
-if mouse_check_button_pressed(mb_left) && visible && intro_handler.intro_timer>intro_handler.black_timer_m+200 {
+if player_obj.k_fire_p && visible && intro_handler.intro_timer>intro_handler.black_timer_m+200 {
 	
 	player_obj.tail_carry = false
 	player_obj.tail_pulling = true

@@ -222,9 +222,6 @@ if keyboard_check_pressed(ord("T")) && !death && !ending_lock {
 
 
 
-if view_visible[1] {
-	hsp=0	
-}
 
 if zoom_timer_bool {
 	moveZoomX(hsp)

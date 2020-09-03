@@ -9,8 +9,8 @@ if player_obj.intro {
 	intro_timer++
 	//intro_timer=2000
 	
-	player_obj.x = 19707
-		player_obj.y = 13900
+	
+	
 		
 	if intro_timer<black_timer_m {
 		

@@ -6,19 +6,22 @@ if controller = controller_ds4 {
 	//display_mouse_set(
 	
 	
+	gamepad_set_axis_deadzone(0, 0.2)
 	
 	if point_distance(0,0,gamepad_axis_value(0,gp_axisrh),
-	gamepad_axis_value(0,gp_axisrv))>0.01 {
+	gamepad_axis_value(0,gp_axisrv))>0.1 {
 		mang = point_direction(0,0,
 			gamepad_axis_value(0,gp_axisrh),
 			gamepad_axis_value(0,gp_axisrv))
 	} else {
-		mang = point_direction(0,0,
-			gamepad_axis_value(0,gp_axislh),
-			gamepad_axis_value(0,gp_axislv))
+		if point_distance(0,0,gamepad_axis_value(0,gp_axislh),
+		gamepad_axis_value(0,gp_axislv))>0.1 {
+			mang = point_direction(0,0,
+				gamepad_axis_value(0,gp_axislh),
+				gamepad_axis_value(0,gp_axislv))
+		}
 	}
 		
-	gamepad_set_axis_deadzone(0, 0.2)
 	
 	global.mousepx = lerp(global.mousepx,player_obj.x+cos(degtorad(mang))*650,1)
 	global.mousepy = lerp(global.mousepx,player_obj.y-sin(degtorad(mang))*650,1)

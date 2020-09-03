@@ -15,6 +15,13 @@ if ending_lock {
 	x = skiff_obj.x
 }
 
+if intro {
+	x = 19707
+	y = 13900
+	xpreva=x
+	ypreva=y
+}
+
 if !ending_lock && !zoom_timer_bool && wall_detect_solids(x,y) {
 	x = xpreva
 	y = ypreva
@@ -22,6 +29,7 @@ if !ending_lock && !zoom_timer_bool && wall_detect_solids(x,y) {
 	&& wall_detect_solids(x-1,y) 
 	&& wall_detect_solids(x,y+1) 
 	&& wall_detect_solids(x,y-1) {
+		
 		hp-=100
 	}
 	
