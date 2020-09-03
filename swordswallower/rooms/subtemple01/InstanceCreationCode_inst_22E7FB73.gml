@@ -1,3 +1,5 @@
 text = text_rightclick
-tx = 16166
+text_a[0] = txt_clicktodash
+text_a[1] = txt_leftshouldertodash
+tx = 15900
 ty = 20661

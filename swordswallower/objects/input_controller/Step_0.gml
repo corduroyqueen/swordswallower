@@ -12,6 +12,10 @@ if controller = controller_ds4 {
 		mang = point_direction(0,0,
 			gamepad_axis_value(0,gp_axisrh),
 			gamepad_axis_value(0,gp_axisrv))
+	} else {
+		mang = point_direction(0,0,
+			gamepad_axis_value(0,gp_axislh),
+			gamepad_axis_value(0,gp_axislv))
 	}
 		
 	gamepad_set_axis_deadzone(0, 0.2)

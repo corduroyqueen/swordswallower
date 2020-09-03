@@ -7,7 +7,7 @@ if player_obj.intro {
 	draw_set_alpha(alpha)
 	
 	intro_timer++
-	intro_timer=2000
+	//intro_timer=2000
 	
 	player_obj.x = 19707
 		player_obj.y = 13900
@@ -104,7 +104,12 @@ if player_obj.intro {
 			intro_timer = 901
 		}
 	
-		draw_text(startposx+20,startposy,"Left Click to Pull")
+		//draw_text(startposx+20,startposy,"Left Click to Pull")
+		if input_controller.controller==input_controller.controller_keyboard {
+			draw_sprite(txt_leftclickintro,0,startposx+20,startposy)
+		} else {
+			draw_sprite(txt_rightshoulderintro,0,startposx+20,startposy)
+		}
 		//draw_sprite_ext(left_click,0,startposx+200,startposy+20,1,1,0,c_white,alpha)
 		draw_set_alpha(1)
 	

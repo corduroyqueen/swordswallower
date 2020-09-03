@@ -1,3 +1,5 @@
 text = text_holdright
-tx = 14690
-ty =  17795
+text_a[0] = txt_clickcling
+text_a[1] = txt_leftshouldercling
+tx = 14000
+ty =  18000

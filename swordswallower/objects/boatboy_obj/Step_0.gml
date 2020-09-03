@@ -34,7 +34,7 @@ if init {
 }
 
 y = skiff_obj.y + 10
-x = skiff_obj.x - 30
+x = skiff_obj.x - 100
 
 
 starty = y

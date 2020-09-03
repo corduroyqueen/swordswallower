@@ -151,7 +151,7 @@ if start_death || death {
 	return	
 }
 
-player_start_map()
+
 
 player_stinky_code()
 

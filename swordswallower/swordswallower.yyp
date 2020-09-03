@@ -3239,6 +3239,14 @@
             }
         },
         {
+            "Key": "3670c875-e5a8-465a-9479-e366a2556b39",
+            "Value": {
+                "id": "3f188ea4-56bd-47ff-bebf-6c96368b5779",
+                "resourcePath": "sprites\\txt_rightshoulderintro\\txt_rightshoulderintro.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3692ca5c-e5c1-4f48-aead-2927300c0dc1",
             "Value": {
                 "id": "5cdfe1a1-fe57-4376-afb0-abd4112927fd",
@@ -8035,6 +8043,14 @@
             "Value": {
                 "id": "43042c8c-3685-4ef5-be1d-c2317b65e4d3",
                 "resourcePath": "sprites\/skiffleft\/skiffleft.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "88bcfe4b-8c29-4ab3-9693-4d1589fa41e5",
+            "Value": {
+                "id": "e0b2ec72-910e-48d9-8208-0a488d5d9a8e",
+                "resourcePath": "sprites\\txt_leftclickintro\\txt_leftclickintro.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -25,7 +25,7 @@ if !done {
 		hsp = lerp(hsp,sin(lol*6.2831)*6.5,0.15)
 		hsp = clamp(hsp,2,200)
 		
-		if x>(startx+7600) {
+		if x>(startx+15000) {
 			go = false	
 		}
 		if loop1>0.8 || loop2>0.8 || loop1<0.05 || loop2<0.05 {

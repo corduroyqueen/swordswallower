@@ -27,6 +27,10 @@ if mapguy {
 	if ds_list_size(player_obj.keylist)>0 {
 		keybool = true	
 	}
+	if current_pick==6 {
+		level1_master.getmap = true	
+	}
+	
 	//if keybool && mapguy_visited {
 	//	dialogue_array[0] = "There it is! Well done. "
 	//	dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
