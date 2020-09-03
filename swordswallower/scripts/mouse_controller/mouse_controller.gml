@@ -16,7 +16,7 @@ if !tail_planted && !tail_held {
 			tail_obj.y = player_obj.y
 			if input_controller.controller == input_controller.controller_ds4 {
 				//auto_aim_selection(0.8)
-				auto_aim_selection(0.8)
+				auto_aim_selection(0.7)
 			} else {
 				//auto_aim_selection(0.25)
 				//auto_aim_selection(1)
@@ -27,7 +27,7 @@ if !tail_planted && !tail_held {
 			tail_throwing = true
 			
 			left_click_buffer = 0
-			held_release_timer=10
+			held_release_timer=0
 			if !grounded{
 				//vsp=0
 				//hsp=0

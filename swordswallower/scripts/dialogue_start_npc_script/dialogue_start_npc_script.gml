@@ -7,7 +7,7 @@ if point_distance(x,y,player_obj.x,player_obj.y)<500 && !ui_manager.speaking {
 
 //draw_set_alpha(ealpha)
 //draw_set_font(ui_manager.font3lato)
-var yt = y - sprite_height/2 - 60
+var yt = y - sprite_height/2 - 90
 
 
 //draw_set_color(c_white)
@@ -21,7 +21,7 @@ var yt = y - sprite_height/2 - 60
 //draw_set_alpha(1)
 
 if input_controller.controller=input_controller.controller_keyboard {
-	draw_sprite_ext(ui_icon_e,0,x-22.75,yt-30,0.75,0.75,0,c_white,ealpha)
+	draw_sprite_ext(ui_icon_e,0,x-22.75,yt,0.75,0.75,0,c_white,ealpha)
 } else {
-	draw_sprite_ext(ui_icon_square,0,x-22.75,yt-30,0.75,0.75,0,c_white,ealpha)
+	draw_sprite_ext(ui_icon_square,0,x-22.75,yt,0.75,0.75,0,c_white,ealpha)
 }

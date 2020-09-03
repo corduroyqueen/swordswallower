@@ -76,7 +76,7 @@ spikes_visible = false
 thin_floor_visible = false
 
 dev = false
-dev = true
+//dev = true
 
 if dev {
 	//show_debug_overlay(true)

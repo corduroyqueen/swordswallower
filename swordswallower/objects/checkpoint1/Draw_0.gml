@@ -40,7 +40,7 @@ if setpoint {
 		
 		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
 		draw_set_alpha(0.2)
-		draw_set_color(global.magic_color)
+		draw_set_color(global.blood_color)
 		flame_object.tx = x+s_x
 		flame_object.ty = y+s_y
 		//draw_circle(x+s_x,y+s_y,70+random_range(-5,5),false)

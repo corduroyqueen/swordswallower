@@ -6,8 +6,8 @@ a = max(0,a)
 
 draw_sprite_ext(sprite_index,0,x,y,image_xscale*1.5,image_yscale*1.5,0,c_white,a+random_range(-0.100,0.100))
 
-if y>2375 {
-
+if x>23620 {
+	y-=60
 	dialogue_start_npc_script()
-
+	y+=60
 }

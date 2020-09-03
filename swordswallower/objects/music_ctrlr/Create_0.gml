@@ -9,7 +9,7 @@ start = true
 
 duck_music = false
 //duck_value = audio_sound_get_gain(gmc)
-duck_value = 0.4
+duck_value = 0.45
 //audio_sound_get_gain(swsw1)
 
 go2 = true

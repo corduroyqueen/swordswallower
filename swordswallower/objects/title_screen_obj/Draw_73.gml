@@ -40,4 +40,8 @@ draw_set_color(c_white)
 //draw_sprite_ext(titlescreentitle,0,camx,camy,1,1,0,c_white,alpha*1.5)
 
 draw_sprite_ext(logo3,0,camx+960,camy+540,1,1,0,c_white,alpha*15)
+draw_sprite_ext(comingsoon,0,camx+960,camy+650,1,1,0,c_white,alpha*10)
+draw_sprite_ext(twitterlink,0,camx+960,camy+740,1,1,0,c_white,alpha*8)
+
+
 

@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if room!=subtemple01 {
+	return
+}
+
 
 if controller = controller_ds4 {
 	//display_mouse_set(

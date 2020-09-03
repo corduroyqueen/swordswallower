@@ -6,7 +6,7 @@ with intro_handler {
 		draw_set_alpha(1)
 		draw_sprite(gameby,0,960,400)
 		draw_sprite(names[names_f],0,960,500)
-		draw_sprite(and_s,0,960,600)
+		draw_sprite(and_s,0,960,590)
 		draw_sprite(names[1-names_f],0,960,700)
 		draw_set_alpha(alpha)
 	}
