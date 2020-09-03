@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "03b9c28a-6e79-4754-8b9d-8c81650c5cd8",
+            "Value": {
+                "id": "8b876155-0541-4a55-a676-6ef7f0125071",
+                "resourcePath": "sprites\\leaf968\\leaf968.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "03bbb4b1-8639-41a5-ba79-3a693a400574",
             "Value": {
                 "id": "66d1914b-b902-4b4c-876d-8d8eeffccfda",
@@ -1471,6 +1479,14 @@
             }
         },
         {
+            "Key": "17b988b1-3e97-4dbf-a2ab-a828892fa561",
+            "Value": {
+                "id": "f0141bde-b5da-487b-8fe1-32f3ce7edc6a",
+                "resourcePath": "sprites\\deadhead\\deadhead.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "17e4c17c-cdfc-4e25-96fb-1d63c39ddee4",
             "Value": {
                 "id": "5c6b7b74-aa92-4446-9162-79d70a681ab1",
@@ -2524,6 +2540,14 @@
                 "id": "a3f8807f-306f-4e95-ab73-dd5acc70ef36",
                 "resourcePath": "sounds\/door_unlock\/door_unlock.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "2a01b7bd-829e-4b7c-92e5-4455ea6beaa8",
+            "Value": {
+                "id": "c8dd92ba-f35e-4cf3-b63b-1e8c15e5b05c",
+                "resourcePath": "sprites\\logo3\\logo3.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8743,6 +8767,14 @@
             }
         },
         {
+            "Key": "94e7fffe-df43-483f-8f2c-6676803edf61",
+            "Value": {
+                "id": "3857f0a2-2644-496d-bf86-daaaeeac7dc2",
+                "resourcePath": "sprites\\leaf2969\\leaf2969.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "94f1fadc-aa23-41c0-a6e3-d8ba962e86f3",
             "Value": {
                 "id": "151fa3c4-ab61-43a4-8b69-04e55f225a06",
@@ -10100,6 +10132,14 @@
                 "id": "a3b6d5f9-1730-4b14-b9d4-374e08c9d4b0",
                 "resourcePath": "scripts\/arm_initialize_seg\/arm_initialize_seg.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "afd3c518-972e-42fb-bf25-fdcae80a9037",
+            "Value": {
+                "id": "2f56db9b-70b7-40c1-9aaf-3bfdd8874511",
+                "resourcePath": "sprites\\dead_vine\\dead_vine.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
