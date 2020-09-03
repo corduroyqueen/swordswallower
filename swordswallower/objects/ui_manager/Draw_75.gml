@@ -1,6 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+with intro_handler {
+	
+	if intro_handler.intro_timer>=200 &&intro_handler.intro_timer<500 {
+		draw_set_alpha(1)
+		draw_sprite(gameby,0,960,400)
+		draw_sprite(names[names_f],0,960,500)
+		draw_sprite(and_s,0,960,600)
+		draw_sprite(names[1-names_f],0,960,700)
+		draw_set_alpha(alpha)
+	}
+	
+}
 
 player_start_map()
 

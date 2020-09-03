@@ -1,20 +1,27 @@
 /// @description Insert description here
 // You can write your code in this editor
 alpha = 0
-startposx = sword_swallower.x-100
-startposy =sword_swallower.y+50
+startposx = sword_swallower.x
+startposy =sword_swallower.y+100
 
 intro_timer = -50
 
 if level1_master.dev {
-	intro_timer= 600
+	//intro_timer= 600
 }
 
 font2 = font_add("lato.ttf",16,false,false,32,128)
 
 black_timer_m = 700
 
+names = array_create(2)
+names[0] = uti
+names[1] = julia
 
+names_f = choose(0,1)
+
+a2=0
+	
 	
 level1artm = layer_get_id("area1art")
 

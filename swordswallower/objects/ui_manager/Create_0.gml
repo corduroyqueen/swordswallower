@@ -7,6 +7,7 @@ cam_width_h = cam_width/2
 scr_globalvars()
 global.tboxActive = true
 
+
 view_hview = 500
 view_wview = 1000
 max_width = 1280

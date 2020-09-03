@@ -117,3 +117,4 @@ gif_surface = surface_create(1920,1080)
  bloom_intensity	= bloom_intensity_v * 2;
 // bloom_darken	= 1 - bloom_darken_v;
  bloom_saturation= bloom_sat_v * 2;
+ 

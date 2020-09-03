@@ -727,14 +727,6 @@
             }
         },
         {
-            "Key": "0a559a8a-770c-44cc-89e9-fccf429ecb10",
-            "Value": {
-                "id": "27a3c7cb-8f87-455a-bc7c-63b5dac0144b",
-                "resourcePath": "objects\/shockwave_shader7\/shockwave_shader7.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "0a5b6a23-9c34-4984-9a02-41aa2704fe4d",
             "Value": {
                 "id": "c7b413b7-78d3-432b-b7d2-d5543768254e",
@@ -4050,7 +4042,7 @@
             "Key": "432c9f82-a332-46a1-9e7f-2a4e0a69f81d",
             "Value": {
                 "id": "a1eebf0e-7105-48b1-bfa1-31680b192650",
-                "resourcePath": "sprites\\s2\\s2.yy",
+                "resourcePath": "sprites\\s2w\\s2w.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7146,7 +7138,7 @@
             "Key": "74c670cd-db44-40fb-b7a9-19ba67f7ece0",
             "Value": {
                 "id": "67b66267-2957-4af2-8577-b39de83f63d0",
-                "resourcePath": "sprites\\and\\and.yy",
+                "resourcePath": "sprites\\and_s\\and_s.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10386,7 +10378,7 @@
             "Key": "b2aae5f1-758a-48cc-8455-2e7198dfaeaf",
             "Value": {
                 "id": "50f09bd0-ca3e-4889-a259-565da171b0c8",
-                "resourcePath": "sprites\\s3\\s3.yy",
+                "resourcePath": "sprites\\s3w\\s3w.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11714,7 +11706,7 @@
             "Key": "cfb152ed-2b25-4eaa-8bfb-73d2dfd9392b",
             "Value": {
                 "id": "a86da430-acc5-4c4e-b03e-5aa4d55b4b95",
-                "resourcePath": "sprites\\s4\\s4.yy",
+                "resourcePath": "sprites\\s4w\\s4w.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -14090,7 +14082,7 @@
             "Key": "f8c9e518-fc6e-4e56-bd6d-6cecbd3cb42e",
             "Value": {
                 "id": "c6cfe350-5bff-41f2-bc4f-73b01a81b9de",
-                "resourcePath": "sprites\\s1\\s1.yy",
+                "resourcePath": "sprites\\s1w\\s1w.yy",
                 "resourceType": "GMSprite"
             }
         },

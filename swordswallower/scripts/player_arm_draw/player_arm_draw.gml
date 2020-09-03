@@ -1,4 +1,8 @@
-if player_obj.k_fire_p && !player_obj.tail_planted && !player_obj.tail_throwing {
+if player_obj.intro && !player_obj.tail_pulling {
+	arm_lerp_speed = 1
+	player_arm_calculate(player_obj.x,player_obj.y+50)
+	
+} else if player_obj.k_fire_p && !player_obj.tail_planted && !player_obj.tail_throwing {
 	arm_hand_x = arm_pin_x
 	arm_hand_y = arm_pin_y-25
 	arm_lerp_speed = 0.0

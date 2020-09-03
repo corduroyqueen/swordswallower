@@ -41,7 +41,7 @@ if fly_hp<=0 || hp<=0 {
 	death = true	
 }
 
-if player_obj.tail_carry {
+if player_obj.tail_carry || player_obj.tail_planted {
 	met = false	
 }
 
@@ -330,7 +330,7 @@ if state==state_idle {
 		image_xscale = 1
 	}
 	image_xscale = -1
-	
+	hitbox_on = true
 	if hunting && grounded {
 		if fade_in_t<=0 {
 			audio_play_sound(bullphasein,0,false)	

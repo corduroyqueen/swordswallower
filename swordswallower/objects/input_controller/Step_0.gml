@@ -15,7 +15,7 @@ if controller = controller_ds4 {
 			gamepad_axis_value(0,gp_axisrv))
 	} else {
 		if point_distance(0,0,gamepad_axis_value(0,gp_axislh),
-		gamepad_axis_value(0,gp_axislv))>0.1 {
+		gamepad_axis_value(0,gp_axislv))>0.5 {
 			mang = point_direction(0,0,
 				gamepad_axis_value(0,gp_axislh),
 				gamepad_axis_value(0,gp_axislv))

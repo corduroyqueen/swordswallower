@@ -8,9 +8,6 @@ if player_obj.intro {
 	
 	intro_timer++
 	//intro_timer=2000
-	
-	
-	
 		
 	if intro_timer<black_timer_m {
 		
@@ -96,22 +93,23 @@ if player_obj.intro {
 		
 		
 		if intro_timer>900 {
-			if player_obj.tail_planted {
-				alpha = lerp(alpha,1,0.03)
+			if !player_obj.tail_pulling {
+				a2 = lerp(a2,1,0.03)
 			} else {
-				alpha = lerp(alpha,0,0.03)	
+				a2 = lerp(a2,0,0.3)	
 			}
 			intro_timer = 901
 		}
-	
+		draw_set_alpha(1)
+		//depth = -500
 		//draw_text(startposx+20,startposy,"Left Click to Pull")
 		if input_controller.controller==input_controller.controller_keyboard {
-			draw_sprite(txt_leftclickintro,0,startposx+20,startposy)
+			draw_sprite_ext(txt_leftclickintro,0,startposx+20,startposy,1,1,0,c_white,a2)
 		} else {
-			draw_sprite(txt_rightshoulderintro,0,startposx+20,startposy)
+			draw_sprite_ext(txt_rightshoulderintro,0,startposx+20,startposy,1,1,0,c_white,a2)
 		}
 		//draw_sprite_ext(left_click,0,startposx+200,startposy+20,1,1,0,c_white,alpha)
-		draw_set_alpha(1)
+		
 	
 	}
 	

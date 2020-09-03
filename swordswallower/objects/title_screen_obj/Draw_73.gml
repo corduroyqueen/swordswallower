@@ -41,4 +41,3 @@ draw_set_color(c_white)
 
 draw_sprite_ext(logo3,0,camx+960,camy+540,1,1,0,c_white,alpha*15)
 
-	

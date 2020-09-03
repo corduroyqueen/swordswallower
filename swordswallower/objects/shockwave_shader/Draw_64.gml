@@ -90,5 +90,7 @@ shader_set(shad_bloom_blend);
 shader_reset();
 
 
+
+
 //surface_reset_target()
 //draw_surface(gif_surface,0,0)

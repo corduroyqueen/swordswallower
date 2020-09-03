@@ -2,9 +2,7 @@
 // You can write your code in this editor
 draw_set_color(c_white)
 
-if player_obj.intro {
-	return	
-}
+
 gpu_set_colorwriteenable(true,true,true,false)
 
 if setpoint {

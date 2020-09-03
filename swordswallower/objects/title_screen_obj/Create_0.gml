@@ -20,3 +20,5 @@ with player_obj {
 fade_alpha = 0
 
 depth = -200000000000000000000000000
+
+

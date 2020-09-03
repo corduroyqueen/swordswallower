@@ -1,6 +1,5 @@
 x_tar = argument0
 y_tar = argument1
-arm_lerp_speed = 1
 tarang = point_direction(player_obj.x-150+arm_pin_x,player_obj.y-150+arm_pin_y,x_tar,y_tar)
 if point_distance(player_obj.x-150+arm_pin_x,player_obj.y-150+arm_pin_y,x_tar,y_tar)>arm_max_length-1 {
 	//tarang = point_direction(player_obj.x-150+arm_pin_x,player_obj.y-150+arm_pin_y,x_tar,y_tar)

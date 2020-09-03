@@ -17,7 +17,7 @@ if ending_lock {
 
 if intro {
 	x = 19707
-	y = 13900
+	y = 14132-48
 	xpreva=x
 	ypreva=y
 }
