@@ -42,10 +42,11 @@ if go {
 			return
 		}
 		var sxs = image_xscale
-		var spr = layer_sprite_create(layer_get_id("blood_splat"),x,y,blood_splat_lel1)
+		var spr = layer_sprite_create(layer_get_id("blood_splat"),x,y,blood_splat_lel2)
 		layer_sprite_angle(spr,random_range(0,360))
 		layer_sprite_xscale(spr,sxs)
 		layer_sprite_yscale(spr,sxs)
+		layer_sprite_blend(spr,image_blend)
 		//with art_surface_setter {
 		//	ds_list_add(splat_list_x,other.x)
 		//	ds_list_add(splat_list_y,other.y)	

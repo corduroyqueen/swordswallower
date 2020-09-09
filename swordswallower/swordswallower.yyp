@@ -3095,6 +3095,14 @@
             }
         },
         {
+            "Key": "32b20dbb-d1fd-4339-b995-9770ab9557b5",
+            "Value": {
+                "id": "488f6ba3-9290-4857-b9de-996b6cd68aed",
+                "resourcePath": "sprites\\blood_sprite_t\\blood_sprite_t.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "32b5bb21-1c14-41ce-961c-75f123180765",
             "Value": {
                 "id": "637ba3c4-2bbe-4368-b199-f37e44e21d7d",
@@ -12740,6 +12748,14 @@
                 "id": "fef93a3d-f470-470a-a9d0-248a15ceb9e9",
                 "resourcePath": "objects\/all_walls_parent_obj\/all_walls_parent_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e1169c88-924f-4168-a941-b6ad4680fa6c",
+            "Value": {
+                "id": "c53178ec-2c2e-4822-806c-d617ba2ad5a7",
+                "resourcePath": "sprites\\blood_splat_lel2\\blood_splat_lel2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

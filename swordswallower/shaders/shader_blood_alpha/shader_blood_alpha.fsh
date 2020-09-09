@@ -16,8 +16,9 @@ void main()
 {
 	vec4 c = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
 	//v_alpha = 
-	vec3 color = vec3(blood_r,blood_g,blood_b);
+	//vec3 color = vec3(blood_r,blood_g,blood_b);
+	vec3 color = vec3(c.r,c.g,c.b);
     gl_FragColor = vec4(color, floor(c.a * v_mult)); 
 	
-   // gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
+    //gl_FragColor = v_vColour * texture2D( gm_BaseTexture, v_vTexcoord );
 }

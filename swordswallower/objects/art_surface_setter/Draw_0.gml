@@ -106,7 +106,7 @@ gpu_set_colorwriteenable(true, true, true, true)
 //draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 
 surface_set_target(art_surface)
-draw_clear_alpha(c_white,0)
+draw_clear_alpha(c_black,0)
 //draw_set_color(c_black)
 //draw_rectangle(0,0,1920,1080,false)
 //draw_set_color(c_white)

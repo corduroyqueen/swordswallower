@@ -16,10 +16,15 @@ for (i=0;i<(amount+40);i++){
 	particle = instance_create_depth(x,y,-1,blood_obj)
 	
 	
+	
 	var scalevar = (amount+40-i)/(amount+40) * 1.1
 	var angle = point_direction(0,0,speedx,speedy)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
+	if !variable_instance_exists(id,"blood_color") {
+		blood_color = global.blood_color
+	}
+	particle.image_blend = blood_color
 	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10
 	
 	

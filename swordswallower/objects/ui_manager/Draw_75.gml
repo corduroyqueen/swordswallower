@@ -15,7 +15,7 @@ with intro_handler {
 
 player_start_map()
 
-/*
+
 if level1_master.dev && !keyboard_check_pressed(ord("V")) {
 	draw_text(19,89,"fps  " + string(fps))	
 	draw_text(19,120,"real fps  " + string(fps_real))	

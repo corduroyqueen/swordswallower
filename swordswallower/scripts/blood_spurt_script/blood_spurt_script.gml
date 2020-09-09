@@ -11,7 +11,10 @@ ypos = argument5
 	var scalevar = random_range(0.1,1)
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
-		
+	if !variable_instance_exists(id,"blood_color") {
+		blood_color = global.blood_color
+	}
+	particle.image_blend = blood_color
 	particle.hsp = ispeed*cos(degtorad(ang*random_range(0.95,1.05)))*random_range(0.9,1.1)
 			
 	particle.vsp = ispeed*-sin(degtorad(ang*random_range(0.95,1.05)))*random_range(0.9,1.1)

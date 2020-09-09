@@ -33,6 +33,11 @@ for (i=0;i<(amount+40);i++){
 	}
 	particle.image_xscale = scalevar
 	particle.image_yscale = scalevar
+	//blood_color = make_color_rgb(random_range(0,255),random_range(0,255),random_range(0,255))
+	if !variable_instance_exists(id,"blood_color") {
+		blood_color = global.blood_color
+	}
+	particle.image_blend = blood_color
 	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10
 	
 	

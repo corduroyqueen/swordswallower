@@ -59,3 +59,5 @@ idle_t_m = random_range(30,70)
 //while !wall_detect(x,y-1) {
 //	y-=1	
 //}
+
+blood_color = make_color_rgb(255,0,0)
