@@ -1,4 +1,4 @@
-//
+  //
 // Simple passthrough fragment shader
 //
 varying vec2 v_vTexcoord;
