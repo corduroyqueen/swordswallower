@@ -272,3 +272,9 @@ footstep_audio_bool = true
 held_position_start = false
 
 dt = 1
+//global.blood_cr = 0.73
+//global.blood_cg = 0.19
+//global.blood_cb = 0.43
+
+blood_color = make_color_rgb(0.9 * 255, 0.0 * 255, 0.3 * 255)
+//blood_color = make_color_rgb(1 * 255, 0 * 255, 0 * 255)

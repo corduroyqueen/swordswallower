@@ -7,13 +7,10 @@ surface_set_target(blood_surface);
 //draw_clear_alpha($FF7F7F, 1);
 //gpu_set_colofrwriteenable(true,true,true,false)
 //draw_sprite(scary_skull,0,50,50)
-if !player_obj.death {
+if !player_obj.death || player_obj.respawn_timer>58 {
 	draw_clear_alpha(c_black,0)
 	
-} else if player_obj.respawn_timer>58 {
-	draw_clear_alpha(c_black,0)
 }
-
 var cx =player_obj.camx
 var cy =player_obj.camy
 

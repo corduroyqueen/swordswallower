@@ -7,6 +7,7 @@ if tail_planted {
 	hey.sprite_index = sword_spr
 	hey.spinspeed = 0
 	hey.image_angle = tail_obj.image_angle
+	
 }
 
 
@@ -40,4 +41,4 @@ if tail_pulling {
 	hey.sword_bool = true
 }
 
-
+hey.blood_color = blood_color

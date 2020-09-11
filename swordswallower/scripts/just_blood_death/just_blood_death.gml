@@ -24,7 +24,7 @@ for (i=0;i<(80);i++){
 	if !variable_instance_exists(id,"blood_color") {
 		//blood_color = global.blood_color
 	}
-	particle.image_blend = global.blood_color
+	particle.image_blend = blood_color
 	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * 6 + random_range(-5.0,5.0)
 	
 	

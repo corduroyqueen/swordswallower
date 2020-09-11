@@ -73,8 +73,10 @@
 //texture_set_stage(shader_art_surface, tex_art);
 if !player_obj.death {
 	gpu_set_colorwriteenable(true, true, true, false);
+	
 } else {
 	gpu_set_colorwriteenable(true, true, true, true);
+	//gpu_set_blendmode_ext(bm_one,bm_inv_dest_color)
 }
 //if keyboard_check(ord("P")) {
 //	gpu_set_colorwriteenable(true, true, true, false);
@@ -98,7 +100,7 @@ draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 shader_reset()
 
 
-
+//gpu_set_blendmode(bm_normal)
 
 gpu_set_colorwriteenable(true, true, true, true)
 //gpu_set_blendenable(true)
@@ -106,8 +108,12 @@ gpu_set_colorwriteenable(true, true, true, true)
 //draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
 
 surface_set_target(art_surface)
-draw_clear_alpha(c_black,0)
+if !player_obj.death || player_obj.respawn_timer>58 {
+	draw_clear_alpha(c_black,0)
+	
+}
 //draw_set_color(c_black)
+
 //draw_rectangle(0,0,1920,1080,false)
 //draw_set_color(c_white)
 surface_reset_target()

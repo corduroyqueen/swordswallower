@@ -174,10 +174,10 @@ if intro {
 
 if camera_fix_bounds && !player_obj.death {
 	if cam_fix_obj.xtarget>0 {
-		camx = lerp(camx,cam_fix_obj.xtarget - cam_width_h,0.12)
+		camx = lerp(camx,cam_fix_obj.xtarget - cam_width_h,0.2)
 	} 
 	if cam_fix_obj.ytarget>0 {
-		camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,0.12)
+		camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,0.2)
 	} 
 }
 

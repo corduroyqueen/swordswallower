@@ -24,7 +24,10 @@ if (!surface_exists(GUI)) GUI = surface_create(1920,1080);
 surface_set_target(GUI);
 
 //gpu_set_colorwriteenable(true, true, true, true)
-draw_clear_alpha(c_black,0);
+if !player_obj.death || player_obj.respawn_timer>58 {
+	draw_clear_alpha(c_black,0)
+	
+}
 /// @description Insert description here
 // You can write your code in this editor
 /// @description Insert description here

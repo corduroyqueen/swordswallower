@@ -11,7 +11,6 @@ if level1_master.dev {
 
 if ending_lock {
 	y = skiff_obj.y+66
-	
 	x = skiff_obj.x
 }
 

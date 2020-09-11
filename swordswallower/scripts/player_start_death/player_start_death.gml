@@ -57,6 +57,9 @@ if room==subtemple01 {
 	
 	px = layer_get_id("parallax_layers")
 	layer_set_visible(px,false)
+	
+	//px = layer_get_id("px_sky")
+	//layer_set_visible(px,false)
 }
 	
 audio_manager(false,0,false,3)

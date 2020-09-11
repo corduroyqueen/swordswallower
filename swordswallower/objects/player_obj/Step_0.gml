@@ -257,9 +257,11 @@ if level1_master.dev {
 		x = mouse_x
 		y = mouse_y
 	}
-	if keyboard_check_pressed(ord("L")){
+	if keyboard_check_pressed(vk_alt) {
 		x = 25500
 		y = 7000
+		x = 31700
+		y = 3400
 	}
 }
 

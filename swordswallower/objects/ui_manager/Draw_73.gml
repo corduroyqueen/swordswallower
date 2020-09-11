@@ -64,7 +64,7 @@ if speaking {
 if player_obj.death {
 	//draw_set_color( make_color_rgb(255 * level1_master.blood_cr,255  * level1_master.blood_cg,255  * level1_master.blood_cb) )
 	//draw_set_color(c_white)
-	draw_set_color(global.blood_color)
+	draw_set_color(player_obj.blood_color)
 	draw_set_alpha(0.8)
 	
 	//zero zero : black

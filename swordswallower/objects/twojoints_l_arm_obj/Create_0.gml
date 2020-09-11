@@ -23,13 +23,29 @@ arm_length = 800
 
 
 hand_tar = clamp(player_obj.x+150,x-1500,x-200)
-elbow_pos = x-100+random_range(-5,5)+(player_obj.x-x+700)
-
+elbow_pos_x = x-100+random_range(-5,5)+(player_obj.x-x+700)
+elbow_pos_y = y+390
 
 color = c_white
 
 offset = 200
 minclamp = 850
+
+timer=0
+
+elbow_hsp = 0
+elbow_vel = 0
+
+state_idle = 0
+state_lunging = 1
+state_knockback = 2
+state_anticipation = 3
+state_recovery = 4
+
+
+state = state_idle
+
+
 //arm_reconnect(true,x,y)
 
 //seg_set_length(0,10)
