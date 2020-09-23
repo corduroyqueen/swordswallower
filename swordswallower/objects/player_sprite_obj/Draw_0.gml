@@ -129,6 +129,7 @@ draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
 
 x=player_obj.x
 y=player_obj.y
+draw_set_color(c_white)
 if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_position {
 	//draw_circle(temp_pin_x,temp_pin_y,arm_max_length,true
 	
@@ -136,7 +137,16 @@ if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_pos
 	//draw_circle(sword_pos_x,sword_pos_y,5,false)
 	draw_sprite_ext(newsword_hilt,0,sword_pos_x,sword_pos_y,sword_facing,1,sword_ang,c_white,1)
 	floor_particle_script()	
+	
+	//draw_circle(sword_pos_x, sword_pos_y, 7, false);
 }
+draw_set_color(c_green)
+//draw_circle(shoulder_x,shoulder_y,6,false)
+draw_set_color(c_fuchsia)
+//draw_circle(elbow_pos_x+player_obj.x-150,elbow_pos_y+player_obj.y-150,6,false)
+sdm(shoulder_x)
+sdm(shoulder_y)
+draw_set_color(c_white)
 x=150
 y=150
 

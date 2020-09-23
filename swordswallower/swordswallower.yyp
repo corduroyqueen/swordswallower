@@ -367,6 +367,14 @@
             }
         },
         {
+            "Key": "050b7314-c6ec-491f-ae84-1c70e20c5a10",
+            "Value": {
+                "id": "757356ee-f67e-4f2f-9058-9a2228bd0743",
+                "resourcePath": "objects\\twojoints_hand_obj\\twojoints_hand_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "050eb52c-80df-476f-9fe3-1a35f1ba068e",
             "Value": {
                 "id": "d11b8551-2213-4da2-98af-6566ca7ffee9",

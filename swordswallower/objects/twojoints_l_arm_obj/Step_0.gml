@@ -10,7 +10,7 @@ if state==state_idle {
 	
 	hand_tar = lerp(hand_tar,clamp(player_obj.x+offset,x-minclamp,x-200),0.2)
 	
-	timer++
+	//timer++
 	if timer>100 {
 		timer=0
 		state=state_anticipation
@@ -80,6 +80,10 @@ true,
 elbow_pos_x
 ,
 elbow_pos_y)
+
+
+hand.x = seg_x[2]
+hand.y = seg_y[2]
 	
 //arm_relocate(x,y)
 	//arm_fix(wall_obj)
