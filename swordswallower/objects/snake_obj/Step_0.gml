@@ -9,6 +9,7 @@ if death {
 		go.hsp = tail_obj.throwxs*0.4
 		go.vsp = tail_obj.throwys*0.4
 		go.spinspeed = random_range(20,100) * -sign(go.hsp)
+		go.spurt_bool = true
 	
 		instance_destroy(head)
 		deathinit = false

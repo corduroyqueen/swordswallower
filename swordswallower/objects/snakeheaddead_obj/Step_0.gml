@@ -33,7 +33,7 @@ if sword_bool {
 } else {
 	blood_timer++
 	blood_timer_m += 0.05
-	if blood_timer>blood_timer_m && instance_number(blood_splat_obj)<300 {
+	if blood_timer>blood_timer_m && instance_number(blood_splat_obj)<300 && spurt_bool{
 		blood_spurt_script(image_angle+90,30,20,5,x+cos(degtorad(image_angle+90))*20,y-sin(degtorad(image_angle+90))*20	)
 		blood_timer=0
 	}

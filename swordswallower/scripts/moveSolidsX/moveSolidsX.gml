@@ -7,11 +7,11 @@ if move!=0 {
 	yRemainder -= move
 	move_dir = sign(move)
 	while move != 0 {
-		if !wall_detect_solids(x,y+move_dir) {
-			y += move_dir
+		if !wall_detect_solids(x+move_dir,y) {
+			x += move_dir
 			move -= move_dir
 		} else {
-			vsp=0
+			hsp=0
 			break;
 		}
 	}

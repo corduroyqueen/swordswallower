@@ -69,7 +69,19 @@ sprites[2] = ghoul3
 
 sprite_index = sprites[floor(x) % 3]
 
-sprite_index = choose(new_ghoul,new_ghoul2)
+ghoul_sprs = array_create(2)
+ghoul_masks = array_create(2)
+
+ghoul_sprs[0] = new_ghoul
+ghoul_sprs[1] = new_ghoul2
+
+
+ghoul_masks[0] = new_ghoul_mask
+ghoul_masks[1] = new_ghoul2_mask
+
+ghoul_num = choose(0,1)
+
+sprite_index = ghoul_sprs[ghoul_num]
 
 number_of_pus = 4
 pus_x = array_create(number_of_pus)

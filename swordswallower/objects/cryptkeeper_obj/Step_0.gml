@@ -170,7 +170,17 @@ if death {
 	var bruh = lettuce_chop_louder
 	audio_sound_pitch(bruh,random_range(0.75,1.25))
 	audio_play_sound(bruh,0,false)
+	
+	go = instance_create_depth(x,y-30,0,snakeheaddead_obj)
+	go.sprite_index = ghoul_masks[ghoul_num]
+	go.hsp = tail_obj.hsp*0.4
+	go.vsp = tail_obj.vsp*0.4
+	go.spinspeed = random_range(20,100) * -sign(go.hsp)
+		
 	instance_destroy()	
+	
+	
+	
 }
 
 hsp = clamp(hsp,-h_max_speed,h_max_speed)

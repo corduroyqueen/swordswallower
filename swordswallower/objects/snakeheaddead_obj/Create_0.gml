@@ -13,3 +13,4 @@ blood_timer = 0
 blood_timer_m = 1
 
 blood_color = global.blood_color
+spurt_bool = false

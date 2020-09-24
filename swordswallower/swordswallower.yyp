@@ -4071,6 +4071,14 @@
             }
         },
         {
+            "Key": "43743bc7-5050-4b7b-a0f7-73d83d00c5f2",
+            "Value": {
+                "id": "14ef9d91-cb62-43e9-a827-d6fc4a8314c9",
+                "resourcePath": "sprites\\new_ghoul2_mask\\new_ghoul2_mask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4376b2c4-e45d-495c-8fa3-7061b1554fb1",
             "Value": {
                 "id": "45f27c64-4928-43f1-aadf-25f07eaeeb0f",
@@ -6235,6 +6243,14 @@
             "Value": {
                 "id": "df358b70-9b2f-46ac-8f29-369246213776",
                 "resourcePath": "sprites\/Layer_75\/Layer_75.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "65b23dcd-eee2-4973-8dd8-7eae3d4228f3",
+            "Value": {
+                "id": "94229e48-0c43-4741-8100-884ad941a1ee",
+                "resourcePath": "sprites\\new_ghoul_mask\\new_ghoul_mask.yy",
                 "resourceType": "GMSprite"
             }
         },
