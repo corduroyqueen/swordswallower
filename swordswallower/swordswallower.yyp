@@ -3039,6 +3039,14 @@
             }
         },
         {
+            "Key": "31b9bfed-cd5d-464d-b025-a3d0d27ba0b9",
+            "Value": {
+                "id": "f5a77987-885a-42ef-9ef7-d0b8e4526491",
+                "resourcePath": "sprites\\key997\\key997.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "32037721-3f51-4ef6-9a82-332f0e7d813f",
             "Value": {
                 "id": "bfc8dd79-406a-4533-b6b0-1354a778cbb1",
@@ -3267,6 +3275,14 @@
             "Value": {
                 "id": "3f188ea4-56bd-47ff-bebf-6c96368b5779",
                 "resourcePath": "sprites\\txt_rightshoulderintro\\txt_rightshoulderintro.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "36774ace-c883-4dc5-ad30-817383aad8b4",
+            "Value": {
+                "id": "50428990-ce76-4136-98fa-225c7300eac9",
+                "resourcePath": "sprites\\feet\\feet.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3844,6 +3860,14 @@
                 "id": "22fc7147-1355-49d5-ba90-27a67c45baa7",
                 "resourcePath": "scripts\/collision_iterate_flyingguy\/collision_iterate_flyingguy.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "40122338-be74-4d34-bee7-239f0c67620e",
+            "Value": {
+                "id": "f2a47b2a-e05f-4790-80eb-4ff1142f4d03",
+                "resourcePath": "sprites\\sprite995\\sprite995.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
