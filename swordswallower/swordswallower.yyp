@@ -3042,7 +3042,7 @@
             "Key": "31b9bfed-cd5d-464d-b025-a3d0d27ba0b9",
             "Value": {
                 "id": "f5a77987-885a-42ef-9ef7-d0b8e4526491",
-                "resourcePath": "sprites\\key997\\key997.yy",
+                "resourcePath": "sprites\\keybird_3\\keybird_3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3282,7 +3282,7 @@
             "Key": "36774ace-c883-4dc5-ad30-817383aad8b4",
             "Value": {
                 "id": "50428990-ce76-4136-98fa-225c7300eac9",
-                "resourcePath": "sprites\\feet\\feet.yy",
+                "resourcePath": "sprites\\keybird_2\\keybird_2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3866,7 +3866,7 @@
             "Key": "40122338-be74-4d34-bee7-239f0c67620e",
             "Value": {
                 "id": "f2a47b2a-e05f-4790-80eb-4ff1142f4d03",
-                "resourcePath": "sprites\\sprite995\\sprite995.yy",
+                "resourcePath": "sprites\\keybird_1\\keybird_1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7079,6 +7079,14 @@
             }
         },
         {
+            "Key": "7357b125-1765-4736-acba-5dbd6e70dc59",
+            "Value": {
+                "id": "afed9b20-b52a-49e3-95d8-8af0a245b900",
+                "resourcePath": "sprites\\bridgekeeper3\\bridgekeeper3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "735e06b1-ab6d-43f3-af6f-25cd4286590b",
             "Value": {
                 "id": "7c708592-fa40-4031-ba15-b61c84b49808",
@@ -8423,6 +8431,14 @@
             }
         },
         {
+            "Key": "8c99ac92-e44c-4d3f-b587-ebd16c7636ff",
+            "Value": {
+                "id": "2b76e3bf-7bb8-445c-845b-5ed211ba677e",
+                "resourcePath": "sprites\\new_ghoul_mask2\\new_ghoul_mask2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8cc4a6bc-ae7c-4711-9a2e-4c5e51902d45",
             "Value": {
                 "id": "845bd2a2-a259-458a-9448-33026be28ed3",
@@ -9131,6 +9147,14 @@
             "Value": {
                 "id": "9f3a8b6a-6810-4e9e-a4f3-262ac627fc8e",
                 "resourcePath": "sprites\/ceiling1\/ceiling1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9a1ef4e0-96b3-4ea3-a231-7605bb149a91",
+            "Value": {
+                "id": "61a2e72c-1d95-4817-b349-71b381459296",
+                "resourcePath": "sprites\\bridgekeeper2\\bridgekeeper2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10252,6 +10276,14 @@
                 "id": "c5f401b2-a92e-4d47-8a01-1ed85c5f287e",
                 "resourcePath": "views\/af2990c2-f97b-48ed-ad42-ddc5d69856aa.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "af60d55b-cdb1-4770-9e25-1b80f1d110d8",
+            "Value": {
+                "id": "08579c94-840e-41be-b5cf-b3e38f808565",
+                "resourcePath": "sprites\\new_ghoul_mask1\\new_ghoul_mask1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12594,7 +12626,7 @@
             "Key": "ddcf42b1-c617-4e7b-a6ce-72417f9f1428",
             "Value": {
                 "id": "b720974a-0d8f-4a71-b43e-8fc4fd77c70a",
-                "resourcePath": "sprites\\sprite998\\sprite998.yy",
+                "resourcePath": "sprites\\bridgekeeper\\bridgekeeper.yy",
                 "resourceType": "GMSprite"
             }
         },

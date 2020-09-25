@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+xpreva = x
 if following {
 	if start {
 		x = checkpoint_manager.x - 10
@@ -19,7 +19,10 @@ if following {
 		y = player_obj.y-9
 	}
 	
+	image_speed=7
+	
 	//x = player_obj.x+2+player_obj.hsp
 	//y = player_obj.y+2+player_obj.vsp/2
 	
 }
+
