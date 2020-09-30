@@ -2415,6 +2415,14 @@
             }
         },
         {
+            "Key": "25e6a5a1-16b6-4388-8d00-4bf73332ec05",
+            "Value": {
+                "id": "25ff45c7-9087-4bbe-81a5-49401c805e70",
+                "resourcePath": "sprites\\bridgekeeper4\\bridgekeeper4.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "25f2650c-1fa7-4ed7-9f2d-5ff991742a20",
             "Value": {
                 "id": "53b22023-2d01-4014-b7b8-4a772241c71c",
@@ -2556,6 +2564,14 @@
                 "id": "a3f8807f-306f-4e95-ab73-dd5acc70ef36",
                 "resourcePath": "sounds\/door_unlock\/door_unlock.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "29a42d16-dce4-4d8b-b6f5-add4a9e10880",
+            "Value": {
+                "id": "01f911c0-09b8-4479-b71a-7cc2ba14419e",
+                "resourcePath": "objects\\bridgekeeper_obj\\bridgekeeper_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

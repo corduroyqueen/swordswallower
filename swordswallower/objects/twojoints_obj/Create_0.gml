@@ -14,3 +14,18 @@ leftarm = instance_create_depth(x,y,depth-1,twojoints_l_arm_obj)
 leftarm.color = c_green
 leftarm.offset = 400
 leftarm.offset_diff = 0
+
+state = 0
+state_idle = 1
+state_attacking = 0
+state_swallowing = 0
+
+attack = 0
+attack_left_lunge = 1
+attack_right_lunge = 2
+attack_cough_flies = 3
+attack_cough_tar = 4
+
+timer=0
+
+state_timer=0
