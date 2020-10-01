@@ -5871,6 +5871,14 @@
             }
         },
         {
+            "Key": "5ea99efa-782e-461a-8074-69af6a0723e5",
+            "Value": {
+                "id": "c2341324-b976-47d0-a73d-578f88852efb",
+                "resourcePath": "objects\\twojoints_l_arm_old_obj\\twojoints_l_arm_old_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5eae03a5-7b98-4e94-ba85-b2951ca8236c",
             "Value": {
                 "id": "40b85641-e0d5-4517-b044-be752bd21983",

@@ -15,7 +15,7 @@ leftarm.color = c_green
 leftarm.offset = 400
 leftarm.offset_diff = 0
 
-state = 0
+state = 1
 state_idle = 1
 state_attacking = 0
 state_swallowing = 0
