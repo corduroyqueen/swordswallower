@@ -6,8 +6,7 @@ if death {
 	just_blood(0,0,0.2,10,false,sprite_width/2,sprite_height)
 	
 	if !place_meeting(x,y,fatfly_destroyer) && met {
-		player_obj.tail_planted = false
-		player_obj.tail_pulling = true
+		sword_pull_check()
 		player_obj.bounced = false
 		reset_intangibility()
 		player_obj.zoom_timer_bool = false

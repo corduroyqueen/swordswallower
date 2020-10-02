@@ -151,8 +151,7 @@ if player_obj.tail_planted {
 	if abs(player_obj.camx+960-x)>1500 ||
 	abs(player_obj.camy+540-y)>900 && !player_obj.intro {
 		
-		player_obj.tail_planted = false
-		player_obj.tail_pulling = true
+		sword_pull_check()
 		
 	}
 	if get_speed()>0 {
@@ -203,8 +202,7 @@ if player_obj.tail_planted {
 	&& !inside_flier && current_obj!=dash_guy_obj  && current_obj.object_index!=door_obj
 	&& current_obj.object_index!=circle_friend_obj && !player_obj.zoom_timer_bool && pickup_timer<1 && !player_obj.intro
 	{ //sdm(" b")
-		player_obj.tail_planted = false
-		player_obj.tail_pulling = true
+		sword_pull_check()
 		if !player_obj.grounded {
 			player_obj.held_release_timer = 7
 		}

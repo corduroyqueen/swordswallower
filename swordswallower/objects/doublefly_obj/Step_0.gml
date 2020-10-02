@@ -53,6 +53,15 @@ if death {
 		
 		just_blood_input(0,0,tail_obj.throwxs,tail_obj.throwys,-30,true,sprite_width/4,sprite_height)
 		
+		with eyebats_particle_spawner_obj {
+			xt=other.x
+			yt=other.y
+			ihsp = tail_obj.hsp
+			ivsp = tail_obj.vsp
+			num_to_spawn = 50
+			event_user(0)
+		}
+		
 		instance_destroy()
 		
 	}

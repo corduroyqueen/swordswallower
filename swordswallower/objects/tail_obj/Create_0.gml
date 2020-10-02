@@ -84,3 +84,5 @@ current_obj = instance_place(x,y,wall_obj)
 
 hilt_x = 0
 hilt_y = 0
+
+state_stuck = false

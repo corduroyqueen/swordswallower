@@ -2,6 +2,12 @@
 // You can write your code in this editor
 arm_initialize(800,2,two_jointed_arm_t)
 hand = instance_create_depth(x,y,depth,twojoints_hand_obj)
+arm_hitbox = instance_create_depth(x,y,depth,twojoints_forearm_obj)
+arm_weakspot = instance_create_depth(x,y,depth,twojoints_weakspot_obj)
+arm_weakspot.parent = id
+
+destroy_arm = false
+
 arm_start_px = x-100
 arm_start_py = x+390
 

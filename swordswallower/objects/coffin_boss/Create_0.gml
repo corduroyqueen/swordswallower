@@ -32,3 +32,8 @@ part_type_speed(part_type, 13,20, -0.8, 0.1);
 part_type_direction(part_type, 0, 359, random_range(0,5), 1);
 
 part_type_orientation( part_type, 0,359, 3, 1, false );
+
+piece1=noone
+piece2=noone
+
+d_portal = false

@@ -2,6 +2,15 @@
 // You can write your code in this editor
 
 
+if destroy_arm {
+	x=0
+	y=0
+	arm_hitbox.x = -200 
+	arm_hitbox.y = -200 
+	elbow_pos_y=0
+	return
+}
+
 if state==state_idle {
 	//elbow_pos_x = lerp(elbow_pos_x,x-100+(player_obj.x-x+900+(offset-400))/1.5,0.2)
 	//elbow_pos_x = clamp(elbow_pos_x,x-200,x-20)
@@ -33,12 +42,12 @@ if state==state_idle {
 	
 	//hand_tar = lerp(hand_tar,elbow_pos_x-1000,abs(elbow_hsp)/10000000000000)
 	
-	elbow_ang = lerp(elbow_ang,elbow_tarang,0.05)
+	elbow_ang = lerp(elbow_ang,elbow_tarang,0.025)
 	elbow_pos_x = x + dcos(elbow_ang) * arm_1_length
 	elbow_pos_y = y - dsin(elbow_ang) * arm_1_length
 	
-	hand_tar_x = lerp(hand_tar_x,lunge_target_x,0.1)
-	hand_tar_y = lerp(hand_tar_y,lunge_target_y,0.1)
+	hand_tar_x = lerp(hand_tar_x,lunge_target_x,0.05)
+	hand_tar_y = lerp(hand_tar_y,lunge_target_y,0.05)
 	//if elbow_pos_x<x-399 {
 	//	elbow_vel = 0
 	//	elbow_hsp = 0
@@ -139,6 +148,18 @@ elbow_pos_y)
 
 hand.x = seg_x[2]
 hand.y = seg_y[2]
+
+arm_hitbox.x = seg_x[1]
+arm_hitbox.y = seg_y[1]
+arm_hitbox.image_xscale = 350/2
+arm_hitbox.image_yscale = 50/3
+arm_hitbox.image_angle = point_direction(seg_x[1],seg_y[1],seg_x[2],seg_y[2])
+
+arm_weakspot.x = elbow_pos_x
+arm_weakspot.y = elbow_pos_y
+arm_weakspot.image_xscale = 350/2
+arm_weakspot.image_yscale = 50/3
+arm_weakspot.image_angle = point_direction(elbow_pos_x,elbow_pos_y,seg_x[1],seg_y[1])
 	
 //arm_relocate(x,y)
 	//arm_fix(wall_obj)

@@ -25,6 +25,13 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		local_obj.death = true
 		return false	
 	}
+	
+	if local_obj.object_index==twojoints_weakspot_obj {
+		 with local_obj {
+			 instance_destroy()
+		 }
+		return false	
+	}
 
 	if local_obj.object_index==nucrab_obj || local_obj.object_index==handbug_obj {
 		
@@ -43,6 +50,22 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			if player_obj.fire_active {
 				local_obj.parent.death = true	
 			}
+			var thsp = local_obj.hsp
+			var tvsp = local_obj.vsp
+			x = oldx
+			y = oldy
+			local_obj.met = true
+			//itpause = false
+			return
+		} else {
+			x = oldx
+				y = oldy
+			local_obj.met = true
+		}
+	}
+	if local_obj.sword_reject {
+		if  player_obj.tail_throwing {
+			sword_reject_script()
 			var thsp = local_obj.hsp
 			var tvsp = local_obj.vsp
 			x = oldx

@@ -21,6 +21,15 @@ if death {
 		audio_play_sound_at(eye_scream,x,y,0,0,0,0,false,0)
 		
 		audio_manager(false,0,false,3)
+		
+		with eyebats_particle_spawner_obj {
+			xt=other.x
+			yt=other.y
+			ihsp = tail_obj.hsp
+			ivsp = tail_obj.vsp
+			num_to_spawn = 50
+			event_user(0)
+		}
 	}
 	mask_index = fly_idle
 	if spawn {
