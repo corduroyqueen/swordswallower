@@ -61,6 +61,12 @@ state = state_idle
 lunge_target_x = 0
 lunge_target_y = 0
 
+seg_polarity = array_create(3)
+
+seg_polarity[0] = 1
+seg_polarity[1] = 1
+seg_polarity[2] = 1
+
 //arm_reconnect(true,x,y)
 
 //seg_set_length(0,10)

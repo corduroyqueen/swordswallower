@@ -36,3 +36,4 @@ state_timer=0
 sword_reject = true
 
 head = instance_create_depth(x,y,depth,twojoints_head_obj)
+

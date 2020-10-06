@@ -22,6 +22,8 @@ draw_set_alpha(1)
 draw_text(x-200,y,timer)
 draw_text(x-200,y+100,state)
 
+
+
 /*arm_draw()
 /*
 draw_circle(seg_x[0],seg_y[0],30,false)

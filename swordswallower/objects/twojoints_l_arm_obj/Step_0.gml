@@ -8,6 +8,8 @@ if destroy_arm {
 	arm_hitbox.x = -200 
 	arm_hitbox.y = -200 
 	elbow_pos_y=0
+	hand.x = -200
+	hand.y = -200
 	return
 }
 
@@ -41,22 +43,45 @@ if state==state_idle {
 	//elbow_pos_y = lerp(elbow_pos_y,y+390,abs(elbow_hsp)/10000000000000)
 	
 	//hand_tar = lerp(hand_tar,elbow_pos_x-1000,abs(elbow_hsp)/10000000000000)
+	var lerp1
+	var lerp2
+	timer++
+	if timer<100 {
+		lerp1 = 0.005
+		lerp2 = 0.001
+		if player_obj.grounded {
+			elbow_tarang = 195
+		} else {
+			elbow_tarang = clamp(point_direction(
+			mean(mean(elbow_pos_x,x),x),
+			mean(mean(elbow_pos_y,y),y),
+			player_obj.x,player_obj.y),90,270)
+		}
+	} else {
+		lerp1 = 0.05
+		lerp2 = 0.1
+	}
 	
-	elbow_ang = lerp(elbow_ang,elbow_tarang,0.025)
+	
+	elbow_ang = lerp(elbow_ang,elbow_tarang,lerp1)
 	elbow_pos_x = x + dcos(elbow_ang) * arm_1_length
 	elbow_pos_y = y - dsin(elbow_ang) * arm_1_length
 	
-	hand_tar_x = lerp(hand_tar_x,lunge_target_x,0.05)
-	hand_tar_y = lerp(hand_tar_y,lunge_target_y,0.05)
+	hand_tar_x = lerp(hand_tar_x,lunge_target_x,lerp2)
+	hand_tar_y = lerp(hand_tar_y,lunge_target_y,lerp2)
 	//if elbow_pos_x<x-399 {
 	//	elbow_vel = 0
 	//	elbow_hsp = 0
 	//	state=state_knockback
 	//}
 	//if point_distance(x,y,elbow_pos_x,elbow_pos_y)>arm_1_length {
-	if abs(elbow_tarang-elbow_ang)<10 {
+	if point_distance(x,y,hand_tar_x,hand_tar_y)>1100 
+	//|| (timer>0 && position_meeting(hand_tar_x,hand_tar_y,wall_parent_obj)) 
+	{
+		timer=0
 		elbow_pos_x = x + dcos(elbow_ang) * arm_1_length
 		elbow_pos_y = y - dsin(elbow_ang) * arm_1_length
+		//hand_tar_x = 
 		state=state_knockback
 	}
 } else if state==state_knockback {
@@ -88,20 +113,30 @@ if state==state_idle {
 	hand_tar_y = lerp(hand_tar_y, elbow_pos_y - dsin(a)* 100 , 0.1)
 	
 	timer++
-	if timer>100 {
+	if timer>40 {
 		timer=0
 		state = state_lunging
-		elbow_tarang = clamp(point_direction(x,y,player_obj.x,player_obj.y),190,270)
-		lunge_target_x = player_obj.x
-		lunge_target_y = player_obj.y
+		
+		if player_obj.grounded {
+			elbow_tarang = 195
+		} else {
+			elbow_tarang = clamp(point_direction(
+			mean(mean(elbow_pos_x,x),x),
+			mean(mean(elbow_pos_y,y),y),
+			player_obj.x,player_obj.y),90,270)
+		}
+		
+		lunge_target_x = x + dcos(elbow_tarang) * 1400
+		lunge_target_y = y - dsin(elbow_tarang) * 1400
 	}
 } else if state==state_recovery {
+	timer++
 	elbow_pos_x = lerp(elbow_pos_x,x-20+offset_diff,0.01)
 	elbow_pos_y = lerp(elbow_pos_y,y+390,0.1)
 	//elbow_pos_x = clamp(elbow_pos_x,x-200,x-20)
 	
 	hand_tar_x = lerp(hand_tar_x,elbow_pos_x-650,1)//0.1)
-	timer++
+
 	if timer>50 {
 		timer=0
 		state = state_idle
@@ -151,16 +186,24 @@ hand.y = seg_y[2]
 
 arm_hitbox.x = seg_x[1]
 arm_hitbox.y = seg_y[1]
-arm_hitbox.image_xscale = 350/2
+arm_hitbox.image_xscale = 350/1.75
 arm_hitbox.image_yscale = 50/3
 arm_hitbox.image_angle = point_direction(seg_x[1],seg_y[1],seg_x[2],seg_y[2])
 
-arm_weakspot.x = elbow_pos_x
-arm_weakspot.y = elbow_pos_y
+if state==state_knockback || state==state_recovery {
+	arm_weakspot.x = elbow_pos_x
+	arm_weakspot.y = elbow_pos_y
+} else {
+	arm_weakspot.x = 500
+	arm_weakspot.y = -600
+}
+
 arm_weakspot.image_xscale = 350/2
 arm_weakspot.image_yscale = 50/3
 arm_weakspot.image_angle = point_direction(elbow_pos_x,elbow_pos_y,seg_x[1],seg_y[1])
-	
+
+
+
 //arm_relocate(x,y)
 	//arm_fix(wall_obj)
 	//arm_apply_force(5,180)
