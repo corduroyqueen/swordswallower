@@ -67,6 +67,8 @@ seg_polarity[0] = 1
 seg_polarity[1] = 1
 seg_polarity[2] = 1
 
+lel_angle = 0
+
 //arm_reconnect(true,x,y)
 
 //seg_set_length(0,10)

@@ -46,9 +46,10 @@ if state==state_idle {
 	var lerp1
 	var lerp2
 	timer++
-	if timer<100 {
-		lerp1 = 0.005
-		lerp2 = 0.001
+	if timer<80 {
+		lerp1 = 0.002
+		lerp2 = 0.0005
+		
 		if player_obj.grounded {
 			elbow_tarang = 195
 		} else {
@@ -57,10 +58,27 @@ if state==state_idle {
 			mean(mean(elbow_pos_y,y),y),
 			player_obj.x,player_obj.y),90,270)
 		}
+		if player_obj.grounded {
+			lel_angle = 175 + 180
+		} else {
+			lel_angle = point_direction(x,y,player_obj.x,player_obj.y) + 180
+		}
+		lunge_target_x = x + dcos(elbow_tarang) * 1400
+		lunge_target_y = y - dsin(elbow_tarang) * 1400
+		
 	} else {
-		lerp1 = 0.05
-		lerp2 = 0.1
-	}
+		var m = (timer - 80)/60
+		//lerp1 = 0.008
+		//lerp2 = 0.015
+		lerp1 = 0.05 * m
+		lerp2 = 0.1 * m
+		
+		var m = 1 + (timer - 80)/3
+		//lerp1 = 0.008
+		//lerp2 = 0.015
+		lerp1 = 0.0005 * m * m
+		lerp2 = 0.001 * m * m
+	} 
 	
 	
 	elbow_ang = lerp(elbow_ang,elbow_tarang,lerp1)
@@ -79,8 +97,8 @@ if state==state_idle {
 	//|| (timer>0 && position_meeting(hand_tar_x,hand_tar_y,wall_parent_obj)) 
 	{
 		timer=0
-		elbow_pos_x = x + dcos(elbow_ang) * arm_1_length
-		elbow_pos_y = y - dsin(elbow_ang) * arm_1_length
+		elbow_pos_x = x + dcos(elbow_tarang+15) * arm_1_length
+		elbow_pos_y = y - dsin(elbow_tarang+15) * arm_1_length
 		//hand_tar_x = 
 		state=state_knockback
 	}
@@ -93,6 +111,7 @@ if state==state_idle {
 		timer=0
 		state=state_recovery
 	}
+	
 } else if state==state_anticipation {
 	//elbow_pos_x = lerp(elbow_pos_x,x-20,0.1)
 	//elbow_pos_x = clamp(elbow_pos_x,x-200,x-20)
@@ -184,11 +203,24 @@ elbow_pos_y)
 hand.x = seg_x[2]
 hand.y = seg_y[2]
 
+if state==state_knockback || state==state_lunging {
+	hand.sprite_index = two_jointed_arm_out_t1
+	hand.mask_index = two_jointed_arm_out_t1
+	hand.image_angle = lel_angle
+} else {
+	hand.sprite_index = two_jointed_arm_t1
+	hand.mask_index = two_jointed_arm_t1
+	hand.image_angle = 0
+	
+	
+}
+
 arm_hitbox.x = seg_x[1]
 arm_hitbox.y = seg_y[1]
 arm_hitbox.image_xscale = 350/1.75
 arm_hitbox.image_yscale = 50/3
 arm_hitbox.image_angle = point_direction(seg_x[1],seg_y[1],seg_x[2],seg_y[2])
+
 
 if state==state_knockback || state==state_recovery {
 	arm_weakspot.x = elbow_pos_x

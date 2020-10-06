@@ -10351,6 +10351,14 @@
             }
         },
         {
+            "Key": "af405302-5d0f-44e6-8496-27e8f377919d",
+            "Value": {
+                "id": "31a7314d-1428-436b-8257-b7c69b7d7620",
+                "resourcePath": "sprites\\two_jointed_arm_out_t1\\two_jointed_arm_out_t1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "af60d55b-cdb1-4770-9e25-1b80f1d110d8",
             "Value": {
                 "id": "08579c94-840e-41be-b5cf-b3e38f808565",
