@@ -93,8 +93,7 @@ if !tail_planted && !tail_held {
 		//sdm(click_out_of_wall_timer)
 		if !place_meeting(x,y,wall_obj) {
 				
-			tail_planted=false
-			tail_pulling=true
+			sword_pull_check()
 			hsp*=0.65
 			vsp*=0.65
 			
@@ -135,8 +134,7 @@ if !tail_planted && !tail_held {
 			gem_thrown = true
 			
 		} else if !zoom_timer_bool {
-			tail_planted=false
-			tail_pulling=true
+			sword_pull_check()
 			audio_manager(pullout1,0,false,2)
 		} else {
 			

@@ -250,7 +250,7 @@ if level1_master.dev {
 	if keyboard_check_pressed(ord("H")){
 		wall_obj.visible = !wall_obj.visible
 		black_wall_obj.visible = !black_wall_obj.visible
-		spike.visible = !spike.visible
+		//spike.visible = !spike.visible
 		thin_floor_obj.visible = !thin_floor_obj.visible
 	}
 	if keyboard_check_pressed(ord("U")){

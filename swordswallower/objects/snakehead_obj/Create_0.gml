@@ -4,3 +4,4 @@ event_inherited()
 met = false
 sprite_index = venus3
 death = false
+sword_reject = true

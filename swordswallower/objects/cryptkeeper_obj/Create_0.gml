@@ -76,8 +76,8 @@ ghoul_sprs[0] = new_ghoul
 ghoul_sprs[1] = new_ghoul2
 
 
-ghoul_masks[0] = new_ghoul_mask
-ghoul_masks[1] = new_ghoul2_mask
+ghoul_masks[0] = new_ghoul_mask1
+ghoul_masks[1] = new_ghoul_mask2
 
 ghoul_num = choose(0,1)
 

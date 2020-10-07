@@ -445,8 +445,7 @@ last_fly_hp = fly_hp
 
 if death {
 	if sword_present {
-		player_obj.tail_planted = false
-		player_obj.tail_pulling = true
+		sword_pull_check()
 	}
 	just_blood_input(cos(degtorad(ang))*30,-sin(degtorad(ang))*30,
 				

@@ -1,3 +1,3 @@
 master = switch_wall_switch_02
-endx = x
-endy = y-300
+endx = x+400
+endy = y

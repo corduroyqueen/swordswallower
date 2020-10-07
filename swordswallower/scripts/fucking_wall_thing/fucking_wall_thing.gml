@@ -1,5 +1,4 @@
-player_obj.tail_planted = false
-player_obj.tail_pulling = true
+sword_pull_check()
 //player_obj.tail_carry = true
 //player_obj.bounced = false
 player_obj.x = player_obj.tail_dest_x

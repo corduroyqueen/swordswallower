@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
 if closed {
 	sprite_index = coffin_closed
 	image_speed = 1
@@ -18,6 +21,7 @@ if closed {
 } else {
 	sprite_index = coffin_open
 	image_index = 2
+	d_portal = true
 	if player_present && !instance_exists(boss)  {
 		enabled = true
 		if room==subtemple01 {
@@ -27,5 +31,20 @@ if closed {
 	
 	if instance_exists(boss) && boss.state != boss.state_idle {
 		music_cue = true	
+		if !instance_exists(piece1) {
+			piece1 = instance_create_depth(x,y-100,depth,snakeheaddead_obj)
+			piece1.hsp = 1
+			piece1.vsp = -10
+			piece1.spinspeed = random_range(20,100) * 1
+			piece1.sprite_index = coffin_broken1
+	
+			piece2 = instance_create_depth(x,y+100,depth,snakeheaddead_obj)
+			piece2.hsp = 1
+			piece2.vsp = -7
+			piece2.spinspeed = random_range(20,100) * -1
+			piece2.sprite_index = coffin_broken2
+		}
 	}
+	
+	
 }
