@@ -17,10 +17,10 @@ if state==state_idle {
 			attack = choose(3,4)
 		} else if leftarm.destroy_arm {
 			attack = choose(2,3,4)
-			attack = 2
+			//attack = 2
 		} else {
 			attack = choose(1,3,4)
-			attack = 1
+			//attack = 1
 		}
 		
 		
@@ -35,21 +35,26 @@ if state==state_idle {
 		if leftarm.state == leftarm.state_idle {
 			leftarm.state = leftarm.state_anticipation
 		}
-		if leftarm.state == leftarm.state_recovery || leftarm.destroy_arm {
+		
+		if leftarm.state == leftarm.state_reset || leftarm.destroy_arm {
 			state = state_idle
 			rightarm.state = rightarm.state_idle
+			leftarm.state = leftarm.state_idle
+			leftarm.timer=0
 		}
 	} else if attack==attack_right_lunge {
 		leftarm.state = leftarm.state_defense
 		if rightarm.state == rightarm.state_idle {
 			rightarm.state = rightarm.state_anticipation
 		}
-		if rightarm.state == rightarm.state_recovery || rightarm.destroy_arm {
+		if rightarm.state == rightarm.state_reset || rightarm.destroy_arm {
 			state = state_idle
+			rightarm.state = rightarm.state_idle
+			rightarm.timer=0
 		}
 	} else if attack==attack_cough_flies {
 		head.image_index = 1
-		var spawn_num = floor(random_range(4,10))
+		var spawn_num = floor(random_range(2,6))
 		for(var i=0;i<spawn_num;i++) {
 			fly1 = instance_create_depth(x-200,y-100,depth,flyfree_obj)
 			
@@ -69,23 +74,23 @@ if state==state_idle {
 		}
 	} else if attack==attack_cough_tar {
 		head.image_index = 1
-		var spawn_num = floor(random_range(1,3))
+		var spawn_num = 5
+		var sx = head.x-200
+		var sy = head.y-100
 		for(var i=0;i<spawn_num;i++) {
-			//fly1 = instance_create_depth(x-200,y-100,depth,flyfree_obj)
-			
-			//var ang = random_range(120,240)
-			//var spd = random_range(3,20)
-			//fly1.hsp = dcos(ang) * spd
-			//fly1.vsp = dsin(ang) * spd
-			//fly1.inv_timer=15
-			//fly1.state = 1
-			//fly1.spawn = true
-			//fly1.eyespr = choose(greeneye,pinkeye)
+			var tar1 = instance_create_depth(sx,sy,depth+1,projectile_arcing_obj)
+			tar1.start_x = sx
+			tar1.start_y = sy
+			tar1.end_x = sx - 175 - (230 * i)
+			tar1.end_y = sy - 200
+			tar1.fall_speed = 8
+			tar1.timer_m = 120 - i * 10
 		}
 		if leftarm.destroy_arm && rightarm.destroy_arm {
 			state = state_mouthopen
 		} else {
 			state = state_idle
+			state_timer = -100
 		}
 	}
 	

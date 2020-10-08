@@ -54,6 +54,7 @@ state_knockback = 2
 state_anticipation = 3
 state_recovery = 4
 state_defense = 5
+state_reset = 6
 
 
 state = state_idle
@@ -65,9 +66,12 @@ seg_polarity = array_create(3)
 
 seg_polarity[0] = 1
 seg_polarity[1] = 1
-seg_polarity[2] = 1
+seg_polarity[2] = -1
 
 lel_angle = 0
+
+arm_pull_ang = 0
+hand_vsp = 0
 
 //arm_reconnect(true,x,y)
 

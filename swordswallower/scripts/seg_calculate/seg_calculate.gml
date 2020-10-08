@@ -18,5 +18,5 @@ if (tony_dir != tony_len) {
 		tony_ldy = lengthdir_y(tony_len, tony_dir);
 	
 	seg_x[@ tony_sid] = tony_nsx - tony_ldx;
-	seg_y[@ tony_sid] = tony_nsy - tony_ldy * seg_polarity[@ tony_sid];
+	seg_y[@ tony_sid] = tony_nsy - tony_ldy;
 }

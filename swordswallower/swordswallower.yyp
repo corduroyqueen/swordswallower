@@ -6039,6 +6039,14 @@
             }
         },
         {
+            "Key": "608514f0-295c-4405-9da3-fe935195e21b",
+            "Value": {
+                "id": "3b45ff9e-e8a2-482a-9b40-64e6542da71f",
+                "resourcePath": "objects\\dead_twojoint_arm_obj\\dead_twojoint_arm_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "608d1162-7bb1-4e67-80b7-eccfd062d7c1",
             "Value": {
                 "id": "caae8f7b-7ef8-456a-9c30-bf61728ba5d3",
@@ -7571,6 +7579,14 @@
             "Value": {
                 "id": "9bf562be-c2e4-4ffa-90b4-0155c33dfff9",
                 "resourcePath": "objects\/object250\/object250.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "783a8368-81b6-480d-a41c-9c651e1cb65f",
+            "Value": {
+                "id": "0635cba4-cc81-44a4-8d11-a34d08d44b0b",
+                "resourcePath": "objects\\projectile_arcing_obj\\projectile_arcing_obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -14123,6 +14139,14 @@
             "Value": {
                 "id": "decb5c59-c3ed-45de-8ef1-ea7a393563ec",
                 "resourcePath": "sprites\/longplatform\/longplatform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f3316196-c35c-4549-b2cc-010d75267c43",
+            "Value": {
+                "id": "e03c0d95-dcd7-48e6-9936-2e02c95d2e9d",
+                "resourcePath": "sprites\\tar_projkect_t\\tar_projkect_t.yy",
                 "resourceType": "GMSprite"
             }
         },

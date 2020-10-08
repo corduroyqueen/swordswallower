@@ -45,5 +45,13 @@ if (tony_pin && (seg_x[@ 0] != tony_pnx || seg_y[@ 0] != tony_pny || tony_len !=
 		seg_calculate(	tony_i,	seg_x[@ tony_i-1], 
 								seg_y[@ tony_i-1]);
 }
+//var elbowang = point_direction(x,y,elbow_pos_x,elbow_pos_y)
+var seg1ang = point_direction(elbow_pos_x,elbow_pos_y,seg_x[@ 1],seg_y[@ 1])
+var seg2ang = point_direction(seg_x[1],seg_y[1],seg_x[2],seg_y[2])
+
+if seg1ang>seg2ang {
+	seg_x[@ 1] = elbow_pos_x + dcos(seg2ang) * tony_len
+	seg_y[@ 1] = elbow_pos_y - dsin(seg2ang) * tony_len
+}
 
 return (arm_end_x == tony_tx && arm_end_y == tony_ty);
