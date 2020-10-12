@@ -136,3 +136,6 @@ global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*
 
 
 //gpu_set_colorwriteenable(true, true, true, false);
+
+start_time = 0
+end_time = 0

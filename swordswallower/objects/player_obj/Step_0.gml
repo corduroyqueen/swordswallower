@@ -213,11 +213,11 @@ if ending_lock {
 
 
 if keyboard_check_pressed(ord("T")) && !death && !ending_lock {
-	start_death = true
-	respawn_timer = 0
+	//start_death = true
+	//respawn_timer = 0
 	
-	player_obj.shake_d=9
-	player_obj.camera_shake_d = true
+	//player_obj.shake_d=9
+	//player_obj.camera_shake_d = true
 }
 
 

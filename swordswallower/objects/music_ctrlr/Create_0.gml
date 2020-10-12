@@ -14,3 +14,5 @@ duck_value = 0.45
 
 go2 = true
 go3 = true
+
+subtemple_mc = audio_create_sync_group(true)

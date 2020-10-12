@@ -12,7 +12,27 @@ with intro_handler {
 	}
 	
 }
+draw_set_font(font2)
+var sec=0
+if level1_master.end_time>0 {
+	sec = level1_master.end_time / 1000
+	
+} else if level1_master.start_time>0 {
+	sec = (current_time - level1_master.start_time) / 1000
+}
 
+draw_text(10,10,string_replace_all(string_format(floor(sec/3600),2,0)," ","0"))
+	draw_text(50,10,":")
+	draw_text(55,10,string_replace_all(string_format((floor(sec/60)) - (floor(sec/3600) * 3600),2,0)," ","0"))
+	draw_text(95,10,":")
+	draw_text(100,10,string_replace_all(string_format(floor(sec - (floor(sec/60) * 60)),2,0)," ","0"))
+	
+	var sec2 = (sec - (floor(sec/60) * 60)) - floor(sec - (floor(sec/60) * 60))
+	//draw_text(130,10,string_format(floor(sec2 - (floor(sec2/60) * 60)),2,0))
+	draw_text(140,10,":")
+	draw_text(145,10,string_replace_all(string_format(floor(sec2 * 60),2,0)," ","0"))
+	
+if keyboard_check_pressed(ord("T")) game_restart();
 player_start_map()
 
 /*

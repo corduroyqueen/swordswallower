@@ -38,6 +38,7 @@ if !done {
 		if tail_obj.current_obj==id && player_obj.held_position && x<(startx+10) {
 			go = true
 			player_obj.ending_lock = true
+			level1_master.end_time = current_time - level1_master.start_time
 			with player_obj {
 				x = player_hitbox_check_obj.x	
 				y = player_hitbox_check_obj.y
