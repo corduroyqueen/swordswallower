@@ -3,13 +3,19 @@
 depth = -500
 if state==state_knockback {
 	
-	sprite_index = cow2_knockback
+	sprite_index = spr_hooves_stun1
 	draw_sprite_ext(sprite_index,image_index,x+random_range(-5,5),y+random_range(-2,2),image_xscale,1,0,c_white,1)
 	loltimer++
 	if loltimer>1 {
 		loltimer=0	
 	}
 	image_alpha = 1
+	if hp>20 {
+		draw_sprite_ext(spr_hooves_top1,image_index,x,y,image_xscale,1,0,c_white,1)
+	} 
+	if hp>10 {
+		draw_sprite_ext(spr_hooves_side1,image_index,x,y,image_xscale,1,0,c_white,1)
+	}
 	return
 } 
 
@@ -28,18 +34,24 @@ if state==state_idle {
 
 
 if charging && state==state_chasing {
-	sprite_index = cow2_charging
+	sprite_index = spr_hooves_run1
 	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,ta)
 } else if !charging && state==state_chasing {
-	sprite_index = cow2_revving
+	sprite_index = spr_hooves_rev1
 	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,0,c_white,ta)
 } else { 
-	sprite_index = cow2_idle
+	sprite_index = spr_hooves_idle1
 	image_alpha = ta
 	draw_self()
 	loltimer=0
 }
 
+if hp>20 {
+	draw_sprite_ext(spr_hooves_top1,image_index,x,y,image_xscale,1,0,c_white,ta)
+} 
+if hp>10 {
+	draw_sprite_ext(spr_hooves_side1,image_index,x,y,image_xscale,1,0,c_white,ta)
+}
 
 
 shader_reset()

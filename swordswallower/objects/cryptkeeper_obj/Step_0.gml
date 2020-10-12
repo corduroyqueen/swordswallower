@@ -150,7 +150,7 @@ if state==state_hitting {
 //}
 
 if place_meeting(x,y,tar_obj) {
-	vsp=0.5
+	vsp=1
 	hsp = lerp(hsp,0,0.2)
 	tartimer++
 	if tartimer>200 {
@@ -176,6 +176,15 @@ if death {
 	go.hsp = tail_obj.hsp*0.4
 	go.vsp = tail_obj.vsp*0.4
 	go.spinspeed = random_range(20,100) * -sign(go.hsp)
+		
+	with cryptk_particle_spawner_obj {
+		xt=other.x
+		yt=other.y
+		ihsp = tail_obj.hsp
+		ivsp = tail_obj.vsp
+		num_to_spawn = 50
+		event_user(0)
+	}
 		
 	instance_destroy()	
 	

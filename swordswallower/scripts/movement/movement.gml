@@ -130,8 +130,11 @@ if held_release_timer>0 {
 	grav = start_grav	
 }
 if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vsp<max_vs {
-	
-	vsp += grav
+	if !wall_checker(x,y) && place_meeting(x,y,tar_obj) {
+		vsp = 1
+	} else {
+		vsp += grav
+	}
 }
 
 if tail_obj.moving_platform_bool {

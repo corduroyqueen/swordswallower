@@ -1,3 +1,3 @@
-tx = 34720
-ty = 3232
-obj = charger_obj
+tx = 0
+ty = 0
+obj = flyfree_obj

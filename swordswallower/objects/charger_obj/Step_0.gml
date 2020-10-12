@@ -234,12 +234,12 @@ if state==state_chasing {
 		if direc {
 			
 			hsp+=h_accel	
-			image_xscale = -1
+			image_xscale = 1
 			facing_right = true
 		} else {
 			
 			hsp-=h_accel	
-			image_xscale = 1
+			image_xscale = -1
 			facing_right = false
 			
 		}
@@ -305,7 +305,7 @@ if state==state_chasing {
 		hsp = lerp(hsp,0,0.05)
 		
 		
-		image_xscale = -sign(player_obj.x-x)
+		image_xscale = sign(player_obj.x-x)
 		if charge_timer>charge_go {
 			charge_timer=0
 			charging=true
@@ -327,9 +327,9 @@ if state==state_idle {
 	if facing_right{
 			
 	} else {
-		image_xscale = 1
+		image_xscale = -1
 	}
-	image_xscale = -1
+	image_xscale = 1
 	hitbox_on = true
 	if hunting && grounded {
 		if fade_in_t<=0 {
@@ -431,10 +431,10 @@ if locked {
 	x = startx
 	sprite_index = big_boi_wounded
 	if player_obj.x<x {
-		image_xscale = 1
+		image_xscale = -1
 		facing_right = false
 	} else {
-		image_xscale = -1
+		image_xscale = 1
 		facing_right = true
 	}
 }
