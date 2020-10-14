@@ -250,7 +250,7 @@ if level1_master.dev {
 	if keyboard_check_pressed(ord("H")){
 		wall_obj.visible = !wall_obj.visible
 		black_wall_obj.visible = !black_wall_obj.visible
-		spike.visible = !spike.visible
+		spike_obj.visible = !spike_obj.visible
 		thin_floor_obj.visible = !thin_floor_obj.visible
 	}
 	if keyboard_check_pressed(ord("U")){
@@ -262,6 +262,8 @@ if level1_master.dev {
 		y = 7000
 		x = 31700
 		y = 3400
+		x = 36600
+		y = 3000
 	}
 }
 

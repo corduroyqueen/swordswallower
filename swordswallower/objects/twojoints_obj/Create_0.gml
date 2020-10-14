@@ -28,6 +28,7 @@ attack_left_lunge = 1
 attack_right_lunge = 2
 attack_cough_flies = 3
 attack_cough_tar = 4
+attack_wall_hands = 5
 
 timer=0
 
@@ -37,3 +38,22 @@ sword_reject = true
 
 head = instance_create_depth(x,y,depth,twojoints_head_obj)
 
+
+h1_x = 37114
+h1_y = 2790
+h1 = instance_create_depth(h1_x,h1_y,depth+1,killbox)
+h1.image_xscale = 13.09
+
+
+h2_x = 37129
+h2_y = 3532
+h2 = instance_create_depth(h2_x,h2_y,depth+1,killbox)
+h2.image_angle = -3.29
+h2.image_xscale = 20
+
+h1.x = 1000
+h2.x = 1000
+h1.y = -1000
+h2.y = -1000
+
+ht=0

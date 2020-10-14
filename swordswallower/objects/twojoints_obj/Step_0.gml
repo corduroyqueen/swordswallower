@@ -14,12 +14,14 @@ if state==state_idle {
 	if state_timer>100 {
 		
 		if rightarm.destroy_arm {
-			attack = choose(3,4)
+			attack = choose(3,5)
+			
 		} else if leftarm.destroy_arm {
-			attack = choose(2,3,4)
+			attack = choose(2,3,5)
 			//attack = 2
 		} else {
-			attack = choose(1,3,4)
+			attack = choose(1,3,5)
+			attack = 5
 			//attack = 1
 		}
 		
@@ -92,6 +94,42 @@ if state==state_idle {
 			state = state_idle
 			state_timer = -100
 		}
+	} else if attack==attack_wall_hands {
+		
+		ht++
+		//h1.visible = true
+		//h2.visible = true
+		if ht>200 {
+			ht=0
+			h1.x = 1000
+			h1.y = -1000
+			h2.x = 1000
+			h2.y = -1000
+			h1.mask_index = noone
+			h2.mask_index = noone
+			if leftarm.destroy_arm && rightarm.destroy_arm {
+				state = state_mouthopen
+			} else {
+				state = state_idle
+				state_timer = 0
+			}
+		} else if ht>100 {
+			h1.mask_index = sprite54
+			h2.mask_index = sprite54
+			h1.image_alpha = 1
+			h2.image_alpha = 1
+		} else {
+			h1.mask_index = noone
+			h2.mask_index = noone
+			h1.image_alpha = 0.5
+			h2.image_alpha = 0.5
+			h1.x = h1_x
+			h1.y = h1_y
+			h2.x = h2_x
+			h2.y = h2_y
+		}
+		
+		
 	}
 	
 	

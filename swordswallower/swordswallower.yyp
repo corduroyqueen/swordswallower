@@ -935,6 +935,14 @@
             }
         },
         {
+            "Key": "0e2274de-5b69-42ac-ada5-accc186dca0a",
+            "Value": {
+                "id": "307d3287-36b1-4538-aa72-a48b30eddb7e",
+                "resourcePath": "sprites\\nothing1\\nothing1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0e83cceb-3622-4eed-a6aa-2d3338e2bd20",
             "Value": {
                 "id": "6311aced-5667-446d-8274-b625932f588d",
@@ -4794,7 +4802,7 @@
             "Key": "4d0b6ac6-d80f-4a34-ade2-e90b765faa1b",
             "Value": {
                 "id": "d731630a-21f3-4563-bb59-15f17e3ed460",
-                "resourcePath": "objects\/spike\/spike.yy",
+                "resourcePath": "objects\\spike_obj\\spike_obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -7356,6 +7364,14 @@
                 "id": "8ec627cd-bbec-4afe-b250-d6d6435d1cc8",
                 "resourcePath": "sprites\/handbug\/handbug.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "751940ff-04bf-4621-957c-00a862ed3800",
+            "Value": {
+                "id": "fce25441-5f7b-4e83-9cd9-daa540e4e9f3",
+                "resourcePath": "objects\\killbox\\killbox.yy",
+                "resourceType": "GMObject"
             }
         },
         {
