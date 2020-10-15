@@ -32,6 +32,7 @@ if speaking {
 	//sdm("speek")
 	
 	if current_dialogue == "end" {
+		spk_bool = false
 		//sdm("lellllllllllllllllllllllllllllllllllllllll")
 		speaking = false	
 		printing = false

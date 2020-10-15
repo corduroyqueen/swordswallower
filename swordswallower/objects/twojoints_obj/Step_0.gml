@@ -105,8 +105,8 @@ if state==state_idle {
 			h1.y = -1000
 			h2.x = 1000
 			h2.y = -1000
-			h1.mask_index = noone
-			h2.mask_index = noone
+			h1.mask_index = nothing1
+			h2.mask_index = nothing1
 			if leftarm.destroy_arm && rightarm.destroy_arm {
 				state = state_mouthopen
 			} else {
@@ -119,8 +119,8 @@ if state==state_idle {
 			h1.image_alpha = 1
 			h2.image_alpha = 1
 		} else {
-			h1.mask_index = noone
-			h2.mask_index = noone
+			h1.mask_index = nothing1
+			h2.mask_index = nothing1
 			h1.image_alpha = 0.5
 			h2.image_alpha = 0.5
 			h1.x = h1_x

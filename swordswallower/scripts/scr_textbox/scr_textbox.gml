@@ -151,9 +151,13 @@ if global.printTimer <= 0 && (global.txtIndex < txt_length+1) && printing {
     global.printTimer = global.maxPrintTimer;
     global.txtIndex++;
 }
+
+
+
 //Move onto next slide of text or exit dialogue
 if global.txtIndex >= txt_length && key_press
 {
+	
     //global.display_txt = "";
     txt = global.placeholderTxt;
     global.placeholderTxt = "";
@@ -161,7 +165,34 @@ if global.txtIndex >= txt_length && key_press
     global.txtIndex = 1;
     global.maxPrintTimer = txtSpeed;
 	printing = false
+	ui_manager.spk_bool = false
 }
+
+if global.txtIndex >= txt_length {
+	ui_manager.spk_bool = false
+} else {
+	if player_obj.k_speak_p {
+		global.display_txt = txt
+		global.printTimer = 0
+		global.txtIndex = txt_length+1
+	}
+	if global.txtIndex % 10 == 0 {
+	
+		audio_stop_sound(s_dia_sound)
+		var previd = s_dia_id
+		var l = ds_list_size(s_dia_talk_list)
+		while s_dia_id==previd {
+			s_dia_id = floor(random_range(0,l))
+		}
+	
+		s_dia_sound = s_dia_talk_list[| s_dia_id]
+		audio_sound_pitch(s_dia_sound,random_range(0.900,1.100))
+		audio_sound_gain(s_dia_sound,1.2,0)
+		audio_play_sound(s_dia_sound,0,false)
+	}
+
+}
+
 
 //Timer for speed at which characters print on screen
 if global.printTimer > 0 global.printTimer--;
@@ -211,14 +242,14 @@ global.display_txt,50,max_width);
 //draw_line_width(arrow_x-arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
 //draw_line_width(arrow_x+arrow_base_width_h,view_yview+view_hview,friendly_x-60,friendly_y+40,bw)
 
-if !printing {
+if !spk_bool {
 	ealpha = lerp(ealpha,1,0.2)
 } else {
 	ealpha = 0
 }
 
-txp = view_xview+view_wview-20
-typ = view_yview+view_hview-10
+txp = view_xview+view_wview-100
+typ = view_yview+view_hview-25
 
 draw_set_alpha(ealpha)
 

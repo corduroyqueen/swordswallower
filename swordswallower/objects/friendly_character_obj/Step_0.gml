@@ -89,30 +89,41 @@ if player_present && !boatboy {
 		view_xview = friendly_x-view_wview/2
 	}
 	if player_obj.k_speak_p {
-		ui_manager.speaking = true
-		ui_manager.printing = true
+		
 		if mapguy && !keybool {
 			mapguy_visited = true	
 		}
-		with ui_manager {
-			current_dialogue = ""
-			global.display_txt = ""
-			global.tboxActive = false;
-		    txt = global.txtCache;
-		    global.txtCache = "";
 		
-			txt = global.placeholderTxt;
-		    global.placeholderTxt = "";
-		    global.temp_placeholderTxt = "";
-		    global.txtIndex = 1;
+		
+		
+		if !ui_manager.spk_bool {
+			ui_manager.speaking = true
+			ui_manager.printing = true
+			ui_manager.spk_bool = true
+			ui_manager.s_dia_talk_list = dialogue_sound_list
+			with ui_manager {
+				current_dialogue = ""
+				global.display_txt = ""
+				global.tboxActive = false;
+			    txt = global.txtCache;
+			    global.txtCache = "";
+		
+				txt = global.placeholderTxt;
+			    global.placeholderTxt = "";
+			    global.temp_placeholderTxt = "";
+			    global.txtIndex = 1;
 			
-		}
+			}
+			
+			dialogue = dialogue_array[current_pick]
+			current_pick++
+			ui_manager.current_dialogue = dialogue
+		} 
+			
 		
-		dialogue = dialogue_array[current_pick]
-		current_pick++
-		ui_manager.current_dialogue = dialogue
-		if dialogue="end" {
+		if dialogue=="end" {
 			current_pick = 0	
+			spk_bool = false
 		}
 	}
 }
@@ -121,6 +132,7 @@ if (plf==true && player_present = false) || player_obj.ending_lock {
 	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
+	spk_bool = false
 	
 }
 if !in_camera_range_bigger(x,y) {

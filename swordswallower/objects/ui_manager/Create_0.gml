@@ -17,7 +17,7 @@ current_dialogue="my nam ei suti bticH im the best ever and dont u know it "
 speaking = false
 printing = true
 show_checkpoints = true
-
+spk_bool = false
 lel=-1
 
 font2 = font_add("lato.ttf",24,false,false,32,128)
@@ -43,3 +43,7 @@ friendly_y = 0
 
 view_wview = 500
 view_hview = 300
+
+s_dia_talk_list = ds_list_create()
+s_dia_id = 0
+s_dia_sound = false
