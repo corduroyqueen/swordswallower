@@ -26,13 +26,13 @@ collided_with_friend = false
 
 grav = .8
 yplusb=0
-h_accel = 1.7
+h_accel = 2.5
 
 h_decel_g = 0.35
 h_decel_a = 0.0375
 h_decel = 0
 
-h_walk_speed = 20
+h_walk_speed = 33
 h_max_speed = 33
 
 grabbing = false
@@ -90,10 +90,16 @@ sword_checked = false
 grabbed = false
 last_grounded_y = y
 
-alpha_spr = 0.85
+alpha_spr = 1
 
 fade_in_t = 0
 fade_in_a = 0
 
 hsp=0
 vsp=0
+horns = instance_create_depth(x+125,y+50,depth+1,cow_boss_horns_obj)
+horns.image_yscale = 2.6
+horns.visible = false
+//horns.image_yscale = 3
+//cow_boss_horns_obj.x = x + 400
+//cow_boss_horns_obj.y = y

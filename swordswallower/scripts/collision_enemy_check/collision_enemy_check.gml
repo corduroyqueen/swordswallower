@@ -347,7 +347,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			
 			return false
 			
-		} else if local_obj.state!=local_obj.state_knockback {
+		} else if local_obj.state==local_obj.state_idle {
 			//sword_reject_script()
 			//x = oldx
 			//x += local_obj.hsp*5
@@ -358,6 +358,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			
 			return false
 		} else {
+			local_obj.met= true
 			player_obj.shake_d=5
 			player_obj.camera_shake_d = true
 			tail_obj.charger_bool = true
@@ -392,7 +393,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				charge_timer=0
 				charging = false	
 			}
-			
+			return false
 			//local_obj.sword_lock = true
 			//local_obj.swordx = x - local_obj.x
 			//local_obj.swordy = y - local_obj.y

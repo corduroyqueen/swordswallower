@@ -21,7 +21,7 @@ if state==state_idle {
 			//attack = 2
 		} else {
 			attack = choose(1,3,5)
-			attack = 5
+			//attack = 5
 			//attack = 1
 		}
 		

@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+var xp2 = horns.x
+var yp2 = horns.y
+horns.x = 300
+horns.y = -300
 
 my_floor = instance_place(x,y+1,wall_obj)
 if !instance_exists(my_floor) {
@@ -262,7 +266,7 @@ if state==state_chasing {
 		
 		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		//sdm(hsp)
-		if wall_detect(x+hsp,y-5) {
+		if wall_detect(x+hsp+100*sign(hsp),y-5) {
 			
 			state = state_knockback
 			
@@ -340,7 +344,9 @@ if state==state_idle {
 		fade_in_a = clamp(fade_in_a,0,alpha_spr)
 		
 		
-		if fade_in_t>200 {
+		if fade_in_t>120
+		{
+			fade_in_a = alpha_spr
 			state = state_chasing	
 		}
 	}
@@ -360,55 +366,6 @@ if state==state_idle || state==state_hitting {
 		hsp-=sign(hsp) * h_decel
 		
 	}
-}
-
-if state==state_hitting {
-	if !locked {
-		//sprite_index = big_boi_attacking
-	}
-	hit_timer++
-	
-	
-	if hit_timer>5 {
-		if hit_timer<7 {
-			hit = instance_create_depth(x,y,0,golem_atk_collision_obj)
-			hit.image_xscale = image_xscale	
-		}
-		if !instance_exists(hit) && !hit_success {
-			hit_timer=100
-			hit_success = true
-			
-		} 
-		if instance_exists(hit) {
-			hit.x = x
-			hit.y = y
-		}
-		
-		
-		if hit_timer>30 {
-			//sprite_index = intimidating
-			if instance_exists(hit) {
-				instance_destroy(hit)	
-			}
-			//sprite_index = golem_idle
-		} else {
-			//sprite_index = golem_atk
-		
-		}
-		if hit_timer>50 {
-		//	state = state_idle
-			hit_timer = 0
-			hit_success = false
-		}
-	}
-} else {
-	if !locked {
-		//sprite_index = big_boi
-	}
-	if abs(x-player_obj.x)<250 {
-		//state=state_hitting	
-		//hit_timer = 10
-	}	
 }
 
 //if state==state_knockback {
@@ -459,7 +416,10 @@ if death {
 	if instance_exists(hit) {
 		instance_destroy(hit)	
 	}
+	instance_destroy(horns)	
 	instance_destroy()	
+	
+	
 }
 if sword_present {
 	sword_checked = true
@@ -495,4 +455,38 @@ hsp = clamp(hsp,-h_max_speed,h_max_speed)
 
 moveX(hsp)
 moveY(vsp)
+if death {
+	return
+}
+horns.x = xp2
+horns.y = yp2
 
+
+
+var xp = x
+var yp = y
+x = 200
+y = -200
+
+with horns {
+	hsp = other.hsp
+	vsp = 0
+	if other.image_xscale>0 {
+		if x<xp + 125 {
+			moving_plat_move(xp+125-x,vsp)
+		} else {
+			moving_plat_move(hsp,vsp)
+		}
+	} else {
+		if x>xp - 125 {
+			moving_plat_move(xp-125-x,vsp)
+		} else {
+			moving_plat_move(hsp,vsp)
+		}
+	}
+	
+}
+
+
+x = xp
+y = yp

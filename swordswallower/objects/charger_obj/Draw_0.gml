@@ -20,10 +20,10 @@ if state==state_knockback {
 } 
 
 
-var uTime = shader_get_uniform(shader_cow,"Time");
+//var uTime = shader_get_uniform(shader_cow,"Time");
 
-shader_set(shader_cow)
-shader_set_uniform_f(uTime,current_time/400)
+//shader_set(shader_cow)
+//shader_set_uniform_f(uTime,current_time/400)
 
 var ta
 if state==state_idle {
@@ -54,4 +54,4 @@ if hp>10 {
 }
 
 
-shader_reset()
+//shader_reset()

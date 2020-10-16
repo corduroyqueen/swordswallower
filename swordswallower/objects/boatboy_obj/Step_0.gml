@@ -67,6 +67,7 @@ if (plf==true && player_present = false) || player_obj.ending_lock {
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
 	
+	
 }
 
 plf = player_present

@@ -4111,6 +4111,14 @@
             }
         },
         {
+            "Key": "41cb9d7d-4961-42d5-9b84-1b1c05b3c9bb",
+            "Value": {
+                "id": "88f77bf1-2309-47f8-8669-36c4a03c415d",
+                "resourcePath": "objects\\cow_boss_horns_obj\\cow_boss_horns_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "41cc90c5-e88e-4530-a4ec-3fbd4295b924",
             "Value": {
                 "id": "c8434a96-e8a9-4286-88fa-3dfc8582a837",
