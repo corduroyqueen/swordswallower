@@ -2,6 +2,8 @@
 // You can write your code in this editor
 //surface_set_target(application_surface)
 blood_render()
+
+
 shader_set(shader_blood_alpha)
 u_blood_var = 4
 	
