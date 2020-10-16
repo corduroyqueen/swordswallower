@@ -14,10 +14,25 @@ var elbow_y = shoulder_y - dsin(tarang + bicep_ang) * arm_seg_length_1;
 arm_angle_1 = point_direction(shoulder_x, shoulder_y, elbow_x, elbow_y)
 //arm_angle_2 = point_direction(elbow_x,elbow_y,x_tar,y_tar)
 
+var direc = -player_sprite_obj.image_xscale
+var diff = 0
 
+//arm_angle_1+=360
+//tarang+=360
 
-
-
+if direc>0 {
+	if arm_angle_1>tarang {
+		diff = arm_angle_1 - tarang
+		arm_angle_1 -= diff * 2
+	}
+} else {
+	if arm_angle_1<tarang {
+		diff = arm_angle_1 - tarang
+		arm_angle_1 -= diff * 2
+	}
+}
+//arm_angle_1 = convert_angle(arm_angle_1)
+//tarang = convert_angle(tarang)
 
 elbow_pos_x = arm_pin_x + dcos(arm_angle_1) * arm_seg_length_1// * -sign(player_obj.x-tail_obj.x)
 elbow_pos_y = arm_pin_y - dsin(arm_angle_1) * arm_seg_length_1 //* sign(player_obj.x-tail_obj.x) 

@@ -144,8 +144,8 @@ draw_set_color(c_green)
 //draw_circle(shoulder_x,shoulder_y,6,false)
 draw_set_color(c_fuchsia)
 //draw_circle(elbow_pos_x+player_obj.x-150,elbow_pos_y+player_obj.y-150,6,false)
-sdm(shoulder_x)
-sdm(shoulder_y)
+//sdm(shoulder_x)
+//sdm(shoulder_y)
 draw_set_color(c_white)
 x=150
 y=150

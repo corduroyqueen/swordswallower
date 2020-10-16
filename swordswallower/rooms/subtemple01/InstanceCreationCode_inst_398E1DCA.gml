@@ -1,1 +1,0 @@
-partner = switch_wall_22
