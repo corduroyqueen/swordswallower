@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if master!=noone && !enter {
-	if !master.closed {
+	if !master.closed && bcheck {
 		enter = true
 		with master {
 			player_present = true
