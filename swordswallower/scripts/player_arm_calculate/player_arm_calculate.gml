@@ -3,9 +3,8 @@ y_tar = argument1
 shoulder_x = player_obj.x-150+arm_pin_x;
 shoulder_y = player_obj.y-150+arm_pin_y;
 var tarang = point_direction(shoulder_x,shoulder_y,x_tar,y_tar);
-var tar_dist = point_distance(shoulder_x,shoulder_y,x_tar,y_tar);
-var bicep_ang = arccos(clamp((power(tar_dist, 2) + power(arm_seg_length_1, 2) - power(arm_seg_length_2, 2)) / 
-							 (2 * tar_dist * arm_seg_length_1), -1, 1));
+var tar_dist = max(point_distance(shoulder_x,shoulder_y,x_tar,y_tar),0.0000000000000001)
+var bicep_ang = arccos(clamp((power(tar_dist, 2) + power(arm_seg_length_1, 2) - power(arm_seg_length_2, 2)) / (2 * tar_dist * arm_seg_length_1), -1, 1));
 bicep_ang = radtodeg(bicep_ang);
 
 var elbow_x = shoulder_x + dcos(tarang + bicep_ang ) * arm_seg_length_1;

@@ -3,7 +3,9 @@
 
 // Inherit the parent event
 event_inherited();
-
+ds_list_clear(dialogue_sound_list)
+ds_list_add(dialogue_sound_list,sound_empty)
+ds_list_add(dialogue_sound_list,sound_empty)
 dialogue = "theyve blocked the entrance to the temple :o "
 sprite_index = deathguy
 
@@ -26,3 +28,11 @@ dialogue_array[7] = false
 gravd = false
 
 ealpha = 0
+
+whispers = deathbankers141
+audio_sound_gain(whispers,0,0)
+
+whisp_emitter = audio_emitter_create()
+
+audio_play_sound_on(whisp_emitter,whispers,true,0)
+audio_emitter_gain(whisp_emitter,0)

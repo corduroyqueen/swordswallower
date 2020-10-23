@@ -68,6 +68,9 @@ if controller = controller_ds4 {
 	player_obj.k_speak_p = gamepad_button_check_pressed(0,gp_face3)
 	player_obj.k_speak_r = gamepad_button_check_released(0,gp_face3)
 	
+	if point_distance(mouse_x,mouse_y,mouse_x_last,mouse_y_last)>100 {
+		controller = controller_keyboard
+	}
 	
 } else if controller = controller_keyboard {
 //	display_mouse_set(mouse_x-player_obj.camx,mouse_y-player_obj.camy)
@@ -118,5 +121,12 @@ if controller = controller_ds4 {
 		k_speak_r = keyboard_check_released(ord("E"))
 	}
 	
-
+	if controller_present && point_distance(0,0,
+			gamepad_axis_value(0,gp_axisrh),
+			gamepad_axis_value(0,gp_axisrv))>0.3 {
+		controller = controller_ds4
+	}
 }
+
+mouse_x_last = mouse_x
+mouse_y_last = mouse_y

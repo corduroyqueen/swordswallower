@@ -182,7 +182,7 @@ if death {
 		yt=other.y
 		ihsp = tail_obj.hsp
 		ivsp = tail_obj.vsp
-		num_to_spawn = 50
+		num_to_spawn = 20
 		event_user(0)
 	}
 		

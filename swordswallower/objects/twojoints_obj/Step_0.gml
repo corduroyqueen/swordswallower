@@ -140,9 +140,8 @@ if state==state_idle {
 	if timer>150 {
 		head.image_index = 0
 		tail_obj.stuck_check = false
+		tail_obj.visible = true
 		
-		tail_obj.x = x
-		tail_obj.y = y + 400
 		if player_obj.k_fire_p {
 			timer=0
 			sword_pull_check()
@@ -176,10 +175,18 @@ if state==state_idle {
 		timer=0
 	}
 	var lel = false
+	var a = id
 	with head {
 		if place_meeting(x,y,tail_obj) {
 			lel = true
-			player_obj.tail_planted = true
+			var e = id
+			with tail_obj {
+				x = a.x
+				y = a.y + 400
+				visible = false
+				sword_plant(e)
+				
+			}
 		}
 	}
 	if lel {

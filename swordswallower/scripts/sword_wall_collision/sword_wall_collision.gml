@@ -13,8 +13,12 @@ if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
 	
 	if ds_list_size(player_obj.keylist)>=local_obj.lock && !lockcheck && local_obj.closed {
 		var yikes = ds_list_size(player_obj.keylist)
+		 
+		
+		
 		for(i=0;i<local_obj.lock;i++) {
-			instance_destroy(player_obj.keylist[| i])
+			player_obj.keylist[| i].unlocking = true
+			player_obj.keylist[| i].target = local_obj
 		}
 		var k = 0
 		templist = ds_list_create()
@@ -24,7 +28,7 @@ if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
 		}
 		player_obj.keylist = templist
 			
-		local_obj.closed = false
+		//local_obj.closed = false
 		hitpause = true
 		lockcheck=true
 		audio_play_sound(door_unlock_2,0,false)

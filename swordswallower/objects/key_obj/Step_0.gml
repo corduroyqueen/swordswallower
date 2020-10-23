@@ -1,6 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
 xpreva = x
+if flying_away {
+	x += dcos(ang) * 20
+	y -= dsin(ang) * 20
+	
+	if !in_camera_range_bigger(x,y) {
+		instance_destroy()
+	}
+	return
+}
+if unlocking {
+	
+	move_towards_point(target.x,target.y,20)
+	if point_distance(x,y,target.x,target.y)<25 {
+		target.closed = false
+		flying_away = true
+		ang = random_range(0,180)
+		hspeed=0
+		vspeed=0
+		
+	}
+	return;
+}
+
+
 if following {
 	if start {
 		x = checkpoint_manager.x - 10
@@ -10,7 +34,7 @@ if following {
 		start = false
 	}
 	if point_distance(x,y,player_obj.xpreva2,player_obj.ypreva2)<1280 {
-		x = lerp(x,player_obj.xpreva2,0.05)	
+		x = lerp(x,player_obj.xpreva2,random_range(0.03,0.07))	
 		y = lerp(y,player_obj.ypreva2-32,random_range(0.01,0.05))
 	}
 	

@@ -18,7 +18,21 @@ if level1_master.death_num>=50{
 	dialogue_array[3] = "There are always more to come. "
 	dialogue_array[4] = "end"
 }
-
+if point_distance(x,y,player_obj.camx+640,player_obj.camy+360)<1000 {
+	audio_sound_gain(whispers,1,0)
+	audio_emitter_gain(whisp_emitter,
+	clamp(0,abs(1000- point_distance(x,y,player_obj.camx+640,player_obj.camy+360))/1000,1000)/3
+			
+	)
+			
+	audio_emitter_position(whisp_emitter,
+	mean(x,player_obj.x,player_obj.x),
+	mean(x,player_obj.y,player_obj.y),
+	10)
+} else {
+	audio_sound_set_track_position(whispers,choose(0,5,7,10))
+	audio_emitter_gain(whisp_emitter,0)
+}
 
 if abs(x-player_obj.x)<300 && player_obj.y>2375 && player_obj.y<3600 {
 	player_present = true

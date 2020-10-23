@@ -2463,6 +2463,14 @@
             }
         },
         {
+            "Key": "25747f03-b6fe-4477-9074-ede332a0128b",
+            "Value": {
+                "id": "b79d011c-12ef-47f3-8208-227887ae2a49",
+                "resourcePath": "sounds\\pierce1_v_\\pierce1_v_.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "257c19bf-4a08-479c-8c32-049ae1999dda",
             "Value": {
                 "id": "7cac1e1e-85ae-41bf-a6a7-584e9e205c9b",
@@ -3663,6 +3671,14 @@
             }
         },
         {
+            "Key": "3b4f6856-63a4-4e71-a988-268dfec1b965",
+            "Value": {
+                "id": "8ffb2e85-6fab-49c9-a062-7d50a09c7713",
+                "resourcePath": "sounds\\pierce4_v_\\pierce4_v_.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "3b58a3d1-eddf-42a0-b522-30ee33334d5b",
             "Value": {
                 "id": "a5cfd121-6b18-4b74-81d4-419d52ca445e",
@@ -4292,6 +4308,14 @@
                 "id": "211f74c9-d514-4cf5-b54d-7874e8e28271",
                 "resourcePath": "objects\/spore_plant_proj_obj\/spore_plant_proj_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4475fd73-a806-4bb8-877f-948d19141949",
+            "Value": {
+                "id": "0f73c616-8584-4cc8-b303-bb684c527fbc",
+                "resourcePath": "sounds\\deathbankers\\deathbankers.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -6431,6 +6455,14 @@
             }
         },
         {
+            "Key": "65838ea4-c6e8-4b11-bece-dd20d504adc1",
+            "Value": {
+                "id": "ce9ae6f6-558c-437a-b403-62f852650d87",
+                "resourcePath": "sounds\\boatboy_v_1\\boatboy_v_1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "65856e13-138e-479d-a667-3e02a18de85c",
             "Value": {
                 "id": "df358b70-9b2f-46ac-8f29-369246213776",
@@ -6572,6 +6604,14 @@
                 "id": "972aeaa6-078b-48fc-81d3-f9f0ee68e9aa",
                 "resourcePath": "sprites\/shield_spr\/shield_spr.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "681e0b67-fb85-4422-9f46-ff738721575a",
+            "Value": {
+                "id": "b075155e-c173-4a2f-820b-4774c40d51a7",
+                "resourcePath": "sounds\\pierce2_v_\\pierce2_v_.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -7503,6 +7543,14 @@
             }
         },
         {
+            "Key": "75bdb9fc-c31f-4caa-b2ea-e318c6234bbc",
+            "Value": {
+                "id": "188d93aa-450a-4d03-9dee-50c9c77bb1e0",
+                "resourcePath": "sounds\\boatboy_v_4\\boatboy_v_4.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "7604b0f9-aadd-4bc7-9ab1-4d4611b40030",
             "Value": {
                 "id": "c248f9b1-b859-499b-8906-8792aa06f3f5",
@@ -7892,6 +7940,14 @@
                 "id": "cf654f59-a5a0-4b3d-ae18-ac2b7d04a369",
                 "resourcePath": "sounds\/meat10\/meat10.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "7b6e365d-95ac-4c84-a34c-b49b7fd7fd6e",
+            "Value": {
+                "id": "5cb914c8-9fa1-44c5-8b4f-dc181a4f89e6",
+                "resourcePath": "sprites\\doors_aniold\\doors_aniold.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -9799,6 +9855,14 @@
             }
         },
         {
+            "Key": "9fe8b8bd-6317-4da1-84c7-f5bd9c06e492",
+            "Value": {
+                "id": "6cc55bb1-2143-4d86-abb4-ff0551ea625f",
+                "resourcePath": "sprites\\spr_candle_s\\spr_candle_s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a02b18e7-4140-4293-a092-5ad7dcc8723b",
             "Value": {
                 "id": "023bb0e5-3d02-44b8-a683-1e428ee5ea65",
@@ -10332,6 +10396,14 @@
                 "id": "8c09fa98-136d-4331-a4fa-d9f755058658",
                 "resourcePath": "sprites\/bloodsplat_d_3\/bloodsplat_d_3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a9d69845-e882-4feb-b1ac-b9424014d29c",
+            "Value": {
+                "id": "692bc2a5-3f2e-4471-9fe4-6b6559593598",
+                "resourcePath": "sounds\\boatboy_v_3\\boatboy_v_3.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -11879,6 +11951,14 @@
             }
         },
         {
+            "Key": "ca8b9298-c55e-4679-9b3e-262d1f59df92",
+            "Value": {
+                "id": "b03b1892-f5ed-4acd-a77f-749e7b8ddcac",
+                "resourcePath": "sounds\\boatboy_v_2\\boatboy_v_2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "ca949035-2660-478b-89f8-f6bfac761211",
             "Value": {
                 "id": "de32df58-9123-4bd8-9cc6-25a9396f9b59",
@@ -12060,6 +12140,14 @@
                 "id": "6b422892-f92b-455a-a37e-82eb1af49299",
                 "resourcePath": "sprites\/sword4\/sword4.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cd696f97-a266-4966-a22b-02999ce82aa4",
+            "Value": {
+                "id": "d565c641-200a-41ab-8f14-753b83ad9205",
+                "resourcePath": "sounds\\sound_empty\\sound_empty.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -12412,6 +12500,14 @@
                 "id": "2c234337-be79-4f0b-9130-d1de42226cce",
                 "resourcePath": "sprites\/angelseggtree_spr_1\/angelseggtree_spr_1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d3501323-9f84-4ee4-b99f-8f0c67ca55c0",
+            "Value": {
+                "id": "3172c867-21dc-4a9e-951d-82100244c89b",
+                "resourcePath": "sounds\\deathbankers141\\deathbankers141.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -14159,6 +14255,14 @@
             }
         },
         {
+            "Key": "ef7bfc73-7e6a-4bad-9d5a-a6a2a3eb6d29",
+            "Value": {
+                "id": "70e7d1de-aca4-4c0d-ac27-9415d868640e",
+                "resourcePath": "sounds\\pierce3_v_\\pierce3_v_.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "efac4340-368e-43f8-9880-5dfb7853e45a",
             "Value": {
                 "id": "824917ad-6678-4a26-bdba-cfa9a2215fa1",
@@ -14515,6 +14619,14 @@
             "Value": {
                 "id": "d0d063d7-fe51-4fca-b97e-a28a3f92dc96",
                 "resourcePath": "sprites\/key_spr\/key_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f6db3014-3fa2-48b3-b427-72b4f170f82b",
+            "Value": {
+                "id": "b3551fb8-7f1a-42ec-96af-b885f4d5726a",
+                "resourcePath": "sprites\\blacksky1\\blacksky1.yy",
                 "resourceType": "GMSprite"
             }
         },

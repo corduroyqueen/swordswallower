@@ -96,12 +96,12 @@ blur_steps_v = 0.3
 //blood happens at 0.23
 bloom_threshold_v = 0.29
 
-bloom_threshold_v = 0.2
+//bloom_threshold_v = 0.2
 
 bloom_range_v = 0
 
 bloom_intensity_v = 0.41
-bloom_intensity_v = 0.5
+//bloom_intensity_v = 0.5
 
 bloom_darken_v = 0.0
 bloom_sat_v = 0.6

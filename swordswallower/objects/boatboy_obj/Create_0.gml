@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
+
+ds_list_clear(dialogue_sound_list)
+ds_list_add(dialogue_sound_list,boatboy_v_1)
+ds_list_add(dialogue_sound_list,boatboy_v_2)
+ds_list_add(dialogue_sound_list,boatboy_v_3)
+ds_list_add(dialogue_sound_list,boatboy_v_4)
+
 dialogue=""
 player_present = false
 plf = false

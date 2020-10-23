@@ -10,3 +10,8 @@ global.mousepx = cos(degtorad(mang))*650
 global.mousepy = sin(degtorad(mang))*650
 
 mang = 0
+
+controller_present = false
+
+mouse_x_last = mouse_x
+mouse_y_last = mouse_y

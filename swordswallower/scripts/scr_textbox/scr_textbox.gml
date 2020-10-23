@@ -187,7 +187,7 @@ if global.txtIndex >= txt_length {
 	
 		s_dia_sound = s_dia_talk_list[| s_dia_id]
 		audio_sound_pitch(s_dia_sound,random_range(0.900,1.100))
-		audio_sound_gain(s_dia_sound,1.2,0)
+		audio_sound_gain(s_dia_sound,20,0)
 		audio_play_sound(s_dia_sound,0,false)
 	}
 
