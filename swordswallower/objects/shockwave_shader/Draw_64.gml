@@ -54,6 +54,9 @@ shader_set(shader_bloom_lum);
 	
 	surface_set_target(srf_ping);
 	draw_surface(GUI, 0, 0);
+	//shader_reset()
+	
+	
 	surface_reset_target();
 	
 // 2nd pass: blur horizontally

@@ -141,10 +141,21 @@ if state==state_idle {
 		head.image_index = 0
 		tail_obj.stuck_check = false
 		tail_obj.visible = true
-		
+		tail_obj.x = x
+		tail_obj.y = y + 400
 		if player_obj.k_fire_p {
 			timer=0
+			tail_obj.planted_rejecting = false
 			sword_pull_check()
+			
+			instance_destroy()
+			
+			instance_destroy(leftarm)
+			
+			instance_destroy(rightarm)
+			instance_destroy(head)
+		}
+		if tail_obj.pull_timer>tail_obj.pull_wall_t || player_obj.tail_carry {
 			instance_destroy()
 			
 			instance_destroy(leftarm)
@@ -180,6 +191,7 @@ if state==state_idle {
 		if place_meeting(x,y,tail_obj) {
 			lel = true
 			var e = id
+			tail_obj.planted_rejecting = true
 			with tail_obj {
 				x = a.x
 				y = a.y + 400

@@ -189,7 +189,19 @@ if player_obj.tail_planted {
 		reset_intangibility()
 		
 		player_obj.c_slingtimer = 2.5
-		if !collision_line(player_obj.tail_dest_x,player_obj.tail_dest_y,player_obj.x,player_obj.y,wall_obj,false,true){
+		if planted_rejecting {
+			player_obj.zoom_timer_bool = false
+			player_obj.zoom_timer = 0
+			player_obj.bounced = false
+			player_obj.zoom_ctdn = 0
+			player_obj.held_position_ready = false
+			held_release_timer = 0
+			//sdm("ok")
+			player_obj.hsp *= -1
+			player_obj.vsp = -5
+			player_obj.hsp = clamp(player_obj.hsp,-25,25)
+			player_obj.vsp = clamp(player_obj.vsp,-25,25)
+		} else if !collision_line(player_obj.tail_dest_x,player_obj.tail_dest_y,player_obj.x,player_obj.y,wall_obj,false,true){
 			//sdm("d")
 			fucking_wall_thing()
 			

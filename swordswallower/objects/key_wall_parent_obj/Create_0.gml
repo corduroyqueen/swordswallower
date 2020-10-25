@@ -11,3 +11,4 @@ closed = true
 mask_index = -1
 
 start = true
+unlocking = false

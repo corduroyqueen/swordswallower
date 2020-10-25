@@ -11,7 +11,7 @@ if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
 	}
 } else if object_get_parent(local_obj.object_index)==key_wall_parent_obj {
 	
-	if ds_list_size(player_obj.keylist)>=local_obj.lock && !lockcheck && local_obj.closed {
+	if ds_list_size(player_obj.keylist)>=local_obj.lock && !lockcheck && local_obj.closed && !local_obj.unlocking {
 		var yikes = ds_list_size(player_obj.keylist)
 		 
 		
@@ -28,7 +28,7 @@ if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
 		}
 		player_obj.keylist = templist
 			
-		//local_obj.closed = false
+		local_obj.unlocking = true
 		hitpause = true
 		lockcheck=true
 		audio_play_sound(door_unlock_2,0,false)

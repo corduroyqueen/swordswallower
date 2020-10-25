@@ -77,6 +77,9 @@ held_pos_ang = 0
 
 thrown_ang = 0
 
+planted_rejecting = false
+planted_stuck = false
+
 hsp=0
 vsp=0
 

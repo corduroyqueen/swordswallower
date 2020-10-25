@@ -14,14 +14,8 @@ if !destroy {
 	if !in_camera_range_bigger(tx,ty) {
 		return
 	}
-	draw_set_color(c_white)
-	draw_set_alpha(1)
-	var s = random_range(0.1,0.3)
-	gpu_set_blendmode(bm_add)
-	draw_sprite_ext(blood_sprite_spr1,0,x,y,s,s,0,c_red,0.15)
-	draw_sprite_ext(blood_sprite_spr1,0,x,y,s*0.1,s*0.1,0,c_red,0.1)
-	draw_sprite_ext(blood_sprite_spr11,0,x,y,s,s,0,c_red,0.1)
-	gpu_set_blendmode(bm_normal)
+	
+	
 	
 
 	// SET VALUES:

@@ -66,7 +66,10 @@
 //gpu_set_colorwriteenable(true,true,true,true)
 //surface_reset_target()
 
-
+surface_set_target(light_surface)
+draw_clear_alpha(c_black,0)
+draw_lights()
+surface_reset_target()
 
 
 //tex_art = surface_get_texture(art_surface)
@@ -90,6 +93,8 @@ draw_surface(art_surface,player_obj.camx,player_obj.camy)
 //gpu_set_blendenable(true)
 //shader_reset()
 
+
+
 tex_art = surface_get_texture(art_surface)
 texture_set_stage(shader_art_surface, tex_art);
 shader_set(shader_blood_alpha_surface)
@@ -97,7 +102,16 @@ shader_set_uniform_f(u_blood_r2,global.blood_cr)
 shader_set_uniform_f(u_blood_g2,global.blood_cg)
 shader_set_uniform_f(u_blood_b2,global.blood_cb)
 draw_surface(blood_splat_surface,player_obj.camx,player_obj.camy)
+
 shader_reset()
+
+
+gpu_set_blendmode(bm_add)
+texture_set_stage(shader_art_surface2, tex_art);
+shader_set(shader_light_alpha_surface)
+draw_surface(light_surface,player_obj.camx,player_obj.camy)
+shader_reset()
+gpu_set_blendmode(bm_normal)
 
 
 //gpu_set_blendmode(bm_normal)

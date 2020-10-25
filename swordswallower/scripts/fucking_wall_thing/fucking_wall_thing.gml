@@ -5,8 +5,8 @@ player_obj.x = player_obj.tail_dest_x
 player_obj.y = player_obj.tail_dest_y
 //audio_play_sound(grab1,0,false)
 			
-			
-reset_intangibility()
+			sdm("hall")
+//reset_intangibility()
 
 if !player_obj.k_dash
 || current_obj.object_index==impale_circle_obj
@@ -24,16 +24,16 @@ if !player_obj.k_dash
 	
 	//sdm("ok")
 	player_obj.hsp *= 0.8
-		player_obj.vsp *= 0.8
-		out_of_dash_t=10
-		player_obj.hsp = clamp(player_obj.hsp,-25,25)
-		player_obj.vsp = clamp(player_obj.vsp,-25,25)
-		if place_meeting(x,y,hum_food_obj) {
-			current_obj.death = true
-		}
-		if current_obj.object_index==circle_friend_obj {
-			current_obj.active = false
-		}
+	player_obj.vsp *= 0.8
+	out_of_dash_t=10
+	player_obj.hsp = clamp(player_obj.hsp,-25,25)
+	player_obj.vsp = clamp(player_obj.vsp,-25,25)
+	if place_meeting(x,y,hum_food_obj) {
+		current_obj.death = true
+	}
+	if current_obj.object_index==circle_friend_obj {
+		current_obj.active = false
+	}
 	if player_hitbox_check_obj.down_wall && abs(player_hitbox_check_obj.y-player_obj.y)<8 {
 		hsp*=0.2
 	}

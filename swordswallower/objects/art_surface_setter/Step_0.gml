@@ -6,6 +6,9 @@ if !surface_exists(art_surface) {
 if (!surface_exists(blood_splat_surface)) {
 	blood_splat_surface = surface_create(1920,1080)
 }
+if (!surface_exists(light_surface)) {
+	light_surface = surface_create(1920,1080)
+}
 
 var xp = -player_obj.camx
 var yp = -player_obj.camy

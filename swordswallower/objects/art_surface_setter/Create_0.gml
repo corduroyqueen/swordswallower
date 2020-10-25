@@ -11,7 +11,9 @@ splat_list_s = ds_list_create()
 
 blood_splat_surface = surface_create(1920,1080)
 shader_art_surface = shader_get_sampler_index(shader_blood_alpha_surface, "artSurface");
+shader_art_surface2 = shader_get_sampler_index(shader_light_alpha_surface, "artSurface");
 
+light_surface = surface_create(1920,1080)
 //layer_script_begin("level_art", layer_surface_script_start);
 //layer_script_end("level_art", layer_surface_script_end);
 

@@ -1,4 +1,4 @@
-if !tail_obj.state_stuck {
+if !tail_obj.state_stuck && !tail_obj.planted_rejecting {
 	player_obj.tail_pulling = true
 	
 	player_obj.tail_planted = false
