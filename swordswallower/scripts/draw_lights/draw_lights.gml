@@ -12,7 +12,14 @@ with candle_obj {
 	if !destroy {
 		//draw_sprite_ext(blood_sprite_spr1,0,x-xc,y-yc,s,s,0,bc,0.7)
 		//draw_sprite_ext(blood_sprite_spr1,0,x-xc,y-yc,s*0.1,s*0.1,0,bc,0.7)
-		draw_sprite_ext(blood_sprite_spr11,0,x-xc,y-yc,s*10,s*10,0,bc,0.7)
+		
+		draw_sprite_ext(blood_sprite_spr11,0,x-xc,y-yc,s*10,s*10,0,bc,light_strength_walls)
+		
+		draw_set_color(bc)
+		draw_set_alpha(light_strength_walls)
+		draw_circle(x-xc,y-yc,50*s*10*light_radius,false)
+		draw_set_color(c_white)
+		draw_set_alpha(1)
 	}
 	//draw_sprite_ext(scary_skull,0,x,y,20,20,0,c_white,1)
 		
@@ -23,7 +30,14 @@ with checkpoint1 {
 	if checkpoint_manager.checkpoint == self && !starting_bool {
 		//draw_sprite_ext(blood_sprite_spr1,0,x+s_x-xc,y+s_y-yc,s,s,0,bc,0.7)
 		//draw_sprite_ext(blood_sprite_spr1,0,x+s_x-xc,y+s_y-yc,s*0.1,s*0.1,0,bc,0.7)
-		draw_sprite_ext(blood_sprite_spr11,0,x+s_x-xc,y+s_y-yc,s*10,s*10,0,bc,0.55)
+		
+		draw_sprite_ext(blood_sprite_spr11,0,x+s_x-xc,y+s_y-yc,s*10,s*10,0,bc,light_strength_walls)
+		
+		draw_set_color(bc)
+		draw_set_alpha(light_strength_walls*0.05)
+		draw_circle(x+s_x-xc,y+s_y-yc,50*s*10*light_radius,false)
+		draw_set_color(c_white)
+		draw_set_alpha(1)
 	}
 	//draw_sprite_ext(scary_skull,0,x,y,20,20,0,c_white,1)
 		

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+gpu_set_colorwriteenable(true,true,true,false)
 
 if player_obj.tail_carry || player_obj.tail_planted {
 	met = false	
@@ -15,7 +16,21 @@ if !destroy {
 		return
 	}
 	
-	
+	var bc = global.blood_color
+	bc = make_color_rgb(255*2,255*0.6,255*0.8)
+		
+	//draw_circle(x+s_x,y+s_y,70+random_range(-5,5),false)
+	//var s = random_range(0.8,1.5)
+	//draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.magic_color,0.08)
+	//draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s*0.1,s*0.1,0,global.magic_color,0.1)
+	//draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s,s,0,c_fuchsia,0.05)
+	var s = random_range(1.45,1.5)
+	draw_set_color(bc)
+		draw_set_alpha(light_strength_bkd*0.05)
+		draw_circle(x,y,50*s*10*light_radius,false)
+	//draw_sprite_ext(blood_sprite_spr11,0,x,y,s*10,s*10,0,bc,light_strength_bkd)
+	draw_set_color(c_white)
+	draw_set_alpha(1)
 	
 
 	// SET VALUES:
@@ -52,3 +67,5 @@ if !destroy {
 		init = false
 	}	
 }
+
+gpu_set_colorwriteenable(true,true,true,true)

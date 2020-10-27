@@ -41,18 +41,28 @@ if setpoint {
 		//draw_sprite_ext(redblur,0,x+s_x,y+s_y,6,6,0,c_white,0.125)
 		draw_set_alpha(0.2)
 		draw_set_color(global.blood_color)
+		var bc = global.blood_color
+		bc = make_color_rgb(255*2,255*0.6,255*0.8)
 		flame_object.tx = x+s_x
 		flame_object.ty = y+s_y
+		
 		//draw_circle(x+s_x,y+s_y,70+random_range(-5,5),false)
-		var s = random_range(0.8,1.5)
-		draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.magic_color,0.08)
-		draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s*0.1,s*0.1,0,global.magic_color,0.1)
-		draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s,s,0,c_fuchsia,0.05)
-
+		//var s = random_range(0.8,1.5)
+		//draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.magic_color,0.08)
+		//draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s*0.1,s*0.1,0,global.magic_color,0.1)
+		//draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s,s,0,c_fuchsia,0.05)
+		var s = random_range(1.45,1.5)
+		draw_set_color(bc)
+		draw_set_alpha(light_strength_bkd*0.05)
+		draw_circle(x+s_x,y+s_y,50*s*10*light_radius,false)
+		bc = make_color_rgb(255*1,255*0.6,255*0.8)
+		draw_set_color(c_fuchsia)
+		draw_circle(x+s_x,y+s_y,50*s*light_radius,false)
+		draw_sprite_ext(blood_sprite_spr11,0,x+s_x,y+s_y,s*10,s*10,0,bc,light_strength_bkd)
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 
-		draw_sprite_ext(light_circle,0,x+s_x,y+s_y,0.5,0.5,0,c_white,ok)
+		//draw_sprite_ext(light_circle,0,x+s_x,y+s_y,0.5,0.5,0,c_white,ok)
 		
 		
 		gpu_set_blendmode(bm_normal)
