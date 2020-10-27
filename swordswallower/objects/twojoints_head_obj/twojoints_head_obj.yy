@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "twojoints_head_obj",
     "eventList": [
-        
+        {
+            "id": "c7c2bc87-03b8-48d5-872a-e3b8ad93ece5",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
+            "m_owner": "a3528bad-4aca-491f-b2fb-2058dcc41440"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -24,6 +33,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "efac4340-368e-43f8-9880-5dfb7853e45a",
+    "spriteId": "c244203c-73b8-4f53-b74b-e1f0a01967f5",
     "visible": true
 }

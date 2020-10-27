@@ -1298,7 +1298,7 @@
             "Key": "137d42ce-0a13-4cf6-bc04-5479a3d54303",
             "Value": {
                 "id": "c5432d09-2638-4b78-95ee-414e2761e7fa",
-                "resourcePath": "sprites\\arm3\\arm3.yy",
+                "resourcePath": "sprites\\boss_arm3\\boss_arm3.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1746,7 +1746,7 @@
             "Key": "199a6597-9856-459f-b9ec-80349a6c1be4",
             "Value": {
                 "id": "9e5993fc-3f42-496d-a0b5-521649e58035",
-                "resourcePath": "sprites\\body\\body.yy",
+                "resourcePath": "sprites\\boss_body\\boss_body.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8178,7 +8178,7 @@
             "Key": "7febeaed-7435-41b0-8d10-957bdd6321f1",
             "Value": {
                 "id": "865f2328-99bf-48df-a810-c528f046116b",
-                "resourcePath": "sprites\\arm2\\arm2.yy",
+                "resourcePath": "sprites\\boss_arm2\\boss_arm2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -10498,7 +10498,7 @@
             "Key": "aa972e00-40ed-494e-9567-f4b009b173ba",
             "Value": {
                 "id": "c4bfc996-00b3-4e28-aba6-ac31747e82b3",
-                "resourcePath": "sprites\\arm1\\arm1.yy",
+                "resourcePath": "sprites\\boss_arm1\\boss_arm1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -11594,7 +11594,7 @@
             "Key": "c244203c-73b8-4f53-b74b-e1f0a01967f5",
             "Value": {
                 "id": "d2e095dd-524e-4b64-a96e-0d855ff9bc68",
-                "resourcePath": "sprites\\head\\head.yy",
+                "resourcePath": "sprites\\boss_head\\boss_head.yy",
                 "resourceType": "GMSprite"
             }
         },

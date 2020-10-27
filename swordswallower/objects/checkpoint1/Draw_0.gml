@@ -43,6 +43,7 @@ if setpoint {
 		draw_set_color(global.blood_color)
 		var bc = global.blood_color
 		bc = make_color_rgb(255*2,255*0.6,255*0.8)
+		
 		flame_object.tx = x+s_x
 		flame_object.ty = y+s_y
 		
