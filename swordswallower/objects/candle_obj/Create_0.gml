@@ -10,9 +10,9 @@ d_type = 3
 /// @description Insert description here
 // You can write your code in this editor
 /// @description Init
-light_strength_bkd = 0.2
-light_strength_walls = 0.6
-light_radius = 0.5
+light_strength_bkd = 0.3
+light_strength_walls = 0.55
+light_radius = 0.25
 
 
 //-----------------------------------------------------------------------------

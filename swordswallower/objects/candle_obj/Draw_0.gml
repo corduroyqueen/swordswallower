@@ -30,6 +30,15 @@ if !destroy {
 		draw_circle(x,y,50*s*10*light_radius,false)
 	//draw_sprite_ext(blood_sprite_spr11,0,x,y,s*10,s*10,0,bc,light_strength_bkd)
 	draw_set_color(c_white)
+	draw_set_alpha(0.1)
+	
+	
+	bc = make_color_rgb(255*1,255*0.6,255*0.8)
+	draw_set_color(bc)
+	
+	draw_circle(x,y,25*s*light_radius,false)
+	draw_sprite_ext(blood_sprite_spr11,0,x,y,s*10,s*10,0,bc,light_strength_bkd)
+	draw_set_color(c_white)
 	draw_set_alpha(1)
 	
 

@@ -20,7 +20,11 @@ if (moveXPos != 0 || moveYPos != 0) {
 			if isRiding_movplat(other) {
 				with other {
 					//sdm("FUCK")
-					ds_list_add(riding_list,other)
+					if object_get_parent(object_index)==moving_hazard_obj {
+						other.hp-=3
+					} else {
+						ds_list_add(riding_list,other)
+					}
 				}
 			}
 		}
@@ -53,7 +57,11 @@ if (moveXPos != 0 || moveYPos != 0) {
 					
 			        //Push right 
 					with actor {
-						moveX(other.o_bbox_right - bbox_left + other.moveXPos + 1)
+						if object_get_parent(other.object_index)==moving_hazard_obj {
+							hp-=3
+						} else {
+							moveX(other.o_bbox_right - bbox_left + other.moveXPos + 1)
+						}
 					}
 			    } else if ds_list_find_index(riding_list,actor)>-1 { 
 			        //Carry right 
@@ -70,8 +78,14 @@ if (moveXPos != 0 || moveYPos != 0) {
 				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self)
 		        { 
 					//Push left 
+					
+					
 					with actor {
-						moveX(other.o_bbox_left - bbox_right + other.moveXPos - 1)
+						if object_get_parent(other.object_index)==moving_hazard_obj {
+							hp-=3
+						} else {
+							moveX(other.o_bbox_left - bbox_right + other.moveXPos - 1)
+						}
 					}
 		        } else if ds_list_find_index(riding_list,actor)>-1 { 
 					//Carry left 
@@ -97,7 +111,11 @@ if (moveXPos != 0 || moveYPos != 0) {
 				&& (actor.object_index!=tail_obj || tail_obj.current_obj!=self) { 
 			        //Push down
 					with actor {
-						moveY(other.o_bbox_bottom - bbox_top + other.moveYPos+ 1)
+						if object_get_parent(other.object_index)==moving_hazard_obj {
+							hp-=3
+						} else {
+							moveY(other.o_bbox_bottom - bbox_top + other.moveYPos+ 1)
+						}
 					}
 			    } else if ds_list_find_index(riding_list,actor)>-1 { 
 			        //Carry down
@@ -114,7 +132,11 @@ if (moveXPos != 0 || moveYPos != 0) {
 		        { 
 					//Push up
 					with actor {
-						moveY(other.o_bbox_top - bbox_bottom + other.moveYPos - 1)
+						if object_get_parent(other.object_index)==moving_hazard_obj {
+							hp-=3
+						} else {
+							moveY(other.o_bbox_top - bbox_bottom + other.moveYPos - 1)
+						}
 					}
 		        } else if ds_list_find_index(riding_list,actor)>-1 { 
 					//Carry up 

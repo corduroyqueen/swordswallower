@@ -71,5 +71,5 @@ s_x = sprites_x[sv]
 s_y = sprites_y[sv]
 
 light_strength_bkd = 0.3
-light_strength_walls = 0.6
+light_strength_walls = 0.55
 light_radius = 0.5

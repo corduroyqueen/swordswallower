@@ -16,7 +16,7 @@ with candle_obj {
 		draw_sprite_ext(blood_sprite_spr11,0,x-xc,y-yc,s*10,s*10,0,bc,light_strength_walls)
 		
 		draw_set_color(bc)
-		draw_set_alpha(light_strength_walls)
+		draw_set_alpha(light_strength_walls*0.05)
 		draw_circle(x-xc,y-yc,50*s*10*light_radius,false)
 		draw_set_color(c_white)
 		draw_set_alpha(1)

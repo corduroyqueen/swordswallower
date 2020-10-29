@@ -28,7 +28,7 @@ if death {
 	} else if state==state_searching {
 		atk_timer++
 		
-		if !wall_raycast_checker(player_obj) {
+		if !wall_raycast_checker(player_obj) || point_distance(x,y,player_obj.x,player_obj.y)>1900 {
 			atk_timer=-1
 			if audio_is_playing(venus_searching_1) {
 				audio_stop_sound(venus_searching_1)	

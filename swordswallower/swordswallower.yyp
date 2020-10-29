@@ -11511,6 +11511,14 @@
             }
         },
         {
+            "Key": "c049b979-5c4f-44e9-8f6c-027b000aadbe",
+            "Value": {
+                "id": "1eb618eb-f6f5-4d6c-be00-40dc47c224bb",
+                "resourcePath": "objects\\moving_hazard_obj\\moving_hazard_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c095f40c-c805-44cf-8888-c8fb6d9ee0ea",
             "Value": {
                 "id": "46295c09-a19c-478d-89ee-0d04142e78b2",

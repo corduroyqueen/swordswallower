@@ -1,5 +1,6 @@
 //fuck yes
 
+/*
 for(i=0;i<num_to_spawn;i++) {
 	
 	ds_list_add(particles_x,xt)

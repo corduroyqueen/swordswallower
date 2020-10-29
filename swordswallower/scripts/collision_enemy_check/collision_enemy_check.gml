@@ -362,6 +362,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			player_obj.shake_d=5
 			player_obj.camera_shake_d = true
 			tail_obj.charger_bool = true
+			sword_reject_script()
 			//audio_play_sound(sword_thud_1,0,false)
 			//planted = true
 			with local_obj {
