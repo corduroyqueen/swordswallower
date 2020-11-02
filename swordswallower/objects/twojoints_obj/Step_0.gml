@@ -148,6 +148,8 @@ if state==state_idle {
 			tail_obj.planted_rejecting = false
 			sword_pull_check()
 			
+			instance_create_depth(x,y,-999999999999,title_screen_obj)	
+			
 			instance_destroy()
 			
 			instance_destroy(leftarm)

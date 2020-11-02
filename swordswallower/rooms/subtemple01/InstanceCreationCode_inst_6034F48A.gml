@@ -1,3 +1,3 @@
 master = ending_box_boss_collision
-endx = x
-endy = y+300
+endx = x+400
+endy = y

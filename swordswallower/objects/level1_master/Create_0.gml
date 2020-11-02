@@ -132,6 +132,23 @@ global.magic_cg = 0.47
 global.magic_cb = 0.46
 global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*global.magic_cb)
 
+
+enemy_blood_reds = ds_list_create()
+
+ds_list_add(enemy_blood_reds,make_color_rgb(121,11,59))
+ds_list_add(enemy_blood_reds,make_color_rgb(121,11,44))
+ds_list_add(enemy_blood_reds,make_color_rgb(174,39,61))
+ds_list_add(enemy_blood_reds,make_color_rgb(153,14,14))
+ds_list_add(enemy_blood_reds,make_color_rgb(217,4,0))
+ds_list_add(enemy_blood_reds,make_color_rgb(193,28,25))
+ds_list_add(enemy_blood_reds,make_color_rgb(95,12,11))
+ds_list_add(enemy_blood_reds,make_color_rgb(94,33,21))
+ds_list_add(enemy_blood_reds,make_color_rgb(60,15,9))
+ds_list_add(enemy_blood_reds,make_color_rgb(175,10,10))
+ds_list_add(enemy_blood_reds,make_color_rgb(232,73,73))
+ds_list_add(enemy_blood_reds,make_color_rgb(194,49,49))
+ds_list_add(enemy_blood_reds,make_color_rgb(133,19,19))
+
 //0.9, 0.0, 0.3 neon pink
 
 

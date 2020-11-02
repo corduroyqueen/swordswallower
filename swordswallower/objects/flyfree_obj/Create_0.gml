@@ -60,4 +60,4 @@ idle_t_m = random_range(30,70)
 //	y-=1	
 //}
 
-blood_color = make_color_rgb(255,0,0)
+//blood_color = make_color_rgb(255,0,0)

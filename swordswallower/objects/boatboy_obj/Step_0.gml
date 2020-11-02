@@ -61,7 +61,7 @@ if player_present {
 }
 
 
-if (plf==true && player_present = false) || player_obj.ending_lock {
+if (plf==true && player_present = false) {//|| player_obj.ending_lock {
 	//sdm("please")
 	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"

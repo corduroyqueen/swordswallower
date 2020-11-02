@@ -128,7 +128,7 @@ if player_present && !boatboy {
 	}
 }
 
-if (plf==true && player_present = false) || player_obj.ending_lock {
+if (plf==true && player_present = false) {//|| player_obj.ending_lock {
 	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"
 	current_pick = 0

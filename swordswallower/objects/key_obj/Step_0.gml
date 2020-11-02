@@ -16,6 +16,10 @@ if unlocking {
 	if point_distance(x,y,target.x,target.y)<25 {
 		target.closed = false
 		flying_away = true
+		if player_obj.tail_planted && tail_obj.current_obj==target.id {
+			player_obj.tail_planted = false
+			player_obj.tail_pulling = true
+		}
 		ang = random_range(0,180)
 		hspeed=0
 		vspeed=0
