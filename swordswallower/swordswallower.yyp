@@ -5943,6 +5943,14 @@
             }
         },
         {
+            "Key": "5cf30d08-6d90-46c4-b03f-9c67545d0abf",
+            "Value": {
+                "id": "4b7ba0a2-64ec-48c2-92c0-341dfb185ba7",
+                "resourcePath": "objects\\sim_tentacle_obj\\sim_tentacle_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5cfae5dd-c35d-4ea3-8173-9ee5389d98ae",
             "Value": {
                 "id": "b632b4f7-8cdd-42a9-8e56-dd22533f06a2",
@@ -11827,6 +11835,14 @@
             "Value": {
                 "id": "b3723a4f-8fac-4612-b026-fc644f1c585e",
                 "resourcePath": "objects\/hummingbird_obj\/hummingbird_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c661fdfb-e14c-40b9-9e4b-28ef9e2a3b29",
+            "Value": {
+                "id": "ea9ea59f-64e9-4c02-bb1e-cea6fb59904b",
+                "resourcePath": "objects\\sim_chain_obj\\sim_chain_obj.yy",
                 "resourceType": "GMObject"
             }
         },
