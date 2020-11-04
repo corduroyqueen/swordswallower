@@ -4807,6 +4807,14 @@
             }
         },
         {
+            "Key": "4b19d74f-6dec-49a8-a9f5-ea328e387aa2",
+            "Value": {
+                "id": "41146fdb-cca6-447d-92dc-a13c58b858a6",
+                "resourcePath": "sprites\\spr_evilbranch\\spr_evilbranch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4b210d24-e77b-45a7-9d8a-bc88a8017bb3",
             "Value": {
                 "id": "9ae2d61d-0274-4fbf-be9d-d771acd22a88",
@@ -6354,7 +6362,7 @@
             "Key": "61e43a00-8e3f-4a87-9c00-a9efe5208b89",
             "Value": {
                 "id": "a994391e-179d-4c60-8e2c-b2e2bd15f545",
-                "resourcePath": "sprites\\floor\\floor.yy",
+                "resourcePath": "sprites\\spr_bossfloor\\spr_bossfloor.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -13626,7 +13634,7 @@
             "Key": "e1fd21b9-6b28-4d7e-8724-252b87b6c8bc",
             "Value": {
                 "id": "5e626106-4f68-487e-90c9-413b410705d6",
-                "resourcePath": "sprites\\wall\\wall.yy",
+                "resourcePath": "sprites\\spr_bosswall\\spr_bosswall.yy",
                 "resourceType": "GMSprite"
             }
         },
