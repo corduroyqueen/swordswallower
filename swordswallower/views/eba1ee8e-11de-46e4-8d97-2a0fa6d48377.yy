@@ -8,7 +8,9 @@
         "7febeaed-7435-41b0-8d10-957bdd6321f1",
         "137d42ce-0a13-4cf6-bc04-5479a3d54303",
         "199a6597-9856-459f-b9ec-80349a6c1be4",
-        "c244203c-73b8-4f53-b74b-e1f0a01967f5"
+        "c244203c-73b8-4f53-b74b-e1f0a01967f5",
+        "14e461b5-5466-41de-aee3-6dd34e2be963",
+        "e88a75e3-d317-461a-840c-548e4abb8050"
     ],
     "filterType": "GMSprite",
     "folderName": "bossart",
