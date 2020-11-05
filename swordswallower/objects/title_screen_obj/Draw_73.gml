@@ -3,14 +3,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 timer++
-if timer<9000 && timer>750 {
+if timer<9000 && timer>150 {
 	alpha+=0.002
 }
 
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
 
-if timer>2500 {
+if timer>1250 {
 	fade_alpha+=0.002
 
 	draw_set_alpha(fade_alpha)
@@ -20,7 +20,7 @@ if timer>2500 {
 	reflection_obj.image_alpha = 1 - fade_alpha
 }
 
-if timer>4000 {
+if timer>2000 {
 	game_end()	
 }
 draw_set_alpha(1)
