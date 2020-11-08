@@ -21,12 +21,14 @@ var diff = 0
 
 if direc>0 {
 	if arm_angle_1>tarang {
-		diff = arm_angle_1 - tarang
+		//diff = arm_angle_1 - tarang
+		diff = angle_difference(arm_angle_1,tarang)
 		arm_angle_1 -= diff * 2
 	}
 } else {
 	if arm_angle_1<tarang {
-		diff = arm_angle_1 - tarang
+		//diff = arm_angle_1 - tarang
+		diff = angle_difference(arm_angle_1,tarang)
 		arm_angle_1 -= diff * 2
 	}
 }
