@@ -2463,6 +2463,14 @@
             }
         },
         {
+            "Key": "24202d04-1446-40fa-a33c-2626b9a452cf",
+            "Value": {
+                "id": "a2ee1bf4-cb78-49e6-a807-37672a9f99d2",
+                "resourcePath": "sprites\\newfloor1093\\newfloor1093.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2420968a-5b3c-4f6b-92f0-93d332d3de5b",
             "Value": {
                 "id": "806ff23c-96e1-4ce4-b7bd-131f096c1a59",
@@ -3604,6 +3612,14 @@
                 "id": "4bf011c1-b3bd-4e17-a3e4-261af280a958",
                 "resourcePath": "views\/379828ff-575a-42e3-ae6a-1cd70e3c103d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "37a2176e-3f16-4fd5-afc5-f3c814c4b41c",
+            "Value": {
+                "id": "82cdf00f-8129-4516-bd62-abee3c2db91d",
+                "resourcePath": "sprites\\red\\red.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -6044,6 +6060,14 @@
                 "id": "fbccaf60-b1c6-4082-bece-cd10b56286dd",
                 "resourcePath": "sounds\/FXhome_com_Fighting_Swing_Sound_02_02\/FXhome_com_Fighting_Swing_Sound_02_02.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5bee9645-37b0-4ef5-af34-a64e6b6f2d4d",
+            "Value": {
+                "id": "053d40ce-6fb7-4e7d-8229-2db984542ecc",
+                "resourcePath": "sprites\\Layer_139\\Layer_139.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12740,6 +12764,14 @@
                 "id": "7d714904-8e9b-47b9-bba6-47ff733b9803",
                 "resourcePath": "scripts\/blood_render\/blood_render.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d0ee5c3a-444e-458d-ba8d-5b98e9918fa0",
+            "Value": {
+                "id": "8c694b32-99f9-4e4f-9eee-3c296bbdb962",
+                "resourcePath": "sprites\\brown\\brown.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
