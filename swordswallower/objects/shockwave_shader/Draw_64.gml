@@ -53,7 +53,11 @@ shader_set(shader_bloom_lum);
 	shader_set_uniform_f(u_bloom_range,			bloom_range);
 	
 	surface_set_target(srf_ping);
+	draw_clear_alpha(c_black,0)
+	//draw_surface(art_surface_setter.ass_setter,0,0) // level, blood splats, lights
+	//draw_surface(blood_surface,0,0) // blood
 	draw_surface(GUI, 0, 0);
+	unblooming_script()
 	//shader_reset()
 	
 	
@@ -69,6 +73,7 @@ shader_set(shader_blur);
 	shader_set_uniform_f(u_texel_size,		texel_w, texel_h);
 	
 	surface_set_target(srf_pong);
+	draw_clear_alpha(c_black,0)
 		draw_surface(srf_ping, 0, 0);
 	surface_reset_target();
 	

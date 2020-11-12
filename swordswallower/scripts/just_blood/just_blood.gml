@@ -25,6 +25,10 @@ for (i=0;i<(amount+40);i++){
 		blood_color = global.blood_color
 	}
 	particle.image_blend = blood_color
+	sdm(speedx)
+	sdm(speedy)
+	sdm(point_direction(0,0,speedx,speedy))
+	angle = 90
 	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10
 	
 	

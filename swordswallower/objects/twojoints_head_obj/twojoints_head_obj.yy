@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "twojoints_head_obj",
     "eventList": [
-        {
-            "id": "c7c2bc87-03b8-48d5-872a-e3b8ad93ece5",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "a3528bad-4aca-491f-b2fb-2058dcc41440"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

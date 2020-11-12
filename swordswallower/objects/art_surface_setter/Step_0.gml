@@ -9,6 +9,16 @@ if (!surface_exists(blood_splat_surface)) {
 if (!surface_exists(light_surface)) {
 	light_surface = surface_create(1920,1080)
 }
+if !surface_exists(ass_setter) {
+	ass_setter = surface_create(1920,1080)
+}
+
+surface_set_target(art_surface)
+if !player_obj.death || player_obj.respawn_timer>58 {
+	draw_clear_alpha(c_black,0)
+	
+}
+surface_reset_target()
 
 var xp = -player_obj.camx
 var yp = -player_obj.camy
