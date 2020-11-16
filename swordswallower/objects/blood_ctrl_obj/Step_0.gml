@@ -1,4 +1,8 @@
 //fuck yes
+if blood_num<1 {
+	return
+}
+
 for (var l=0;l<blood_num;l++) {
 	surrounded = false
 	var px = blood_px[| l]
@@ -29,7 +33,8 @@ for (var l=0;l<blood_num;l++) {
 		hsp+=random_range(-10,10)
 		vsp+=random_range(-10,10)
 	}
-	
+	image_xscale = scalevar
+	image_yscale = scalevar
 	amt = hsp
 	xRemainder = 0
 	xRemainder += amt
@@ -38,7 +43,7 @@ for (var l=0;l<blood_num;l++) {
 		xRemainder -= move
 		move_dir = sign(move)
 		while move != 0 {
-			if !wall_detect_solids(px+move_dir,py) {
+			if !position_detect_solids(px+move_dir,py) {
 				px += move_dir
 				move -= move_dir
 			} else {
@@ -58,7 +63,7 @@ for (var l=0;l<blood_num;l++) {
 		yRemainder -= move
 		move_dir = sign(move)
 		while move != 0 {
-			if !wall_detect_solids(px,py+move_dir) {
+			if !position_detect_solids(px,py+move_dir) {
 				py += move_dir
 				move -= move_dir
 			} else {
@@ -74,7 +79,7 @@ for (var l=0;l<blood_num;l++) {
 
 	scale += bounce_vel
 	
-	image_yscale = rval+(rval-image_xscale)
+	//image_yscale = rval+(rval-image_xscale)
 	
 	
 	blood_px[| l] = px
@@ -82,6 +87,7 @@ for (var l=0;l<blood_num;l++) {
 	blood_phsp[| l] = hsp
 	blood_pvsp[| l] = vsp
 	blood_ps[| l] = scale
+	blood_ps[| l] = 0.5
 	
 	blood_p_bounce[| l] = bounce_vel
 	blood_p_refs[| l] = rval
@@ -107,15 +113,24 @@ for (var l=0;l<blood_num;l++) {
 }
 
 
+
 var td_size = ds_list_size(to_delete)
-blood_num -= td_size
+if td_size<1 {
+	return
+}
+
+sdm("start")
+sdm(ds_list_size(blood_px))
+sdm(blood_num)
 for(var i=0;i<td_size;i++) {
 	var p = to_delete[| i]
-	var px = blood_px[| p]
-	var py = blood_py[| p]
-	
+	var px2 = blood_px[| p]
+	var py2 = blood_py[| p]
+	sdm(p)
+	sdm(px2)
+	sdm(py2)
 	var sxs = blood_ps[| p]
-	var spr = layer_sprite_create(layer_get_id("blood_splat"),blood_px[| p],blood_py[| p],blood_splat_lel2)
+	var spr = layer_sprite_create(layer_get_id("blood_splat"),px2,py2,blood_splat_lel2)
 	layer_sprite_angle(spr,random_range(0,360))
 	layer_sprite_xscale(spr,sxs)
 	layer_sprite_yscale(spr,sxs)
@@ -146,4 +161,5 @@ for(var i=0;i<td_size;i++) {
 	ds_list_delete(blood_p_refs,p)
 	ds_list_delete(blood_p_life,p)
 }
+blood_num -= td_size
 ds_list_clear(to_delete)

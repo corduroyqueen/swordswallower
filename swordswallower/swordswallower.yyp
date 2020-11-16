@@ -1455,6 +1455,14 @@
             }
         },
         {
+            "Key": "15b62268-2832-48b4-8b57-ef8ba7a67064",
+            "Value": {
+                "id": "53294f3a-1fb9-4081-a4ba-a8db115c0e8e",
+                "resourcePath": "scripts\\position_detect_solids\\position_detect_solids.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "15b68329-a27e-4ca0-9a5e-c5e7ff4c9c99",
             "Value": {
                 "id": "cae526d5-342b-4fbc-8cc2-f9c4cbf5bd36",
@@ -15784,6 +15792,7 @@
         "cecf7a68-4f2a-4c6c-ba20-9e41b16eefef",
         "66005e90-a9be-4570-9ce5-043b601e254d",
         "b18b25db-57c3-4493-9664-7d75c5a18017",
+        "15b62268-2832-48b4-8b57-ef8ba7a67064",
         "079e1b58-7425-44de-b8f2-fd51de219136",
         "1ece7cb8-e7d1-4c94-b64c-d562bc118d21",
         "3f98014e-962f-41e9-8e61-a54e90257ad5",
