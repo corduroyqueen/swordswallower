@@ -12,37 +12,24 @@ blood_splat_script()
 amount/=2
 for (i=0;i<(amount+40);i++){
 	
-	
-	particle = instance_create_depth(x,y,-1,blood_obj)
-	
-	
-	
 	var scalevar = (amount+40-i)/(amount+40) * 1.1
 	var angle = point_direction(0,0,speedx,speedy)
-	particle.image_xscale = scalevar
-	particle.image_yscale = scalevar
-	if !variable_instance_exists(id,"blood_color") {
-		blood_color = global.blood_color
-	}
-	particle.image_blend = blood_color
-	sdm(speedx)
-	sdm(speedy)
-	sdm(point_direction(0,0,speedx,speedy))
-	angle = 90
-	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10
 	
-	
-	//+ random_range(-3,3) *
-	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
-	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
+	with blood_ctrl_obj {
+		event_user(1)
+		var n = blood_num-1
+		blood_px[| n] = other.x
+		blood_py[| n] = other.y
+		blood_ps[| n] = scalevar
+		blood_pbs[|n] = scalevar
+		blood_p_bounce[|n] = scalevar * random_range(0.7,1.4)
+		if !variable_instance_exists(id,"blood_color") {
+			blood_color = global.blood_color
+		}
+		blood_pc[| n] = blood_color
+		blood_phsp[| n] = cos(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10
+		blood_pvsp[| n] = -sin(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10 - 5 
 		
-	particle.vsp = -sin(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-i) * 10 - 5 
-	particle.hsp = clamp(particle.hsp,-20,20)
-	particle.vsp = clamp(particle.vsp,-20,20)
-	//+ random_range(-3,3) *
-	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
-	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
-	particle.scalevar = scalevar
-	
+	}
 	
 }

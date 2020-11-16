@@ -17,16 +17,24 @@ var cy =player_obj.camy
 
 
 gpu_set_blendmode(bm_add)
-with blood_obj {
-	draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.95,image_yscale*0.95,rot,image_blend,0.55)
+//with blood_obj {
+//	draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.95,image_yscale*0.95,rot,image_blend,0.55)
+//}
+with blood_ctrl_obj {
+	for(var i=0;i<blood_num;i++) {
+		draw_sprite_ext(blood_sprite_new1,0,blood_px[|i]-cx,blood_py[|i]-cy,blood_ps[|i]*0.95,blood_p_refs[|i]+(blood_p_refs[|i]-blood_ps[|i])*0.95,0,blood_pc[|i],0.55)
+	}
 }
-
 gpu_set_blendmode(bm_normal);
 gpu_set_colorwriteenable(1,1,1,0);
-with blood_obj {
-	draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.95,image_yscale*0.95,rot,image_blend,0.55)
+//with blood_obj {
+//	draw_sprite_ext(blood_sprite_new1,0,x-cx,y-cy,image_xscale*0.95,image_yscale*0.95,rot,image_blend,0.55)
+//}
+with blood_ctrl_obj {
+	for(var i=0;i<blood_num;i++) {
+		draw_sprite_ext(blood_sprite_new1,0,blood_px[|i]-cx,blood_py[|i]-cy,blood_ps[|i]*0.95,blood_p_refs[|i]+(blood_p_refs[|i]-blood_ps[|i])*0.95,0,blood_pc[|i],0.55)
+	}
 }
-
 gpu_set_colorwriteenable(1,1,1,1)
 //shader_set(shader_blood_alpha)
 //gpu_set_colofrwriteenable(true,true,true,true)

@@ -2719,6 +2719,14 @@
             }
         },
         {
+            "Key": "27566716-cea0-4d7f-aad9-bed50e7d2444",
+            "Value": {
+                "id": "84eb3f1e-c1c2-4af4-b539-cf2c62ad43e0",
+                "resourcePath": "scripts\\just_blood_old\\just_blood_old.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "27926d8f-adfd-492d-b2d2-323a9906fa9b",
             "Value": {
                 "id": "5f72b8cb-6283-42d4-8640-9009cbbb30d7",
@@ -5631,6 +5639,14 @@
             }
         },
         {
+            "Key": "5649119d-d4e6-489c-b9bc-632e148aa4a3",
+            "Value": {
+                "id": "5dfb5dda-a6b6-415c-9a3e-1c07fcac793f",
+                "resourcePath": "scripts\\moveBloodPX\\moveBloodPX.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "56500e6c-2106-4f98-9de0-a1f34fe01d29",
             "Value": {
                 "id": "724d02b9-044f-4d69-be62-f6226ae74c6d",
@@ -5812,6 +5828,14 @@
                 "id": "5704f03b-3add-458f-a9f3-b32ac7f5d751",
                 "resourcePath": "objects\/nonsolid_parent_obj\/nonsolid_parent_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "58dd622c-b867-42ec-944f-65a5aa47a74d",
+            "Value": {
+                "id": "22726e83-708c-4b35-aa8d-39d9552abeb4",
+                "resourcePath": "scripts\\just_blood_input_old\\just_blood_input_old.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -13231,6 +13255,14 @@
             }
         },
         {
+            "Key": "d9ddbcf6-016e-4c67-ba69-f53405dccd0a",
+            "Value": {
+                "id": "cb7a0e87-1af9-4a75-bb74-39c3c9d19e21",
+                "resourcePath": "objects\\blood_ctrl_obj\\blood_ctrl_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d9e3984b-864d-4b09-af5d-e94db55e03bf",
             "Value": {
                 "id": "db91df51-e5c6-471e-8067-5a1a2e468604",
@@ -15519,6 +15551,14 @@
             }
         },
         {
+            "Key": "fecdd860-9f76-4ac3-b812-42d245151cf4",
+            "Value": {
+                "id": "bdbd2335-167d-41b9-bc30-37eb3770fe2a",
+                "resourcePath": "scripts\\moveBloodPY\\moveBloodPY.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ff34b5a4-0b99-4632-bb43-f82c03d2d850",
             "Value": {
                 "id": "6ca2ec9f-3e91-458c-bbb2-feae09d64d57",
@@ -15650,7 +15690,9 @@
         "e231fb73-9a83-4927-b5cb-766936f99055",
         "cd43eb10-4374-486d-afe4-23ee0c6fc601",
         "1b648012-d5f0-442e-b786-01f5c34f1c1b",
+        "27566716-cea0-4d7f-aad9-bed50e7d2444",
         "11abcfcc-2531-41c7-a306-1df26c26f61e",
+        "58dd622c-b867-42ec-944f-65a5aa47a74d",
         "816ae4d9-b798-454d-a697-3a9d2b225f64",
         "1840628c-c4a8-4a43-9c97-3124d43875fa",
         "1eb1d5f5-f01d-42d4-a368-f77d5944af00",
@@ -15734,6 +15776,8 @@
         "bf9d0260-aa6e-4622-b9e4-88aa55ef4226",
         "627ccd0f-d04f-4159-a663-5626e92feaa3",
         "32929399-09e4-4d7a-b607-a7a86c451717",
+        "5649119d-d4e6-489c-b9bc-632e148aa4a3",
+        "fecdd860-9f76-4ac3-b812-42d245151cf4",
         "c1cba5d2-7c8d-479e-b84e-37e7c472c3f7",
         "40e6b07c-37d9-480e-9462-02e8f2ee0fbf",
         "cfdb7e6f-fc46-4958-ac62-e46c02f7e210",
