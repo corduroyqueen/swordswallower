@@ -20,7 +20,7 @@ if (moveXPos != 0 || moveYPos != 0) {
 			if isRiding_movplat(other) {
 				with other {
 					//sdm("FUCK")
-					if object_get_parent(object_index)==moving_hazard_obj {
+					if object_get_parent(object_index)==moving_hazard_obj && variable_instance_exists(other.id,"hp") {
 						other.hp-=3
 					} else {
 						ds_list_add(riding_list,other)
@@ -57,7 +57,7 @@ if (moveXPos != 0 || moveYPos != 0) {
 					
 			        //Push right 
 					with actor {
-						if object_get_parent(other.object_index)==moving_hazard_obj {
+						if object_get_parent(other.object_index)==moving_hazard_obj && variable_instance_exists(id,"hp"){
 							hp-=3
 						} else {
 							moveX(other.o_bbox_right - bbox_left + other.moveXPos + 1)
@@ -81,7 +81,7 @@ if (moveXPos != 0 || moveYPos != 0) {
 					
 					
 					with actor {
-						if object_get_parent(other.object_index)==moving_hazard_obj {
+						if object_get_parent(other.object_index)==moving_hazard_obj && variable_instance_exists(id,"hp") {
 							hp-=3
 						} else {
 							moveX(other.o_bbox_left - bbox_right + other.moveXPos - 1)

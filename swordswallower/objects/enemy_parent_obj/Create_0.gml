@@ -6,5 +6,5 @@ hp = 1
 hsp=0
 vsp=0
 met = false
-blood_color = level1_master.enemy_blood_reds[| floor(random_range(0,14))]
+blood_color = level1_master.enemy_blood_reds[| irandom_range(0,12)]
 sword_reject = false

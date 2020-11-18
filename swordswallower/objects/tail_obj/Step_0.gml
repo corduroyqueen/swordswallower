@@ -360,6 +360,13 @@ if player_obj.fire_active {
 } else {
 	fire_timer = 0
 }
+if instance_exists(current_obj) {
+	sdm("leeeeeeee")
+	sdm(current_obj)
+	sdm(current_obj.object_index)
+	sdm(object_get_name(current_obj))
+	sdm(object_get_name(current_obj.object_index))
+}
 
 if current_obj==moving_platform_obj {
 			

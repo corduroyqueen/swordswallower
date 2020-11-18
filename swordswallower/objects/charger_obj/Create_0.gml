@@ -52,7 +52,7 @@ facing_right = true
 
 sword_present = false
 
-h_accel = .12
+h_accel = .15
 h_walk_speed = 11
 	
 
@@ -99,7 +99,8 @@ hsp=0
 vsp=0
 horns = instance_create_depth(x+125,y+50,depth+1,cow_boss_horns_obj)
 horns.image_yscale = 2.6
-horns.visible = false
+//horns.visible = false
+
 //horns.image_yscale = 3
 //cow_boss_horns_obj.x = x + 400
 //cow_boss_horns_obj.y = y

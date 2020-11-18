@@ -266,7 +266,7 @@ if state==state_chasing {
 		
 		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		//sdm(hsp)
-		if abs(hsp)>15 && wall_detect(x+hsp+100*sign(hsp),y-5) {
+		if abs(hsp)>5 && wall_detect(x+hsp+100*sign(hsp),y-5) {
 			
 			state = state_knockback
 			

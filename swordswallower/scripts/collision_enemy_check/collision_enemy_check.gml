@@ -344,7 +344,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			var bruh = lettuce_chop
 			audio_sound_pitch(bruh,random_range(0.75,1.25))
 			audio_play_sound(bruh,0,false)
-			
+			local_obj.met = true
 			return false
 			
 		} else if local_obj.state==local_obj.state_idle {

@@ -211,10 +211,11 @@ if state==state_idle {
 		state = state_swallowing
 	}
 }
-
-if state==state_mouthopen {
-	head.image_angle = lerp(head.image_angle,-60,0.1)
-} else {
-	head.image_angle = lerp(head.image_angle,0,0.1)
+if instance_exists(head) {
+	if state==state_mouthopen {
+		head.image_angle = lerp(head.image_angle,-120,0.1)
+	} else {
+		head.image_angle = lerp(head.image_angle,0,0.1)
+	}
 }
 

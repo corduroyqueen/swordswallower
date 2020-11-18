@@ -6,15 +6,17 @@ if intangible {
 	
 	if player_obj.tail_planted {
 		if tail_obj.current_obj==obj {
+			sdm("yes")
 			return true	
 		}
 	} else if player_obj.held_position {
 		
 		if tail_obj.current_obj==obj {
-			
+			sdm("yes")
 			return true	
 		}
 	}
+	sdm("wut")
 } else if place_meeting(x,y+2,obj)  {
 	return true
 } else if object_index==player_hitbox_check_obj {
