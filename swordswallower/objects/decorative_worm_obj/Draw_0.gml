@@ -19,7 +19,7 @@ if retracted {
 	}
 	//image_alpha = 0.5
 }
-image_alpha = choose(0,0.05,0.5,0.55,0.6,0.65,0.7,0.75,0.8)
+//image_alpha = choose(0,0.05,0.5,0.55,0.6,0.65,0.7,0.75,0.8)
 spr_index = clamp(spr_index,0,image_number-1)
 image_index = floor(spr_index)
 draw_self()

@@ -27,7 +27,7 @@ for (i=0;i<(amount+40);i++){
 		}
 		blood_pc[| n] = blood_color
 		blood_phsp[| n] = cos(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10
-		blood_pvsp[| n] = -sin(degtorad(angle+random_range(-30,30))) * (amount+20)/(amount+41-other.i) * 10 - 5 
+		blood_pvsp[| n] = -sin(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10 - 5 
 		
 	}
 	

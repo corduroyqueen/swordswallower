@@ -48,11 +48,13 @@ if player_obj.x>38448 {
 }
 
 if player_present { 
-	with ui_manager {
-		friendly_x = other.x
-		friendly_y = other.y - 50
-		view_xview = friendly_x-view_wview/2
-		//sdm(friendly_x)
+	if !player_obj.ending_lock {
+		with ui_manager {
+			friendly_x = other.x
+			friendly_y = other.y - 50
+			view_xview = friendly_x-view_wview/2
+			//sdm(friendly_x)
+		}
 	}
 	if (player_obj.k_speak_p || !boatboyenter) && !player_obj.ending_lock {
 		event_user(0)

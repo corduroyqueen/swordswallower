@@ -30,7 +30,7 @@ target_obj = false
 
 on_wall = false
 
-detect_range = 750
+detect_range = 1080
 
 startpx = x
 startpy = y

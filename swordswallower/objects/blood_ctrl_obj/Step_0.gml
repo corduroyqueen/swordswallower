@@ -123,7 +123,7 @@ sdm("start")
 sdm(ds_list_size(blood_px))
 sdm(blood_num)
 for(var i=0;i<td_size;i++) {
-	var p = to_delete[| i]
+	var p = to_delete[| i] - i
 	var px2 = blood_px[| p]
 	var py2 = blood_py[| p]
 	sdm(p)

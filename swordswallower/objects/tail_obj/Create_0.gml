@@ -4,6 +4,7 @@ event_inherited()
 outline_init()
 
 h=0
+hp=0
 cca = 5
 tspeed = 69
 pspeed = 69

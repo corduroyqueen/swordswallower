@@ -11,7 +11,7 @@ if state==state_idle {
 	
 	state_timer++
 	
-	if state_timer>100 {
+	if state_timer>50 {
 		
 		if rightarm.destroy_arm {
 			attack = choose(3,5)
@@ -99,7 +99,7 @@ if state==state_idle {
 		ht++
 		//h1.visible = true
 		//h2.visible = true
-		if ht>200 {
+		if ht>120 {
 			ht=0
 			h1.x = 1000
 			h1.y = -1000
@@ -113,7 +113,7 @@ if state==state_idle {
 				state = state_idle
 				state_timer = 0
 			}
-		} else if ht>100 {
+		} else if ht>80 {
 			h1.mask_index = sprite54
 			h2.mask_index = sprite54
 			h1.image_alpha = 1
@@ -189,6 +189,7 @@ if state==state_idle {
 	}
 	var lel = false
 	var a = id
+	
 	with head {
 		if place_meeting(x,y,tail_obj) {
 			lel = true
@@ -209,5 +210,11 @@ if state==state_idle {
 		rightarm.state = rightarm.state_idle
 		state = state_swallowing
 	}
+}
+
+if state==state_mouthopen {
+	head.image_angle = lerp(head.image_angle,-60,0.1)
+} else {
+	head.image_angle = lerp(head.image_angle,0,0.1)
 }
 
