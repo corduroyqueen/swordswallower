@@ -213,7 +213,7 @@ if state==state_idle {
 }
 if instance_exists(head) {
 	if state==state_mouthopen {
-		head.image_angle = lerp(head.image_angle,-120,0.1)
+		head.image_angle = lerp(head.image_angle,-160,0.1)
 	} else {
 		head.image_angle = lerp(head.image_angle,0,0.1)
 	}

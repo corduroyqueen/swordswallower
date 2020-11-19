@@ -41,6 +41,7 @@ head = instance_create_depth(x,y,depth,twojoints_head_obj)
 
 h1_x = 37114
 h1_x = 63190
+h1_x = 66490
 h1_y = 2790
 h1 = instance_create_depth(h1_x,h1_y,depth+1,killbox)
 h1.image_xscale = 13.09
@@ -48,6 +49,7 @@ h1.image_xscale = 13.09
 
 h2_x = 37129
 h2_x = 63205
+h2_x = 66505
 h2_y = 3532
 h2 = instance_create_depth(h2_x,h2_y,depth+1,killbox)
 h2.image_angle = -3.29

@@ -89,7 +89,7 @@ if !done {
 	}
 	
 	
-	if x>(startx+500) && go {
+	if x>(startx+1000) && go {
 		
 		if !init_talk || player_obj.k_speak_p {
 			init_talk = true
