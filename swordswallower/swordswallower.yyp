@@ -1418,7 +1418,7 @@
             "Key": "14e461b5-5466-41de-aee3-6dd34e2be963",
             "Value": {
                 "id": "a15c2e11-5a66-4b1e-8056-28d9de73f221",
-                "resourcePath": "sprites\\curledhands\\curledhands.yy",
+                "resourcePath": "sprites\\bosshand2\\bosshand2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -14506,7 +14506,7 @@
             "Key": "e88a75e3-d317-461a-840c-548e4abb8050",
             "Value": {
                 "id": "955a011d-464b-4ecb-bf57-ef285b4a6b14",
-                "resourcePath": "sprites\\hand2\\hand2.yy",
+                "resourcePath": "sprites\\bosshand1\\bosshand1.yy",
                 "resourceType": "GMSprite"
             }
         },

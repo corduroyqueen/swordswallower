@@ -46,9 +46,9 @@ if state==state_idle {
 	var lerp1
 	var lerp2
 	timer++
-	if timer<80 {
-		lerp1 = 0.002
-		lerp2 = 0.0005
+	if timer<40 {
+		lerp1 = 0.0025
+		lerp2 = 0.00055
 		
 		if player_obj.grounded {
 			elbow_tarang = 195
@@ -246,10 +246,12 @@ hand.y = seg_y[2]
 
 if state==state_knockback || (state==state_lunging && timer>80) || state==state_recovery {
 	hand.sprite_index = two_jointed_arm_out_t1
+	hand.sprite_index = bosshand1
 	hand.mask_index = two_jointed_arm_out_t1
 	hand.image_angle = lel_angle
 } else {
 	hand.sprite_index = two_jointed_arm_t1
+	hand.sprite_index = bosshand2
 	hand.mask_index = two_jointed_arm_t1
 	hand.image_angle = 0
 	
