@@ -279,14 +279,6 @@
             }
         },
         {
-            "Key": "03938ec8-7b78-42e2-b9cb-5530f21eca9d",
-            "Value": {
-                "id": "edbf6f8a-0a75-4f42-b205-4fec042da6bd",
-                "resourcePath": "sprites\\Layer_202\\Layer_202.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "03aefcc2-3413-4500-b508-6116408bbf6a",
             "Value": {
                 "id": "2440bc93-6973-4d79-ada7-95b3e26e60ef",
@@ -1315,14 +1307,6 @@
             "Value": {
                 "id": "bff22eca-f556-42c9-ad93-396fabd6e14a",
                 "resourcePath": "sprites\/player_crouching_s\/player_crouching_s.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "13742153-b53c-4153-adb4-8cbc7d1aec4e",
-            "Value": {
-                "id": "eb58eb25-83c1-4d12-bdc8-2910815d9b2b",
-                "resourcePath": "sprites\\Layer_203\\Layer_203.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5023,6 +5007,14 @@
             }
         },
         {
+            "Key": "4b45de4a-472e-46f1-8b02-6d1575c6c084",
+            "Value": {
+                "id": "a494b92e-0979-4cb9-8e2d-943aaac48680",
+                "resourcePath": "sprites\\Layer_1921128\\Layer_1921128.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4b4d6149-6c16-41c4-87a7-fe87089cb27e",
             "Value": {
                 "id": "3b3e8e78-5faf-43c6-9176-2bc180e9d46c",
@@ -5420,6 +5412,14 @@
                 "id": "1dd25c62-4469-4f8c-9470-d429fae842b3",
                 "resourcePath": "views\/518d5919-8dfb-4735-8585-3a113e99f91c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "51d14768-460c-4788-a41d-1bcc751730cd",
+            "Value": {
+                "id": "fa46c965-e309-40ad-bd87-7c2480e74116",
+                "resourcePath": "sprites\\Layer_2021126\\Layer_2021126.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -10863,6 +10863,14 @@
             }
         },
         {
+            "Key": "a89536cd-991b-41df-a853-176118698751",
+            "Value": {
+                "id": "6a15e0f4-9ca7-4b96-8e87-793cabcd1256",
+                "resourcePath": "sprites\\Layer_2031129\\Layer_2031129.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a8b9a91a-88eb-4c12-85cc-4fef26e2fab2",
             "Value": {
                 "id": "8d376901-0c33-4fb6-b903-fd8a31bd1d91",
@@ -13831,6 +13839,14 @@
             }
         },
         {
+            "Key": "dec018e4-c3d4-4c7f-a24e-a68b05e26dba",
+            "Value": {
+                "id": "3666d92c-d8e5-46a8-a2ce-bb1518ed5ebb",
+                "resourcePath": "sprites\\Layer_2031124\\Layer_2031124.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dec020fc-1813-4244-815b-d37dcf286d3c",
             "Value": {
                 "id": "96880dc9-4f14-4fa3-836c-e50f7ca94f75",
@@ -14188,6 +14204,14 @@
                 "id": "029b53dc-75c8-4adb-81a3-136617cdf7ca",
                 "resourcePath": "views\/e3954c16-01c2-45b0-b782-55203e5f70eb.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e3a69e80-868c-4d48-a7c9-33d53c2e1db3",
+            "Value": {
+                "id": "9f8264b3-5b32-4847-b91c-19186aea5bda",
+                "resourcePath": "sprites\\Layer_193\\Layer_193.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -15732,6 +15756,14 @@
                 "id": "6c58ee41-550a-4295-8d96-ed04c905d537",
                 "resourcePath": "objects\/arcing_knight_obj\/arcing_knight_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "fc5164b4-8b60-4587-9f39-d318201559ad",
+            "Value": {
+                "id": "2fd33bb9-ec3c-4d3f-9ad8-7dfe911d974e",
+                "resourcePath": "sprites\\Layer_192\\Layer_192.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
