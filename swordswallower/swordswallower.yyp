@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "06906ec5-1f34-418f-af94-dbc9bbc8fd5c",
+            "Value": {
+                "id": "ba5652e7-57ac-4496-b03a-e4e0dac4406e",
+                "resourcePath": "sounds\\swsw_skiff\\swsw_skiff.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0698e379-662a-4e72-bdf4-0fbb2dcf72ea",
             "Value": {
                 "id": "262e86a4-57c2-4d5a-ad6f-bd4a6dbb6645",
@@ -15052,6 +15060,14 @@
                 "id": "703237de-8a85-40c4-a84b-e1a4be4f6b65",
                 "resourcePath": "views\/f02bc7ff-f646-4697-886c-f6b4bd462b9b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f0338915-090d-4ed6-b876-ea06fea367fe",
+            "Value": {
+                "id": "1f0743ed-fceb-4238-a87b-a95244803d16",
+                "resourcePath": "sounds\\swsw_bossfight\\swsw_bossfight.yy",
+                "resourceType": "GMSound"
             }
         },
         {

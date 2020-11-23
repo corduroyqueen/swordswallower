@@ -54,6 +54,8 @@ if room==subtemple01 {
 			go3 = false
 		}
 	}
+	
+	
 }
 
 if !go2 {
