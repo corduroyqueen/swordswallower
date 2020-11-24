@@ -6,7 +6,13 @@ if available_checkpoints>1 {
 if keyboard_check_pressed(ord("G")) {
 	window_set_fullscreen(!window_get_fullscreen())
 }
-
+if instance_exists(player_obj) {
+	if player_obj.x>43000 {
+		zone4 = true
+	} else {
+		zone4 = false
+	}
+}
 if getmap {
 	if room==subtemple02 {
 		level1map = true	

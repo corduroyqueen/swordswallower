@@ -26,6 +26,10 @@ if move!=0 {
 				instance_create_depth(x,y+32,depth-1,landing_particle_obj)	
 			}
 			vsp=0
+			if variable_instance_exists(id,"hp") && 
+			(place_meeting(x,y+move_dir,wall_hazard_obj) || place_meeting(x,y+move_dir,moving_hazard_obj)) {
+				hp-=10
+			}
 			break;
 		}
 	}

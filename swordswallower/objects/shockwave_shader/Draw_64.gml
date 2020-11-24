@@ -25,7 +25,7 @@ if player_obj.death {
 	
 } else {
 	if player_obj.x>41500 {
-		bloom_threshold = lerp(bloom_threshold,0.1,0.05)
+		bloom_threshold = lerp(bloom_threshold,0.12,0.05)
 		bloom_intensity = lerp(bloom_intensity,0.3,0.05)
 		
 	}

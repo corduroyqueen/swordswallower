@@ -35,6 +35,10 @@ if (move != 0) {
 			amt_of_move -= 2; 
 		} else {
 			hsp=0
+			if variable_instance_exists(id,"hp") && 
+			(place_meeting(x+move_dir,y,wall_hazard_obj) || place_meeting(x+move_dir,y,moving_hazard_obj)) {
+				hp-=10
+			}
 			break;
 		}
 	}

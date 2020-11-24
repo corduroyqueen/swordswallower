@@ -8,7 +8,7 @@
     "VTile": false,
     "bbox_bottom": 168,
     "bbox_left": 0,
-    "bbox_right": 199,
+    "bbox_right": 198,
     "bbox_top": 0,
     "bboxmode": 0,
     "colkind": 1,
@@ -69,7 +69,7 @@
             "isLocked": false,
             "name": "default",
             "opacity": 100,
-            "visible": true
+            "visible": false
         }
     ],
     "origin": 0,

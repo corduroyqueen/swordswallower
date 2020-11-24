@@ -88,6 +88,7 @@ window_set_fullscreen(true)
 window_set_fullscreen(false)
 randomize()
 
+zone4 = false
 
 p_cgems = 0
 

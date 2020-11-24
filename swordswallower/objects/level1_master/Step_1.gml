@@ -33,7 +33,14 @@ if firsttime {
 		px_layer_near2_amt = 15
 		px_layer_near1 = layer_get_id("px_near1")
 		px_layer_near1_amt = 30
-		
+		var s = -1
+			s= layer_get_id("px_sky")
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye1"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye2"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye3"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye4"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye5"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye6"))
 		
 		//layer_parallax_normalize_x(px_layer_sky_amt,px_layer_sky)
 		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)
@@ -180,8 +187,25 @@ if initialize {
 		}	
 	}
 	if room==subtemple01 {
+		if zone4 {
+			var s = -1
+			s= layer_get_id("px_sky")
+			var l = -1
+			l = layer_sprite_get_id(s, "moon_ass")
+			layer_sprite_change(l,moon1)
+		} else {
+			var s = -1
+			s= layer_get_id("px_sky")
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye1"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye2"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye3"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye4"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye5"))
+			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye6"))
+		}
 		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)
 		layer_parallax_normalize_x(px_layer_near2_amt,px_layer_near2)
+		
 		if subtemple01ckptbool {
 			instance_destroy(checkpointlol)	
 		}

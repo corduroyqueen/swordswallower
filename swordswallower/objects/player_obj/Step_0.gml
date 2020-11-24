@@ -275,6 +275,8 @@ if level1_master.dev {
 		
 		x = 46600
 		y = 3000
+		
+		x=38000
 	}
 }
 

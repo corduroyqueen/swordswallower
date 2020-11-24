@@ -15,3 +15,4 @@ duck_value = 0.45
 go2 = true
 go3 = true
 go4 = true
+go5 = true
