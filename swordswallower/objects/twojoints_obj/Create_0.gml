@@ -46,6 +46,8 @@ h1_y = 2790
 h1 = instance_create_depth(h1_x,h1_y,depth+1,killbox)
 h1.image_xscale = 13.09
 
+h1_lerp = 0
+
 
 h2_x = 37129
 h2_x = 63205
@@ -55,10 +57,24 @@ h2 = instance_create_depth(h2_x,h2_y,depth+1,killbox)
 h2.image_angle = -3.29
 h2.image_xscale = 20
 
+h2_lerp = 0
+
+h3_x = 37129
+h3_x = 63205
+h3_x = 66505
+h3_y = 2790
+h3 = instance_create_depth(h3_x,h3_y,depth+1,killbox)
+h3.image_xscale = 1
+h3.image_yscale = 20
+
+h3_lerp = 0
+
 h1.x = 1000
 h2.x = 1000
+h3.x = 1000
 h1.y = -1000
 h2.y = -1000
+h3.y = -1000
 
 
 //srf = surface_create(1920,1080)

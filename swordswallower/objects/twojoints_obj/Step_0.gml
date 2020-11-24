@@ -95,7 +95,9 @@ if state==state_idle {
 			state_timer = -100
 		}
 	} else if attack==attack_wall_hands {
-		
+		if ht < 1 {
+			
+		}
 		ht++
 		//h1.visible = true
 		//h2.visible = true
@@ -116,13 +118,13 @@ if state==state_idle {
 		} else if ht>80 {
 			h1.mask_index = sprite54
 			h2.mask_index = sprite54
-			h1.image_alpha = 1
-			h2.image_alpha = 1
+			//h1.image_alpha = 1
+			//h2.image_alpha = 1
 		} else {
 			h1.mask_index = nothing1
 			h2.mask_index = nothing1
-			h1.image_alpha = 0.5
-			h2.image_alpha = 0.5
+			h1.image_alpha = 0
+			h2.image_alpha = 0
 			h1.x = h1_x
 			h1.y = h1_y
 			h2.x = h2_x

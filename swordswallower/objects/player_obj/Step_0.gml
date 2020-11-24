@@ -244,6 +244,13 @@ if place_meeting(x,y,stinky_pile_obj) {
 		stinky_check = true
 	}	
 }
+if x>45000 {
+	if impale_circle_obj.visible {
+		with impale_circle_obj {
+			visible = false
+		}
+	}
+}
 if level1_master.dev {
 
 

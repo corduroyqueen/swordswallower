@@ -27,7 +27,7 @@ if state==state_idle {
 	
 	
 	hand_tar_x = lerp(hand_tar_x,clamp(player_obj.x+offset,x-minclamp,x-200),0.2)
-	hand_tar_y = y+400
+	hand_tar_y = y+300
 	
 	//timer++
 	if timer>100 {
@@ -65,6 +65,7 @@ if state==state_idle {
 		}
 		lunge_target_x = x + dcos(elbow_tarang) * 1400
 		lunge_target_y = y - dsin(elbow_tarang) * 1400
+		lunge_target_y = clamp(lunge_target_y,-50000,y+300)
 		
 	} else if timer<100 {
 		lerp1 = 0.000
