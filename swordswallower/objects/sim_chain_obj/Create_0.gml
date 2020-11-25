@@ -6,6 +6,22 @@ lo = 20
 mass = 50
 grav = 0.1
 
+ks = 10  //stiffness
+lo = 20
+mass = 16
+grav = 0.033
+
+ks = 2.0  //stiffness
+lo = 0.5
+lo = 20
+mass = 1
+grav = 0.2
+
+//ks= 240
+//mass = 45
+//grav = 0.8
+grav = 0.1
+
 rings_x = ds_list_create()
 rings_y = ds_list_create()
 rings_hsp = ds_list_create()

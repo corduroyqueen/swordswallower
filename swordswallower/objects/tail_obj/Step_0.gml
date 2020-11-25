@@ -4,7 +4,11 @@
 if pickup_timer>0 {
 	pickup_timer--
 }
+if nearby_swordgrab_buffer>0 {
+	nearby_swordgrab_buffer--
+}
 if player_obj.tail_carry {
+	
 	if player_obj.held_position {
 		visible = true
 		x = player_obj.x-held_pos_x
@@ -173,7 +177,7 @@ if player_obj.tail_planted {
 		player_obj.tail_planted = false	
 		player_obj.tail_pulling = false	
 	}
-	
+	sdm("ok")
 	//sdm("ZOOM BOOL: " + string(player_obj.zoom_timer_bool))
 	//sdm("INSIDE FLIER: " + string(inside_flier))
 	//sdm("PLACE MEETING: " + string(place_meeting(x,y,wall_obj)))
@@ -181,11 +185,15 @@ if player_obj.tail_planted {
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
-	if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<get_player_speed()+1
+	sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
+	sdm(get_player_speed()+1)
+	sdm("wut")
+	sdm(player_obj.zoom_timer_bool)
+	if ((point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<get_player_speed()+1) || nearby_swordgrab_buffer>0)
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0)
 	&& !inside_flier && instance_exists(current_obj)
 	&& current_obj.object_index!=door_obj{
-		//sdm("a")
+		sdm("a")
 		reset_intangibility()
 		
 		player_obj.c_slingtimer = 2.5
@@ -202,18 +210,18 @@ if player_obj.tail_planted {
 			player_obj.hsp = clamp(player_obj.hsp,-25,25)
 			player_obj.vsp = clamp(player_obj.vsp,-25,25)
 		} else if !collision_line(player_obj.tail_dest_x,player_obj.tail_dest_y,player_obj.x,player_obj.y,wall_obj,false,true){
-			//sdm("d")
+			sdm("d")
 			fucking_wall_thing()
 			
 		} else if point_distance(player_obj.xpreva,player_obj.ypreva,player_obj.tail_dest_x,player_obj.tail_dest_y)<point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y) {
-			//sdm("e")
+			sdm("e")
 			fucking_wall_thing()
 		}
 	
 	} else if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<165 
 	&& !inside_flier && current_obj!=dash_guy_obj  && current_obj.object_index!=door_obj
 	&& current_obj.object_index!=circle_friend_obj && !player_obj.zoom_timer_bool && pickup_timer<1 && !player_obj.intro
-	{ //sdm(" b")
+	{ sdm(" b")
 		sword_pull_check()
 		if !player_obj.grounded {
 			player_obj.held_release_timer = 7
@@ -236,6 +244,7 @@ if player_obj.tail_planted {
 		
 	} else if point_distance(player_obj.x,player_obj.y,x,y)<30 && sqrt(sqr(player_obj.hsp) + sqr(player_obj.vsp))<1
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0) {
+		sdm("dude")
 		fucking_wall_thing()	
 	}
 	
@@ -250,6 +259,7 @@ if player_obj.tail_planted {
 
 
 if player_obj.tail_pulling {
+	
 	pull_timer++
 	
 	//move_towards_point(player_obj.x,player_obj.y,pspeed+player_obj.speed/1.5)
@@ -321,9 +331,6 @@ if player_obj.tail_pulling {
 			player_obj.fire_active = false
 			visible = false
 			pull_timer = 0
-		
-		
-		
 			if stinky && stinky_when_thrown {
 				player_obj.stinky_check = false
 				//stinky = false
@@ -361,11 +368,12 @@ if player_obj.fire_active {
 	fire_timer = 0
 }
 if instance_exists(current_obj) {
-	sdm("leeeeeeee")
-	sdm(current_obj)
-	sdm(current_obj.object_index)
-	sdm(object_get_name(current_obj))
-	sdm(object_get_name(current_obj.object_index))
+	//sdm("leeeeeeee")
+	//sdmn()
+	//sdm(current_obj)
+	//sdm(current_obj.object_index)
+	//sdm(object_get_name(current_obj))
+	//sdm(object_get_name(current_obj.object_index))
 }
 
 if current_obj==moving_platform_obj {
@@ -442,6 +450,12 @@ if player_obj.tail_planted {
 	moveSwordY(vsp)
 	if current_obj!=noone {
 		sword_wall_collision(current_obj)	
+		if point_distance(x,y,player_obj.x,player_obj.y)<200 {
+			nearby_swordgrab_buffer = 10
+			lpx = x
+			lpy = y
+		}
+		
 	}
 	intangible = false
 	

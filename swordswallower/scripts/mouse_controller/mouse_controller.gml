@@ -47,7 +47,8 @@ if !tail_planted && !tail_held {
 				audio_emitter_gain(s_whoosh_emitter,1)
 			}
 		}
-
+		
+		
 		//if winding {
 		//	if global.mousepcheck_button_released(mb_left) {
 		//		tail_dest_x = global.mousepx
@@ -67,6 +68,31 @@ if !tail_planted && !tail_held {
 			//tail_planted=false
 		}
 		zoom_buff_timer--
+	}
+	
+	if (tail_carry || tail_pulling )&& tail_obj.nearby_swordgrab_buffer>0 && k_dash_p 
+	&& level1_master.ability_dash {
+		//shockwave_shader.trigger = true
+		
+		zoom_buff_timer = 0
+		//zoom_ctdn = 4
+		//tail_zooming=true
+		zoom_timer_bool = true
+		zoom_pause = true
+			
+		tail_carry = false
+		tail_pulling = false
+		tail_planted = true
+		tail_obj.x = tail_obj.lpx
+		tail_obj.y = tail_obj.lpy
+			
+		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
+		
+		
+		draw_line_obj.go = true	
+		draw_line_obj.gotimer=50
+		draw_line_obj.alpha = 1
+		//instance_create_depth(x,y,-10,explosion_obj)
 	}
 } else {
 	//if global.mousepcheck_button_released(mb_left) && !tail_pulling && !tail_throwing && !zoom_timer_bool {

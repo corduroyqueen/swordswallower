@@ -12,7 +12,7 @@ sprite_index = deathguy
 
 dialogue_array[0] = "......."
 dialogue_array[1] = "Your deaths. They're " + string(level1_master.death_num) + ". "
-dialogue_array[2] = "When you've seen death 50 times, you will speak to me again. "
+dialogue_array[2] = "When you've seen death 500 times, you will speak to me again. "
 dialogue_array[3] = "There are always more to come. "
 dialogue_array[4] = false
 

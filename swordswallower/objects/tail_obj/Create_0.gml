@@ -20,7 +20,9 @@ inside_flier = false
 
 throwxs = 0
 throwys = 0
-
+lpx = 0
+lpy = 0
+nearby_swordgrab_buffer = 0
 stinky_when_thrown = false
 current_obj = false
 

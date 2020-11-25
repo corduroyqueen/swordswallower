@@ -2,7 +2,7 @@
 // You can write your code in this editor
 /// @description Insert description here
 // You can write your code in this editor
-if level1_master.death_num>=50{
+if level1_master.death_num>=500 {
 	dialogue_array[0] = "......."
 	dialogue_array[1] = string(level1_master.death_num) + " deaths. "
 	dialogue_array[2] = "I am... fascinated. Impressed. "
