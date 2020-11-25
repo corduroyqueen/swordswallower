@@ -3119,6 +3119,14 @@
             }
         },
         {
+            "Key": "2e84fd55-3e89-41ce-a648-07dd1c06c6ab",
+            "Value": {
+                "id": "d8f0574e-6fe3-4d8c-84bc-ebc1d46e5006",
+                "resourcePath": "views\\2e84fd55-3e89-41ce-a648-07dd1c06c6ab.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "2ea461f6-ceb2-4f8f-b924-0a5611eaebb7",
             "Value": {
                 "id": "5789fecd-039e-445c-9f37-749aac0e78cd",
@@ -3435,6 +3443,14 @@
             "Value": {
                 "id": "ac8cd130-7c96-40e6-8f51-4eb5fb6debc0",
                 "resourcePath": "sprites\/wall1\/wall1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "336bccb1-e22b-4694-bf91-7262c1474f5f",
+            "Value": {
+                "id": "6ddc4d8c-3cbd-42cb-b094-ed101048e154",
+                "resourcePath": "sprites\\Layer_213\\Layer_213.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4180,6 +4196,14 @@
                 "id": "f23fc1b8-829b-449f-af7c-b209e1708844",
                 "resourcePath": "scripts\/arm_reconnect\/arm_reconnect.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3f975f0b-3b06-4d82-83da-7c091d10e699",
+            "Value": {
+                "id": "bdb7c1c2-5089-47ff-a4d8-17ee331776fc",
+                "resourcePath": "sprites\\Layer_211\\Layer_211.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -5895,6 +5919,14 @@
             }
         },
         {
+            "Key": "58476085-2c79-4fe3-ac36-3c7bf781c1d5",
+            "Value": {
+                "id": "14525b81-3711-4509-843d-0b80656fe9e3",
+                "resourcePath": "views\\58476085-2c79-4fe3-ac36-3c7bf781c1d5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5853fec0-ee7f-42ad-b0c2-b29649a52107",
             "Value": {
                 "id": "56715a6a-31bc-475f-b5e8-bc616e80f200",
@@ -6460,6 +6492,14 @@
                 "id": "9b1b0fea-e1dd-45bf-8fcd-e9e7bd7ca7b9",
                 "resourcePath": "sounds\/meat7\/meat7.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "5f54f71c-f8d0-4b71-a6ee-2310a104911f",
+            "Value": {
+                "id": "655b7800-3070-4a5a-8405-fe387c83f185",
+                "resourcePath": "sprites\\Layer_209\\Layer_209.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -7332,6 +7372,14 @@
                 "id": "87fecdfc-1b84-46ea-9110-8be7d2e65a10",
                 "resourcePath": "sprites\/shield_spr_empty\/shield_spr_empty.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6d9db1fe-7faf-4a00-9b99-fdc1201527b2",
+            "Value": {
+                "id": "e31d734d-6cea-4c8f-82fe-b120534d6198",
+                "resourcePath": "views\\6d9db1fe-7faf-4a00-9b99-fdc1201527b2.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -8991,6 +9039,14 @@
             }
         },
         {
+            "Key": "88d81b5e-5617-4a4e-a274-bc2fce9ad4f7",
+            "Value": {
+                "id": "b3ab8a57-f4c1-499b-a69a-d6e5c418989b",
+                "resourcePath": "sprites\\Layer_212\\Layer_212.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "88ee2889-566d-45f5-b51e-b83bf61fd081",
             "Value": {
                 "id": "39b07cfd-69a3-4836-99db-a6c2fc9e6265",
@@ -10031,6 +10087,14 @@
             }
         },
         {
+            "Key": "9a00a6af-6eed-4865-9113-c63c1a823e41",
+            "Value": {
+                "id": "863a0b82-4cec-4e61-8772-aa3bbe9f27d0",
+                "resourcePath": "sprites\\Layer_215\\Layer_215.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9a1ef4e0-96b3-4ea3-a231-7605bb149a91",
             "Value": {
                 "id": "61a2e72c-1d95-4817-b349-71b381459296",
@@ -10644,6 +10708,14 @@
                 "id": "0a660fe8-b19a-476c-a726-21cb9d1f8716",
                 "resourcePath": "sprites\/block2\/block2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a41345ed-ce48-486c-8d8e-bb28a28f778d",
+            "Value": {
+                "id": "d051f878-ccdc-46c4-8eef-109785d7cc4f",
+                "resourcePath": "views\\a41345ed-ce48-486c-8d8e-bb28a28f778d.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -11604,6 +11676,22 @@
                 "id": "66f38b85-a4cb-4d2a-bf70-adf2fc13cf6d",
                 "resourcePath": "scripts\/outline_init\/outline_init.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b5ae93ff-4286-484f-a79c-94009bd96d3f",
+            "Value": {
+                "id": "4311dcc9-61f7-416e-800c-8da762195efa",
+                "resourcePath": "views\\b5ae93ff-4286-484f-a79c-94009bd96d3f.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b5b9dd9b-26de-4b9b-82d7-9591aad18404",
+            "Value": {
+                "id": "a20c36f1-a242-445b-bfd9-99a5e8434929",
+                "resourcePath": "sprites\\Layer_214\\Layer_214.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -15380,6 +15468,14 @@
                 "id": "dfd9437b-00e5-4bfc-91db-a7c3500ac09e",
                 "resourcePath": "sprites\/nightdoor_open\/nightdoor_open.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f4f7993d-1957-4f90-8111-4338b7bb2d22",
+            "Value": {
+                "id": "8b0f1757-70d7-412f-a215-007ca731cb23",
+                "resourcePath": "views\\f4f7993d-1957-4f90-8111-4338b7bb2d22.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
