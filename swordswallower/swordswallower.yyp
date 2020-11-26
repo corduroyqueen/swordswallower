@@ -3071,6 +3071,14 @@
             }
         },
         {
+            "Key": "2dd3a66b-5f1b-441a-99a3-85d2ff186127",
+            "Value": {
+                "id": "0f4ec1d5-6d46-47be-aaa5-2ff3b145c1ea",
+                "resourcePath": "fonts\\JuliasHandwriting\\JuliasHandwriting.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "2e022da0-abc2-4a53-ab0b-b58e75e00ff6",
             "Value": {
                 "id": "17432051-6fe0-47b5-bc5e-2bc863a91884",
