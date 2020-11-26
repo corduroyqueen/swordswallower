@@ -1,7 +1,7 @@
 if level1_master.map {
 	if player_obj.k_map {
 		mapout = true
-		draw_sprite_ext(spr_map,0,960,540,1,1,0,c_white,1)
+		draw_sprite_ext(spr_newmap,0,960,540,1,1,0,c_white,1)
 	} else {
 		mapout = false
 	} 

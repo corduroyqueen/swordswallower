@@ -16,6 +16,7 @@ if unlocking {
 	if point_distance(x,y,target.x,target.y)<25 {
 		target.closed = false
 		flying_away = true
+		depth = -2900
 		if player_obj.tail_planted && tail_obj.current_obj==target.id {
 			player_obj.tail_planted = false
 			player_obj.tail_pulling = true

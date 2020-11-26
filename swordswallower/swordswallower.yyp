@@ -3082,7 +3082,7 @@
             "Key": "2dd3a66b-5f1b-441a-99a3-85d2ff186127",
             "Value": {
                 "id": "0f4ec1d5-6d46-47be-aaa5-2ff3b145c1ea",
-                "resourcePath": "fonts\\JuliasHandwriting\\JuliasHandwriting.yy",
+                "resourcePath": "fonts\\julia_font\\julia_font.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -11231,6 +11231,14 @@
             }
         },
         {
+            "Key": "abc74bd9-05bb-4c5b-a198-fce6ba338fea",
+            "Value": {
+                "id": "3290929c-8eaf-4d77-b7f1-1df63b6875ef",
+                "resourcePath": "fonts\\julia_font2\\julia_font2.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "abd27c56-354f-4ab3-aca2-fa3e8c79531f",
             "Value": {
                 "id": "66fd931d-e2ab-49f5-aef6-08fdd699d813",
@@ -13308,6 +13316,14 @@
                 "id": "109f8fa1-28b4-412e-89c4-59a2e8ed5c3b",
                 "resourcePath": "sprites\/venusbase1\/venusbase1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d30b85bb-4c11-4816-bac4-ea9bfde470c9",
+            "Value": {
+                "id": "92666b01-e20b-4ecd-9c75-1b3a853b4cb1",
+                "resourcePath": "datafiles_yy\\julia_hand.ttf.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

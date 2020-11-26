@@ -56,7 +56,10 @@ layer_script_begin("misc2", layer_surface_script_start);
 //layer_script_end("level_art3", layer_surface_script_end);
 
 //layer_script_begin("inside_wall_art3", layer_surface_script_start);
+
+//switch these if issues
 layer_script_end("inside_wall_art3", layer_surface_script_end);
+layer_script_end("Assets6", layer_surface_script_end);
 
 //layer_script_begin("solid_color3", layer_surface_script_start);
 //layer_script_end("solid_color3", layer_surface_script_end);

@@ -32,8 +32,8 @@ if object_get_parent(local_obj.object_index)==wall_rejecting_parent_obj {
 		hitpause = true
 		lockcheck=true
 		audio_play_sound(door_unlock_2,0,false)
-		sword_reject_script()
-		return
+		//sword_reject_script()
+		//return
 		//ok = sword_reject_1
 		//audio_sound_gain(ok,0.15,0)
 		//audio_play_sound(ok,0,false)
