@@ -6343,6 +6343,14 @@
             }
         },
         {
+            "Key": "5cf2ec8c-1aef-4493-bbfb-fe3add1f89bd",
+            "Value": {
+                "id": "ea1f9f27-0068-4188-b9ce-e2175237947c",
+                "resourcePath": "sprites\\chandelier_end\\chandelier_end.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5cf30d08-6d90-46c4-b03f-9c67545d0abf",
             "Value": {
                 "id": "4b7ba0a2-64ec-48c2-92c0-341dfb185ba7",
@@ -7487,6 +7495,14 @@
             }
         },
         {
+            "Key": "6e6fe3a5-cd13-4070-8673-838ff743b602",
+            "Value": {
+                "id": "df6ee27c-fbb9-419c-a17e-511c73f27542",
+                "resourcePath": "objects\\sim_chandelier_obj\\sim_chandelier_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "6e771bd2-d2b7-4cdc-b9f5-e23bc902dbf1",
             "Value": {
                 "id": "8846e17d-ad7c-45dd-936d-18c24d0927d1",
@@ -8191,6 +8207,14 @@
             }
         },
         {
+            "Key": "76bc41b3-0e84-4742-adca-abd7b2b0b68c",
+            "Value": {
+                "id": "3161dad5-1e70-476c-a05c-edf9e4aa5545",
+                "resourcePath": "sprites\\chandelier_chain\\chandelier_chain.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7715671f-4d8b-4232-97e5-b6a4c24d464e",
             "Value": {
                 "id": "df3eec15-ac84-4fc7-9e6a-30db05c2546a",
@@ -8772,6 +8796,14 @@
                 "id": "486d83a5-d41e-4448-bef9-81e7db8b7163",
                 "resourcePath": "scripts\/sword_plant\/sword_plant.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "80e05d15-c073-4e23-8515-8c500b0543c6",
+            "Value": {
+                "id": "d3c1176f-39a7-40e7-a057-01efa73fc26b",
+                "resourcePath": "sprites\\rope_bit\\rope_bit.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -151,6 +151,9 @@ ds_list_add(enemy_blood_reds,make_color_rgb(232,73,73))
 ds_list_add(enemy_blood_reds,make_color_rgb(194,49,49))
 ds_list_add(enemy_blood_reds,make_color_rgb(133,19,19))
 
+
+wind_strength = 0
+
 //0.9, 0.0, 0.3 neon pink
 
 

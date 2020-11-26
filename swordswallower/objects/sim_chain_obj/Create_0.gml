@@ -16,11 +16,25 @@ lo = 0.5
 lo = 20
 mass = 1
 grav = 0.2
+fric = 0.01
+
+
+ks = 2.0  //stiffness
+lo = 20
+mass = 1
+grav = 0.2
+
+
+dt = 0.5
+
+pinned = true
+held_timer=0
+sinc=0
 
 //ks= 240
 //mass = 45
 //grav = 0.8
-grav = 0.1
+//grav = 0.1
 
 rings_x = ds_list_create()
 rings_y = ds_list_create()
@@ -61,3 +75,6 @@ while n<num_rings {
 	ds_list_add( spring_vsp, 0 )
 	n++
 }
+addfx = 0
+addfy = 0
+
