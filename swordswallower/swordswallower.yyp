@@ -1287,6 +1287,14 @@
             }
         },
         {
+            "Key": "1243c599-7d9d-4d22-9b31-5ab06b6696f4",
+            "Value": {
+                "id": "7e71f9c3-e51f-4a7f-8112-a9a991698f48",
+                "resourcePath": "sprites\\spr_evilbranch3\\spr_evilbranch3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "129c4439-1a4e-40e2-9cb4-8ecbbc73f451",
             "Value": {
                 "id": "cb3b7491-6eef-4f51-967a-35894257a68f",
@@ -7770,7 +7778,7 @@
             "Key": "72016cc8-31b3-4799-a906-6bd4e53c5395",
             "Value": {
                 "id": "e9c35272-6463-4410-8b65-619f59f4065a",
-                "resourcePath": "sprites\\newmap\\newmap.yy",
+                "resourcePath": "sprites\\spr_newmap\\spr_newmap.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -14764,6 +14772,14 @@
                 "id": "4376e70c-ca93-47ec-b3f3-21777809a34e",
                 "resourcePath": "objects\/coffin_treasure\/coffin_treasure.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "ea65585d-8f22-42b0-87b8-fb5e90f156f1",
+            "Value": {
+                "id": "60b5ac0f-d399-4cf3-9344-58eb9f8b35aa",
+                "resourcePath": "sprites\\spr_evilbranch2\\spr_evilbranch2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
