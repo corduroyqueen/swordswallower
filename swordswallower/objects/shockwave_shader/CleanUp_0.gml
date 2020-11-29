@@ -7,6 +7,7 @@ if (surface_exists(GUI)) surface_free(GUI);
 if (surface_exists(blood_surface)) surface_free(blood_surface);
 if (surface_exists(srf_waves)) surface_free(srf_waves);
 if (surface_exists(gif_surface)) surface_free(gif_surface);
+if (surface_exists(srf_water)) surface_free(srf_water);
 
 if (ds_exists(list_of_waves, ds_type_list)) {
 	for (var w = 0; w < ds_list_size(list_of_waves); w++) {
