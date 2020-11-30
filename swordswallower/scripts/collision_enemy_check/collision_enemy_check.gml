@@ -120,18 +120,23 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		}
 		with local_obj {
 			sprite_index = eyebat_flying3
+			
+			death_blood_spawn_x = x
+			death_blood_spawn_y = y
+			death = true	
 			//shatter_mb_input_script(sprite_width/2)	
 		}
 		player_obj.shake_d=4.5
 		player_obj.camera_shake_d = true
 		audio_play_sound(Knife_Pull_140,0,false)
 		
+		
+			
 		var ok = sword_thud_1
 		audio_sound_gain(ok,random_range(0.1,0.2),0)
 		audio_sound_pitch(ok,random_range(1.1,1.3))
 		audio_play_sound(ok,0,false)
-			
-		local_obj.death = true	
+		
 		player_obj.tail_planted = false
 		x = xpreva
 		y = ypreva
@@ -147,6 +152,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		with local_obj {
 			sprite_index = eyebat_flying3
 			shatter_mb_input_script(sprite_width/2)	
+			death_blood_spawn_x = x
+			death_blood_spawn_y = y
 		}
 		player_obj.shake_d=4.5
 		player_obj.camera_shake_d = true
@@ -197,6 +204,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	} else if local_obj.object_index==snakeheart_obj {
 		if !local_obj.parent.headhit {
 			local_obj.death = true
+			local_obj.death_blood_spawn_x = local_obj.x
+			local_obj.death_blood_spawn_y = local_obj.y
 			x = xpreva
 			y = ypreva
 			player_obj.shake_d=5
@@ -271,6 +280,14 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		hitpause = true
 		
 	} else if local_obj.object_index==cryptkeeper_obj || local_obj.object_index==cryptkeeper_ceiling_obj {
+		with local_obj {
+			//shatter_mb_input_script(6)
+			if audio_is_playing(idle_sound) {
+				audio_stop_sound(idle_sound)	
+			}
+			death_blood_spawn_x = x
+			death_blood_spawn_y = y
+		}
 		x = oldx
 		y = oldy
 		audio_play_sound(Knife_Pull_140,0,false)
@@ -283,12 +300,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		audio_sound_pitch(ok,random_range(0.8,1.2))
 		audio_sound_gain(ok,0.4,0)
 		audio_play_sound(ok,0,false)
-		with local_obj {
-			//shatter_mb_input_script(6)
-			if audio_is_playing(idle_sound) {
-				audio_stop_sound(idle_sound)	
-			}
-		}
+		
 		
 		var ello = impact_2
 		audio_sound_gain(ello,0.25,0)
@@ -330,7 +342,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		return false
 	} else if local_obj.object_index==charger_obj {
 		//hitpause = true
-		if local_obj.hp-10<0 && local_obj.state==local_obj.state_knockback {
+		if local_obj.hp-10<0 {
 			audio_play_sound(Knife_Pull_140,0,false)
 			local_obj.death = true	
 			hitpause = true
@@ -345,6 +357,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			audio_sound_pitch(bruh,random_range(0.75,1.25))
 			audio_play_sound(bruh,0,false)
 			local_obj.met = true
+			local_obj.death_blood_spawn_x = local_obj.x
+			local_obj.death_blood_spawn_y = local_obj.y
 			return false
 			
 		} else if local_obj.state==local_obj.state_idle {

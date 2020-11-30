@@ -123,6 +123,10 @@ camera_shake = false
 
 camx = player_obj.x-960
 camy = player_obj.y-540
+camxlast = camx
+camylast = camy
+camxdiff = camx - camxlast
+camydiff = camy - camylast
 
 c_slingshot = false
 c_slingtimer = 0

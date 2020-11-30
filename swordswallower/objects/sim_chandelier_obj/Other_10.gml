@@ -31,6 +31,9 @@ if player_obj.held_position_start && held_timer<1 {
 	}
 	
 }
+if player_obj.tail_planted || player_obj.tail_carry {
+	met = false
+}
 //sinc+=choose(-1,0,1)
 
 var wind = level1_master.wind_strength
@@ -86,7 +89,7 @@ while n<num_rings {
 	
 	var tkko
 	if pinned {
-		tkko = 0.98
+		tkko = 0.99
 	} else {
 		tkko = 1
 	}
@@ -109,7 +112,8 @@ while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
 	if check_sw && cut<0 {
-		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 {
+		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 && !met {
+			met = true
 			cut=n
 		}
 	}
@@ -123,10 +127,13 @@ while n<num_rings {
 }
 
 if cut>-1 {
-	cut_bool = true
+	
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,sim_chandelier_obj)
+	ok.run = true
 	ok.num_rings = num_rings - cut
 	ok.pinned = false
+	ok.cut_bool = cut_bool
+	cut_bool = true
 	var ww
 	with ok {
 		for (var e=0;e<num_rings;e++) { 

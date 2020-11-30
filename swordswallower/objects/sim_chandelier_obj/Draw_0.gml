@@ -1,4 +1,8 @@
 //fuck yes
+
+if !run {
+	return
+}
 n=0
 draw_set_color(c_red)
 while n<num_rings-1 {

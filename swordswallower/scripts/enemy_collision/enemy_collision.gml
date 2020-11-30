@@ -5,8 +5,8 @@ xdelt = x - xpreva;
 ydelt = y - ypreva;
 
 for(i=0; i < iteration_num; i++) {
-	var xc = xpreva + xdelt * (i/iteration_num), 
-	var yc = ypreva + ydelt * (i/iteration_num),
+	xc = xpreva + xdelt * (i/iteration_num)
+	yc = ypreva + ydelt * (i/iteration_num)
 	if !place_meeting(xc,yc,enemy_parent_obj) {
 			
 	} else {

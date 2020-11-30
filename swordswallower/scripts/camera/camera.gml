@@ -1,3 +1,6 @@
+camxlast = camx
+camylast = camy
+
 if place_meeting(x,y,camera_fix_bounds_parent_obj) {
 	camera_fix_bounds = true
 	if cam_fix_obj==noone {
@@ -240,6 +243,8 @@ if init_camera_set {
 cam_midx = camx + cam_width_h
 cam_midy = camy + cam_height_h
 
+camxdiff = camx - camxlast
+camydiff = camy - camylast
 
 
 camera_set_view_pos(view_camera[0],camx,camy)

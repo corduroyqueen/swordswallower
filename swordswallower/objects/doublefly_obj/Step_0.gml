@@ -51,7 +51,7 @@ if death {
 		
 		death_timer++
 		
-		just_blood_input(0,0,tail_obj.throwxs,tail_obj.throwys,-30,true,sprite_width/4,sprite_height)
+		just_blood_input(0,0,tail_obj.throwxs,tail_obj.throwys,-30,true,death_blood_spawn_x,death_blood_spawn_y)
 		
 		with eyebats_particle_spawner_obj {
 			xt=other.x

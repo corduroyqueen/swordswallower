@@ -22,7 +22,7 @@ gpu_set_blendmode(bm_add)
 //}
 with blood_ctrl_obj {
 	for(var i=0;i<blood_num;i++) {
-		draw_sprite_ext(blood_sprite_new1,0,blood_px[|i]-cx,blood_py[|i]-cy,blood_ps[|i]*0.95,blood_p_refs[|i]+(blood_p_refs[|i]-blood_ps[|i])*0.95,0,blood_pc[|i],0.55)
+		draw_sprite_ext(blood_sprite_new1,0,blood_px[|i]-cx,blood_py[|i]-cy,blood_ps[|i],blood_p_refs[|i]+(blood_p_refs[|i]-blood_ps[|i]),0,blood_pc[|i],0.55)
 	}
 }
 gpu_set_blendmode(bm_normal);
@@ -32,7 +32,7 @@ gpu_set_colorwriteenable(1,1,1,0);
 //}
 with blood_ctrl_obj {
 	for(var i=0;i<blood_num;i++) {
-		draw_sprite_ext(blood_sprite_new1,0,blood_px[|i]-cx,blood_py[|i]-cy,blood_ps[|i]*0.95,blood_p_refs[|i]+(blood_p_refs[|i]-blood_ps[|i])*0.95,0,blood_pc[|i],0.55)
+		draw_sprite_ext(blood_sprite_new1,0,blood_px[|i]-cx,blood_py[|i]-cy,blood_ps[|i],blood_p_refs[|i]+(blood_p_refs[|i]-blood_ps[|i]),0,blood_pc[|i],0.55)
 	}
 }
 gpu_set_colorwriteenable(1,1,1,1)

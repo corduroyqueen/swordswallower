@@ -7991,6 +7991,14 @@
             }
         },
         {
+            "Key": "749c6bba-e552-4d07-ba23-a4fe018e0205",
+            "Value": {
+                "id": "00911dc3-00a6-410c-9999-2cd74e1f9dfc",
+                "resourcePath": "sprites\\blood_splat_lel3\\blood_splat_lel3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "749cfd2b-dd0c-47e7-92d9-024939c0b890",
             "Value": {
                 "id": "4f68b86e-b6bf-471e-88e8-889f822c17fe",

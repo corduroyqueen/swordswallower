@@ -131,7 +131,7 @@ if held_release_timer>0 {
 }
 if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vsp<max_vs {
 	if !wall_checker(x,y) && place_meeting(x,y,tar_obj) {
-		vsp = 1
+		vsp = 0.8
 	} else {
 		vsp += grav
 	}

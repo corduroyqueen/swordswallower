@@ -87,7 +87,7 @@ for (var l=0;l<blood_num;l++) {
 	blood_phsp[| l] = hsp
 	blood_pvsp[| l] = vsp
 	blood_ps[| l] = scale
-	blood_ps[| l] = 0.5
+	//blood_ps[| l] = 1
 	
 	blood_p_bounce[| l] = bounce_vel
 	blood_p_refs[| l] = rval
@@ -119,18 +119,18 @@ if td_size<1 {
 	return
 }
 
-sdm("start")
-sdm(ds_list_size(blood_px))
-sdm(blood_num)
+//sdm("start")
+//sdm(ds_list_size(blood_px))
+//sdm(blood_num)
 for(var i=0;i<td_size;i++) {
 	var p = to_delete[| i] - i
 	var px2 = blood_px[| p]
 	var py2 = blood_py[| p]
-	sdm(p)
-	sdm(px2)
-	sdm(py2)
-	var sxs = blood_ps[| p]
-	var spr = layer_sprite_create(layer_get_id("blood_splat"),px2,py2,blood_splat_lel2)
+	//sdm(p)
+	//sdm(px2)
+	//sdm(py2)
+	var sxs = blood_p_refs[| p] * 2
+	var spr = layer_sprite_create(layer_get_id("blood_splat"),px2,py2,choose(blood_splat_lel2,blood_splat_lel3))
 	layer_sprite_angle(spr,random_range(0,360))
 	layer_sprite_xscale(spr,sxs)
 	layer_sprite_yscale(spr,sxs)

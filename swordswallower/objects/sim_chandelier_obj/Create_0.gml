@@ -80,3 +80,6 @@ addfy = 0
 
 
 cut_bool = false
+
+run = false
+met = false

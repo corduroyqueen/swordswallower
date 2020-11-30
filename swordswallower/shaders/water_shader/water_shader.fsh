@@ -15,6 +15,7 @@ uniform vec3		water_col;			// could be turned into a constant
 uniform vec2		col_mix;			// could be turned into a constant
 uniform vec3		brt_sat_con;		// could be turned into a constant
 
+
 uniform sampler2D	distort_tex;
 
 uniform float		blend_mode;			// for testing only
@@ -88,7 +89,7 @@ void main() {
 	// DEBUG:
 	// After testing, remove this and the show_result uniform
 	//----------------------------------------------------------------------------
-	//out_col = mix(out_col, distort_sample, show_result);
+	out_col = mix(out_col, distort_sample, show_result);
 	
 	
 	// OUTPUT:

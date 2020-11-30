@@ -128,16 +128,18 @@ gif_surface = surface_create(1920,1080)
 sprite_distort		= spr_water_side_distortion;
 srf_water = surface_create(1920, 1080);
 watershader				= water_shader;
-u_distort_tex		= shader_get_sampler_index(shader, "distort_tex");
-u_water_shift_RGB	= shader_get_uniform(shader, "water_shift_RGB");
-u_distort_strength	= shader_get_uniform(shader, "distort_strength");	// could be turned into a constant
-u_pattern_size		= shader_get_uniform(shader, "pattern_size");		// could be turned into a constant
-u_water_col			= shader_get_uniform(shader, "water_col");			// could be turned into a constant
-u_col_mix			= shader_get_uniform(shader, "col_mix");			// could be turned into a constant
-u_brt_sat_con		= shader_get_uniform(shader, "brt_sat_con");		// could be turned into a constant
+u_distort_tex		= shader_get_sampler_index(watershader, "distort_tex");
+u_water_shift_RGB	= shader_get_uniform(watershader, "water_shift_RGB");
+u_distort_strength	= shader_get_uniform(watershader, "distort_strength");	// could be turned into a constant
+u_pattern_size		= shader_get_uniform(watershader, "pattern_size");		// could be turned into a constant
+u_water_col			= shader_get_uniform(watershader, "water_col");			// could be turned into a constant
+u_col_mix			= shader_get_uniform(watershader, "col_mix");			// could be turned into a constant
+u_brt_sat_con		= shader_get_uniform(watershader, "brt_sat_con");		// could be turned into a constant
 
-u_blend_mode		= shader_get_uniform(shader, "blend_mode");			// for testing only
-u_show_result		= shader_get_uniform(shader, "show_result");		// for debugging only
+u_cam_diff		= shader_get_uniform(watershader, "cam_diff");		// could be turned into a constant
+
+u_blend_mode		= shader_get_uniform(watershader, "blend_mode");			// for testing only
+u_show_result		= shader_get_uniform(watershader, "show_result");		// for debugging only
 
 distort_tex			= sprite_get_texture(sprite_distort, 0);
 water_shift_R		= 0;

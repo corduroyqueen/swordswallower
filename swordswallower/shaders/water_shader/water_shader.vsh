@@ -95,7 +95,7 @@ varying vec4	v_vColour;
 varying vec2	v_vPosition_R;
 varying vec2	v_vPosition_G;
 varying vec2	v_vPosition_B;
-
+uniform vec2		cam_diff;		// could be turned into a constant
 uniform vec2	pattern_size;		// could be turned into a constant
 uniform vec3	water_shift_RGB;
 
@@ -107,7 +107,7 @@ void main() {
     v_vColour		= in_Colour;
     v_vTexcoord		= in_TextureCoord;
 	
-	v_vPosition_R	= (in_Position.xy - vec2(water_shift_RGB.r, 0.0)) / pattern_size;
-	v_vPosition_G	= (in_Position.xy - vec2(water_shift_RGB.g, 0.0)) / pattern_size;
-	v_vPosition_B	= (in_Position.xy - vec2(0.0, water_shift_RGB.b)) / pattern_size;
+	v_vPosition_R	= (in_Position.xy - vec2(water_shift_RGB.r, water_shift_RGB.b)) / pattern_size;
+	v_vPosition_G	= (in_Position.xy - vec2(water_shift_RGB.g, water_shift_RGB.b)) / pattern_size;
+	v_vPosition_B	= (in_Position.xy - vec2(water_shift_RGB.g, water_shift_RGB.b)) / pattern_size;
 }

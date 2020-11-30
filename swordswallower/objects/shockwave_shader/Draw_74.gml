@@ -146,20 +146,25 @@ shader_reset();
 if (21140 < (player_obj.camy + 1080)) {
 	// get distortion variables:
 	//-------------------------------------------------------------------------
-	water_shift_R		+= 0.10 * 2 - 1;
-	water_shift_G		+= 0.20 * 2 - 1;
-	water_shift_B		+= 0.650 * 0.5 - 0.25;
-	var strength_x		= 0.08 * 2;
-	var strength_y		= 0.85 * 2;
-	var pattern_w		= max(0.001, 0.75) * sprite_get_width(sprite_distort)  * 2;		// mustn't be <= 0
-	var pattern_h		= max(0.001, 0.40) * sprite_get_height(sprite_distort) * 0.25;	// mustn't be <= 0
+	water_shift_R		+= 0.50 * 2 - 1 - player_obj.camxdiff;
+	water_shift_G		+= 0.20 * 2 - 1 - player_obj.camxdiff;
+	water_shift_B		+= 0.32 * 0.5 - 0.25 - player_obj.camydiff;
+	var strength_x		= 0.1 * 2;
+	var strength_y		= 0.1 * 2;
+	var pattern_w		= max(0.001, 2.00) * sprite_get_width(sprite_distort)  * 2;		// mustn't be <= 0
+	var pattern_h		= max(0.001, 4.00) * sprite_get_height(sprite_distort) * 0.25;	// mustn't be <= 0
 
 	// get colour variables:
 	//-------------------------------------------------------------------------
 	var blend_col		= make_color_hsv(0.56  * 255, 0.62  * 255, 0.95 * 255);
+	blend_col		= make_color_hsv(0.56  * 255, 0.08  * 255, 1.00 * 255);
+	blend_col		= make_color_hsv(0.58  * 255, 0.4  * 255, 1.00 * 255);
+	
 	var water_col		= make_color_hsv(0.57 * 255, 0.50 * 255, 0.20 * 255);
+	water_col		= make_color_hsv(0.57 * 255, 0.08 * 255, 0.05 * 255);
+	
 	//water_col		= make_color_rgb(17,17,17)
-	var col_mix_0		= 0.24 - 0.5;
+	var col_mix_0		= 0.4 - 0.5;
 	var col_mix_1		= 0.60 + 0.5;
 	
 	var brightness		= 0.50 * 2 - 1;
@@ -198,7 +203,7 @@ if (21140 < (player_obj.camy + 1080)) {
 	//gpu_set_tex_filter(toggle_get_state(0, 0));
 
 	if (!surface_exists(srf_water)) srf_water = surface_create(ceil(srf_water_w * srf_scale), ceil(srf_water_h * srf_scale));
-	else surface_resize(srf_water, ceil(srf_water_w * srf_scale), ceil(srf_water_h * srf_scale));
+	else surface_resize(srf_water, ceil(srf_water_w * srf_scale), min(200,ceil(srf_water_h * srf_scale)));
 	
 	
 	// draw reflections, water line & flotsam reflections to surface:
@@ -213,7 +218,7 @@ if (21140 < (player_obj.camy + 1080)) {
 		
 		//gpu_set_colorwriteenable(true, true, true, false); // not that important but use this if you notice the water surface looses alpha
 		
-		//draw_sprite_stretched(spr_water_side_line, 0, 0, 0, srf_water_w, 1);
+		draw_sprite_stretched(spr_water_side_line, 0, 0, 0, srf_water_w, 1);
 		
 		//gpu_set_colorwriteenable(true, true, true, true);
 		
@@ -235,14 +240,16 @@ if (21140 < (player_obj.camy + 1080)) {
 		shader_set_uniform_f(u_pattern_size,		pattern_w, pattern_h);				// could be turned into a constant
 		shader_set_uniform_f(u_water_col,			color_get_red(water_col)/255, color_get_green(water_col)/255, color_get_blue(water_col)/255); // could be turned into a constant
 		shader_set_uniform_f(u_col_mix,				col_mix_0, col_mix_1);				// could be turned into a constant
+		shader_set_uniform_f(u_cam_diff,			random_range(-400,400),random_range(-400,400))//player_obj.camxdiff,player_obj.camydiff);				// could be turned into a constant
+		shader_set_uniform_f(u_cam_diff,			player_obj.camxdiff,player_obj.camydiff);				// could be turned into a constant
 		shader_set_uniform_f(u_brt_sat_con,			brightness, saturation, contrast);	// could be turned into a constant
 		
 		shader_set_uniform_f(u_blend_mode,			0.0);						// for testing only
-		shader_set_uniform_f(u_show_result,			0.0);					// for debugging only
+		shader_set_uniform_f(u_show_result,			0.00);					// for debugging only
 		
 		texture_set_stage(u_distort_tex,			distort_tex);
 		
-		draw_surface_ext(srf_water, 0, 21139-player_obj.camy, 1 / srf_scale, 1 / srf_scale, 0, blend_col, 1);
+		draw_surface_ext(srf_water, 0, 21137-player_obj.camy, 1 / srf_scale, 1 / srf_scale, 0, blend_col, 1);
 	surface_reset_target();
 	shader_reset();
 	

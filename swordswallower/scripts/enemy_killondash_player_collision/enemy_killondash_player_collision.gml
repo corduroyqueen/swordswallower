@@ -8,6 +8,8 @@ if !obj.death  {
 		
 		with obj {
 			event_user(0)
+			death_blood_spawn_x = other.xc
+			death_blood_spawn_y = other.yc
 		}
 	} 
 }

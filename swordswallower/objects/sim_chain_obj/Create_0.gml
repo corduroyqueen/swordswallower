@@ -78,3 +78,4 @@ while n<num_rings {
 addfx = 0
 addfy = 0
 
+run = false

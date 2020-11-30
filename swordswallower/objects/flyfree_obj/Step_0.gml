@@ -11,9 +11,9 @@ if death {
 	if death_timer< 1 {
 		if player_obj.zoom_timer_bool {
 			//just_blood(player_obj.hsp*30,player_obj.vsp*30,0.3,10,false,sprite_width/4,sprite_height)
-			just_blood(player_obj.hsp*30,player_obj.vsp*30-100,0.3,10,false,sprite_width/4,sprite_height)
+			just_blood(player_obj.hsp*30,player_obj.vsp*30-100,0.3,10,false,death_blood_spawn_x,death_blood_spawn_y)
 		} else {
-			just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,sprite_width/4,sprite_height)	
+			just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,death_blood_spawn_x,death_blood_spawn_y)
 		}
 		audio_stop_sound(s_fly_buzz)
 		

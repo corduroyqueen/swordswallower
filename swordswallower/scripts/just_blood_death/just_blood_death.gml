@@ -10,36 +10,33 @@ height = argument7
 
 //blood_splat_script()
 
-for (i=0;i<(80);i++){
+blood_splat_script()
+
+for (i=0;i<80;i++){
 	
-	particle = instance_create_depth(x,y,-1,blood_obj)
+	var scalevar = (power(((amount+40-i)/(amount+40)+1),1.15) - 1)/1.15
+	scalevar = sqrt((amount+40-i)/(amount+40)+1) - 0.65
+	var angle = point_direction(0,0,speedx,speedy)
 	
-	
-	var scalevar = random_range(0.1,1)
-	var angle = point_direction(0,0,player_obj.hsp,player_obj.vsp)+90
-	
-	particle.image_xscale = scalevar
-	particle.image_yscale = scalevar
-	
-	if !variable_instance_exists(id,"blood_color") {
-		//blood_color = global.blood_color
-	}
-	particle.image_blend = blood_color
-	particle.hsp = cos(degtorad(angle+random_range(-30,30))) * 6 + random_range(-5.0,5.0)
-	
-	
-	//+ random_range(-3,3) *
-	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
-	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
+	with blood_ctrl_obj {
+		event_user(1)
+		var n = blood_num-1
+		blood_px[| n] = other.x
+		blood_py[| n] = other.y
+		blood_ps[| n] = scalevar
+		blood_pbs[|n] = scalevar
+		blood_p_refs[| n] = scalevar
 		
-	particle.vsp = -sin(degtorad(angle+random_range(-30,30))) * 7 - 4  + random_range(-5.0,5.0)
-	//particle.hsp = clamp(particle.hsp,-20,20)
-	//particle.vsp = clamp(particle.vsp,-20,20)
-	//+ random_range(-3,3) *
-	//	choose(0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,
-	//		1,1,1,1,1,1,1,1,1,1,1,1.1,1.2,1.3,1.4,1.5,1.75,1.7,2,4)
-	//particle.spr = blood_sprite_spr1
-	particle.scalevar = scalevar
-	particle.rot = random_range(0,360)
+		blood_p_bounce[|n] = 0.25
+		
+		
+		if !variable_instance_exists(other.id,"blood_color") {
+			other.blood_color = global.blood_color
+		}
+		blood_pc[| n] = other.blood_color
+		blood_phsp[| n] = cos(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10
+		blood_pvsp[| n] = -sin(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10 - 5 
+		
+	}
 	
 }

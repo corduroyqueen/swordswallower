@@ -124,6 +124,7 @@ if cut>-1 {
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,sim_chain_obj)
 	ok.num_rings = num_rings - cut
 	ok.pinned = false
+	ok.run = true
 	var ww
 	with ok {
 		for (var e=0;e<num_rings;e++) { 
