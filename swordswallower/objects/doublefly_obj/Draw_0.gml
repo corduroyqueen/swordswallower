@@ -3,6 +3,7 @@
 if death {
 	
 } else {
+	gpu_set_colorwriteenable(1,1,1,0)
 	mask_index = doublefly_flap
 	if state==state_idle {
 		draw_sprite_ext(eyeidle,0,x,y,0.6,0.6,0,c_white,1)
@@ -91,5 +92,6 @@ if death {
 		y - 7 + beepy + lengthdir_y(4.5,point_direction(x,y,player_obj.x,player_obj.y)),
 		1.7,1.7,0,c_white,1)
 	}
+	gpu_set_colorwriteenable(1,1,1,1)
 	
 }

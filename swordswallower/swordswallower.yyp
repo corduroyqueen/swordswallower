@@ -7375,6 +7375,14 @@
             }
         },
         {
+            "Key": "6c49a9e8-0767-4279-a5b4-33488cbb15fa",
+            "Value": {
+                "id": "803746fe-0792-46b8-a327-aa5a1494e943",
+                "resourcePath": "sprites\\rope_bit_odd\\rope_bit_odd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6c4d47a3-546d-40fe-b848-21f24904e56d",
             "Value": {
                 "id": "c495fa2b-88ab-4354-992f-146326b8312d",
@@ -8842,7 +8850,7 @@
             "Key": "80e05d15-c073-4e23-8515-8c500b0543c6",
             "Value": {
                 "id": "d3c1176f-39a7-40e7-a057-01efa73fc26b",
-                "resourcePath": "sprites\\rope_bit\\rope_bit.yy",
+                "resourcePath": "sprites\\rope_bit_even\\rope_bit_even.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9623,6 +9631,14 @@
             }
         },
         {
+            "Key": "8ec751ae-e265-4f63-92ef-8553bba980eb",
+            "Value": {
+                "id": "e9bc4654-d570-4a58-99e3-fd797dde59c3",
+                "resourcePath": "scripts\\water_shader_script\\water_shader_script.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8f342336-70ea-4aee-8127-e7aace8f0b37",
             "Value": {
                 "id": "5174dd1f-b4f2-47c9-bf76-1aab8be2a494",
@@ -10351,6 +10367,14 @@
             }
         },
         {
+            "Key": "9b8658e3-386a-4ca2-bbc3-78aadf33e3da",
+            "Value": {
+                "id": "f55e256f-810e-47ea-8c29-2a92416a1b21",
+                "resourcePath": "sprites\\rope_bit_old\\rope_bit_old.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9ba05f82-bb0c-4767-83e8-97cbb08f7bbc",
             "Value": {
                 "id": "3f894c55-346f-46c1-92e7-2c99b3e446e8",
@@ -11067,6 +11091,14 @@
             "Value": {
                 "id": "d4e253fd-beed-425b-a02d-39bea7024241",
                 "resourcePath": "sprites\/pier\/pier.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a7d6f8bd-cf6e-4d09-a0e0-26967902294e",
+            "Value": {
+                "id": "58dea66a-110e-442c-a92d-a95392bb5980",
+                "resourcePath": "sprites\\intestine_bit_even\\intestine_bit_even.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -12668,6 +12700,14 @@
                 "id": "505725f7-f24d-4606-b2a9-86f8ccce85d4",
                 "resourcePath": "sounds\/Knife_Hit_Wall_2\/Knife_Hit_Wall_2.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "c6f519fc-944f-4a6c-89db-8fca1e85e292",
+            "Value": {
+                "id": "51252897-5211-4687-bee3-77aa970599ed",
+                "resourcePath": "objects\\sim_intestine_obj\\sim_intestine_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -15015,6 +15055,14 @@
             }
         },
         {
+            "Key": "ebb1d02a-aa05-4062-85a6-214f4dbc500b",
+            "Value": {
+                "id": "7df98912-7ddc-47ab-a95c-05a52c72a48c",
+                "resourcePath": "sprites\\sword_whirling_enemy_big\\sword_whirling_enemy_big.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ebeab94b-93ff-4b49-80e5-f3342bc5f6ac",
             "Value": {
                 "id": "ad36b661-d2c3-46cb-920e-96ea70092070",
@@ -15587,6 +15635,14 @@
             "Value": {
                 "id": "52878ed0-c4c9-4e5b-a35a-4784e57c15aa",
                 "resourcePath": "sprites\/hand_spr_1\/hand_spr_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f3c3074e-4075-4707-9bf5-e117ccf2bfd7",
+            "Value": {
+                "id": "8e2adf03-818c-4d4d-a25b-97bc131a148a",
+                "resourcePath": "sprites\\intestine_bit_odd\\intestine_bit_odd.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -16488,7 +16544,8 @@
         "ecc1bf77-4b9e-4c7f-8e5e-bad7e9d3f095",
         "1c8e4093-7f4e-49d5-8c18-a04df8bf8605",
         "a87b4608-3cfc-476d-b690-23cd562b799a",
-        "b796b80b-326c-4198-aee0-970ffd98c289"
+        "b796b80b-326c-4198-aee0-970ffd98c289",
+        "8ec751ae-e265-4f63-92ef-8553bba980eb"
     ],
     "tutorial": ""
 }

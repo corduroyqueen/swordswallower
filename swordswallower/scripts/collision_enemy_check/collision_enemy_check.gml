@@ -5,21 +5,23 @@ obj = argument2;
 if(!place_meeting(checkx,checky,obj)){
 	return false;
 }
-
+//sdm("enemy detec")
 local_obj = instance_place(checkx, checky, obj);
 if object_get_parent(local_obj.object_index)==killalways_parent_obj
+&& local_obj.object_index!=twojoints_hand_obj
 && local_obj.object_index!=snakehead_obj {
 	return
 }
 
-
+//sdm("ok")
+//sdm(object_get_name(local_obj.object_index))
 if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	oldx = x
 	oldy = y
 	x = checkx;
 	y = checky;
 	bleh = false
-	
+	//sdm("g1")
 	
 	if local_obj.object_index==tear_nograv_obj {
 		local_obj.death = true
@@ -28,11 +30,13 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	
 	if local_obj.object_index==twojoints_weakspot_obj {
 		 with local_obj {
+			 death_blood_spawn_x = x
+			 death_blood_spawn_y = y
 			 instance_destroy()
 		 }
 		return false	
 	}
-
+	//sdm("g2")
 	if local_obj.object_index==nucrab_obj || local_obj.object_index==handbug_obj {
 		
 		if local_obj.pickedup {
@@ -63,6 +67,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			local_obj.met = true
 		}
 	}
+	//sdm("g3")
 	if local_obj.sword_reject {
 		if  player_obj.tail_throwing {
 			sword_reject_script()
@@ -93,7 +98,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		
 	}
 	
-	
+	//sdm("g4")
 	
 	if local_obj.object_index==arcing_knight_obj {
 		if ((y<local_obj.y-64 && abs(x-local_obj.x)<=56)
@@ -109,8 +114,9 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		return false	
 	}
 	
-	
+	//sdm("g6")
 	if local_obj.object_index==flyfree_obj || local_obj.object_index==doublefly_obj {
+		//sdm("fly collision")
 		if local_obj.inv_timer>0 || local_obj.death {
 			player_obj.tail_planted = false
 			x = oldx
@@ -124,6 +130,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			death_blood_spawn_x = x
 			death_blood_spawn_y = y
 			death = true	
+			met = true
+			//sdm("fly dead")
 			//shatter_mb_input_script(sprite_width/2)	
 		}
 		player_obj.shake_d=4.5
@@ -140,6 +148,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		player_obj.tail_planted = false
 		x = xpreva
 		y = ypreva
+		return false	
 		//hitpause = true
 	} else if local_obj.object_index==flyswarm_obj {
 		if local_obj.inv_timer>0 || local_obj.death || local_obj.swarming {
@@ -402,7 +411,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 				tail_obj.throwxs * -0.1,
 				-5,
 				
-				80,true,sprite_width/4,sprite_height/4)
+				80,true,x,y)
 		
 				state = state_chasing
 				charge_timer=0
@@ -422,6 +431,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		
 		
 		
+	} else if local_obj.object_index=twojoints_hand_obj {
+		x = oldx
+			y = oldy
+		return
 	} else {
 		
 		

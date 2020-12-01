@@ -410,7 +410,7 @@ if death {
 	random_range(-10,1),
 				
 	200,
-	true,sprite_width/2,sprite_height)
+	true,x,y)
 	//shatter_script()	
 	
 	if instance_exists(hit) {

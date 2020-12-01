@@ -6,10 +6,10 @@
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 379,
+    "bbox_bottom": 365,
     "bbox_left": 16,
     "bbox_right": 63,
-    "bbox_top": 14,
+    "bbox_top": 0,
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
@@ -72,7 +72,7 @@
             "visible": true
         }
     ],
-    "origin": 9,
+    "origin": 0,
     "originLocked": false,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
@@ -84,5 +84,5 @@
     "type": 0,
     "width": 80,
     "xorig": 0,
-    "yorig": 46
+    "yorig": 0
 }

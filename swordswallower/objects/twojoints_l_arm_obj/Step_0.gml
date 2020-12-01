@@ -27,7 +27,7 @@ if state==state_idle {
 	
 	
 	hand_tar_x = lerp(hand_tar_x,clamp(player_obj.x+offset,x-minclamp,x-200),0.2)
-	hand_tar_y = y+300
+	hand_tar_y = y+315-(x-hand.x)/20
 	
 	//timer++
 	if timer>100 {
@@ -145,9 +145,12 @@ if state==state_idle {
 	elbow_pos_x = x + dcos(elbow_ang) * arm_1_length
 	elbow_pos_y = y - dsin(elbow_ang) * arm_1_length
 	
-	hand_tar_x = lerp(hand_tar_x, elbow_pos_x + dcos(a)* 100 , 0.1)
-	hand_tar_y = lerp(hand_tar_y, elbow_pos_y - dsin(a)* 100 , 0.1)
+	hand_tar_x = lerp(hand_tar_x, elbow_pos_x + dcos(a-20)* 100 , 0.1)
+	hand_tar_y = lerp(hand_tar_y, elbow_pos_y - dsin(a-20)* 100 , 0.1)
 	
+	if hand_tar_y>y+320-(x-hand.x)/20 {
+		hand_tar_y = lerp(hand_tar_y,y+320-(x-hand.x)/20,0.2)
+	}
 	timer++
 	if timer>40 {
 		timer=0
@@ -180,13 +183,13 @@ if state==state_idle {
 	hand_vsp+=1+hand_vsp/5
 	hand_tar_y+=hand_vsp
 	//hand_tar_y = y+400
-	if hand_tar_y>y+400 {
-		if hand_tar_y>y+405 {
+	if hand_tar_y>y+320-(x-hand.x)/20 {
+		if hand_tar_y>y+325-(x-hand.x)/20 {
 			player_obj.shake_d=15
 			player_obj.camera_shake_d = true	
 		}
 		hand_vsp = 0
-		hand_tar_y = y+400
+		hand_tar_y = y+320-(x-hand.x)/20
 		
 	}
 	if lel_angle<180 {
@@ -217,7 +220,7 @@ if state==state_idle {
 	elbow_pos_y = y - dsin(elbow_ang) * arm_1_length
 	
 	hand_tar_x = lerp(hand_tar_x, elbow_pos_x - 150 , 0.1)
-	hand_tar_y =  y + 400
+	hand_tar_y = y+320-(x-hand.x)/20
 	
 
 } else if state==state_reset {
@@ -247,13 +250,17 @@ hand.y = seg_y[2]
 
 if state==state_knockback || (state==state_lunging && timer>80) || state==state_recovery {
 	hand.sprite_index = two_jointed_arm_out_t1
-	hand.sprite_index = bosshand1
 	hand.mask_index = two_jointed_arm_out_t1
+	
+	hand.sprite_index = bosshand1
+	hand.mask_index = bosshand1
 	hand.image_angle = lel_angle
 } else {
 	hand.sprite_index = two_jointed_arm_t1
-	hand.sprite_index = bosshand2
 	hand.mask_index = two_jointed_arm_t1
+	
+	hand.sprite_index = bosshand2
+	hand.mask_index = bosshand2
 	hand.image_angle = 0
 	
 	

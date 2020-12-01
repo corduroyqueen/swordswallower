@@ -4,6 +4,7 @@
 if death {
 	
 } else {
+	gpu_set_colorwriteenable(1,1,1,0)
 	mask_index = fly_idle
 	if state==state_idle {
 		draw_sprite_ext(eyeidle,0,x,y,sign(x-player_obj.x)*
@@ -63,4 +64,5 @@ if death {
 		1.7,1.7,0,c_white,1)
 		
 	}
+	gpu_set_colorwriteenable(1,1,1,1)
 }

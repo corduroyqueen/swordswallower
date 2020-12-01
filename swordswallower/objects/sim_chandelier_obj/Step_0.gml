@@ -1,4 +1,4 @@
-if in_camera_range_bigger(x,y) {
+if in_camera_range_bigger(x,y) || in_camera_range_bigger(rings_x[|num_rings-1],rings_y[|num_rings-1]) {
 	run = true
 } else {
 	run = false

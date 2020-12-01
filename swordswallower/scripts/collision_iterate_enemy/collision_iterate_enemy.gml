@@ -1,7 +1,7 @@
 obj = argument0
 
-iteration_num = 4;
-if player_obj.tail_planted {
+iteration_num = 6;
+if player_obj.tail_planted || player_obj.tail_carry {
 	return
 }
 //xdelt = x - xprevious;

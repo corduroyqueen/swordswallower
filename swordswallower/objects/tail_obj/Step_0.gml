@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //dt = delta_time/(1/60 * 1000000)
+
 if pickup_timer>0 {
 	pickup_timer--
 }
@@ -50,8 +51,6 @@ if player_obj.tail_carry {
 } else {
 	visible = true
 }
-
-
 
 if abs(player_obj.camx+960-x)>710 ||
 abs(player_obj.camy+540-y)>430 {
@@ -177,7 +176,7 @@ if player_obj.tail_planted {
 		player_obj.tail_planted = false	
 		player_obj.tail_pulling = false	
 	}
-	sdm("ok")
+	//sdm("ok")
 	//sdm("ZOOM BOOL: " + string(player_obj.zoom_timer_bool))
 	//sdm("INSIDE FLIER: " + string(inside_flier))
 	//sdm("PLACE MEETING: " + string(place_meeting(x,y,wall_obj)))
@@ -185,15 +184,15 @@ if player_obj.tail_planted {
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
 	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
-	sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
-	sdm(get_player_speed()+1)
-	sdm("wut")
-	sdm(player_obj.zoom_timer_bool)
+	//sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))
+	//sdm(get_player_speed()+1)
+	//sdm("wut")
+	//sdm(player_obj.zoom_timer_bool)
 	if ((point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<get_player_speed()+1) || nearby_swordgrab_buffer>0)
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0)
 	&& !inside_flier && instance_exists(current_obj)
 	&& current_obj.object_index!=door_obj{
-		sdm("a")
+		//sdm("a")
 		reset_intangibility()
 		
 		player_obj.c_slingtimer = 2.5
@@ -205,16 +204,16 @@ if player_obj.tail_planted {
 			player_obj.held_position_ready = false
 			held_release_timer = 0
 			//sdm("ok")
-			player_obj.hsp *= -1
+			player_obj.hsp *= -3
 			player_obj.vsp = -5
 			player_obj.hsp = clamp(player_obj.hsp,-25,25)
 			player_obj.vsp = clamp(player_obj.vsp,-25,25)
 		} else if !collision_line(player_obj.tail_dest_x,player_obj.tail_dest_y,player_obj.x,player_obj.y,wall_obj,false,true){
-			sdm("d")
+			//sdm("d")
 			fucking_wall_thing()
 			
 		} else if point_distance(player_obj.xpreva,player_obj.ypreva,player_obj.tail_dest_x,player_obj.tail_dest_y)<point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y) {
-			sdm("e")
+			//sdm("e")
 			fucking_wall_thing()
 		}
 	
@@ -474,6 +473,13 @@ if instance_exists(current_obj) {
 mask_index=sword_whirling_enemy
 
 		
+//if player_obj.tail_throwing {
+//	sdm("throw")
+//} else if player_obj.tail_pulling {
+//	sdm("pull")
+//} else {
+//	sdm("neither")
+//}
 collision_iterate_enemy(enemy_parent_obj)
 
 collision_iterate_wall(breakable_decoration_obj)

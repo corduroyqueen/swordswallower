@@ -121,12 +121,17 @@ while n<num_rings {
 
 if cut>-1 {
 	
-	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,sim_chain_obj)
+	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,object_index)
 	ok.num_rings = num_rings - cut
-	ok.pinned = false
-	ok.run = true
+	//ok.pinned = false
+	//ok.run = true
 	var ww
 	with ok {
+		init = false
+		event_user(1)
+		pinned = false
+		run = true
+		
 		for (var e=0;e<num_rings;e++) { 
 			ww = other.cut+e
 			rings_x[| e] = other.rings_x[| ww]
