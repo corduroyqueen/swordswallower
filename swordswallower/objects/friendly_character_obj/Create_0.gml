@@ -6,7 +6,7 @@ player_present = false
 plf = false
 starty =y
 startx = x
-dialogue_array = array_create(100)
+dialogue_array = ds_list_create()//array_create(100)
 current_pick = 0
 init = true
 o=0
@@ -14,6 +14,9 @@ mapguy = false
 stopped = false
 gravd=true
 
+dialogue_master_array = ds_list_create()
+
+times_spoken = 0
 
 keybool = false
 

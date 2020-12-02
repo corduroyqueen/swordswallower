@@ -11047,6 +11047,14 @@
             }
         },
         {
+            "Key": "a68768b0-5f13-4bc6-86fc-2fc77c30fa75",
+            "Value": {
+                "id": "24a767df-50ff-4223-bcdc-e0d1031b3a16",
+                "resourcePath": "objects\\mapguy1_obj\\mapguy1_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a6a14d69-de36-4578-8096-c5ef242acf69",
             "Value": {
                 "id": "5106c09d-2a34-4bde-8cde-535479cfcbf3",

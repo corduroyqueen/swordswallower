@@ -76,7 +76,7 @@ spikes_visible = false
 thin_floor_visible = false
 
 dev = false
-//dev = true
+dev = true
 
 if dev {
 	//show_debug_overlay(true)
@@ -85,7 +85,7 @@ if dev {
 }
 
 window_set_fullscreen(true)
-//window_set_fullscreen(false)
+window_set_fullscreen(false)
 randomize()
 
 zone4 = false
