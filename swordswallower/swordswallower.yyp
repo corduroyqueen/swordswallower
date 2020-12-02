@@ -6975,6 +6975,14 @@
             }
         },
         {
+            "Key": "6594006c-1218-4e43-9fcf-b0b8a63a50ad",
+            "Value": {
+                "id": "79f07fc2-5667-47bd-8dc8-6d09498f294e",
+                "resourcePath": "sounds\\swsw_boss_hurt\\swsw_boss_hurt.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "65f88364-cdcc-4eb2-97aa-23637a204b43",
             "Value": {
                 "id": "8054f992-167a-4a28-9685-a1e3f3540824",
@@ -12020,6 +12028,14 @@
                 "id": "c2399da9-3b58-4853-b16d-21b561864ad1",
                 "resourcePath": "objects\/dash_smoke_particle_obj\/dash_smoke_particle_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b8a9b812-acef-4914-a882-3148e30082e0",
+            "Value": {
+                "id": "fdebbb11-a269-45d5-95e8-f6d747958998",
+                "resourcePath": "sounds\\swsw_boss_lunge_anticipation\\swsw_boss_lunge_anticipation.yy",
+                "resourceType": "GMSound"
             }
         },
         {

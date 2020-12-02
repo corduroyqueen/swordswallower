@@ -1,6 +1,11 @@
 //fuck yes
 parent.destroy_arm = true
 twojoints_obj.phase_n_i = 1000
+
+var kk = swsw_boss_hurt
+audio_sound_gain(kk,1,0)
+audio_play_sound(kk,0,false)
+
 var em = instance_create_depth(parent.hand.x,parent.hand.y,depth,dead_twojoint_arm_obj)
 em.hand_x = parent.hand.x
 em.hand_y = parent.hand.y

@@ -8,7 +8,7 @@ with head {
 	draw_self()
 }
 if state==state_attacking && (attack==attack_wall_hands || attack==attack_wall_hands_switch) {
-	if ht>109 {
+	if ht>129 {
 		if hands_ceiling_a {
 			h1_lerp = lerp(h1_lerp,0,0.2)
 		}
@@ -18,7 +18,7 @@ if state==state_attacking && (attack==attack_wall_hands || attack==attack_wall_h
 		if hands_wall_a {
 			h3_lerp = lerp(h3_lerp,-30,0.2)
 		}
-	} else if ht>80 {
+	} else if ht>100 {
 		if hands_ceiling_a {
 			h1_lerp = lerp(h1_lerp,70,0.2)
 		}

@@ -145,7 +145,7 @@ if state==state_idle {
 		}
 		//h1.visible = true
 		//h2.visible = true
-		if ht>150 {
+		if ht>170 {
 			
 			ht=0
 			if leftarm.destroy_arm && rightarm.destroy_arm {
@@ -155,7 +155,7 @@ if state==state_idle {
 				state_timer = 30
 			}
 			
-		} else if ht>110 {
+		} else if ht>130 {
 			
 			chosen_wall.x = 1000
 			chosen_wall.y = -1000
@@ -168,7 +168,7 @@ if state==state_idle {
 			h2.mask_index = nothing1
 			//h3.mask_index = nothing1
 			
-		} else if ht>80 {
+		} else if ht>100 {
 			chosen_wall.mask_index = sprite54
 			h2.mask_index = sprite54
 			//h3.mask_index = sprite54
@@ -209,7 +209,7 @@ if state==state_idle {
 		}
 		//h1.visible = true
 		//h2.visible = true
-		if ht>120 {
+		if ht>150 {
 			
 			//ht=0
 			
@@ -238,7 +238,7 @@ if state==state_idle {
 				ht = 1
 			}
 			
-		} else if ht>110 {
+		} else if ht>130 {
 			
 			if end_hand_switch {
 				chosen_wall.x = 1000
@@ -256,7 +256,7 @@ if state==state_idle {
 			}
 			//h3.mask_index = nothing1
 			hand_switch_init = false
-		} else if ht>80 {
+		} else if ht>100 {
 			chosen_wall.mask_index = sprite54
 			h2.mask_index = sprite54
 			

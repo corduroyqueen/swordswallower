@@ -153,6 +153,9 @@ if state==state_idle {
 	}
 	timer++
 	if timer>40 {
+		var kk = swsw_boss_lunge_anticipation
+		audio_sound_gain(kk,1,0)
+		audio_play_sound(kk,0,false)
 		timer=0
 		state = state_lunging
 		
