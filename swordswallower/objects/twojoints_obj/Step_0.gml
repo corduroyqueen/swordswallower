@@ -296,7 +296,7 @@ if state==state_idle {
 		head.image_index = 0
 		tail_obj.stuck_check = false
 		tail_obj.visible = true
-		tail_obj.x = x+8000
+		tail_obj.x = x
 		tail_obj.y = y + 400
 		if player_obj.k_fire_p {
 			timer=0
