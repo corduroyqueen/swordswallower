@@ -1,0 +1,1 @@
+partner = st_bridge_bridge

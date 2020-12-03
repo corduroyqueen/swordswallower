@@ -91,7 +91,8 @@ randomize()
 zone4 = false
 
 p_cgems = 0
-
+piercebool = false
+pierce_bridge_pulled = false
 waterbool = false
 gpu_set_texfilter(true)
 

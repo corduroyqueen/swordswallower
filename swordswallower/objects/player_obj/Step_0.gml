@@ -264,7 +264,7 @@ if level1_master.dev {
 		x = mouse_x
 		y = mouse_y
 	}
-	if keyboard_check_pressed(vk_alt) {
+	if keyboard_check_pressed(ord("Q")) {
 		x = 25500
 		y = 7000
 		x = 31700
@@ -287,7 +287,7 @@ if level1_master.dev {
 	}
 }
 
-
+sdm(camy)
 //sdm(point_direction(x,y,tail_dest_x,tail_dest_y))
 
 //sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))

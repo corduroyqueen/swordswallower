@@ -60,7 +60,7 @@ yinput = argument1
 	//gpu_set_tex_filter(toggle_get_state(0, 0));
 
 	if (!surface_exists(srf_water)) srf_water = surface_create(ceil(srf_water_w * srf_scale), ceil(srf_water_h * srf_scale));
-	else surface_resize(srf_water, ceil(srf_water_w * srf_scale), min(300,ceil(srf_water_h * srf_scale)));
+	else surface_resize(srf_water, ceil(srf_water_w * srf_scale), min(400,ceil(srf_water_h * srf_scale)));
 	
 	
 	// draw reflections, water line & flotsam reflections to surface:
@@ -69,7 +69,7 @@ yinput = argument1
 	surface_set_target(srf_water);
 		draw_clear_alpha(water_col, 1);
 		draw_surface_part_ext(	GUI, 0, water_level,
-								srf_water_w, -600, 0, 0,
+								srf_water_w, -1000, 0, 0,
 								srf_scale, -water_y_scale * srf_scale,
 								c_white, 1);
 		

@@ -23,61 +23,79 @@ if gravd {
 	y = starty
 }
 
-if ds_list_size(player_obj.keylist)>0 {
-	keybool = true	
-}
-if current_pick==6 {
-	level1_master.getmap = true	
-}
-	
-//if keybool && mapguy_visited {
-//	dialogue_array[0] = "There it is! Well done. "
-//	dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
-//	dialogue_array[2] = "There's no other way out of this valley, so I'm sure she went that way. "
-//	dialogue_array[3] = "Good luck! Hopefully our paths cross again sometime soon. "
-//	dialogue_array[4] = "end"
-		
-//} else if keybool && !mapguy_visited {
-//	dialogue_array[0] = "Greetings! I see you obtained the key from over there. "
-//	dialogue_array[1] = "I was trying to get your attention earlier, but were in such a rush. I can give you a map of the tower. "
-//	dialogue_array[2] = "Here you go. Press 'SHIFT' to look at it. "
-//	dialogue_array[3] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross it. "
-//	dialogue_array[4] = "There's no other way out of this valley, so I'm sure she went that way. "
-//	dialogue_array[5] = "Good luck! Hopefully our paths cross again sometime soon. "
-//	dialogue_array[6] = "end"
-		
-//	if current_pick==2 {
-//		level1_master.getmap = true	
+//if init {
+//	var lol = dialogue_array[0]
+//	while lol!="0" {
+//		lol = dialogue_array[o]	
+//		o++
 //	}
-//} else {
-//	dialogue_array[0] = "Greetings. I see you've escaped the tower. "
-//	dialogue_array[1] = "I can give you a map of the area if you'd like. It might help you in your pursuit. "
-//	dialogue_array[2] = "Here you go. Press 'SHIFT' to look at it. "
-//	dialogue_array[3] = "You're going to need a key to open the door above us. If you keep going left you'll find one. "
-//	dialogue_array[4] = "Good luck. "
-//	dialogue_array[5] = "end"
-		
-//	if current_pick==2 {
-//		level1_master.getmap = true	
+//	if o>0 {
+//		dialogue_array[o-1] = "end"
+//	} else {
+//		dialogue_array[0] = "end"	
 //	}
+//	init = false
+//}
+//if current_pick==6 {
+//	level1_master.getmap = true	
 //}
 	
-
-
-
-if init {
-	var lol = dialogue_array[0]
-	while lol!="0" {
-		lol = dialogue_array[o]	
-		o++
-	}
-	if o>0 {
-		dialogue_array[o-1] = "end"
+if keybool && mapguy_visited {
+	if times_spoken<1 {
+		dialogue_array[0] = "There it is! Well done. "
+		dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross the gap. "
+		dialogue_array[2] = "If you can kill the bridgekeeper and find a way to pull the bridge back up I can get out of here. "
+		dialogue_array[3] = "Good luck! Hopefully our paths cross again sometime soon. "
+		dialogue_array[4] = "end"
 	} else {
-		dialogue_array[0] = "end"	
+		dialogue_array[0] = "Best of luck with the bridgekeeper--be prepared for anything. "
+		dialogue_array[4] = "end"
 	}
-	init = false
+		
+} else if keybool && !mapguy_visited {
+	if times_spoken<1 {
+		dialogue_array[0] = "Greetings, warrior! I see you obtained the key from over there. "
+		dialogue_array[1] = "I was trying to get your attention earlier, but it looked like you were in a rush. "
+		dialogue_array[2] = "I'll give you a map of the tower if you find a way to reactivate the bridge. "
+		dialogue_array[3] = "Here's the map. Press SHIFT or CIRCLE to look at it. "
+		dialogue_array[4] = "If you can kill the bridgekeeper and find a way to pull the bridge back up I can get out of here. "
+		dialogue_array[5] = "Good luck! Hopefully our paths cross again sometime soon. "
+		dialogue_array[6] = "end"
+		
+		if current_pick==4 {
+			level1_master.getmap = true	
+		}
+	}
+} else {
+	if times_spoken<1 {
+		dialogue_array[0] = "Greetings, traveler. That's a rather large sword you're dragging around. "
+		dialogue_array[1] = "If you're down here, then you must've fallen at the bridge, too. "
+		dialogue_array[2] = "I came from other side of the bridge, and the bridgekeeper dropped me into the tar pit as well. Now I'm stuck here. "
+		dialogue_array[3] = "Tell you what, let's make a deal. "
+		dialogue_array[4] = "I'm a cartographer, and I've mapped this entire area. And you're a warrior, with that giant sword of yours."
+		dialogue_array[5] = "I'll give you a map of this tower and the cliffs above, and you can put the bridge back the way it was so we can get out of here. "
+		dialogue_array[6] = "Here you go. Press SHIFT or CIRCLE to look at it. "
+		dialogue_array[7] = "If you can find a way to open the door behind me, you'll be on your way back to the bridge. "
+		dialogue_array[8] = "Good luck. "
+		dialogue_array[9] = "end"
+	} else {
+		dialogue_array[0] = "Return when you've found a way to open that bridge. "
+		dialogue_array[1] = "end"
+	}
+	
+	if ds_list_size(player_obj.keylist)>0 {
+		keybool = true	
+		times_spoken = 0
+	}
+	if current_pick==6 {
+		level1_master.getmap = true	
+	}
 }
+	
+
+
+
+
 
 
 
@@ -89,9 +107,6 @@ if player_present && !boatboy {
 	}
 	if player_obj.k_speak_p {
 		
-		if mapguy && !keybool {
-			mapguy_visited = true	
-		}
 		
 		
 		
@@ -122,6 +137,11 @@ if player_present && !boatboy {
 		
 		if dialogue=="end" {
 			current_pick = 0	
+			if !keybool {
+				mapguy_visited = true	
+			}
+			times_spoken++
+		
 			//spk_bool = false
 		}
 	}
@@ -131,7 +151,7 @@ if (plf==true && player_present = false) {//|| player_obj.ending_lock {
 	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
-	times_spoken++
+	
 	//ui_manager.spk_bool = false
 	
 }

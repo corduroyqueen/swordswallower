@@ -246,5 +246,30 @@ cam_midy = camy + cam_height_h
 camxdiff = camx - camxlast
 camydiff = camy - camylast
 
+//with camera_hitbox_check_obj {
+//	//if place_meeting(other.camx,other.camy,camera_bound_obj) {
+//	//	var ang = get_angle(instance_place(other.camx,other.camy,camera_bound_obj))
+//	//	while place_meeting(other.camx,other.camy,camera_bound_obj) {
+//	//		other.camx+=dcos(ang)
+//	//		other.camy-=dsin(ang)
+//	//	}
+//	//}
+	
+//	if place_meeting(other.camx,other.camy,camera_bound_obj) {
+//		var b = instance_place(other.camx,other.camy,camera_bound_obj)
+//		while place_meeting(other.camx,other.camylast,camera_bound_obj) {
+//			other.camx-=sign(b.x-other.camxlast)
+//		}
+//		while place_meeting(other.camxlast,other.camy,camera_bound_obj) {
+//			other.camy-=sign(b.y-other.camylast)
+//		}
+//	}
+//}
+
+camx = clamp(camx,13519,80000)
+camy = clamp(camy,0,20389)
+
+camxdiff = camx - camxlast
+camydiff = camy - camylast
 
 camera_set_view_pos(view_camera[0],camx,camy)

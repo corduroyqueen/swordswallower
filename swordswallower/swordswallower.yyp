@@ -5119,6 +5119,14 @@
             }
         },
         {
+            "Key": "4c25f5d2-4a99-47c7-89ad-cbc0e7c8822e",
+            "Value": {
+                "id": "9406756c-399f-4e54-831b-4284bb8904ee",
+                "resourcePath": "objects\\camera_hitbox_check_obj\\camera_hitbox_check_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4c26edc1-1932-4631-9ee2-9cc1dc6f7720",
             "Value": {
                 "id": "889667a8-2204-423f-a815-652a068a3023",
@@ -5195,6 +5203,14 @@
             "Value": {
                 "id": "5557c20e-74a2-4157-b964-863cd66422fb",
                 "resourcePath": "sprites\/blacksky\/blacksky.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4d747e01-f1fe-431d-ab86-1b6932e91781",
+            "Value": {
+                "id": "cb461f74-5711-4dbe-bef9-fc0fb0a2d4e6",
+                "resourcePath": "sprites\\camera_check_spr\\camera_check_spr.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -5948,6 +5964,14 @@
                 "id": "e6bb6d92-a5ce-4ebb-9d83-4cd9c2d9d4c6",
                 "resourcePath": "sprites\/flower2\/flower2.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "582f4d7f-c367-441a-a1b6-2a3d5726b499",
+            "Value": {
+                "id": "7e951273-0587-4d28-8bc1-6423b1e83e0d",
+                "resourcePath": "objects\\camera_bound_obj\\camera_bound_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -15603,6 +15627,14 @@
             "Value": {
                 "id": "ea5a5848-5736-48ff-923c-2e0514bfcff3",
                 "resourcePath": "sprites\\quit_btn\\quit_btn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f285894a-43e8-4907-a08e-6a7c6963faf6",
+            "Value": {
+                "id": "f645fd37-6049-4001-b830-a15b08de0c5b",
+                "resourcePath": "sprites\\cam_bound\\cam_bound.yy",
                 "resourceType": "GMSprite"
             }
         },

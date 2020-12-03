@@ -5,6 +5,14 @@
 
 
 
+if place_meeting(x,y,tail_obj) && (player_obj.tail_throwing || player_obj.tail_pulling) {
+	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,x,y)
+	level1_master.piercebool = true
+}
+
+if level1_master.piercebool {
+	instance_destroy(id)
+}
 
 if abs(x-player_obj.x)<300 && abs(y-player_obj.y)<300 {
 	player_present = true
@@ -24,7 +32,29 @@ if init {
 	} else {
 		dialogue_array[0] = "end"	
 	}
+	if level1_master.pierce_bridge_pulled && !level1_master.piercebool {
+		st_bridge_switch.enabled = true
+	}
 	init = false
+}
+if times_spoken<1 {
+	dialogue_array[0] = "Spare me! Please! I'm so sorry! "
+	dialogue_array[1] = "The Queen made me do it, I swear, I didn't want to trick you! "
+	dialogue_array[3] = "I've been locked up here for years, just like you. They threatened to kill me if I didn't drop every passerby into the tar pit. "
+	dialogue_array[4] = "Please, just spare me, I promise I won't try to kill anyone else! "
+	dialogue_array[5] = "end"
+} else if times_spoken<2 {
+	dialogue_array[0] = "What do you want from me?? "
+	dialogue_array[1] = "Is it about the cloaked man? I saw him go up your tower. "
+	dialogue_array[2] = "If you keep going straight you'll find him. He was carrying an unconscious girl. "
+	dialogue_array[3] = "end"
+} else if times_spoken<3 {
+	dialogue_array[0] = "Is it about the traveler I tricked earlier? The masked one? "
+	dialogue_array[1] = "If you find him, tell I'm sorry... I really mean it. "
+	dialogue_array[2] = "end"
+} else {
+	dialogue_array[0] = "Please just leave me alone, I won't hurt anyone else! "
+	dialogue_array[1] = "end"
 }
 
 
@@ -72,6 +102,7 @@ if player_present {
 		if dialogue=="end" {
 			current_pick = 0	
 			spk_bool = false
+			times_spoken++
 		}
 	}
 }

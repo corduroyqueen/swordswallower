@@ -27,21 +27,6 @@ dialogue_array[5] = "Gabe. Matt. Noah. Clair. Spencer. Elizabeth. Marganne. Juan
 dialogue_array[6] = "That is all, that is all, there is nothing else. "
 dialogue_array[7] = false
 
-dialogue_array[0] = "Spare me! Please! I'm so sorry! "
-dialogue_array[1] = "The Queen made me do it, I swear, I didn't want to trick you! "
-dialogue_array[2] = "... "
-dialogue_array[3] = "I've been locked up here for years, just like you. They threatened to kill me if I didn't drop every passerby into the tar pit. "
-dialogue_array[4] = "Please, just spare me, I promise I won't try to kill anyone else! "
-dialogue_array[5] = "... "
-dialogue_array[6] = "What do you want from me?? "
-dialogue_array[7] = "Is it about the cloaked man? I saw him go up your tower. "
-dialogue_array[8] = "If you keep going straight you'll find him. He was carrying an unconscious girl. "
-dialogue_array[9] = "... "
-dialogue_array[10] = "Is it about the traveler I tricked earlier? The masked one? "
-dialogue_array[11] = "If you find him, tell I'm sorry... I really mean it. "
-dialogue_array[12] = "... "
-dialogue_array[13] = "Please just leave me alone, I won't hurt anyone else! "
-dialogue_array[14] = "end"
 
 gravd = false
 
