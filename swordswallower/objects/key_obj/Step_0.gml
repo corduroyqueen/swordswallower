@@ -14,6 +14,8 @@ if unlocking {
 	
 	move_towards_point(target.x,target.y,20)
 	if point_distance(x,y,target.x,target.y)<25 {
+		
+		audio_play_sound(door_unlock_2,0,false)
 		target.closed = false
 		flying_away = true
 		depth = -2900

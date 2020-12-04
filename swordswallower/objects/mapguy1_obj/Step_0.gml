@@ -63,7 +63,7 @@ if keybool && mapguy_visited {
 		dialogue_array[6] = "end"
 		
 		if current_pick==4 {
-			level1_master.getmap = true	
+			level1_master.st_map_1 = true
 		}
 	}
 } else {
@@ -88,7 +88,7 @@ if keybool && mapguy_visited {
 		times_spoken = 0
 	}
 	if current_pick==6 {
-		level1_master.getmap = true	
+		level1_master.st_map_1 = true
 	}
 }
 	

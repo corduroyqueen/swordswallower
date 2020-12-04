@@ -40,9 +40,9 @@ if init {
 if times_spoken<1 {
 	dialogue_array[0] = "Spare me! Please! I'm so sorry! "
 	dialogue_array[1] = "The Queen made me do it, I swear, I didn't want to trick you! "
-	dialogue_array[3] = "I've been locked up here for years, just like you. They threatened to kill me if I didn't drop every passerby into the tar pit. "
-	dialogue_array[4] = "Please, just spare me, I promise I won't try to kill anyone else! "
-	dialogue_array[5] = "end"
+	dialogue_array[2] = "I've been locked up here for years, just like you. They threatened to kill me if I didn't drop every passerby into the tar pit. "
+	dialogue_array[3] = "Please, just spare me, I promise I won't try to kill anyone else! "
+	dialogue_array[4] = "end"
 } else if times_spoken<2 {
 	dialogue_array[0] = "What do you want from me?? "
 	dialogue_array[1] = "Is it about the cloaked man? I saw him go up your tower. "

@@ -1,5 +1,11 @@
+
 camxlast = camx
 camylast = camy
+if kkb {
+	camx = oldcx
+	camy = oldcy
+	kkb = false
+}
 
 if place_meeting(x,y,camera_fix_bounds_parent_obj) {
 	camera_fix_bounds = true
@@ -245,26 +251,36 @@ cam_midy = camy + cam_height_h
 
 camxdiff = camx - camxlast
 camydiff = camy - camylast
-
-//with camera_hitbox_check_obj {
-//	//if place_meeting(other.camx,other.camy,camera_bound_obj) {
-//	//	var ang = get_angle(instance_place(other.camx,other.camy,camera_bound_obj))
-//	//	while place_meeting(other.camx,other.camy,camera_bound_obj) {
-//	//		other.camx+=dcos(ang)
-//	//		other.camy-=dsin(ang)
-//	//	}
-//	//}
+var cx = camx
+var cy = camy
+oldcx = camx
+oldcy = camy
+var ang = point_direction(cx,cy,player_obj.x-other.cam_width_h,player_obj.y-other.cam_height_h)
+//kkb = false
+with camera_hitbox_check_obj {
+	//if place_meeting(other.camx,other.camy,camera_bound_obj) {
+	//	kkb = true
+	//	var inst = instance_place(other.camx,other.camy,camera_bound_obj)
+	//	ang = get_angle_plug2(other.cam_midx,other.cam_midy,inst)
+	//	sdm("ang")
+	//	sdm(ang)
+	//	while place_meeting(other.camx,other.camy,camera_bound_obj) {
+	//		other.camx+=dcos(ang)
+	//		other.camy-=dsin(ang)
+	//	}
+	//}
 	
-//	if place_meeting(other.camx,other.camy,camera_bound_obj) {
-//		var b = instance_place(other.camx,other.camy,camera_bound_obj)
-//		while place_meeting(other.camx,other.camylast,camera_bound_obj) {
-//			other.camx-=sign(b.x-other.camxlast)
-//		}
-//		while place_meeting(other.camxlast,other.camy,camera_bound_obj) {
-//			other.camy-=sign(b.y-other.camylast)
-//		}
-//	}
-//}
+	//if place_meeting(other.camx,other.camy,camera_bound_obj) {
+	//	kkb = true
+	//	var b = instance_place(other.camx,other.camy,camera_bound_obj)
+	//	while place_meeting(other.camx,other.camylast,camera_bound_obj) {
+	//		other.camx-=sign(b.x-other.camxlast)
+	//	}
+	//	while place_meeting(other.camxlast,other.camy,camera_bound_obj) {
+	//		other.camy-=sign(b.y-other.camylast)
+	//	}
+	//}
+}
 
 camx = clamp(camx,13519,80000)
 camy = clamp(camy,0,20389)
@@ -273,3 +289,4 @@ camxdiff = camx - camxlast
 camydiff = camy - camylast
 
 camera_set_view_pos(view_camera[0],camx,camy)
+

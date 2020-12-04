@@ -423,7 +423,8 @@ if hitpause {
 		hitpause = false
 	}
 }
-
+temp_hs = hsp
+temp_vs = vsp
 
 mask_index=sword_whirling
 if player_obj.tail_planted {
@@ -443,8 +444,7 @@ if player_obj.tail_planted {
 	intangible = false	
 } else if player_obj.tail_throwing {
 	current_obj=noone
-	temp_hs = hsp
-	temp_vs = vsp
+	
 	moveSwordX(hsp)
 	moveSwordY(vsp)
 	if current_obj!=noone {

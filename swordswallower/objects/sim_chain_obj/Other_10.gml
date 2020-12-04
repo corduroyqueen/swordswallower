@@ -142,6 +142,8 @@ if cut>-1 {
 		
 		}
 	}
+	var spark = instance_create_depth(ok.x,ok.y,depth+1,spark_particle_effect_obj)
+	spark.angle = point_direction(0,0,-tail_obj.hsp,-tail_obj.vsp)
 	
 	num_rings = cut+1
 }

@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if player_obj.death {
+	if audio_is_playing(venus_searching_1) {
+		audio_stop_sound(venus_searching_1)	
+		audio_stop_sound(venus_searching_2)	
+	}
+}
 if death {
 	if deathinit {
 		if instance_exists(hit) {
@@ -56,6 +62,8 @@ if death {
 		if atk_timer<atk_timer_max-30 && atk_timer>0 {
 			head.x = x + random_range(-6,6)
 			head.y = y + random_range(-6,6)
+			targetx = player_obj.x
+			targety = player_obj.y
 		} else {
 			head.x = x
 			head.y = y
@@ -69,8 +77,7 @@ if death {
 		
 		if atk_timer>atk_timer_max {
 			state=state_attacking
-			targetx = player_obj.x
-			targety = player_obj.y
+			
 			atk_timer = 0
 			
 			weak_spot = instance_create_depth(x,y,0,snakeheart_obj)

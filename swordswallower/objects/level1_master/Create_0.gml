@@ -45,6 +45,10 @@ level2map = true
 dc_map_1 = false
 if_map_1 = false
 
+
+st_map_1 = false
+st_map_2 = false
+
 getmap = false
 map = false
 

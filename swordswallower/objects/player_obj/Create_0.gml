@@ -282,3 +282,7 @@ dt = 1
 
 blood_color = make_color_rgb(0.9 * 255, 0.0 * 255, 0.3 * 255)
 //blood_color = make_color_rgb(1 * 255, 0 * 255, 0 * 255)
+
+kkb = false
+oldcx = 0
+oldcy = 0

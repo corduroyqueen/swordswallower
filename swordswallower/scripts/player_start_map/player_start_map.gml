@@ -1,13 +1,17 @@
-if level1_master.map {
-	if player_obj.k_map {
-		mapout = true
-		draw_sprite_ext(spr_newmap,0,960,540,1,1,0,c_white,1)
-	} else {
-		mapout = false
-	} 
-} else {
-	mapout = false
+if player_obj.k_map {
+	draw_sprite_ext(level1_master.map,0,960,540,1,1,0,c_white,1)
 }
+
+//if level1_master.map {
+//	if player_obj.k_map {
+//		mapout = true
+		
+//	} else {
+//		mapout = false
+//	} 
+//} else {
+//	mapout = false
+//}
 	//if k_map_p && !death{ 
 	//	hsp=0
 	//	vsp=0

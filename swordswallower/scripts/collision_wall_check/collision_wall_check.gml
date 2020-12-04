@@ -88,7 +88,6 @@ if obj==key_door_obj {
 		local_obj.closed = false
 		hitpause = true
 		lockcheck=true
-		audio_play_sound(door_unlock_2,0,false)
 		sword_reject_script()
 	}	
 	
