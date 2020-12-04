@@ -32,9 +32,9 @@ if !done {
 			tail_obj.moving_platform_bool = false
 			sword_present = false
 			player_obj.held_position = false
-			
-			sword_reject_script()
-			
+			with tail_obj {
+				sword_reject_script()
+			}
 			current_pick = 0
 			//x = startx+7999
 			//done = true

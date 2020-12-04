@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if point_distance(x,y,player_obj.x,player_obj.y)<3000 {
+if point_distance(xstart,ystart,player_obj.x,player_obj.y)<3000 {
 	if !level1_master.piercebool {
 		x = -100
 		y = 20000
@@ -57,7 +57,7 @@ if times_spoken<1 {
 	dialogue_array[4] = "end"
 } else if times_spoken<2 {
 	dialogue_array[0] = "Hm? A map? "
-	dialogue_array[1] = "Yes, I can give you one, in the name of potential future collaborations between us. "
+	dialogue_array[1] = "...alright, I'll give you one. In the name of potential future collaborations between us, hopefully. "
 	dialogue_array[2] = "Here you go. I saw something peculiar nearby and marked it down, so it may be of some use to you. "
 	dialogue_array[3] = "end"
 	
@@ -67,6 +67,7 @@ if times_spoken<1 {
 } else if times_spoken<3 {
 	dialogue_array[0] = "The maps I'm giving you are my drafts, by the way, so apologies for their roughness. Some things might be wrong. "
 	dialogue_array[1] = "My partners sell higher quality versions back in the Dry City. "
+	dialogue_array[2] = "end"
 } else if times_spoken<4 {
 	dialogue_array[0] = "Best of luck in your travels, warrior. "
 	dialogue_array[1] = "I trust we'll meet again soon. "

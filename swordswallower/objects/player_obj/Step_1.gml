@@ -19,7 +19,7 @@ if cool {
 	//black_wall_obj.visible = true
 	//spike.visible = true
 	//thin_floor_obj.visible = true
-	
+	layer_set_visible(layer_get_id("background_layer"),true)
 	if intro {
 		tail_obj.x = sword_swallower.x
 		tail_obj.y = sword_swallower.y
