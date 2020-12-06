@@ -16,8 +16,16 @@ if death {
 		go.vsp = tail_obj.throwys*0.4
 		go.spinspeed = random_range(20,100) * -sign(go.hsp)
 		go.spurt_bool = true
-	
+		var vinecorpse = instance_create_depth(x,y,depth+1,sim_deadplant2_obj)
+		vinecorpse.sang = point_direction(x,y,head.x,head.y)
+		vinecorpse.num_rings = point_distance(x,y,tail_obj.x,tail_obj.y)/32
+		with vinecorpse {
+			event_user(1)
+		}
+		vinecorpse.run = true
 		instance_destroy(head)
+		
+		
 		deathinit = false
 	}
 } else {

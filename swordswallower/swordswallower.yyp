@@ -3007,6 +3007,14 @@
             }
         },
         {
+            "Key": "2cb5dd2a-f030-4661-b055-a1f0f28c297e",
+            "Value": {
+                "id": "5a4e2d95-0262-458d-819b-5f2a55556a18",
+                "resourcePath": "sprites\\venus_segment2\\venus_segment2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2ce24aef-0f0c-42fc-84b9-eb3ae221fdbc",
             "Value": {
                 "id": "4e4011bc-a29e-4763-9131-4164bd582bf4",
@@ -3315,6 +3323,14 @@
             "Value": {
                 "id": "aeae1893-c783-4a7f-8321-363f44576ba9",
                 "resourcePath": "sprites\/area2_treerib11\/area2_treerib11.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3113b131-eafc-490e-9ce8-2386dccf08cb",
+            "Value": {
+                "id": "b9a18741-37da-4efb-801d-33ffd07aa04c",
+                "resourcePath": "sprites\\dead_vine_segment2\\dead_vine_segment2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8199,6 +8215,14 @@
             }
         },
         {
+            "Key": "75fd1467-1ff9-4c12-98db-1ec2945478b9",
+            "Value": {
+                "id": "732d72f9-6446-4ffd-b41b-3d2c28778d87",
+                "resourcePath": "sprites\\dead_vine_segment1\\dead_vine_segment1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7604b0f9-aadd-4bc7-9ab1-4d4611b40030",
             "Value": {
                 "id": "c248f9b1-b859-499b-8906-8792aa06f3f5",
@@ -9764,6 +9788,14 @@
                 "id": "b74a0a6c-fab5-43f1-b102-a9cbfe3bfbd4",
                 "resourcePath": "objects\/cryptkeeper_obj\/cryptkeeper_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "90a60018-05c5-4a82-97c3-9358c8ee1d8f",
+            "Value": {
+                "id": "835daed9-5256-4b55-96be-60e25dd1883c",
+                "resourcePath": "sprites\\venus_segment1\\venus_segment1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -11356,6 +11388,14 @@
                 "id": "c4bfc996-00b3-4e28-aba6-ac31747e82b3",
                 "resourcePath": "sprites\\boss_arm1\\boss_arm1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aaddb898-a189-4e50-93e9-ddb5b3df539f",
+            "Value": {
+                "id": "d14e9bd6-0533-4e02-adeb-06b07c87fdad",
+                "resourcePath": "objects\\sim_deadplant_obj\\sim_deadplant_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -16052,6 +16092,14 @@
                 "id": "8c665133-8141-464e-8133-dab6643e2fbd",
                 "resourcePath": "scripts\/audio_initializer\/audio_initializer.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f9113b65-a9e7-494d-befb-163bacbf38da",
+            "Value": {
+                "id": "255d8b8b-b658-4f64-ac6a-0f971cca3b97",
+                "resourcePath": "objects\\sim_deadplant2_obj\\sim_deadplant2_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
