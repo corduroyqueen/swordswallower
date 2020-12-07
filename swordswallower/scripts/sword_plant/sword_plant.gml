@@ -1,8 +1,21 @@
 local_obj = argument0
 
 
+
 wall_particle_tail_script(x-xpreva,y-ypreva,0.2,5,true,2,2,rubble_s1)
 get_angle(local_obj)
+
+
+image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
+
+if local_obj.object_index == impale_circle_obj {
+	image_angle = point_direction(x,y,local_obj.x,local_obj.y) - 90
+	var ang = point_direction(local_obj.x,local_obj.y,x,y)
+	if point_distance(x,y,local_obj.x,local_obj.y)>50 {
+		x = local_obj.x + dcos(ang) * 50
+		y = local_obj.y - dsin(ang) * 50
+	}
+}
 
 		
 planted=true	
@@ -29,7 +42,6 @@ player_obj.tail_planted = true
 player_obj.left_click_buffer = 0
 //ang = 0
 		
-image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
 
 audio_sound_pitch(gsound.s_sword_hit_metal_wall,random_range(0.9,1.1))
 //audio_manager(gsound.s_sword_hit_metal_wall,0,false,0)

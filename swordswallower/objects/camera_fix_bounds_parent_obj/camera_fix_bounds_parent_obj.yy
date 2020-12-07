@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "camera_fix_bounds_parent_obj",
     "eventList": [
-        
+        {
+            "id": "6e2b0fd2-20b8-4701-a628-07b7248fb3a4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "50ee8872-72d1-4b5a-a0be-7ce1e31ba8f6"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -148,7 +148,8 @@ if (21137 < (player_obj.camy + 1080)) {
 }
 
 if (3730 < (player_obj.camy + 1080)) && (3730 > (player_obj.camy)) {
-	water_shader_script(max(0,25640-player_obj.camx),3730)
+	//water_shader_script(max(0,25640-player_obj.camx),3730)
+	water_shader_script(0,3730)
 }
 
 //{

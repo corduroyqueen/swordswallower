@@ -67,6 +67,9 @@ yinput = argument1
 	// optimization: flotsam reflectioons should actually only draw when in view
 	//-------------------------------------------------------------------------
 	surface_set_target(srf_water);
+		//with tar_obj {
+		//	draw_sprite_ext(water_spr,0,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
+		//}
 		draw_clear_alpha(water_col, 1);
 		draw_surface_part_ext(	GUI, 0, water_level,
 								srf_water_w, -1000, 0, 0,

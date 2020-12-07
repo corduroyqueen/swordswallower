@@ -1,11 +1,11 @@
 
 camxlast = camx
 camylast = camy
-if kkb {
-	camx = oldcx
-	camy = oldcy
-	kkb = false
-}
+//if kkb {
+//	camx = oldcx
+//	camy = oldcy
+//	kkb = false
+//}
 
 if place_meeting(x,y,camera_fix_bounds_parent_obj) {
 	camera_fix_bounds = true
@@ -16,6 +16,7 @@ if place_meeting(x,y,camera_fix_bounds_parent_obj) {
 	camera_fix_bounds = false
 	cam_fix_obj = noone
 }
+
 
 if intro {
 	if !checkpoint_manager.text_bool {
@@ -183,10 +184,10 @@ if intro {
 
 if camera_fix_bounds && !player_obj.death {
 	if cam_fix_obj.xtarget>0 {
-		camx = lerp(camx,cam_fix_obj.xtarget - cam_width_h,0.2)
+		camx = lerp(camx,cam_fix_obj.xtarget - cam_width_h,cam_fix_obj.lerpamt)
 	} 
 	if cam_fix_obj.ytarget>0 {
-		camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,0.2)
+		camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,cam_fix_obj.lerpamt)
 	} 
 }
 
@@ -255,9 +256,11 @@ var cx = camx
 var cy = camy
 oldcx = camx
 oldcy = camy
-var ang = point_direction(cx,cy,player_obj.x-other.cam_width_h,player_obj.y-other.cam_height_h)
+//var ang = point_direction(cx,cy,player_obj.x-other.cam_width_h,player_obj.y-other.cam_height_h)
 //kkb = false
 with camera_hitbox_check_obj {
+	x = other.cam_midx
+	y = other.cam_midy
 	//if place_meeting(other.camx,other.camy,camera_bound_obj) {
 	//	kkb = true
 	//	var inst = instance_place(other.camx,other.camy,camera_bound_obj)
@@ -269,7 +272,32 @@ with camera_hitbox_check_obj {
 	//		other.camy-=dsin(ang)
 	//	}
 	//}
-	
+	//if cam_fix_obj.xtarget>0 {
+	//	camx = lerp(camx,cam_fix_obj.xtarget - cam_width_h,cam_fix_obj.lerpamt)
+	//} 
+	//if cam_fix_obj.ytarget>0 {
+	//	camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,cam_fix_obj.lerpamt)
+	//} 
+	if place_meeting(other.cam_midx,other.cam_midy,camera_bound_parent_obj) {
+		var inst = instance_place(other.cam_midx,other.cam_midy,camera_bound_parent_obj)
+		with other {
+			if inst.xtarget>0 {
+				var xdiff = inst.x-cam_midx
+				var ydiff = inst.y-cam_midy
+				if abs(ydiff)<abs((inst.image_yscale*64)/2 + cam_height_h) - 100 {
+				
+					camx = lerp(cam_midx,inst.x + ((inst.image_xscale*64)/2 + cam_width_h) * -sign(xdiff),inst.lerpamt)-cam_width_h
+				}
+			} 
+			if inst.ytarget>0 {
+				var xdiff = inst.x-cam_midx
+				var ydiff = inst.y-cam_midy
+				if abs(xdiff)<abs((inst.image_xscale*64)/2 + cam_width_h) - 100 {
+					camy = lerp(cam_midy,inst.y + ((inst.image_yscale*64)/2 + cam_height_h) * -sign(ydiff),inst.lerpamt)-cam_height_h
+				}
+			} 
+		}
+	}
 	//if place_meeting(other.camx,other.camy,camera_bound_obj) {
 	//	kkb = true
 	//	var b = instance_place(other.camx,other.camy,camera_bound_obj)

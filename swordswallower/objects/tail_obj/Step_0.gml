@@ -386,7 +386,7 @@ if current_obj==moving_platform_obj {
 			
 	
 }
-
+image_xscale = 1
 if player_obj.tail_throwing || player_obj.tail_pulling {
 	var cx = player_obj.camx + player_obj.cam_width_h
 	var cy = player_obj.camy + player_obj.cam_height_h
@@ -401,7 +401,14 @@ if player_obj.tail_throwing || player_obj.tail_pulling {
 	
 	
 	audio_emitter_gain(s_whoosh_emitter,1)
+	if hsp!=0 {
+		image_xscale = -sign(hsp)
+	}
+	if hsp>2 && vsp>2 {
+		image_angle = point_direction(0,0,hsp,vsp)
+	}
 } else {
+	
 	audio_emitter_gain(s_whoosh_emitter,0)
 }
 

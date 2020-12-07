@@ -2095,6 +2095,14 @@
             }
         },
         {
+            "Key": "1def2f8c-63ea-43b4-822a-75ec5bbf035e",
+            "Value": {
+                "id": "a197d55a-b883-4657-986e-d16e4d397f17",
+                "resourcePath": "objects\\camera_bound_hrz_obj\\camera_bound_hrz_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1e0d7219-d9da-43f3-bf37-b6c3c995a0fd",
             "Value": {
                 "id": "b52685db-e81e-4008-a62d-6e09128ba99c",
@@ -5986,7 +5994,7 @@
             "Key": "582f4d7f-c367-441a-a1b6-2a3d5726b499",
             "Value": {
                 "id": "7e951273-0587-4d28-8bc1-6423b1e83e0d",
-                "resourcePath": "objects\\camera_bound_obj\\camera_bound_obj.yy",
+                "resourcePath": "objects\\camera_bound_parent_obj\\camera_bound_parent_obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -6084,6 +6092,14 @@
                 "id": "66f66add-059e-4a68-ab2e-ff2374f6202e",
                 "resourcePath": "sprites\/body3\/body3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "596450a6-abf7-4039-bf51-3f08215d51f0",
+            "Value": {
+                "id": "36b3f80f-a54d-4ad9-86be-af87e4cc3f29",
+                "resourcePath": "objects\\camera_fix_gentle_obj\\camera_fix_gentle_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -7068,6 +7084,14 @@
                 "id": "0b8301d9-e639-4c63-8f13-bcee32ccaefd",
                 "resourcePath": "scripts\/__init_view\/__init_view.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "66836cfb-6602-4bcf-ab63-35140ebb2b48",
+            "Value": {
+                "id": "f9037126-4ae9-42e5-9f9e-41af4d3b848c",
+                "resourcePath": "objects\\camera_bound_fix_obj\\camera_bound_fix_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -11863,6 +11887,14 @@
             }
         },
         {
+            "Key": "b32ac9cd-1af8-46af-9d46-60690d9144fb",
+            "Value": {
+                "id": "0bc51098-c42c-4afd-bfb7-3bec18dc292b",
+                "resourcePath": "sprites\\camera_fix_spr\\camera_fix_spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b339aafa-b864-42e0-9aed-bbe1b95e3c7b",
             "Value": {
                 "id": "64a80546-f489-482f-a84c-a389b3f930d5",
@@ -14276,6 +14308,14 @@
                 "id": "82699c89-1303-4436-a74c-47e77cf99127",
                 "resourcePath": "scripts\/old_player_hitbox_code\/old_player_hitbox_code.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "de8dc5f5-7d08-4085-b98f-7d94c55dcfd7",
+            "Value": {
+                "id": "92358d89-7678-4f94-9160-af02d87edfe6",
+                "resourcePath": "objects\\camera_bound_vert_obj\\camera_bound_vert_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

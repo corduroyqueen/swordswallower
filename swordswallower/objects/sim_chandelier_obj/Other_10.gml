@@ -39,14 +39,18 @@ if player_obj.tail_planted || player_obj.tail_carry {
 var wind = level1_master.wind_strength
 //wind = clamp( (dsin(current_time/1000000)+0.6)*0.1   ,0,1)
 //addfx+=wind
-
+var x1,y1,x2,y2
 while n<num_rings {
 	spring_fx=0
 	spring_fy=0
 	
 	if n<num_rings-1 {
-		Lx = rings_x[| n]-rings_x[| n+1]
-		Ly = rings_y[| n]-rings_y[| n+1]
+		x1 = rings_x[| n]
+		y1 = rings_y[| n]
+		x2 = rings_x[| n+1]
+		y2 = rings_y[| n+1]
+		Lx = x1-x2
+		Ly = y1-y2
 		mag = point_distance(rings_x[| n],rings_y[| n],rings_x[| n+1],rings_y[| n+1])
 		ang = point_direction(rings_x[| n],rings_y[| n],rings_x[| n+1],rings_y[| n+1])
 		Lunitx = Lx/lo
@@ -111,7 +115,7 @@ cut = -1
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
-	if check_sw && cut<0 {
+	if check_sw && cut<0 && p_cut_check {
 		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 && !met {
 			met = true
 			cut=n
@@ -127,7 +131,7 @@ while n<num_rings {
 }
 
 if cut>-1 {
-	
+	p_cut_check = false
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,sim_chandelier_obj)
 	ok.run = true
 	ok.num_rings = num_rings - cut
@@ -146,6 +150,7 @@ if cut>-1 {
 		
 		}
 	}
-	
+	var spark = instance_create_depth(ok.x,ok.y,depth+1,spark_particle_effect_obj)
+	spark.angle = point_direction(0,0,-tail_obj.hsp,-tail_obj.vsp)
 	num_rings = cut+1
 }

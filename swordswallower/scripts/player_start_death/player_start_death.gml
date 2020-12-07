@@ -16,6 +16,16 @@ audio_play_sound(sword_crunch_1,0,false)
 	
 shockwave_shader.trigger = true
 shockwave_shader.strength_input = 0.2
+
+with camera_fix_bounds_parent_obj {
+	x=100
+	y=-10000
+}
+with camera_bound_parent_obj {
+	x=100
+	y=-10000
+}
+	
 	
 	
 //instance_deactivate_object(background)

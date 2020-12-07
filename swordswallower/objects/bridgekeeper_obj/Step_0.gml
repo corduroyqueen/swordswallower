@@ -8,6 +8,10 @@
 if place_meeting(x,y,tail_obj) && (player_obj.tail_throwing || player_obj.tail_pulling) {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,x,y)
 	level1_master.piercebool = true
+	
+	ui_manager.current_dialogue = "end"
+	current_pick = 0
+	spk_bool = false
 }
 
 if level1_master.piercebool {

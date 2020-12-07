@@ -36,16 +36,24 @@ if player_obj.held_position_start && held_timer<1 {
 var wind = level1_master.wind_strength
 //wind = clamp( (dsin(current_time/1000000)+0.6)*0.1   ,0,1)
 //addfx+=wind
-
+var x1
+var y1
+var x2
+var y2
 while n<num_rings {
 	spring_fx=0
 	spring_fy=0
 	
 	if n<num_rings-1 {
-		Lx = rings_x[| n]-rings_x[| n+1]
-		Ly = rings_y[| n]-rings_y[| n+1]
-		mag = point_distance(rings_x[| n],rings_y[| n],rings_x[| n+1],rings_y[| n+1])
-		ang = point_direction(rings_x[| n],rings_y[| n],rings_x[| n+1],rings_y[| n+1])
+		
+		x1 = rings_x[| n]
+		y1 = rings_y[| n]
+		x2 = rings_x[| n+1]
+		y2 = rings_y[| n+1]
+		Lx = x1-x2
+		Ly = y1-y2
+		mag = point_distance(x1,y1,x2,y2)
+		//ang = point_direction(x1,y1,x2,y2)
 		Lunitx = Lx/lo
 		Lunity = Ly/lo
 		//sdm(point_distance(0,0,Lunitx,Lunity))
@@ -105,7 +113,7 @@ cut = -1
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
-	if check_sw && cut<0 {
+	if check_sw && cut<0 && p_cut_check {
 		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 {
 			cut=n
 		}
@@ -120,7 +128,7 @@ while n<num_rings {
 }
 
 if cut>-1 {
-	
+	p_cut_check = false
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,object_index)
 	ok.num_rings = num_rings - cut
 	//ok.pinned = false
