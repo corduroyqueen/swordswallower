@@ -220,7 +220,7 @@ if player_obj.tail_planted {
 	} else if point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)<165 
 	&& !inside_flier && current_obj!=dash_guy_obj  && current_obj.object_index!=door_obj
 	&& current_obj.object_index!=circle_friend_obj && !player_obj.zoom_timer_bool && pickup_timer<1 && !player_obj.intro
-	{ sdm(" b")
+	{// sdm(" b")
 		sword_pull_check()
 		if !player_obj.grounded {
 			player_obj.held_release_timer = 7
@@ -243,7 +243,7 @@ if player_obj.tail_planted {
 		
 	} else if point_distance(player_obj.x,player_obj.y,x,y)<30 && sqrt(sqr(player_obj.hsp) + sqr(player_obj.vsp))<1
 	&& (player_obj.zoom_timer_bool || player_obj.bounce_buff_timer>0) {
-		sdm("dude")
+		//sdm("dude")
 		fucking_wall_thing()	
 	}
 	

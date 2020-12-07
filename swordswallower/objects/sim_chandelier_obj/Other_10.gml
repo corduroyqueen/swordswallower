@@ -106,7 +106,7 @@ while n<num_rings {
 
 n=0
 
-if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 {
+if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 && p_cut_check {
 	check_sw = true
 } else {
 	check_sw = false
@@ -115,7 +115,7 @@ cut = -1
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
-	if check_sw && cut<0 && p_cut_check {
+	if check_sw && cut<0 {
 		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 && !met {
 			met = true
 			cut=n
@@ -138,6 +138,9 @@ if cut>-1 {
 	ok.pinned = false
 	ok.cut_bool = cut_bool
 	cut_bool = true
+	sdm("FUCKKCKCKCK")
+	sdm(cut_bool)
+	sdm(ok.cut_bool)
 	var ww
 	with ok {
 		for (var e=0;e<num_rings;e++) { 

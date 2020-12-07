@@ -5,7 +5,7 @@ player_obj.x = player_obj.tail_dest_x
 player_obj.y = player_obj.tail_dest_y
 //audio_play_sound(grab1,0,false)
 			
-			sdm("hall")
+			//sdm("hall")
 //reset_intangibility()
 
 if !player_obj.k_dash
@@ -23,8 +23,8 @@ if !player_obj.k_dash
 	player_obj.held_position_ready = false
 	
 	//sdm("ok")
-	player_obj.hsp *= 0.8
-	player_obj.vsp *= 0.8
+	player_obj.hsp *= 0.9
+	player_obj.vsp *= 0.9
 	out_of_dash_t=10
 	player_obj.hsp = clamp(player_obj.hsp,-25,25)
 	player_obj.vsp = clamp(player_obj.vsp,-25,25)

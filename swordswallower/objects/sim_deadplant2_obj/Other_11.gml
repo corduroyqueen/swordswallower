@@ -33,6 +33,8 @@ pinned = true
 held_timer=0
 sinc=0
 
+addfx = 0
+addfy = 0
 //ks= 240
 //mass = 45
 //grav = 0.8

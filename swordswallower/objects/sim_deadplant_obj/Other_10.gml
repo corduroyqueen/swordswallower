@@ -106,7 +106,7 @@ while n<num_rings {
 
 n=0
 
-if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 {
+if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 && p_cut_check  {
 	check_sw = true
 } else {
 	check_sw = false
@@ -115,7 +115,7 @@ cut = -1
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
-	if check_sw && cut<0 && p_cut_check {
+	if check_sw && cut<0{
 		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 && !met {
 			met = true
 			cut=n
@@ -133,11 +133,9 @@ while n<num_rings {
 if cut>-1 {
 	p_cut_check = false
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,object_index)
-	ok.num_rings = num_rings - cut
-	ok.cut_bool = cut_bool
-	cut_bool = true
 	//ok.pinned = false
 	//ok.run = true
+	ok.num_rings = num_rings - cut
 	var ww
 	with ok {
 		init = false
@@ -155,6 +153,9 @@ if cut>-1 {
 		
 		}
 	}
+	
+	ok.cut_bool = cut_bool
+	cut_bool = true
 	//var spark = instance_create_depth(ok.x,ok.y,depth+1,spark_particle_effect_obj)
 	//spark.angle = point_direction(0,0,-tail_obj.hsp,-tail_obj.vsp)
 	

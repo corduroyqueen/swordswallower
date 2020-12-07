@@ -79,14 +79,17 @@ yinput = argument1
 		//gpu_set_colorwriteenable(true, true, true, false); // not that important but use this if you notice the water surface looses alpha
 		
 		draw_sprite_stretched(spr_water_side_line, 0, 0, 0, srf_water_w, 1);
-		with reflection_obj {
-			var ox=x
-			var oy=y
-			x -=player_obj.camx
-			y -=player_obj.camy
-			draw_sprite_ext(sprite,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,1)
-			x=ox
-			y=oy
+		
+		
+		//gpu_set_colorwriteenable(1,1,1,1)
+		if player_obj.y<12000 {
+			gpu_set_blendmode(bm_subtract)
+			with sprite_mask_obj {
+				draw_sprite_ext(black,0,x-player_obj.camx,0,image_xscale,image_yscale,image_angle,image_blend,1)
+			}
+		
+		
+			gpu_set_blendmode(bm_normal)
 		}
 		//gpu_set_colorwriteenable(true, true, true, true);
 		
@@ -118,8 +121,13 @@ yinput = argument1
 		texture_set_stage(u_distort_tex,			distort_tex);
 		
 		draw_surface_ext(srf_water, xinput, yinput-player_obj.camy, 1 / srf_scale, 1 / srf_scale, 0, blend_col, 1);
+		
+		shader_reset();
+		with reflection_obj {
+			draw_sprite_ext(sprite,image_index,x-player_obj.camx,y-player_obj.camy,image_xscale,image_yscale,image_angle,image_blend,1)
+		}
 	surface_reset_target();
-	shader_reset();
+	
 	
 	
 	// reset GPU:

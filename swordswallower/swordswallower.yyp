@@ -12471,6 +12471,14 @@
             }
         },
         {
+            "Key": "bf2d7c47-fd33-41fa-9e75-1440d78d930f",
+            "Value": {
+                "id": "205302a8-2fbb-41eb-a0f1-7096f9990282",
+                "resourcePath": "objects\\sprite_mask_obj\\sprite_mask_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bf3ef013-720e-40f9-b966-8226002d7936",
             "Value": {
                 "id": "f8e25b3f-2850-4bb6-bbe6-f849bfc5fac1",

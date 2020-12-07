@@ -18,9 +18,15 @@ if death {
 		go.spurt_bool = true
 		var vinecorpse = instance_create_depth(x,y,depth+1,sim_deadplant2_obj)
 		vinecorpse.sang = point_direction(x,y,head.x,head.y)
-		vinecorpse.num_rings = point_distance(x,y,tail_obj.x,tail_obj.y)/32
+		vinecorpse.num_rings = floor(point_distance(x,y,tail_obj.x,tail_obj.y)/32)
 		with vinecorpse {
 			event_user(1)
+			addfx = tail_obj.hsp
+			addfy = tail_obj.vsp
+			for (var e=0;e<num_rings;e++) { 
+				rings_hsp[| e] = tail_obj.hsp
+				rings_vsp[| e] = tail_obj.vsp
+			}
 		}
 		vinecorpse.run = true
 		instance_destroy(head)

@@ -141,10 +141,12 @@ if zoom_timer_bool {
 		bounce_buff_timer = 6
 		out_of_dash_t=10
 		reset_intangibility()
+		//hsp *=0.68
 		hsp *=0.68
 		if vsp>0 {
 			vsp *=0.9
 		} else {
+			//vsp *=0.68
 			vsp *=0.68
 		}
 		zoom_allow=7

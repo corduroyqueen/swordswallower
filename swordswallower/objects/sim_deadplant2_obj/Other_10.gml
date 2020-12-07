@@ -17,8 +17,7 @@ var fy
 
 var spring_fx
 var spring_fy
-addfx = 0
-addfy = 0
+
 if player_obj.held_position_start && held_timer<1 {
 	var d = point_distance(x,y,player_obj.x,player_obj.y)
 	var hti = clamp(5-d/500,0,5)
@@ -106,7 +105,7 @@ while n<num_rings {
 
 n=0
 
-if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 {
+if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 && p_cut_check {
 	check_sw = true
 } else {
 	check_sw = false
@@ -115,7 +114,7 @@ cut = -1
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
-	if check_sw && cut<0 && p_cut_check {
+	if check_sw && cut<0 {
 		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 && !met {
 			met = true
 			cut=n
@@ -160,3 +159,6 @@ if cut>-1 {
 	
 	num_rings = cut+1
 }
+
+addfx = 0
+addfy = 0

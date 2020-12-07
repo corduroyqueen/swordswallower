@@ -64,6 +64,7 @@ shader_set(shader_bloom_lum);
 	//draw_surface(blood_surface,0,0) // blood
 	draw_surface(GUI, 0, 0);
 	unblooming_script()
+	//draw_lights()
 	//shader_reset()
 	
 	
