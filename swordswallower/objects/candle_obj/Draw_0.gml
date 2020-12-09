@@ -20,7 +20,7 @@ if !destroy {
 	bc = make_color_rgb(255*0.9,255*0.0,255*0.3)
 	bc = make_color_rgb(255*1.0,255*0.3,255*0.5)
 	//bc = make_color_rgb(255,255,255)
-		gpu_set_blendmode(bm_max)
+		gpu_set_blendmode(bm_add)
 	//draw_circle(x+s_x,y+s_y,70+random_range(-5,5),false)
 	//var s = random_range(0.8,1.5)
 	//draw_sprite_ext(blood_sprite_spr1,0,x+s_x,y+s_y,s,s,0,global.magic_color,0.08)

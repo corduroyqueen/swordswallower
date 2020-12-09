@@ -311,7 +311,7 @@ with camera_hitbox_check_obj {
 }
 
 camx = clamp(camx,13519,80000)
-camy = clamp(camy,0,20389)
+camy = clamp(camy,0,20250)
 
 camxdiff = camx - camxlast
 camydiff = camy - camylast

@@ -2839,6 +2839,14 @@
             }
         },
         {
+            "Key": "28894d8f-45b2-4065-b8e0-74f54f0747c2",
+            "Value": {
+                "id": "72565476-8c1e-49cb-a97c-131ace26eda1",
+                "resourcePath": "sprites\\spr_bat_anim\\spr_bat_anim.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "29a42d16-dce4-4d8b-b6f5-add4a9e10880",
             "Value": {
                 "id": "01f911c0-09b8-4479-b71a-7cc2ba14419e",
@@ -4900,6 +4908,14 @@
                 "id": "e35e7711-f686-4c05-a960-de6692f09cd0",
                 "resourcePath": "sprites\/sprite746\/sprite746.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "48b35369-6bc8-40c2-9a3e-a923384e694a",
+            "Value": {
+                "id": "baeaf56a-cd08-473f-a07f-f58200762ad9",
+                "resourcePath": "objects\\art_bat_player_on_screen_obj\\art_bat_player_on_screen_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12836,6 +12852,14 @@
                 "id": "fcce5e05-5f97-4988-b841-aa3f129256ba",
                 "resourcePath": "sprites\/zombie_test\/zombie_test.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c62f70ce-a97f-45fb-9613-6a61ac66a866",
+            "Value": {
+                "id": "a3968e2d-cfb8-4314-855d-c58089a170d7",
+                "resourcePath": "objects\\art_bat_obj\\art_bat_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
