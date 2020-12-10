@@ -9,7 +9,7 @@ camylast = camy
 
 if place_meeting(x,y,camera_fix_bounds_parent_obj) {
 	camera_fix_bounds = true
-	if cam_fix_obj==noone {
+	if cam_fix_obj==noone || cam_fix_obj!=instance_place(x,y,camera_fix_bounds_parent_obj) {
 		cam_fix_obj = instance_place(x,y,camera_fix_bounds_parent_obj)
 	}
 } else {
@@ -311,7 +311,7 @@ with camera_hitbox_check_obj {
 }
 
 camx = clamp(camx,13519,80000)
-camy = clamp(camy,0,20250)
+camy = clamp(camy,0,20350)
 
 camxdiff = camx - camxlast
 camydiff = camy - camylast

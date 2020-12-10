@@ -286,3 +286,5 @@ blood_color = make_color_rgb(0.9 * 255, 0.0 * 255, 0.3 * 255)
 kkb = false
 oldcx = 0
 oldcy = 0
+
+dash_sound_base = false

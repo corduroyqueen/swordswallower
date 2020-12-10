@@ -87,7 +87,9 @@ if !tail_planted && !tail_held {
 		tail_obj.y = tail_obj.lpy
 			
 		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
-		
+		audio_play_sound(swsw_dash_base,0,false)
+		audio_sound_gain(swsw_dash_base,0.5,0)
+		//audio_play_sound(kka,0,false)
 		
 		draw_line_obj.go = true	
 		draw_line_obj.gotimer=50
@@ -185,7 +187,8 @@ if !tail_planted && !tail_held {
 		zoom_pause = true
 		
 		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
-		
+		audio_play_sound(swsw_dash_base,0,false)
+		audio_sound_gain(swsw_dash_base,0.5,0)
 		
 		draw_line_obj.go = true	
 		draw_line_obj.gotimer=50

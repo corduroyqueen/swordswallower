@@ -63,19 +63,19 @@ if grounded && (k_left || k_right) {
 	{
 		if !tail_carry {
 			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
-			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_sound_pitch(hey,random_range(0.75,1.25))
 			audio_manager(hey,0,false,0)
 		
 			hey = footstep5
-			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_sound_pitch(hey,random_range(0.75,1.25))
 			audio_manager(hey,0,false,0)	
 		} else {
 			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
-			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_sound_pitch(hey,random_range(0.75,1.25))
 			audio_manager(hey,0,false,0)
 		
 			hey = footstep5
-			audio_sound_pitch(hey,random_range(0.5,1))
+			audio_sound_pitch(hey,random_range(0.75,1.25))
 			audio_manager(hey,0,false,0)	
 		}
 		footstep_audio_bool = false

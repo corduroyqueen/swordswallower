@@ -135,6 +135,9 @@ if zoom_timer_bool {
 	}
 	
 	if zoom_out_of_wall_timer>0 && !place_meeting(x,y,wall_parent_obj) {
+		audio_play_sound(swsw_cancel_dash,0,false)
+		audio_sound_gain(swsw_cancel_dash,1,0)
+		audio_sound_gain(swsw_cancel_dash,0,30)
 		
 		zoom_timer_bool = false
 		zoom_timer = 0
@@ -188,7 +191,7 @@ if zoom_timer_bool {
 	//}
 	
 	
-	
+	audio_sound_gain(swsw_dash_base,0.25,0)
 	audio_sound_gain(Ice_Projectile_Shoot_03,1,0)
 	
 	
@@ -197,6 +200,9 @@ if zoom_timer_bool {
 	zoom_particle_timer= 0
 	
 	//gogo = lerp(gogo,0,0.1
+	
+	audio_sound_gain(swsw_dash_base,0,10)
+	
 	audio_sound_gain(Ice_Projectile_Shoot_03,0,200)
 }
 
