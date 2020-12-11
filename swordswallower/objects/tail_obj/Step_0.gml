@@ -273,14 +273,20 @@ if player_obj.tail_pulling {
 		visible = false
 		pull_timer = 0
 		
-		var langg = point_direction(x,y,xpreva,ypreva)
-		player_sprite_obj.sword_pos_x = player_obj.x + dcos(langg) * 200
-		player_sprite_obj.sword_pos_y = player_obj.y - dsin(langg) * 200
-		player_sprite_obj.sword_ang = point_direction(0,0,dcos(langg),-dsin(langg))-90
-		player_sprite_obj.sword_recoil = true
 		
-		ui_manager.dbug_checkx = player_sprite_obj.sword_pos_x
-		ui_manager.dbug_checky = player_sprite_obj.sword_pos_y
+		if point_distance(player_obj.x,player_obj.y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)>100 {
+			var langg = point_direction(x,y,xpreva,ypreva)
+			player_sprite_obj.sword_pos_x = player_obj.x + dcos(langg) * 200
+			player_sprite_obj.sword_pos_y = player_obj.y - dsin(langg) * 200
+			player_sprite_obj.sword_ang = point_direction(0,0,dcos(langg),-dsin(langg))-90
+			player_sprite_obj.sword_recoil = true
+			player_sprite_obj.sword_facing = sign(x-xpreva)
+			if player_obj.grounded {
+				player_obj.hsp += -dcos(langg) * 6
+			}
+		}
+		//ui_manager.dbug_checkx = player_sprite_obj.sword_pos_x
+		//ui_manager.dbug_checky = player_sprite_obj.sword_pos_y
 		
 		if stinky && stinky_when_thrown {
 			player_obj.stinky_check = false
@@ -411,7 +417,7 @@ if player_obj.tail_throwing || player_obj.tail_pulling {
 	if hsp!=0 {
 		image_xscale = -sign(hsp)
 	}
-	if hsp>2 && vsp>2 {
+	if hsp>2 && vsp>2 && !hitpause {
 		image_angle = point_direction(0,0,hsp,vsp)
 	}
 } else {
@@ -429,6 +435,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 }
 //sdm(hitpause)
 if hitpause {
+	sprite_index = newsword_center
 	hitpause_timer++
 	hsp=0
 	vsp=0

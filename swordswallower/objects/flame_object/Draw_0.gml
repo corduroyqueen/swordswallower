@@ -30,5 +30,6 @@ shader_set(shader);
 	
 	draw_sprite(sprites[sprite], 0, tx, ty);
 shader_reset();
+
 gpu_set_colorwriteenable(true,true,true,true)
 

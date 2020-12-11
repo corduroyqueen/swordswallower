@@ -201,14 +201,14 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		x = xpreva
 		y = ypreva
 		local_obj.met = true
-		hitpause = true
+		sword_hitpause(local_obj)
 		
 	} else if local_obj.object_index==kill_back_obj {
 		
 		audio_play_sound(Knife_Pull_140,0,false)
 		local_obj.death = true	
 		player_obj.tail_planted = false
-		hitpause = true
+		sword_hitpause(local_obj)
 		
 	} else if local_obj.object_index==snakeheart_obj {
 		if !local_obj.parent.headhit {
@@ -219,7 +219,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			y = ypreva
 			player_obj.shake_d=5
 			player_obj.camera_shake_d = true
-			hitpause = true
+			sword_hitpause(local_obj)
 			
 			audio_play_sound(Knife_Pull_140,0,false)
 			
@@ -262,7 +262,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		y = ypreva
 		player_obj.shake_d=5
 		player_obj.camera_shake_d = true
-		hitpause = true
+		sword_hitpause(local_obj)
 	} else if local_obj.object_index==green_guy_obj {
 		
 		audio_play_sound(Knife_Pull_140,0,false)
@@ -272,21 +272,21 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		player_obj.tail_planted = false
 		player_obj.gem_active = true
 		player_obj.gem_thrown = false
-		hitpause = true
+		sword_hitpause(local_obj)
 	} else if local_obj.object_index==wooden_fly_dart_obj {
 		audio_play_sound(Knife_Pull_140,0,false)
 		local_obj.death = true	
 		x = oldx
 		y = oldy
 		player_obj.tail_planted = false	
-		hitpause = true
+		sword_hitpause(local_obj)
 	} else if local_obj.object_index==eye_obj {
 		local_obj.hp-=1	
 		local_obj.image_blend = c_red
 		local_obj.met = true
 		player_obj.shake_d=7
 		player_obj.camera_shake_d = true
-		hitpause = true
+		sword_hitpause(local_obj)
 		
 	} else if local_obj.object_index==cryptkeeper_obj || local_obj.object_index==cryptkeeper_ceiling_obj {
 		with local_obj {
@@ -321,7 +321,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		player_obj.shake_d=5
 		player_obj.camera_shake_d = true
 		audio_manager(false,0,false,3)
-		hitpause = true
+		sword_hitpause(local_obj)
 		
 	} else if local_obj.object_index==dash_guy_obj {
 		if local_obj.sprite_index == follow_guy_angry {
@@ -346,7 +346,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
 			audio_manager(false,0,false,3)
 		} 
-		hitpause = true
+		sword_hitpause(local_obj)
 		local_obj.met = true
 		return false
 	} else if local_obj.object_index==charger_obj {
@@ -354,7 +354,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		if local_obj.hp-10<0 {
 			audio_play_sound(Knife_Pull_140,0,false)
 			local_obj.death = true	
-			hitpause = true
+			sword_hitpause(local_obj)
 			audio_manager(false,0,false,3)
 			audio_play_sound(bulldeath,0,false)
 			var ok = sword_thud_1

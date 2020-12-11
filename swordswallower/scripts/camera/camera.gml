@@ -310,8 +310,8 @@ with camera_hitbox_check_obj {
 	//}
 }
 
-camx = clamp(camx,13519,80000)
-camy = clamp(camy,0,20350)
+//camx = clamp(camx,13519,80000)
+//camy = clamp(camy,0,20350)
 
 camxdiff = camx - camxlast
 camydiff = camy - camylast

@@ -27,3 +27,15 @@ ty = y
 px = 0
 py = 0
 #endregion
+
+perlin_tex = sprite_get_texture(perlin1,0)
+
+u_perlin_tex	= shader_get_sampler_index(perlin_fadeout_shader, "perlin_tex");
+u_time2			= shader_get_uniform(perlin_fadeout_shader, "time");
+u_tolerance		= shader_get_uniform(perlin_fadeout_shader, "tolerance");
+u_inverse		= shader_get_uniform(perlin_fadeout_shader, "inverse");
+range = 1.00
+ang=0
+
+okx = 0
+oky = 0

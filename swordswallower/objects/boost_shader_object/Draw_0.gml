@@ -12,18 +12,27 @@
 //-----------------------------------------------------------------------------
 
 //draw_self();
-
+gpu_set_colorwriteenable(true,true,true,false)
 if player_obj.zoom_timer_bool && !player_obj.death {
+	
+	//with player_sprite_obj {
+	//	image_angle = point_direction(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)-90
+	//	image_speed = 1.5
+	//	sprite_index = s_boost	
+	//	draw_self()
+	//
+	draw_sprite_ext(boost,current_time%2,player_obj.x,player_obj.y,1,1,point_direction(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)-90,c_white,1)
+	
 	time			= (time + 1 * 0.05) mod 1;
 
-	var ang = point_direction(0,0,player_obj.hsp,player_obj.vsp)
+	ang = point_direction(0,0,player_obj.hsp,player_obj.vsp)
 	var dist = min(point_distance(player_obj.x,player_obj.y,px,py)/20,50)
 	var strength_x	= 1 * 0.3;		// [0, 0.3]
 	var strength_y	= dist * 0.014				// [0, 1]
 	var size		= 0.1 + 0.25;	// [0.25, 0.75]
 
 	gpu_set_tex_filter(true);		
-	gpu_set_colorwriteenable(true,true,true,false)
+	
 	shader_set(shader);
 		texture_set_stage(u_distort_tex, distort_tex);
 		shader_set_uniform_f(u_time, time);
@@ -37,9 +46,40 @@ if player_obj.zoom_timer_bool && !player_obj.death {
 		1.1,1.1,
 		ang+90,c_white,1)
 	shader_reset();
-	gpu_set_colorwriteenable(true,true,true,true)
-
+	
+	range = 1.00
+	okx = player_obj.x+dcos(ang)*100
+	oky = player_obj.y-dsin(ang)*100
 } else {
+	if range>0{
+		shader_set(perlin_fadeout_shader)
+
+	
+		texture_set_stage(u_perlin_tex, perlin_tex);
+		//shader_set_uniform_f(u_time2, (sin(current_time/1000)+1)/2);
+		//range-=0.06
+		range = lerp(range,0,0.1)
+		range-=0.00001
+		shader_set_uniform_f(u_time2, range);
+		shader_set_uniform_f(u_tolerance, 0.0);
+		shader_set_uniform_f(u_inverse, 1.0);
+		var xs
+		var ys
+		if point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<100 {
+			xs = 1
+			ys = 0.9
+		} else {
+			xs = 0.6
+			ys = 2
+		}
+		
+		draw_sprite_ext(spr_boost_jagged_s,0,okx,oky,xs+(1-range)*2,xs+(1-range)*2,ang+90,c_white,1)
+
+		shader_reset()
+	}
+	
 	px = player_obj.x
 	py = player_obj.y
 }
+
+gpu_set_colorwriteenable(true,true,true,true)

@@ -32,8 +32,9 @@ for (i=0;i<(amount+40);i++){
 			other.blood_color = global.blood_color
 		}
 		blood_pc[| n] = other.blood_color
-		blood_phsp[| n] = cos(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10
-		blood_pvsp[| n] = -sin(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10 - 5 
+		angle+=random_range(-60,60)
+		blood_phsp[| n] = (cos(degtorad(angle)) * 10)/(power(scalevar+1,7)) *30
+		blood_pvsp[| n] = (-sin(degtorad(angle))* 10 - 5)/(power(scalevar+1,7)) *30
 		
 	}
 	

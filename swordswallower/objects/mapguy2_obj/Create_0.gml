@@ -32,7 +32,7 @@ ds_list_add(dialogue_sound_list,mapguy_v_2)
 ds_list_add(dialogue_sound_list,mapguy_v_3)
 ds_list_add(dialogue_sound_list,mapguy_v_4)
 
-sprite_index = oracle;
+//sprite_index = oracle;
 mapguy = true
 dialogue_array[0] = "Greetings. That's a rather large sword."
 dialogue_array[1] = "If you're down here, then you must've fallen at the bridge, too. "

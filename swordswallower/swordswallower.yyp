@@ -3207,6 +3207,14 @@
             }
         },
         {
+            "Key": "2e789940-1784-466e-a91e-5fea5ca19c83",
+            "Value": {
+                "id": "6d3cb74e-e383-42ea-8e80-6479ee800210",
+                "resourcePath": "sprites\\perlin1\\perlin1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2e84fd55-3e89-41ce-a648-07dd1c06c6ab",
             "Value": {
                 "id": "d8f0574e-6fe3-4d8c-84bc-ebc1d46e5006",
@@ -8199,6 +8207,14 @@
             }
         },
         {
+            "Key": "738f6331-cdba-4b88-b302-795f2ea5f249",
+            "Value": {
+                "id": "7cd17246-3961-4343-895f-1cbba3163d3f",
+                "resourcePath": "sprites\\perlin11\\perlin11.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "73e628c9-bc36-46dc-b9fa-348c0d5e58f0",
             "Value": {
                 "id": "c243b761-6a47-47a2-8ad3-c08a75600494",
@@ -9343,6 +9359,14 @@
             }
         },
         {
+            "Key": "86b15df0-c665-49b0-acd2-24b87bc13006",
+            "Value": {
+                "id": "7c34222a-5e34-4344-bb24-2d8258befbe5",
+                "resourcePath": "sprites\\spr_boost_jagged_s\\spr_boost_jagged_s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8706ab4a-a650-425e-af2f-25c9500e3b32",
             "Value": {
                 "id": "5b85f39f-65fc-4d38-a148-6eaff89b9b8c",
@@ -9484,6 +9508,14 @@
                 "id": "2b8fccf0-4f75-4ead-90b4-baf4b09d51c2",
                 "resourcePath": "objects\/death_banker_obj\/death_banker_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8981d679-1857-4ba6-a3e2-6563bf29167c",
+            "Value": {
+                "id": "7ee5d423-ef63-4b4a-8461-bb6d17d68c2e",
+                "resourcePath": "scripts\\sword_hitpause\\sword_hitpause.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -12404,6 +12436,14 @@
                 "id": "21daae00-69a4-44cd-8d43-f792544b359d",
                 "resourcePath": "sprites\/rose\/rose.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b99605eb-36e6-42a9-a921-516701f53b43",
+            "Value": {
+                "id": "2f21c586-2f6b-4633-b156-391280827fc6",
+                "resourcePath": "shaders\\perlin_fadeout_shader\\perlin_fadeout_shader.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -16962,7 +17002,8 @@
         "1c8e4093-7f4e-49d5-8c18-a04df8bf8605",
         "a87b4608-3cfc-476d-b690-23cd562b799a",
         "b796b80b-326c-4198-aee0-970ffd98c289",
-        "8ec751ae-e265-4f63-92ef-8553bba980eb"
+        "8ec751ae-e265-4f63-92ef-8553bba980eb",
+        "8981d679-1857-4ba6-a3e2-6563bf29167c"
     ],
     "tutorial": ""
 }

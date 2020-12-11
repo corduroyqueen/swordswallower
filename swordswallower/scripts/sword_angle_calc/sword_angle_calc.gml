@@ -6,12 +6,15 @@ facing = sword_facing
 
 var tempa = convert_angle(sword_ang) + 90 + facing * 5
 if sword_recoil {
-	
+	if !player_obj.grounded || collision_line(player_obj.x,player_obj.y,player_obj.x,player_obj.y+80,thin_floor_obj,false,true) {
+		sword_recoil = false
+		return
+	}
 	angsp += facing*0.1
 	sword_ang+=sqr(angsp) * sqr(angsp) * sign(facing)
 	if abs(angsp)<0.2 {
-		sword_pos_x-=dcos(tempa)*50
-		sword_pos_y+=dsin(tempa)*50
+		sword_pos_x-=dcos(tempa)*80
+		sword_pos_y+=dsin(tempa)*80
 	}
 	if collision_line(sword_pos_x,sword_pos_y,sword_pos_x+dcos(tempa)*108,sword_pos_y-dsin(tempa)*108,all_walls_parent_obj,false,true) {
 		if abs(angsp)<1.5 {
@@ -25,6 +28,7 @@ if sword_recoil {
 		}
 		
 	}
+	
 	return
 } 
 angsp = 0	
