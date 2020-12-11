@@ -8,12 +8,16 @@ get_angle(local_obj)
 
 image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
 
+
+
+
+
 if local_obj.object_index == impale_circle_obj {
 	image_angle = point_direction(x,y,local_obj.x,local_obj.y) - 90
-	var ang = point_direction(local_obj.x,local_obj.y,x,y)
+	var ange = point_direction(local_obj.x,local_obj.y,x,y)
 	if point_distance(x,y,local_obj.x,local_obj.y)>50 {
-		x = local_obj.x + dcos(ang) * 50
-		y = local_obj.y - dsin(ang) * 50
+		x = local_obj.x + dcos(ange) * 50
+		y = local_obj.y - dsin(ange) * 50
 	}
 }
 
@@ -21,6 +25,17 @@ if local_obj.object_index == impale_circle_obj {
 planted=true	
 hilt_x = x+cos(degtorad(tail_obj.image_angle+270)) * 66
 hilt_y = y-sin(degtorad(tail_obj.image_angle+270)) * 66
+
+if !collision_line(x-(hilt_x-x),y-(hilt_y-y),hilt_x,hilt_y,all_walls_parent_obj,false,true) {
+	image_angle = point_direction(x,y,local_obj.x,local_obj.y) - 90
+	hilt_x = x+cos(degtorad(tail_obj.image_angle+270)) * 66
+	hilt_y = y-sin(degtorad(tail_obj.image_angle+270)) * 66
+}
+
+
+var smoke = instance_create_depth(x,y,depth+1,dash_smoke_particle_obj)
+smoke.image_angle = ang-90
+
 
 with player_hitbox_check_obj {
 	event_user(1)

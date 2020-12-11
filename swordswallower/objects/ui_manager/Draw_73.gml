@@ -6,7 +6,7 @@
 //draw_sprite(scary_skull,0,
 //	global.mousepx,
 //	global.mousepy)
-
+draw_circle(dbug_checkx,dbug_checky,10,false)
 
 
 /// @description Insert description here

@@ -27,7 +27,7 @@ if player_obj.held_position {
 	sword_planted_held = true	
 }
 
-if abs(temp_pin_x-sword_pos_x) > 30 {
+if abs(temp_pin_x-sword_pos_x) > 30 && !sword_recoil {
 	sword_facing = sign(temp_pin_x-sword_pos_x)
 }
 

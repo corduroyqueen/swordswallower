@@ -52,3 +52,7 @@ view_hview = 300
 s_dia_talk_list = ds_list_create()
 s_dia_id = 0
 s_dia_sound = false
+
+
+dbug_checkx = 0
+dbug_checky = 0

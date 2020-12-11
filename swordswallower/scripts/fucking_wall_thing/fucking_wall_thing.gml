@@ -78,9 +78,10 @@ else if current_obj.object_index!=impale_circle_obj
 	player_obj.check_zoom_collision = true
 	player_obj.held_bounce_timer=0
 	
-	var okd = swsw_dash_impact
-	audio_sound_gain(okd,1,0)
-	audio_play_sound(okd,0,false)
+	//var okd = swsw_dash_impact
+	audio_play_sound(swsw_dash_impact,0,false)
+	audio_sound_gain(swsw_dash_impact,0.4,0)
+	
 	
 	audio_sound_pitch(hit_wall,random_range(1.2,1.4))
 	audio_play_sound(hit_wall,0,false)	

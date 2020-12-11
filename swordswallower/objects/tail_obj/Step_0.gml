@@ -273,7 +273,14 @@ if player_obj.tail_pulling {
 		visible = false
 		pull_timer = 0
 		
+		var langg = point_direction(x,y,xpreva,ypreva)
+		player_sprite_obj.sword_pos_x = player_obj.x + dcos(langg) * 200
+		player_sprite_obj.sword_pos_y = player_obj.y - dsin(langg) * 200
+		player_sprite_obj.sword_ang = point_direction(0,0,dcos(langg),-dsin(langg))-90
+		player_sprite_obj.sword_recoil = true
 		
+		ui_manager.dbug_checkx = player_sprite_obj.sword_pos_x
+		ui_manager.dbug_checky = player_sprite_obj.sword_pos_y
 		
 		if stinky && stinky_when_thrown {
 			player_obj.stinky_check = false

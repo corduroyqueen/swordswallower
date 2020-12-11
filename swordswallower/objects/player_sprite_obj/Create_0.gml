@@ -118,3 +118,6 @@ arm_pos_table_y[2] = -13
 arm_pos_table_y[3] = -10
 arm_pos_table_y[4] = -16
 arm_pos_table_y[5] = -16
+
+sword_recoil = false
+angsp = 0
