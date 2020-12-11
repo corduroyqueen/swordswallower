@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "0983045d-7631-4364-9533-0bdfd88c9730",
+            "Value": {
+                "id": "0e8a73aa-7eb3-4d4d-9ebd-6338921b22a8",
+                "resourcePath": "sprites\\spr_pupil\\spr_pupil.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "09ba59b1-d296-4969-94b3-3454595ba417",
             "Value": {
                 "id": "5b45f7de-c868-46af-9659-b332467d24d9",
@@ -6596,6 +6604,14 @@
                 "id": "7261f466-a86e-487d-a6e8-8631a4df1068",
                 "resourcePath": "views\/5e018705-0a32-4024-89e5-92f7a36ac813.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5e175280-2ee8-4cea-9456-85a5e77d388e",
+            "Value": {
+                "id": "4b44a93a-8a7a-4981-98ce-b6a42b3ed3eb",
+                "resourcePath": "sprites\\spr_eyeballwhite\\spr_eyeballwhite.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -15636,6 +15652,14 @@
                 "id": "20191594-b814-4caa-be4d-46f6c10d4118",
                 "resourcePath": "sounds\/sword_reject_1\/sword_reject_1.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "eebfa5ba-bfd3-4a0e-8154-2d0a0be2c7de",
+            "Value": {
+                "id": "307dd5a2-aedf-4df1-b20a-940e31d2a692",
+                "resourcePath": "sprites\\spr_blink\\spr_blink.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
