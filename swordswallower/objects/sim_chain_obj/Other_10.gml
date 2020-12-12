@@ -84,7 +84,7 @@ while n<num_rings {
 	tgrav = mass * grav
 	fx = spring_fx - prev_force_x
 	fy = spring_fy + tgrav - prev_force_y
-	if n==0 && pinned {
+	if rings_pinned[|n] {
 		fx=0
 		fy=0
 	} 
@@ -104,7 +104,7 @@ while n<num_rings {
 
 n=0
 
-if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 && p_cut_check  {
+if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 && p_cut_check && cuttable  {
 	check_sw = true
 } else {
 	check_sw = false
@@ -113,7 +113,7 @@ cut = -1
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
-	if check_sw && cut<0{
+	if check_sw && cut<0 {
 		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 {
 			cut=n
 		}
@@ -128,30 +128,5 @@ while n<num_rings {
 }
 
 if cut>-1 {
-	p_cut_check = false
-	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,object_index)
-	ok.num_rings = num_rings - cut
-	//ok.pinned = false
-	//ok.run = true
-	var ww
-	with ok {
-		init = false
-		event_user(1)
-		pinned = false
-		run = true
-		
-		for (var e=0;e<num_rings;e++) { 
-			ww = other.cut+e
-			rings_x[| e] = other.rings_x[| ww]
-			rings_y[| e] = other.rings_y[| ww]
-			rings_hsp[| e] = other.rings_hsp[| ww]
-			rings_vsp[| e] = other.rings_vsp[| ww]
-			
-		
-		}
-	}
-	var spark = instance_create_depth(ok.x,ok.y,depth+1,spark_particle_effect_obj)
-	spark.angle = point_direction(0,0,-tail_obj.hsp,-tail_obj.vsp)
-	
-	num_rings = cut+1
+	event_user(2)
 }

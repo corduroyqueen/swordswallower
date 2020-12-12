@@ -42,6 +42,7 @@ rings_x = ds_list_create()
 rings_y = ds_list_create()
 rings_hsp = ds_list_create()
 rings_vsp = ds_list_create()
+rings_pinned = ds_list_create()
 
 
 spring_x = ds_list_create()
@@ -53,13 +54,15 @@ spring_vsp = ds_list_create()
 
 n=0
 while n<num_rings {
-	ds_list_add( rings_x, x + n * lo * dcos(300) )
-	ds_list_add( rings_y, y + n * lo * -dsin(300) )
+	ds_list_add( rings_x, x + n * lo * dcos(init_ang) )
+	ds_list_add( rings_y, y + n * lo * -dsin(init_ang) )
 	ds_list_add( rings_hsp, 0 )
 	ds_list_add( rings_vsp, 0 )
+	ds_list_add( rings_pinned, false )
 	
 	n++
 }
+rings_pinned[|0] = true
 
 ds_list_add( spring_x, rings_x[| n])
 ds_list_add( spring_y, rings_y[| n])
