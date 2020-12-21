@@ -36,9 +36,11 @@ if room==subtemple01 {
 			if go2 {
 				audio_stop_sync_group(subtemple_mc)
 				part2_mc = audio_create_sync_group(true)
+				audio_sound_gain(swsw2, 0.42, 0);
 				audio_play_in_sync_group(part2_mc,swsw2)
 				audio_start_sync_group(part2_mc)
-				audio_play_sound(swsw2,0,false)
+				
+				//audio_play_sound(swsw2,0,false)
 				//audio_sound_set_track_position(swsw2,26.00)
 				go2 = false
 			}

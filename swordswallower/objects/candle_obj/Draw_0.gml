@@ -43,7 +43,7 @@ if !destroy {
 	//draw_set_color(bc)
 	
 	
-	draw_sprite_ext(blood_sprite_spr11,0,x,y,s*8,s*8,0,bc,light_strength_bkd)
+	draw_sprite_ext(blood_sprite_spr11,0,x,y,s*7,s*7,0,bc,light_strength_bkd)
 	draw_set_alpha(0.05)
 	draw_set_alpha(0.03)
 	draw_circle(x,y,150*s*light_radius,false)

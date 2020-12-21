@@ -26,9 +26,9 @@ if firsttime {
 		px_layer_sky = layer_get_id("px_sky")
 		px_layer_sky_amt = 1.01
 		px_layer_bkd2 = layer_get_id("px_bkd2")
-		px_layer_bkd2_amt = 1.1
+		px_layer_bkd2_amt = 1.03
 		px_layer_bkd1 = layer_get_id("px_bkd1")
-		px_layer_bkd1_amt = 1.25
+		px_layer_bkd1_amt = 1.12
 		px_layer_near2 = layer_get_id("px_near2")
 		px_layer_near2_amt = 15
 		px_layer_near1 = layer_get_id("px_near1")

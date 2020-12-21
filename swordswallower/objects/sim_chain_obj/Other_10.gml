@@ -110,6 +110,7 @@ if player_obj.tail_throwing && point_distance(x,y,tail_obj.x,tail_obj.y)<300 && 
 	check_sw = false
 }
 cut = -1
+
 while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
@@ -127,6 +128,6 @@ while n<num_rings {
 	n++
 }
 
-if cut>-1 {
+if cut>-1 && cuttable {
 	event_user(2)
 }

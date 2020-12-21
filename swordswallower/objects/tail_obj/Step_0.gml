@@ -282,7 +282,7 @@ if player_obj.tail_pulling {
 			player_sprite_obj.sword_recoil = true
 			player_sprite_obj.sword_facing = sign(x-xpreva)
 			if player_obj.grounded {
-				player_obj.hsp += -dcos(langg) * 6
+				player_obj.hsp += -dcos(langg) * 7 - sign(hsp) * 3
 			}
 		}
 		//ui_manager.dbug_checkx = player_sprite_obj.sword_pos_x

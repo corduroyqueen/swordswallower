@@ -28,6 +28,7 @@ with chain1 {
 	pinned = true
 	rings_pinned[|0] = true
 	rings_pinned[|13] = true
+	cuttable = false
 	//rings_x[|15] = other.x - dcos(angle)*100
 	//rings_y[|15] = other.y + dsin(angle)*100
 	run = true
@@ -45,6 +46,7 @@ with chain2 {
 	drawself = false
 	rings_pinned[|0] = true
 	rings_pinned[|13] = true
+	cuttable = false
 	//rings_x[|15] = other.x - dcos(angle)*100
 	//rings_y[|15] = other.y + dsin(angle)*100
 	run = true

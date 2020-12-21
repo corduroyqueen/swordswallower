@@ -5554,7 +5554,7 @@
             "Key": "508cccbf-ff1b-485d-bef6-09396a09a915",
             "Value": {
                 "id": "098d3dc7-30fa-4fa5-8d98-a1f80685bec9",
-                "resourcePath": "sounds\/swsw2\/swsw2.yy",
+                "resourcePath": "sounds\\swsw2_old\\swsw2_old.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -13156,6 +13156,14 @@
                 "id": "57a07c45-24e3-4068-b9c5-3378daadccd8",
                 "resourcePath": "sprites\/spr_pot3_b_t1\/spr_pot3_b_t1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c710f36a-fa17-443f-8590-68eb5c57fcc3",
+            "Value": {
+                "id": "5fbdf09a-f147-4b9b-845b-2ff555f6c13b",
+                "resourcePath": "sounds\\swsw2\\swsw2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
