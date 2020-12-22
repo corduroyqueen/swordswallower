@@ -70,7 +70,7 @@ if keybool && mapguy_visited {
 	if times_spoken<1 {
 		dialogue_array[0] = "Greetings, traveler. That's a rather large sword you're dragging around. "
 		dialogue_array[1] = "If you're down here, then you must've fallen at the bridge, too. "
-		dialogue_array[2] = "I came from other side of the bridge, and the bridgekeeper dropped me into the tar pit as well. Now I'm stuck here. "
+		dialogue_array[2] = "I came from the other side of the bridge, and the bridgekeeper dropped me into the tar pit as well. Now I'm stuck here. "
 		dialogue_array[3] = "Tell you what, let's make a deal. "
 		dialogue_array[4] = "I'm a cartographer, and I've mapped this entire area. And you're a warrior, with that giant sword of yours."
 		dialogue_array[5] = "I'll give you a map of this tower and the cliffs above, and you can put the bridge back the way it was so we can get out of here. "

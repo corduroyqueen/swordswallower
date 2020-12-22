@@ -134,6 +134,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			//sdm("fly dead")
 			//shatter_mb_input_script(sprite_width/2)	
 		}
+		sword_hitpause(local_obj,2)
 		player_obj.shake_d=4.5
 		player_obj.camera_shake_d = true
 		audio_play_sound(Knife_Pull_140,0,false)

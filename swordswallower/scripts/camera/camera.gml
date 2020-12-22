@@ -129,6 +129,13 @@ if intro {
 		global.mousepy-cam_height_h),
 		0.01)
  
+} else if ui_manager.speaking {
+	var ctx = mean(ui_manager.friendly_x,player_obj.x)-cam_width_h
+	var cty = mean(ui_manager.friendly_y,player_obj.y)-cam_height_h-200
+	
+	
+	camx = lerp(camx,mean(ctx,ctx,ctx,ctx,ctx,ctx,ctx,ctx,global.mousepx),0.13)
+	camy = lerp(camy,mean(cty,cty,cty,cty,cty,cty,cty,cty,global.mousepy),0.13)
 } else if tail_planted {
 	
 	

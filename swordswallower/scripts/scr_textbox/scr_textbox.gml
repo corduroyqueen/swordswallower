@@ -253,10 +253,10 @@ typ = view_yview+view_hview-25
 
 draw_set_alpha(ealpha)
 
-draw_set_color(c_white)
-draw_rectangle(txp-10.5,typ-sprite_height/2-30,txp+35,typ-sprite_height/2-30+55,true)
-draw_set_color(c_dkgray)
-draw_rectangle(txp-7.5,typ-sprite_height/2-27,txp+32,typ-sprite_height/2-30+52,true)
+//draw_set_color(c_white)
+//draw_rectangle(txp-10.5,typ-sprite_height/2-30,txp+35,typ-sprite_height/2-30+55,true)
+//draw_set_color(c_dkgray)
+//draw_rectangle(txp-7.5,typ-sprite_height/2-27,txp+32,typ-sprite_height/2-30+52,true)
 
 draw_set_color(c_white)
 draw_set_font(font2bigger)

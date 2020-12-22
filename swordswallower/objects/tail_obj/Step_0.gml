@@ -436,10 +436,10 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 //sdm(hitpause)
 if hitpause {
 	sprite_index = newsword_center
-	hitpause_timer++
+	hitpause_timer--
 	hsp=0
 	vsp=0
-	if hitpause_timer>2 {
+	if hitpause_timer<=0 {
 		hitpause_timer=0
 		hitpause = false
 	}

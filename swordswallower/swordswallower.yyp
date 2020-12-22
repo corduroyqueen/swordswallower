@@ -5314,7 +5314,7 @@
             "Key": "4d37f79b-cf45-4a8d-9eef-e4656b59f4b0",
             "Value": {
                 "id": "9e2836e3-cf7a-46be-a496-388dac2dd132",
-                "resourcePath": "sprites\\leanback\\leanback.yy",
+                "resourcePath": "sprites\\boss_leanback\\boss_leanback.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7242,7 +7242,7 @@
             "Key": "661f05a0-948b-48e2-ad8d-3b5f6542ed72",
             "Value": {
                 "id": "d9556018-a929-4ba2-a93d-458a155c74aa",
-                "resourcePath": "sprites\\hurt2\\hurt2.yy",
+                "resourcePath": "sprites\\boss_hurt\\boss_hurt.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -7258,7 +7258,7 @@
             "Key": "66724227-4ad9-413e-af4b-c4f5868c8082",
             "Value": {
                 "id": "27f775cb-476e-49cb-9ef7-abacdaf5aa61",
-                "resourcePath": "sprites\\openmouth\\openmouth.yy",
+                "resourcePath": "sprites\\boss_openmouth\\boss_openmouth.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -9140,6 +9140,14 @@
                 "id": "f612438a-8a55-4a72-943e-5d82d4e19a32",
                 "resourcePath": "tilesets\/angelsegg\/angelsegg.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "8064d300-ff27-4146-a5e0-efaa70b75d6c",
+            "Value": {
+                "id": "8bb522ac-08ba-414d-9098-58383a49eb69",
+                "resourcePath": "sprites\\sprite10651\\sprite10651.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -13402,7 +13410,7 @@
             "Key": "cb8c6ea5-445f-4b61-97d3-15963946c358",
             "Value": {
                 "id": "06f2f358-25a4-4061-9f6f-937e93f99048",
-                "resourcePath": "sprites\\idle\\idle.yy",
+                "resourcePath": "sprites\\boss_idle\\boss_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -16684,6 +16692,14 @@
                 "id": "280d90e8-8c25-4bf7-b22c-aff72e968987",
                 "resourcePath": "sounds\/bullcharge\/bullcharge.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "fba3e777-b238-40da-905a-0e61c414c139",
+            "Value": {
+                "id": "894d29de-51ff-4c4d-9774-385520750c98",
+                "resourcePath": "sprites\\sprite10671\\sprite10671.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
