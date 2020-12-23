@@ -4095,6 +4095,14 @@
             }
         },
         {
+            "Key": "3c538532-3641-4f66-a349-55e76ddbf06d",
+            "Value": {
+                "id": "30f0374e-ecf2-472a-b8e5-c157b103a5c5",
+                "resourcePath": "sprites\\hand\\hand.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3c5dc96d-2a34-41a9-a0ec-58d89f28deff",
             "Value": {
                 "id": "b424a4f8-2a97-4a4d-b35b-7e33bf55d82e",
@@ -7327,6 +7335,14 @@
             }
         },
         {
+            "Key": "66a9e0df-0255-4475-b59f-67ceca05bb2a",
+            "Value": {
+                "id": "cb74c9a6-99eb-4c94-a1db-61f41823380f",
+                "resourcePath": "sprites\\handdoor\\handdoor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "66b85c36-a4fe-4ab8-9214-211b811db18a",
             "Value": {
                 "id": "6412ed10-b0ce-4246-98ca-5ce2eee19508",
@@ -9715,6 +9731,14 @@
             "Value": {
                 "id": "ed7e51d1-0285-4393-baaa-f7959e0ba6ae",
                 "resourcePath": "sprites\/Layer_106\/Layer_106.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8ab95b84-4125-44e2-a561-c8dbfc7be274",
+            "Value": {
+                "id": "b7f5a622-86e0-4a83-8097-8da2b86dc965",
+                "resourcePath": "sprites\\handdoor2\\handdoor2.yy",
                 "resourceType": "GMSprite"
             }
         },

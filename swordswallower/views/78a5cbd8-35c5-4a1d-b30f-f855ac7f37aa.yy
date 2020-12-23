@@ -23,7 +23,8 @@
         "9267dafa-ec27-4a56-801a-202d1c24f6b8",
         "6aaf44f0-f1d5-453e-8be7-cdbf067a83ed",
         "22a32659-ea48-49fe-be42-269e71e2ee5d",
-        "a9a3d97f-afc2-4a3c-82d3-3be23a7a5f45"
+        "a9a3d97f-afc2-4a3c-82d3-3be23a7a5f45",
+        "4b28f6b8-49e1-4ac0-b217-851ba9037cf6"
     ],
     "filterType": "GMSprite",
     "folderName": "other_art_stuff_iam_2_lazy_2_organize",
