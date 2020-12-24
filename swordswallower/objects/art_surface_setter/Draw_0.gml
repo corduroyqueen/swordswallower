@@ -137,6 +137,7 @@ surface_reset_target()
 draw_set_color(c_black)
 if level1_master.in_void {
 	void_black_rect_a+=0.025
+	
 } else {
 	void_black_rect_a-=0.025
 }
@@ -179,4 +180,5 @@ if level1_master.in_void {
 	
 }
 	
+
 //draw_surface(art_surface,player_obj.camx,player_obj.camy)

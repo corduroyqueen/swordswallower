@@ -17,7 +17,10 @@ shader_set_uniform_f(u_time, range);
 shader_set_uniform_f(u_tolerance, 0.0);
 shader_set_uniform_f(u_inverse, 1.0);
 
+var r = random_range(-0.15000,0.15000)
+image_xscale=1+r
+image_yscale=1-r
 		
 draw_self()
-	
+
 shader_reset()

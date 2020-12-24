@@ -108,7 +108,10 @@ shader_set(shad_bloom_blend);
 shader_reset();
 
 
-
-
+with art_surface_setter {
+	if level1_master.in_void && void_black_rect_a<0.03 {
+		draw_rectangle(0,0,1920,1080,false)
+	}
+}
 //surface_reset_target()
 //draw_surface(gif_surface,0,0)
