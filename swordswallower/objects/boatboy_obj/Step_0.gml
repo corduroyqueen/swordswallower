@@ -39,7 +39,7 @@ x = skiff_obj.x - 300
 
 starty = y
 //38448
-if player_obj.x>38448 {
+if player_obj.x>38448 && player_obj.x<47500 {
 	player_present = true
 } else  {
 	//sdm("NOT PRES")

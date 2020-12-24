@@ -134,6 +134,49 @@ surface_reset_target()
 
 
 
+draw_set_color(c_black)
+if level1_master.in_void {
+	void_black_rect_a+=0.025
+} else {
+	void_black_rect_a-=0.025
+}
+void_black_rect_a = clamp(void_black_rect_a,0.00,1.00)
+gpu_set_colorwriteenable(true, true, true, true)
 
+if void_black_rect_a>0 {
+	draw_set_alpha(void_black_rect_a)
+	draw_rectangle(player_obj.camx,player_obj.camy,player_obj.camx+1920,player_obj.camy+1080,false)
+	draw_set_alpha(1)
+	draw_set_color(c_white)
+	
+	with player_sprite_obj {
+		event_user(0)
+	}
+	with tutorial_text_obj {
+		event_user(1)
+	}
+}
+
+
+
+
+draw_set_color(c_white)
+if level1_master.in_void {
+	
+	with tail_obj {
+		if !player_obj.tail_carry {
+			event_user(0)
+		}
+	}
+	with powerup_bug_obj {
+		if mask_index!=blank_collision {
+			draw_sprite(sprite_index,image_index,x,y)
+		} else {
+			event_user(0)
+		}
+	}
+	
+	
+}
 	
 //draw_surface(art_surface,player_obj.camx,player_obj.camy)

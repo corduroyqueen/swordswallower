@@ -1,8 +1,7 @@
 xpos = argument0
 ypos = argument1
 
-if place_meeting(xpos, ypos, all_walls_parent_obj)
-{
+if place_meeting(xpos, ypos, all_walls_parent_obj) && !level1_master.in_void {
 	if object_index==tail_obj {
 		if place_meeting(xpos,ypos,nonsolid_parent_obj) {
 			var circle = instance_place(xpos,ypos,nonsolid_parent_obj)

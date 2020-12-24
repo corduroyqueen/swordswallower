@@ -31,12 +31,32 @@ if room==subtemple01 {
 		}
 	}
 	
+	if art_surface_setter.void_black_rect_a>0 {
+		audio_sound_gain(swsw1,(1-art_surface_setter.void_black_rect_a)*0.35*(1-art_surface_setter.void_black_rect_a),0)
+		
+		if !audio_is_playing(surrogatedrone) {
+				
+			audio_play_sound(surrogatedrone,0,true)
+			audio_sound_set_track_position(surrogatedrone,30)
+		
+		}
+		if level1_master.in_void {
+			audio_sound_gain(surrogatedrone,0.35,0)
+		} else {
+			audio_sound_gain(surrogatedrone,(art_surface_setter.void_black_rect_a)*0.35,0)
+		}
+	} else {
+		if audio_is_playing(surrogatedrone) {
+			audio_stop_sound(surrogatedrone)
+		}
+	}
+	
 	if instance_exists(coffin_boss_1) {
 		if coffin_boss_1.music_cue {
 			if go2 {
 				audio_stop_sync_group(subtemple_mc)
 				part2_mc = audio_create_sync_group(true)
-				audio_sound_gain(swsw2, 0.45, 0);
+				audio_sound_gain(swsw2, 0.47, 0);
 				audio_play_in_sync_group(part2_mc,swsw2)
 				audio_start_sync_group(part2_mc)
 				

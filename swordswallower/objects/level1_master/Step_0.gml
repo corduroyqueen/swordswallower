@@ -3,6 +3,19 @@ if available_checkpoints>1 {
 	lol = true	
 }
 
+if in_void {
+	if blood_ctrl_obj.blood_num<1 {
+		//void_blood_ctr=0
+		if void_target==player_obj {
+			in_void = false
+		} else {
+			if powerup_bug.mask_index==blank_collision {
+				powerup_bug.mask_index = powerupbug_t
+			}
+		}
+	}
+}
+
 if keyboard_check_pressed(ord("G")) {
 	window_set_fullscreen(!window_get_fullscreen())
 }

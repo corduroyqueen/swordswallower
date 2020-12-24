@@ -286,23 +286,30 @@ with camera_hitbox_check_obj {
 	//	camy = lerp(camy,cam_fix_obj.ytarget - cam_height_h,cam_fix_obj.lerpamt)
 	//} 
 	if place_meeting(other.cam_midx,other.cam_midy,camera_bound_parent_obj) {
-		var inst = instance_place(other.cam_midx,other.cam_midy,camera_bound_parent_obj)
-		with other {
-			if inst.xtarget>0 {
-				var xdiff = inst.x-cam_midx
-				var ydiff = inst.y-cam_midy
-				if abs(ydiff)<abs((inst.image_yscale*64)/2 + cam_height_h) - 100 {
+		var boundlist = ds_list_create()
+		var list = instance_place_list(other.cam_midx,other.cam_midy,camera_bound_parent_obj,boundlist,false)
+		
+		var inst// = instance_place(other.cam_midx,other.cam_midy,camera_bound_parent_obj)
+		//var sz = ds_list_size(boundlist)
+		for(var bl =0;bl<list;bl++) {
+			inst = boundlist[|bl]
+			with other {
+				if inst.xtarget>0 {
+					var xdiff = inst.x-cam_midx
+					var ydiff = inst.y-cam_midy
+					if abs(ydiff)<abs((inst.image_yscale*64)/2 + cam_height_h) - 100 {
 				
-					camx = lerp(cam_midx,inst.x + ((inst.image_xscale*64)/2 + cam_width_h) * -sign(xdiff),inst.lerpamt)-cam_width_h
-				}
-			} 
-			if inst.ytarget>0 {
-				var xdiff = inst.x-cam_midx
-				var ydiff = inst.y-cam_midy
-				if abs(xdiff)<abs((inst.image_xscale*64)/2 + cam_width_h) - 100 {
-					camy = lerp(cam_midy,inst.y + ((inst.image_yscale*64)/2 + cam_height_h) * -sign(ydiff),inst.lerpamt)-cam_height_h
-				}
-			} 
+						camx = lerp(cam_midx,inst.x + ((inst.image_xscale*64)/2 + cam_width_h) * -sign(xdiff),inst.lerpamt)-cam_width_h
+					}
+				} 
+				if inst.ytarget>0 {
+					var xdiff = inst.x-cam_midx
+					var ydiff = inst.y-cam_midy
+					if abs(xdiff)<abs((inst.image_xscale*64)/2 + cam_width_h) - 100 {
+						camy = lerp(cam_midy,inst.y + ((inst.image_yscale*64)/2 + cam_height_h) * -sign(ydiff),inst.lerpamt)-cam_height_h
+					}
+				} 
+			}
 		}
 	}
 	//if place_meeting(other.camx,other.camy,camera_bound_obj) {

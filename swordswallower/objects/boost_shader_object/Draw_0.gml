@@ -58,7 +58,7 @@ if player_obj.zoom_timer_bool && !player_obj.death {
 		texture_set_stage(u_perlin_tex, perlin_tex);
 		//shader_set_uniform_f(u_time2, (sin(current_time/1000)+1)/2);
 		//range-=0.06
-		range = lerp(range,0,0.1)
+		range = lerp(range,0,0.08)
 		range-=0.00001
 		shader_set_uniform_f(u_time2, range);
 		shader_set_uniform_f(u_tolerance, 0.0);

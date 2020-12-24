@@ -140,6 +140,9 @@ global.magic_cb = 0.46
 global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*global.magic_cb)
 
 
+
+global.dash_color = make_color_rgb(122,153,151)
+
 enemy_blood_reds = ds_list_create()
 
 //ds_list_add(enemy_blood_reds,make_color_rgb(121,11,59))
@@ -176,6 +179,12 @@ ds_list_add(enemy_blood_reds,make_color_rgb(229,0,76))
 
 
 wind_strength = 0
+
+in_void = false
+void_target = noone
+void_blood_ctr = 0
+void_blood_ctr_max = 0
+powerup_bug = noone
 
 //0.9, 0.0, 0.3 neon pink
 

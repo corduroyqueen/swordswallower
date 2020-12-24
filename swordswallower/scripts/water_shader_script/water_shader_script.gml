@@ -1,6 +1,7 @@
 xinput = argument0
 yinput = argument1
 
+var alph = 1-art_surface_setter.void_black_rect_a
 // get distortion variables:
 	//-------------------------------------------------------------------------
 	water_shift_R		+= 0.50 * 2 - 1 - player_obj.camxdiff;
@@ -120,11 +121,11 @@ yinput = argument1
 		
 		texture_set_stage(u_distort_tex,			distort_tex);
 		
-		draw_surface_ext(srf_water, xinput, yinput-player_obj.camy, 1 / srf_scale, 1 / srf_scale, 0, blend_col, 1);
+		draw_surface_ext(srf_water, xinput, yinput-player_obj.camy, 1 / srf_scale, 1 / srf_scale, 0, blend_col, alph);
 		
 		shader_reset();
 		with reflection_obj {
-			draw_sprite_ext(sprite,image_index,x-player_obj.camx,y-player_obj.camy,image_xscale,image_yscale,image_angle,image_blend,1)
+			draw_sprite_ext(sprite,image_index,x-player_obj.camx,y-player_obj.camy,image_xscale,image_yscale,image_angle,image_blend,alph)
 		}
 	surface_reset_target();
 	

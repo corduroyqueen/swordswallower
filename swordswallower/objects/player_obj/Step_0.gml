@@ -212,7 +212,7 @@ if ending_lock {
 }
 
 
-if keyboard_check_pressed(ord("T")) && !death && !ending_lock {
+if keyboard_check_pressed(ord("T")) && !death && !ending_lock && !level1_master.in_void {
 	start_death = true
 	respawn_timer = 0
 	

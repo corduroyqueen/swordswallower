@@ -2,7 +2,7 @@
     "id": "3c538532-3641-4f66-a349-55e76ddbf06d",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "hand",
+    "name": "bosshand",
     "For3D": false,
     "HTile": false,
     "VTile": false,

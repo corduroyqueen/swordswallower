@@ -466,8 +466,10 @@ if player_obj.tail_planted {
 } else if player_obj.tail_throwing {
 	current_obj=noone
 	
+	
 	moveSwordX(hsp)
 	moveSwordY(vsp)
+	
 	if current_obj!=noone {
 		sword_wall_collision(current_obj)	
 		if point_distance(x,y,player_obj.x,player_obj.y)<200 {

@@ -159,6 +159,7 @@ layer_script_end("blood_splat", layer_surface_script_end);
 //layer_script_begin("background", layer_stop_alpha_start);
 //layer_script_end("background", layer_stop_alpha_end);
 
+void_black_rect_a = 0
 
 //layer_script_begin("gameobjects", layer_stop_alpha_start);
 //layer_script_end("gameobjects", layer_stop_alpha_end);

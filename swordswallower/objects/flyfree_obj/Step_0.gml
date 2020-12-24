@@ -7,6 +7,12 @@ if keyboard_check_pressed(ord("R")) {
 	//audio_stop_sound(s_fly_buzz)
 }
 
+if level1_master.in_void {
+	if in_camera_range(x,y) {
+		death = true
+	}
+}
+
 if death {
 	if death_timer< 1 {
 		if player_obj.zoom_timer_bool {
