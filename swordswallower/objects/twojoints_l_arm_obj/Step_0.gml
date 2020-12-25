@@ -259,11 +259,21 @@ if state==state_knockback || (state==state_lunging && timer>80) || state==state_
 	hand.mask_index = bosshand1
 	hand.image_angle = lel_angle
 } else {
+	
 	hand.sprite_index = two_jointed_arm_t1
 	hand.mask_index = two_jointed_arm_t1
 	
-	hand.sprite_index = bosshand2
-	hand.mask_index = bosshand2
+	
+	if state==state_idle {
+		hand.sprite_index = bosshandanim
+		hand.mask_index = bosshand2
+		hand.image_index = round((current_time+v)/60) % 19
+	} else {
+		hand.sprite_index = bosshand2
+		hand.mask_index = bosshand2
+	}
+	
+	
 	hand.image_angle = 0
 	
 	

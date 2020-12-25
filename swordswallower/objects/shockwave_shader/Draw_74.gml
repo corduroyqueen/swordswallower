@@ -54,10 +54,10 @@ if (wave_list_size <= 0) {
 	draw_surface(application_surface, 0, 0);
 	//draw_surface(blood_splat_surface,0,0)
 	//gpu_set_colorwriteenable(true,true,true,true)
-	strength_input = 0
+	strength_input =0
 } else {
 	// set values based on sliders. In a game you'd use constants inside the shader instead
-	var fx_strength	= strength_input
+	var fx_strength	= 0.11//strength_input
 	//var aberration	= 0.0
 	//var subimage	= 0
 		

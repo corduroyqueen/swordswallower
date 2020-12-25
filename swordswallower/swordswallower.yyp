@@ -2263,6 +2263,14 @@
             }
         },
         {
+            "Key": "1fafbf88-de15-42cd-b110-2b607010d6ca",
+            "Value": {
+                "id": "6c79b279-9e82-41fa-9a70-7e9a724a46f9",
+                "resourcePath": "sprites\\spr_hooves_side_smol\\spr_hooves_side_smol.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1fde9f2a-543f-46dd-b5e4-f17e8c72f6b5",
             "Value": {
                 "id": "e51be6af-dbb3-405e-b2dc-8702de086224",
@@ -3019,6 +3027,14 @@
             "Value": {
                 "id": "da433c70-b443-484a-a63a-c55ebba2a490",
                 "resourcePath": "sprites\/generator\/generator.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2b60d88e-a4f0-490c-9bb0-f52592cf5bd8",
+            "Value": {
+                "id": "77f90abd-d4cd-4c52-8cc2-b12a5ec7eebb",
+                "resourcePath": "sprites\\boss_arm_cut\\boss_arm_cut.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -4114,7 +4130,7 @@
             "Key": "3c538532-3641-4f66-a349-55e76ddbf06d",
             "Value": {
                 "id": "30f0374e-ecf2-472a-b8e5-c157b103a5c5",
-                "resourcePath": "sprites\\bosshand\\bosshand.yy",
+                "resourcePath": "sprites\\bosshandanim\\bosshandanim.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8883,6 +8899,14 @@
             "Value": {
                 "id": "8e495a14-11d5-4430-95eb-5636aaadeb99",
                 "resourcePath": "sprites\/nothing\/nothing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "793641f0-8cee-4c74-b5f6-e04f37c14c95",
+            "Value": {
+                "id": "6dfd1377-184d-44f9-9671-c838581bd5bd",
+                "resourcePath": "sprites\\spr_hooves_top_smol\\spr_hooves_top_smol.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -16103,6 +16127,14 @@
             }
         },
         {
+            "Key": "eff4f4aa-c8d5-497b-91d5-64f8b0827947",
+            "Value": {
+                "id": "69f89f34-c0b4-430c-9a86-5a80a7a85e26",
+                "resourcePath": "sprites\\spr_flame_jagged_shadow_s\\spr_flame_jagged_shadow_s.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f02bc7ff-f646-4697-886c-f6b4bd462b9b",
             "Value": {
                 "id": "703237de-8a85-40c4-a84b-e1a4be4f6b65",
@@ -16412,6 +16444,14 @@
                 "id": "d79be816-3179-4ecc-a685-cd05462f7e4e",
                 "resourcePath": "sprites\/chalice\/chalice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "f48bfc7e-f3c3-49a0-9464-52fa2cc11663",
+            "Value": {
+                "id": "067582ae-6dd9-4364-a460-e4bd02fc53d4",
+                "resourcePath": "objects\\dash_trail_particle_obj\\dash_trail_particle_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

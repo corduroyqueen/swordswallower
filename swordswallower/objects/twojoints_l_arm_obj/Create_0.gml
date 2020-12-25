@@ -73,6 +73,8 @@ lel_angle = 0
 arm_pull_ang = 0
 hand_vsp = 0
 
+
+
 //arm_reconnect(true,x,y)
 
 //seg_set_length(0,10)

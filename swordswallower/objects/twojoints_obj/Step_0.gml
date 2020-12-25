@@ -18,6 +18,16 @@ if player_obj.tail_carry {
 //sdm("hi")
 //sdm(phase_n_i)
 if state==state_idle {
+	if sprite_index!=boss_idle {
+		image_speed = -2
+		if image_index<=1 {
+			sprite_index = boss_idle
+			image_speed = 1
+		}
+	} else {
+		sprite_index = boss_idle
+	}
+	
 	h1_lerp = 0
 	h2_lerp = 50
 	h3_lerp = -30
@@ -64,11 +74,49 @@ if state==state_idle {
 	
 } else if state==state_attacking {
 	
+	if attack!=attack_left_lunge && attack!=attack_right_lunge{
+		if ht<7 {
+			anim_spr_i+=0.2
+			var doot = 15
+			if anim_spr_i>doot {
+				anim_spr_i=0
+			}
+			anim_spr_i = clamp(anim_spr_i,0,doot-0.1)
+		} else {
+			sprite_index = boss_idle 
+			image_speed = 1
+		}
+	} else {
+		sprite_index = boss_leanback
+		if leftarm.state == leftarm.state_anticipation || rightarm.state == rightarm.state_anticipation {
+		
+			anim_spr_i+=0.2
+			anim_spr_i = clamp(anim_spr_i,0,2.9)
+		} else if (leftarm.state==leftarm.state_lunging && leftarm.timer>80)
+		|| (rightarm.state==rightarm.state_lunging && rightarm.timer>80) {
+			anim_spr_i-=0.2
+			anim_spr_i = clamp(anim_spr_i,0,2.9)
+		} else if leftarm.state==leftarm.state_knockback || rightarm.state==rightarm.state_knockback  {
+			anim_spr_i+=0.2
+			var doot = 15
+			if anim_spr_i>doot {
+				anim_spr_i=0
+			}
+			anim_spr_i = clamp(anim_spr_i,3,doot-0.1)
+		} else if leftarm.state==leftarm.state_recovery || rightarm.state==rightarm.state_recovery  {
+			anim_spr_i = 0
+		}
+		image_index = floor(anim_spr_i)
+	}
+	
+	
+	
 	if attack==attack_left_lunge {
 		rightarm.state = rightarm.state_defense
 		if leftarm.state == leftarm.state_idle {
 			leftarm.state = leftarm.state_anticipation
 		}
+		
 		
 		if leftarm.state == leftarm.state_reset || leftarm.destroy_arm {
 			state = state_idle
@@ -291,7 +339,8 @@ if state==state_idle {
 } else if state==state_swallowing {
 	
 	timer++
-	
+	sprite_index = boss_hurt
+	image_speed = 1
 	if timer>150 {
 		head.image_index = 0
 		tail_obj.stuck_check = false
@@ -301,6 +350,21 @@ if state==state_idle {
 		if player_obj.k_fire_p {
 			timer=0
 			tail_obj.planted_rejecting = false
+			go = instance_create_depth(x,y,0,snakeheaddead_obj)
+			go.sprite_index = boss_head
+			go.hsp = -8
+			go.vsp = -5
+			go.spinspeed = 10
+			//go.spurt_bool = true
+			
+			just_blood_speed_input(-0.75,-1.5,0.2,50,true,x,y+200)
+			just_blood_speed_input(-0.75,-1.5,0.2,50,true,x,y+250)
+			just_blood_speed_input(-1.2,-1.2,0,50,true,x,y+300)
+			just_blood_speed_input(-1.2,-1.2,0,50,true,x,y+350)
+			just_blood_speed_input(-0.75,0,0.2,50,true,x,y+400)
+			just_blood_speed_input(-0.75,0,0.2,50,true,x,y+450)
+		
+		
 			sword_pull_check()
 			
 			instance_create_depth(x,y,-999999999999,title_screen_obj)	
@@ -313,6 +377,7 @@ if state==state_idle {
 			instance_destroy(head)
 		}
 		if tail_obj.pull_timer>tail_obj.pull_wall_t || player_obj.tail_carry {
+			
 			instance_destroy()
 			
 			instance_destroy(leftarm)
@@ -333,6 +398,9 @@ if state==state_idle {
 } else if state==state_mouthopen {
 	leftarm.state = leftarm.state_defense
 	rightarm.state = rightarm.state_defense
+	sprite_index = boss_openmouth
+	
+	image_index = clamp(round(timer/7),0,6)
 	
 	head.image_index = 1
 	timer++

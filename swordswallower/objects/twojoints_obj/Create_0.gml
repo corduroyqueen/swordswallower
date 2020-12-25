@@ -11,11 +11,13 @@ rightarm.offset = 600
 rightarm.minclamp = 700
 rightarm.offset_diff = 200
 rightarm.color = c_green
+rightarm.v = random_range(0,299)
 
 leftarm = instance_create_depth(x,y,depth-1,twojoints_l_arm_obj)
 leftarm.color = c_green
 leftarm.offset = 400
 leftarm.offset_diff = 0
+leftarm.v = 477-rightarm.v
 
 state = 1
 state_idle = 1
@@ -136,3 +138,5 @@ ds_list_add(phase3_atk,3)
 //srf = surface_create(1920,1080)
 
 ht=0
+
+anim_spr_i = 0

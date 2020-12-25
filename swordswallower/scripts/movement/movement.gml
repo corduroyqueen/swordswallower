@@ -251,7 +251,7 @@ if held_position {
 		//	out_of_dash_t=10
 		//}
 		held_position = false
-		held_release_timer = 15
+		held_release_timer = 13
 		
 	}
 	

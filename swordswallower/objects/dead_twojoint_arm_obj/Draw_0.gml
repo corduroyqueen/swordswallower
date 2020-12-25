@@ -27,9 +27,19 @@ draw_set_color(c_green)
 draw_set_alpha(1)
 
 
-draw_line_width(hand_x,hand_y,el_x,el_y,arm_w)
-draw_line_width(el_x,el_y,el_x+dcos(cutarm_ang)*cut_length,el_y-dsin(cutarm_ang)*cut_length,arm_w)
-draw_sprite_ext(two_jointed_arm_out_t1,0,hand_x,hand_y,1,1,hand_ang,c_white,image_alpha)
+//draw_line_width(hand_x,hand_y,el_x,el_y,arm_w)
+draw_sprite_ext(boss_arm3,0,el_x,el_y,1,1,point_direction(el_x,el_y,hand_x,hand_y),c_white,1)
+
+//draw_line_width(el_x,el_y,el_x+dcos(cutarm_ang)*cut_length,el_y-dsin(cutarm_ang)*cut_length,arm_w)
+var xp = el_x+dcos(cutarm_ang)*cut_length
+var yp = el_y-dsin(cutarm_ang)*cut_length
+//if fookin_cut_spr<0 {
+//	fooking_cut_spr = sprite_cre
+//}
+
+draw_sprite_ext(boss_arm_cut,0,el_x,el_y,1,1,point_direction(el_x,el_y,xp,yp),c_white,1)
+
+draw_sprite_ext(bosshand1,0,hand_x,hand_y,1.25,1.25,hand_ang,c_white,image_alpha)
 
 draw_set_color(c_white)
 

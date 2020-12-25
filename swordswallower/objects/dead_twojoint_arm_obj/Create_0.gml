@@ -16,3 +16,5 @@ timer=0
 cut_length = 0
 
 arm_w = 50
+
+fookin_cut_spr = -1

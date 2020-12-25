@@ -390,7 +390,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		//hitpause = true
 		if local_obj.hp-10<0 {
 			audio_play_sound(Knife_Pull_140,0,false)
-			local_obj.death = true	
+			with local_obj {
+				hp-=9
+				event_user(0)
+			}
 			sword_hitpause(local_obj)
 			audio_manager(false,0,false,3)
 			audio_play_sound(bulldeath,0,false)
@@ -426,7 +429,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			//audio_play_sound(sword_thud_1,0,false)
 			//planted = true
 			with local_obj {
-				hp-=10	
+				hp-=9
+				event_user(0)
 				ang = point_direction(x,y,player_obj.x,player_obj.y)
 			
 				audio_play_sound(bullsword,0,false)

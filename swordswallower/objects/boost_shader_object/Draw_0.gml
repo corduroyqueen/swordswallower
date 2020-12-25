@@ -21,7 +21,18 @@ if player_obj.zoom_timer_bool && !player_obj.death {
 	//	sprite_index = s_boost	
 	//	draw_self()
 	//
-	draw_sprite_ext(boost,current_time%2,player_obj.x,player_obj.y,1,1,point_direction(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)-90,c_white,1)
+	var tangg = point_direction(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y)-90
+	particle_timer++
+	if particle_timer>particle_timer_m {
+		var tiempo = instance_create_depth(player_obj.x,player_obj.y,depth+1,dash_trail_particle_obj)
+		tiempo.image_angle = tangg-180
+		tiempo.image_xscale = particle_polarity * 1.09
+		//Stiempo.image_yscale = 1.1
+		particle_polarity = -sign(particle_polarity)
+		particle_timer=0
+	}
+	
+	draw_sprite_ext(boost,current_time%2,player_obj.x,player_obj.y,1,1,tangg,c_white,1)
 	
 	time			= (time + 1 * 0.05) mod 1;
 
@@ -51,6 +62,7 @@ if player_obj.zoom_timer_bool && !player_obj.death {
 	okx = player_obj.x+dcos(ang)*100
 	oky = player_obj.y-dsin(ang)*100
 } else {
+	particle_timer=particle_timer_m
 	if range>0{
 		shader_set(perlin_fadeout_shader)
 

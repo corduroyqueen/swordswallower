@@ -43,7 +43,7 @@ u_blood_splat_var = 1
 
 GUI = surface_create(1920,1080);
 
-strength_input = 0
+strength_input = 100
 
 u_blood_r = shader_get_uniform(shader_blood_alpha, "blood_r");
 u_blood_g = shader_get_uniform(shader_blood_alpha, "blood_g");

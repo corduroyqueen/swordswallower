@@ -39,3 +39,7 @@ ang=0
 
 okx = 0
 oky = 0
+
+particle_timer = 0
+particle_timer_m = 6
+particle_polarity = 1

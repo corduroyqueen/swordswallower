@@ -18,6 +18,10 @@ if player_obj.zoom_timer<20 && player_obj.zoom_timer_bool {
 		}
 	}
 }
+gpu_set_colorwriteenable(1,1,1,0)
+with dash_trail_particle_obj {
+	event_user(0)
+}
 
 if size>1 {
 	draw_set_color(global.magic_color)
@@ -39,4 +43,7 @@ if size>1 {
 	draw_set_color(c_white)
 	draw_set_alpha(1)
 	
+	
+	
 }
+

@@ -7,7 +7,7 @@ xpost = argument5
 ypost = argument6
 //color = argument7
 
-blood_splat_script()
+//blood_splat_script()
 
 amount/=2
 for (i=0;i<(amount+40);i++){

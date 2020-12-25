@@ -27,7 +27,7 @@ if !tail_planted && !tail_held {
 			tail_throwing = true
 			
 			left_click_buffer = 0
-			held_release_timer=0
+			//held_release_timer=0
 			if !grounded{
 				//vsp=0
 				//hsp=0
@@ -184,7 +184,7 @@ if !tail_planted && !tail_held {
 		//shockwave_shader.trigger = true
 		
 		zoom_buff_timer = 0
-		zoom_ctdn = 4
+		zoom_ctdn = 6
 		tail_zooming=true
 		zoom_pause = true
 		
