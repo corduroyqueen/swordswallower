@@ -8,6 +8,8 @@ if !surface_exists(player_surface) {
 	player_surface = surface_create(300,300)	
 }
 
+proc_cape_calc_script()
+
 surface_set_target(player_surface)
 draw_clear_alpha(c_white,0)
 if player_obj.shielded {
@@ -18,6 +20,10 @@ if player_obj.shielded {
 //gpu_set_colorwriteenable(true,true,true,true);
 //draw_set_color(c_white)
 //draw_set_alpha(1)
+
+//proc_cape_draw_script()
+
+
 draw_self()
 if sprite_index==spr_mc_somersault {
 	
@@ -45,6 +51,8 @@ if !player_obj.zoom_timer_bool {
 
 
 	draw_set_alpha(1);
+	
+	
 	draw_self()
 	if sprite_index==spr_mc_somersault {
 		
@@ -123,10 +131,16 @@ surface_reset_target()
 //gpu_set_colorwriteenable(true,true,true,true);
 
 gpu_set_colorwriteenable(true,true,true,false)
-draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
 
 x=player_obj.x
 y=player_obj.y
+
+
+
+draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
+if !player_obj.zoom_timer_bool {
+	proc_cape_draw_script()
+}
 draw_set_color(c_white)
 if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_position {
 	//draw_circle(temp_pin_x,temp_pin_y,arm_max_length,true

@@ -2,14 +2,18 @@
 // You can write your code in this editor
 //mask_index = -1
 gpu_set_colorwriteenable(1,1,1,0)
+
+
 if closed {
 	draw_self()
 	image_index = 0
-	with chain1 {
-		event_user(3)
-	}
-	with chain2 {
-		event_user(3)
+	if in_camera_range_bigger(x,y) {
+		with chain1 {
+			event_user(3)
+		}
+		with chain2 {
+			event_user(3)
+		}
 	}
 	//ask_index = sprite_index
 	//if round(image_angle) == 0 {
@@ -42,6 +46,7 @@ if closed {
 		draw_self()	
 	}
 }
+
 gpu_set_colorwriteenable(1,1,1,1)
 
 //var posx, posy

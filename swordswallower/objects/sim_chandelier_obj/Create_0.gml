@@ -4,7 +4,7 @@ num_rings = 15
 ks = 60  //stiffness
 lo = 20
 mass = 50
-grav = 0.1
+grav = 0.5
 
 ks = 10  //stiffness
 lo = 20
