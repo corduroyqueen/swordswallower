@@ -9970,7 +9970,7 @@
             "Key": "8c5e619b-cc25-41d0-8e87-be4bba0adc33",
             "Value": {
                 "id": "00d90f83-761f-4f10-97ea-ab7acd528004",
-                "resourcePath": "scripts\\proc_cape_draw_script\\proc_cape_draw_script.yy",
+                "resourcePath": "scripts\\proc_cape_draw_l_script\\proc_cape_draw_l_script.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -13063,6 +13063,14 @@
             }
         },
         {
+            "Key": "c1b1b4d4-6952-466e-9cf1-497d15a6209d",
+            "Value": {
+                "id": "54f328ac-c348-4236-9934-85568eaaba26",
+                "resourcePath": "scripts\\proc_cape_calc_r_script\\proc_cape_calc_r_script.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c1b4c837-69be-4f5b-bb5b-b30d805ac40d",
             "Value": {
                 "id": "947bc784-a913-402c-b112-6b3d9a084c90",
@@ -13551,6 +13559,14 @@
             }
         },
         {
+            "Key": "c99da5ce-c245-4f5f-9a53-716eee486e06",
+            "Value": {
+                "id": "3414c841-c808-448e-bb37-c6e197f8819b",
+                "resourcePath": "sprites\\branch2bkd\\branch2bkd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c9abc936-5117-4b3f-b872-c1f03af6af26",
             "Value": {
                 "id": "0f1f10b3-e9c1-49fc-ae32-3464509a44c7",
@@ -13930,7 +13946,7 @@
             "Key": "cff8b353-8aae-4be1-b62e-5c82c2fdb0e1",
             "Value": {
                 "id": "a7892866-fafa-4f04-b885-77e3540567a5",
-                "resourcePath": "scripts\\proc_cape_calc_script\\proc_cape_calc_script.yy",
+                "resourcePath": "scripts\\proc_cape_calc_l_script\\proc_cape_calc_l_script.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -14252,6 +14268,14 @@
                 "id": "920738b6-c595-45c3-9a9a-3eaa0a8a16bd",
                 "resourcePath": "objects\/fatfly_obj\/fatfly_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "d46e523d-e8c2-4ed5-b5df-711c07dbf5bd",
+            "Value": {
+                "id": "1c008616-6a0c-4929-9a3c-744272c58473",
+                "resourcePath": "scripts\\proc_cape_draw_m_script\\proc_cape_draw_m_script.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -14791,6 +14815,14 @@
             }
         },
         {
+            "Key": "dcbb2263-fb5d-4728-8755-ead91794420c",
+            "Value": {
+                "id": "909b101a-9f13-420e-b029-5363da4210d1",
+                "resourcePath": "sprites\\branch3bkd\\branch3bkd.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "dcf385ef-02ec-4319-a0c1-eea3674f8b80",
             "Value": {
                 "id": "534bda90-e719-488f-a914-9d747a748317",
@@ -15060,6 +15092,14 @@
                 "id": "e457925d-b8b8-4733-a3d9-a9cb50c4722f",
                 "resourcePath": "sprites\/grass2743\/grass2743.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e09400d2-08e9-4bd9-bca3-becd751a96e4",
+            "Value": {
+                "id": "0f2a513d-6d90-47b2-8287-4d80e5a3ca8d",
+                "resourcePath": "scripts\\proc_cape_draw_r_script\\proc_cape_draw_r_script.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -17388,7 +17428,10 @@
         "7f5c3e68-4b77-4cca-94dc-a5cfdd2e642d",
         "622f6f57-a045-41fa-8caf-425463ed5e04",
         "cff8b353-8aae-4be1-b62e-5c82c2fdb0e1",
-        "8c5e619b-cc25-41d0-8e87-be4bba0adc33"
+        "c1b1b4d4-6952-466e-9cf1-497d15a6209d",
+        "8c5e619b-cc25-41d0-8e87-be4bba0adc33",
+        "e09400d2-08e9-4bd9-bca3-becd751a96e4",
+        "d46e523d-e8c2-4ed5-b5df-711c07dbf5bd"
     ],
     "tutorial": ""
 }

@@ -145,19 +145,51 @@ ds_list_add(cape_p_l_y,190)
 
 lightness = 0.5
 cloak_color = make_color_rgb(lightness*255,lightness*255,lightness*255)
+lightness = 0.3
+cloak_color_dark = make_color_rgb(lightness*255,lightness*255,lightness*255)
 
 wind_timer_m = 1
+ds_list_add(cape_p_l_wind_timer,(0/7)*wind_timer_m)
 ds_list_add(cape_p_l_wind_timer,(6/7)*wind_timer_m)
 ds_list_add(cape_p_l_wind_timer,(5/7)*wind_timer_m)
 ds_list_add(cape_p_l_wind_timer,(4/7)*wind_timer_m)
 ds_list_add(cape_p_l_wind_timer,(3/7)*wind_timer_m)
 ds_list_add(cape_p_l_wind_timer,(2/7)*wind_timer_m)
 ds_list_add(cape_p_l_wind_timer,(1/7)*wind_timer_m)
-ds_list_add(cape_p_l_wind_timer,(0/7)*wind_timer_m)
+
+
 
 cape_p_m_x = ds_list_create()
 cape_p_m_y = ds_list_create()
 
 cape_p_r_x = ds_list_create()
 cape_p_r_y = ds_list_create()
+cape_p_r_wind_timer = ds_list_create()
+
+ds_list_add(cape_p_r_x,140)
+ds_list_add(cape_p_r_x,140)
+ds_list_add(cape_p_r_x,140)
+ds_list_add(cape_p_r_x,140)
+ds_list_add(cape_p_r_x,140)
+ds_list_add(cape_p_r_x,140)
+ds_list_add(cape_p_r_x,140)
+
+ds_list_add(cape_p_r_y,130)
+ds_list_add(cape_p_r_y,140)
+ds_list_add(cape_p_r_y,150)
+ds_list_add(cape_p_r_y,160)
+ds_list_add(cape_p_r_y,170)
+ds_list_add(cape_p_r_y,180)
+ds_list_add(cape_p_r_y,190)
+
+
+ds_list_add(cape_p_r_wind_timer,(6/7)*wind_timer_m)
+ds_list_add(cape_p_r_wind_timer,(5/7)*wind_timer_m)
+ds_list_add(cape_p_r_wind_timer,(4/7)*wind_timer_m)
+ds_list_add(cape_p_r_wind_timer,(3/7)*wind_timer_m)
+ds_list_add(cape_p_r_wind_timer,(2/7)*wind_timer_m)
+ds_list_add(cape_p_r_wind_timer,(1/7)*wind_timer_m)
+ds_list_add(cape_p_r_wind_timer,(0/7)*wind_timer_m)
+
+head_spr_i = 0
 

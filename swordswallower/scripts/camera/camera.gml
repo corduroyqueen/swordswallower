@@ -299,14 +299,15 @@ with camera_hitbox_check_obj {
 					var ydiff = inst.y-cam_midy
 					if abs(ydiff)<abs((inst.image_yscale*64)/2 + cam_height_h) - 100 {
 				
-						camx = lerp(cam_midx,inst.x + ((inst.image_xscale*64)/2 + cam_width_h) * -sign(xdiff),inst.lerpamt)-cam_width_h
+						//camx = lerp(cam_midx,inst.x + ((inst.image_xscale*64)/2 + cam_width_h) * -sign(xdiff),inst.lerpamt)-cam_width_h
+						camx = inst.x + ((inst.image_xscale*64)/2 + cam_width_h) * -sign(xdiff) -cam_width_h
 					}
 				} 
 				if inst.ytarget>0 {
 					var xdiff = inst.x-cam_midx
 					var ydiff = inst.y-cam_midy
 					if abs(xdiff)<abs((inst.image_xscale*64)/2 + cam_width_h) - 100 {
-						camy = lerp(cam_midy,inst.y + ((inst.image_yscale*64)/2 + cam_height_h) * -sign(ydiff),inst.lerpamt)-cam_height_h
+						camy = inst.y + ((inst.image_yscale*64)/2 + cam_height_h) * -sign(ydiff)-cam_height_h
 					}
 				} 
 			}

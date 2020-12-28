@@ -1,4 +1,4 @@
-var cape_p = 16
+var cape_p = 19
 
 cape_p_l_x[|0] = 150 + arm_pos_table_x[image_index] * -image_xscale
 if sprite_index==s_player_idle_e {
@@ -36,6 +36,11 @@ for(var pts=1;pts<7;pts++) {
 	px += phsp
 	py += pvsp
 	
+	if round(pts)==1 {
+		while abs(px+farx-player_obj.x)<13 {
+			px+=sign(image_xscale)
+		}
+	}
 	//draw_set_color(c_green)
 	//draw_circle(farx+px,fary+py,5,false)
 	//draw_set_color(c_white)
@@ -46,6 +51,7 @@ for(var pts=1;pts<7;pts++) {
 		//px = default_collision_x_only(farx+px,fary+py-25,-phsp,tobj) - farx
 		
 	}
+	
 	//draw_set_color(c_fuchsia)
 	//draw_circle(farx+px,fary+py,5,false)
 	//draw_set_color(c_white)
