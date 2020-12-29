@@ -37,10 +37,21 @@ for(var pts=1;pts<7;pts++) {
 	py += pvsp
 	
 	if round(pts)==1 {
-		while abs(px+farx-player_obj.x)<13 {
+		while abs(px+farx-player_obj.x)<15 {
 			px+=sign(image_xscale)
 		}
 	}
+	if round(pts)==3 {
+		while abs(px+farx-player_obj.x)<25 {
+			px+=sign(image_xscale)
+		}
+	}
+	if round(pts)==4 {
+		while abs(px+farx-player_obj.x)<34 {
+			px+=sign(image_xscale)
+		}
+	}
+	
 	//draw_set_color(c_green)
 	//draw_circle(farx+px,fary+py,5,false)
 	//draw_set_color(c_white)
@@ -51,6 +62,7 @@ for(var pts=1;pts<7;pts++) {
 		//px = default_collision_x_only(farx+px,fary+py-25,-phsp,tobj) - farx
 		
 	}
+	
 	
 	//draw_set_color(c_fuchsia)
 	//draw_circle(farx+px,fary+py,5,false)
