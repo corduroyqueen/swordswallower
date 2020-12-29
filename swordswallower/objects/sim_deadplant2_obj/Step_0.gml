@@ -3,7 +3,9 @@ if in_camera_range_bigger(x,y) || in_camera_range_bigger(rings_x[|num_rings-1],r
 } else {
 	run = false
 }
-
+if !pinned {
+	grav = 1.1
+}
 p_cut_check = true
 if run {
 	for(var i=0;i<2;i++){

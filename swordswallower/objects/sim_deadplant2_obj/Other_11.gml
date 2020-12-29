@@ -23,7 +23,7 @@ fric = 0.01
 ks = 2.0  //stiffness
 lo = 16
 mass = 1
-grav = 0.2
+grav = 0.45
 
 lo = 32
 
