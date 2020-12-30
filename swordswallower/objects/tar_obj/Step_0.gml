@@ -18,6 +18,9 @@ if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	//timer = 0	
 }
 
+
+
+
 if place_meeting(x,y,player_obj) {
 	if !p_met {
 		player_obj.y = (y - sprite_height/2) - (player_sprite_obj.sprite_height-40)

@@ -1207,6 +1207,14 @@
             }
         },
         {
+            "Key": "1108fc94-13ea-4ef9-803b-4667a7b8a4b4",
+            "Value": {
+                "id": "bb3b8e2f-9711-4c5b-9df4-a32dbb870e21",
+                "resourcePath": "sprites\\fog_t\\fog_t.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1116454b-6b98-46be-9c50-6c63746d4b8a",
             "Value": {
                 "id": "c5df43c3-1a75-472c-bc8b-abb6e45f701a",
@@ -3463,6 +3471,14 @@
             }
         },
         {
+            "Key": "31215477-37a7-406d-9903-e0ccd9dca5ba",
+            "Value": {
+                "id": "dc6e9165-1fda-43d6-a550-95450094925e",
+                "resourcePath": "sprites\\footstep_puff_t\\footstep_puff_t.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3126eff3-da35-4b53-acc8-9fc1e6eb4669",
             "Value": {
                 "id": "299b4fc0-9a13-4df9-a9e7-e5eeb8b2ad17",
@@ -5511,6 +5527,14 @@
             }
         },
         {
+            "Key": "4f0059f7-76ea-49f9-8981-03d6abe88614",
+            "Value": {
+                "id": "f9318c51-4b49-4fd9-88d4-1ca321259de6",
+                "resourcePath": "objects\\fog_particle_obj\\fog_particle_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4f08d2ba-e790-495b-a900-78cf1cf05164",
             "Value": {
                 "id": "870e6003-8262-47ab-88c8-120ca19f6158",
@@ -7035,6 +7059,14 @@
             "Value": {
                 "id": "a994391e-179d-4c60-8e2c-b2e2bd15f545",
                 "resourcePath": "sprites\\spr_bossfloor\\spr_bossfloor.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "620625c7-e7a7-4f16-9845-5bb94e8a4b2a",
+            "Value": {
+                "id": "ac0a6015-e70d-451d-9602-14bdaab0c650",
+                "resourcePath": "sprites\\footstep_puff_t_2\\footstep_puff_t_2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -14788,6 +14820,14 @@
                 "id": "d9503f43-3243-483c-a269-a4bb595d01a7",
                 "resourcePath": "scripts\/moveSwordX\/moveSwordX.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "dc4e7b74-100a-4c8b-a29a-7a086164f4ba",
+            "Value": {
+                "id": "adcf65ab-08a7-4e72-9f77-6efddf132712",
+                "resourcePath": "objects\\player_footstep_dust_obj\\player_footstep_dust_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

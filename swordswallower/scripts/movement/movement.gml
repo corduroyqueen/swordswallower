@@ -78,6 +78,10 @@ if grounded && (k_left || k_right) {
 			audio_sound_pitch(hey,random_range(0.75,1.25))
 			audio_manager(hey,0,false,0)	
 		}
+		
+		var dust = instance_create_depth(player_obj.x+sign(player_obj.hsp)*15,player_obj.y+45,depth+100,player_footstep_dust_obj)
+		dust.image_xscale = dust.image_xscale * sign(player_obj.hsp)
+		//dust.image_alpha = 0.4
 		footstep_audio_bool = false
 	} else if floor(player_sprite_obj.image_index)!=0 {
 		footstep_audio_bool = true	
