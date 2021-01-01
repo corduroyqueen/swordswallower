@@ -2351,6 +2351,14 @@
             }
         },
         {
+            "Key": "2055f490-2b7a-43b2-bb69-1e47a8840c6d",
+            "Value": {
+                "id": "b7263832-c174-4721-9992-47f8efd9ed4a",
+                "resourcePath": "sprites\\spirit\\spirit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "206842f2-ef83-4c3f-aec7-bd68fc74e9bc",
             "Value": {
                 "id": "49706fe3-d137-4d2b-8c2f-f4468429859c",
@@ -9207,6 +9215,14 @@
             }
         },
         {
+            "Key": "7e570d7d-4bf6-4b19-b6f0-31a385394a40",
+            "Value": {
+                "id": "caf73c33-b3d6-44d0-9c7c-5171ed39cf3c",
+                "resourcePath": "sprites\\spr_eyetorch1231\\spr_eyetorch1231.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7e76281f-80ff-4648-a9d1-cfb01883adb6",
             "Value": {
                 "id": "0da8f34d-4d6c-4497-ae14-f9ce4c528352",
@@ -13095,6 +13111,14 @@
             }
         },
         {
+            "Key": "c17f8f49-a8db-4ce5-8c7e-cfe77f67f11e",
+            "Value": {
+                "id": "11c42e3a-b6d5-4a8d-9d88-61794379a57a",
+                "resourcePath": "sprites\\spr_Group_21232\\spr_Group_21232.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c1b1b4d4-6952-466e-9cf1-497d15a6209d",
             "Value": {
                 "id": "54f328ac-c348-4236-9934-85568eaaba26",
@@ -16703,6 +16727,14 @@
             }
         },
         {
+            "Key": "f6d1c888-56de-487a-b5ab-18ce96ba7d4e",
+            "Value": {
+                "id": "6b42bc66-dd24-434e-8bd9-1b22dce4b6d8",
+                "resourcePath": "sprites\\spr_Group_31233\\spr_Group_31233.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f6db3014-3fa2-48b3-b427-72b4f170f82b",
             "Value": {
                 "id": "b3551fb8-7f1a-42ec-96af-b885f4d5726a",
@@ -17099,6 +17131,14 @@
             "Value": {
                 "id": "2fd33bb9-ec3c-4d3f-9ad8-7dfe911d974e",
                 "resourcePath": "sprites\\Layer_192\\Layer_192.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fcb51a29-67f1-4b27-a443-27e2be61a959",
+            "Value": {
+                "id": "6d27ca85-8b98-4487-a958-47f68d8e0513",
+                "resourcePath": "sprites\\spr_treebranchdark\\spr_treebranchdark.yy",
                 "resourceType": "GMSprite"
             }
         },
