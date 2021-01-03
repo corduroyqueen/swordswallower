@@ -44,7 +44,9 @@ if firsttime {
 		
 		//layer_parallax_normalize_x(px_layer_sky_amt,px_layer_sky)
 		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)
+		layer_parallax_normalize_y(px_layer_near1_amt,px_layer_near1)
 		layer_parallax_normalize_x(px_layer_near2_amt,px_layer_near2)
+		layer_parallax_normalize_y(px_layer_near2_amt,px_layer_near2)
 		
 		subtemple01init()	
 		//fireflies_particle_system_obj.spawn = true

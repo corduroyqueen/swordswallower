@@ -20,5 +20,7 @@ with level1_master {
 	parallax_layer_move_y(px_layer_bkd2,px_layer_bkd2_amt,0)
 	
 	parallax_layer_move_x(px_layer_near1,px_layer_near1_amt,0)
+	parallax_layer_move_y(px_layer_near1,px_layer_near1_amt,0)
 	parallax_layer_move_x(px_layer_near2,px_layer_near2_amt,0)
+	parallax_layer_move_y(px_layer_near2,px_layer_near2_amt,0)
 }

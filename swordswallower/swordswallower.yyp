@@ -2354,7 +2354,7 @@
             "Key": "2055f490-2b7a-43b2-bb69-1e47a8840c6d",
             "Value": {
                 "id": "b7263832-c174-4721-9992-47f8efd9ed4a",
-                "resourcePath": "sprites\\spirit\\spirit.yy",
+                "resourcePath": "sprites\\powerup_spirit\\powerup_spirit.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3844,6 +3844,14 @@
                 "id": "f2dc3509-076d-4ff9-b308-ab2649920888",
                 "resourcePath": "rooms\/subtemple01\/subtemple01.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "3746c62d-37a6-4de3-a33b-ba1ba45f4605",
+            "Value": {
+                "id": "1b52acc1-e8f1-46a0-bbc3-56ee61399f58",
+                "resourcePath": "sprites\\powerup_spirit_old\\powerup_spirit_old.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
