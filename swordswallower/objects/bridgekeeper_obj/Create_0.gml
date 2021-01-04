@@ -12,7 +12,7 @@ dialogue = "theyve blocked the entrance to the temple :o "
 sprite_index = bridgekeeper
 image_speed = 0.5
 
-
+start_dialogue = false
 gravd = false
 
 ealpha = 0

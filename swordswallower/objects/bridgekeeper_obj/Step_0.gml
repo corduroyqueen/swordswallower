@@ -70,14 +70,20 @@ if crying_bool {
 		crying_bool = true
 	}
 }
-
-if player_present {
+if times_spoken==0 && current_pick==0 {
+	if wall_raycast_checker(player_obj) {
+		start_dialogue = true
+	}
+} else {
+	start_dialogue = false
+}
+if player_present || start_dialogue {
 	with ui_manager {
 		friendly_x = other.x
 		friendly_y = other.y - other.sprite_height/2 - 40	
 		view_xview = friendly_x-view_wview/2
 	}
-	if player_obj.k_speak_p {
+	if player_obj.k_speak_p || start_dialogue {
 		if !ui_manager.spk_bool {
 			ui_manager.speaking = true
 			ui_manager.printing = true

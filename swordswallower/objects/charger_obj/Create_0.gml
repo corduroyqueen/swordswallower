@@ -26,14 +26,16 @@ collided_with_friend = false
 
 grav = .8
 yplusb=0
-h_accel = 2.5
 
 h_decel_g = 0.35
 h_decel_a = 0.0375
 h_decel = 0
 
-h_walk_speed = 33
-h_max_speed = 33
+
+h_accel = .28
+h_walk_speed = 11
+h_max_speed = 55
+	
 
 grabbing = false
 
@@ -52,9 +54,6 @@ facing_right = true
 
 sword_present = false
 
-h_accel = .15
-h_walk_speed = 11
-	
 
 hit = noone
 hit_timer = 0

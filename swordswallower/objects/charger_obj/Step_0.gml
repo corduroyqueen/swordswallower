@@ -69,7 +69,7 @@ if player_obj.tail_pulling && met && sword_present {
 
 
 if state!=state_hitting && state!=state_knockback {
-	if (( my_floor==player_floor && my_floor!= -4) && 
+	if (player_obj.grounded && //(( my_floor==player_floor && my_floor!= -4) 
 	wall_raycast_checker(player_obj) )
 	|| sword_present {
 		hunting = true
@@ -224,10 +224,10 @@ if carryingcrab {
 	
 }
 
-if ready {
-	h_accel = .2
-	h_walk_speed = 11
-}
+//if ready {
+//	h_accel = .2
+//	h_walk_speed = 11
+//}
 if state==state_chasing {
 	if grabbing {
 		return false	
@@ -266,7 +266,7 @@ if state==state_chasing {
 		
 		hsp = lerp(hsp,clamp(hsp,-h_walk_speed,h_walk_speed),0.05)
 		//sdm(hsp)
-		if abs(hsp)>5 && wall_detect(x+hsp+100*sign(hsp),y-5) {
+		if abs(hsp)>5 && wall_detect(x+hsp+100*sign(hsp),y-20) {
 			
 			state = state_knockback
 			

@@ -39,7 +39,7 @@ for(var pts=1;pts<7;pts++) {
 	//draw_set_color(c_green)
 	//draw_circle(farx+px,fary+py,5,false)
 	//draw_set_color(c_white)
-	if pvsp>0 && place_meeting(farx+px,fary+py-25,wall_parent_obj) {
+	if pvsp>0  && (fary+py-25>player_obj.y-10) && place_meeting(farx+px,fary+py-25,wall_parent_obj) {
 		var tobj = instance_place(farx+px,fary+py-25,wall_parent_obj)
 		
 		py = default_collision_y_only(farx+px,fary+py-25,pvsp,tobj) - fary+25
