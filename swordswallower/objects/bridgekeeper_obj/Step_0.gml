@@ -70,10 +70,8 @@ if crying_bool {
 		crying_bool = true
 	}
 }
-if times_spoken==0 && current_pick==0 {
-	if wall_raycast_checker(player_obj) {
-		start_dialogue = true
-	}
+if times_spoken==0 && current_pick==0 && player_present && point_distance(x,y,player_obj.x,player_obj.y)<450 && wall_raycast_checker(player_obj) {
+	start_dialogue = true
 } else {
 	start_dialogue = false
 }
