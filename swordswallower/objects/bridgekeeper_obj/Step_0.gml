@@ -5,6 +5,19 @@
 
 
 
+
+var raycastb
+if wall_raycast_checker(player_obj) {
+	raycastb = true
+} else {
+	raycastb = false
+}
+if abs(x-player_obj.x)<400 && abs(y-player_obj.y)<300 && raycastb {
+	player_present = true
+} else {
+	player_present = false
+}
+
 if place_meeting(x,y,tail_obj) && (player_obj.tail_throwing || player_obj.tail_pulling) {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,x,y)
 	level1_master.piercebool = true
@@ -12,17 +25,15 @@ if place_meeting(x,y,tail_obj) && (player_obj.tail_throwing || player_obj.tail_p
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
 	spk_bool = false
+	player_present = false
 }
 
 if level1_master.piercebool {
+	
 	instance_destroy(id)
 }
 
-if abs(x-player_obj.x)<300 && abs(y-player_obj.y)<300 {
-	player_present = true
-} else {
-	player_present = false
-}
+
 y = starty
 
 if init {
@@ -70,7 +81,7 @@ if crying_bool {
 		crying_bool = true
 	}
 }
-if times_spoken==0 && current_pick==0 && player_present && point_distance(x,y,player_obj.x,player_obj.y)<450 && wall_raycast_checker(player_obj) {
+if times_spoken==0 && current_pick==0 && player_present && point_distance(x,y,player_obj.x,player_obj.y)<450 && raycastb {
 	start_dialogue = true
 } else {
 	start_dialogue = false
