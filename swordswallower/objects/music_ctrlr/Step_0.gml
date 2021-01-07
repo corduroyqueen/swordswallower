@@ -88,9 +88,9 @@ if room==subtemple01 {
 		}
 	}
 	
-	//audio_sound_gain(swsw1,0,0)
-	//audio_sound_gain(swsw2,0,0)
-	//audio_sound_gain(swsw_bossfight,0,0)
+	audio_sound_gain(swsw1,0,0)
+	audio_sound_gain(swsw2,0,0)
+	audio_sound_gain(swsw_bossfight,0,0)
 	
 }
 

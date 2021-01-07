@@ -28,7 +28,7 @@ if firsttime {
 		px_layer_bkd2 = layer_get_id("px_bkd2")
 		px_layer_bkd2_amt = 1.03
 		px_layer_bkd1 = layer_get_id("px_bkd1")
-		px_layer_bkd1_amt = 1.12
+		px_layer_bkd1_amt = 1.04
 		px_layer_near2 = layer_get_id("px_near2")
 		px_layer_near2_amt = 15
 		px_layer_near1 = layer_get_id("px_near1")
@@ -206,7 +206,9 @@ if initialize {
 			layer_sprite_destroy(layer_sprite_get_id(s,"mooneye6"))
 		}
 		layer_parallax_normalize_x(px_layer_near1_amt,px_layer_near1)
+		layer_parallax_normalize_y(px_layer_near1_amt,px_layer_near1)
 		layer_parallax_normalize_x(px_layer_near2_amt,px_layer_near2)
+		layer_parallax_normalize_y(px_layer_near2_amt,px_layer_near2)
 		
 		if subtemple01ckptbool {
 			instance_destroy(checkpointlol)	

@@ -1623,6 +1623,14 @@
             }
         },
         {
+            "Key": "16927e50-ab8f-4e17-ba43-335689ac94b7",
+            "Value": {
+                "id": "ff22284d-7598-4573-9bed-55854811e945",
+                "resourcePath": "objects\\close_wall_hand_toggle_obj\\close_wall_hand_toggle_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1695f668-b8d2-4eb9-b38b-ed7d3bed99f7",
             "Value": {
                 "id": "6524b9fd-5d04-4772-83a3-e4585e603b95",
@@ -4407,6 +4415,14 @@
             }
         },
         {
+            "Key": "3f232cd1-d9e1-4d82-8dec-9f1ddaf9ddf9",
+            "Value": {
+                "id": "a1e8a8fc-9697-4829-a7f9-e47900d952ec",
+                "resourcePath": "sprites\\meat_falling_platform\\meat_falling_platform.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3f30e480-d5f1-41d2-965d-00d4155cb539",
             "Value": {
                 "id": "993590f0-a2cf-48cd-8686-6bc35d10e377",
@@ -5363,6 +5379,14 @@
             "Value": {
                 "id": "9406756c-399f-4e54-831b-4284bb8904ee",
                 "resourcePath": "objects\\camera_hitbox_check_obj\\camera_hitbox_check_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4c26bad9-f84e-43e5-9a62-0a8964780238",
+            "Value": {
+                "id": "440f5832-c472-4381-a36e-f4a740bf3237",
+                "resourcePath": "objects\\trigger_player_present_obj\\trigger_player_present_obj.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -16975,6 +16999,14 @@
             }
         },
         {
+            "Key": "f8e6dcb3-885b-47f7-91f0-ccc7a707fdbe",
+            "Value": {
+                "id": "49fdd65a-c0cc-46f9-97da-25197880a159",
+                "resourcePath": "objects\\falling_platform_obj\\falling_platform_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f8ea9637-6da0-4d45-b93b-cd22671def1d",
             "Value": {
                 "id": "56f5ea96-f23e-4d5d-8848-33af3760ed38",
@@ -17116,6 +17148,14 @@
                 "id": "d29d62e2-4d1f-4c94-83de-1247d67fd876",
                 "resourcePath": "views\/fab06ed1-4bda-4fff-8156-faccdc343240.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fabf5662-d7ca-46ec-8b06-68a610fdf93f",
+            "Value": {
+                "id": "68d2bfa4-9af6-42c6-9fcb-cd7b7b21eaad",
+                "resourcePath": "objects\\close_wall_toggle_obj\\close_wall_toggle_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

@@ -114,7 +114,7 @@ tail_pulling = false
 tail_zooming = false
 tail_held = false
 winding=false
-
+cam_fix_obj=noone
 cam_height = camera_get_view_height(view_camera[0])
 cam_width = camera_get_view_width(view_camera[0])
 cam_height_h = cam_height/2

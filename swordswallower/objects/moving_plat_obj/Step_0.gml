@@ -4,7 +4,7 @@
 timer++
 if timer>200 {
 	timer = 0
-	hsp = -sign(hsp) * mspeed
+	vsp = -sign(vsp) * mspeed
 }
 
 if in_camera_range_bigger(x,y) {
