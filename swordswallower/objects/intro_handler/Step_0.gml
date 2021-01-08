@@ -160,13 +160,15 @@ if !player_obj.death {
 	}
 }
 
-	layer_set_visible(level3artm,false)
-				layer_set_visible(level3art1,false)
-				layer_set_visible(level3art2,false)
-				layer_set_visible(level3art3,false)
-				layer_set_visible(level3art4,false)
+	//layer_set_visible(level3artm,false)
+	//			layer_set_visible(level3art1,false)
+	//			layer_set_visible(level3art2,false)
+	//			layer_set_visible(level3art3,false)
+	//			layer_set_visible(level3art4,false)
 			
-				layer_set_visible(level3bgm,false)
-				layer_set_visible(level3bg1,false)
-				layer_set_visible(level3bg2,false)
-				layer_set_visible(level3bg3,false)
+	//			layer_set_visible(level3bgm,false)
+	//			layer_set_visible(level3bg1,false)
+	//			layer_set_visible(level3bg2,false)
+	//			layer_set_visible(level3bg3,false)
+				
+	//			layer_set_visible(layer_obj_3,true)
