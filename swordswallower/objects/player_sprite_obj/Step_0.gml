@@ -96,8 +96,9 @@ if player_obj.zoom_timer_bool||player_obj.out_of_dash_t<00 || player_obj.zoom_ct
 if player_obj.zoom_timer_bool && place_meeting(x,y,wall_obj) {
 	//image_blend = c_purple	
 } else if !player_obj.zoom_timer_bool && (player_obj.zoom_hitbox_active || (player_obj.out_of_dash_t<30 && !player_obj.tail_throwing)) {
-	sprite_index = spr_mc_somersault
-	image_index = floor(current_time/6) % 5
+	//sprite_index = spr_mc_somersault
+	//image_index = floor(current_time/6) % 5
+	sprite_index = s_player_falling_e
 } else if player_obj.stinky_check {
 	image_blend = c_blue
 } else {

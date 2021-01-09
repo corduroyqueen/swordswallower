@@ -14,8 +14,11 @@
         "ea3a1cde-bd54-4ce7-bfc4-826d66fae67a",
         "8892666c-787a-42d0-a5c4-a10bc41fddcf",
         "e73136c0-2b86-4f1f-b09c-76889d387092",
+        "6578b6a1-8a02-4c15-b81b-66c058d9e9d8",
         "187ea7d3-c517-496c-b9bc-5b58fce78dde",
-        "fba3e777-b238-40da-905a-0e61c414c139"
+        "fba3e777-b238-40da-905a-0e61c414c139",
+        "5377770a-b963-4321-a4e8-ebcc13321524",
+        "b7816e4a-5b17-4be7-b386-72774e2292cd"
     ],
     "filterType": "GMSprite",
     "folderName": "fleshpudds",

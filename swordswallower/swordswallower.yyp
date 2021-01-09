@@ -3135,6 +3135,14 @@
             }
         },
         {
+            "Key": "2c442913-5eb9-4ad4-89fb-a6592a9abbad",
+            "Value": {
+                "id": "34403d11-7df1-4cad-887f-c20376850393",
+                "resourcePath": "objects\\eye_follow_obj\\eye_follow_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2c5b2118-4703-41c0-8839-5b0f222417c8",
             "Value": {
                 "id": "3b0b9163-2f71-4993-aa3a-d78cccb2ae62",
@@ -5935,6 +5943,14 @@
             }
         },
         {
+            "Key": "5377770a-b963-4321-a4e8-ebcc13321524",
+            "Value": {
+                "id": "42c81fe5-09fd-4c8d-b383-b5536915c695",
+                "resourcePath": "sprites\\eyefollow\\eyefollow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5377b905-7240-4d2b-9459-9648a9e61f43",
             "Value": {
                 "id": "90be6e05-83b7-4dd2-8c98-cc25781ad7ff",
@@ -7364,6 +7380,14 @@
                 "id": "03025a5b-a1c0-441c-bea9-3c204b86998f",
                 "resourcePath": "objects\/wall_parent_obj\/wall_parent_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6578b6a1-8a02-4c15-b81b-66c058d9e9d8",
+            "Value": {
+                "id": "e647c86d-a70a-44ad-8bc9-4bd655b6d422",
+                "resourcePath": "sprites\\sprite10673\\sprite10673.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12756,6 +12780,14 @@
                 "id": "73475487-f193-46a3-81e9-5d4cd788fcc2",
                 "resourcePath": "scripts\/enemy_killondash_player_collision\/enemy_killondash_player_collision.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b7816e4a-5b17-4be7-b386-72774e2292cd",
+            "Value": {
+                "id": "e165e933-d0c5-4d3a-96c7-2b811a3c3291",
+                "resourcePath": "sprites\\eyefollow2\\eyefollow2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

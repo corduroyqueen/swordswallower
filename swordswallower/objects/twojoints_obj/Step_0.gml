@@ -344,6 +344,7 @@ if state==state_idle {
 	if timer>150 {
 		head.image_index = 0
 		tail_obj.stuck_check = false
+		
 		tail_obj.visible = true
 		tail_obj.x = x
 		tail_obj.y = y + 400
@@ -368,13 +369,12 @@ if state==state_idle {
 			sword_pull_check()
 			
 			instance_create_depth(x,y,-999999999999,title_screen_obj)	
-			
-			instance_destroy()
-			
+			player_obj.zoom_on = true
 			instance_destroy(leftarm)
 			
 			instance_destroy(rightarm)
 			instance_destroy(head)
+			instance_destroy()
 		}
 		if tail_obj.pull_timer>tail_obj.pull_wall_t || player_obj.tail_carry {
 			
@@ -388,6 +388,7 @@ if state==state_idle {
 	} else {
 		head.image_index = 1
 		tail_obj.stuck_check = true
+		player_obj.zoom_on = false
 		tail_obj.x = x
 		tail_obj.y = y
 		player_obj.tail_planted = true

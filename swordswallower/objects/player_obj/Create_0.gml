@@ -276,6 +276,8 @@ footstep_audio_bool = true
 held_position_start = false
 
 dt = 1
+
+zoom_on = true
 //global.blood_cr = 0.73
 //global.blood_cg = 0.19
 //global.blood_cb = 0.43

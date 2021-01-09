@@ -73,6 +73,7 @@ if !tail_planted && !tail_held {
 	if (tail_carry || tail_pulling )&& tail_obj.nearby_swordgrab_buffer>0 && k_dash_p 
 	&& level1_master.ability_dash //&& point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<135 
 	&& tail_obj.current_obj.object_index!=black_wall_obj
+	&& zoom_on
 	{
 		//shockwave_shader.trigger = true
 		
@@ -180,7 +181,8 @@ if !tail_planted && !tail_held {
 	
 	if tail_planted && zoom_allow<1 &&
 	zoom_buff_timer>0 && k_dash && !k_dash_r 
-	&& level1_master.ability_dash {
+	&& level1_master.ability_dash 
+	&& zoom_on {
 		//shockwave_shader.trigger = true
 		
 		zoom_buff_timer = 0
