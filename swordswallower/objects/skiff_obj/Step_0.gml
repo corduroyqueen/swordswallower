@@ -27,7 +27,7 @@ if x>(47000) {
 	} else {
 		dialogue_array[0] = "My village will be okay. The guards are capable. "
 		dialogue_array[1] = "But this is a bad omen. "
-		dialogue_array[2] = "end. "
+		dialogue_array[2] = "end"
 	}
 }
 
@@ -72,6 +72,7 @@ if !done {
 			ui_manager.current_dialogue = "end"
 			current_pick = 0
 			times_spoken=0
+			boatboy_obj.times_spoken = 0
 			
 		}
 		if loop1>0.8 || loop2>0.8 || loop1<0.05 || loop2<0.05 {

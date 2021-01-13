@@ -71,3 +71,5 @@ dialogue_array[4] = "I guess I'm going to drop you off. I'll go back and take th
 dialogue_array[5] = "Maybe I can pick you up from the other side. "
 dialogue_array[6] = "... "
 dialogue_array[7] = "Did it bubble up from the bottom of the lake? "
+
+times_spoken=0

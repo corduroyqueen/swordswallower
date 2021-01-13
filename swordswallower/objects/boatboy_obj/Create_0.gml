@@ -37,3 +37,4 @@ dialogue_array[4] = "I'm worried for my town on the other side and was about to 
 dialogue_array[5] = "Hang onto the bottom of my skiff. "
 
 gravd = false
+times_spoken=0

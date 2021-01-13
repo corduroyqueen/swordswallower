@@ -27,5 +27,6 @@ if !ui_manager.spk_bool {
 			
 		
 if dialogue=="end" {
-	current_pick = 0	
+	current_pick = 0
+	times_spoken++
 }

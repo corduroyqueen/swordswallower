@@ -1,7 +1,31 @@
 //fuck yes
 /// @description Insert description here
 // You can write your code in this editor
-
+if x>46000 {
+	if times_spoken<1 {
+		dialogue_array[0] = "I'm going to circle around. I'll wait for you on the other side if I get there first. "
+		dialogue_array[1] = "See you soon. "
+		dialogue_array[2] = "end"
+	} else {
+		dialogue_array[0] = "Good luck. "
+		dialogue_array[1] = "end"
+	}
+//if times_spoken<1 {
+	
+//}
+} else {
+	if times_spoken<1 {
+		dialogue_array[0] = "Hey! Warrior! Up here! "
+		dialogue_array[1] = "Yes, me. Hello. Are you following the hooded creature? "
+		dialogue_array[2] = "It just passed here and crossed the tar river. It was walking on top like it was made of stone. "
+		dialogue_array[3] = "I was going to try and stop it, but it was holding a... very big sword. "
+		dialogue_array[4] = "I'm worried for my town on the other side and was about to cross. I can take you if you need. "
+		dialogue_array[5] = "Hang onto the bottom of my skiff. "
+	} else {
+		dialogue_array[0] = "We must hurry, warrior. I don't know what that creature's planning. "
+		dialogue_array[1] = "end"
+	}
+}
 
 if gravd {
 	if stopped {
@@ -68,6 +92,7 @@ if (plf==true && player_present = false) {//|| player_obj.ending_lock {
 	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
+	
 	
 	
 }
