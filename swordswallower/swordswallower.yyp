@@ -1391,6 +1391,14 @@
             }
         },
         {
+            "Key": "133aab61-2f8d-41bf-940f-62355eae4af3",
+            "Value": {
+                "id": "b6bfab3c-9ebe-4c83-b7f2-66e395e16c46",
+                "resourcePath": "objects\\boss_corpse_obj\\boss_corpse_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "137d42ce-0a13-4cf6-bc04-5479a3d54303",
             "Value": {
                 "id": "c5432d09-2638-4b78-95ee-414e2761e7fa",

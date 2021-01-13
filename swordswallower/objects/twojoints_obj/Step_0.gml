@@ -358,17 +358,26 @@ if state==state_idle {
 			go.spinspeed = 10
 			//go.spurt_bool = true
 			
-			just_blood_speed_input(-0.75,-1.5,0.2,50,true,x,y+200)
-			just_blood_speed_input(-0.75,-1.5,0.2,50,true,x,y+250)
-			just_blood_speed_input(-1.2,-1.2,0,50,true,x,y+300)
-			just_blood_speed_input(-1.2,-1.2,0,50,true,x,y+350)
-			just_blood_speed_input(-0.75,0,0.2,50,true,x,y+400)
-			just_blood_speed_input(-0.75,0,0.2,50,true,x,y+450)
-		
-		
+			//just_blood_speed_input(-0.75,-1.5,0.2,30,true,x,y+200)
+			//just_blood_speed_input(-0.75,-1.5,0.2,30,true,x,y+250)
+			//just_blood_speed_input(-1.2,-1.2,0,30,true,x,y+300)
+			//just_blood_speed_input(-1.2,-1.2,0,30,true,x,y+350)
+			//just_blood_speed_input(-0.75,0,0.2,30,true,x,y+400)
+			//just_blood_speed_input(-0.75,0,0.2,30,true,x,y+450)
+			just_blood_speed_input(-0.75,-1.5,0.2,30,true,tail_obj.x,tail_obj.y-100)
+			just_blood_speed_input(-0.75,-1.5,0.2,30,true,tail_obj.x,tail_obj.y+50)
+			just_blood_speed_input(-1.2,-1.2,0,30,true,tail_obj.x,tail_obj.y-200)
+			just_blood_speed_input(-1.2,-1.2,0,30,true,tail_obj.x,tail_obj.y)
+			just_blood_speed_input(-0.75,0,0.2,30,true,tail_obj.x,tail_obj.y+20)
+			just_blood_speed_input(-0.75,0,0.2,30,true,tail_obj.x,tail_obj.y-40)
+			
+			
+			just_blood_speed_input(-0.5,-1,0.2,50,true,tail_obj.x,tail_obj.y)
+			
 			sword_pull_check()
 			
 			instance_create_depth(x,y,-999999999999,title_screen_obj)	
+			instance_create_depth(x,y,depth,boss_corpse_obj)	
 			player_obj.zoom_on = true
 			instance_destroy(leftarm)
 			

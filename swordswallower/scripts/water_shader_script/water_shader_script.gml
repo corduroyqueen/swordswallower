@@ -2,6 +2,7 @@ xinput = argument0
 yinput = argument1
 
 var alph = 1-art_surface_setter.void_black_rect_a
+alph *= clamp((yinput-player_obj.camy)/100,0,1)
 // get distortion variables:
 	//-------------------------------------------------------------------------
 	water_shift_R		+= 0.50 * 2 - 1 - player_obj.camxdiff;

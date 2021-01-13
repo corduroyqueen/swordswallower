@@ -1,7 +1,35 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+if x>(47000) {
+	if times_spoken<1 {
+		dialogue_array[0] = "I'm going to circle around. I'll wait for you on the other side if I get there first. "
+		dialogue_array[1] = "See you soon. "
+		dialogue_array[2] = "end"
+	} else {
+		dialogue_array[0] = "Good luck. "
+		dialogue_array[1] = "end"
+	}
+//if times_spoken<1 {
+	
+//}
+} else {
+	if times_spoken<1 {
+		dialogue_array[0] = "Wha... What's that ahead of us? Hold on. "
+		dialogue_array[1] = "... "
+		dialogue_array[2] = "The island ahead... I've never seen it before. I passed through just this morning. "
+		dialogue_array[3] = "It looks like it's covered the width of the pass, so I can't get past. "
+		dialogue_array[4] = "I guess I'm going to drop you off. I'll go back and take the long way around... "
+		dialogue_array[5] = "Maybe I can pick you up from the other side. "
+		dialogue_array[6] = "... "
+		dialogue_array[7] = "Did it bubble up from the bottom of the lake? "
+		dialogue_array[8] = "end"
+	} else {
+		dialogue_array[0] = "My village will be okay. The guards are capable. "
+		dialogue_array[1] = "But this is a bad omen. "
+		dialogue_array[2] = "end. "
+	}
+}
 
 if !done {
 	
@@ -32,13 +60,18 @@ if !done {
 			tail_obj.moving_platform_bool = false
 			sword_present = false
 			player_obj.held_position = false
-			with tail_obj {
-				sword_reject_script()
-			}
+			//with tail_obj {
+			//	sword_reject_script()
+			//}
+			sword_pull_check()
 			current_pick = 0
 			//x = startx+7999
 			//done = true
 			//hsp = 0
+			
+			ui_manager.current_dialogue = "end"
+			current_pick = 0
+			times_spoken=0
 			
 		}
 		if loop1>0.8 || loop2>0.8 || loop1<0.05 || loop2<0.05 {
@@ -119,7 +152,8 @@ if !done {
 			
 		
 			if dialogue=="end" {
-				current_pick = 0	
+				current_pick = 0
+				times_spoken++
 			} 
 		}
 			
