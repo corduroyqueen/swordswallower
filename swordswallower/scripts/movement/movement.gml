@@ -61,24 +61,42 @@ if grounded && (k_left || k_right) {
 	if //abs(player_sprite_obj.image_index-4)<0.1 ||
 	floor(player_sprite_obj.image_index)==0 && footstep_audio_bool
 	{
-		if !tail_carry {
-			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
-			audio_sound_pitch(hey,random_range(0.75,1.25))
-			audio_manager(hey,0,false,0)
 		
-			hey = footstep5
-			audio_sound_pitch(hey,random_range(0.75,1.25))
-			audio_manager(hey,0,false,0)	
-		} else {
-			var hey = choose(footstep6)//footstep144,footstep2,footstep3)
-			audio_sound_pitch(hey,random_range(0.75,1.25))
-			audio_manager(hey,0,false,0)
 		
-			hey = footstep5
-			audio_sound_pitch(hey,random_range(0.75,1.25))
-			audio_manager(hey,0,false,0)	
+		var floor_obj = instance_place(x,y+2,wall_master_parent_obj)
+		if instance_exists(floor_obj) {
+			if floor_obj.material_type==floor_obj.material_stone {
+				hey = footstep5
+				audio_sound_pitch(hey,random_range(0.75,1.25))
+				audio_manager(hey,0,false,0)
+				var hey = choose(footstep6)//footstep144,footstep2,footstep3)
+				audio_sound_pitch(hey,random_range(0.75,1.25))
+				audio_manager(hey,0,false,0)
+			} else if floor_obj.material_type==floor_obj.material_wood {
+				var hey = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+				audio_sound_gain(hey,0.7,0)
+				audio_sound_pitch(hey,random_range(0.9,1.1))
+				audio_manager(hey,0,false,0)
+			} else if floor_obj.material_type==floor_obj.material_meat {
+				var hey = choose(s_squelch_01,s_squelch_03,s_squelch_05,s_squelch_06,s_squelch_07,s_squelch_08)//footstep144,footstep2,footstep3)
+				audio_sound_gain(hey,0.05,0)
+				audio_sound_pitch(hey,random_range(0.91,1.25))
+				audio_manager(hey,0,false,0)
+			}
 		}
+		//if 
+		//if !tail_carry {
+		//	var hey = choose(footstep6)//footstep144,footstep2,footstep3)
+		//	audio_sound_pitch(hey,random_range(0.75,1.25))
+		//	audio_manager(hey,0,false,0)
+		//} else {
+		//	var hey = choose(footstep6)//footstep144,footstep2,footstep3)
+		//	audio_sound_pitch(hey,random_range(0.75,1.25))
+		//	audio_manager(hey,0,false,0)
 		
+				
+		//}
+		//all except 2 4 and 5
 		var dust = instance_create_depth(player_obj.x+sign(player_obj.hsp)*15,player_obj.y+45,depth+100,player_footstep_dust_obj)
 		dust.image_xscale = dust.image_xscale * sign(player_obj.hsp)
 		//dust.image_alpha = 0.4

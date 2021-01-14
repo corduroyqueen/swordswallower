@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "028aa55e-649e-4678-af88-d42591783ebc",
+            "Value": {
+                "id": "8261c740-ccc0-4ee4-a826-940edc91bc16",
+                "resourcePath": "sounds\\s_squelch_08\\s_squelch_08.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "02c16ce8-3d74-4d53-adee-4958a5562f21",
             "Value": {
                 "id": "25a78e77-1eab-4997-8167-c03de84dd7a3",
@@ -764,6 +772,14 @@
                 "id": "3cdc0318-c81e-4e60-b9fa-177d1a3c581a",
                 "resourcePath": "sprites\/sprite34\/sprite34.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "09f4c51c-dc41-48e4-b77d-138f55322a68",
+            "Value": {
+                "id": "f36333db-1aad-4c58-9eca-3b34f627415d",
+                "resourcePath": "sounds\\s_squelch_01\\s_squelch_01.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1375,6 +1391,14 @@
             }
         },
         {
+            "Key": "12eabf56-08fe-4ecd-82ff-81d6ca7a3185",
+            "Value": {
+                "id": "67564503-32fa-423b-af94-a623daf40d2f",
+                "resourcePath": "sounds\\s_squelch_04\\s_squelch_04.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "130bb82f-a3a5-4c2f-b4df-c8cd7619bed1",
             "Value": {
                 "id": "c978c405-a18f-4dd7-b0f0-db6ae5a731cd",
@@ -1524,6 +1548,14 @@
                 "id": "d126604f-929c-497f-8bf6-550733349b38",
                 "resourcePath": "sprites\/floor1\/floor1.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "154745e2-dcd5-4169-94c9-23f704d5c18b",
+            "Value": {
+                "id": "74a4982b-090c-4cfc-a162-9f0926cf7464",
+                "resourcePath": "sounds\\s_squelch_06\\s_squelch_06.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -1692,6 +1724,14 @@
                 "id": "84a0abff-7eb6-45c2-81a6-1f3d642a51fa",
                 "resourcePath": "sprites\/desert\/desert.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "17a84f62-12fc-48b0-a1b5-423034231466",
+            "Value": {
+                "id": "9043dabc-bbfc-443b-b72a-31c639f6836a",
+                "resourcePath": "sounds\\s_squelch_03\\s_squelch_03.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -5383,6 +5423,14 @@
             }
         },
         {
+            "Key": "4baf938c-069e-49c7-ae7b-2f5c7a8354d2",
+            "Value": {
+                "id": "0eb34b0f-0fcd-4826-b98b-84f304cf079b",
+                "resourcePath": "sounds\\s_squelch_05\\s_squelch_05.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "4bfbe868-b21f-4adf-9735-d472a084a6f3",
             "Value": {
                 "id": "c8a2668e-580f-45c9-9af0-fdd19e16ae3a",
@@ -7791,6 +7839,14 @@
             }
         },
         {
+            "Key": "6ace7c92-c1d1-48c7-8ad9-ed954ee6ed34",
+            "Value": {
+                "id": "17251484-7db9-4cbf-ba47-84909966eec4",
+                "resourcePath": "sounds\\s_squelch_02\\s_squelch_02.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "6adea8d9-163c-49cc-bc1a-419cb1839e08",
             "Value": {
                 "id": "500a6abd-1474-47fa-9488-d4144c3c0a5c",
@@ -7844,6 +7900,14 @@
                 "id": "d9c309c1-6dee-45b5-b3b6-a6a2af6bbdff",
                 "resourcePath": "objects\/dc_water_obj\/dc_water_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6baa1fea-279e-4986-b2f2-175b9a6d14f8",
+            "Value": {
+                "id": "5cd02c5e-230b-4cb4-bb6c-f219d3d474a5",
+                "resourcePath": "sounds\\s_footstep_wood_03\\s_footstep_wood_03.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -9460,6 +9524,14 @@
                 "id": "486d83a5-d41e-4448-bef9-81e7db8b7163",
                 "resourcePath": "scripts\/sword_plant\/sword_plant.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "80c63bd6-01b7-4e01-b7b5-a74e16ae2606",
+            "Value": {
+                "id": "a184a505-ce0b-4d37-b385-517f5974e5e6",
+                "resourcePath": "objects\\wall_master_parent_obj\\wall_master_parent_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -12663,6 +12735,14 @@
             }
         },
         {
+            "Key": "b4a9f5d8-4210-4ba8-bab2-1779eeef7dd9",
+            "Value": {
+                "id": "1b276085-3caf-41c1-8061-637ce252b4a8",
+                "resourcePath": "sounds\\s_squelch_07\\s_squelch_07.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "b4f54c2e-a36d-4319-8cd9-2aeb3d594a49",
             "Value": {
                 "id": "8a5525f2-6406-467c-a60b-83983edc2048",
@@ -12788,6 +12868,14 @@
                 "id": "73475487-f193-46a3-81e9-5d4cd788fcc2",
                 "resourcePath": "scripts\/enemy_killondash_player_collision\/enemy_killondash_player_collision.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b763562c-f939-446c-9699-9368a326c39a",
+            "Value": {
+                "id": "a4d58500-c45e-4bc2-a4b5-041f2033efc8",
+                "resourcePath": "sounds\\s_footstep_wood_01\\s_footstep_wood_01.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -17428,6 +17516,14 @@
                 "id": "bdbd2335-167d-41b9-bc30-37eb3770fe2a",
                 "resourcePath": "scripts\\moveBloodPY\\moveBloodPY.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ff2aa092-75bc-4f08-9ed1-9b30faa32c42",
+            "Value": {
+                "id": "64556153-8921-4612-97c0-04b0d0af6e25",
+                "resourcePath": "sounds\\s_footstep_wood_02\\s_footstep_wood_02.yy",
+                "resourceType": "GMSound"
             }
         },
         {

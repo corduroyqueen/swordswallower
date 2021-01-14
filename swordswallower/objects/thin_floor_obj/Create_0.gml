@@ -1,3 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
-intangible = false
+//fuck yes
+material_stone = 1
+material_wood = 2
+material_meat = 3
+
+material_type = material_wood

@@ -56,44 +56,87 @@ player_obj.tail_throwing = false
 player_obj.tail_planted = true
 player_obj.left_click_buffer = 0
 //ang = 0
-		
-
-audio_sound_pitch(gsound.s_sword_hit_metal_wall,random_range(0.9,1.1))
-//audio_manager(gsound.s_sword_hit_metal_wall,0,false,0)
+	
 var cx = player_obj.camx + player_obj.cam_width_h
 var cy = player_obj.camy + player_obj.cam_height_h
-audio_play_sound_at(gsound.s_sword_hit_metal_wall,
-	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
-	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
-	10,100,300,1,false,0)
-//mean(cx,cx + cx - tail_obj.x),
-//mean(cy,cy + cy - tail_obj.y),
+	
+var posx = mean(cx,cx,cx,cx,cx,cx,tail_obj.x)
+var posy = mean(cy,cy,cy,cy,cy,cy,tail_obj.y)
+
+if local_obj.material_type == local_obj.material_stone {
+
+	
+	//mean(cx,cx + cx - tail_obj.x),
+	//mean(cy,cy + cy - tail_obj.y),
 		
-audio_sound_pitch(Emergency_Sandbag_Heavy_Hitting_Rocks_02,random_range(0.9,1.1))
-//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
-audio_play_sound_at(Emergency_Sandbag_Heavy_Hitting_Rocks_02,
-	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
-	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
-	10,100,300,1,false,0)
+	audio_sound_pitch(Emergency_Sandbag_Heavy_Hitting_Rocks_02,random_range(0.9,1.1))
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	audio_play_sound_at(Emergency_Sandbag_Heavy_Hitting_Rocks_02,
+		posx,
+		posy,
+		10,100,300,1,false,0)
+		
+	ello = sword_strike_1
+	audio_sound_gain(ello,0.3,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	audio_play_sound_at(ello,
+		posx,
+		posy,
+		10,100,300,1,false,0)
+		
+	audio_sound_pitch(gsound.s_sword_hit_metal_wall,random_range(0.9,1.1))
+	//audio_manager(gsound.s_sword_hit_metal_wall,0,false,0)
 	
+	audio_play_sound_at(gsound.s_sword_hit_metal_wall,
+		posx,
+		posy,
+		10,100,300,1,false,0)
+		
+		var ello = impact_1
+	audio_sound_gain(ello,0.5,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	audio_play_sound_at(ello,
+		posx,
+		posy,
+		10,100,300,1,false,0)
+} else if local_obj.material_type == local_obj.material_meat {
+	var ello = lettuce_chop_louder
+	audio_sound_gain(ello,1.0,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
 	
-var ello = impact_1
-audio_sound_gain(ello,0.5,0)
-audio_sound_pitch(ello,random_range(0.9,1.1))
-//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
-audio_play_sound_at(ello,
-	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
-	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
-	10,100,300,1,false,0)
+	ello = squish2
+	audio_sound_gain(ello,1.5,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
 	
-ello = sword_strike_1
-audio_sound_gain(ello,0.3,0)
-audio_sound_pitch(ello,random_range(0.9,1.1))
-//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
-audio_play_sound_at(ello,
-	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
-	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),
-	10,100,300,1,false,0)
+	ello = choose(s_squelch_01,s_squelch_02,s_squelch_03,s_squelch_04,s_squelch_05,
+		s_squelch_06,s_squelch_07,s_squelch_08)
+	audio_sound_gain(ello,0.5,0)
+	audio_sound_pitch(ello,random_range(1.0,1.2))
+	audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	//ello = sword_crunch
+	//audio_sound_gain(ello,1.5,0)
+	//audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	
+	var ello = impact_1
+	audio_sound_gain(ello,0.25,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	audio_play_sound_at(ello,
+		posx,
+		posy,
+		10,100,300,1,false,0)
+}
+
+
+	
+
+	
+
 		
 		
 		
