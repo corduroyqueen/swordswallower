@@ -18,3 +18,7 @@ p_met = false
 //}
 
 //depth = 1900
+
+sound = noone
+
+audio_sound_set_track_position(s_tar_bubbling, 0.4);
