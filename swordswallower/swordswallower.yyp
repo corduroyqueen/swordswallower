@@ -13231,6 +13231,14 @@
             }
         },
         {
+            "Key": "be9a859d-d494-4d4f-bacb-f19e2654450f",
+            "Value": {
+                "id": "c1a697e1-7594-4b14-8732-f09152117d79",
+                "resourcePath": "sounds\\s_sword_wood_impact\\s_sword_wood_impact.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "beb1d4cd-8f9a-4f10-b355-d7ca24706ee1",
             "Value": {
                 "id": "1389ef97-8ded-49b5-8ade-770a9bbd8193",

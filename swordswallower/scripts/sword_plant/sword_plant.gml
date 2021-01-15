@@ -62,7 +62,7 @@ var cy = player_obj.camy + player_obj.cam_height_h
 	
 var posx = mean(cx,cx,cx,cx,cx,cx,tail_obj.x)
 var posy = mean(cy,cy,cy,cy,cy,cy,tail_obj.y)
-
+var ello
 if local_obj.material_type == local_obj.material_stone {
 
 	
@@ -101,6 +101,22 @@ if local_obj.material_type == local_obj.material_stone {
 		posx,
 		posy,
 		10,100,300,1,false,0)
+} else if local_obj.material_type == local_obj.material_wood {
+	//ello = Knife_Hit_Wall_2244
+	//audio_sound_gain(ello,0.2,0)
+	//audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	
+	ello = impact_1
+	audio_sound_gain(ello,0.4,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+		
+	ello = s_sword_wood_impact
+	audio_sound_gain(ello,0.6,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	
 } else if local_obj.material_type == local_obj.material_meat {
 	var ello = lettuce_chop_louder
 	audio_sound_gain(ello,1.0,0)

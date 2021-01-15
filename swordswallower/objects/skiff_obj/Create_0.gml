@@ -5,6 +5,12 @@ startx = x
 dt=1
 sword_present = false
 
+material_stone = 1
+material_wood = 2
+material_meat = 3
+
+material_type = 2
+
 dialogue=""
 player_present = false
 plf = false

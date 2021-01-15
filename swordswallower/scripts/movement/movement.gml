@@ -74,7 +74,7 @@ if grounded && (k_left || k_right) {
 				audio_manager(hey,0,false,0)
 			} else if floor_obj.material_type==floor_obj.material_wood {
 				var hey = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
-				audio_sound_gain(hey,0.7,0)
+				audio_sound_gain(hey,0.75,0)
 				audio_sound_pitch(hey,random_range(0.9,1.1))
 				audio_manager(hey,0,false,0)
 			} else if floor_obj.material_type==floor_obj.material_meat {
