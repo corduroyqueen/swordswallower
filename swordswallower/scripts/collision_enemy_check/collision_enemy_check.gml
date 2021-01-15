@@ -29,6 +29,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	}
 	
 	if local_obj.object_index==twojoints_weakspot_obj {
+		sword_hitpause(local_obj,2)
 		 with local_obj {
 			 death_blood_spawn_x = x
 			 death_blood_spawn_y = y

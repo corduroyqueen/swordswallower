@@ -3,15 +3,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 timer++
-if timer<9000 && timer>150 {
+if timer<9000 && timer>50 {
 	alpha+=0.002
 }
 
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
 
-if timer>1250 {
-	fade_alpha+=0.002
+if timer>500 {
+	fade_alpha+=0.02
 
 	draw_set_alpha(fade_alpha)
 	draw_set_color(c_black)

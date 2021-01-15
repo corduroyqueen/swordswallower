@@ -11,3 +11,9 @@ sword_reject = false
 
 death_blood_spawn_x = 0
 death_blood_spawn_y = 0
+
+material_stone = 1
+material_wood = 2
+material_meat = 3
+
+material_type = 3

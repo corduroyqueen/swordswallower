@@ -5,6 +5,14 @@ docile = true
 arm_pin_x = x
 arm_pin_y = y
 
+
+material_stone = 1
+material_wood = 2
+material_meat = 3
+
+material_type = 3
+
+
 rightarm = instance_create_depth(x,y,depth+1,twojoints_l_arm_obj)
 rightarm.image_alpha = 0.75
 rightarm.offset = 600
