@@ -25,7 +25,7 @@ if closed {
 		just_blood_speed_input(2.5,0,0.2,50,true,x,y)
 		just_blood_speed_input(3,2,0.2,50,true,x,y)
 		
-		
+		shockwave_shader.white_flash_screen = true
 		
 		instance_create_depth(x-10000,y+20,depth-1,treasure)
 		

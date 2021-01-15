@@ -146,3 +146,5 @@ water_shift_R		= 0;
 water_shift_G		= 0;
 water_shift_B		= 0;
 srf_water			= -1;
+
+white_flash_screen = false

@@ -1,6 +1,7 @@
 //fuck yes
 //fuck yes
 if hp<=0 {
+	shockwave_shader.white_flash_screen = true
 	level1_master.ability_dash = true	
 	
 	//just_blood(tail_obj.hsp,tail_obj.vsp-100,0.3,10,false,sprite_width/4,sprite_height)

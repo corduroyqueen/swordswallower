@@ -887,6 +887,14 @@
             }
         },
         {
+            "Key": "0b99d702-4e44-4283-9d2b-89a5fc643b8b",
+            "Value": {
+                "id": "0f58bf1f-764a-4066-b942-60bd1f5aff50",
+                "resourcePath": "sprites\\blood_sprite_perlin_old\\blood_sprite_perlin_old.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0b9eec70-4a93-4977-bf9c-e11410cb3930",
             "Value": {
                 "id": "04c18ae4-ea39-42b6-8a1e-5e136cc68801",

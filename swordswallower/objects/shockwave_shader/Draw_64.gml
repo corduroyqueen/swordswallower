@@ -114,8 +114,10 @@ shader_reset();
 
 
 with art_surface_setter {
-	if level1_master.in_void && void_black_rect_a<0.03 {
+	//if level1_master.in_void && void_black_rect_a<0.03 {
+	if other.white_flash_screen {
 		draw_rectangle(0,0,1920,1080,false)
+		other.white_flash_screen = false
 	}
 }
 //surface_reset_target()
