@@ -4,7 +4,7 @@ num_rings = round(image_yscale)
 
 p_cut_check = true
 
-init_ang = 300
+init_ang = 380
 cuttable = true
 force_cut = false
 drawself = true

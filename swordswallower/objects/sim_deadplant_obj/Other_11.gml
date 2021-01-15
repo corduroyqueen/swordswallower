@@ -52,8 +52,8 @@ spring_vsp = ds_list_create()
 
 n=0
 while n<num_rings {
-	ds_list_add( rings_x, x + n * lo * dcos(290) )
-	ds_list_add( rings_y, y + n * lo * -dsin(290) )
+	ds_list_add( rings_x, x + n * lo * dcos(270) )
+	ds_list_add( rings_y, y + n * lo * -dsin(270) )
 	ds_list_add( rings_hsp, 0 )
 	ds_list_add( rings_vsp, 0 )
 	
