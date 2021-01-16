@@ -241,6 +241,19 @@
     "height": 400,
     "layers": [
         {
+            "__type": "GMImageFolderLayer_Model:#YoYoStudio.MVCFormat",
+            "id": "f8e0e30c-9b56-440c-88ca-ef42e282c477",
+            "modelName": "GMImageFolderLayer",
+            "mvc": "1.0",
+            "SpriteId": "6ef1374f-b22c-42c4-a9ad-c59752a905ca",
+            "blendMode": 0,
+            "isLocked": false,
+            "name": "Layer Group 1",
+            "opacity": 100,
+            "visible": false,
+            "layers": null
+        },
+        {
             "id": "53743499-509b-4e36-a99c-beb5f08f559f",
             "modelName": "GMImageLayer",
             "mvc": "1.0",

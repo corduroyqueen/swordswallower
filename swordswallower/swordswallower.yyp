@@ -4951,6 +4951,14 @@
             }
         },
         {
+            "Key": "45612831-1e85-4cc3-92e6-69a2147019f3",
+            "Value": {
+                "id": "185eb367-2033-4c5f-a31b-a1df57b471b5",
+                "resourcePath": "sprites\\spr_brokenlock\\spr_brokenlock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "45870bc9-f794-47f0-8925-cc896b744355",
             "Value": {
                 "id": "028453d4-b791-4590-b402-0cc2a8125d7d",
@@ -6735,6 +6743,14 @@
             }
         },
         {
+            "Key": "5c4694eb-dcab-444b-bdce-23118afa426e",
+            "Value": {
+                "id": "187922e4-9659-416d-a3cd-352baa1821ab",
+                "resourcePath": "sprites\\spr_topcastle2\\spr_topcastle2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5c7e9b53-56d4-49c3-9cb9-cc3ad0f8fc07",
             "Value": {
                 "id": "601ea10c-ceb3-4185-8ddb-ed21912b11da",
@@ -7051,6 +7067,14 @@
             "Value": {
                 "id": "1ded9989-cf22-4631-bad5-449e7df3a6b8",
                 "resourcePath": "sprites\/mirror_spr_t\/mirror_spr_t.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5fb64708-b748-4281-be83-c1d1efd404b4",
+            "Value": {
+                "id": "aa478c96-9ebc-4ad0-96b0-ae1634beb01e",
+                "resourcePath": "sprites\\swordsparklies\\swordsparklies.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -8091,6 +8115,14 @@
             "Value": {
                 "id": "7b79d7d6-2e66-49bf-bf93-54c891e5a979",
                 "resourcePath": "sprites\/blood\/blood.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6e6674e7-44ee-4729-952e-87197def46e2",
+            "Value": {
+                "id": "8a0b1fd5-471c-41f9-a833-92fcab8a2cae",
+                "resourcePath": "sprites\\spr_topcastle\\spr_topcastle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -13887,6 +13919,14 @@
             }
         },
         {
+            "Key": "c911bd75-0ec1-4d9c-bf2e-cb62f1a1d5cd",
+            "Value": {
+                "id": "ca1a6484-0cd4-4d42-bb2b-3cacc46818a7",
+                "resourcePath": "sprites\\Layer_288\\Layer_288.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c92605a3-ce77-41ea-ac33-a01584bfa212",
             "Value": {
                 "id": "8fae65b9-6115-4f1d-b757-02780bf1d262",
@@ -14099,6 +14139,14 @@
             "Value": {
                 "id": "4116f36c-8768-4fc5-abdb-3363cfca6aed",
                 "resourcePath": "sprites\\spr_hooves_rev1\\spr_hooves_rev1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ccde36ff-79ee-43af-9a00-f8039e3996a9",
+            "Value": {
+                "id": "50a4b95c-207c-4962-9ebb-10205d16e9bb",
+                "resourcePath": "sprites\\spr__undertopcastle\\spr__undertopcastle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -15052,6 +15100,14 @@
                 "id": "b6490134-eea4-4658-939f-df1e83fd86d9",
                 "resourcePath": "objects\/breakable_pot_obj\/breakable_pot_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dbc32861-9c54-43d0-a6d0-bfebd32f1004",
+            "Value": {
+                "id": "a9021240-3091-4bf1-b245-ee4b29aa8f5b",
+                "resourcePath": "sprites\\spr_riverlady\\spr_riverlady.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -17132,6 +17188,14 @@
                 "id": "581dff8b-e269-4153-81bb-cfb474713d17",
                 "resourcePath": "options\/xboxone\/options_xboxone.yy",
                 "resourceType": "GMXBoxOneOptions"
+            }
+        },
+        {
+            "Key": "f86e5bd9-5a18-4252-ab9e-f3493994648d",
+            "Value": {
+                "id": "45dbbb2d-382f-40ac-bb07-5608d92069be",
+                "resourcePath": "sprites\\sword1256\\sword1256.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
