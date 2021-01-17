@@ -80,9 +80,9 @@ if room==subtemple01 {
 	if go5 {
 		if player_obj.x>66400 && player_obj.y>2750 {
 			part4_mc = audio_create_sync_group(true)
-			audio_play_in_sync_group(part4_mc,swsw_bossfight)
-			audio_start_sync_group(part4_mc)
-			audio_play_sound(swsw_bossfight,0,false)
+			//audio_play_in_sync_group(part4_mc,swsw_bossfight)
+			//audio_start_sync_group(part4_mc)
+			audio_play_sound(swsw_bossfight,0,true)
 			audio_stop_sound(ocean_ambience)
 			go5 = false
 		}

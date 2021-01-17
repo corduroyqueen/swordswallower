@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "026c5324-5c96-4a2d-b5fd-49e3438367ee",
+            "Value": {
+                "id": "b304005e-90d9-4242-93e3-2a7706028156",
+                "resourcePath": "sprites\\sword6_hilt\\sword6_hilt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "027845ca-5129-4d3d-b0f1-30d4c0722cbd",
             "Value": {
                 "id": "243e4d9d-4f8a-4656-8f71-41cf2fb4f437",
@@ -3324,6 +3332,14 @@
                 "id": "0f4ec1d5-6d46-47be-aaa5-2ff3b145c1ea",
                 "resourcePath": "fonts\\julia_font\\julia_font.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "2e0055be-3818-49fa-be4d-f96051fe0b09",
+            "Value": {
+                "id": "0e3fe89f-6966-42db-be8a-8fbdec64c453",
+                "resourcePath": "sprites\\swordsparklies_hilt\\swordsparklies_hilt.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -8012,6 +8028,14 @@
                 "id": "074e34ad-2f26-46e7-a46f-9559f92c4155",
                 "resourcePath": "objects\/circle_friend_obj\/circle_friend_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6cfbfffc-985e-45ea-9ed7-06cd9e23a29b",
+            "Value": {
+                "id": "1e832f24-97d0-47a2-bfdf-216b05ae032c",
+                "resourcePath": "sprites\\sword6_big_canvas\\sword6_big_canvas.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -14007,6 +14031,14 @@
             }
         },
         {
+            "Key": "cac5cfd9-aa7a-4c5b-8974-99b01baf96ea",
+            "Value": {
+                "id": "8a2ee9f2-04c8-4892-b7e9-8922a4bb6516",
+                "resourcePath": "sprites\\sword6_center\\sword6_center.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cafdf694-a10b-4315-b86e-dc4a510a4f5c",
             "Value": {
                 "id": "77dc3ece-cd17-45cb-a804-16ae99e15ed6",
@@ -15823,6 +15855,14 @@
             }
         },
         {
+            "Key": "e4b3ad64-1d41-4c08-931b-49ffd035afb3",
+            "Value": {
+                "id": "3cfa2f1d-21d3-4563-b4bc-94a62b43c5a1",
+                "resourcePath": "sprites\\swordsparklies_center\\swordsparklies_center.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e4bb614a-c5eb-4129-b533-71ec33ca95b2",
             "Value": {
                 "id": "69262b8d-f7d4-4dbf-bde2-4e231fc7f0b8",
@@ -17194,7 +17234,7 @@
             "Key": "f86e5bd9-5a18-4252-ab9e-f3493994648d",
             "Value": {
                 "id": "45dbbb2d-382f-40ac-bb07-5608d92069be",
-                "resourcePath": "sprites\\sword1256\\sword1256.yy",
+                "resourcePath": "sprites\\sword6_base\\sword6_base.yy",
                 "resourceType": "GMSprite"
             }
         },

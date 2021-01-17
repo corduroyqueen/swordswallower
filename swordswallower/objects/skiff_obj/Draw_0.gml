@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+gpu_set_colorwriteenable(1,1,1,0)
 if go {
 	if loop1<0.5 {
 		loop1+=0.004
@@ -61,9 +62,10 @@ leg2_ang = cos(0+loop2*6.2831)*22
 
 
 
-draw_sprite_ext(boatgirl2,0,x,y-sprite_get_height(boatgirl2)-sprite_height/2,-sign(hsp-0.1),1,0,c_white,1)
+draw_sprite_ext(spr_riverlady,0,x,y-sprite_get_height(boatgirl2)-sprite_height/2 + 5,-sign(hsp-0.1),1,0,c_white,1)
 
 
 draw_sprite_ext(skifffront,0,x,y,0.75,0.75,0,c_white,1)
 
 
+gpu_set_colorwriteenable(1,1,1,0)
