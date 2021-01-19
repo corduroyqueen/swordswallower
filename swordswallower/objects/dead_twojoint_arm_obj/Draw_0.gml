@@ -2,7 +2,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 //draw_set_color(c_white)
-
+gpu_set_colorwriteenable(1,1,1,0)
 if !position_meeting(hand_x+dcos(forearm_ang+ang1s)*350,hand_y-dsin(forearm_ang+ang1s)*350,wall_parent_obj) {
 	ang1s--
 	forearm_ang+=ang1s
@@ -43,7 +43,7 @@ draw_sprite_ext(bosshand1,0,hand_x,hand_y,1.25,1.25,hand_ang,c_white,image_alpha
 
 draw_set_color(c_white)
 
-
+gpu_set_colorwriteenable(1,1,1,1)
 
 /*arm_draw()
 /*

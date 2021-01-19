@@ -341,7 +341,7 @@ if state==state_idle {
 	timer++
 	sprite_index = boss_hurt
 	image_speed = 1
-	if timer>150 {
+	if timer>60 {
 		head.image_index = 0
 		tail_obj.stuck_check = false
 		
@@ -350,6 +350,8 @@ if state==state_idle {
 		tail_obj.y = y + 400
 		if player_obj.k_fire_p {
 			timer=0
+			tail_obj.x = x
+			tail_obj.y = y + 400
 			tail_obj.planted_rejecting = false
 			go = instance_create_depth(x,y,0,snakeheaddead_obj)
 			go.sprite_index = boss_head
@@ -398,7 +400,7 @@ if state==state_idle {
 		head.image_index = 1
 		tail_obj.stuck_check = true
 		player_obj.zoom_on = false
-		tail_obj.x = x
+		tail_obj.x = x + 1000000000000
 		tail_obj.y = y
 		player_obj.tail_planted = true
 		player_obj.tail_pulling = false

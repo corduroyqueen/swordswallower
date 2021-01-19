@@ -27,8 +27,12 @@ if enabled {
 		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
-			audio_play_sound(metal_door,0,false)
-			audio_play_sound(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false)
+			
+			var hey = choose(s_squelch_01,s_squelch_03,s_squelch_05,s_squelch_06,s_squelch_07,s_squelch_08)//footstep144,footstep2,footstep3)
+				audio_sound_gain(hey,0.05,0)
+				audio_sound_pitch(hey,random_range(0.91,1.25))
+				audio_manager(hey,0,false,0)
+				
 			audio_play_sound(hit_wall,0,false)
 		}
 	} else {
@@ -45,6 +49,11 @@ if enabled {
 		if point_distance(x,y,startx,starty)<(1+speed){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
+			
+			var hey = choose(s_squelch_01,s_squelch_03,s_squelch_05,s_squelch_06,s_squelch_07,s_squelch_08)//footstep144,footstep2,footstep3)
+				audio_sound_gain(hey,0.05,0)
+				audio_sound_pitch(hey,random_range(0.91,1.25))
+				audio_manager(hey,0,false,0)
 		}
 	} else {
 		x = startx
