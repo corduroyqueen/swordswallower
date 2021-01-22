@@ -137,6 +137,9 @@ if state==state_idle {
 	} else if attack==attack_cough_flies {
 		head.image_index = 1
 		var spawn_num = floor(random_range(2,6))
+		var kk = boss_burp
+		audio_sound_gain(kk,0.7,0)
+		audio_play_sound(kk,0,false)
 		for(var i=0;i<spawn_num;i++) {
 			fly1 = instance_create_depth(x-200,y-100,depth,flyfree_obj)
 			
@@ -378,6 +381,10 @@ if state==state_idle {
 			
 			sword_pull_check()
 			
+			var kk = boss_death
+			audio_sound_gain(kk,0.7,0)
+			audio_play_sound(kk,0,false)
+
 			instance_create_depth(x,y,-999999999999,title_screen_obj)	
 			instance_create_depth(x,y,depth,boss_corpse_obj)	
 			player_obj.zoom_on = true
@@ -400,7 +407,7 @@ if state==state_idle {
 		head.image_index = 1
 		tail_obj.stuck_check = true
 		player_obj.zoom_on = false
-		tail_obj.x = x + 1000000000000
+		tail_obj.x = x 
 		tail_obj.y = y
 		player_obj.tail_planted = true
 		player_obj.tail_pulling = false

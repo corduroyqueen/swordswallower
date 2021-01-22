@@ -14,17 +14,17 @@ if setpoint {
 	if checkpoint_manager.checkpoint == self && !starting_bool {
 		gpu_set_blendmode(bm_add)
 		
-		if point_distance(x,y,player_obj.camx+640,player_obj.camy+360)<1000 {
+		if point_distance(x,y,player_obj.camx+960,player_obj.camy+540)<1000 {
 			audio_sound_gain(fire_sound,1,0)
 			audio_emitter_gain(s_fire_emitter,
-			clamp(0,abs(1000- point_distance(x,y,player_obj.camx+640,player_obj.camy+360))/1000,1000)/3
+			clamp(0.05,abs(1000- point_distance(x,y,player_obj.camx+960,player_obj.camy+540))/1000,1000)/3 
 			
 			)
 			
 			audio_emitter_position(s_fire_emitter,
 			mean(x,player_obj.x,player_obj.x),
 			mean(x,player_obj.y,player_obj.y),
-			10)
+			0)
 		} else {
 			audio_emitter_gain(s_fire_emitter,0)
 		}

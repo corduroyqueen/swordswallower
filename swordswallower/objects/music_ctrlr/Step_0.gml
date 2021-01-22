@@ -77,13 +77,24 @@ if room==subtemple01 {
 		}
 	}
 	
+	if go6 {
+		if player_obj.x>46000 {
+			audio_play_sound(tim_hecker_song,0,true)
+			audio_sound_gain(tim_hecker_song,0,0)
+			audio_sound_gain(tim_hecker_song,0.4,500)
+			go6 = false
+		}
+	}
+	
 	if go5 {
 		if player_obj.x>66400 && player_obj.y>2750 {
 			part4_mc = audio_create_sync_group(true)
 			//audio_play_in_sync_group(part4_mc,swsw_bossfight)
 			//audio_start_sync_group(part4_mc)
-			audio_play_sound(swsw_bossfight,0,true)
+			audio_play_sound(swsw_bossfight_new,0,true)
+			audio_sound_gain(swsw_bossfight_new,2,0)
 			audio_stop_sound(ocean_ambience)
+			audio_stop_sound(tim_hecker_song)
 			go5 = false
 		}
 	}

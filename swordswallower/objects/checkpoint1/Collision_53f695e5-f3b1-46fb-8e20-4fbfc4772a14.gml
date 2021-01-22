@@ -15,6 +15,7 @@ if ready {
 		audio_sound_gain(fire_sound,audio_sound_get_gain(firecrackle1),0)
 		audio_play_sound(firelit1,0,false)	
 		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
+		audio_play_sound(checkpoint_sfx,0,false)	
 		starting_bool = false
 	}
 	savegame_script()

@@ -10,7 +10,7 @@ if timer<9000 && timer>50 {
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
 
-if timer>500 {
+if timer>400 {
 	fade_alpha+=0.02
 
 	draw_set_alpha(fade_alpha)
@@ -20,7 +20,7 @@ if timer>500 {
 	reflection_obj.image_alpha = 1 - fade_alpha
 }
 
-if timer>2000 {
+if timer>600 {
 	game_end()	
 }
 draw_set_alpha(1)
@@ -39,7 +39,8 @@ shader_reset()
 draw_set_color(c_white)
 //draw_sprite_ext(titlescreentitle,0,camx,camy,1,1,0,c_white,alpha*1.5)
 
-draw_sprite_ext(logo3,0,camx+960,camy+540,1,1,0,c_white,alpha*15)
+//draw_sprite_ext(logo3,0,camx+960,camy+540,1,1,0,c_white,alpha*15)
+draw_sprite_ext(title9801,0,camx+960,camy+540,1,1,0,c_white,alpha*15)
 draw_sprite_ext(comingsoon,0,camx+960,camy+650,1,1,0,c_white,alpha*10)
 draw_sprite_ext(twitterlink,0,camx+960,camy+740,1,1,0,c_white,alpha*8)
 

@@ -791,6 +791,14 @@
             }
         },
         {
+            "Key": "09f58283-3c18-4589-b248-9dd75c01124b",
+            "Value": {
+                "id": "a8c8b743-f10e-4704-971e-a9ee9df9607d",
+                "resourcePath": "sounds\\boss_death\\boss_death.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "09fa1b4f-7c01-4a8b-a918-6c7859024336",
             "Value": {
                 "id": "0b3abcc4-8cb3-4bb0-9514-b632643b10f6",
@@ -1380,6 +1388,14 @@
                 "id": "7e71f9c3-e51f-4a7f-8112-a9a991698f48",
                 "resourcePath": "sprites\\spr_evilbranch3\\spr_evilbranch3.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "127ef394-6d3c-419c-b14a-78572fd12edf",
+            "Value": {
+                "id": "d1e3b158-95dc-48b4-b505-ea9fd1987ede",
+                "resourcePath": "sounds\\swsw_bossfight_new\\swsw_bossfight_new.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -3843,6 +3859,14 @@
             "Value": {
                 "id": "6cfd2a60-50c5-4622-83df-77e84914033f",
                 "resourcePath": "sprites\/firefliesspawn\/firefliesspawn.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "35b4f87a-5144-44aa-b710-2e03939c9b50",
+            "Value": {
+                "id": "53d7e7e6-be8f-4d29-9afd-870cc72fcb2c",
+                "resourcePath": "sprites\\title9801\\title9801.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -6399,6 +6423,14 @@
             }
         },
         {
+            "Key": "5865e9ba-d9ae-41a5-a0ca-2916122264a8",
+            "Value": {
+                "id": "cc86ccb0-cc5c-42f2-8022-920389ed4c9c",
+                "resourcePath": "sounds\\s_boss_hurt\\s_boss_hurt.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "5888dfd1-b505-4c5b-8295-5cc004177b03",
             "Value": {
                 "id": "9524d7e7-849e-4e37-a887-84d434009d81",
@@ -7580,6 +7612,14 @@
                 "id": "27f775cb-476e-49cb-9ef7-abacdaf5aa61",
                 "resourcePath": "sprites\\boss_openmouth\\boss_openmouth.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6677be18-2ece-4a18-97ba-354191f99b8e",
+            "Value": {
+                "id": "5f1df48d-27f3-4703-ad5c-efb24d41b1fe",
+                "resourcePath": "sounds\\checkpoint_sfx\\checkpoint_sfx.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -9591,6 +9631,14 @@
             }
         },
         {
+            "Key": "808d88a8-e7f3-4272-b3ec-bf4d1fe5e0ec",
+            "Value": {
+                "id": "c87dab91-e0c0-4c9e-aec6-c4a2a4bf06cf",
+                "resourcePath": "sounds\\boss_burp\\boss_burp.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "80a4724b-1a30-469f-a87b-f2982420af8d",
             "Value": {
                 "id": "486d83a5-d41e-4448-bef9-81e7db8b7163",
@@ -10684,6 +10732,14 @@
                 "id": "5eedd4c8-08dd-439f-b34b-0f6f020ddc00",
                 "resourcePath": "objects\/tear_nograv_obj\/tear_nograv_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "92cf5c18-f323-48ca-a58d-9cedfc452f25",
+            "Value": {
+                "id": "85df0314-37fc-4ddc-ab59-a43c460edf23",
+                "resourcePath": "sounds\\tim_hecker_song\\tim_hecker_song.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -17364,6 +17420,14 @@
                 "id": "98c914ee-311a-465e-9f37-4571337c4b67",
                 "resourcePath": "scripts\/collision_wall_check\/collision_wall_check.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "f9d71c91-5357-4f15-8611-799711e75f45",
+            "Value": {
+                "id": "22dcf5e1-cf13-412b-b12b-7f375393c1bd",
+                "resourcePath": "sounds\\boss_lunge\\boss_lunge.yy",
+                "resourceType": "GMSound"
             }
         },
         {

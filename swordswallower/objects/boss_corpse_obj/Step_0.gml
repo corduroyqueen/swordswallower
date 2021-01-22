@@ -4,7 +4,7 @@ blood_timer_2++
 blood_timer_3++
 blood_timer_4++
 blood_timer_5++
-y+=0.1
+y+=0.2
 if blood_timer_1>blood_timer_m {
 	just_blood_speed_input(-2,-2,0.2,25,true,x-50,y)
 	blood_timer_1 = 0

@@ -29,7 +29,28 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	}
 	
 	if local_obj.object_index==twojoints_weakspot_obj {
-		sword_hitpause(local_obj,2)
+		sword_hitpause(local_obj,3)
+		player_obj.shake_d=4.5
+		player_obj.camera_shake_d = true
+		audio_play_sound(Knife_Pull_140,0,false)
+		
+		
+			
+		var ok = sword_thud_1
+		audio_sound_gain(ok,random_range(0.1,0.2),0)
+		audio_sound_pitch(ok,random_range(1.1,1.3))
+		audio_play_sound(ok,0,false)
+		
+		var bruh = lettuce_chop
+			audio_sound_pitch(bruh,random_range(0.75,1.25))
+			audio_sound_gain(bruh,0.32,0)
+			audio_play_sound(bruh,0,false)
+			
+			bruh = sword_crunch_1
+			audio_sound_pitch(bruh,random_range(2,3))
+			audio_sound_gain(bruh,random_range(0.3,0.6),0)
+			audio_play_sound(bruh,0,false)
+		
 		 with local_obj {
 			 death_blood_spawn_x = x
 			 death_blood_spawn_y = y
@@ -48,7 +69,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			return false
 		}
 	}
-	if local_obj.object_index==snakehead_obj {
+	if local_obj.object_index==snakehead_obj && !local_obj.met {
+		local_obj.met = true
 		if  player_obj.tail_throwing {
 			sword_reject_script()
 			local_obj.parent.headhit = true
@@ -59,13 +81,12 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 			var tvsp = local_obj.vsp
 			x = oldx
 			y = oldy
-			local_obj.met = true
 			//itpause = false
 			return
 		} else {
 			x = oldx
 				y = oldy
-			local_obj.met = true
+			
 		}
 	}
 	//sdm("g3")

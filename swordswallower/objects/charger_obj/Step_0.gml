@@ -58,8 +58,12 @@ if player_obj.tail_pulling && met && sword_present {
 		hp-=10	
 		ang = point_direction(x,y,player_obj.x,player_obj.y)
 		
-		just_blood(cos(degtorad(ang))*30,-sin(degtorad(ang))*30,0.2,80,true,death_blood_spawn_x,death_blood_spawn_y)
+		//just_blood(cos(degtorad(ang))*30,-sin(degtorad(ang))*30,0.2,80,true,death_blood_spawn_x,death_blood_spawn_y)
 		
+		just_blood_speed_input(-0,-8,0.2,25,true,x,y)
+	just_blood_speed_input(-8,-8,0,25,true,x,y)
+	just_blood_speed_input(8,-8,0.2,25,true,x,y)
+	
 		state = state_chasing
 		charge_timer=0
 		charging = false

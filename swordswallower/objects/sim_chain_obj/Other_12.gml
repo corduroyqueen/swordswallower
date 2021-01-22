@@ -4,6 +4,18 @@ p_cut_check = false
 	ok.num_rings = num_rings - cut
 	//ok.pinned = false
 	//ok.run = true
+	
+	var s = sword_reject_1
+	audio_sound_pitch(s,random_range(0.95,1.05))
+
+	var cx = player_obj.cam_midx
+	var cy = player_obj.cam_midy
+
+	
+	audio_play_sound_at(s,
+	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
+	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),0,0,0,0,false,0)
+	
 	var ww
 	with ok {
 		init = false

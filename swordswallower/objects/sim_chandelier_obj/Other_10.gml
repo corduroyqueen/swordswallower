@@ -138,9 +138,21 @@ if cut>-1 {
 	ok.pinned = false
 	ok.cut_bool = cut_bool
 	cut_bool = true
-	sdm("FUCKKCKCKCK")
-	sdm(cut_bool)
-	sdm(ok.cut_bool)
+	//sdm("FUCKKCKCKCK")
+	//sdm(cut_bool)
+	//sdm(ok.cut_bool)
+	var s = sword_reject_1
+	audio_sound_pitch(s,random_range(0.95,1.05))
+
+	var cx = player_obj.cam_midx
+	var cy = player_obj.cam_midy
+
+	
+	audio_play_sound_at(s,
+	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),
+	mean(cy,cy,cy,cy,cy,cy,tail_obj.y),0,0,0,0,false,0)
+	
+	
 	var ww
 	with ok {
 		for (var e=0;e<num_rings;e++) { 
