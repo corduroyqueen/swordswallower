@@ -3,7 +3,9 @@
 if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 	if !p_met {
-		player_obj.y = (y - sprite_height/2) - (player_sprite_obj.sprite_height-40)
+		if player_obj.y<y {
+			player_obj.y = (y - sprite_height/2) - (player_sprite_obj.sprite_height-40)
+		}
 		player_obj.vsp = 0
 		
 		sound = audio_play_sound(s_tar_bubbling,0,true)

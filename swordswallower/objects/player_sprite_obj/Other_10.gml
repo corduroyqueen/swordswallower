@@ -163,6 +163,13 @@ if !player_obj.zoom_timer_bool {
 	proc_cape_draw_l_script(cape_p_l_x,cape_p_l_y,  cloak_color)
 }
 draw_set_color(c_white)
+//sdm("ok")
+//sdm(player_obj.tail_carry)
+//sdm(player_obj.out_of_dash_t)
+//sdm(player_obj.held_position)
+//sdm("ok")
+//sdm(sword_pos_x)
+//sdm(sword_pos_y)
 if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_position {
 	//draw_circle(temp_pin_x,temp_pin_y,arm_max_length,true
 	

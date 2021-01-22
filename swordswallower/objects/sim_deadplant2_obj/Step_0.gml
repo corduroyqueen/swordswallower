@@ -1,7 +1,15 @@
-if in_camera_range_bigger(x,y) || in_camera_range_bigger(rings_x[|num_rings-1],rings_y[|num_rings-1]) {
-	run = true
+if num_rings>0 {
+	if in_camera_range_bigger(x,y) || in_camera_range_bigger(rings_x[|num_rings-1],rings_y[|num_rings-1]) {
+		run = true
+	} else {
+		run = false
+	}
 } else {
-	run = false
+	if in_camera_range_bigger(x,y){
+		run = true
+	} else {
+		run = false
+	}
 }
 if !pinned {
 	grav = 1.1
