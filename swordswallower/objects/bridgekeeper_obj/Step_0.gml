@@ -19,6 +19,25 @@ if abs(x-player_obj.x)<400 && abs(y-player_obj.y)<300 && raycastb {
 }
 
 if place_meeting(x,y,tail_obj) && (player_obj.tail_throwing || player_obj.tail_pulling) {
+	audio_play_sound(Knife_Pull_140,0,false)
+		
+			
+	var ok = sword_thud_1
+	audio_sound_gain(ok,random_range(0.1,0.2),0)
+	audio_sound_pitch(ok,random_range(1.1,1.3))
+	audio_play_sound(ok,0,false)
+	audio_manager(false,0,false,3)
+		
+	var bruh = lettuce_chop
+		audio_sound_pitch(bruh,random_range(0.75,1.25))
+		audio_sound_gain(bruh,0.32,0)
+		audio_play_sound(bruh,0,false)
+			
+		bruh = sword_crunch_1
+		audio_sound_pitch(bruh,random_range(2,3))
+		audio_sound_gain(bruh,random_range(0.3,0.6),0)
+		audio_play_sound(bruh,0,false)
+			
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,10,false,x,y)
 	level1_master.piercebool = true
 	
@@ -29,6 +48,7 @@ if place_meeting(x,y,tail_obj) && (player_obj.tail_throwing || player_obj.tail_p
 }
 
 if level1_master.piercebool {
+	
 	
 	instance_destroy(id)
 }

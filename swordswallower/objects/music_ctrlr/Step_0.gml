@@ -79,7 +79,7 @@ if room==subtemple01 {
 	
 	if go6 {
 		if player_obj.x>46000 {
-			audio_sound_pitch(tim_hecker_song,1.5)
+			//audio_sound_pitch(tim_hecker_song,1.5)
 			audio_play_sound(tim_hecker_song,0,true)
 			
 			audio_sound_gain(tim_hecker_song,0,0)

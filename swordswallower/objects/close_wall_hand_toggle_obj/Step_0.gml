@@ -19,7 +19,7 @@ if starty<endy {
 	y1 = endy
 	y2 = starty
 }
-enabled = master.enter
+
 if enabled {
 	if point_distance(x,y,endx,endy)>1 {
 		//movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
@@ -43,6 +43,7 @@ if enabled {
 		vsp = 0
 	}
 } else {
+	enabled = master.enter
 	if point_distance(x,y,startx,starty)>1 {
 		//movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
 		sp_towards_target(startx,starty,movespeed,1)
