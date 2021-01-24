@@ -7,7 +7,6 @@ if on {
 		array_members[|i].hitbox_on = true
 	}
 	if timer>on_time {
-		
 		timer=0
 		on = false
 	}
@@ -17,7 +16,6 @@ if on {
 		array_members[|i].hitbox_on = false
 	}
 	if timer>off_time {
-		
 		timer=0
 		on = true
 	}

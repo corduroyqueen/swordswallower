@@ -184,9 +184,7 @@ if state==state_idle {
 				chosen_wall = flesh_hands_wall
 			}
 		}
-		if !player_obj.tail_pulling {
-			ht++
-		}
+		ht++
 		//h1.visible = true
 		//h2.visible = true
 		if ht>170 {
@@ -247,6 +245,7 @@ if state==state_idle {
 		//chosen_wall.image_alpha = 0
 			//h2.image_alpha = 0
 			//h3.image_alpha = 0
+			
 			chosen_wall.dormant = false
 			flesh_hands_floor.dormant = false
 			chosen_wall.on = false
@@ -340,7 +339,9 @@ if state==state_idle {
 		} else {
 			
 			//chosen_wall.mask_index = nothing1
+			
 			if hand_switch_init {
+				event_user(1)
 				flesh_hands_floor.on = false
 				flesh_hands_floor.dormant = false
 				//h2.mask_index = nothing1

@@ -24,3 +24,6 @@ sword_ignore = true
 dormant = false
 
 hitbox_on = false
+
+startx = x
+starty = y
