@@ -6143,6 +6143,14 @@
             }
         },
         {
+            "Key": "54794399-d5d5-4e9b-8b8d-132c2b01d4d0",
+            "Value": {
+                "id": "0a811cca-4d20-458a-8528-d74482d0124b",
+                "resourcePath": "objects\\flesh_hazard_spawner_obj\\flesh_hazard_spawner_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5482db62-5b5d-495c-b2ef-2b18060f4975",
             "Value": {
                 "id": "2469bfb6-39d1-46bc-b3c1-96e9a1710beb",

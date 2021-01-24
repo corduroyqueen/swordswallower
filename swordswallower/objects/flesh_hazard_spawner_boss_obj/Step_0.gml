@@ -11,7 +11,7 @@ if dormant {
 } else {
 	//timer++
 	for(var i=0;i<l;i++) {
-			var kek = array_members[|i]
+		var kek = array_members[|i]
 		kek.active= true
 		kek.dormant = false
 		kek.x=kek.startx
