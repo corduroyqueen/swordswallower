@@ -142,6 +142,10 @@ ds_list_add(phase3_atk,3)
 ds_list_add(phase3_atk,3)
 
 
+flesh_hands_floor = flesh_wall_hands_floor
+flesh_hands_wall = flesh_wall_hands_wall
+flesh_hands_ceiling = flesh_wall_hands_ceiling
+
 
 //srf = surface_create(1920,1080)
 

@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if player_obj.death {
+	if audio_is_playing(sound) {
+			audio_stop_sound(sound)
+		}
+}
 if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 	if !p_met {

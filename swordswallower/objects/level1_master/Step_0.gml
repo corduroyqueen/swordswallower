@@ -2,7 +2,12 @@
 if available_checkpoints>1 {
 	lol = true	
 }
-
+if keyboard_check_pressed(vk_escape) {
+	bloom_on = !bloom_on	
+}
+if keyboard_check_pressed(ord("J")) {
+	audio_stop_all()
+}
 if in_void {
 	if blood_ctrl_obj.blood_num<1 {
 		//void_blood_ctr=0

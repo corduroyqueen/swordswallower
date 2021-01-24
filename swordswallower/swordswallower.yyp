@@ -4247,6 +4247,14 @@
             }
         },
         {
+            "Key": "3bb226bf-5b36-4567-8051-73c2c143278c",
+            "Value": {
+                "id": "48706a6b-9c98-4720-a28b-a8b88c0c07e6",
+                "resourcePath": "objects\\flesh_hazard_spawner_obj\\flesh_hazard_spawner_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3bb73b52-bb56-41df-a78e-f26f13d175d9",
             "Value": {
                 "id": "d8a215c3-6d3b-4a29-a8fd-798bb784a388",
@@ -4492,6 +4500,14 @@
                 "id": "6df78a23-9e13-4b99-b069-094d8ec0a5d0",
                 "resourcePath": "sprites\/skifffront\/skifffront.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3ecf6995-1b85-4eff-b59b-00b7afdb7da2",
+            "Value": {
+                "id": "a9e09743-51b8-4871-bf42-a84820d00257",
+                "resourcePath": "objects\\flesh_hazard_weed_obj\\flesh_hazard_weed_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

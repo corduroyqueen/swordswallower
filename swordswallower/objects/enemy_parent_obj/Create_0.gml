@@ -17,3 +17,5 @@ material_wood = 2
 material_meat = 3
 
 material_type = 3
+
+sword_ignore = false

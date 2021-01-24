@@ -80,7 +80,7 @@ spikes_visible = false
 thin_floor_visible = false
 
 dev = false
-//dev = true
+dev = true
 
 if dev {
 	//show_debug_overlay(true)
@@ -185,7 +185,7 @@ void_target = noone
 void_blood_ctr = 0
 void_blood_ctr_max = 0
 powerup_bug = noone
-
+bloom_on = true
 //0.9, 0.0, 0.3 neon pink
 
 

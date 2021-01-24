@@ -9,35 +9,51 @@ with head {
 	//draw_self()
 }
 if state==state_attacking && (attack==attack_wall_hands || attack==attack_wall_hands_switch) {
-	if ht>129 {
-		if hands_ceiling_a {
-			h1_lerp = lerp(h1_lerp,0,0.2)
-		}
-		if attack!=attack_wall_hands_switch || end_hand_switch {
-			h2_lerp = lerp(h2_lerp,50,0.2)
-		}
-		if hands_wall_a {
-			h3_lerp = lerp(h3_lerp,-30,0.2)
-		}
-	} else if ht>100 {
-		if hands_ceiling_a {
-			h1_lerp = lerp(h1_lerp,70,0.2)
-		}
-		h2_lerp = lerp(h2_lerp,-50,0.2)
-		h3_lerp = lerp(h3_lerp,55,0.2)
-	} else {
-		if hands_ceiling_a {
-			h1_lerp = lerp(h1_lerp,40,0.2)
-		}
-		if attack==attack_wall_hands || hand_switch_init {
-			h2_lerp = lerp(h2_lerp,-20,0.2)
-		}
-		if hands_wall_a {
-			h3_lerp = lerp(h3_lerp,25,0.2)
-		}
-	}
-	//h1
-	if hands_ceiling_a {
+	//if ht>129 {
+	//	if hands_ceiling_a {
+	//		flesh_hands_ceiling.active = false
+	//		flesh_hands_ceiling.dormant = true
+	//		//h1_lerp = lerp(h1_lerp,0,0.2)
+	//	}
+	//	if attack!=attack_wall_hands_switch || end_hand_switch {
+	//		flesh_hands_floor.active = false
+	//		flesh_hands_floor.dormant = true
+	//		//h2_lerp = lerp(h2_lerp,50,0.2)
+	//	}
+	//	if hands_wall_a {
+	//		flesh_hands_wall.active = false
+	//		flesh_hands_wall.dormant = true
+	//		//h3_lerp = lerp(h3_lerp,-30,0.2)
+	//	}
+	//} else if ht>100 {
+	//	if hands_ceiling_a {
+	//		h1_lerp = lerp(h1_lerp,70,0.2)
+	//	}
+	//	h2_lerp = lerp(h2_lerp,-50,0.2)
+	//	h3_lerp = lerp(h3_lerp,55,0.2)
+	//} else {
+	//	if hands_ceiling_a {
+	//		flesh_hands_ceiling.active = true
+	//		flesh_hands_ceiling.dormant = false
+	//	}
+	//	if attack==attack_wall_hands || hand_switch_init {
+	//		flesh_hands_floor.active = true
+	//		flesh_hands_floor.dormant = false
+	//	}
+	//	if hands_wall_a {
+	//		flesh_hands_wall.active = true
+	//		flesh_hands_wall.dormant = false
+	//	}
+	//}
+	
+}
+gpu_set_colorwriteenable(true,true,true,true)
+with leftarm {
+	event_user(3)
+}
+
+/*
+if hands_ceiling_a {
 		draw_sprite_ext(sprite1062,0,h1_x,h1_y+h1_lerp,0.5,0.5,180,c_white,1)
 		draw_sprite_ext(sprite1066,0,h1_x+45,h1_y+h1_lerp,0.5,0.5,180,c_white,1)
 		draw_sprite_ext(sprite10673,0,h1_x+90,h1_y+h1_lerp,0.5,0.5,180,c_white,1)
@@ -108,8 +124,3 @@ if state==state_attacking && (attack==attack_wall_hands || attack==attack_wall_h
 		draw_sprite_ext(sprite10673,0,h3_x+h3_lerp,h3_y+f+585,0.5,0.5,-90,c_white,1)
 		draw_sprite_ext(sprite1062,0,h3_x+h3_lerp,h3_y+f+630,0.5,0.5,-90,c_white,1)
 	}
-}
-gpu_set_colorwriteenable(true,true,true,true)
-with leftarm {
-	event_user(3)
-}

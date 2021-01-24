@@ -179,11 +179,11 @@ if state==state_idle {
 		}
 	} else if attack==attack_wall_hands {
 		if ht < 1 {
-			chosen_wall = choose(h1,h3)
+			chosen_wall = choose(flesh_hands_wall,flesh_hands_ceiling)
 			if phase_n==0 && phase_n_i<2 {
-				chosen_wall = h1
+				chosen_wall = flesh_hands_wall
 			}
-			if chosen_wall==h1 {
+			if chosen_wall==flesh_hands_wall {
 				hands_ceiling_a = true
 				hands_wall_a = false
 			} else {
@@ -208,36 +208,49 @@ if state==state_idle {
 			
 		} else if ht>130 {
 			
-			chosen_wall.x = 1000
-			chosen_wall.y = -1000
-			h2.x = 1000
-			h2.y = -1000
-			//h3.x = 1000
-			//h3.y = -1000
+			//chosen_wall.x = 1000
+			//chosen_wall.y = -1000
+			//h2.x = 1000
+			//h2.y = -1000
+			////h3.x = 1000
+			////h3.y = -1000
 			
-			chosen_wall.mask_index = nothing1
-			h2.mask_index = nothing1
+			//chosen_wall.mask_index = nothing1
+			//h2.mask_index = nothing1
+			
+			chosen_wall.on = false
+			flesh_hands_floor.on= false
+			
+			chosen_wall.dormant = true
+			flesh_hands_floor.dormant =true
 			//h3.mask_index = nothing1
 			
 		} else if ht>100 {
-			chosen_wall.mask_index = sprite54
-			h2.mask_index = sprite54
+			//chosen_wall.mask_index = sprite54
+			//h2.mask_index = sprite54
+			
+			chosen_wall.on = true
+			flesh_hands_floor.on= true
 			//h3.mask_index = sprite54
 			//h1.image_alpha = 1
 			//h2.image_alpha = 1
 		} else {
-			chosen_wall.mask_index = nothing1
-			h2.mask_index = nothing1
+			//chosen_wall.mask_index = nothing1
+			//h2.mask_index = nothing1
 			//h3.mask_index = nothing1
 			
-			chosen_wall.image_alpha = 0
-			h2.image_alpha = 0
+		//chosen_wall.image_alpha = 0
+			//h2.image_alpha = 0
 			//h3.image_alpha = 0
+			chosen_wall.dormant = false
+			flesh_hands_floor.dormant = false
+			chosen_wall.on = false
+			flesh_hands_floor.on = false
 			
-			chosen_wall.x = chosen_wall.sx
-			chosen_wall.y = chosen_wall.sy
-			h2.x = h2_x
-			h2.y = h2_y
+			//chosen_wall.x = chosen_wall.sx
+			//chosen_wall.y = chosen_wall.sy
+			//h2.x = h2_x
+			//h2.y = h2_y
 			//h3.x = h3_x
 			//h3.y = h3_y
 		}
@@ -246,14 +259,7 @@ if state==state_idle {
 	} else if attack==attack_wall_hands_switch {
 		if ht < 1 {
 			hand_switch_init = true
-			chosen_wall = choose(h1,h3)
-			if chosen_wall==h1 {
-				hands_ceiling_a = true
-				hands_wall_a = false
-			} else {
-				hands_wall_a = true
-				hands_ceiling_a = false
-			}
+			chosen_wall = choose(flesh_hands_wall,flesh_hands_ceiling)
 		}
 		if !player_obj.tail_pulling {
 			ht++
@@ -276,14 +282,14 @@ if state==state_idle {
 				end_hand_switch = false
 				ht=0
 			} else {
-				if hands_ceiling_a {
-					hands_ceiling_a = false
-					hands_wall_a = true
-					chosen_wall = h3
+				chosen_wall.timer=0
+				chosen_wall.dormant=true
+				chosen_wall.on=false
+				chosen_wall.timer=0
+				if chosen_wall==flesh_hands_ceiling {
+					chosen_wall = flesh_hands_wall
 				} else {
-					hands_ceiling_a = true
-					hands_wall_a = false
-					chosen_wall = h1
+					chosen_wall = flesh_hands_ceiling
 				}
 				end_hand_switch = true
 				ht = 1
@@ -291,46 +297,62 @@ if state==state_idle {
 			
 		} else if ht>130 {
 			
-			if end_hand_switch {
-				chosen_wall.x = 1000
-				chosen_wall.y = -1000
-			}
-			h2.x = 1000
-			h2.y = -1000
+			//if end_hand_switch {
+			//	chosen_wall.on = false
+			//	chosen_wall.dormant = true
+			//	//chosen_wall.x = 1000
+			//	//chosen_wall.y = -1000
+			//}
+			chosen_wall.on = false
+			chosen_wall.dormant = true
+			//h2.x = 1000
+			//h2.y = -1000
+			//flesh_hands_floor.on = false
+			//flesh_hands_floor.dormant = true
 			//h3.x = 1000
 			//h3.y = -1000
 			
-			chosen_wall.mask_index = nothing1
+			//chosen_wall.mask_index = nothing1
+			
 			
 			if end_hand_switch {
-				h2.mask_index = nothing1
+				flesh_hands_floor.on = false
+				flesh_hands_floor.dormant = true
+				//h2.mask_index = nothing1
 			}
 			//h3.mask_index = nothing1
 			hand_switch_init = false
 		} else if ht>100 {
-			chosen_wall.mask_index = sprite54
-			h2.mask_index = sprite54
+			//chosen_wall.mask_index = sprite54
+			//h2.mask_index = sprite54
+			
+			chosen_wall.on = true
+			flesh_hands_floor.on= true
 			
 			//h3.mask_index = sprite54
 			//h1.image_alpha = 1
 			//h2.image_alpha = 1
 		} else {
 			
-			chosen_wall.mask_index = nothing1
+			//chosen_wall.mask_index = nothing1
 			if hand_switch_init {
-				h2.mask_index = nothing1
-				
+				flesh_hands_floor.on = false
+				flesh_hands_floor.dormant = false
+				//h2.mask_index = nothing1
 			}
 			//h3.mask_index = nothing1
 			
-			chosen_wall.image_alpha = 0
-			h2.image_alpha = 0
-			//h3.image_alpha = 0
+			//chosen_wall.image_alpha = 0
+			//h2.image_alpha = 0
+			////h3.image_alpha = 0
 			
-			chosen_wall.x = chosen_wall.sx
-			chosen_wall.y = chosen_wall.sy
-			h2.x = h2_x
-			h2.y = h2_y
+			//chosen_wall.x = chosen_wall.sx
+			//chosen_wall.y = chosen_wall.sy
+			//h2.x = h2_x
+			//h2.y = h2_y
+			chosen_wall.dormant = false
+			chosen_wall.on = false
+			//flesh_hands_floor.on = false
 			//h3.x = h3_x
 			//h3.y = h3_y
 		}

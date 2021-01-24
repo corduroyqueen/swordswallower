@@ -3,10 +3,8 @@
 /// @description MAIN
 //surface_set_target(gif_surface)
 
-if keyboard_check_pressed(vk_escape) {
-	on = !on	
-}
-if !on {
+
+if !level1_master.bloom_on {
 	draw_surface(GUI,0,0)	
 	return
 }

@@ -22,7 +22,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 	y = checky;
 	bleh = false
 	//sdm("g1")
-	
+	if local_obj.sword_ignore {
+		local_obj.met = true
+		return false
+	}
 	if local_obj.object_index==tear_nograv_obj {
 		local_obj.death = true
 		return false	
