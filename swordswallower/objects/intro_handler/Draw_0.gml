@@ -75,11 +75,11 @@ if player_obj.intro {
 		timer_audio_script(eye_scream,intro_timer,475)
 		
 		if intro_timer>=1 && intro_timer<2 {
-			just_blood_input(0,0,0,-8,200,0,4000,1000)
-			x-=400
-			just_blood_input(0,0,0,-13,200,0,4000,1000)
-			x+=900
-			just_blood_input(0,0,0,-15,200,0,4000,1000)
+			//just_blood_input(0,0,0,-8,200,0,4000,1000)
+			//x-=400
+			//just_blood_input(0,0,0,-13,200,0,4000,1000)
+			//x+=900
+			//just_blood_input(0,0,0,-15,200,0,4000,1000)
 			audio_stop_sound(surrogatedrone)
 		}
 		

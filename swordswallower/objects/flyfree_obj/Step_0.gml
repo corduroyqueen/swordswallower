@@ -9,7 +9,7 @@ if keyboard_check_pressed(ord("R")) {
 
 if level1_master.in_void {
 	if in_camera_range(x,y) {
-		death = true
+		instance_destroy()
 	}
 }
 

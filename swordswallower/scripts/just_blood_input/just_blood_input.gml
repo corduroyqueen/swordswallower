@@ -13,7 +13,7 @@ blood_splat_script()
 for (i=0;i<(amount+40);i++){
 	var scalevar = (amount+40-i)/(amount+40) * 1.1
 	scalevar = sqrt((amount+40-i)/(amount+40)+1) - 0.65
-	var angle = point_direction(0,0,tail_obj.throwxs,tail_obj.throwys)
+	var angle = point_direction(0,0,-tail_obj.throwxs,-tail_obj.throwys)
 	
 	with blood_ctrl_obj {
 		event_user(1)
