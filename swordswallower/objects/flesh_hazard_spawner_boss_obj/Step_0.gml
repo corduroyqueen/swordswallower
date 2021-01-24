@@ -1,8 +1,22 @@
 //fuck yes
 if dormant {
 	timer=0
+	for(var i=0;i<l;i++) {
+		var kek = array_members[|i]
+		kek.active= false
+		kek.dormant = true
+		kek.x=0
+		kek.y=5000
+	}
 } else {
-	timer++
+	//timer++
+	for(var i=0;i<l;i++) {
+			var kek = array_members[|i]
+		kek.active= true
+		kek.dormant = false
+		kek.x=kek.startx
+		kek.y=kek.starty
+	}
 	if on {
 		if timer>on_time {
 			for(var i=0;i<l;i++) {

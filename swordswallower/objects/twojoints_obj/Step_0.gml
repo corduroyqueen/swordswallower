@@ -27,14 +27,14 @@ if state==state_idle {
 	} else {
 		sprite_index = boss_idle
 	}
-	
+	ht=0
 	h1_lerp = 0
 	h2_lerp = 50
 	h3_lerp = -30
 	
 	state_timer++
-	hands_ceiling_a = false
-	hands_wall_a = false
+	//hands_ceiling_a = false
+	//hands_wall_a = false
 	
 	if state_timer>40 {
 		
@@ -183,13 +183,6 @@ if state==state_idle {
 			if phase_n==0 && phase_n_i<2 {
 				chosen_wall = flesh_hands_wall
 			}
-			if chosen_wall==flesh_hands_wall {
-				hands_ceiling_a = true
-				hands_wall_a = false
-			} else {
-				hands_wall_a = true
-				hands_ceiling_a = false
-			}
 		}
 		if !player_obj.tail_pulling {
 			ht++
@@ -205,6 +198,18 @@ if state==state_idle {
 				state = state_idle
 				state_timer = 30
 			}
+			
+			flesh_hands_floor.on= false
+			flesh_hands_wall.on= false
+			flesh_hands_ceiling.on= false
+			
+			flesh_hands_floor.dormant =true
+			flesh_hands_wall.dormant =true
+			flesh_hands_ceiling.dormant =true
+			
+			flesh_hands_floor.timer=0
+			flesh_hands_wall.timer=0
+			flesh_hands_ceiling.timer=0
 			
 		} else if ht>130 {
 			
@@ -230,7 +235,7 @@ if state==state_idle {
 			//h2.mask_index = sprite54
 			
 			chosen_wall.on = true
-			flesh_hands_floor.on= true
+			flesh_hands_floor.on = true
 			//h3.mask_index = sprite54
 			//h1.image_alpha = 1
 			//h2.image_alpha = 1
@@ -259,17 +264,15 @@ if state==state_idle {
 	} else if attack==attack_wall_hands_switch {
 		if ht < 1 {
 			hand_switch_init = true
+			event_user(1)
 			chosen_wall = choose(flesh_hands_wall,flesh_hands_ceiling)
+			//ht++
 		}
-		if !player_obj.tail_pulling {
-			ht++
-		}
+		ht++
 		//h1.visible = true
 		//h2.visible = true
 		if ht>150 {
-			
 			//ht=0
-			
 			if end_hand_switch {
 				//h2_lerp = 50
 				if leftarm.destroy_arm && rightarm.destroy_arm {
@@ -279,13 +282,13 @@ if state==state_idle {
 					state = state_idle
 					state_timer = 20
 				}
+				
 				end_hand_switch = false
 				ht=0
+				
+				event_user(1)
 			} else {
-				chosen_wall.timer=0
-				chosen_wall.dormant=true
-				chosen_wall.on=false
-				chosen_wall.timer=0
+			//	event_user(1)
 				if chosen_wall==flesh_hands_ceiling {
 					chosen_wall = flesh_hands_wall
 				} else {
@@ -305,6 +308,7 @@ if state==state_idle {
 			//}
 			chosen_wall.on = false
 			chosen_wall.dormant = true
+			chosen_wall.timer=0
 			//h2.x = 1000
 			//h2.y = -1000
 			//flesh_hands_floor.on = false
@@ -318,6 +322,7 @@ if state==state_idle {
 			if end_hand_switch {
 				flesh_hands_floor.on = false
 				flesh_hands_floor.dormant = true
+				chosen_wall.timer=0
 				//h2.mask_index = nothing1
 			}
 			//h3.mask_index = nothing1

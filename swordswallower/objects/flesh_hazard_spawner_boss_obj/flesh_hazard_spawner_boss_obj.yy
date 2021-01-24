@@ -2,7 +2,7 @@
     "id": "3bb226bf-5b36-4567-8051-73c2c143278c",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "flesh_hazard_spawner_obj",
+    "name": "flesh_hazard_spawner_boss_obj",
     "eventList": [
         {
             "id": "2ec0d0b2-8d01-463f-9ab7-8d287563947f",

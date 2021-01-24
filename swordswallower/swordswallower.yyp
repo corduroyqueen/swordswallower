@@ -4250,7 +4250,7 @@
             "Key": "3bb226bf-5b36-4567-8051-73c2c143278c",
             "Value": {
                 "id": "48706a6b-9c98-4720-a28b-a8b88c0c07e6",
-                "resourcePath": "objects\\flesh_hazard_spawner_obj\\flesh_hazard_spawner_obj.yy",
+                "resourcePath": "objects\\flesh_hazard_spawner_boss_obj\\flesh_hazard_spawner_boss_obj.yy",
                 "resourceType": "GMObject"
             }
         },
