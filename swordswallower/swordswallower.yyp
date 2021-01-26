@@ -3327,6 +3327,14 @@
             }
         },
         {
+            "Key": "2db77b6c-4ff6-4bc8-a85c-47af1c49baf6",
+            "Value": {
+                "id": "d62671c9-d5da-446d-8bbc-a34cc2ad3f66",
+                "resourcePath": "sprites\\swallowswordhighlight\\swallowswordhighlight.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2dbebb6c-1051-4c73-b92e-fb196a3fa88e",
             "Value": {
                 "id": "c72dc524-4a13-4be8-86d4-d87ec46930f2",
@@ -10735,6 +10743,14 @@
             }
         },
         {
+            "Key": "92718b77-9bd1-4e93-9b05-b2a324883026",
+            "Value": {
+                "id": "223fae4c-11bc-4db8-91ea-a12ca912e8e5",
+                "resourcePath": "sprites\\stomachburst\\stomachburst.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "927fd42e-fb0a-48c2-81d1-3780faafe834",
             "Value": {
                 "id": "6f2dc9dc-6835-42c7-a824-eae49e844a18",
@@ -15188,6 +15204,14 @@
                 "id": "62d92103-4ba2-4a9f-8ce0-5c08fd1951cc",
                 "resourcePath": "objects\/golem_obj\/golem_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "db4544b9-3a67-48f9-9877-f34f731dbbf7",
+            "Value": {
+                "id": "b4fb78f9-bf32-4a74-b616-adc7f0fd26ac",
+                "resourcePath": "sprites\\swalllow2\\swalllow2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
