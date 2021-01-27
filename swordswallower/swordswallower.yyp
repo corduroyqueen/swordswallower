@@ -9455,6 +9455,14 @@
             }
         },
         {
+            "Key": "7d6b90d3-a1bb-4dc7-b840-4f16392e32e1",
+            "Value": {
+                "id": "42cd74b7-6e10-430c-9154-4739f9206ed2",
+                "resourcePath": "sprites\\redfacetest1\\redfacetest1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7d9d845a-5f45-494d-a75b-109f6bcfe865",
             "Value": {
                 "id": "c9c7f4bb-69ab-4bcc-8583-3d188fbbafba",
