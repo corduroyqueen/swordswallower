@@ -370,8 +370,10 @@ if state==state_idle {
 } else if state==state_swallowing {
 	
 	timer++
-	sprite_index = boss_hurt
+	if sprite_index!=swalllow2 { image_index =0}
+	sprite_index = swalllow2
 	image_speed = 1
+	image_index = clamp(image_index,0,8)
 	if timer>60 {
 		head.image_index = 0
 		tail_obj.stuck_check = false
@@ -384,11 +386,11 @@ if state==state_idle {
 			tail_obj.x = x
 			tail_obj.y = y + 400
 			tail_obj.planted_rejecting = false
-			go = instance_create_depth(x,y,0,snakeheaddead_obj)
-			go.sprite_index = boss_head
-			go.hsp = -8
-			go.vsp = -5
-			go.spinspeed = 10
+			//go = instance_create_depth(x,y,0,snakeheaddead_obj)
+			//go.sprite_index = boss_head
+			//go.hsp = -8
+			//go.vsp = -5
+			//go.spinspeed = 10
 			//go.spurt_bool = true
 			
 			//just_blood_speed_input(-0.75,-1.5,0.2,30,true,x,y+200)

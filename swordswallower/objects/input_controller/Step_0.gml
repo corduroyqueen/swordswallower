@@ -48,15 +48,15 @@ if controller = controller_ds4 {
 	player_obj.k_up_p = player_obj.k_up && !player_obj.k_up_p
 	
 	
-	player_obj.k_fire = gamepad_button_check(0,gp_shoulderr)
-	player_obj.k_fire_p = gamepad_button_check_pressed(0,gp_shoulderr)
-	player_obj.k_fire_r = gamepad_button_check_released(0,gp_shoulderr)
+	player_obj.k_fire = gamepad_button_check(0,gp_shoulderrb)
+	player_obj.k_fire_p = gamepad_button_check_pressed(0,gp_shoulderrb)
+	player_obj.k_fire_r = gamepad_button_check_released(0,gp_shoulderrb)
 	
 	
 	
-	player_obj.k_dash = gamepad_button_check(0,gp_shoulderl)
-	player_obj.k_dash_p = gamepad_button_check_pressed(0,gp_shoulderl)
-	player_obj.k_dash_r = gamepad_button_check_released(0,gp_shoulderl)
+	player_obj.k_dash = gamepad_button_check(0,gp_shoulderlb)
+	player_obj.k_dash_p = gamepad_button_check_pressed(0,gp_shoulderlb)
+	player_obj.k_dash_r = gamepad_button_check_released(0,gp_shoulderlb)
 	
 	player_obj.k_ckpt = gamepad_button_check(0,gp_face1)
 	player_obj.k_ckpt_p = gamepad_button_check_pressed(0,gp_face1)

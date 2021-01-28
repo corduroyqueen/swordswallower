@@ -49,26 +49,39 @@ if gravd {
 //}
 	
 
-if times_spoken<1 {
-	dialogue_array[0] = "We meet again. Thank you for putting the bridge back in the place. "
-	dialogue_array[1] = "I saw you climbing up the cliffside! That's a incredible blade in your possession. "
-	dialogue_array[2] = "I haven't seen anyone use a sword like that in a long time. "
-	dialogue_array[3] = "Other than the Queen, of course. "
-	dialogue_array[4] = "end"
-} else if times_spoken<2 {
-	dialogue_array[0] = "Hm? A map? "
-	dialogue_array[1] = "...alright, I'll give you one. In the name of potential future collaborations between us, hopefully. "
-	dialogue_array[2] = "Here you go. I saw something peculiar nearby and marked it down, so it may be of some use to you. "
-	dialogue_array[3] = "end"
+//if times_spoken<1 {
+//	dialogue_array[0] = "We meet again. Thank you for putting the bridge back in place. "
+//	dialogue_array[1] = "I saw you climbing up the cliffside! That's a incredible blade in your possession. "
+//	dialogue_array[2] = "I haven't seen anyone use a sword like that in a long time. "
+//	dialogue_array[3] = "Other than the Queen, of course. "
+//	dialogue_array[4] = "end"
+//} else if times_spoken<2 {
+//	dialogue_array[0] = "Hm? A map? "
+//	dialogue_array[1] = "...alright, I'll give you one. In the name of potential future collaborations between us, hopefully. "
+//	dialogue_array[2] = "Here you go. I saw something peculiar nearby and marked it down, so it may be of some use to you. "
+//	dialogue_array[3] = "end"
 	
-	if current_pick==2 {
+//	if current_pick==2 {
+//		level1_master.st_map_2 = true
+//	}
+//} 
+if times_spoken<1 {
+	dialogue_array[0] = "We meet again. Thank you for putting the bridge back in place. "
+	dialogue_array[1] = "I saw you climbing up the cliffside! That's a incredible blade in your possession. "
+	dialogue_array[2] = "I haven't seen anyone use a sword like that in a long time. Other than the Queen, of course. "
+	dialogue_array[3] = "...hm? A map? "
+	dialogue_array[4] = "...alright, I'll give you one. In the name of potential future collaborations between us, hopefully. "
+	dialogue_array[5] = "Here you go. I saw something peculiar nearby and marked it down, so it may be of some use to you. "
+	dialogue_array[6] = "end"
+	
+	if current_pick==5 {
 		level1_master.st_map_2 = true
 	}
-} else if times_spoken<3 {
-	dialogue_array[0] = "The maps I'm giving you are my drafts, by the way, so apologies for their roughness. Some things might be wrong. "
+} else if times_spoken<2 {
+	dialogue_array[0] = "The maps I'm giving you are drafts, by the way, so apologies for their roughness. Some things might be wrong. "
 	dialogue_array[1] = "My partners sell higher quality versions back in the Dry City. "
 	dialogue_array[2] = "end"
-} else if times_spoken<4 {
+} else if times_spoken<3 {
 	dialogue_array[0] = "Best of luck in your travels, warrior. "
 	dialogue_array[1] = "I trust we'll meet again soon. "
 	dialogue_array[2] = "end"
