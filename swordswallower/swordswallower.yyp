@@ -1239,6 +1239,14 @@
             }
         },
         {
+            "Key": "10471a71-ddf0-4da5-8012-dbd35c3a8602",
+            "Value": {
+                "id": "f557a82f-1805-4e2d-92b9-be8be354488c",
+                "resourcePath": "objects\\lore_mirror_obj\\lore_mirror_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "10a5ce0c-d40f-481f-a84d-2726d49bf9aa",
             "Value": {
                 "id": "cbbe9d36-9feb-42e0-9db8-e54b34386c47",
@@ -9751,6 +9759,14 @@
             }
         },
         {
+            "Key": "810929e8-7881-40bc-9839-9e16153dd8f6",
+            "Value": {
+                "id": "6f5c239a-f16e-4568-a8eb-17490a49536e",
+                "resourcePath": "sprites\\mirror_t\\mirror_t.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "81553e3a-48da-4f55-ab37-9e9f30d65d0f",
             "Value": {
                 "id": "17b9fd5f-c9e7-4e6f-8c90-9fabace081cc",
@@ -11379,6 +11395,14 @@
             "Value": {
                 "id": "1badfe78-b743-4e6e-9a5f-a69d106131da",
                 "resourcePath": "sprites\/bgforuti\/bgforuti.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9b6b4f34-b365-4b99-a02f-5cbb25bfb417",
+            "Value": {
+                "id": "69c30af9-4f0d-43e0-9227-30e813f74a08",
+                "resourcePath": "sprites\\beam_test2_t\\beam_test2_t.yy",
                 "resourceType": "GMSprite"
             }
         },
