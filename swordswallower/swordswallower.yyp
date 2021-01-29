@@ -5719,6 +5719,14 @@
             }
         },
         {
+            "Key": "4ebd2f62-d65b-492d-8b12-1f04b4666a37",
+            "Value": {
+                "id": "f23ef3d3-7a61-4415-a476-4ef6a4837b37",
+                "resourcePath": "sprites\\spr_handanims\\spr_handanims.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4ece9717-6405-4aa4-b08e-811cdf24ba05",
             "Value": {
                 "id": "ab6bb3b2-19cf-4aec-b4b1-27c242b90dec",
@@ -6332,6 +6340,14 @@
                 "id": "21cf603f-bc12-42dc-8e15-9d6851ff6171",
                 "resourcePath": "objects\/fatfly_destroyer\/fatfly_destroyer.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "569aa48e-604c-4d6b-a6fc-b97fd7d76dd7",
+            "Value": {
+                "id": "07cc7819-e3da-403b-b93d-4045af41381c",
+                "resourcePath": "sprites\\spr_redcircle\\spr_redcircle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
