@@ -26,13 +26,13 @@ if screenstate==0 {
 	//draw_sprite_ext(titlescreenline,0,camx,camy,1,1,0,c_white,1)
 	//draw_sprite_ext(sword515,0,640,360,1,-1,30,c_white,alpha/2)
 	
-	draw_sprite_ext(s1w,0,160,0,1,1,0,c_white,alpha)
+	//draw_sprite_ext(s1w,0,160,0,1,1,0,c_white,alpha)
 	
 	shader_reset()
 	
-	draw_sprite_ext(s2w,0,600,100,1,1,0,c_white,alpha)
-	draw_sprite_ext(s3w,0,1040,200,1,1,0,c_white,alpha)
-	draw_sprite_ext(s4w,0,1480,300,1,1,0,c_white,alpha)
+	//draw_sprite_ext(s2w,0,600,100,1,1,0,c_white,alpha)
+	//draw_sprite_ext(s3w,0,1040,200,1,1,0,c_white,alpha)
+	//draw_sprite_ext(s4w,0,1480,300,1,1,0,c_white,alpha)
 	
 	draw_set_font(fontl)
 	draw_set_color(c_white)
@@ -43,9 +43,9 @@ if screenstate==0 {
 
 	//draw_sprite_ext(titlescreentitle,0,camx,camy,1,1,0,c_white,alpha)
 	
-	draw_sprite_ext(logo3,0,camx+640*1.5,camy+360*1.5,1.1,1.1,0,c_white,alpha)
+	//draw_sprite_ext(logo3,0,camx+640*1.5,camy+360*1.5,1.1,1.1,0,c_white,alpha)
 
-	
+	draw_sprite_ext(spr_titlescreenbg,0,0,0,1,1,0,c_white,alpha)
 
 	draw_set_color(c_white)
 	draw_set_font(font2)

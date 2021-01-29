@@ -56,9 +56,11 @@ if getmap {
 if room==subtemple01 {
 	
 	if st_map_1 && player_obj.y>11000 {
-		map = spr_newmap
+		//map = spr_newmap
+		map = spr_nnewmap1
 	} else if st_map_2 && player_obj.y<11000 && player_obj.y>3573 {
-		map = spr_map2
+		//map = spr_map2
+		map = spr_newmap2
 	} else {
 		map = nothing
 	}

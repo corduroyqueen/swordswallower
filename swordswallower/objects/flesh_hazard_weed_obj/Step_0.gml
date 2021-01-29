@@ -8,7 +8,7 @@ if dormant {
 } else {
 	if active {
 		image_index++
-		image_index = 4
+		image_index = min(image_index,8)
 		x = startx
 		y = starty
 		hitbox_on = true
@@ -17,10 +17,10 @@ if dormant {
 		x = player_obj.camx
 		y = player_obj.camy
 		image_index--
-		image_index = 0
+		image_index = max(image_index,0)
 		hitbox_on = false	
 		//mask_index = nothing1
 	}
 
-	image_index = clamp(image_index,0,4)
+	//image_index = clamp(image_index,0,4)
 }
