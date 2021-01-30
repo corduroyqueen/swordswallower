@@ -5,8 +5,9 @@ if dormant {
 		var kek = array_members[|i]
 		kek.active= false
 		kek.dormant = true
-		kek.x=0
-		kek.y=5000
+		//kek.x=0
+		//kek.y=5000
+		//kek.y=10000
 	}
 } else {
 	//timer++
@@ -14,8 +15,8 @@ if dormant {
 		var kek = array_members[|i]
 		kek.active= true
 		kek.dormant = false
-		kek.x=kek.startx
-		kek.y=kek.starty
+		//kek.x=kek.startx
+		//kek.y=kek.starty
 	}
 	if on {
 		if timer>on_time {
@@ -26,6 +27,7 @@ if dormant {
 			on = false
 		}
 	} else {
+		
 		if timer>off_time {
 			for(var i=0;i<l;i++) {
 				array_members[|i].active= true

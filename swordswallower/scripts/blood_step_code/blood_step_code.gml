@@ -54,12 +54,12 @@ if go {
 		//	ds_list_add(splat_list_s,sxs)	
 		//}
 	
-		var eh = gsound.s_blood_drips[floor(random_range(0,9))]
-		audio_sound_pitch(eh,random_range(5,8))
-		if random_range(0,100)>=75 {
-			audio_sound_gain(eh,random_range(0.00,0.40),0)
-		}
-		audio_play_sound(eh,0,false)
+		//var eh = gsound.s_blood_drips[floor(random_range(0,9))]
+		//audio_sound_pitch(eh,random_range(5,8))
+		//if random_range(0,100)>=75 {
+		//	audio_sound_gain(eh,random_range(0.00,0.40),0)
+		//}
+		//audio_play_sound(eh,0,false)
 	
 		instance_destroy()
 	}

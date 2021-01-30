@@ -1063,6 +1063,14 @@
             }
         },
         {
+            "Key": "0e13fbe4-ca52-452b-a972-d3b8d6d1aa0c",
+            "Value": {
+                "id": "bba51833-0003-42a7-a7e5-850b86d98b58",
+                "resourcePath": "objects\\lore_door_obj\\lore_door_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0e2274de-5b69-42ac-ada5-accc186dca0a",
             "Value": {
                 "id": "307d3287-36b1-4538-aa72-a48b30eddb7e",

@@ -286,7 +286,10 @@ if level1_master.dev {
 		//x=38000
 	}
 }
-
+//sdm("ok")
+//sdm(id)
+//sdm(string(id))
+//sdm(object_get_name(100036))
 //sdm(point_direction(x,y,tail_dest_x,tail_dest_y))
 
 //sdm(point_distance(player_obj.x,player_obj.y,player_obj.tail_dest_x,player_obj.tail_dest_y))

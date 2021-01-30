@@ -245,7 +245,10 @@ if state==state_idle {
 		//chosen_wall.image_alpha = 0
 			//h2.image_alpha = 0
 			//h3.image_alpha = 0
-			
+			if ht>50 {
+				chosen_wall.timer=chosen_wall.off_time-1
+				flesh_hands_floor.timer=flesh_hands_floor.off_time-1
+			}
 			chosen_wall.dormant = false
 			flesh_hands_floor.dormant = false
 			chosen_wall.on = false
@@ -339,11 +342,17 @@ if state==state_idle {
 		} else {
 			
 			//chosen_wall.mask_index = nothing1
-			
+			if ht>50 {
+				chosen_wall.timer=chosen_wall.off_time-1
+				
+			}
 			if hand_switch_init {
 				event_user(1)
 				flesh_hands_floor.on = false
 				flesh_hands_floor.dormant = false
+				if ht>50 {
+					flesh_hands_floor.timer=flesh_hands_floor.off_time-1
+				}
 				//h2.mask_index = nothing1
 			}
 			//h3.mask_index = nothing1

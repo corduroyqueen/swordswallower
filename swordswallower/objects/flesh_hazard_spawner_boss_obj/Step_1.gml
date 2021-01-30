@@ -11,6 +11,7 @@ for(i=-num_to_spawn/2;i<num_to_spawn/2;i++) {
 	ak.starty = ak.y
 	ak.image_angle = image_angle
 	ak.active = active
+	ak.master = id
 	ds_list_add(array_members,ak)
 }
 l = ds_list_size(array_members)

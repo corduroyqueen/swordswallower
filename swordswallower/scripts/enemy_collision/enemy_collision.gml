@@ -51,10 +51,10 @@ for(i=0; i < iteration_num; i++) {
 				//once hitbox is on, it is treated like another type
 				//might need more statements?
 				//ie minotaurs, deathweeds
-				sdm("wtf")
-				sdm(collision.hitbox_on)
+				//sdm("wtf")
+				//sdm(collision.hitbox_on)
 				if collision.hitbox_on {
-					sdm("oklelelelel")
+					//sdm("oklelelelel")
 					enemy_damage_player_collision(collision)
 				}
 			}

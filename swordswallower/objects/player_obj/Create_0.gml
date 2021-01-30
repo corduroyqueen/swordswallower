@@ -290,3 +290,4 @@ oldcx = 0
 oldcy = 0
 
 dash_sound_base = false
+start_time = current_time

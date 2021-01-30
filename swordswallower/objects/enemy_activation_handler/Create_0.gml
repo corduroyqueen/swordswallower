@@ -7,3 +7,4 @@ enemy_x = ds_list_create()
 enemy_y = ds_list_create()
 
 
+ enemy_active = ds_list_create()

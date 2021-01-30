@@ -19,3 +19,9 @@ material_meat = 3
 material_type = 3
 
 sword_ignore = false
+/*
+if current_time-player_obj.start_time>50 {
+	with enemy_activation_handler {
+		event_user(2)
+	}
+}
