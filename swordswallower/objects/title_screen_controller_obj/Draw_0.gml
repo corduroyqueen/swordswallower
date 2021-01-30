@@ -8,7 +8,7 @@ if screenstate==0 {
 	
 	timer++
 	if timer<9000  && alpha<=1 {
-		alpha+=0.005
+		alpha+=0.0025
 	} 
 
 	camx = camera_get_view_x(view_camera[0])
@@ -43,20 +43,21 @@ if screenstate==0 {
 
 	//draw_sprite_ext(titlescreentitle,0,camx,camy,1,1,0,c_white,alpha)
 	
-	//draw_sprite_ext(logo3,0,camx+640*1.5,camy+360*1.5,1.1,1.1,0,c_white,alpha)
+	//draw_sprite_ext(logo3,0,camx+640,camy+360,1.1,1.1,0,c_white,alpha)
 
-	draw_sprite_ext(spr_titlescreenbg,0,0,0,1,1,0,c_white,alpha)
-
+	draw_sprite_ext(spr_titleimage4,0,0,0,1,1,0,c_white,alpha)
+	
+	if alpha<0.8 { return}
 	draw_set_color(c_white)
 	draw_set_font(font2)
 	timer1+=0.05
 	timer2+=0.05
 	timer3+=0.05
 	var c
-	var wa = 350
-	draw_set_alpha(clamp(0,timer1,1))
+	var wa = 1150
+	timer1=clamp(timer1,0,1)
 	var playc = make_color_hsv(229,15,86)
-	if mouse_x>wa*1.5 && mouse_x<(wa+90)*1.5 && mouse_y>440*1.5 && mouse_y<500*1.5 {
+	if mouse_x>wa && mouse_x<(wa+180) && mouse_y>440 && mouse_y<630 {
 		c = c_white
 		
 		if mouse_check_button_pressed(mb_left) {
@@ -66,11 +67,11 @@ if screenstate==0 {
 		c = playc	
 	}
 	
-	draw_sprite_ext(play_btn,0,wa*1.5,450*1.5,1,1,0,c,1)
+	draw_sprite_ext(spr_playbutton,0,0,0,1,1,0,c,timer1)
 	
-	draw_set_alpha(clamp(0,timer2,1))
+	timer2=clamp(timer2,0,1)
 	var fulscc = make_color_hsv(233,23,59)
-	if mouse_x>wa*1.5 && mouse_x<(wa+90)*1.5 && mouse_y>510*1.5 && mouse_y<560*1.5 {
+	if mouse_x>wa && mouse_x<(wa+360) && mouse_y>630 && mouse_y<760 {
 		c = c_white
 		if  mouse_check_button_pressed(mb_left) {
 			window_set_fullscreen( !window_get_fullscreen()  )
@@ -78,11 +79,11 @@ if screenstate==0 {
 	}else {
 		c =fulscc
 	}
-	draw_sprite_ext(fullscreen_btn,0,wa*1.5,510*1.5,1,1,0,c,1)
+	draw_sprite_ext(spr_fullscreenbutton,0,0,0,1,1,0,c,timer2)
 	
-	draw_set_alpha(clamp(0,timer3,1))
+	timer3=clamp(timer3,0,1)
 	var creditc = make_color_hsv(131,17,46)
-	if mouse_x>wa*1.5 && mouse_x<(wa+90)*1.5 && mouse_y>570*1.5 && mouse_y<620*1.5 {
+	if mouse_x>wa+100 && mouse_x<(wa+300) && mouse_y>760 && mouse_y<1000 {
 		c=c_white
 		
 		if mouse_check_button_pressed(mb_left) {
@@ -92,7 +93,7 @@ if screenstate==0 {
 		c=creditc	
 	}
 	
-	draw_sprite_ext(quit_btn,0,wa*1.5,570*1.5,1,1,0,c,1)
+	draw_sprite_ext(spr_quitbutton,0,0,0,1,1,0,c,timer3)
 	
 	
 	//if mouse_x>600 && mouse_x<800 && mouse_y>400 && mouse_y<500 {
@@ -110,10 +111,10 @@ if screenstate==0 {
 	//	screenstate=1
 	//}
 	
-	if mouse_x>1200*1.5 && mouse_x<1280*1.5 && mouse_y>600*1.5 && mouse_y<680*1.5
-	&& mouse_check_button_pressed(mb_left) {
-		window_set_fullscreen( !window_get_fullscreen()  )
-	}
+	//if mouse_x>1200 && mouse_x<1280 && mouse_y>600 && mouse_y<680
+	//&& mouse_check_button_pressed(mb_left) {
+	//	window_set_fullscreen( !window_get_fullscreen()  )
+	//}
 	
 } 
 //else if screenstate==1 {
