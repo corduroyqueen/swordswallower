@@ -5695,6 +5695,14 @@
             }
         },
         {
+            "Key": "4e2f31fa-9f65-42c0-b0aa-11ccc29df2fd",
+            "Value": {
+                "id": "ec4f8106-09de-42cf-9166-5535dd67688b",
+                "resourcePath": "sprites\\spr_mc_face_facing2\\spr_mc_face_facing2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4e4c6c3a-5e10-40f7-90db-c3c86d253f8a",
             "Value": {
                 "id": "e5f8d061-7faa-40ef-96f9-354aef3f54cd",
@@ -12551,6 +12559,14 @@
             }
         },
         {
+            "Key": "ad56815f-4539-435c-bfcd-3ffb167cbf17",
+            "Value": {
+                "id": "5d6d266f-d8cc-48a6-b98f-75a57e52db4d",
+                "resourcePath": "objects\\get_hat_santa_obj\\get_hat_santa_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ad9fad98-321e-4e7c-8d80-f4748b129792",
             "Value": {
                 "id": "0144e1ac-b82a-4bd2-a5a9-6cee70aae847",
@@ -12964,6 +12980,14 @@
                 "id": "67cd4351-741c-415d-8009-9d66e4dc7e7c",
                 "resourcePath": "sprites\/floatingplatright\/floatingplatright.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "b4565e49-7dad-4c76-b9ad-29003db91bbc",
+            "Value": {
+                "id": "826f68f4-88b0-4103-8674-fd39371f8807",
+                "resourcePath": "objects\\get_hat_hood_obj\\get_hat_hood_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -16476,6 +16500,14 @@
                 "id": "c66048ae-c081-4468-b91b-89e9e2860335",
                 "resourcePath": "views\/eb5b92f7-2397-4f0d-a81a-fb98fd97e86a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "eb6fb96d-ebe6-47b3-beb1-c7fd1de164dd",
+            "Value": {
+                "id": "91b645d9-b29e-4cd6-aa38-0094165b5e5c",
+                "resourcePath": "sprites\\spr_mc_face_idle2\\spr_mc_face_idle2.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

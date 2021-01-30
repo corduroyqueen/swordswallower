@@ -191,5 +191,5 @@ ds_list_add(cape_p_r_wind_timer,(2/7)*wind_timer_m)
 ds_list_add(cape_p_r_wind_timer,(1/7)*wind_timer_m)
 ds_list_add(cape_p_r_wind_timer,(0/7)*wind_timer_m)
 
-head_spr_i = 2
+head_spr_i = 0
 

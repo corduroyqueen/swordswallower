@@ -28,19 +28,32 @@ if player_obj.shielded {
 //draw_set_alpha(1)
 
 //proc_cape_draw_script()
-var t=12
+var t=2
 if keyboard_check_pressed(ord("2")) {
 	head_spr_i++
+	if head_spr_i>t {
+		head_spr_i=0
+	}
+	while !level1_master.hats_list[|head_spr_i] {
+		head_spr_i++
+		if head_spr_i>t {
+			head_spr_i=0
+		}
+	}
 }
 if keyboard_check_pressed(ord("1")) {
 	head_spr_i--
+	if head_spr_i<0 {
+		head_spr_i=t
+	}
+	while !level1_master.hats_list[|head_spr_i] {
+		head_spr_i--
+		if head_spr_i<0 {
+			head_spr_i=t
+		}
+	}
 }
-if head_spr_i>t {
-	head_spr_i=0
-}
-if head_spr_i<0 {
-	head_spr_i=t
-}
+
 draw_self()
 if sprite_index==spr_mc_somersault || player_obj.zoom_timer_bool {
 	

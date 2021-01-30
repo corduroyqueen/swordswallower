@@ -40,7 +40,7 @@ if gravd {
 //	level1_master.getmap = true	
 //}
 	
-if keybool && mapguy_visited {
+if keybool && level1_master.mapguy_visited {
 	if times_spoken<1 {
 		dialogue_array[0] = "There it is! Well done. "
 		dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross the gap. "
@@ -52,7 +52,7 @@ if keybool && mapguy_visited {
 		dialogue_array[4] = "end"
 	}
 		
-} else if keybool && !mapguy_visited {
+} else if keybool && !level1_master.mapguy_visited {
 	if times_spoken<1 {
 		dialogue_array[0] = "Greetings, warrior! I see you obtained the key from over there. "
 		dialogue_array[1] = "I was trying to get your attention earlier, but it looked like you were in a rush. "
@@ -138,7 +138,7 @@ if player_present && !boatboy {
 		if dialogue=="end" {
 			current_pick = 0	
 			if !keybool {
-				mapguy_visited = true	
+				level1_master.mapguy_visited = true	
 			}
 			times_spoken++
 		

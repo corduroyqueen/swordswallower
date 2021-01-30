@@ -188,5 +188,12 @@ powerup_bug = noone
 bloom_on = true
 //0.9, 0.0, 0.3 neon pink
 
+cosmetic_hood = false
+cosmetic_santa_hat = false
+
+hats_list = ds_list_create()
+ds_list_add(hats_list,true)
+ds_list_add(hats_list,false)
+ds_list_add(hats_list,false)
 
 //gpu_set_colorwriteenable(true, true, true, false);
