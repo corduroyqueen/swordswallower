@@ -56,41 +56,41 @@ if screenstate==0 {
 	var c
 	var wa = 1150
 	timer1=clamp(timer1,0,1)
-	var playc = make_color_hsv(229,15,86)
+	//var playc = make_color_hsv(229,15,86)
 	if mouse_x>wa && mouse_x<(wa+180) && mouse_y>440 && mouse_y<630 {
-		c = c_white
+		c = redc
 		
 		if mouse_check_button_pressed(mb_left) {
 			room_goto_next()
 		}
 	} else {
-		c = playc	
+		c = c_white	
 	}
 	
 	draw_sprite_ext(spr_playbutton,0,0,0,1,1,0,c,timer1)
 	
 	timer2=clamp(timer2,0,1)
-	var fulscc = make_color_hsv(233,23,59)
+	//var fulscc = make_color_hsv(233,23,59)
 	if mouse_x>wa && mouse_x<(wa+360) && mouse_y>630 && mouse_y<760 {
-		c = c_white
+		c = redc
 		if  mouse_check_button_pressed(mb_left) {
 			window_set_fullscreen( !window_get_fullscreen()  )
 		}
 	}else {
-		c =fulscc
+		c =c_white
 	}
 	draw_sprite_ext(spr_fullscreenbutton,0,0,0,1,1,0,c,timer2)
 	
 	timer3=clamp(timer3,0,1)
-	var creditc = make_color_hsv(131,17,46)
+	//var creditc = make_color_hsv(131,17,46)
 	if mouse_x>wa+100 && mouse_x<(wa+300) && mouse_y>760 && mouse_y<1000 {
-		c=c_white
+		c=redc
 		
 		if mouse_check_button_pressed(mb_left) {
 			game_end()
 		}
 	} else {
-		c=creditc	
+		c=c_white	
 	}
 	
 	draw_sprite_ext(spr_quitbutton,0,0,0,1,1,0,c,timer3)

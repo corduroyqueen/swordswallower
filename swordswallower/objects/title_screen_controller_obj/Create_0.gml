@@ -17,3 +17,5 @@ font2 = font_add("lato.ttf",32,false,false,32,128)
 timer1=-10
 timer2=-11
 timer3=-12
+
+redc = make_color_rgb(158,38,38)
