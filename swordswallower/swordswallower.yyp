@@ -2394,7 +2394,7 @@
             "Key": "1ef9ec88-eba8-4040-977f-f599e324abd4",
             "Value": {
                 "id": "80444f91-be10-457b-873a-c86c46952ddf",
-                "resourcePath": "sounds\/swsw1\/swsw1.yy",
+                "resourcePath": "sounds\\swsw1old\\swsw1old.yy",
                 "resourceType": "GMSound"
             }
         },
@@ -10263,6 +10263,14 @@
             }
         },
         {
+            "Key": "8a0aa1fe-f69f-4600-afa6-c2cd946f82a1",
+            "Value": {
+                "id": "94c2e346-c38d-4bab-8321-2c4a9c267c16",
+                "resourcePath": "sounds\\swsw1\\swsw1.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8a2fe078-393b-41e9-ae80-04cde75322b0",
             "Value": {
                 "id": "78d45033-f3fb-4255-bc7f-8a4a1519206a",
@@ -13460,6 +13468,14 @@
                 "id": "4e6e2599-8238-43af-82ef-e116f51f54fb",
                 "resourcePath": "sprites\/fire_particle\/fire_particle.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bc09a53e-40ac-48e4-92bc-c2990ad8b379",
+            "Value": {
+                "id": "f810848c-bcfe-4091-807e-9e93142a6dc2",
+                "resourcePath": "objects\\get_hat_dunce_obj\\get_hat_dunce_obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {

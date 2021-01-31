@@ -195,5 +195,6 @@ hats_list = ds_list_create()
 ds_list_add(hats_list,true)
 ds_list_add(hats_list,false)
 ds_list_add(hats_list,false)
+ds_list_add(hats_list,false)
 
 //gpu_set_colorwriteenable(true, true, true, false);

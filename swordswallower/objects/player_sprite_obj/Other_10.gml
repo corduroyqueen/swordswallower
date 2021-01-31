@@ -28,7 +28,7 @@ if player_obj.shielded {
 //draw_set_alpha(1)
 
 //proc_cape_draw_script()
-var t=2
+var t=3
 if keyboard_check_pressed(ord("2")) {
 	head_spr_i++
 	if head_spr_i>t {
