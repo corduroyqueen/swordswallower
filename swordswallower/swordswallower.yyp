@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "01286345-ed68-4705-a984-a0b0a23cdb95",
+            "Value": {
+                "id": "b7a65ad1-fa1c-4e7f-89fa-967250a68b64",
+                "resourcePath": "scripts\\dialogue_start_npc_script2\\dialogue_start_npc_script2.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0135b0d8-f800-4cce-bb8c-5e0412674669",
             "Value": {
                 "id": "62b93e0b-673b-48cc-806f-76bd5c054333",
@@ -16127,6 +16135,14 @@
             }
         },
         {
+            "Key": "e3d781aa-89f5-4134-8f39-06cdfec8474f",
+            "Value": {
+                "id": "d8878e4e-4aa1-41a3-b7ab-8483e6b53871",
+                "resourcePath": "sounds\\s_scribble\\s_scribble.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "e3e7fa5f-06e7-4e2f-8223-6b09c1099a44",
             "Value": {
                 "id": "bf7267af-2dbc-4717-828b-c9d1c3926663",
@@ -18188,6 +18204,7 @@
         "ae820295-151b-4657-a3ac-714209f1b221",
         "fd30765c-c646-4456-a949-72c68243dc34",
         "e231fb73-9a83-4927-b5cb-766936f99055",
+        "01286345-ed68-4705-a984-a0b0a23cdb95",
         "cd43eb10-4374-486d-afe4-23ee0c6fc601",
         "1b648012-d5f0-442e-b786-01f5c34f1c1b",
         "8a2fe078-393b-41e9-ae80-04cde75322b0",

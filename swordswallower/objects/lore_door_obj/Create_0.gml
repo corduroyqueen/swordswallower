@@ -29,7 +29,6 @@ boatboyenter = false
 mapguy_visited = false
 
 dialogue_sound_list = ds_list_create()
-ds_list_add(dialogue_sound_list,pierce1_v_)
-ds_list_add(dialogue_sound_list,pierce2_v_)
-ds_list_add(dialogue_sound_list,pierce3_v_)
-ds_list_add(dialogue_sound_list,pierce4_v_)
+ds_list_add(dialogue_sound_list,sound_empty)
+ds_list_add(dialogue_sound_list,sound_empty)
+

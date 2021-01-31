@@ -7,10 +7,12 @@ if player_obj.death {
 }
 for(var a=0;a<num;a++) {
 	//sdm(a)
-	if enemy_seen[| a] {
+	var inst = enemy_list[| a]
+	if enemy_seen[| a] || is_undefined(inst) {
 		continue	
 	}
-	var inst = enemy_list[| a]
+	
+	
 	//sdm(a)
 	if inst.x == 19502 {
 		sdm("first")
@@ -28,7 +30,7 @@ for(var a=0;a<num;a++) {
 		sdm(object_get_name(inst.object_index))
 	}
 	//sdm(inst.id)
-	if inst!=undefined && in_camera_range_bigger(inst.x,inst.y) {
+	if in_camera_range_bigger(inst.x,inst.y) {
 		enemy_seen[| a] = true
 		sdm(object_get_name(inst.object_index))
 		sdm("activate")

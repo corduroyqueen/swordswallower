@@ -59,8 +59,9 @@ dialogue_array[4] = "end"
 
 
 if player_present {
+	
 	with ui_manager {
-		friendly_x = other.x
+		friendly_x = other.x - 200
 		friendly_y = other.y - other.sprite_height/2
 		view_xview = friendly_x-view_wview/2
 	}
@@ -101,16 +102,29 @@ if player_present {
 			//spk_bool = false
 		}
 	}
+	
+	if ui_manager.spk_bool {
+		if !audio_is_playing(s_scribble) {
+			audio_play_sound(s_scribble,0,true)
+		}
+	} else {
+		audio_stop_sound(s_scribble)
+	}
 }
+
+
 
 if (plf==true && player_present = false) {//|| player_obj.ending_lock {
 	//sdm("PFEHHEFHEHFHEFHE")
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
+	if audio_is_playing(s_scribble) {
+		audio_stop_sound(s_scribble)
+	}
 	
 	//ui_manager.spk_bool = false
 	
 }
-image_xscale = 0.75
+//image_xscale = 0.75
 
 plf = player_present
