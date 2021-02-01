@@ -51,7 +51,7 @@ if gravd {
 //dialogue_array[8] = "Good luck. "
 //dialogue_array[9] = "end"
 
-dialogue_array[0] = "The door is gigantic. Seems like it was built by giants. "
+dialogue_array[0] = "The door seems impossibly massive. "
 dialogue_array[1] = "You make a somewhat half hearted attempt to get it open, but it's clear it's going to be a long time before you can do that. "
 dialogue_array[2] = "The text on the front reads: "
 dialogue_array[3] = "'Oh Great Empress, do take heed, for the joyless shade within your shadow's cast is blacker than even that of the tar beneath your feet.'"

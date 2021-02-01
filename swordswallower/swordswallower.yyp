@@ -5431,6 +5431,14 @@
             }
         },
         {
+            "Key": "4a67fb4a-ecac-4449-8d0b-4ef9e6af4a0d",
+            "Value": {
+                "id": "2d92b053-3009-4b7d-8180-f06a5def93f4",
+                "resourcePath": "objects\\lore_sign_obj\\lore_sign_obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4a81945f-8401-427b-9c95-bdb583025518",
             "Value": {
                 "id": "5a0b62d4-a5bc-4696-ba4d-16ce6f20c0c3",

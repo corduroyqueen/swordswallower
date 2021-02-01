@@ -427,6 +427,7 @@ if state==state_idle {
 			instance_create_depth(x,y,-999999999999,title_screen_obj)	
 			instance_create_depth(x,y,depth,boss_corpse_obj)	
 			player_obj.zoom_on = true
+			
 			instance_destroy(leftarm)
 			
 			instance_destroy(rightarm)
@@ -490,6 +491,11 @@ if state==state_idle {
 		leftarm.state = leftarm.state_idle
 		rightarm.state = rightarm.state_idle
 		state = state_swallowing
+		with flyfree_obj {
+			if in_camera_range_bigger(x,y) {
+				death = true
+			}
+		}
 	}
 }
 if instance_exists(head) {

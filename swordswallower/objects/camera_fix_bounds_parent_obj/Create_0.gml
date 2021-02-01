@@ -1,2 +1,2 @@
 //fuck yes
-lerpamt = 0.2
+lerpamt = 0.15

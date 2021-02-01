@@ -38,4 +38,4 @@ if point_distance(x,y,player_obj.x,player_obj.y)<2000 && surface_exists(shockwav
 }
 			
 draw_self()
-dialogue_start_npc_script()
+dialogue_start_npc_script2(x-50,y - sprite_height/2 - 140)
