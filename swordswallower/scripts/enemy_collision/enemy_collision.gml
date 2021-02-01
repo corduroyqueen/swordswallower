@@ -19,7 +19,7 @@ for(i=0; i < iteration_num; i++) {
 		//}
 		for (i = 0; i<ds_list_size(enemy_collided_list); i++) {
 			var collision = enemy_collided_list[| i]
-			if !instance_exists(collision) || is_undefined(collision) {
+			if is_undefined(collision) || !instance_exists(collision) {
 				continue	
 			}
 			ds_list_add(enemy_collided_total_list,collision)
