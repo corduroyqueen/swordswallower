@@ -16519,6 +16519,14 @@
             }
         },
         {
+            "Key": "ea0b0fa8-7840-498e-91fd-5a7296088809",
+            "Value": {
+                "id": "cd8d8ff9-d7c4-4148-8351-6bcbd9aa037c",
+                "resourcePath": "sounds\\swsw_item_room\\swsw_item_room.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "ea3a1cde-bd54-4ce7-bfc4-826d66fae67a",
             "Value": {
                 "id": "83618d65-9a9c-420b-9392-4d4f84eee4a5",

@@ -67,7 +67,22 @@ if room==subtemple01 {
 		}
 	}
 	
-	
+	if point_distance(lore_mirror_obj.x,lore_mirror_obj.y,player_obj.x,player_obj.y)<950 {
+		audio_sound_gain(swsw2,0,180)
+		if !audio_is_playing(swsw_item_room) {
+			audio_play_sound(swsw_item_room,0,true)
+			audio_sound_gain(swsw_item_room,0,0)
+			audio_sound_gain(swsw_item_room,1,180)
+		}
+	} else if audio_is_playing(swsw_item_room) {
+		audio_sound_gain(swsw_item_room,0,180)
+		audio_sound_gain(swsw2,0.47,160)
+		if audio_sound_get_gain(swsw_item_room)<0.05 {
+			audio_sound_gain(swsw_item_room,0,0)
+			audio_stop_sound(swsw_item_room)
+		}
+		
+	}
 	if go3 {
 		if player_obj.x>36203 {
 		
