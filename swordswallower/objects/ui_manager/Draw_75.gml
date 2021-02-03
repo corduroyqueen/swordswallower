@@ -14,11 +14,12 @@ with intro_handler {
 }
 
 player_start_map()
-
-draw_set_color(c_black)
+if !player_obj.death && !player_obj.ending_lock && !instance_exists(title_screen_obj) {
+	draw_set_color(c_black)
 	draw_circle(mouse_ui_x-player_obj.camx,mouse_ui_y-player_obj.camy,10,false)
 	draw_set_color(c_white)
 	draw_circle(mouse_ui_x-player_obj.camx,mouse_ui_y-player_obj.camy,9,false)
+}
 
 if level1_master.dev && !keyboard_check_pressed(ord("V")) {
 	draw_set_font(lato)
