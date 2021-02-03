@@ -42,3 +42,5 @@ if tail_pulling {
 }
 
 hey.blood_color = blood_color
+tail_obj.x=0
+tail_obj.y=0

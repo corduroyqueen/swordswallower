@@ -19,7 +19,7 @@ if state!=state_hitting {
 if death {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
 	title_obj.sprite_index = sprite90
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 if sword_present {

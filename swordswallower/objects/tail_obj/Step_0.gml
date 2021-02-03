@@ -403,7 +403,9 @@ image_xscale = 1
 if player_obj.tail_throwing || player_obj.tail_pulling {
 	var cx = player_obj.camx + player_obj.cam_width_h
 	var cy = player_obj.camy + player_obj.cam_height_h
-	
+	if !audio_is_playing(gsound.s_sword_whoosh) {
+		audio_play_sound_on(s_whoosh_emitter,gsound.s_sword_whoosh,true,0)
+	}
 	
 	audio_emitter_position(s_whoosh_emitter,
 	mean(cx,cx,cx,cx,cx,cx,tail_obj.x),

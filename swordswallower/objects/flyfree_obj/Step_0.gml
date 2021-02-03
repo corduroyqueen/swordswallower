@@ -9,7 +9,7 @@ if keyboard_check_pressed(ord("R")) {
 
 if level1_master.in_void {
 	if in_camera_range(x,y) {
-		instance_destroy()
+		instance_destroy(id)
 	}
 }
 
@@ -39,7 +39,7 @@ if death {
 	}
 	mask_index = fly_idle
 	if spawn {
-		instance_destroy()
+		instance_destroy(id)
 	} else {
 		death_timer++
 		x = startx

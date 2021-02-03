@@ -22,7 +22,7 @@ if death {
 		
 		audio_manager(false,0,false,3)
 	}
-	instance_destroy()
+	instance_destroy(id)
 	mask_index = fly_idle
 } else if swarming {
 	if swarm_respawn_t<1 {

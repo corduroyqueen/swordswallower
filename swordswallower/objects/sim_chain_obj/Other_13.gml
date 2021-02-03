@@ -12,6 +12,7 @@ while n<num_rings-1 {
 	}
 	draw_sprite_ext(spr,0,rings_x[| n],rings_y[| n],1,1,point_direction(rings_x[| n],rings_y[| n],rings_x[| n+1],rings_y[| n+1])+90,c_white,1)
 	n++
+	//rdraw_circle(rings_x[| n],rings_y[| n],5,false)
 }
 gpu_set_colorwriteenable(1,1,1,1)
 //n=0

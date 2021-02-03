@@ -4,7 +4,7 @@
 
 
 if level1_master.lol {
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 
@@ -16,7 +16,7 @@ if place_meeting(x,y,player_obj) {
 		if room==subtemple01 {
 			level1_master.subtemple01ckptbool = true	
 		}
-		instance_destroy()
+		instance_destroy(id)
 		if !ui_manager.show_checkpoints {
 			ui_manager.show_checkpoints = true
 		}	

@@ -16,7 +16,7 @@ if death {
 	ui_manager.current_dialogue = "end"
 	current_pick = 0
 	
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 if player_obj.tail_carry {

@@ -6,7 +6,8 @@
 //draw_sprite(scary_skull,0,
 //	global.mousepx,
 //	global.mousepy)
-draw_circle(dbug_checkx,dbug_checky,10,false)
+
+//draw_circle(dbug_checkx,dbug_checky,10,false)
 
 
 /// @description Insert description here
@@ -164,8 +165,9 @@ if player_obj.death {
 	//if !keyboard_check_pressed(ord("V")) {
 		//draw_sprite(mouse_ui_spr,player_obj.k_dash || player_obj.k_fire,mouse_ui_x,mouse_ui_y)
 	//}
-	draw_circle(mouse_ui_x,mouse_ui_y,9,false)
-	draw_set_color(c_white)
+	//draw_set
+	
+	//draw_set_color(c_white)
 	
 	//draw_sprite_ext(sword5,0,global.mousepx,global.mousepy,0.5,0.5,point_direction(player_obj.x,player_obj.y,global.mousepx,global.mousepy)-90,c_white,1)
 } else {

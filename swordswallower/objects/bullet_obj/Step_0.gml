@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if death { instance_destroy() }
+if death { instance_destroy(id) }
 
 xdelt = x - xpreva1
 ydelt = y - ypreva1;

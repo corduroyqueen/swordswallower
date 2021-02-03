@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if death {
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 if in_camera_range_bigger(x,y) {

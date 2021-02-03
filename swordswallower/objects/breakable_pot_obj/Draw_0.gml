@@ -12,5 +12,5 @@ draw_sprite_ext(plants_in_pot,0,x,y,image_xscale,image_yscale,0,c_white,1)
 draw_self()
 
 if destroy {
-	instance_destroy()	
+	instance_destroy(id)	
 }

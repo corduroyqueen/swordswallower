@@ -120,7 +120,7 @@ if obj==snake_head || obj==snakehead_obj {
 if player_obj.fire_active {
 	if obj==burn_wall_obj {
 		with local_obj {
-			instance_destroy()	
+			instance_destroy(id)	
 		}
 		return false
 	}

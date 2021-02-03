@@ -12,5 +12,5 @@ draw_sprite_ext(plantfg,0,x,y,image_xscale,image_yscale,0,c_white,1)
 draw_self()
 draw_sprite_ext(plantbg,0,x,y,image_xscale,image_yscale,0,c_white,1)
 if destroy {
-	instance_destroy()	
+	instance_destroy(id)	
 }

@@ -41,7 +41,7 @@ if hit {
 	audio_play_sound_at(eye_scream,x,y,0,0,0,0,false,0)
 		
 	audio_manager(false,0,false,3)
-	instance_destroy()
+	instance_destroy(id)
 	
 } else if charging {
 	hsp = lerp(hsp,0,0.05)

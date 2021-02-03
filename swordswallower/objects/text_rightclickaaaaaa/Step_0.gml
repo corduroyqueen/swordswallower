@@ -3,7 +3,7 @@
 if !parent {
 	alpha = lerp(alpha,0,0.5)	
 	if alpha<=0.2 {
-		instance_destroy()	
+		instance_destroy(id)	
 	}
 }
 

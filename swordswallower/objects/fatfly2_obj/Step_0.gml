@@ -5,7 +5,7 @@ if death {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
 	
 	audio_manager(false,0,false,3)
-	instance_destroy()
+	instance_destroy(id)
 } else {
 	if hp==1 {
 		mult = 1.5	

@@ -14,11 +14,14 @@ if level1_master.death_num>=500 {
 } else {
 	dialogue_array[0] = "......."
 	dialogue_array[1] = "Your deaths. They're " + string(level1_master.death_num) + ". "
-	dialogue_array[2] = "When you've seen death 50 times, you will speak to me again. "
+	dialogue_array[2] = "When you've seen death 500 times, you will speak to me again. "
 	dialogue_array[3] = "There are always more to come. "
 	dialogue_array[4] = "end"
 }
 if point_distance(x,y,player_obj.camx+640,player_obj.camy+360)<1000 {
+	if !audio_is_playing(whispers) {
+		audio_play_sound_on(whisp_emitter,whispers,true,0)
+	}
 	audio_sound_gain(whispers,1,0)
 	audio_emitter_gain(whisp_emitter,
 	clamp(0,abs(1000- point_distance(x,y,player_obj.camx+640,player_obj.camy+360))/1000,1000)/3

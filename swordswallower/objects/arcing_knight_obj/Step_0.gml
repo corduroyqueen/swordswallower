@@ -15,7 +15,7 @@ if death {
 	just_blood(0,-2,0.2,10,false,sprite_width,sprite_height)	
 	just_blood(0,-5,0.2,10,false,sprite_width,sprite_height)
 	audio_manager(false,0,false,3)
-	instance_destroy()
+	instance_destroy(id)
 	return false	
 }
 

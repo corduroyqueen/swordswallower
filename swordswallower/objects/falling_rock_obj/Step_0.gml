@@ -13,7 +13,7 @@ if held {
 		}
 		if death {
 			other.held = false
-			instance_destroy()
+			instance_destroy(id)
 		}
 	}
 } else {

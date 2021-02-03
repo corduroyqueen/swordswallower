@@ -38,7 +38,7 @@ if !surrounded {
 		image_alpha-=0.02
 	}
 	if image_alpha<=0 {
-		instance_destroy()	
+		instance_destroy(id)	
 	}
 	if locked {
 		if instance_exists(obj) {

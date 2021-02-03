@@ -156,14 +156,14 @@ if initialize {
 		for(i=0;i<num_wooden_walls;i++) {
 			if !checkpoint_manager.checkpoint.wooden_walls_b[i] {
 				with wooden_walls[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_big_bois;i++) {
 			if !checkpoint_manager.checkpoint.big_bois_b[i] {
 				with big_bois[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -173,7 +173,7 @@ if initialize {
 		for(i=0;i<num_fog;i++) {
 			if !fogs_b[i] {
 				with fogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -183,7 +183,7 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
@@ -219,14 +219,14 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
 		for(i=0;i<num_chargers;i++) {
 			if !chargers_b[i] {
 				with chargers[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -248,7 +248,7 @@ if initialize {
 			}
 			if !keys_b2[i] {
 				with keys[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -259,14 +259,14 @@ if initialize {
 		for(i=0;i<num_fog;i++) {
 			if !fogs_b[i] {
 				with fogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_roomfog;i++) {
 			if !roomfogs_b[i] {
 				with roomfogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -276,7 +276,7 @@ if initialize {
 		for(i=0;i<num_wooden_walls;i++) {
 			if !wooden_walls_b[i] {
 				with wooden_walls[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -286,14 +286,14 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
 		for(i=0;i<num_chargers;i++) {
 			if !chargers_b[i] {
 				with chargers[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -315,7 +315,7 @@ if initialize {
 			}
 			if !keys_b2[i] {
 				with keys[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -326,14 +326,14 @@ if initialize {
 		for(i=0;i<num_fog;i++) {
 			if !fogs_b[i] {
 				with fogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_roomfog;i++) {
 			if !roomfogs_b[i] {
 				with roomfogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -342,7 +342,7 @@ if initialize {
 		for(i=0;i<num_big_bois;i++) {
 			if !big_bois_b[i] {
 				with big_bois[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -355,7 +355,7 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
@@ -367,7 +367,7 @@ if initialize {
 		for(i=0;i<num_burn_walls;i++) {
 			if !burn_walls_b[i] {
 				with burn_walls[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -377,14 +377,14 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
 		for(i=0;i<num_chargers;i++) {
 			if !chargers_b[i] {
 				with chargers[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -409,7 +409,7 @@ if initialize {
 			}
 			if !keys_b2[i] {
 				with keys[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -420,14 +420,14 @@ if initialize {
 		for(i=0;i<num_fog;i++) {
 			if !fogs_b[i] {
 				with fogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_roomfog;i++) {
 			if !roomfogs_b[i] {
 				with roomfogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -436,7 +436,7 @@ if initialize {
 		for(i=0;i<num_big_bois;i++) {
 			if !big_bois_b[i] {
 				with big_bois[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -449,7 +449,7 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
@@ -464,14 +464,14 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
 		for(i=0;i<num_chargers;i++) {
 			if !chargers_b[i] {
 				with chargers[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -482,28 +482,28 @@ if initialize {
 		for(i=0;i<num_fog;i++) {
 			if !fogs_b[i] {
 				with fogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_roomfog;i++) {
 			if !roomfogs_b[i] {
 				with roomfogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_wooden_walls;i++) {
 			if !wooden_walls_b[i] {
 				with wooden_walls[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_big_bois;i++) {
 			if !big_bois_b[i] {
 				with big_bois[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -521,14 +521,14 @@ if initialize {
 		for(i=0;i<num_die_blocks;i++) {
 			if !die_blocks_b[i] {
 				with die_blocks[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}	
 		for(i=0;i<num_chargers;i++) {
 			if !chargers_b[i] {
 				with chargers[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
@@ -539,28 +539,28 @@ if initialize {
 		for(i=0;i<num_fog;i++) {
 			if !fogs_b[i] {
 				with fogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_roomfog;i++) {
 			if !roomfogs_b[i] {
 				with roomfogs[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_wooden_walls;i++) {
 			if !wooden_walls_b[i] {
 				with wooden_walls[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}
 		for(i=0;i<num_big_bois;i++) {
 			if !big_bois_b[i] {
 				with big_bois[i] {
-					instance_destroy()	
+					instance_destroy(id)	
 				}
 			}
 		}

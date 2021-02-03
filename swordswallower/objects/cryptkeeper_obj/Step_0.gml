@@ -186,7 +186,7 @@ if death {
 		event_user(0)
 	}
 		
-	instance_destroy()	
+	instance_destroy(id)	
 	
 	
 	

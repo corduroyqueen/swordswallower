@@ -1,2 +1,2 @@
 //fuck yes
-instance_destroy()
+instance_destroy(id)

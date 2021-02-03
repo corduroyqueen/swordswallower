@@ -11,5 +11,5 @@ if fly_hp<=0 {
 	}
 }
 if death {
-	instance_destroy()	
+	instance_destroy(id)	
 }

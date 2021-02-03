@@ -84,5 +84,5 @@ if death {
 		}
 		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width,sprite_height)
 	}
-	instance_destroy()	
+	instance_destroy(id)	
 }

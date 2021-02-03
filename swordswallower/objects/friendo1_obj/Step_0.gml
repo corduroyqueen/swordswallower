@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if death {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
-	instance_destroy()
+	instance_destroy(id)
 }
 
 my_floor = instance_place(x,y+1,wall_obj)

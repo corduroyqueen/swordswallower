@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if death {
-	instance_destroy()
+	instance_destroy(id)
 }
 
 if place_meeting(x,y,tail_obj) {

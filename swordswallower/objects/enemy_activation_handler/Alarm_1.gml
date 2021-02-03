@@ -2,9 +2,11 @@
 // You can write your code in this editor
 
 //sdm("start activation")
+
 if player_obj.death {
 	return
 }
+
 for(var a=0;a<num;a++) {
 	//sdm(a)
 	var inst = enemy_list[| a]

@@ -123,7 +123,7 @@ if death {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.1,20,true,sprite_width,sprite_height)
 	audio_manager(false,0,false,3)
 	//audio_manager(gsound.s_sword_hit_shell,0,false,0)
-	instance_destroy()	
+	instance_destroy(id)	
 	
 }
 

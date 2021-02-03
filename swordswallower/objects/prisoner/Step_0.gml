@@ -11,5 +11,5 @@ if death {
 	var bruh = lettuce_chop
 	audio_sound_pitch(bruh,random_range(0.75,1.25))
 	audio_play_sound(bruh,0,false)
-	instance_destroy()	
+	instance_destroy(id)	
 }

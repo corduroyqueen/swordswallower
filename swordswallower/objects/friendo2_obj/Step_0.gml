@@ -7,7 +7,7 @@ if death {
 	body.hsp = player_obj.hsp*0.7
 	body.vsp = player_obj.vsp*0.7
 	reset_zoom()
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 if player_obj.tail_pulling && met {

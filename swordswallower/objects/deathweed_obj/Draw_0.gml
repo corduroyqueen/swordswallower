@@ -5,7 +5,7 @@ if death {
 	draw_sprite(fire_proj_t,image_index,x,y)
 	death_timer++
 	if death_timer>40 {
-		instance_destroy()	
+		instance_destroy(id)	
 	}
 } else {
 	draw_self()	

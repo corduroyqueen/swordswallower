@@ -8,8 +8,8 @@ if dormant {
 		image_index=0
 	}
 	hitbox_on = false
-	x = player_obj.camx+500
-		y = player_obj.camy+10
+	//x = player_obj.camx+500
+	//	y = player_obj.camy+10
 	//mask_index = nothing1
 } else {
 	if active {
@@ -21,8 +21,7 @@ if dormant {
 	//mask_index=sprite_index
 	} else {
 		
-		x = player_obj.x+500
-		y = player_obj.y+10
+		
 		//x=33361
 		//y=2850
 		

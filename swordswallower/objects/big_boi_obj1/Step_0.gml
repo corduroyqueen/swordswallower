@@ -364,7 +364,7 @@ if locked {
 	}
 }
 if !place_meeting(x,y+10,touch_die_block_obj) {
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 
@@ -378,7 +378,7 @@ if death {
 		player_obj.tail_pulling = true
 	}
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
-	instance_destroy()	
+	instance_destroy(id)	
 }
 if sword_present {
 	sword_checked = true

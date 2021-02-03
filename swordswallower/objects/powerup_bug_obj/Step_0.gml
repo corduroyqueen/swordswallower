@@ -7,6 +7,6 @@ if hp<=0 {
 	level1_master.void_target = player_obj
 	
 	if level1_master.ability_dash {
-		instance_destroy()
+		instance_destroy(id)
 	}
 }

@@ -7,5 +7,5 @@ draw_self()
 //gpu_set_colorwriteenable(true, true, true, true);
 gpu_set_tex_filter(true)*/
 if !in_camera_range_bigger(x,y) {
-	instance_destroy()	
+	instance_destroy(id)	
 }

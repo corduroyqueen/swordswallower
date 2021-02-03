@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if death {
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 move_towards_point(x+xoff,y+yoff,mspeed)

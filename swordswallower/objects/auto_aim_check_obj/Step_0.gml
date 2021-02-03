@@ -7,4 +7,4 @@
 
 
 
-instance_destroy()
+instance_destroy(id)

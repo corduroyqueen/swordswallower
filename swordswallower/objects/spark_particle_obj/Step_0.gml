@@ -12,5 +12,5 @@ color1 = merge_color(c_yellow,c_white,0.5)
 image_blend = merge_color(color1,c_black,color_timer)
 
 if color_timer>=1 {
-	instance_destroy()	
+	instance_destroy(id)	
 }

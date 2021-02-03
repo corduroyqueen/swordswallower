@@ -62,7 +62,7 @@ if death {
 			event_user(0)
 		}
 		
-		instance_destroy()
+		instance_destroy(id)
 		
 	}
 	if instance_exists(fly1) || instance_exists(fly2) {

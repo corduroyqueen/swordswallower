@@ -9,6 +9,6 @@ if player_obj.tail_throwing {
 	state = state_parent_tar
 } else if player_obj.tail_pulling {
 	if state!=state_parent_tar {
-		instance_destroy()	
+		instance_destroy(id)	
 	}
 }

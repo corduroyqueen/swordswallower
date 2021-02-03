@@ -7,5 +7,5 @@ image_xscale += bounce_vel
 image_yscale = rval+(rval-image_xscale)
 rval-=deprate
 if image_xscale<=0 || image_yscale<=0 {
-	instance_destroy()	
+	instance_destroy(id)	
 }

@@ -1,5 +1,7 @@
 //fuck yes
 p_cut_check = false
+
+one_cut_per_frame_check = true
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,object_index)
 	ok.num_rings = num_rings - cut
 	//ok.pinned = false
@@ -21,7 +23,7 @@ p_cut_check = false
 		init = false
 		event_user(1)
 		pinned = false
-		rings_pinned[|0] = false
+		
 		run = true
 		
 		for (var e=0;e<num_rings;e++) { 
@@ -32,6 +34,7 @@ p_cut_check = false
 			rings_vsp[| e] = other.rings_vsp[| ww]
 			rings_pinned[| e] = other.rings_pinned[| ww]
 		}
+		rings_pinned[|0] = false
 	}
 	pinned = false
 	for (var lot=0; lot<num_rings;lot++) {

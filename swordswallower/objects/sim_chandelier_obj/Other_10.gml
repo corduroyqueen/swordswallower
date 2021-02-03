@@ -132,6 +132,9 @@ while n<num_rings {
 
 if cut>-1 {
 	p_cut_check = false
+	if player_obj.death {
+		return
+	}
 	var ok = instance_create_depth(rings_x[| cut],rings_y[| cut],depth,sim_chandelier_obj)
 	ok.run = true
 	ok.num_rings = num_rings - cut

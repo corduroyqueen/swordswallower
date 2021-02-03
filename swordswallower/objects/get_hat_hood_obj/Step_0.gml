@@ -64,7 +64,9 @@ if player_present {
 	}
 	if player_obj.k_speak_p {
 		
-		level1_master.hats_list[|1] = true
+		if ds_list_find_index(level1_master.hats_list,"1")<0 {
+			ds_list_add(level1_master.hats_list,1)
+		}
 		
 		
 		if !ui_manager.spk_bool {

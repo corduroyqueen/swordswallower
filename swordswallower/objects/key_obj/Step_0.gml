@@ -6,7 +6,7 @@ if flying_away {
 	y -= dsin(ang) * 20
 	
 	if !in_camera_range_bigger(x,y) {
-		instance_destroy()
+		instance_destroy(id)
 	}
 	return
 }

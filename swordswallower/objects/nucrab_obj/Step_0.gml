@@ -135,7 +135,7 @@ if death {
 		player_obj.tail_pulling = true
 	}
 	//audio_manager(gsound.s_sword_hit_shell,0,false,0)
-	instance_destroy()	
+	instance_destroy(id)	
 	
 }
 

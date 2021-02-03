@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 if wall_detect(x,y) || death {
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 if state==state_spawning {
@@ -19,10 +19,10 @@ if state==state_spawning {
 		move_towards_point(parent.x,parent.y,parent_speed)
 		if place_meeting(x,y,parent) {
 			parent.hit = true
-			instance_destroy()
+			instance_destroy(id)
 		}
 	} else {
-		instance_destroy()	
+		instance_destroy(id)	
 	}
 } else if state==state_player_tar {
 	

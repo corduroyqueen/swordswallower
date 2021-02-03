@@ -411,7 +411,7 @@ if death {
 	if instance_exists(hit) {
 		instance_destroy(hit)	
 	}
-	instance_destroy()	
+	instance_destroy(id)	
 }
 if sword_present {
 	sword_checked = true

@@ -55,6 +55,7 @@ if room==subtemple01 {
 		if coffin_boss_1.music_cue {
 			if go2 {
 				audio_stop_sync_group(subtemple_mc)
+				audio_stop_all()
 				part2_mc = audio_create_sync_group(true)
 				audio_sound_gain(swsw2, 0.47, 0);
 				audio_play_in_sync_group(part2_mc,swsw2)
@@ -79,6 +80,7 @@ if room==subtemple01 {
 		audio_sound_gain(swsw2,0.47,160)
 		if audio_sound_get_gain(swsw_item_room)<0.05 {
 			audio_sound_gain(swsw_item_room,0,0)
+			
 			audio_stop_sound(swsw_item_room)
 		}
 		
@@ -105,6 +107,7 @@ if room==subtemple01 {
 	
 	if go5 {
 		if player_obj.x>66400 && player_obj.y>2750 {
+			audio_stop_all()
 			part4_mc = audio_create_sync_group(true)
 			//audio_play_in_sync_group(part4_mc,swsw_bossfight)
 			//audio_start_sync_group(part4_mc)

@@ -40,5 +40,5 @@ if hp<=0 {
 		
 	level1_master.void_target = player_obj
 	
-	instance_destroy()
+	instance_destroy(id)
 }

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if death {
-	instance_destroy()	
+	instance_destroy(id)	
 	for (i=0;i<24;i++){
 		yo = instance_create_depth(x,y,101,fire_particle_obj)	
 		yo.rval = irandom_range(3,4)

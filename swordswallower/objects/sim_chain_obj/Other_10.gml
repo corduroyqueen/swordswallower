@@ -115,7 +115,7 @@ while n<num_rings {
 	rings_x[| n] = rings_x[| n] + rings_hsp[| n]/mass * dt
 	rings_y[| n] = rings_y[| n] + rings_vsp[| n]/mass * dt
 	if check_sw && cut<0 {
-		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 {
+		if point_distance(rings_x[| n],rings_y[| n],tail_obj.x,tail_obj.y)<35 && !one_cut_per_frame_check {
 			cut=n
 		}
 	}

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if !visible && place_meeting(x,y,wall_obj) {
-	instance_destroy()	
+	instance_destroy(id)	
 } else {
 	visible = true	
 }
@@ -13,6 +13,6 @@ image_xscale += bounce_vel
 image_yscale = rval+(rval-image_xscale)
 rval-=deprate
 if image_xscale<=0 || image_yscale<=0 {
-	instance_destroy()	
+	instance_destroy(id)	
 }
 hsp = lerp(hsp,0,0.1)

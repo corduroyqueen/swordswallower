@@ -33,7 +33,6 @@ if shielded {
 if start_death && !death {
 	player_start_death()
 }
-
 //if ds_list_size(keylist)>0 {
 //	for (i=0;i<ds_list_size(keylist);i++) {
 //		keylist[| i].image_angle = 120 - i * 30	
@@ -192,7 +191,7 @@ hspreva = hsp
 vspreva = vsp
 if fps<50 {
 	with blood_obj {
-		instance_destroy()
+		instance_destroy(id)
 	}
 }
 if ending_lock {
@@ -232,10 +231,7 @@ if zoom_timer_bool {
 	moveY(vsp)
 	intangible = false
 }
-
-
 enemy_collision()
-
 if place_meeting(x,y,gem_obj) {
 	fire_active = true	
 }
@@ -286,6 +282,7 @@ if level1_master.dev {
 		//x=38000
 	}
 }
+
 //sdm("ok")
 //sdm(id)
 //sdm(string(id))

@@ -8,23 +8,25 @@ for(i=0; i < iteration_num; i++) {
 	xc = xpreva + xdelt * (i/iteration_num)
 	yc = ypreva + ydelt * (i/iteration_num)
 	if !place_meeting(xc,yc,enemy_parent_obj) {
-			
+		
 	} else {
+		
 		//ds_list_clear(enemy_collided_list)
-		enemy_collided_list = instance_place_list(xc,yc,enemy_parent_obj,enemy_collided_list,false)
+		var numt = instance_place_list(xc,yc,enemy_parent_obj,enemy_collided_list,false)
 		//sdm("en")
 		//sdm(ds_list_size(enemy_collided_list))
 		//for (i = 0; i<ds_list_size(enemy_collided_list); i++) {
 		//	sdm(object_get_name(enemy_collided_list[| i].object_index))
 		//}
-		for (i = 0; i<ds_list_size(enemy_collided_list); i++) {
+		for (i = 0; i<numt; i++) {
 			var collision = enemy_collided_list[| i]
-			if is_undefined(collision) {
-				continue	
-			}
+			//if is_undefined(collision) {
+			//	continue	
+			//}
 			if !instance_exists(collision) {
 				continue
 			}
+			
 			ds_list_add(enemy_collided_total_list,collision)
 			
 			if object_get_parent(collision.object_index)==fly_parent_obj {
@@ -42,6 +44,7 @@ for(i=0; i < iteration_num; i++) {
 			} else if object_get_parent(collision.object_index)==killalways_parent_obj {
 				//things that kill you on touch always
 				//ie - spikes, snake heads
+				//m("run killalways")
 				enemy_damage_player_collision(collision)
 			} else if object_get_parent(collision.object_index)==kill_notondash_parent_obj {
 				//things that kill you on touch except when youre dashing
@@ -56,6 +59,7 @@ for(i=0; i < iteration_num; i++) {
 				//ie minotaurs, deathweeds
 				//sdm("wtf")
 				//sdm(collision.hitbox_on)
+			//0m("run toggle")
 				if collision.hitbox_on {
 					//sdm("oklelelelel")
 					enemy_damage_player_collision(collision)
@@ -67,7 +71,6 @@ for(i=0; i < iteration_num; i++) {
 		ds_list_clear(enemy_collided_list)
 	}
 }	
-
 for (i = 0; i < ds_list_size(enemy_collided_total_list); i++) {
 	instance_activate_object(enemy_collided_total_list[| i])
 }

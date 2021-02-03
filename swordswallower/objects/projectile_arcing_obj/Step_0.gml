@@ -11,6 +11,6 @@ if state==0 {
 	x = end_x
 	y+=fall_speed
 	if place_meeting(x,y,wall_parent_obj) {
-		instance_destroy()
+		instance_destroy(id)
 	}
 }

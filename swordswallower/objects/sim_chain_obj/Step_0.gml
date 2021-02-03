@@ -12,6 +12,7 @@ if in_camera_range_bigger(x,y) || in_camera_range_bigger(rings_x[|lll],rings_y[|
 	run = false
 }
 p_cut_check = true
+one_cut_per_frame_check = false
 if run {
 	
 	for(var i=0;i<2;i++){

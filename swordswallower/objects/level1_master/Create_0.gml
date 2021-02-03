@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 draw_texture_flush();
-
+audio_channel_num(300)
 wooden_walls = array_create(100)
 wooden_walls[0] = false
 big_bois = array_create(10)
@@ -192,9 +192,7 @@ cosmetic_hood = false
 cosmetic_santa_hat = false
 
 hats_list = ds_list_create()
-ds_list_add(hats_list,true)
-ds_list_add(hats_list,false)
-ds_list_add(hats_list,false)
-ds_list_add(hats_list,false)
+ds_list_add(hats_list,0)
+head_spr_i=0
 
 //gpu_set_colorwriteenable(true, true, true, false);

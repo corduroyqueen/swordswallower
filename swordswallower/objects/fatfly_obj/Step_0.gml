@@ -45,7 +45,7 @@ if death {
 		audio_manager(squelchy_mouth,0,false,0)
 	}
 	
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 if player_obj.tail_pulling && met {

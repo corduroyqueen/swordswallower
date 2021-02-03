@@ -421,7 +421,7 @@ if death {
 		instance_destroy(hit)	
 	}
 	instance_destroy(horns)	
-	instance_destroy()	
+	instance_destroy(id)	
 	
 	
 }

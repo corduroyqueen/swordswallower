@@ -6,6 +6,6 @@ if death {
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,tail_obj.x,tail_obj.y)
 	parent.death = true
 	audio_manager(false,0,false,3)
-	instance_destroy()
+	instance_destroy(id)
 }
 met = parent.met

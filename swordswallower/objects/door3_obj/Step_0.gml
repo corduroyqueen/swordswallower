@@ -24,13 +24,13 @@ if distance_to_object(player_obj)<40 && player_obj.zoom_timer_bool && met {
 	player_obj.vsp *=0.5
 	player_obj.held_position = false
 	reset_intangibility()
-	instance_destroy()
+	instance_destroy(id)
 	instance_destroy(friendo)
 	
 	varsetter.barriers_to_kill[arrayn] = false
 }
 if die {
-	instance_destroy()
+	instance_destroy(id)
 	instance_destroy(friendo)
 	varsetter.barriers_to_kill[arrayn] = false
 }
@@ -38,7 +38,7 @@ if broken {
 	player_obj.tail_planted = false
 	player_obj.tail_pulling = true
 	tail_obj.pull_timer = tail_obj.pull_wall_t
-	instance_destroy()
+	instance_destroy(id)
 	instance_destroy(friendo)
 	
 } else {

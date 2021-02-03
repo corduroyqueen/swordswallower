@@ -22,7 +22,7 @@ if death {
 		audio_manager(false,0,false,3)
 	}
 	if spawn {
-		instance_destroy()
+		instance_destroy(id)
 	} else {
 		death_timer++
 		x = startx

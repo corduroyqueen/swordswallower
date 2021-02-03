@@ -432,11 +432,11 @@ if state==state_idle {
 			
 			instance_destroy(rightarm)
 			instance_destroy(head)
-			instance_destroy()
+			instance_destroy(id)
 		}
 		if tail_obj.pull_timer>tail_obj.pull_wall_t || player_obj.tail_carry {
 			
-			instance_destroy()
+			instance_destroy(id)
 			
 			instance_destroy(leftarm)
 			

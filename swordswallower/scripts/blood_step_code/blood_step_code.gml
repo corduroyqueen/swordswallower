@@ -38,7 +38,7 @@ if go {
 	
 	} else {
 		if player_got {
-			instance_destroy()
+			instance_destroy(id)
 			return
 		}
 		var sxs = image_xscale
@@ -61,7 +61,7 @@ if go {
 		//}
 		//audio_play_sound(eh,0,false)
 	
-		instance_destroy()
+		instance_destroy(id)
 	}
 
 

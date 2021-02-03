@@ -23,6 +23,6 @@ if timer_begin {
 				held_release_timer = 10	
 			}
 		}	
-		instance_destroy()	
+		instance_destroy(id)	
 	}
 }

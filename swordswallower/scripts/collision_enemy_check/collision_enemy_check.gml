@@ -15,7 +15,7 @@ if object_get_parent(local_obj.object_index)==killalways_parent_obj
 
 //sdm("ok")
 //sdm(object_get_name(local_obj.object_index))
-if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
+if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !player_obj.death {
 	oldx = x
 	oldy = y
 	x = checkx;
@@ -57,7 +57,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met {
 		 with local_obj {
 			 death_blood_spawn_x = x
 			 death_blood_spawn_y = y
-			 instance_destroy()
+			 instance_destroy(id)
 		 }
 		return false	
 	}

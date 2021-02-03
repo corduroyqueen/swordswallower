@@ -10,7 +10,7 @@
 //		image_alpha-=0.02
 //	}
 //	if image_alpha<=0 {
-//		instance_destroy()	
+//		instance_destroy(id)	
 //	}
 //} else {
 //	if place_meeting(x+hwidth,y+hheight,wall_obj) && place_meeting(x+hwidth,y-hheight,wall_obj) 
@@ -38,5 +38,5 @@ red_value-=2
 image_blend = make_color_rgb(red_value,43,143)
 
 if image_xscale<=0 {
-	instance_destroy()	
+	instance_destroy(id)	
 }

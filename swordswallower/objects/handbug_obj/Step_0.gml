@@ -130,7 +130,7 @@ if death {
 		player_obj.tail_pulling = true
 	}
 	//audio_manager(gsound.s_sword_hit_shell,0,false,0)
-	instance_destroy()	
+	instance_destroy(id)	
 	
 	if !tail_obj.stinky && !place_meeting(x,y,flyshriek_obj) {
 		ok = instance_create_depth(x,y,depth,wood_wall_obj)

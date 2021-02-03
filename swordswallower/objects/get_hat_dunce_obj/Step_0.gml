@@ -63,9 +63,9 @@ if player_present {
 		view_xview = friendly_x-view_wview/2
 	}
 	if player_obj.k_speak_p {
-		
-		level1_master.hats_list[|3] = true
-		
+		if ds_list_find_index(level1_master.hats_list,"3")<0 {
+			ds_list_add(level1_master.hats_list,3)
+		}
 		
 		if !ui_manager.spk_bool {
 			ui_manager.speaking = true

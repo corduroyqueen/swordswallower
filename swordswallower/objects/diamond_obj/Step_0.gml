@@ -268,7 +268,7 @@ if death {
 			instance_destroy(hit)	
 		}
 	just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,sprite_width/4,sprite_height)
-	instance_destroy()	
+	instance_destroy(id)	
 }
 
 //hsp = clamp(hsp,-h_max_speed,h_max_speed)
