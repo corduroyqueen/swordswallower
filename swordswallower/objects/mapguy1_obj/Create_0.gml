@@ -24,7 +24,7 @@ ealpha = 0
 boatboy = false
 boatboyenter = false
 
-level1_master.mapguy_visited = false
+//level1_master.mapguy_visited = false
 
 dialogue_sound_list = ds_list_create()
 ds_list_add(dialogue_sound_list,mapguy_v_1)

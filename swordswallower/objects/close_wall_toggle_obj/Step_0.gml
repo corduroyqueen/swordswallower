@@ -23,7 +23,7 @@ if enabled {
 	if point_distance(x,y,endx,endy)>1 {
 		//movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
 		sp_towards_target(endx,endy,movespeed,1)
-		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y){
+		if point_distance(x,y,endx,endy)<(1+pythag(hsp,vsp)) && in_camera_range_bigger(x,y){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
 			audio_play_sound(metal_door,0,false)
@@ -41,7 +41,7 @@ if enabled {
 	if point_distance(x,y,startx,starty)>1 {
 		//movespeed = (length/(point_distance(x,y,startx,starty)) + 0.1)*(length/(point_distance(x,y,startx,starty)) + 0.1) * 1.3
 		sp_towards_target(startx,starty,movespeed,1)
-		if point_distance(x,y,startx,starty)<(1+speed){
+		if point_distance(x,y,startx,starty)<(1+pythag(hsp,vsp)){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
 		}

@@ -8,9 +8,16 @@ if level1_master.death_num>=500 {
 	dialogue_array[2] = "I am... fascinated. Impressed. "
 	dialogue_array[3] = "......"
 	dialogue_array[4] = "With your deaths as payment, I would like to give special thanks to a few individuals on the behalf of Uti and Julia. "
-	dialogue_array[5] = "Gabe. Matt. Burgess. Winnie. Bennett. Julian. Marianna. Hosni. Noah. Clair. Spencer. Elizabeth. Justin. Derek. Mars. Isabella.  Corey. "
+	dialogue_array[5] = "Gabe. Matt. Burgess. Dylan. Winnie. Bennett. Julian. Noah. Clair. Spencer. Elizabeth. Justin. Mars. The Incubator. "
 	dialogue_array[6] = "That is all, that is all, there is nothing else. "
-	dialogue_array[7] = "end"
+	dialogue_array[7] = "And, of course, you. For playing. "
+	dialogue_array[8] = "end"
+} else if level1_master.death_num<1 {
+	dialogue_array[0] = "......."
+	dialogue_array[1] = "Your deaths. They're " + string(level1_master.death_num) + ". "
+	dialogue_array[2] = "How... disappointing. You're worthless. "
+	dialogue_array[3] = "Perhaps sometime soon you will gain some worth. "
+	dialogue_array[4] = "end"
 } else {
 	dialogue_array[0] = "......."
 	dialogue_array[1] = "Your deaths. They're " + string(level1_master.death_num) + ". "

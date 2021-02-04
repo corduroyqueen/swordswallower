@@ -40,7 +40,21 @@ if gravd {
 //	level1_master.getmap = true	
 //}
 	
-if keybool && level1_master.mapguy_visited {
+if !st_bridge_bridge.enabled {
+	
+	if times_spoken<1 {
+		dialogue_array[0] = "Ah, you're back, and the bridge is back in place! "
+		dialogue_array[1] = "You've held up your end of the bargain admirably. Thank you, now I can begin traveling back to my home. "
+		dialogue_array[2] = "I need a moment to pack up my things. You go on ahead--I'll meet you up the cliffside. "
+		dialogue_array[3] = "I should have no trouble climbing it. "
+		dialogue_array[4] = "end"
+	} else {
+		dialogue_array[0] = "You can go on without me--I am not in need of an escort. "
+		dialogue_array[1] = "I'm not a warrior like you, but I do have my ways of evading the beasts of this land. "
+		dialogue_array[2] = "end"
+	}
+	
+} else if (keybool || !st_locked_door_1.closed) && level1_master.mapguy_visited {
 	if times_spoken<1 {
 		dialogue_array[0] = "There it is! Well done. "
 		dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross the gap. "
@@ -49,10 +63,10 @@ if keybool && level1_master.mapguy_visited {
 		dialogue_array[4] = "end"
 	} else {
 		dialogue_array[0] = "Best of luck with the bridgekeeper--be prepared for anything. "
-		dialogue_array[4] = "end"
+		dialogue_array[1] = "end"
 	}
 		
-} else if keybool && !level1_master.mapguy_visited {
+} else if (keybool || !st_locked_door_1.closed) && !level1_master.mapguy_visited {
 	if times_spoken<1 {
 		dialogue_array[0] = "Greetings, warrior! I see you obtained the key from over there. "
 		dialogue_array[1] = "I was trying to get your attention earlier, but it looked like you were in a rush. "

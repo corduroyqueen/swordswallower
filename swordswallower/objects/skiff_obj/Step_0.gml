@@ -34,6 +34,7 @@ if x>(47000) {
 if !done {
 	
 	if go {
+		
 		if !yolo {
 			//instance_create_depth(x,y,-999999999999,title_screen_obj)	
 			yolo = true
@@ -55,6 +56,8 @@ if !done {
 		
 		if x>(47000) {
 			go = false	
+			global.mousepx = x+500
+			global.mousepy = y
 			player_obj.ending_lock = false
 			player_obj.move_locked = false
 			tail_obj.moving_platform_bool = false

@@ -195,4 +195,6 @@ hats_list = ds_list_create()
 ds_list_add(hats_list,0)
 head_spr_i=0
 
+mapguy_visited = false
+
 //gpu_set_colorwriteenable(true, true, true, false);

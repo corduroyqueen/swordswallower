@@ -24,7 +24,7 @@ if enabled {
 	if point_distance(x,y,endx,endy)>1 {
 		//movespeed = (length/(point_distance(x,y,endx,endy)) + 0.1)*(length/(point_distance(x,y,endx,endy)) + 0.1) * 1.3
 		sp_towards_target(endx,endy,movespeed,1)
-		if point_distance(x,y,endx,endy)<(1+speed) && in_camera_range_bigger(x,y){
+		if point_distance(x,y,endx,endy)<(1+pythag(hsp,vsp)) && in_camera_range_bigger(x,y){
 			player_obj.shake_d=6
 			player_obj.camera_shake_d = true	
 			
@@ -34,6 +34,7 @@ if enabled {
 				audio_manager(hey,0,false,0)
 				
 			audio_play_sound(hit_wall,0,false)
+			event_user(0)
 		}
 	} else {
 		x = endx
@@ -41,6 +42,7 @@ if enabled {
 		//movespeed = 0
 		hsp = 0  
 		vsp = 0
+		
 	}
 } else {
 	enabled = master.enter

@@ -28,4 +28,6 @@ hitbox_on = false
 startx = x
 starty = y
 
+flip = choose(-1,1)
+
 sprite_index = choose(spr_handanim2,spr_hand3,spr_handanims1)

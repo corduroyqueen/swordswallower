@@ -130,5 +130,10 @@ if controller = controller_ds4 {
 	}
 }
 
+
+if skiff_obj.go && !skiff_obj.done {
+	global.mousepx = skiff_obj.x-500
+	global.mousepy = skiff_obj.y-500
+}
 mouse_x_last = mouse_x
 mouse_y_last = mouse_y
