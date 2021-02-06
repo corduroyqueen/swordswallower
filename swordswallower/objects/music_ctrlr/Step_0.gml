@@ -107,15 +107,23 @@ if room==subtemple01 {
 	
 	if go5 {
 		if player_obj.x>66400 && player_obj.y>2750 {
-			audio_stop_all()
-			part4_mc = audio_create_sync_group(true)
-			//audio_play_in_sync_group(part4_mc,swsw_bossfight)
-			//audio_start_sync_group(part4_mc)
-			audio_play_sound(swsw_bossfight_new,0,true)
-			audio_sound_gain(swsw_bossfight_new,2,0)
-			audio_stop_sound(ocean_ambience)
-			audio_stop_sound(tim_hecker_song)
-			go5 = false
+			player_obj.disable = true
+			player_obj.hsp = 0
+			if audio_is_playing(ocean_ambience) {
+				audio_stop_sound(ocean_ambience)
+				audio_stop_sound(tim_hecker_song)
+			}
+			if (instance_exists(meat1_boss) && !meat1_boss.docile) {
+				audio_stop_all()
+				part4_mc = audio_create_sync_group(true)
+				//audio_play_in_sync_group(part4_mc,swsw_bossfight)
+				//audio_start_sync_group(part4_mc)
+				audio_play_sound(swsw_bossfight_new,0,true)
+				audio_sound_gain(swsw_bossfight_new,2,0)
+				player_obj.disable = false
+				go5 = false
+			}
+			
 		}
 	}
 	

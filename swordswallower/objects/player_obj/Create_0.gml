@@ -43,6 +43,7 @@ k_speak_p = mouse_check_button_pressed(mb_right)
 k_speak_r = mouse_check_button_released(mb_right)
 k_speak = mouse_check_button(mb_right)
 
+disable =false
 
 hp = 1
 inv_timer = 0

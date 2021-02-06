@@ -153,10 +153,14 @@ if held_release_timer>0 {
 }
 if !grounded && !zoom_timer_bool && out_of_dash_t>=0 && vsp<max_vs {
 	if !wall_checker(x,y) && place_meeting(x,y,tar_obj) {
-		vsp = 0.75
+		vsp = 0.51
+		if instance_exists(title_screen_obj) {
+			vsp=0
+		}
 	} else {
 		vsp += grav
 	}
+	
 }
 
 if tail_obj.moving_platform_bool {

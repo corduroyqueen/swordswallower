@@ -114,7 +114,7 @@ if place_meeting(x-1,y,wall_parent_obj) {
 	on_wall_left = false	
 }
 
-if !intro && !death {
+if !intro && !death && !disable {
 	if !ending_lock && !mapout {
 		if room!=hub  {
 			mouse_controller()
@@ -131,13 +131,15 @@ if !intro && !death {
 		}
 	}
 } else {
-	player_obj.hsp = 0
-	player_obj.vsp = 0
+	//player_obj.hsp = 0
+	//player_obj.vsp = 0
 
-	player_obj.x = player_obj.xpreva
-	player_obj.y = player_obj.ypreva
+	//player_obj.x = player_obj.xpreva
+	//player_obj.y = player_obj.ypreva
 }
-
+if disable {
+	vsp += grav
+}
 if !tail_planted && !tail_pulling && !held_position {
 	tail_obj.moving_platform_bool = false	
 }
@@ -231,7 +233,9 @@ if zoom_timer_bool {
 	moveY(vsp)
 	intangible = false
 }
-enemy_collision()
+if !instance_exists(title_screen_obj) {
+	enemy_collision()
+}
 if place_meeting(x,y,gem_obj) {
 	fire_active = true	
 }

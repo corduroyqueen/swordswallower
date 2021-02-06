@@ -5,9 +5,12 @@ head.y = y - 30
 head.image_angle = 0
 head.image_index = 0
 if docile {
-	if player_obj.y>2783 && player_obj.x>66486 {
+	if level1_master.boss_intro_timer > 200 {
 		docile = false
 	}
+	//if player_obj.y>2783 && player_obj.x>66486 {
+	//	docile = false
+	//}
 	return
 }
 
@@ -187,7 +190,7 @@ if state==state_idle {
 		ht++
 		//h1.visible = true
 		//h2.visible = true
-		if ht>170 {
+		if ht>150 {
 			
 			ht=0
 			if leftarm.destroy_arm && rightarm.destroy_arm {

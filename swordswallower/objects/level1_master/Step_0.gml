@@ -55,11 +55,13 @@ if getmap {
 }
 
 if room==subtemple01 {
-	
+	if player_obj.y>2783 && player_obj.x>66486 {
+		boss_intro_timer++
+	}
 	if st_map_1 && player_obj.y>11000 {
 		//map = spr_newmap
 		map = spr_nnewmap1
-	} else if st_map_2 && player_obj.y<11000 && player_obj.y>3573 {
+	} else if st_map_2 && player_obj.y<11000 && player_obj.x<26288 {
 		//map = spr_map2
 		map = spr_newmap2
 	} else {

@@ -197,4 +197,7 @@ head_spr_i=0
 
 mapguy_visited = false
 
+boss_intro_timer = 0
+
+
 //gpu_set_colorwriteenable(true, true, true, false);
