@@ -52,7 +52,7 @@ if gravd {
 //dialogue_array[9] = "end"
 
 dialogue_array[0] = "The sign reads: "
-dialogue_array[1] = "'Passage to Marat has been blocked due to the continuing plague.' "
+dialogue_array[1] = "'Passage to Marat has been blocked on the Queen's orders.' "
 dialogue_array[2] = "end"
 
 image_xscale = 0.75
