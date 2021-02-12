@@ -311,6 +311,14 @@
             }
         },
         {
+            "Key": "03b03bd1-70b4-4d98-aab9-8d42c0f650c8",
+            "Value": {
+                "id": "a7d21204-9c2f-4e94-8895-d1110b27e2c2",
+                "resourcePath": "sprites\\spr_swordglimmeranim\\spr_swordglimmeranim.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "03b9c28a-6e79-4754-8b9d-8c81650c5cd8",
             "Value": {
                 "id": "8b876155-0541-4a55-a676-6ef7f0125071",
@@ -10951,6 +10959,14 @@
             }
         },
         {
+            "Key": "93014a69-2a03-458b-b8ca-abbb9951a9f4",
+            "Value": {
+                "id": "322c02ca-ea63-4b32-a826-2bd82d793819",
+                "resourcePath": "sprites\\spr_leftestpupil\\spr_leftestpupil.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9309d380-c5a4-4df1-b06d-e3e112dd16db",
             "Value": {
                 "id": "ce7cd30d-1bc1-4a57-8439-51c25faf7ab9",
@@ -11564,6 +11580,14 @@
                 "id": "b7b7d5ae-8ea5-438f-872f-742a69211752",
                 "resourcePath": "objects\/handbug_obj\/handbug_obj.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "9c82fac5-367b-4879-8484-623c6fa61a97",
+            "Value": {
+                "id": "c1a99846-7981-4ed5-857c-2d4310665828",
+                "resourcePath": "sprites\\spr_middlemiddlepupil\\spr_middlemiddlepupil.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -12595,6 +12619,14 @@
             "Value": {
                 "id": "291c8be8-5890-4d26-9235-59c84827da15",
                 "resourcePath": "sprites\/cc_crouch\/cc_crouch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "aca9e1cc-ba12-4448-8b54-af7d356f67ff",
+            "Value": {
+                "id": "d5f9320d-c898-4c5d-839c-401fd5ebc2aa",
+                "resourcePath": "sprites\\spr_titlewiggle\\spr_titlewiggle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -14868,6 +14900,14 @@
                 "id": "68cfa3eb-e9e6-4aaf-83ec-65bb2d73317e",
                 "resourcePath": "sounds\/bullphasein\/bullphasein.yy",
                 "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d1ef88fd-bccf-46eb-85af-ce725a7629ec",
+            "Value": {
+                "id": "351f6c3c-a523-48d8-a5f6-9cde2e60d834",
+                "resourcePath": "sprites\\spr_rightestpulil\\spr_rightestpulil.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
