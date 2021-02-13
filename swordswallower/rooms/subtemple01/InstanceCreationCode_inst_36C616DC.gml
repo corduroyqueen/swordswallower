@@ -7,3 +7,6 @@ text_a[1] = "Hold dash button to cling to walls"
 
 tx = 14000
 ty =  18000
+
+tx = 18654
+ty= 19853

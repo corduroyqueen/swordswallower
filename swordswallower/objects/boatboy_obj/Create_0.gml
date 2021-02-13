@@ -38,3 +38,4 @@ dialogue_array[5] = "Hang onto the bottom of my skiff. "
 
 gravd = false
 times_spoken=0
+image_speed=1

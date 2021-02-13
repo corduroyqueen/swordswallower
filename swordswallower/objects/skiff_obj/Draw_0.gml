@@ -62,7 +62,7 @@ leg2_ang = cos(0+loop2*6.2831)*22
 
 
 
-draw_sprite_ext(spr_riverlady,0,x,y-sprite_get_height(boatgirl2)-sprite_height/2 + 5,-sign(hsp-0.1),1,0,c_white,1)
+draw_sprite_ext(spr_riverladyanim,boatboy_obj.image_index,x,y-sprite_get_height(boatgirl2)-sprite_height/2 + 5,-sign(hsp-0.1),1,0,c_white,1)
 
 
 draw_sprite_ext(skifffront,0,x,y,0.75,0.75,0,c_white,1)

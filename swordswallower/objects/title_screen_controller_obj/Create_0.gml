@@ -19,3 +19,12 @@ timer2=-11
 timer3=-12
 
 redc = make_color_rgb(158,38,38)
+
+anim_t=0
+
+ex1=269
+ey1=673
+ex2=1015
+ey2=800
+ex3=1673
+ey3=605

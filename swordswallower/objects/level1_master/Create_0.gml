@@ -161,7 +161,7 @@ enemy_blood_reds = ds_list_create()
 
 //ds_list_add(enemy_blood_reds,make_color_rgb(121,11,59))
 //ds_list_add(enemy_blood_reds,make_color_rgb(121,11,44))
-ds_list_add(enemy_blood_reds,make_color_rgb(190,39,61)) 
+//ds_list_add(enemy_blood_reds,make_color_rgb(190,39,61)) 
 //ds_list_add(enemy_blood_reds,make_color_rgb(153,14,14))
 ds_list_add(enemy_blood_reds,make_color_rgb(195,14,14))
 ds_list_add(enemy_blood_reds,make_color_rgb(217,4,70))
