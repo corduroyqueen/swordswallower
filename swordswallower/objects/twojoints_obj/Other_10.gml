@@ -3,9 +3,7 @@
 
 
 gpu_set_colorwriteenable(true,true,true,false)
-with twojoints_hand_obj {
-	draw_self()
-}
+
 with rightarm {
 	event_user(3)
 }
@@ -16,4 +14,7 @@ with head {
 gpu_set_colorwriteenable(true,true,true,true)
 with leftarm {
 	event_user(3)
+}
+with twojoints_hand_obj {
+	draw_self()
 }

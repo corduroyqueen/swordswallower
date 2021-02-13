@@ -58,11 +58,13 @@ if state==state_idle {
 			mean(mean(elbow_pos_y,y),y),
 			player_obj.x,player_obj.y),90,270)
 		}
+		elbow_tarang = 195
 		if player_obj.grounded {
 			lel_angle = 175 + 180
 		} else {
 			lel_angle = point_direction(x,y,player_obj.x,player_obj.y) + 180
 		}
+		lel_angle = 175 + 180
 		lunge_target_x = x + dcos(elbow_tarang) * 1400
 		lunge_target_y = y - dsin(elbow_tarang) * 1400
 		lunge_target_y = clamp(lunge_target_y,-50000,y+300)
