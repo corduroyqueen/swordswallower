@@ -2599,6 +2599,14 @@
             }
         },
         {
+            "Key": "2108567f-4218-4c98-affb-19d58ce99f15",
+            "Value": {
+                "id": "225a2a57-6196-4b48-9bc2-904860aa6f49",
+                "resourcePath": "sprites\\spr_bone7\\spr_bone7.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "212c588d-7ff0-40fe-b014-e8a8d1bdbab7",
             "Value": {
                 "id": "b208f30a-72c4-45f5-b6b6-42771dfda440",
@@ -7236,6 +7244,14 @@
                 "id": "f97883fd-0774-48b6-94e3-1f87fa850757",
                 "resourcePath": "objects\/level1_master\/level1_master.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5eff00bc-c8c7-4cd8-9e6f-c398429aca06",
+            "Value": {
+                "id": "28f1d3a7-b391-4fc4-bcb0-58ec315282dc",
+                "resourcePath": "sprites\\spr_bone6\\spr_bone6.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -14135,6 +14151,14 @@
             }
         },
         {
+            "Key": "c620fb10-44d4-4484-933b-4aaf7dd113fd",
+            "Value": {
+                "id": "3c8e767d-4e1c-450a-abc6-b693e8ec47ed",
+                "resourcePath": "sprites\\spr_bone8\\spr_bone8.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c62289f8-2097-41c5-bb61-ad596c0cc6d7",
             "Value": {
                 "id": "fcce5e05-5f97-4988-b841-aa3f129256ba",
@@ -16023,6 +16047,14 @@
             }
         },
         {
+            "Key": "e08cb4eb-099e-47b5-8836-f2508a72b726",
+            "Value": {
+                "id": "a12b28d8-4a7e-471a-8f83-62d7a50af076",
+                "resourcePath": "sprites\\spr_bossexplosion\\spr_bossexplosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e09400d2-08e9-4bd9-bca3-becd751a96e4",
             "Value": {
                 "id": "0f2a513d-6d90-47b2-8287-4d80e5a3ca8d",
@@ -16115,6 +16147,14 @@
             "Value": {
                 "id": "dc72f6eb-30af-42d4-9d73-ad00127b0a19",
                 "resourcePath": "sprites\/leftplat753\/leftplat753.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e1fb836b-945a-4f65-b4e5-b7d534c2cadd",
+            "Value": {
+                "id": "c0ee5251-72e2-4202-9f0e-50c5346e57b6",
+                "resourcePath": "sprites\\spr_bone9\\spr_bone9.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -18163,6 +18203,14 @@
             "Value": {
                 "id": "1c2f068b-f96f-4216-b254-5a35c9e31371",
                 "resourcePath": "sprites\/leg_spr2\/leg_spr2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fe468710-a79a-4912-ada6-bc56348fb364",
+            "Value": {
+                "id": "8e7694b7-5d95-44fe-80a5-53a53317373a",
+                "resourcePath": "sprites\\spr_bone5\\spr_bone5.yy",
                 "resourceType": "GMSprite"
             }
         },
