@@ -228,8 +228,8 @@ draw_sprite_ext(textboxoverlay,0,view_xview,view_yview-30,1,1,0,c_white,1)
 // Draw Text On Screen
 draw_set_color(c_white);
 draw_set_alpha(1)
-draw_text_ext(view_xview+padding,
-view_yview+(padding),
+draw_text_ext(view_xview+padding+10,
+view_yview+(padding)-10,
 global.display_txt,50,max_width);
 
 //arrow

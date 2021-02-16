@@ -118,8 +118,8 @@ if room==subtemple01 {
 				part4_mc = audio_create_sync_group(true)
 				//audio_play_in_sync_group(part4_mc,swsw_bossfight)
 				//audio_start_sync_group(part4_mc)
-				audio_play_sound(swsw_bossfight_new,0,true)
-				audio_sound_gain(swsw_bossfight_new,2,0)
+				audio_play_sound(swsw_bossfight_new2,0,true)
+				audio_sound_gain(swsw_bossfight_new2,0.3,0)
 				player_obj.disable = false
 				go5 = false
 			}
@@ -132,6 +132,15 @@ if room==subtemple01 {
 	//audio_sound_gain(swsw_bossfight,0,0)
 	
 }
+
+//if lower_boss_music {
+//	audio_sound_gain(swsw_bossfight_new2,0.3,60)
+//}
+
+//if lower_boss_music {
+//	audio_sound_gain(swsw_bossfight_new2,0.6,60)
+//}
+
 
 if !go2 {
 	if audio_sound_get_gain(swsw1)>0 {

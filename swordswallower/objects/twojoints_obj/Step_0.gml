@@ -117,6 +117,7 @@ if state==state_idle {
 	if attack==attack_left_lunge {
 		rightarm.state = rightarm.state_defense
 		if leftarm.state == leftarm.state_idle {
+			audio_sound_gain(swsw_bossfight_new2,0.2,120)
 			leftarm.state = leftarm.state_anticipation
 		}
 		
@@ -130,6 +131,7 @@ if state==state_idle {
 	} else if attack==attack_right_lunge {
 		leftarm.state = leftarm.state_defense
 		if rightarm.state == rightarm.state_idle {
+			audio_sound_gain(swsw_bossfight_new2,0.2,120)
 			rightarm.state = rightarm.state_anticipation
 		}
 		if rightarm.state == rightarm.state_reset || rightarm.destroy_arm {
@@ -458,6 +460,15 @@ if state==state_idle {
 	}
 	
 } else if state==state_mouthopen {
+	if !audio_is_playing(boss_cough) {
+		audio_play_sound(boss_cough,0,true)
+	}
+	blood_mouth_timer++
+	if blood_mouth_timer>50 {
+		//just_blood_speed_input(-3,0,25,true,x-120,y-100)
+		just_blood_speed_input(-1,1,0.2,30,true,x-120,y-100)
+		blood_mouth_timer=0
+	}
 	leftarm.state = leftarm.state_defense
 	rightarm.state = rightarm.state_defense
 	sprite_index = boss_openmouth
@@ -471,6 +482,7 @@ if state==state_idle {
 		rightarm.state = rightarm.state_idle
 		state = state_idle
 		timer=0
+		audio_stop_sound(boss_cough)
 	}
 	var lel = false
 	var a = id
@@ -514,3 +526,8 @@ if instance_exists(head) {
 	}
 }
 
+if player_obj.death {
+	if audio_is_playing(boss_cough) {
+		audio_stop_sound(boss_cough)
+	}
+}

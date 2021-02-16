@@ -80,7 +80,7 @@ spikes_visible = false
 thin_floor_visible = false
 
 dev = false
-//dev = true
+dev = true
 
 if dev {
 	//show_debug_overlay(true)
@@ -199,5 +199,5 @@ mapguy_visited = false
 
 boss_intro_timer = 0
 
-
+fps_check_bool = true
 //gpu_set_colorwriteenable(true, true, true, false);

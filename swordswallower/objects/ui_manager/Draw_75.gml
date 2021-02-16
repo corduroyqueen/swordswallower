@@ -29,3 +29,31 @@ if level1_master.dev && !keyboard_check_pressed(ord("V")) {
 	draw_text(19,182,"d time  " + string(delta_time))
 	//gpu_get_state()
 }
+
+
+if fps<52 && level1_master.fps_check_bool { 
+	fps_timer++
+	if fps_timer>180 && !player_obj.intro && !instance_exists(title_screen_obj) {
+		draw_set_font(font2)
+		draw_set_color(c_black)
+		draw_set_alpha(0.5)
+		draw_rectangle(0,0,1920,1080,false)
+		draw_set_color(c_white)
+		draw_set_alpha(1)
+		draw_text(360,200,"hey! we noticed the game is running a little slow.")
+		draw_text(360,300,"this is almost always because the game isn't using your graphics card.")
+		draw_text(360,400,"to fix this, go to settings, system, display, then scroll down and click 'graphics settings'")
+		draw_text(360,500,"then click 'browse,' find the game wherever you've installed it, click 'options' and select 'high performance'.")
+		draw_text(360,600,"if that doesnt help then maybe your laptop isnt plugged in.")
+		draw_text(360,700,"if none of that works we apologize, and hopefully the game is still enjoyable a bit slower.")
+		draw_text(360,800,"we aim to have this fixed in the full release. thank you for your patience.")
+		draw_text(360,900,"press 8 to close this. have fun and thank you for playing!")
+		if keyboard_check_pressed(ord("8")) {
+			level1_master.fps_check_bool = false
+		}
+		
+	}
+}
+if fps>=52 {
+	fps_timer=0
+}

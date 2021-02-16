@@ -33,6 +33,8 @@ if state==state_idle {
 	if timer>100 {
 		timer=0
 		state=state_anticipation
+		//audio_sound_gain(swsw_bossfight_new2,0.1,60)
+		
 	}
 } else if state==state_lunging {
 	//elbow_vel -= 1
@@ -85,6 +87,7 @@ if state==state_idle {
 		//lerp2 = 0.015
 		lerp1 = 0.0005 * m * m
 		lerp2 = 0.001 * m * m
+		
 	} 
 	
 	
@@ -103,6 +106,7 @@ if state==state_idle {
 	if point_distance(x,y,hand_tar_x,hand_tar_y)>1100 
 	//|| (timer>0 && position_meeting(hand_tar_x,hand_tar_y,wall_parent_obj)) 
 	{
+		audio_sound_gain(swsw_bossfight_new2,0.3,60)
 		timer=0
 		elbow_pos_x = x + dcos(elbow_tarang+15) * arm_1_length
 		elbow_pos_y = y - dsin(elbow_tarang+15) * arm_1_length
@@ -155,6 +159,7 @@ if state==state_idle {
 	}
 	timer++
 	if timer>40 {
+		
 		var kk = swsw_boss_lunge_anticipation
 		kk = boss_lunge
 		audio_sound_gain(kk,0.7,0)

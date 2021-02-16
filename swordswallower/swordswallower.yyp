@@ -1471,14 +1471,6 @@
             }
         },
         {
-            "Key": "127ef394-6d3c-419c-b14a-78572fd12edf",
-            "Value": {
-                "id": "d1e3b158-95dc-48b4-b505-ea9fd1987ede",
-                "resourcePath": "sounds\\swsw_bossfight_new\\swsw_bossfight_new.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "129c4439-1a4e-40e2-9cb4-8ecbbc73f451",
             "Value": {
                 "id": "cb3b7491-6eef-4f51-967a-35894257a68f",
@@ -4124,6 +4116,14 @@
                 "id": "4bb791a1-d7b7-4e63-9b1f-7bd3bdce2ecf",
                 "resourcePath": "shaders\/shader_greyscale\/shader_greyscale.yy",
                 "resourceType": "GMShader"
+            }
+        },
+        {
+            "Key": "37acb731-9600-4038-9e88-391491bdf4af",
+            "Value": {
+                "id": "2649a560-d502-4c6a-a238-71ada983a66a",
+                "resourcePath": "sounds\\swsw_bossfight_new2\\swsw_bossfight_new2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -15443,6 +15443,14 @@
             "Value": {
                 "id": "54e91ad9-7b02-4b31-9026-6177a230bebe",
                 "resourcePath": "sounds\/bullhurt\/bullhurt.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d991b058-6cf4-4f8a-a480-eb5623cb94db",
+            "Value": {
+                "id": "c0e630b9-3856-4e7d-8d1b-a55373bc77d1",
+                "resourcePath": "sounds\\boss_cough\\boss_cough.yy",
                 "resourceType": "GMSound"
             }
         },

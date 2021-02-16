@@ -12,6 +12,7 @@ material_meat = 3
 
 material_type = 3
 
+blood_mouth_timer=0
 
 rightarm = instance_create_depth(x,y,depth+1,twojoints_l_arm_obj)
 rightarm.image_alpha = 0.75
