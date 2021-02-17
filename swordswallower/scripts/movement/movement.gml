@@ -192,7 +192,7 @@ if ability_spin_jump {
 		}
 	}
 }
-if held_position {
+if held_position && instance_exists(tail_obj.current_obj) {
 	if tail_obj.current_obj.object_index==wood_wall_obj {
 		//damage_script(10,sign(player_obj.x-x),5,-1)	
 	}

@@ -42,7 +42,7 @@ if obj==breakable_decoration_obj {
 				}
 				destroy = true
 			} else if d_type==1 {
-				sever_particle_script()
+				//sever_particle_script()
 			} else if d_type==2 {
 				sever_g_particle_script()
 			} else if d_type==3 {
