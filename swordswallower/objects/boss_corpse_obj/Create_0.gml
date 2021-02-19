@@ -10,6 +10,8 @@ blood_timer_5 = blood_timer_m * 0.8
 
 blood_color = make_color_rgb(217,4,70)
 
+big_timer=0
+
 var ok = instance_create_depth(tail_obj.x,tail_obj.y,depth-10,sim_intestine_obj)
 ok.num_rings = 10
 //ok.pinned = false

@@ -192,7 +192,7 @@ if state==state_idle {
 		ht++
 		//h1.visible = true
 		//h2.visible = true
-		if ht>150 {
+		if ht>135 {
 			
 			ht=0
 			if leftarm.destroy_arm && rightarm.destroy_arm {
@@ -214,7 +214,7 @@ if state==state_idle {
 			flesh_hands_wall.timer=0
 			flesh_hands_ceiling.timer=0
 			
-		} else if ht>130 {
+		} else if ht>115 {
 			
 			//chosen_wall.x = 1000
 			//chosen_wall.y = -1000
@@ -278,7 +278,7 @@ if state==state_idle {
 		ht++
 		//h1.visible = true
 		//h2.visible = true
-		if ht>150 {
+		if ht>135 {
 			//ht=0
 			if end_hand_switch {
 				//h2_lerp = 50
@@ -305,7 +305,7 @@ if state==state_idle {
 				ht = 1
 			}
 			
-		} else if ht>130 {
+		} else if ht>115 {
 			
 			//if end_hand_switch {
 			//	chosen_wall.on = false
@@ -419,7 +419,9 @@ if state==state_idle {
 			just_blood_speed_input(-1.2,-1.2,0,30,true,tail_obj.x,tail_obj.y)
 			just_blood_speed_input(-0.75,0,0.2,30,true,tail_obj.x,tail_obj.y+20)
 			just_blood_speed_input(-0.75,0,0.2,30,true,tail_obj.x,tail_obj.y-40)
-			
+			if audio_is_playing(boss_cough) {
+				audio_play_sound(boss_cough,0,true)
+			}
 			
 			just_blood_speed_input(-0.5,-1,0.2,50,true,tail_obj.x,tail_obj.y)
 			
@@ -526,7 +528,7 @@ if instance_exists(head) {
 	}
 }
 
-if player_obj.death {
+if player_obj.death || state!=state_mouthopen {
 	if audio_is_playing(boss_cough) {
 		audio_stop_sound(boss_cough)
 	}

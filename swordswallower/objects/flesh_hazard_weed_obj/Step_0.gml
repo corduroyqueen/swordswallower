@@ -4,9 +4,9 @@
 if dormant {
 	image_index-=random_range(0.8,1.0)
 	image_index = max(image_index,0)
-	if image_index>9 {
-		image_index=0
-	}
+	//if image_index>9 {
+	//	image_index=0
+	//}
 	hitbox_on = false
 	//x = player_obj.camx+500
 	//	y = player_obj.camy+10

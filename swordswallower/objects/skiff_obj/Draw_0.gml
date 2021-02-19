@@ -60,9 +60,11 @@ if (floor(leg1out)==50 && loop1<0.04) ||
 leg2_ang = cos(0+loop2*6.2831)*22
 
 
-
-
-draw_sprite_ext(spr_riverladyanim,boatboy_obj.image_index,x,y-sprite_get_height(boatgirl2)-sprite_height/2 + 5,-sign(hsp-0.1),1,0,c_white,1)
+npc_timer+=0.5
+if npc_timer>5.9 {
+	npc_timer=0
+}
+draw_sprite_ext(spr_riverladyanim,floor(npc_timer),x,y-sprite_get_height(boatgirl2)-sprite_height/2 + 5,-sign(hsp-0.1),1,0,c_white,1)
 
 
 draw_sprite_ext(skifffront,0,x,y,0.75,0.75,0,c_white,1)

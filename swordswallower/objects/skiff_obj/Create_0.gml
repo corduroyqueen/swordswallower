@@ -5,6 +5,8 @@ startx = x
 dt=1
 sword_present = false
 
+npc_timer=0
+
 material_stone = 1
 material_wood = 2
 material_meat = 3

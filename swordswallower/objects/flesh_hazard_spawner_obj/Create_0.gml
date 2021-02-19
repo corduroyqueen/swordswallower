@@ -16,5 +16,5 @@ intangible = false
 l=0
 
 off_time = 120
-on_time = 120
+on_time = 30
 dormant = false
