@@ -5,6 +5,11 @@ if sprite_index==s_player_idle_e {
 	cape_p_r_x[|0]+=(8 * image_xscale)
 }
 cape_p_r_y[|0] = 150 + arm_pos_table_y[image_index] - 6
+if player_obj.k_down {
+	cape_p_r_y[|0]+=20
+}
+
+
 var farx = player_obj.x-150
 var fary = player_obj.y-150
 var ground 

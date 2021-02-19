@@ -116,6 +116,10 @@ if state==state_idle {
 		player_obj.shake_d=15
 		player_obj.camera_shake_d = true	
 		
+		
+		
+		var posx = hand.x
+		var posy = hand.y
 		var ello = lettuce_chop_louder
 		audio_sound_gain(ello,1.0,0)
 		audio_sound_pitch(ello,random_range(0.9,1.1))

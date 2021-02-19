@@ -3,19 +3,19 @@
 
 
 if level1_master.dev {
-	if keyboard_check_pressed(ord("O")) {
-		audio_sound_gain(sub_bass1,1,0)
-		audio_sound_gain(sub_bass2,0,0)
+	//if keyboard_check_pressed(ord("O")) {
+	//	audio_sound_gain(sub_bass1,1,0)
+	//	audio_sound_gain(sub_bass2,0,0)
 	
-		audio_sound_gain(swsw1,0.19,0)
-	}
+	//	audio_sound_gain(swsw1,0.19,0)
+	//}
 
-	if keyboard_check_pressed(ord("P")) {
-		audio_sound_gain(sub_bass1,0,0)
-		audio_sound_gain(sub_bass2,1,0)
+	//if keyboard_check_pressed(ord("P")) {
+	//	audio_sound_gain(sub_bass1,0,0)
+	//	audio_sound_gain(sub_bass2,1,0)
 	
-		audio_sound_gain(swsw1,0,0)
-	}
+	//	audio_sound_gain(swsw1,0,0)
+	//}
 }
 
 if room==subtemple01 {

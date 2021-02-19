@@ -10,7 +10,7 @@ if timer<9000 && timer>50 {
 camx = camera_get_view_x(view_camera[0])
 camy = camera_get_view_y(view_camera[0])
 
-if timer>500 {
+if timer>300 {
 	fade_alpha+=0.02
 
 	draw_set_alpha(fade_alpha)
@@ -20,7 +20,7 @@ if timer>500 {
 	reflection_obj.image_alpha = 1 - fade_alpha
 }
 
-if timer>1100 {
+if timer>700 {
 	game_end()	
 }
 draw_set_alpha(1)

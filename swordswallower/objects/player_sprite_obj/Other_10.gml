@@ -52,13 +52,13 @@ if sprite_index==spr_mc_somersault || player_obj.zoom_timer_bool {
 	
 } else if pythag(player_obj.hsp,player_obj.vsp)<1 {
 	if player_obj.k_down {
-		draw_sprite_ext(spr_mc_face_idle,headi,x,y,image_xscale,image_yscale,0,c_white,1)
+		draw_sprite_ext(spr_mc_face_idle,headi,x+10*-image_xscale,y,image_xscale,image_yscale,0,c_white,1)
 	} else {
 		draw_sprite_ext(spr_mc_face_idle,headi,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
 	}
 } else {
 	if player_obj.k_down {
-		draw_sprite_ext(spr_mc_face_idle,headi,x,y,image_xscale,image_yscale,0,c_white,1)
+		draw_sprite_ext(spr_mc_face_idle,headi,x+10*-image_xscale,y,image_xscale,image_yscale,0,c_white,1)
 	} else if player_obj.k_left || player_obj.k_right {
 		draw_sprite_ext(spr_mc_face_facing,headi,x+head_pos_table_x[image_index]*-image_xscale,y+head_pos_table_y[image_index],image_xscale,image_yscale,0,c_white,1)
 	} else {
@@ -81,13 +81,13 @@ if !player_obj.zoom_timer_bool {
 		
 	} else if pythag(player_obj.hsp,player_obj.vsp)<1 {
 		if player_obj.k_down {
-			draw_sprite_ext(spr_mc_face_idle,headi,x,y,image_xscale,image_yscale,0,c_white,1)
+			draw_sprite_ext(spr_mc_face_idle,headi,x+10*-image_xscale,y,image_xscale,image_yscale,0,c_white,1)
 		} else {
 			draw_sprite_ext(spr_mc_face_idle,headi,x+2*-image_xscale,y-26,image_xscale,image_yscale,0,c_white,1)
 		}
 	} else {
 		if player_obj.k_down {
-			draw_sprite_ext(spr_mc_face_idle,headi,x,y,image_xscale,image_yscale,0,c_white,1)
+			draw_sprite_ext(spr_mc_face_idle,headi,x+10*-image_xscale,y,image_xscale,image_yscale,0,c_white,1)
 		} else if player_obj.k_left || player_obj.k_right {
 			draw_sprite_ext(spr_mc_face_facing,headi,x+head_pos_table_x[image_index]*-image_xscale,y+head_pos_table_y[image_index],image_xscale,image_yscale,0,c_white,1)
 		} else {
