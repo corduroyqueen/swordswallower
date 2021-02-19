@@ -115,6 +115,35 @@ if state==state_idle {
 		state=state_knockback
 		player_obj.shake_d=15
 		player_obj.camera_shake_d = true	
+		
+		var ello = lettuce_chop_louder
+		audio_sound_gain(ello,1.0,0)
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	
+		ello = squish2
+		audio_sound_gain(ello,1.5,0)
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	
+		ello = choose(s_squelch_01,s_squelch_02,s_squelch_03,s_squelch_04,s_squelch_05,
+			s_squelch_06,s_squelch_07,s_squelch_08)
+		audio_sound_gain(ello,0.5,0)
+		audio_sound_pitch(ello,random_range(1.0,1.2))
+		audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+		//ello = sword_crunch
+		//audio_sound_gain(ello,1.5,0)
+		//audio_sound_pitch(ello,random_range(0.9,1.1))
+		//audio_play_sound_at(ello,posx,posy,10,100,300,1,false,0)
+	
+		var ello = impact_1
+		audio_sound_gain(ello,0.25,0)
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+		audio_play_sound_at(ello,
+			posx,
+			posy,
+			10,100,300,1,false,0)
 	}
 } else if state==state_knockback {
 	//elbow_pos_x = x-399
