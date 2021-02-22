@@ -10,6 +10,7 @@ if start {
 	//audio_sound_gain(sub_bass2,0,0)
 	
 	audio_play_in_sync_group(subtemple_mc,swsw1)
+	
 	//audio_sound_gain(swsw1,1,0)
 	
 	//audio_play_in_sync_group(subtemple_mc,gmc)

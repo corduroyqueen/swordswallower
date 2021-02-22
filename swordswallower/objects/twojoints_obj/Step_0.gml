@@ -490,7 +490,7 @@ if state==state_idle {
 	var a = id
 	
 	with head {
-		if place_meeting(x,y,tail_obj) {
+		if place_meeting(x,y,tail_obj) && player_obj.tail_throwing {
 			lel = true
 			var e = id
 			tail_obj.planted_rejecting = true
