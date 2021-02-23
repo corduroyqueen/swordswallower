@@ -12,6 +12,15 @@ height = argument7
 
 blood_splat_script()
 
+var color
+if !variable_instance_exists(other.id,"blood_color") {
+	other.blood_color = global.blood_color
+}
+if player_obj.x<40000 {	
+	color = other.blood_color
+} else{
+	color = make_color_rgb(143-100,229-100,225-100)
+}
 for (i=0;i<80;i++){
 	
 	var scalevar = (power(((amount+40-i)/(amount+40)+1),1.15) - 1)/1.15
@@ -29,11 +38,8 @@ for (i=0;i<80;i++){
 		
 		blood_p_bounce[|n] = 0.25
 		
+		blood_pc[| n] = color
 		
-		if !variable_instance_exists(other.id,"blood_color") {
-			other.blood_color = global.blood_color
-		}
-		blood_pc[| n] = other.blood_color
 		blood_phsp[| n] = cos(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10
 		blood_pvsp[| n] = -sin(degtorad(angle+random_range(-30,30))) * (other.amount+20)/(other.amount+41-other.i) * 10 - 5 
 		

@@ -12,10 +12,11 @@ blood_color = make_color_rgb(217,4,70)
 
 big_timer=0
 //audio_stop_all()
-var ok = ocean_ambience
-
-			audio_sound_gain(ok,1,0)
-			audio_sound_pitch(ok,0.85)
+var ok = surrogatedrone
+audio_sound_set_track_position(ok,3)
+			audio_sound_gain(ok,0.75,0)
+			audio_sound_gain(ok,0,10000)
+			audio_sound_pitch(ok,1)
 audio_play_sound(ok,0,true)
 			
 			
