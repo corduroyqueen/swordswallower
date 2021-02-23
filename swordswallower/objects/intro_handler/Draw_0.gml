@@ -14,65 +14,207 @@ if player_obj.intro {
 		
 	if intro_timer<black_timer_m {
 		
-		timer_audio_script(metal_door,intro_timer,-25)
-		timer_audio_script(Emergency_Sandbag_Heavy_Hitting_Rocks_02,intro_timer,-25)
-		timer_audio_script(sword_thud_1,intro_timer,-25)
+		//timer_audio_script(metal_door,intro_timer,-25)
+		//timer_audio_script(Emergency_Sandbag_Heavy_Hitting_Rocks_02,intro_timer,-25)
+		//timer_audio_script(sword_thud_1,intro_timer,-25)
 		
-		timer_audio_script(meat_pull_outs_1,intro_timer,-25)
+		//timer_audio_script(meat_pull_outs_1,intro_timer,-25)
 		
 		
-		var ok = footstep5
-		audio_sound_pitch(ok,random_range(0.8,1.2))
+		var ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+				audio_sound_gain(ok,0.75,0)
+				
+				audio_sound_pitch(ok,random_range(0.9,1.1))
+				//audio_manager(ok,0,false,0)
 		timer_audio_script(ok,intro_timer,0)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		timer_audio_script(ok,intro_timer,20)
+		timer_audio_script(ok,intro_timer,16)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		timer_audio_script(ok,intro_timer,40)
+		timer_audio_script(ok,intro_timer,30)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		timer_audio_script(ok,intro_timer,60)
+		timer_audio_script(ok,intro_timer,45)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		timer_audio_script(ok,intro_timer,80)
+		timer_audio_script(ok,intro_timer,57)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
+		timer_audio_script(ok,intro_timer,70)
+
+		
+		//timer_audio_script(Juicy_Burst_VM_03,intro_timer,63)
+		//timer_audio_script(Knife_Hit_Wall_2244,intro_timer,63)
+		//timer_audio_script(eye_scream,intro_timer,63)
+		
+		if intro_timer==75 {
+			audio_play_sound(gsound.s_sword_whoosh,0,true)
+		}
+		
+		
+		if intro_timer==100 {
+			audio_stop_sound(gsound.s_sword_whoosh)
+		}
+		
+		
+		timer_audio_script(eye_scream,intro_timer,100)
+		
+		timer_audio_script(Knife_Pull_140,intro_timer,100)
+			
+		ok = sword_thud_1
+		audio_sound_gain(ok,random_range(0.3,0.35),0)
+		audio_sound_pitch(ok,random_range(0.9,1.1))
 		timer_audio_script(ok,intro_timer,100)
+			
+		var bruh = lettuce_chop
+		audio_sound_pitch(bruh,random_range(0.75,1.25))
+		audio_sound_gain(bruh,0.32,0)
+		timer_audio_script(bruh,intro_timer,100)
+			
+		bruh = sword_crunch_1
+		audio_sound_pitch(bruh,random_range(2,3))
+		audio_sound_gain(bruh,random_range(0.3,0.6),0)
+		timer_audio_script(bruh,intro_timer,100)
+			
 		
-		timer_audio_script(Juicy_Burst_VM_03,intro_timer,63)
-		timer_audio_script(Knife_Hit_Wall_2244,intro_timer,63)
-		timer_audio_script(eye_scream,intro_timer,63)
+		var lel = Emergency_Sandbag_Heavy_Hitting_Rocks_02
+		audio_sound_pitch(lel,random_range(0.9,1.1))
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	timer_audio_script(lel,intro_timer,110)
+		
+	var ello = sword_strike_1
+	audio_sound_gain(ello,0.3,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	timer_audio_script(ello,intro_timer,110)
 		
 		
+	ello = gsound.s_sword_hit_metal_wall
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	//audio_manager(gsound.s_sword_hit_metal_wall,0,false,0)
+	
+	timer_audio_script(ello,intro_timer,110)
 		
-		timer_audio_script(sword_reject_1,intro_timer,75)
-		timer_audio_script(lettuce_chop,intro_timer,78)
-		timer_audio_script(sword_reject_1,intro_timer,175)
+	ello = impact_1
+	audio_sound_gain(ello,0.5,0)
+	audio_sound_pitch(ello,random_range(0.9,1.1))
+	timer_audio_script(ello,intro_timer,110)
+	//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+	
 		
-		timer_audio_script(Juicy_Burst_VM_03,intro_timer,200)
-		timer_audio_script(Knife_Hit_Wall_2244,intro_timer,200)
-		timer_audio_script(eye_scream,intro_timer,200)
-		
-		audio_sound_pitch(ok,random_range(0.8,1.2))
+		var ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+				audio_sound_gain(ok,0.75,0)
+				
+				audio_sound_pitch(ok,random_range(0.9,1.1))
+				//audio_manager(ok,0,false,0)
 		timer_audio_script(ok,intro_timer,210)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
 		timer_audio_script(ok,intro_timer,235)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		timer_audio_script(ok,intro_timer,250)
+		timer_audio_script(ok,intro_timer,255)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
 		audio_sound_pitch(ok,random_range(0.8,1.2))
-		timer_audio_script(ok,intro_timer,270)
+		timer_audio_script(ok,intro_timer,280)
 		
 		
-		timer_audio_script(sword_reject_1,intro_timer,275)
-		timer_audio_script(lettuce_chop,intro_timer,279)
+		var idle_sound = choose(zomb_idle1,zomb_idle2,zomb_idle3)
+		audio_sound_pitch(idle_sound,random_range(0.8,1.2))
+		timer_audio_script(idle_sound,intro_timer,240)
 		
+		if intro_timer==270 {
+			audio_play_sound(gsound.s_sword_whoosh,0,true)
+		}
+		
+		
+		if intro_timer==310 {
+			audio_stop_sound(gsound.s_sword_whoosh)
+		}
+		
+		
+		
+		if intro_timer==330 {
+			audio_play_sound(gsound.s_sword_whoosh,0,true)
+		}
+		
+		
+		timer_audio_script(Knife_Pull_140,intro_timer,100)
+			
+		ok = sword_thud_1
+		audio_sound_gain(ok,random_range(0.3,0.35),0)
+		audio_sound_pitch(ok,random_range(0.9,1.1))
+		timer_audio_script(ok,intro_timer,370)
+			
+		var bruh = lettuce_chop
+		audio_sound_pitch(bruh,random_range(0.75,1.25))
+		audio_sound_gain(bruh,0.32,0)
+		timer_audio_script(bruh,intro_timer,370)
+			
+		bruh = sword_crunch_1
+		audio_sound_pitch(bruh,random_range(2,3))
+		audio_sound_gain(bruh,random_range(0.3,0.6),0)
+		timer_audio_script(bruh,intro_timer,370)
+		
+		ok = choose(zomb_death3)
+		audio_sound_pitch(ok,random_range(0.8,1.2))
+		audio_sound_gain(ok,0.2,0)
+		timer_audio_script(ok,intro_timer,375)
+		
+		if intro_timer==400 {
+			audio_stop_sound(gsound.s_sword_whoosh)
+		}
+		
+		
+		var lel = Emergency_Sandbag_Heavy_Hitting_Rocks_02
+		audio_sound_pitch(lel,random_range(0.9,1.1))
+		//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+		timer_audio_script(lel,intro_timer,400)
+		
+		var ello = sword_strike_1
+		audio_sound_gain(ello,0.3,0)
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		//audio_manager(Emergency_Sandbag_Heavy_Hitting_Rocks_02,0,false,0)
+		timer_audio_script(ello,intro_timer,400)
+		
+		
+		ello = gsound.s_sword_hit_metal_wall
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		//audio_manager(gsound.s_sword_hit_metal_wall,0,false,0)
+	
+		timer_audio_script(ello,intro_timer,400)
+		
+		ello = impact_1
+		audio_sound_gain(ello,0.5,0)
+		audio_sound_pitch(ello,random_range(0.9,1.1))
+		timer_audio_script(ello,intro_timer,400)
+	
 		timer_audio_script(sword_reject_1,intro_timer,400)
-		timer_audio_script(lettuce_chop,intro_timer,403)
+		timer_audio_script(lettuce_chop,intro_timer,400)
 		
 		timer_audio_script(eye_scream,intro_timer,400)
 		timer_audio_script(Juicy_Burst_VM_03,intro_timer,403)
 		timer_audio_script(Knife_Hit_Wall_2244,intro_timer,410)
 		timer_audio_script(Emergency_Sandbag_Heavy_Hitting_Rocks_02,intro_timer,410)
 		
-		timer_audio_script(eye_scream,intro_timer,425)
-		timer_audio_script(eye_scream,intro_timer,450)
-		timer_audio_script(eye_scream,intro_timer,475)
+		var ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+				audio_sound_gain(ok,0.75,0)
+				
+				audio_sound_pitch(ok,random_range(0.9,1.1))
+				//audio_manager(ok,0,false,0)
+		timer_audio_script(ok,intro_timer,380)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+		audio_sound_pitch(ok,random_range(0.8,1.2))
+		timer_audio_script(ok,intro_timer,401)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+		audio_sound_pitch(ok,random_range(0.8,1.2))
+		timer_audio_script(ok,intro_timer,419)
+		ok = choose(s_footstep_wood_01,s_footstep_wood_02,s_footstep_wood_03)
+		audio_sound_pitch(ok,random_range(0.8,1.2))
+		timer_audio_script(ok,intro_timer,438)
+		
+		timer_audio_script(eye_scream,intro_timer,440)
 		
 		if intro_timer>=1 && intro_timer<2 {
 			//just_blood_input(0,0,0,-8,200,0,4000,1000)
@@ -81,10 +223,11 @@ if player_obj.intro {
 			//x+=900
 			//just_blood_input(0,0,0,-15,200,0,4000,1000)
 			audio_stop_sound(surrogatedrone)
+			audio_play_sound(ocean_ambience,0,false)
 		}
 		
 		if intro_timer>=600 {
-			audio_stop_sound(meat_pull_outs_1)	
+			audio_stop_sound(ocean_ambience)
 		}
 		
 		if intro_timer>=black_timer_m-1 {

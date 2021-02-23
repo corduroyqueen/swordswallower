@@ -73,3 +73,16 @@ s_y = sprites_y[sv]
 light_strength_bkd = 0.3
 light_strength_walls = 0.55
 light_radius = 0.5
+
+
+sprites2 = array_create(10)
+sprites2[0] = newstatue3
+sprites2[1] = newstatue1
+sprites2[2] = newstatue2
+sprites2[3] = newstatue4
+sprites2[4] = newstatue3
+
+if x>40000 {
+	sv = floor(x) % 5
+	s_sprite = sprites2[sv]
+}

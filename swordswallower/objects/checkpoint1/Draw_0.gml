@@ -8,10 +8,11 @@ gpu_set_colorwriteenable(true,true,true,false)
 if setpoint {
 	//draw_text(x-48,y-64,"checkpoint!")
 	//draw_circle(x,y,5,true)
-	draw_sprite_ext(s_sprite,0,x,y,1,1,0,c_white,1)
+	
 	
 	
 	if checkpoint_manager.checkpoint == self && !starting_bool {
+		draw_sprite_ext(s_sprite,0,x,y,1,1,0,c_white,1)
 		gpu_set_blendmode(bm_add)
 		
 		if point_distance(x,y,player_obj.camx+960,player_obj.camy+540)<1000 {
@@ -76,6 +77,8 @@ if setpoint {
 		
 		shader_reset()
 	
+	} else {
+		draw_sprite_ext(s_sprite,1,x,y,1,1,0,c_white,1)
 	}
 	
 } else {

@@ -55,13 +55,13 @@ if screenstate==0 {
 	
 	var ang = point_direction(ex1,ey1,mouse_x,mouse_y)
 	var dist = min(point_distance(ex1,ey1,mouse_x,mouse_y)/20,75)
-	draw_sprite_ext(spr_leftestpupil,0,ex1 + dcos(ang)*dist,ey1- dsin(ang)*dist,1-dist/100,1,ang,0,alpha)
+	draw_sprite_ext(spr_leftestpupil,0,ex1 + dcos(ang)*dist,ey1- dsin(ang)*dist,1-dist/100,1,ang,c_white,alpha)
 	ang = point_direction(ex2,ey2,mouse_x,mouse_y)
 	dist = min(point_distance(ex2,ey2,mouse_x,mouse_y)/20,60)
-	draw_sprite_ext(spr_middlemiddlepupil,0,ex2 + dcos(ang)*dist,ey2- dsin(ang)*dist,1-dist/75,1,ang,0,alpha)
+	draw_sprite_ext(spr_middlemiddlepupil,0,ex2 + dcos(ang)*dist,ey2- dsin(ang)*dist,1-dist/75,1,ang,c_white,alpha)
 	ang = point_direction(ex3,ey3,mouse_x,mouse_y)
 	dist = min(point_distance(ex3,ey3,mouse_x,mouse_y)/20,100)
-	draw_sprite_ext(spr_rightestpulil,0,ex3 + dcos(ang)*dist,ey3- dsin(ang)*dist,1-dist/125,1,ang,0,alpha)
+	draw_sprite_ext(spr_rightestpulil,0,ex3 + dcos(ang)*dist,ey3- dsin(ang)*dist,1-dist/125,1,ang,c_white,alpha)
 	
 	//draw_circle(ex1,ey1,10,false)
 	//draw_circle(ex2,ey2,10,false)

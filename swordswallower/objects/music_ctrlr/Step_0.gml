@@ -46,7 +46,7 @@ if room==subtemple01 {
 			audio_sound_gain(surrogatedrone,(art_surface_setter.void_black_rect_a)*0.35,0)
 		}
 	} else {
-		if audio_is_playing(surrogatedrone) {
+		if audio_is_playing(surrogatedrone) && !instance_exists(title_screen_obj) {
 			audio_stop_sound(surrogatedrone)
 		}
 	}

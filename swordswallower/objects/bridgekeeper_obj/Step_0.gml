@@ -157,4 +157,4 @@ if plf==true && player_present = false {
 image_xscale = sign(x-player_obj.x)
 
 plf = player_present
-image_speed=0.5
+image_index+=0.15

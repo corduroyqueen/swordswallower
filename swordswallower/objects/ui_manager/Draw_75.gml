@@ -21,6 +21,8 @@ if !player_obj.death && !player_obj.ending_lock && !instance_exists(title_screen
 	draw_circle(mouse_ui_x-player_obj.camx,mouse_ui_y-player_obj.camy,9,false)
 }
 
+
+
 if level1_master.dev && !keyboard_check_pressed(ord("V")) {
 	draw_set_font(lato)
 	draw_text(19,89,"fps  " + string(fps))	

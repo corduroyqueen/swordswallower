@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 if player_obj.death {
-	if audio_is_playing(venus_searching_1) {
-		audio_stop_sound(venus_searching_1)	
-		audio_stop_sound(venus_searching_2)	
+	if audio_is_playing(s1) {
+		audio_stop_sound(s1)	
+		audio_stop_sound(s2)	
 	}
 }
 if death {
@@ -50,9 +50,9 @@ if death {
 		
 		if !wall_raycast_checker(player_obj) || point_distance(x,y,player_obj.x,player_obj.y)>1900 {
 			atk_timer=-1
-			if audio_is_playing(venus_searching_1) {
-				audio_stop_sound(venus_searching_1)	
-				audio_stop_sound(venus_searching_2)	
+			if audio_is_playing(s1) {
+				audio_stop_sound(s1)	
+				audio_stop_sound(s2)	
 			}
 			head.image_angle = lerp(head.image_angle,image_angle,1)
 		} else {
@@ -63,8 +63,8 @@ if death {
 		if atk_timer>0 && atk_timer<2 {
 			
 			var pitch = random_range(0.8,1.5)
-			var s1 = venus_searching_1
-			var s2 = venus_searching_2
+			s1 = venus_searching_1
+			s2 = venus_searching_2
 			audio_sound_pitch(s1,pitch)
 			audio_sound_pitch(s2,pitch)
 			
@@ -81,9 +81,9 @@ if death {
 		} else {
 			head.x = x
 			head.y = y
-			if audio_is_playing(venus_searching_1) {
-				audio_stop_sound(venus_searching_1)	
-				audio_stop_sound(venus_searching_2)	
+			if audio_is_playing(s1) {
+				audio_stop_sound(s1)	
+				audio_stop_sound(s2)	
 			}
 			
 		}

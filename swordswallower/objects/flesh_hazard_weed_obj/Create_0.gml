@@ -29,5 +29,5 @@ startx = x
 starty = y
 
 flip = choose(-1,1)
-
+image_speed=0
 sprite_index = choose(spr_handanim2,spr_hand3,spr_handanims1)

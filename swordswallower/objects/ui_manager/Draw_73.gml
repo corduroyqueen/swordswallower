@@ -159,8 +159,8 @@ if player_obj.death {
 		mouse_ui_x = lerp(mouse_ui_x,global.mousepx,0.2)
 		mouse_ui_y = lerp(mouse_ui_y,global.mousepy,0.2)
 	} else if input_controller.controller == input_controller.controller_keyboard {
-		mouse_ui_x = mouse_x
-		mouse_ui_y = mouse_y
+		mouse_ui_x = global.mousepx
+		mouse_ui_y = global.mousepy
 	}
 	//if !keyboard_check_pressed(ord("V")) {
 		//draw_sprite(mouse_ui_spr,player_obj.k_dash || player_obj.k_fire,mouse_ui_x,mouse_ui_y)

@@ -168,7 +168,7 @@ if death {
 		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,death_blood_spawn_x,death_blood_spawn_y)
 	}
 	var bruh = lettuce_chop_louder
-	audio_sound_pitch(bruh,random_range(0.75,1.25))
+	audio_sound_pitch(bruh,random_range(0.75,1))
 	audio_play_sound(bruh,0,false)
 	
 	go = instance_create_depth(x,y-30,0,snakeheaddead_obj)

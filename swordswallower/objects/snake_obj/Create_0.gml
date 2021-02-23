@@ -71,3 +71,5 @@ head.parent = self
 hit = noone
 
 headhit = false
+s1=0
+s2=0

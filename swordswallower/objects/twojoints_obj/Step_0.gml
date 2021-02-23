@@ -5,6 +5,11 @@ head.y = y - 30
 head.image_angle = 0
 head.image_index = 0
 if docile {
+	if level1_master.boss_intro_timer>100 && level1_master.boss_intro_timer<102 {
+		var kk = boss_death
+		audio_sound_gain(kk,0.7,0)
+		audio_play_sound(kk,0,false)
+	}
 	if level1_master.boss_intro_timer > 200 {
 		docile = false
 	}
@@ -357,6 +362,7 @@ if state==state_idle {
 				flesh_hands_floor.dormant = false
 				if ht>50 {
 					flesh_hands_floor.timer=flesh_hands_floor.off_time-1
+					chosen_wall.timer=chosen_wall.off_time-1
 				}
 				//h2.mask_index = nothing1
 			}
@@ -436,6 +442,8 @@ if state==state_idle {
 			player_obj.zoom_on = true
 			
 			instance_destroy(leftarm)
+			
+			audio_stop_sound(swsw_bossfight_new2)
 			
 			instance_destroy(rightarm)
 			instance_destroy(head)

@@ -11,6 +11,7 @@ audio_sound_gain(bruh,0.32,0)
 audio_play_sound(bruh,0,false)
 			
 bruh = sword_crunch_1
-audio_sound_pitch(bruh,random_range(2,3))
+audio_sound_pitch(bruh,random_range(0.7,1.1))
 audio_sound_gain(bruh,random_range(0.3,0.6),0)
 audio_play_sound(bruh,0,false)
+

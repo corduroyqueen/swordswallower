@@ -79,11 +79,24 @@ if controller = controller_ds4 {
 	//display_mouse_set(
 	//	player_obj.camx+display_mouse_get_x()-(player_obj.camx-player_obj.cam_width_h),
 	//	player_obj.camy+display_mouse_get_y()-(player_obj.camy-player_obj.cam_height_h))
-	global.mousepx = player_obj.camx+display_mouse_get_x()/(1920/display_get_width())
-	global.mousepy = player_obj.camy+display_mouse_get_y()/(1080/display_get_height())
 	
-	global.mousepx = mouse_x
-	global.mousepy = mouse_y
+	//global.mousepx = player_obj.camx+display_mouse_get_x()/(1920/display_get_width())
+	//global.mousepy = player_obj.camy+display_mouse_get_y()/(1080/display_get_height())
+	
+	//global.mousepx = mouse_x
+	//global.mousepy = mouse_y
+	//sdm(mouse_x)
+	//sdm(mouse_y)
+	//global.mousepx = floor(global.mousepx + (mouse_x - player_obj.camx))
+	//global.mousepy = floor(global.mousepy + (mouse_y - player_obj.camy))
+	global.mousepx = floor(global.mousepx + (window_mouse_get_x()-960) + player_obj.camxdiff)
+	global.mousepy = floor(global.mousepy + (window_mouse_get_y()-540) + player_obj.camydiff)
+	
+	//global.mousepx++
+	//global.mousepy++
+	
+	//global.mousepx=floor(global.mousepx +mouse_x-player_obj.camx)
+	//global.mousepy= floor(global.mousepy + mouse_y-player_obj.camy)
 	
 	with player_obj {
 		k_left = keyboard_check(ord("A"))
@@ -128,6 +141,25 @@ if controller = controller_ds4 {
 			gamepad_axis_value(0,gp_axisrv))>0.3 {
 		controller = controller_ds4
 	}
+	if global.mousepx<=player_obj.camx {
+		global.mousepx = player_obj.camx+1
+	}
+	if global.mousepx>=player_obj.camx+1920 {
+		global.mousepx = player_obj.camx+1919
+	}
+	if global.mousepy<=player_obj.camy {
+		global.mousepy = player_obj.camy+1
+	}
+	if global.mousepy>=player_obj.camy+1080 {
+		global.mousepy = player_obj.camy+1079
+	}
+	
+	
+	
+	window_mouse_set(960,540)
+	//sdm(mouse_x)
+	//sdm(mouse_y)
+
 }
 
 
@@ -137,3 +169,17 @@ if skiff_obj.go && !skiff_obj.done {
 }
 mouse_x_last = mouse_x
 mouse_y_last = mouse_y
+
+//if global.mousepx<player_obj.camx{
+//	window_mouse_set(player_obj.camx+5,global.mousepy)
+//}
+//if global.mousepx>player_obj.camx+1920{
+//	window_mouse_set(player_obj.camx+1915,global.mousepy)
+//}
+//if global.mousepy<player_obj.camy{
+//	window_mouse_set(global.mousepx,player_obj.camy+5)
+//}
+//if global.mousepy>player_obj.camy+1080{
+//	window_mouse_set(global.mousepx,player_obj.camy+1075)
+//}
+

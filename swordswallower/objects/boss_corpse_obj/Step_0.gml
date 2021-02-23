@@ -35,10 +35,25 @@ if big_timer<200 {
 	}
 } else {
 	if sprite_index==stomachburst {
+		player_obj.shake_d=20
+		player_obj.camera_shake_d = true
 		sprite_index = spr_bossexplosion
 		image_index = 0
 		image_speed=1.5
 		event_user(1)
+		
+		audio_play_sound(Knife_Pull_140,0,false)
+			
+			var ok = sword_thud_1
+			audio_sound_gain(ok,random_range(0.5,0.6),0)
+			audio_sound_pitch(ok,random_range(0.9,1.1))
+			audio_play_sound(ok,0,false)
+
+			
+			bruh = venus_die_1
+			audio_sound_pitch(bruh,random_range(0.8,1.2))
+			audio_sound_gain(bruh,random_range(0.5,0.8),0)
+			audio_play_sound(bruh,0,false)
 		just_blood_speed_input(-2,-2,0.2,25,true,x-40,y+130)
 	}
 }

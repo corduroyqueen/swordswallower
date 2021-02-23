@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 if point_distance(x,player_obj.y,player_obj.x,player_obj.y)<300
-&& point_distance(player_obj.x,y,player_obj.x,player_obj.y)<300{
+&& player_obj.x<x-80
+&& player_obj.x>x-250{
 	player_present = true
 } else {
 	player_present = false

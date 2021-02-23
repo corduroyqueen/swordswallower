@@ -15,3 +15,6 @@ controller_present = false
 
 mouse_x_last = mouse_x
 mouse_y_last = mouse_y
+
+global.mousepx = mouse_x
+global.mousepy = mouse_y

@@ -13,20 +13,21 @@ if dormant {
 	//mask_index = nothing1
 } else {
 	if active {
-		image_index+=random_range(0.6,0.8)
-		image_index = min(image_index,11)
+		image_index+=random_range(0.4,0.6)
+		image_index = min(image_index,7)
 		x = startx
 		y = starty
 		hitbox_on = true
+		image_speed=0
 	//mask_index=sprite_index
 	} else {
 		
 		
 		//x=33361
 		//y=2850
-		
+		image_speed=0.5
 		if master.timer>master.off_time-50 {
-			image_index+=0.00000001
+			image_index+=0.04
 		} else {
 			image_index-=random_range(0.8,1.0)
 		}
