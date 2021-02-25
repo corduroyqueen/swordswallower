@@ -5,7 +5,7 @@ if room!=subtemple01 {
 	return
 }
 
-
+if controllers_disabled { controller = controller_keyboard }
 if controller = controller_ds4 {
 	//display_mouse_set(
 	

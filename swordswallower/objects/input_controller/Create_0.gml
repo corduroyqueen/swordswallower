@@ -18,3 +18,5 @@ mouse_y_last = mouse_y
 
 global.mousepx = mouse_x
 global.mousepy = mouse_y
+
+controllers_disabled = true
