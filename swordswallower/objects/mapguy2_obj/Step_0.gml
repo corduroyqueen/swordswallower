@@ -70,7 +70,7 @@ if times_spoken<1 {
 	dialogue_array[1] = "I saw you climbing up the cliffside! That's a incredible blade in your possession. "
 	dialogue_array[2] = "I haven't seen anyone use a sword like that in a long time. Other than the Queen, of course. "
 	dialogue_array[3] = "...hm? A map? "
-	dialogue_array[4] = "...alright, I'll give you one. In the name of potential future collaborations between us, hopefully. "
+	dialogue_array[4] = "...alright, I'll give you one. In the name of potential future collaborations between us. "
 	dialogue_array[5] = "Here you go. I saw something peculiar nearby and marked it down, so it may be of some use to you. "
 	dialogue_array[6] = "end"
 	
@@ -123,6 +123,7 @@ if player_present && !boatboy {
 			    global.placeholderTxt = "";
 			    global.temp_placeholderTxt = "";
 			    global.txtIndex = 1;
+				character_x=other.x
 			
 			}
 			

@@ -21,6 +21,10 @@ if local_obj.object_index == impale_circle_obj {
 	}
 }
 
+if local_obj.object_index==cow_boss_horns_obj {
+	local_obj.boss_is_hittable = false
+}
+
 		
 planted=true	
 hilt_x = x+cos(degtorad(tail_obj.image_angle+270)) * 66

@@ -61,7 +61,8 @@ if room==subtemple01 {
 	if st_map_1 && player_obj.y>11000 {
 		//map = spr_newmap
 		map = spr_nnewmap1
-	} else if st_map_2 && player_obj.y<11000 && player_obj.x<26288 {
+	} else if st_map_2 && ((player_obj.y<11000 && player_obj.y>3707) ||
+	(player_obj.y<=3707 && player_obj.x<26288)) {
 		//map = spr_map2
 		map = spr_newmap2
 	} else {
@@ -97,9 +98,9 @@ if room==voidtemple01 {
 
 
 
-/*
-sdm("OOGA BOOGA")
-for(i=0;i<instance_number(checkpoint1);i++){
-	sdm(checkpoints[i].x)
-}
+
+//sdm("OOGA BOOGA")
+//for(i=0;i<instance_number(checkpoint1);i++){
+//	sdm(checkpoints[i].x)
+//}
 

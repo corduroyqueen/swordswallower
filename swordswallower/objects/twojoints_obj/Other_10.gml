@@ -11,10 +11,11 @@ draw_self()
 with head {
 	//draw_self()
 }
-gpu_set_colorwriteenable(true,true,true,true)
+//gpu_set_colorwriteenable(true,true,true,true)
 with leftarm {
 	event_user(3)
 }
-with twojoints_hand_obj {
-	draw_self()
-}
+//with twojoints_hand_obj {
+//	draw_self()
+//}
+gpu_set_colorwriteenable(1,1,1,1)

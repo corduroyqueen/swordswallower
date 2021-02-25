@@ -30,6 +30,9 @@ draw_sprite_ext(boss_arm3,0,seg_x[1],seg_y[1],1,1,point_direction(seg_x[1],seg_y
 draw_set_color(c_white)
 draw_set_alpha(1)
 
+with hand {
+	draw_self()
+}
 
 //draw_text(x-200,y,timer)
 //draw_text(x-200,y+100,state)

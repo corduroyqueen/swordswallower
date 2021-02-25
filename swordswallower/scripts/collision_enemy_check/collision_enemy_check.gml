@@ -413,7 +413,10 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 		return false
 	} else if local_obj.object_index==charger_obj {
 		//hitpause = true
-		if local_obj.hp-10<0 {
+		
+		if !local_obj.horns.boss_is_hittable {
+			return false
+		} else if local_obj.hp-10<0 {
 			audio_play_sound(Knife_Pull_140,0,false)
 			with local_obj {
 				hp-=9

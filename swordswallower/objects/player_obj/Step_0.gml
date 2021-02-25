@@ -261,8 +261,8 @@ if level1_master.dev {
 		thin_floor_obj.visible = !thin_floor_obj.visible
 	}
 	if keyboard_check_pressed(ord("U")){
-		x = mouse_x
-		y = mouse_y
+		x = global.mousepx
+		y = global.mousepy
 	}
 	if keyboard_check_pressed(ord("Q")) {
 		x = 25500

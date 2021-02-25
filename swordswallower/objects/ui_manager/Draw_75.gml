@@ -32,31 +32,29 @@ if level1_master.dev && !keyboard_check_pressed(ord("V")) {
 	//gpu_get_state()
 }
 
-
-if fps<52 && level1_master.fps_check_bool { 
+if fps>=52 && fps_check_enable {
+	fps_timer=0
+}
+if (fps<52 || !fps_check_enable) && level1_master.fps_check_bool && !player_obj.intro { 
 	fps_timer++
-	if fps_timer>180 && !player_obj.intro && !instance_exists(title_screen_obj) {
+	if fps_timer>500  && !instance_exists(title_screen_obj) {
 		draw_set_font(font2)
 		draw_set_color(c_black)
 		draw_set_alpha(0.5)
 		draw_rectangle(0,0,1920,1080,false)
 		draw_set_color(c_white)
 		draw_set_alpha(1)
-		draw_text(360,100,"hey! we noticed the game is running a little slow.")
-		draw_text(360,200,"this is almost always because the game isn't using your graphics card.")
-		draw_text(360,300,"to fix this, go to settings, system, display, then scroll down and click 'graphics settings'")
-		draw_text(360,400,"then click 'browse,' find the game wherever you've installed it, click 'options' and select 'high performance'.")
-		draw_text(360,500,"if that doesnt help then maybe your laptop isnt plugged in.")
-		draw_text(360,600,"pressing 'esc' disables some additional lighting effects and may also help.")
-		draw_text(360,700,"if none of that works we apologize, and hopefully the game is still enjoyable a bit slower.")
-		draw_text(360,800,"we aim to have this fixed in the full release. thank you for your patience.")
-		draw_text(360,900,"press 8 to close this. have fun and thank you for playing!")
+		draw_text(300,300,"hey! we noticed the game is running a little slow.")
+		draw_text(300,350,"this is almost always because the game isn't using your graphics card.")
+		draw_text(300,400,"to fix this, go to settings, system, display, scroll down and click 'graphics settings'")
+		draw_text(300,450,"then click 'browse,' find the game wherever you've installed it, click 'options' and select 'high performance'.")
+		draw_text(300,500,"other common sources: playing in windowed ('G' key to toggle), laptop is unplugged, bloom lighting is too much ('esc' to toggle)")
+		draw_text(300,550,"we aim to have this fixed in the full release. thank you for your patience.")
+		draw_text(300,600,"press 8 to close this. have fun and thank you for playing!")
 		if keyboard_check_pressed(ord("8")) {
 			level1_master.fps_check_bool = false
 		}
+		fps_check_enable = false
 		
 	}
-}
-if fps>=52 {
-	fps_timer=0
 }

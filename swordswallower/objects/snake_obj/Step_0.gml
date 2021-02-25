@@ -55,7 +55,7 @@ if death {
 				audio_stop_sound(s2)	
 			}
 			head.image_angle = lerp(head.image_angle,image_angle,1)
-		} else {
+		} else if atk_timer<atk_timer_max-30 {
 			head.image_angle = lerp(head.image_angle,point_direction(x,y,
 			player_obj.x+player_obj.hsp,
 			player_obj.y+player_obj.vsp)-90,1)	

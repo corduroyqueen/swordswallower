@@ -5,11 +5,13 @@ var yp2 = horns.y
 horns.x = 300
 horns.y = -300
 
+
 my_floor = instance_place(x,y+1,wall_obj)
 if !instance_exists(my_floor) {
 	my_floor = instance_place(x,y+1,black_wall_obj)
 }
 player_floor = player_obj.current_platform
+
 
 if wall_detect(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
 	if abs(last_grounded_y-y)>400 {
@@ -21,6 +23,12 @@ if wall_detect(x,y+1) || place_meeting(x,y+1,wood_wall_obj){
 	last_grounded_y = y
 } else {
 	grounded = false
+}
+
+with horns {
+	if !boss_is_hittable && collision_line(tail_obj.x,tail_obj.y,player_obj.x,player_obj.y,other.id,false,true) {
+		boss_is_hittable = true
+	}
 }
 /*
 if point_distance(x,y,player_obj.x,player_obj.y)>2000 {

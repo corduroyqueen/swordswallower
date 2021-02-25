@@ -58,7 +58,7 @@
             "isLocked": false,
             "name": "default (2)",
             "opacity": 100,
-            "visible": true
+            "visible": false
         },
         {
             "id": "69999c70-bb3a-4a3e-b276-15db5335ea56",

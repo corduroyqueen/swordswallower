@@ -19,6 +19,8 @@ audio_sound_set_track_position(ok,3)
 			audio_sound_pitch(ok,1)
 audio_play_sound(ok,0,true)
 			
+audio_play_sound(boss_death_2,0,false)
+audio_sound_gain(boss_death_2,0.5,0)
 			
 var ok = instance_create_depth(tail_obj.x,tail_obj.y,depth-10,sim_intestine_obj)
 ok.num_rings = 10

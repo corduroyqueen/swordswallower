@@ -43,8 +43,8 @@ if gravd {
 if !st_bridge_bridge.enabled {
 	
 	if times_spoken<1 {
-		dialogue_array[0] = "Ah, you're back, and the bridge is back in place! "
-		dialogue_array[1] = "You've held up your end of the bargain admirably. Thank you, now I can begin traveling back to my home. "
+		dialogue_array[0] = "You're back! And the bridge is back in place. "
+		dialogue_array[1] = "You've held up your end of the bargain. Thank you, now I can begin traveling back home. "
 		dialogue_array[2] = "I need a moment to pack up my things. You go on ahead--I'll meet you up the cliffside. "
 		dialogue_array[3] = "I should have no trouble climbing it. "
 		dialogue_array[4] = "end"
@@ -56,11 +56,10 @@ if !st_bridge_bridge.enabled {
 	
 } else if (keybool || !st_locked_door_1.closed) && level1_master.mapguy_visited {
 	if times_spoken<1 {
-		dialogue_array[0] = "There it is! Well done. "
-		dialogue_array[1] = "Now you'll want to return to the bridge that broke underneath you a few moments ago and cross the gap. "
-		dialogue_array[2] = "If you can kill the bridgekeeper and find a way to pull the bridge back up I can get out of here. "
-		dialogue_array[3] = "Good luck! Hopefully our paths cross again sometime soon. "
-		dialogue_array[4] = "end"
+		dialogue_array[0] = "There it is, well done. "
+		dialogue_array[1] = "Now you should be able to get to the bridgekeeper."
+		dialogue_array[2] = "Good luck. Hopefully our paths cross again sometime soon. "
+		dialogue_array[3] = "end"
 	} else {
 		dialogue_array[0] = "Best of luck with the bridgekeeper--be prepared for anything. "
 		dialogue_array[1] = "end"
@@ -68,12 +67,12 @@ if !st_bridge_bridge.enabled {
 		
 } else if (keybool || !st_locked_door_1.closed) && !level1_master.mapguy_visited {
 	if times_spoken<1 {
-		dialogue_array[0] = "Greetings, warrior! I see you obtained the key from over there. "
+		dialogue_array[0] = "Greetings, warrior. I see you obtained the key from over there. "
 		dialogue_array[1] = "I was trying to get your attention earlier, but it looked like you were in a rush. "
-		dialogue_array[2] = "I'll give you a map of the tower if you find a way to reactivate the bridge. "
+		dialogue_array[2] = "I'll give you a map of the tower if you kill the bridgekeepr and reactivate the bridge. "
 		dialogue_array[3] = "Here's the map. Press SHIFT or CIRCLE to look at it. "
-		dialogue_array[4] = "If you can kill the bridgekeeper and find a way to pull the bridge back up I can get out of here. "
-		dialogue_array[5] = "Good luck! Hopefully our paths cross again sometime soon. "
+		dialogue_array[4] = "Open the door behind and above me and we can get out of here. "
+		dialogue_array[5] = "Good luck. Hopefully our paths cross again sometime soon. "
 		dialogue_array[6] = "end"
 		
 		if current_pick==4 {
@@ -82,16 +81,29 @@ if !st_bridge_bridge.enabled {
 	}
 } else {
 	if times_spoken<1 {
-		dialogue_array[0] = "Greetings, traveler. That's a rather large sword you're dragging around. "
-		dialogue_array[1] = "If you're down here, then you must've fallen at the bridge, too. "
-		dialogue_array[2] = "I came from the other side of the bridge, and the bridgekeeper dropped me into the tar pit as well. Now I'm stuck here. "
-		dialogue_array[3] = "Tell you what, let's make a deal. "
-		dialogue_array[4] = "I'm a cartographer, and I've mapped this entire area. And you're a warrior, with that giant sword of yours."
-		dialogue_array[5] = "I'll give you a map of this tower and the cliffs above, and you can put the bridge back the way it was so we can get out of here. "
+		//dialogue_array[0] = "Greetings, traveler. That's a rather large sword you're dragging around. "
+		//dialogue_array[1] = "If you're down here, then you must've fallen at the bridge, too. "
+		//dialogue_array[2] = "I came from the other side of the bridge, and the bridgekeeper dropped me into the tar pit as well. Now I'm stuck here. "
+		//dialogue_array[3] = "Tell you what, let's make a deal. "
+		//dialogue_array[4] = "I'm a cartographer, and I've mapped this entire area. And you're a warrior, with that giant sword of yours."
+		//dialogue_array[5] = "I'll give you a map of this tower and the cliffs above, and you can put the bridge back the way it was so we can get out of here. "
+		//dialogue_array[6] = "Here you go. Press SHIFT or CIRCLE to look at it. "
+		//dialogue_array[7] = "If you can find a way to open the door behind me, you'll be on your way back to the bridge. "
+		//dialogue_array[8] = "Good luck. "
+		//dialogue_array[9] = "end"
+		
+		dialogue_array[0] = "Greetings, warrior. "
+		dialogue_array[1] = "I saw you break out of that room at the top of the tower. You might be free, but you were probably safer up there. "
+		dialogue_array[2] = "It's nice to meet you. I'm a cartographer, and I'm mapping this area. "
+		dialogue_array[3] = "Unfortunately I've been trapped by that damn bridgekeeper for weeks now. I can't cross the bridge with him there. "
+		dialogue_array[4] = "Tell you what, let's make a deal. I'll give you one of my maps, and you use it to find and kill that vile creature. "
+		dialogue_array[5] = "After that, you can put the bridge back in place and we can get out of here. "
 		dialogue_array[6] = "Here you go. Press SHIFT or CIRCLE to look at it. "
-		dialogue_array[7] = "If you can find a way to open the door behind me, you'll be on your way back to the bridge. "
+		dialogue_array[7] = "If you can find a way to open the door behind and above me, that should lead back to the bridge. "
 		dialogue_array[8] = "Good luck. "
 		dialogue_array[9] = "end"
+		
+		
 	} else {
 		dialogue_array[0] = "Return when you've found a way to open that bridge. "
 		dialogue_array[1] = "end"
@@ -140,6 +152,7 @@ if player_present && !boatboy {
 			    global.placeholderTxt = "";
 			    global.temp_placeholderTxt = "";
 			    global.txtIndex = 1;
+				character_x=other.x
 			
 			}
 			

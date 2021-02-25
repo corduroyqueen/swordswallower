@@ -210,7 +210,10 @@ if global.printTimer > 0 global.printTimer--;
 
 // Draw dialogue box
 draw_set_color(c_black);
-draw_sprite_ext(textbox,0,view_xview,view_yview,1,1,0,c_white,1)
+var facing = clamp(sign(view_xview-character_x),0,1)
+//if player_obj.x>40200 { facing = 1 }
+draw_sprite_ext(textbox,facing,view_xview,view_yview,1,1,0,c_white,1)
+
 //draw_roundrect(view_xview,
 //view_yview,
 //view_xview+view_wview,
@@ -223,7 +226,7 @@ draw_set_color(c_white);
 //draw_line_width(view_xview-(bw/2), view_yview, view_xview+view_wview, view_yview, bw);
 //draw_line_width(view_xview+view_wview-bw/2, view_yview, view_xview+view_wview-bw/2, (view_yview+view_hview), bw);
 //draw_line_width(view_xview, (view_yview+view_hview)-bw/2, view_xview+view_wview, (view_yview+view_hview)-bw/2, bw);
-draw_sprite_ext(textboxoverlay,0,view_xview,view_yview-30,1,1,0,c_white,1)
+draw_sprite_ext(textboxoverlay,facing,view_xview,view_yview-30,1,1,0,c_white,1)
 
 // Draw Text On Screen
 draw_set_color(c_white);

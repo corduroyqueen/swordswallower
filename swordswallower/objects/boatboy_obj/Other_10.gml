@@ -17,7 +17,7 @@ if !ui_manager.spk_bool {
 		global.placeholderTxt = "";
 		global.temp_placeholderTxt = "";
 		global.txtIndex = 1;
-			
+			character_x=other.x
 	}
 			
 	dialogue = dialogue_array[current_pick]

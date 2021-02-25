@@ -9,3 +9,5 @@ polarity = -1
 mask_index = sprite_index
 mspeed = 2
 hsp = -mspeed
+
+boss_is_hittable = true

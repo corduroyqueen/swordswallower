@@ -83,6 +83,7 @@ if player_present {
 			    global.placeholderTxt = "";
 			    global.temp_placeholderTxt = "";
 			    global.txtIndex = 1;
+				character_x=other.x
 			
 			}
 			

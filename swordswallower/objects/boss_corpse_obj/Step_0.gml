@@ -35,6 +35,11 @@ if big_timer<200 {
 	}
 } else {
 	if sprite_index==stomachburst {
+		audio_sound_gain(boss_explosion,2,0)
+		audio_play_sound(boss_explosion,0,false)
+		
+		
+		audio_stop_sound(boss_death_2)
 		player_obj.shake_d=20
 		player_obj.camera_shake_d = true
 		sprite_index = spr_bossexplosion

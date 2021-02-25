@@ -52,6 +52,4 @@ if hp>20 {
 if hp>10 {
 	draw_sprite_ext(spr_hooves_side1,image_index,x,y,image_xscale,1,0,c_white,ta)
 }
-
-
 //shader_reset()

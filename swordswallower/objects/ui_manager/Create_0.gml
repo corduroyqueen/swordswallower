@@ -57,4 +57,7 @@ s_dia_sound = false
 dbug_checkx = 0
 dbug_checky = 0
 
+character_x=0
+fps_check_enable = true
+
 fps_timer=0
