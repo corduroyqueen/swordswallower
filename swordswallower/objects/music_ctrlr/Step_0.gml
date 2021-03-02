@@ -96,11 +96,11 @@ if room==subtemple01 {
 	
 	if go6 {
 		if player_obj.x>46000 {
-			//audio_sound_pitch(tim_hecker_song,1.5)
-			audio_play_sound(tim_hecker_song,0,true)
+			//audio_sound_pitch(swsw_meat_1_music,1.5)
+			audio_play_sound(swsw_meat_1_music,0,true)
 			
-			audio_sound_gain(tim_hecker_song,0,0)
-			audio_sound_gain(tim_hecker_song,0.4,500)
+			audio_sound_gain(swsw_meat_1_music,0,0)
+			audio_sound_gain(swsw_meat_1_music,1,500)
 			go6 = false
 		}
 	}
@@ -111,7 +111,7 @@ if room==subtemple01 {
 			player_obj.hsp = 0
 			if audio_is_playing(ocean_ambience) {
 				audio_stop_sound(ocean_ambience)
-				audio_stop_sound(tim_hecker_song)
+				audio_stop_sound(swsw_meat_1_music)
 			}
 			if (instance_exists(meat1_boss) && !meat1_boss.docile) {
 				audio_stop_all()

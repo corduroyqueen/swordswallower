@@ -11055,14 +11055,6 @@
             }
         },
         {
-            "Key": "92cf5c18-f323-48ca-a58d-9cedfc452f25",
-            "Value": {
-                "id": "85df0314-37fc-4ddc-ab59-a43c460edf23",
-                "resourcePath": "sounds\\tim_hecker_song\\tim_hecker_song.yy",
-                "resourceType": "GMSound"
-            }
-        },
-        {
             "Key": "92e854e8-7ee1-4745-a6bd-3a889ad65935",
             "Value": {
                 "id": "704533ed-cf78-4ce5-a89a-a37152e69c9b",
@@ -15507,6 +15499,14 @@
             "Value": {
                 "id": "c0e630b9-3856-4e7d-8d1b-a55373bc77d1",
                 "resourcePath": "sounds\\boss_cough\\boss_cough.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
+            "Key": "d9acbcaa-3f64-4c04-9bc8-f065fd8de7c1",
+            "Value": {
+                "id": "b473c3f3-757a-446f-8269-895a041eb66b",
+                "resourcePath": "sounds\\swsw_meat_1_music\\swsw_meat_1_music.yy",
                 "resourceType": "GMSound"
             }
         },
