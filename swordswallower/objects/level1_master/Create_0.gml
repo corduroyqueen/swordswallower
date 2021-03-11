@@ -201,3 +201,9 @@ boss_intro_timer = 0
 
 fps_check_bool = true
 //gpu_set_colorwriteenable(true, true, true, false);
+
+
+font2 = font_add("julia_hand.ttf",24,false,false,32,128)
+font2 = font_add("julia_hand.ttf",36,false,false,32,128)
+
+font2bigger = font_add("julia_hand.ttf",60,false,false,32,128)

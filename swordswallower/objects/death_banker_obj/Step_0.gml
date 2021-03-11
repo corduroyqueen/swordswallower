@@ -2,16 +2,21 @@
 // You can write your code in this editor
 /// @description Insert description here
 // You can write your code in this editor
-if level1_master.death_num>=500 {
+if level1_master.death_num>=99 {
 	dialogue_array[0] = "......."
 	dialogue_array[1] = string(level1_master.death_num) + " deaths. "
 	dialogue_array[2] = "I am... fascinated. Impressed. "
-	dialogue_array[3] = "......"
-	dialogue_array[4] = "With your deaths as payment, I would like to give special thanks to a few individuals on the behalf of Uti and Julia. "
-	dialogue_array[5] = "Gabe. Matt. Burgess. Dylan. Winnie. Bennett. Julian. Noah. Clair. Spencer. Elizabeth. Justin. Mars. The Incubator. "
-	dialogue_array[6] = "That is all, that is all, there is nothing else. "
-	dialogue_array[7] = "And, of course, you. For playing. "
-	dialogue_array[8] = "end"
+	dialogue_array[3] = "Take this mask. If you meet another Banker like me on your murderous path, be sure to wear it while you speak to them. "
+	dialogue_array[4] = "Every time you're dredged back from death, both of us get a little richer. "
+	dialogue_array[5] = "Keep going and you may leave this life with a coin or two to your name. "
+	dialogue_array[6] = "end"
+	
+	if current_pick==4 {
+		if ds_list_find_index(level1_master.hats_list,"4")<0 {
+			ds_list_add(level1_master.hats_list,4)
+		}
+		level1_master.head_spr_i = ds_list_size(level1_master.hats_list)-1
+	}
 } else if level1_master.death_num<1 {
 	dialogue_array[0] = "......."
 	dialogue_array[1] = "Your deaths. They're " + string(level1_master.death_num) + ". "
@@ -21,7 +26,7 @@ if level1_master.death_num>=500 {
 } else {
 	dialogue_array[0] = "......."
 	dialogue_array[1] = "Your deaths. They're " + string(level1_master.death_num) + ". "
-	dialogue_array[2] = "When you've seen death 500 times, you will speak to me again. "
+	dialogue_array[2] = "When you've seen death 99 times, you will speak to me again. "
 	dialogue_array[3] = "There are always more to come. "
 	dialogue_array[4] = "end"
 }

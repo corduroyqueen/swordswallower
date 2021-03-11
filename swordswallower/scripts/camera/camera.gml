@@ -89,6 +89,8 @@ if intro {
 		checkpoint_manager.checkpoint.x-cam_width_h,
 		checkpoint_manager.checkpoint.y-cam_height_h)<50 {
 		
+			sprite_flush(deathParticles)
+			sprite_flush(deathParticles2)
 			sprite_delete(deathParticles)
 			sprite_delete(deathParticles2)
 			level1_master.get_deaths = true

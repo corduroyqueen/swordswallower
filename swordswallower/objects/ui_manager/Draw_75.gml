@@ -24,7 +24,7 @@ if !player_obj.death && !player_obj.ending_lock && !instance_exists(title_screen
 
 
 if level1_master.dev && !keyboard_check_pressed(ord("V")) {
-	draw_set_font(lato)
+	draw_set_font(font2)
 	draw_text(19,89,"fps  " + string(fps))	
 	draw_text(19,120,"real fps  " + string(fps_real))	
 	draw_text(19,151,"active instances  " + string(instance_count))

@@ -133,6 +133,7 @@ if get_deaths {
 			roomfogs_b[i] = instance_exists(roomfogs[i])
 		}		
 	}
+	audio_stop_all()
 	room_restart()
 }
 

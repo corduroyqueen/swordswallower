@@ -20,13 +20,11 @@ show_checkpoints = true
 spk_bool = false
 lel=-1
 
-lato = font_add("lato.ttf",24,false,false,32,128)
 
-font2 = font_add("julia_hand.ttf",24,false,false,32,128)
-font2 = font_add("julia_hand.ttf",36,false,false,32,128)
 
-font3lato = font_add("lato.ttf",32,false,false,32,128)
-font2bigger = font_add("julia_hand.ttf",60,false,false,32,128)
+font2 = level1_master.font2
+
+font2bigger = level1_master.font2bigger
 
 ealpha = 0
 

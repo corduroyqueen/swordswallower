@@ -22,3 +22,7 @@ fade_alpha = 0
 depth = -200000000000000000000000000
 
 
+
+ with music_ctrlr {
+	audio_stop_sync_group(part3_mc) 
+ }

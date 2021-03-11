@@ -10,7 +10,7 @@ if level1_master.dev {
 	//intro_timer= 600
 }
 
-font2 = font_add("lato.ttf",16,false,false,32,128)
+//font2 = font_add("lato.ttf",16,false,false,32,128)
 
 black_timer_m = 700
 

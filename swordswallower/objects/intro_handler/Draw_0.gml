@@ -1,6 +1,6 @@
 //fuck yes//fuck yes
 
-draw_set_font(font2)
+//draw_set_font(font2)
 if player_obj.intro {
 	
 	draw_set_color(c_white)

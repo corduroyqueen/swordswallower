@@ -34,7 +34,7 @@ if screenstate==0 {
 	//draw_sprite_ext(s3w,0,1040,200,1,1,0,c_white,alpha)
 	//draw_sprite_ext(s4w,0,1480,300,1,1,0,c_white,alpha)
 	
-	draw_set_font(fontl)
+	//draw_set_font(fontl)
 	draw_set_color(c_white)
 	
 	//draw_text_ext_color(20,10,
@@ -69,7 +69,6 @@ if screenstate==0 {
 	
 	if alpha<0.8 { return }
 	draw_set_color(c_white)
-	draw_set_font(font2)
 	timer1+=0.05
 	timer2+=0.05
 	timer3+=0.05

@@ -55,7 +55,7 @@ if room==subtemple01 {
 		if coffin_boss_1.music_cue {
 			if go2 {
 				audio_stop_sync_group(subtemple_mc)
-				audio_stop_all()
+				//audio_stop_all()
 				part2_mc = audio_create_sync_group(true)
 				audio_sound_gain(swsw2, 0.47, 0);
 				audio_play_in_sync_group(part2_mc,swsw2)
@@ -68,14 +68,14 @@ if room==subtemple01 {
 		}
 	}
 	
-	if point_distance(lore_mirror_obj.x,lore_mirror_obj.y,player_obj.x,player_obj.y)<950 {
+	if point_distance(lore_mirror_obj.x,lore_mirror_obj.y,player_obj.x,player_obj.y)<950 && !player_obj.death {
 		audio_sound_gain(swsw2,0,180)
 		if !audio_is_playing(swsw_item_room) {
 			audio_play_sound(swsw_item_room,0,true)
 			audio_sound_gain(swsw_item_room,0,0)
 			audio_sound_gain(swsw_item_room,1,180)
 		}
-	} else if audio_is_playing(swsw_item_room) {
+	} else if audio_is_playing(swsw_item_room) && player_obj.x<=36203  {
 		audio_sound_gain(swsw_item_room,0,180)
 		audio_sound_gain(swsw2,0.47,160)
 		if audio_sound_get_gain(swsw_item_room)<0.05 {
@@ -89,18 +89,29 @@ if room==subtemple01 {
 		if player_obj.x>36203 {
 		
 			audio_sound_gain(swsw2,0,5000)
-			audio_play_sound(ocean_ambience,0.2,3000)
+			//audio_play_sound(ocean_ambience,0.2,3000)
+			
+
 			go3 = false
 		}
+	}
+	if player_obj.x>36203 && !audio_is_playing(swsw_bossfight_new2) && !audio_is_playing(ocean_ambience) && player_obj.x<66400 {
+		audio_play_sound(ocean_ambience,0,1)
 	}
 	
 	if go6 {
 		if player_obj.x>46000 {
 			//audio_sound_pitch(swsw_meat_1_music,1.5)
-			audio_play_sound(swsw_meat_1_music,0,true)
+			//audio_play_sound(swsw_meat_1_music,0,true)
 			
-			audio_sound_gain(swsw_meat_1_music,0,0)
+			
+			
+			part3_mc = audio_create_sync_group(true)
+				audio_sound_gain(swsw_meat_1_music,0,0)
 			audio_sound_gain(swsw_meat_1_music,1,500)
+				audio_play_in_sync_group(part3_mc,swsw_meat_1_music)
+				audio_start_sync_group(part3_mc)
+			//audio_play_in_sync_group(subtemple_mc,swsw_meat_1_music)
 			go6 = false
 		}
 	}
@@ -111,15 +122,16 @@ if room==subtemple01 {
 			player_obj.hsp = 0
 			if audio_is_playing(ocean_ambience) {
 				audio_stop_sound(ocean_ambience)
-				audio_stop_sound(swsw_meat_1_music)
+				audio_stop_sync_group(part3_mc)
 			}
 			if (instance_exists(meat1_boss) && !meat1_boss.docile) {
 				audio_stop_all()
 				part4_mc = audio_create_sync_group(true)
 				//audio_play_in_sync_group(part4_mc,swsw_bossfight)
 				//audio_start_sync_group(part4_mc)
-				audio_play_sound(swsw_bossfight_new2,0,true)
 				audio_sound_gain(swsw_bossfight_new2,0.3,0)
+				audio_play_in_sync_group(part4_mc,swsw_bossfight_new2)
+				audio_start_sync_group(part4_mc)
 				player_obj.disable = false
 				go5 = false
 			}

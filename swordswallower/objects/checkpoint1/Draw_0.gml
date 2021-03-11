@@ -16,10 +16,13 @@ if setpoint {
 		gpu_set_blendmode(bm_add)
 		
 		if point_distance(x,y,player_obj.camx+960,player_obj.camy+540)<1000 {
-			audio_sound_gain(fire_sound,1,0)
+			
+			if !audio_is_playing(firecrackle1) {
+				audio_play_sound_on(s_fire_emitter,firecrackle1,true,0)
+			}
+			audio_sound_gain(firecrackle1,1,0)
 			audio_emitter_gain(s_fire_emitter,
 			clamp(0.05,abs(1000- point_distance(x,y,player_obj.camx+960,player_obj.camy+540))/1000,1000)/3 
-			
 			)
 			
 			audio_emitter_position(s_fire_emitter,
