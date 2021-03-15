@@ -41,7 +41,8 @@ blood_splat_surface = -1
 u_blood_splat_trans = shader_get_uniform(shader_blood_alpha, "v_mult");
 u_blood_splat_var = 1
 
-GUI = surface_create(1920,1080);
+//GUI = surface_create(1920,1080);
+//GUI = surface_create(1920,1080);
 
 strength_input = 100
 
@@ -50,6 +51,7 @@ u_blood_g = shader_get_uniform(shader_blood_alpha, "blood_g");
 u_blood_b = shader_get_uniform(shader_blood_alpha, "blood_b");
 
 GUI = surface_create(1920,1080);
+final_surface = surface_create(1920,1080);
 
 
 
@@ -148,3 +150,31 @@ water_shift_B		= 0;
 srf_water			= -1;
 
 white_flash_screen = false
+
+
+
+u_brightness	= shader_get_uniform(shader_brightness, "brightness");
+u_contrast		= shader_get_uniform(shader_brightness, "contrast");
+u_saturation	= shader_get_uniform(shader_brightness, "saturation");
+
+
+ashes_x = ds_list_create()
+ashes_y = ds_list_create()
+ashes_sy = ds_list_create()
+for (var a=0;a<=1920;a+=240) {
+	for (var b=0;b<=1080;b+=216) {
+		ds_list_add(ashes_x,a)//+random_range(-30,30))
+		ds_list_add(ashes_y,b)//+random_range(-30,30))
+		ds_list_add(ashes_sy,b)//+random_range(-30,30))
+	}
+}
+
+ashes_hsp_c = -20
+ashes_size = ds_list_size(ashes_x)
+
+ashes_hsp = ds_list_create()
+ashes_vsp = ds_list_create()
+for (var c=0;c<ashes_size;c++) {
+	ds_list_add(ashes_hsp,ashes_hsp_c)
+	ds_list_add(ashes_vsp,0)
+}

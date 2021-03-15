@@ -11639,6 +11639,14 @@
             }
         },
         {
+            "Key": "9ba3cf03-bf60-4a0a-87bf-b825311df920",
+            "Value": {
+                "id": "b41a1dff-9599-4aa9-8793-3490b669f6b8",
+                "resourcePath": "shaders\\shader_brightness\\shader_brightness.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "9bb7c393-f0a8-44c7-9f28-5384468a4294",
             "Value": {
                 "id": "050ab84d-0546-415f-bfd4-e9857fb91deb",

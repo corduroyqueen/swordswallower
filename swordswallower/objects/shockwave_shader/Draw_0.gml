@@ -21,5 +21,7 @@ draw_surface(blood_surface, player_obj.camx,player_obj.camy)
 //surface_reset_target()
 shader_reset()
 
+
+
 //surface_reset_target()
 //surface_reset_target()

@@ -21,6 +21,7 @@
 
 
 if (!surface_exists(GUI)) GUI = surface_create(1920,1080);
+if (!surface_exists(final_surface)) final_surface = surface_create(1920,1080);
 surface_set_target(GUI);
 
 //gpu_set_colorwriteenable(true, true, true, true)
@@ -120,6 +121,34 @@ if (wave_list_size <= 0) {
 	
 	
 }
+
+
+draw_set_color(c_dkgray)
+for (var a=0;a<ashes_size;a++) {
+	
+	ashes_hsp[|a] += random_range(-1,1)
+	ashes_vsp[|a] += random_range(-1,1)
+	
+	ashes_x[|a] += ashes_hsp[|a] - player_obj.camxdiff
+	ashes_y[|a] += ashes_vsp[|a] - player_obj.camydiff
+	
+	if ashes_x[|a]<-50 || ashes_x[|a]>2000  {
+		ashes_x[|a]=1970
+		ashes_y[|a] = ashes_sy[|a]
+		ashes_vsp[|a] = 0
+		ashes_hsp[|a] = ashes_hsp_c
+	}
+	if ashes_y[|a]<-20 { 
+		ashes_y[|a]=1083
+	}
+	if ashes_y[|a]>1100 { 
+		ashes_y[|a]=-3
+	}
+	
+	
+	draw_circle(ashes_x[|a],ashes_y[|a],3,false)
+}
+draw_set_color(c_white)
 surface_reset_target();
 
 shader_reset();
@@ -151,6 +180,137 @@ if (3730 < (player_obj.camy + 1080)) && (3730 > (player_obj.camy)) && !instance_
 	//water_shader_script(max(0,25640-player_obj.camx),3730)
 	water_shader_script(0,3730)
 }
+
+
+/// @description Insert description here
+// You can write your code in this editor
+/// @description MAIN
+//surface_set_target(gif_surface)
+
+surface_set_target(final_surface)
+
+
+
+if !level1_master.bloom_on {
+	draw_surface(GUI,0,0)	
+} else {
+
+// SET VALUES:
+//-----------------------------------------------------------------------------
+
+if player_obj.death {
+	//bloom_threshold_v = 0.15
+	//bloom_intensity = 0.7
+	bloom_threshold_v = 0.15
+	bloom_intensity = 0.7
+	
+	bloom_threshold = 0.15
+	bloom_intensity = 0.7
+	
+} else {
+	if player_obj.x>41500 {
+		//bloom_threshold = lerp(bloom_threshold,0.12,0.05)
+		//bloom_intensity = lerp(bloom_intensity,0.3,0.05)
+		bloom_threshold = lerp(bloom_threshold,0.2,0.05)
+		bloom_intensity = lerp(bloom_intensity,0.35,0.05)
+		
+	} else {
+		bloom_threshold = 0.29
+		bloom_threshold = 0.25
+		bloom_threshold = 0.05
+		bloom_intensity = 0.41
+		bloom_intensity = 0.6
+		//sdm("?????")
+	}
+}
+
+//gui_w					= window_get_width()
+//gui_h					= window_get_height()
+
+//app_w					= gui_w / 1;
+//app_h					= gui_h / 1;
+
+//sdm(app_w)
+//sdm(app_h)
+//1854
+//1043
+
+// DRAW:
+//-----------------------------------------------------------------------------
+if (!surface_exists(srf_ping)) {
+	srf_ping = surface_create(1920, 1080);
+	bloom_texture = surface_get_texture(srf_ping);
+}
+if (!surface_exists(srf_pong)) {
+	srf_pong = surface_create(1920, 1080);
+}
+
+// 1st pass: Draw brights to bloom surface:
+// AppSrf -> srf_ping
+shader_set(shader_bloom_lum);
+	shader_set_uniform_f(u_bloom_threshold,		bloom_threshold);
+	shader_set_uniform_f(u_bloom_range,			bloom_range);
+	
+	surface_set_target(srf_ping);
+	draw_clear_alpha(c_black,0)
+	//draw_surface(art_surface_setter.ass_setter,0,0) // level, blood splats, lights
+	//draw_surface(blood_surface,0,0) // blood
+	draw_surface(GUI, 0, 0);
+	unblooming_script()
+	//draw_lights()
+	//shader_reset()
+	
+	
+	surface_reset_target();
+	
+// 2nd pass: blur horizontally
+// srf_ping -> srf_pong
+//gpu_set_tex_filter(true);
+shader_set(shader_blur);
+	shader_set_uniform_f(u_blur_steps,		blur_steps);
+	shader_set_uniform_f(u_sigma,			sigma);
+	shader_set_uniform_f(u_blur_vector,		1, 0);
+	shader_set_uniform_f(u_texel_size,		texel_w, texel_h);
+	
+	surface_set_target(srf_pong);
+	draw_clear_alpha(c_black,0)
+		draw_surface(srf_ping, 0, 0);
+	surface_reset_target();
+	
+// 3rd pass: blur vertically
+// srf_pong -> srf_ping
+	shader_set_uniform_f(u_blur_vector,		0, 1);
+	
+	surface_set_target(srf_ping);
+		draw_surface(srf_pong, 0, 0);
+	surface_reset_target();
+	
+//gpu_set_tex_filter(false);
+
+// 4th pass: Blend bloom surface with app surface
+// AppSrf & srf_ping -> screen
+shader_set(shad_bloom_blend);
+	shader_set_uniform_f(u_bloom_intensity, bloom_intensity);
+	//shader_set_uniform_f(u_bloom_darken, bloom_darken);
+	shader_set_uniform_f(u_bloom_saturation, bloom_saturation);
+	texture_set_stage(u_bloom_texture, bloom_texture);
+	//gpu_set_tex_filter_ext(u_bloom_texture, true);
+	
+	draw_surface(GUI, 0, 0)
+	
+shader_reset();
+}
+
+draw_set_color(c_black)
+draw_set_alpha(0.35)
+draw_rectangle(0,0,1920,1080,false)
+gpu_set_blendmode(bm_add)
+draw_sprite_ext(blood_sprite_spr1,0,player_obj.x-player_obj.camx,player_obj.y-player_obj.camy,1,1,0,c_white,0.07)
+draw_set_color(c_white)
+gpu_set_blendmode(bm_normal)
+draw_set_alpha(1)
+
+surface_reset_target()
 
 //{
 	// debug:

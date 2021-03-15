@@ -22,6 +22,10 @@ audio_play_sound(ok,0,true)
 audio_play_sound(boss_death_2,0,false)
 audio_sound_gain(boss_death_2,0.5,0)
 			
+with music_ctrlr {
+	audio_stop_sync_group(part4_mc)
+}
+
 var ok = instance_create_depth(tail_obj.x,tail_obj.y,depth-10,sim_intestine_obj)
 ok.num_rings = 10
 //ok.pinned = false

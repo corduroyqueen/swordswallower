@@ -4,6 +4,7 @@
 if (surface_exists(srf_ping)) surface_free(srf_ping);
 if (surface_exists(srf_pong)) surface_free(srf_pong);
 if (surface_exists(GUI)) surface_free(GUI);
+if (surface_exists(final_surface)) surface_free(final_surface);
 if (surface_exists(blood_surface)) surface_free(blood_surface);
 if (surface_exists(srf_waves)) surface_free(srf_waves);
 if (surface_exists(gif_surface)) surface_free(gif_surface);
