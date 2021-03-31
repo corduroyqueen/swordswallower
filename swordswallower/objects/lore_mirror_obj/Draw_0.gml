@@ -41,5 +41,5 @@ gpu_set_colorwriteenable(1,1,1,0)
 draw_self()
 gpu_set_colorwriteenable(1,1,1,1)
 if player_present {
-//dialogue_start_npc_script2(x-50,y - sprite_height/2 - 140)
+	dialogue_start_npc_script2(x-50,y - sprite_height/2 - 140)
 }
