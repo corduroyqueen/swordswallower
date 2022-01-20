@@ -1,7 +1,7 @@
 flydamage = argument0
 
 if state==state_chasing && point_distance(x,y,player_obj.x,player_obj.y)>2000 && !tail_obj.stinky {
-	death = true
+	instance_destroy(id)
 }	
 
 if tail_obj.stinky {

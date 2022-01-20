@@ -30,7 +30,7 @@ if cool {
 		//instance_activate_object(background)
 	} else {
 		x = checkpoint_manager.rx
-		y = checkpoint_manager.ry-40
+		y = checkpoint_manager.ry-100
 		xpreva2 = x
 		ypreva2 = y
 		xpreva = x

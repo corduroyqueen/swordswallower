@@ -59,3 +59,8 @@ character_x=0
 fps_check_enable = true
 
 fps_timer=0
+
+fps_list = ds_list_create()
+fps_avg=0
+sz=0
+fps_timer1 =5

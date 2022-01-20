@@ -76,7 +76,7 @@ if tail_zooming {
 
 if zoom_timer_bool {
 	
-	zooming_particles()
+	//zooming_particles()
 	boosting_collision_check = true
 	lerpvar = 0.1
 	
@@ -206,9 +206,9 @@ if zoom_timer_bool {
 	audio_sound_gain(Ice_Projectile_Shoot_03,0,200)
 }
 
-if out_of_dash_t<0 {
-	zooming_particles()	
-}
+//if out_of_dash_t<0 {
+//	//zooming_particles()	
+//}
 
 bounce_buff_timer--
 	

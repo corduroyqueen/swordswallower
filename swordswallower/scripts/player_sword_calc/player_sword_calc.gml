@@ -7,7 +7,7 @@ ang = 0
 var temp_pin_x = arm_pin_x - 150 + player_obj.x
 var temp_pin_y = arm_pin_y - 150 + player_obj.y
 var temp_hand_x = arm_hand_x - 150 + player_obj.x
-var temp_hand_y = arm_hand_y - 150 + player_obj.y
+var temp_hand_y = arm_hand_y - 150 + player_obj.y 
 
 var dist = point_distance(sword_pos_x,sword_pos_y,temp_pin_x,temp_pin_y)
 
@@ -135,7 +135,7 @@ if sword_s==sword_s_air {
 	
 } 
 if sword_s==sword_s_dragging {
-	if sword_pos_y<temp_pin_y+30  {
+	if sword_pos_y<temp_pin_y+45  {
 		sword_pos_y+=6
 	} 
 	sword_angle_calc()	

@@ -46,7 +46,7 @@ weakened = false
 hit = noone
 hit_timer = 0
 hit_success = false
-
+can_sword_be_planted = false
 if !variable_instance_exists(id,"fumbling_timer"){
 	fumbling_timer = 0
 }

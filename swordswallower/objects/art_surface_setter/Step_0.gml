@@ -23,6 +23,7 @@ surface_reset_target()
 var xp = -player_obj.camx
 var yp = -player_obj.camy
 
+if room==subtemple01 {
 if player_obj.x<27000 && player_obj.y>13000 {
 	
 	layer_x(lay_id_level_art_1,xp)
@@ -67,6 +68,7 @@ layer_y(lay_id_solid_color_2,yp)
 	
 layer_x(lay_id_misc_2,xp)
 layer_y(lay_id_misc_2,yp)
+}
 
 layer_x(lay_id_blood_splats,xp)
 layer_y(lay_id_blood_splats,yp)

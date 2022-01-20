@@ -11,6 +11,7 @@ if !obj.death {
 			death_blood_spawn_x = other.xc
 			death_blood_spawn_y = other.yc
 		}
+	} else if intangible {
 	} else if !dmg_flashing {
 		//player takes hit
 		damage_script(1,sign(x-obj.x),5,-1)

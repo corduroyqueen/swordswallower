@@ -21,11 +21,17 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 	x = checkx;
 	y = checky;
 	bleh = false
+	can_sword_be_planted = true
 	//sdm("g1")
 	if local_obj.sword_ignore {
 		local_obj.met = true
 		return false
 	}
+	
+	with local_obj {
+		event_user(11)
+	}
+	
 	if local_obj.object_index==tear_nograv_obj {
 		local_obj.death = true
 		return false	
@@ -178,41 +184,16 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 	//sdm("g6")
 	if local_obj.object_index==flyfree_obj || local_obj.object_index==doublefly_obj {
 		//sdm("fly collision")
-		if local_obj.inv_timer>0 || local_obj.death {
-			player_obj.tail_planted = false
-			x = oldx
-			y = oldy
-			
-			return false	
-		}
+		
 		with local_obj {
-			sprite_index = eyebat_flying3
-			
-			death_blood_spawn_x = x
-			death_blood_spawn_y = y
-			death = true	
-			met = true
-			//sdm("fly dead")
-			//shatter_mb_input_script(sprite_width/2)	
+			event_user(11)
 		}
-		sword_hitpause(local_obj,2)
-		player_obj.shake_d=4.5
-		player_obj.camera_shake_d = true
-		audio_play_sound(Knife_Pull_140,0,false)
-		
-		
-			
-		var ok = sword_thud_1
-		audio_sound_gain(ok,random_range(0.1,0.2),0)
-		audio_sound_pitch(ok,random_range(1.1,1.3))
-		audio_play_sound(ok,0,false)
-		
-		player_obj.tail_planted = false
-		//x = xpreva
-		//y = ypreva
-		return false	
+		if !can_sword_be_planted {
+			return false
+		}
 		//hitpause = true
-	} else if local_obj.object_index==flyswarm_obj {
+	} 
+	if local_obj.object_index==flyswarm_obj {
 		if local_obj.inv_timer>0 || local_obj.death || local_obj.swarming {
 			player_obj.tail_planted = false
 			x = oldx
@@ -359,8 +340,8 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 			death_blood_spawn_x = x
 			death_blood_spawn_y = y
 		}
-		//x = oldx
-		//y = oldy
+		x = oldx
+		y = oldy
 		audio_play_sound(Knife_Pull_140,0,false)
 		var ok = sword_thud_1
 		audio_sound_gain(ok,random_range(0.18,0.26),0)
@@ -371,7 +352,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 		audio_sound_pitch(ok,random_range(0.8,1.2))
 		audio_sound_gain(ok,0.4,0)
 		audio_play_sound(ok,0,false)
-		
+		can_sword_be_planted = false
 		
 		var ello = impact_2
 		audio_sound_gain(ello,0.25,0)
@@ -403,7 +384,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 			player_obj.tail_dest_y = local_obj.y
 			player_obj.tail_planted = true
 			player_obj.tail_throwing = false
-			audio_manager(false,0,false,3)
+			//audio_manager(false,0,false,3)
 			inside_flier = true
 			image_angle = point_direction(player_obj.start_throw_x,player_obj.start_throw_y,x,y) - 90
 			audio_manager(false,0,false,3)
@@ -504,7 +485,9 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 		x = oldx
 			y = oldy
 		return
-	} else {
+	} else if local_obj.can_sword_be_planted {
+		
+	
 		
 		
 		dist_moved = 0;
@@ -592,6 +575,7 @@ if (player_obj.tail_throwing || player_obj.tail_pulling) && !local_obj.met && !p
 			}
 		}
 	}
+	
 }
 //} else {
 	

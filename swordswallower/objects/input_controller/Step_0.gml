@@ -1,9 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if room!=subtemple01 {
-	return
-}
+//if room!=subtemple01 {
+//	return
+//}
 
 if controllers_disabled { controller = controller_keyboard }
 if controller = controller_ds4 {
@@ -127,9 +127,9 @@ if controller = controller_ds4 {
 		k_ckpt_p = keyboard_check_pressed(vk_space)
 		k_ckpt_r = keyboard_check_released(vk_space)
 		
-		k_map = keyboard_check(vk_shift)
-		k_map_p = keyboard_check_pressed(vk_shift)
-		k_map_r = keyboard_check_released(vk_shift)
+		k_map = keyboard_check(vk_control)
+		k_map_p = keyboard_check_pressed(vk_control)
+		k_map_r = keyboard_check_released(vk_control)
 		
 		k_speak = keyboard_check(ord("E"))
 		k_speak_p = keyboard_check_pressed(ord("E"))
@@ -163,7 +163,7 @@ if controller = controller_ds4 {
 }
 
 
-if skiff_obj.go && !skiff_obj.done {
+if room==subtemple01 && skiff_obj.go && !skiff_obj.done {
 	global.mousepx = skiff_obj.x-500
 	global.mousepy = skiff_obj.y-500
 }

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 mask_index = player_idle
+mask_index = IdleNew21
 //dt = room_speed/fps
 //dt = delta_time/(1/60 * 1000000)
 //if sprite.sprite_index == player_crouching || sprite.sprite_index == player_crouching_s {
@@ -102,13 +103,13 @@ if place_meeting(x,y+1,friendo2_obj) {
 //x = x + instance_place(x,y+1,friendo2_obj).hsped	
 }
 
-if place_meeting(x+1,y,wall_parent_obj) {
+if place_meeting(x+2,y,wall_parent_obj) {
 	on_wall_right = true
 } else {
 	on_wall_right = false	
 }
 
-if place_meeting(x-1,y,wall_parent_obj) {
+if place_meeting(x-2,y,wall_parent_obj) {
 	on_wall_left = true
 } else {
 	on_wall_left = false	
@@ -154,7 +155,7 @@ if start_death || death {
 
 
 
-player_stinky_code()
+//player_stinky_code()
 
 if tail_carry {
 	wall_kicked = false	
@@ -232,6 +233,9 @@ if zoom_timer_bool {
 	moveX(hsp)
 	moveY(vsp)
 	intangible = false
+	if ability_dodge_e {
+		intangible = true
+	}
 }
 if !instance_exists(title_screen_obj) {
 	enemy_collision()

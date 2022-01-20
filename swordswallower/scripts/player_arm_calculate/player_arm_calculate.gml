@@ -38,13 +38,30 @@ if direc>0 {
 elbow_pos_x = arm_pin_x + dcos(arm_angle_1) * arm_seg_length_1// * -sign(player_obj.x-tail_obj.x)
 elbow_pos_y = arm_pin_y - dsin(arm_angle_1) * arm_seg_length_1 //* sign(player_obj.x-tail_obj.x) 
 
-draw_sprite_ext(toparm,0,arm_pin_x,arm_pin_y,1,1,point_direction(arm_pin_x,arm_pin_y,elbow_pos_x,elbow_pos_y),c_white,1)
+//draw_sprite_ext(toparm,0,arm_pin_x,arm_pin_y,1,1,point_direction(arm_pin_x,arm_pin_y,elbow_pos_x,elbow_pos_y),c_white,1)
+draw_sprite_ext(spr_e_bicep,0,arm_pin_x,arm_pin_y,0.8,0.9,point_direction(arm_pin_x,arm_pin_y,elbow_pos_x,elbow_pos_y),c_white,1)
 
-if player_obj.tail_pulling || player_obj.zoom_timer_bool {
-	outline_start(3,global.magic_color,botarm)
+
+
+var arm_sprite
+var temp_dir = point_direction(elbow_pos_x,elbow_pos_y,x_tar-player_obj.x +150,y_tar-player_obj.y +150)
+var temp_ysc
+if temp_dir>90 && temp_dir<270 {
+	temp_ysc=1
+} else {
+	temp_ysc=-1
+}
+if player_obj.tail_carry {
+	arm_sprite = spr_e_forearmFist
+} else {
+	arm_sprite = spr_e_forearmReach3
 }
 
-draw_sprite_ext(botarm,0,elbow_pos_x,elbow_pos_y,1,1,point_direction(elbow_pos_x,elbow_pos_y,x_tar-player_obj.x +150,y_tar-player_obj.y +150),c_white,1)
+if player_obj.tail_pulling || player_obj.zoom_timer_bool {
+	outline_start(3,global.magic_color,arm_sprite)
+}
+//draw_sprite_ext(botarm,0,elbow_pos_x,elbow_pos_y,1,1,point_direction(elbow_pos_x,elbow_pos_y,x_tar-player_obj.x +150,y_tar-player_obj.y +150),c_white,1)
+draw_sprite_ext(arm_sprite,0,elbow_pos_x,elbow_pos_y,1,-1*temp_ysc,temp_dir,c_white,1)
 
 
 if player_obj.tail_pulling || player_obj.zoom_timer_bool {

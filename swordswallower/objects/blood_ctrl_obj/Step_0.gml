@@ -34,6 +34,10 @@ for (var l=0;l<blood_num;l++) {
 	vsp+=0.8+scalevar/6
 	//xpreva = x
 	//ypreva = y
+	if position_meeting(x,y,tar_obj) {
+		surrounded = true
+		break
+	}
 	
 	if player_obj.held_position_start {
 		var angle = point_direction(player_obj.x,player_obj.y,px,py) + random_range(-3,3)

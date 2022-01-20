@@ -22,7 +22,7 @@ lol = false
 big_boi_bool = 0
 
 initialize = false
-firsttime = true
+firsttime = false
 get_deaths = false
 
 checkpoints = array_create(100)
@@ -125,6 +125,7 @@ global.blood_cg = 0.23
 global.blood_cb = 0.439
 
 global.blood_color = make_color_rgb(255*global.blood_cr,255*global.blood_cg,255*global.blood_cb)
+global.blood_color = make_color_rgb(217,4,70)
 
 //global.magic_cr = 0.55
 //global.magic_cg = 0.21
@@ -138,6 +139,7 @@ global.magic_cr = 0.29
 global.magic_cg = 0.47
 global.magic_cb = 0.46
 global.magic_color = make_color_rgb(255*global.magic_cr,255*global.magic_cg,255*global.magic_cb)
+
 
 
 
@@ -163,20 +165,21 @@ enemy_blood_reds = ds_list_create()
 //ds_list_add(enemy_blood_reds,make_color_rgb(121,11,44))
 //ds_list_add(enemy_blood_reds,make_color_rgb(190,39,61)) 
 //ds_list_add(enemy_blood_reds,make_color_rgb(153,14,14))
-ds_list_add(enemy_blood_reds,make_color_rgb(195,14,14))
-ds_list_add(enemy_blood_reds,make_color_rgb(217,4,70))
-ds_list_add(enemy_blood_reds,make_color_rgb(203,38,35))
+
 //ds_list_add(enemy_blood_reds,make_color_rgb(95,12,11))
 //ds_list_add(enemy_blood_reds,make_color_rgb(94,33,21))
 //ds_list_add(enemy_blood_reds,make_color_rgb(60,15,9))
-ds_list_add(enemy_blood_reds,make_color_rgb(234,10,80))
-ds_list_add(enemy_blood_reds,make_color_rgb(232,73,73))
-ds_list_add(enemy_blood_reds,make_color_rgb(220,49,49))
 
-ds_list_add(enemy_blood_reds,make_color_rgb(229,0,76))
 //ds_list_add(enemy_blood_reds,make_color_rgb(133,19,19))
 
+//ds_list_add(enemy_blood_reds,make_color_rgb(195,14,14))
+ds_list_add(enemy_blood_reds,make_color_rgb(217,4,70))
+//ds_list_add(enemy_blood_reds,make_color_rgb(203,38,35))
+//ds_list_add(enemy_blood_reds,make_color_rgb(234,10,80))
+//ds_list_add(enemy_blood_reds,make_color_rgb(232,73,73))
+//ds_list_add(enemy_blood_reds,make_color_rgb(220,49,49))
 
+//ds_list_add(enemy_blood_reds,make_color_rgb(229,0,76))
 
 wind_strength = 0
 

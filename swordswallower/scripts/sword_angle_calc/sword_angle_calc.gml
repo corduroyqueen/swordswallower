@@ -35,11 +35,11 @@ angsp = 0
 
 for(t=60;t<180;t+=2) {
 	var ang = 90+(t*facing)
-	//draw_circle(sword_pos_x+cos(degtorad(ang))*108,sword_pos_y-sin(degtorad(ang))*108,t,false)
-	if collision_line(sword_pos_x,sword_pos_y,sword_pos_x+cos(degtorad(ang))*108,sword_pos_y-sin(degtorad(ang))*108,all_walls_parent_obj,false,true) {
-		sword_ang = ((t-5)*facing)
-		part_floor_spawnx = sword_pos_x + dcos(sword_ang+90)*108
-		part_floor_spawny = sword_pos_y - dsin(sword_ang+90)*108
+	//draw_circle(sword_pos_x+cos(degtorad(ang))*125,sword_pos_y-sin(degtorad(ang))*125,t,false)
+	if collision_line(sword_pos_x,sword_pos_y,sword_pos_x+cos(degtorad(ang))*125,sword_pos_y-sin(degtorad(ang))*125,all_walls_parent_obj,false,true) {
+		sword_ang = ((t-8)*facing)
+		part_floor_spawnx = sword_pos_x + dcos(sword_ang+90)*125
+		part_floor_spawny = sword_pos_y - dsin(sword_ang+90)*125
 		break
 	}	
 }

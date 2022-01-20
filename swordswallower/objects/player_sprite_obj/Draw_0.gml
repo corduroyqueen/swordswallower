@@ -3,4 +3,6 @@ if player_obj.death {
 	return	
 }
 
+
+
 event_user(0)

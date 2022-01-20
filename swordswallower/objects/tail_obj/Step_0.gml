@@ -104,10 +104,10 @@ if player_obj.tail_throwing {
 	audio_emitter_gain(s_whoosh_emitter,0)
 	
 	if player_obj.fire_active {
-		sprite_index = sword6_center
+		sprite_index = e_sword_test_center
 		//sprite_index = swordfire
 	} else {
-		sprite_index = sword6_center		
+		sprite_index = e_sword_test_center		
 		mask_index = sword
 	}
 } 
@@ -437,7 +437,7 @@ if player_obj.tail_throwing && !in_camera_range_bigger(x,y) {
 }
 //sdm(hitpause)
 if hitpause {
-	sprite_index = sword6_center
+	sprite_index = e_sword_test_center
 	hitpause_timer--
 	hsp=0
 	vsp=0

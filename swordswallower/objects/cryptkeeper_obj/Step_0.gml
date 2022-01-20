@@ -162,6 +162,10 @@ if place_meeting(x,y,tar_obj) {
 
 
 if death {
+	if place_meeting(x,y,tar_obj) {
+		instance_destroy(id)
+		return
+	}
 	if player_obj.zoom_timer_bool {
 		just_blood(player_obj.hsp*2,player_obj.vsp*2,0.2,80,true,death_blood_spawn_x,death_blood_spawn_y)
 	} else {

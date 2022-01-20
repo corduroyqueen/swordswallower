@@ -1,4 +1,54 @@
 if object_index==level1_master { return }
+
+if ability_spin_jump {
+	if grounded || held_position {
+		ability_spin_jump_e = true
+	}
+	if !grounded && ability_spin_jump_e && !held_position {
+		
+		if keyboard_check_pressed(vk_space) {
+			ability_spin_jump_e = false
+			out_of_dash_t=out_of_dash_m
+			if vsp>0 {
+				vsp*=0.5
+				vsp-=25
+				hsp*=0.60
+			} else {
+				vsp-=10
+				hsp*=0.60
+			}
+		}
+	}
+}
+
+if ability_jump {
+	
+	if keyboard_check_pressed(vk_space) {
+		//vsp = 10 * player_sprite_obj.image_xscale
+		vsp = -20
+	}
+}
+if ability_dodge {
+	if keyboard_check_pressed(vk_shift) {
+		ability_dodge_e = true
+		ability_dodge_timer=7
+		hsp = 50 * -player_sprite_obj.image_xscale
+	}
+	if ability_dodge_e {
+		ability_dodge_timer--
+		if ability_dodge_timer<0 {
+			ability_dodge_e = false
+			if !grounded {
+				hsp*=0.25
+				held_release_timer=5
+			} else {
+				hsp*=0.5
+			}
+			
+		}
+	}
+}
+
 if grounded && !zoom_timer_bool { 
 	h_decel = h_decel_g 
 } else { 
@@ -6,8 +56,8 @@ if grounded && !zoom_timer_bool {
 }
 
 
-if !zoom_timer_bool && !held_position{
-	if grounded {
+if !zoom_timer_bool && !held_position && !k_down {
+	if grounded  {
 		if k_left && hsp>=-max_hs_g {
 			if hsp >= 0 {
 				hsp-=h_accel_g*2
@@ -55,11 +105,11 @@ if !zoom_timer_bool && !held_position{
 }
 
 //sdm(player_sprite_obj.image_index)
-if grounded && (k_left || k_right) {
+if grounded && (k_left || k_right) && !k_down {
 	//walk_timer+=1
 	//if walk_timer>(25-abs(hsp)) {
 	if //abs(player_sprite_obj.image_index-4)<0.1 ||
-	floor(player_sprite_obj.image_index)==0 && footstep_audio_bool
+	(floor(player_sprite_obj.image_index)==0 || floor(player_sprite_obj.image_index)==6) && footstep_audio_bool
 	{
 		
 		
@@ -97,7 +147,7 @@ if grounded && (k_left || k_right) {
 				
 		//}
 		//all except 2 4 and 5
-		var dust = instance_create_depth(player_obj.x+sign(player_obj.hsp)*15,player_obj.y+45,depth+100,player_footstep_dust_obj)
+		var dust = instance_create_depth(player_obj.x+sign(player_obj.hsp)*15,player_obj.y+80,depth+100,player_footstep_dust_obj)
 		dust.image_xscale = dust.image_xscale * sign(player_obj.hsp)
 		//dust.image_alpha = 0.4
 		footstep_audio_bool = false
@@ -131,7 +181,7 @@ if grounded && (k_left || k_right) {
 //wall_collision_yaxis_up(black_wall_obj)
 
 if !zoom_timer_bool {
-	if(!k_left && !k_right){
+	if (!k_left && !k_right && !ability_dodge_e) || k_down {
 		if(abs(hsp) < h_decel){
 			hsp=0;	
 		} else {
@@ -148,6 +198,9 @@ if held_release_timer>0 {
 	//if vsp<-1 {
 	//	held_release_timer = 0
 	//}
+} else if ability_dodge_e {
+	grav = 0
+	vsp = 0
 } else {
 	grav = start_grav	
 }
@@ -172,26 +225,8 @@ if tail_obj.moving_platform_bool {
 	//}
 	
 }
-if ability_spin_jump {
-	if grounded || held_position {
-		ability_spin_jump_e = true
-	}
-	if !grounded && ability_spin_jump_e && !held_position {
-		
-		if keyboard_check_pressed(vk_space) {
-			ability_spin_jump_e = false
-			out_of_dash_t=out_of_dash_m
-			if vsp>0 {
-				vsp*=0.5
-				vsp-=25
-				hsp*=0.60
-			} else {
-				vsp-=10
-				hsp*=0.60
-			}
-		}
-	}
-}
+
+
 if held_position && instance_exists(tail_obj.current_obj) {
 	if tail_obj.current_obj.object_index==wood_wall_obj {
 		//damage_script(10,sign(player_obj.x-x),5,-1)	

@@ -15,6 +15,7 @@ for(var i=1;i<45;i++) {
 	ds_list_add(eyesx,layer_sprite_get_x(ok))
 	ds_list_add(eyesy,layer_sprite_get_y(ok))
 	ds_list_add(eyessc,layer_sprite_get_xscale(ok))
+	
 	var ok2 = layer_sprite_create(layer2,layer_sprite_get_x(ok),layer_sprite_get_y(ok),eyefollow2)
 	layer_sprite_xscale(ok2,layer_sprite_get_xscale(ok))
 	layer_sprite_yscale(ok2,layer_sprite_get_yscale(ok))

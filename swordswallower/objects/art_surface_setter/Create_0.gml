@@ -15,6 +15,8 @@ shader_art_surface2 = shader_get_sampler_index(shader_light_alpha_surface, "artS
 
 light_surface = surface_create(1920,1080)
 ass_setter = surface_create(1920,1080)
+
+if room==subtemple01 {
 //layer_script_begin("level_art", layer_surface_script_start);
 //layer_script_end("level_art", layer_surface_script_end);
 
@@ -131,9 +133,7 @@ layer_script_end("checkpoints", layer_stop_alpha_end);
 
 
 
-u_blood_r2 = shader_get_uniform(shader_blood_alpha_surface, "blood_r");
-u_blood_g2 = shader_get_uniform(shader_blood_alpha_surface, "blood_g");
-u_blood_b2 = shader_get_uniform(shader_blood_alpha_surface, "blood_b");
+
 
 lay_id_level_art_1 = layer_get_id("level_art");
 lay_id_foreground_1 = layer_get_id("foreground");
@@ -151,7 +151,10 @@ lay_id_level_art_3 = layer_get_id("level_art3");
 lay_id_inside_wall_art_3 = layer_get_id("inside_wall_art3");
 lay_id_solid_color_3 = layer_get_id("solid_color3");
 lay_id_misc_3 = layer_get_id("misc3");
-
+}
+u_blood_r2 = shader_get_uniform(shader_blood_alpha_surface, "blood_r");
+u_blood_g2 = shader_get_uniform(shader_blood_alpha_surface, "blood_g");
+u_blood_b2 = shader_get_uniform(shader_blood_alpha_surface, "blood_b");
 lay_id_blood_splats = layer_get_id("blood_splat");
 
 layer_script_begin("blood_splat", layer_blood_splat_start);

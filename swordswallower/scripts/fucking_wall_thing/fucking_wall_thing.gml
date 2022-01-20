@@ -28,6 +28,7 @@ if !player_obj.k_dash
 	out_of_dash_t=10
 	player_obj.hsp = clamp(player_obj.hsp,-25,25)
 	player_obj.vsp = clamp(player_obj.vsp,-25,25)
+	player_sprite_obj.sword_ang = point_direction(0,0,player_obj.hsp,player_obj.vsp)+90
 	if place_meeting(x,y,hum_food_obj) {
 		current_obj.death = true
 	}

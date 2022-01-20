@@ -3,13 +3,16 @@
 //var brightness	= 1 * 2;
 //var contrast	= 1 * 5;
 //var saturation	= 1 * 5;
-var brightness	= 2
+var brightness	= 2.1
 var contrast	= 1.2
 var saturation	= 1.1
-brightness = 1.55
-contrast = 1.25
-saturation = 1.15
-//saturation = 1
+saturation	= 1.2
+//brightness = 1.55
+//brightness = 1.58
+//contrast = 1.2
+////saturation = 1.15
+//saturation = 1.1
+////saturation = 1
 
 
 // DRAW:

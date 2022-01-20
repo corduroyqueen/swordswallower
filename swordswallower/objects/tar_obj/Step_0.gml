@@ -9,7 +9,7 @@ if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 	if !p_met {
 		if player_obj.y<y {
-			player_obj.y = (y - sprite_height/2) - (player_sprite_obj.sprite_height-40)
+			player_obj.y = (y - sprite_height/2) - (player_sprite_obj.sprite_height-70)
 		}
 		player_obj.vsp = 0
 		
@@ -19,14 +19,14 @@ if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	p_met = true
 	audio_sound_gain(sound,
 	
-	0.25 + ((80-abs((y - sprite_height/2)-(player_obj.y - player_obj.sprite_height - 40)))/80)/1.5,
+	0.25 + ((80-abs((y - sprite_height/2)-(player_obj.y - player_obj.sprite_height - 70)))/80)/1.5,
 	
 	0)
 	//sdm((80-abs((y - sprite_height/2)-(player_obj.y - player_obj.sprite_height - 40)))/80)
 	
-	player_sprite_obj.spr_tarheight = (player_obj.y+32)  - (y-sprite_height/2)
+	player_sprite_obj.spr_tarheight = (player_obj.y+57)  - (y-sprite_height/2)
 	//player_obj.vsp=0.3
-	player_obj.hsp/= 1.05 + max(player_sprite_obj.spr_tarheight,0)/25
+	player_obj.hsp/= 1.05 + max(player_sprite_obj.spr_tarheight,0)/80
 	
 	
 	

@@ -2,19 +2,19 @@
 // You can write your code in this editor
 with intro_handler {
 	
-	if intro_handler.intro_timer>=200 &&intro_handler.intro_timer<500 {
+	if intro_handler.intro_timer>=200 && intro_handler.intro_timer<500 {
 		draw_set_alpha(1)
 		draw_sprite(gameby,0,960,400)
-		draw_sprite(names[names_f],0,960,500)
+		draw_sprite(names[0],0,960,500)
 		draw_sprite(and_s,0,960,590)
-		draw_sprite(names[1-names_f],0,960,700)
+		draw_sprite(names[1],0,960,700)
 		draw_set_alpha(alpha)
 	}
 	
 }
 
 player_start_map()
-if !player_obj.death && !player_obj.ending_lock && !instance_exists(title_screen_obj) && !keyboard_check_pressed(ord("V")) {
+if !player_obj.death && intro_handler.intro_timer>=intro_handler.black_timer_m && !player_obj.ending_lock && !instance_exists(title_screen_obj) && !keyboard_check_pressed(ord("V")) {
 	draw_set_color(c_black)
 	draw_circle(mouse_ui_x-player_obj.camx,mouse_ui_y-player_obj.camy,10,false)
 	draw_set_color(c_white)
@@ -23,14 +23,35 @@ if !player_obj.death && !player_obj.ending_lock && !instance_exists(title_screen
 
 
 
-if level1_master.dev && !keyboard_check_pressed(ord("V")) {
-	draw_set_font(font2)
-	draw_text(19,89,"fps  " + string(fps))	
-	draw_text(19,120,"real fps  " + string(fps_real))	
-	draw_text(19,151,"active instances  " + string(instance_count))
-	draw_text(19,182,"d time  " + string(delta_time))
-	//gpu_get_state()
-}
+//if !keyboard_check_pressed(ord("V")) {
+//	draw_set_font(font2)
+//	draw_text(19,89,"fps  " + string(fps))	
+//	draw_text(19,120,"real fps  " + string(fps_real))	
+//	draw_text(19,151,"active instances  " + string(instance_count))
+//	draw_text(19,182,"d time  " + string(delta_time))
+	
+//	fps_timer1++
+//	if fps_timer1>5{
+//		fps_timer1=0
+		
+//		//if ds_list_size(fps_list)>60 {
+//		//	ds_list_delete(fps_list,0)
+//		//}
+//		ds_list_add(fps_list,fps_real)
+		
+//		fps_avg=0
+//		sz = ds_list_size(fps_list)
+//		for(var i=0;i<sz;i++){
+//			fps_avg+=fps_list[| i]
+//		}
+//		fps_avg=fps_avg/sz
+//	}
+	
+//	draw_text(19,242,"fps avg  " + string(fps_avg))
+//	draw_text(19,302,"size  " + string(sz))
+//	//gpu_get_state()
+	
+//}
 
 if fps>=52 && fps_check_enable {
 	fps_timer=0

@@ -1,7 +1,10 @@
 if (!surface_exists(blood_surface)) {
 	blood_surface = surface_create(1920,1080)
 }
-	
+
+
+
+
 surface_set_target(blood_surface);
 //surface_set_target(blood_surface)
 //draw_clear_alpha($FF7F7F, 1);
@@ -10,6 +13,11 @@ surface_set_target(blood_surface);
 if !player_obj.death || player_obj.respawn_timer>58 {
 	draw_clear_alpha(c_black,0)
 	
+}
+
+if blood_ctrl_obj.blood_num<1 {
+	surface_reset_target()
+	return
 }
 var cx =player_obj.camx
 var cy =player_obj.camy

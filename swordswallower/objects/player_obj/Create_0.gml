@@ -75,7 +75,7 @@ max_hs_g = 13.35
 max_hs_a = 9
 
 
-max_vs = 45
+max_vs = 50
 
 //grav = .185
 grav = 1.05
@@ -254,6 +254,12 @@ ability_held_release_m=5
 
 ability_spin_jump = false
 ability_spin_jump_e = true
+
+ability_dodge = false
+ability_dodge_e = false
+ability_dodge_timer = 0
+
+ability_jump = false
 
 
 ang1 = 0

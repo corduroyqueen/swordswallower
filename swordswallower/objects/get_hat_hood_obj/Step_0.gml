@@ -51,7 +51,7 @@ if gravd {
 //dialogue_array[8] = "Good luck. "
 //dialogue_array[9] = "end"
 
-dialogue_array[0] = "You got a hood! Press 1 and 2 to cycle through hats. "
+dialogue_array[0] = "You got Yarnehead! Press 1 and 2 to cycle through hats. "
 dialogue_array[1] = "end"
 
 

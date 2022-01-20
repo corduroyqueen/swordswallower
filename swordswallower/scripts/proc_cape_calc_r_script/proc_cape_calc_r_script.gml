@@ -1,12 +1,17 @@
-var cape_p = 17
-
-cape_p_r_x[|0] = 150 + arm_pos_table_x[image_index] * -image_xscale
-if sprite_index==s_player_idle_e {
-	cape_p_r_x[|0]+=(8 * image_xscale)
+var cape_p = 25
+var temp_image_index = image_index
+var add=0
+if !(player_obj.k_left || player_obj.k_right) {
+	add=5
 }
-cape_p_r_y[|0] = 150 + arm_pos_table_y[image_index] - 6
-if player_obj.k_down {
-	cape_p_r_y[|0]+=20
+
+cape_p_r_x[|0] = 150 + (arm_pos_table_x[temp_image_index]-arm_add_f) * -image_xscale
+if sprite_index==s_player_idle_e {
+	cape_p_r_x[|0]+=(-3 * image_xscale)
+}
+cape_p_r_y[|0] = 150 + arm_pos_table_y[temp_image_index] - 1 - add
+if player_obj.k_down && player_obj.grounded {
+	cape_p_r_y[|0]+=25
 }
 
 
@@ -17,6 +22,10 @@ if player_obj.grounded {
 	ground =1
 } else {ground=0}
 var psp = pythag(player_obj.hsp,player_obj.vsp)
+var add_y_grav = 0
+if player_obj.grounded && abs(player_obj.hsp)>0.01 {
+	add_y_grav=2
+}
 for(var pts=1;pts<7;pts++) {
 	var phsp=0
 	var pvsp=0
@@ -39,18 +48,26 @@ for(var pts=1;pts<7;pts++) {
 	}
 	
 	px += phsp
-	py += pvsp + 2
+	//py += pvsp + 2
+	
+	if !place_meeting(farx+px,fary+py-25+5,wall_parent_obj) {
+		py += pvsp+add_y_grav
+		
+	}
+	
+	if player_obj.grounded && abs(pvsp)<0.01 {
+		while abs(px+farx-player_obj.x)<3+(pts*3) {
+			px-=sign(image_xscale)
+		}
+	} else if !player_obj.grounded {
+		if abs(px+farx-player_obj.x)<5+(pts*10) {
+			px-=sign(image_xscale)
+		}
+	}
 	
 	//draw_set_color(c_green)
 	//draw_circle(farx+px,fary+py,5,false)
 	//draw_set_color(c_white)
-	if pvsp>0  && (fary+py-25>player_obj.y-10) && place_meeting(farx+px,fary+py-25,wall_parent_obj) {
-		var tobj = instance_place(farx+px,fary+py-25,wall_parent_obj)
-		
-		py = default_collision_y_only(farx+px,fary+py-25,pvsp,tobj) - fary+25
-		//px = default_collision_x_only(farx+px,fary+py-25,-phsp,tobj) - farx
-		
-	}
 	//draw_set_color(c_fuchsia)
 	//draw_circle(farx+px,fary+py,5,false)
 	//draw_set_color(c_white)

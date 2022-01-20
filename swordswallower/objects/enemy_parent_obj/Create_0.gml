@@ -18,6 +18,7 @@ material_meat = 3
 
 material_type = 3
 
+can_sword_be_planted = false
 sword_ignore = false
 /*
 if current_time-player_obj.start_time>50 {

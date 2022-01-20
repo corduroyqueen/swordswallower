@@ -34,7 +34,7 @@ for(i=0; i < iteration_num; i++) {
 				if !tail_obj.stinky && !player_obj.stinky_check {
 					enemy_default_player_collision(collision)
 				}
-			} else if collision.object_index==cryptkeeper_obj {
+			} else if object_get_parent(collision.object_index)==enemy_default_obj {
 				//cryptkeeper
 				enemy_default_player_collision(collision)
 			} else if object_get_parent(collision.object_index)==kill_on_dash_parent_obj {

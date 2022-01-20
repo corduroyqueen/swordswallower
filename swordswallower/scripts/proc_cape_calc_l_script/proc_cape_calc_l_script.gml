@@ -1,15 +1,22 @@
 var cape_p = 19
+cape_p = 25
 
-cape_p_l_x[|0] = 150 + arm_pos_table_x[image_index] * -image_xscale
+var temp_image_index = image_index
+var add=0
+if !(player_obj.k_left || player_obj.k_right) {
+	add=5
+}
+
+cape_p_l_x[|0] = 150 + (5*image_xscale) + (arm_pos_table_x[temp_image_index]-arm_add_f) * -image_xscale
 if sprite_index==s_player_idle_e {
 	cape_p_l_x[|0]+=(8 * image_xscale)
 }
 
 
-cape_p_l_y[|0] = 150 + arm_pos_table_y[image_index] - 6
+cape_p_l_y[|0] = 150 + arm_pos_table_y[temp_image_index] - 2 - add
 
-if player_obj.k_down {
-	cape_p_l_y[|0]+=20
+if player_obj.k_down && player_obj.grounded {
+	cape_p_l_y[|0]+=25
 }
 
 
@@ -42,23 +49,46 @@ for(var pts=1;pts<7;pts++) {
 	}
 	
 	px += phsp
-	py += pvsp
 	
-	if round(pts)==1 {
-		while abs(px+farx-player_obj.x)<15 {
+	
+	if !place_meeting(farx+px,fary+py-25+5,wall_parent_obj) {
+		py += pvsp
+	}
+	
+	
+	if player_obj.grounded && !(player_obj.k_left || player_obj.k_right) {
+		while abs(px+farx-player_obj.x)<5+(pts*10) {
 			px+=sign(image_xscale)
 		}
-	}
-	if round(pts)==3 {
-		while abs(px+farx-player_obj.x)<25 {
-			px+=sign(image_xscale)
+	} else {
+		if abs(px+farx-player_obj.x)<5+(pts*10) {
+			px+=sign(image_xscale)*2
 		}
 	}
-	if round(pts)==4 {
-		while abs(px+farx-player_obj.x)<34 {
-			px+=sign(image_xscale)
+	if round(pts)==1 && (player_obj.k_left || player_obj.k_right) {
+		if player_obj.k_left {
+			while px<165 {
+				px+=1
+			}
+		} else if player_obj.k_right {
+			
+			while px>125 {
+				px-=1
+			}
 		}
+		
+		
 	}
+	//if round(pts)==3 {
+	//	while abs(px+farx-player_obj.x)<25 {
+	//		px+=sign(image_xscale)
+	//	}
+	//}
+	//if round(pts)==4 {
+	//	while abs(px+farx-player_obj.x)<34 {
+	//		px+=sign(image_xscale)
+	//	}
+	//}
 	
 	//draw_set_color(c_green)
 	//draw_circle(farx+px,fary+py,5,false)
@@ -66,7 +96,7 @@ for(var pts=1;pts<7;pts++) {
 	if pvsp>0 && (fary+py-25>player_obj.y-10)&& place_meeting(farx+px,fary+py-25,wall_parent_obj) {
 		var tobj = instance_place(farx+px,fary+py-25,wall_parent_obj)
 		
-		py = default_collision_y_only(farx+px,fary+py-25,pvsp,tobj) - fary+25
+		//py = default_collision_y_only(farx+px,fary+py-25,pvsp,tobj) - fary+25
 		//px = default_collision_x_only(farx+px,fary+py-25,-phsp,tobj) - farx
 		
 	}

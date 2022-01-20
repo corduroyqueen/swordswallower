@@ -172,13 +172,15 @@ shader_reset();
 //-----------------------------------------------------------------------------
 // DRAW WATER IF IN VIEW:
 //-----------------------------------------------------------------------------
-if (21137 < (player_obj.camy + 1080)) {
-	water_shader_script(0,21137)
-}
+if room==subtemple01 {
+	if (21137 < (player_obj.camy + 1080)) {
+		water_shader_script(0,21137)
+	}
 
-if (3730 < (player_obj.camy + 1080)) && (3730 > (player_obj.camy)) && !instance_exists(title_screen_obj) {
-	//water_shader_script(max(0,25640-player_obj.camx),3730)
-	water_shader_script(0,3730)
+	if (3730 < (player_obj.camy + 1080)) && (3730 > (player_obj.camy)) && !instance_exists(title_screen_obj) {
+		//water_shader_script(max(0,25640-player_obj.camx),3730)
+		water_shader_script(0,3730)
+	}
 }
 
 
@@ -217,9 +219,10 @@ if player_obj.death {
 	} else {
 		bloom_threshold = 0.29
 		bloom_threshold = 0.25
-		bloom_threshold = 0.05
-		bloom_intensity = 0.41
-		bloom_intensity = 0.6
+		bloom_threshold = 0.29
+		//bloom_threshold = 0.05
+		bloom_intensity = 0.3//0.41
+		//bloom_intensity = 0.6
 		//sdm("?????")
 	}
 }
@@ -300,12 +303,14 @@ shader_set(shad_bloom_blend);
 	
 shader_reset();
 }
-
-draw_set_color(c_black)
-draw_set_alpha(0.35)
-draw_rectangle(0,0,1920,1080,false)
-gpu_set_blendmode(bm_add)
-draw_sprite_ext(blood_sprite_spr1,0,player_obj.x-player_obj.camx,player_obj.y-player_obj.camy,1,1,0,c_white,0.07)
+if intro_handler.intro_timer>=intro_handler.black_timer_m {
+	//draw_set_color(c_black)
+	//draw_set_alpha(0.35)
+	//draw_rectangle(0,0,1920,1080,false)
+	draw_sprite_ext(darkness,0,0,0,1920,1080,0,c_white,1)
+	gpu_set_blendmode(bm_add)
+	draw_sprite_ext(blood_sprite_spr1,0,player_obj.x-player_obj.camx,player_obj.y-player_obj.camy,1,1,0,c_white,0.07)
+}
 draw_set_color(c_white)
 gpu_set_blendmode(bm_normal)
 draw_set_alpha(1)

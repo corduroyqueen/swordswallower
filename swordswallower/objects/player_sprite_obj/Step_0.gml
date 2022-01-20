@@ -24,10 +24,10 @@ if player_obj.zoom_timer_bool {
 		facing_right = false
 	}
 } else {
-	if player_obj.on_wall_right {
-		facing_right = false	
-	} else if player_obj.on_wall_left {
+	if player_obj.on_wall_left {
 		facing_right = true	
+	} else if player_obj.on_wall_right {
+		facing_right = false	
 	}
 }
 depth=-2301
@@ -40,43 +40,30 @@ if facing_right {
 
 if player_obj.tail_carry {
 	if player_obj.held_position {
-		if floor(tail_obj.ang)==0 || floor(tail_obj.ang)==180 {
-			sprite_index = s_player_wall_cling
-		} else if floor(tail_obj.ang)==270 {
-			sprite_index = s_player_idle_e
-		} else {
-			sprite_index = s_player_ceil_cling
-		}
+		sprite_index = s_player_falling_s
+	} else if player_obj.grounded && player_obj.k_down {
+		//sprite_index = spr_mc_gettingupaftercrouch
+		sprite_index = spr_e_crouch
+		image_speed = 0
 	} else if player_obj.grounded && (player_obj.k_right || player_obj.k_left) {
 		sprite_index = s_player_run_s
 		image_speed= abs(player_obj.hsp) * 0.1
-	} else if player_obj.grounded && player_obj.k_down {
-		sprite_index = spr_mc_gettingupaftercrouch
-		image_speed = 1
 	} else if !player_obj.grounded {
 		sprite_index = s_player_falling_s
 	} else {
 		sprite_index = s_player_idle_s
 	}
-}
-
-if !player_obj.tail_carry {
+} else {
 	
 	if player_obj.held_position {
-		if floor(tail_obj.ang)==0 || floor(tail_obj.ang)==180 {
-			sprite_index = s_player_wall_cling
-		} else if floor(tail_obj.ang)==270 {
-			sprite_index = s_player_idle_e
-		} else {
-			sprite_index = s_player_ceil_cling
-		}
+		sprite_index = s_player_falling_s
 		
+	} else if player_obj.grounded && player_obj.k_down {
+		sprite_index = spr_e_crouch
+		image_speed = 0
 	} else if player_obj.grounded && (player_obj.k_right || player_obj.k_left) {
 		sprite_index = s_player_run_e
 		image_speed= abs(player_obj.hsp) * 0.1
-	} else if player_obj.grounded && player_obj.k_down {
-		sprite_index=spr_mc_gettingupaftercrouch
-		image_speed = 1
 	} else if player_obj.grounded {
 		sprite_index = s_player_idle_e
 	} else if player_obj.vsp>=0 && !player_obj.zoom_timer_bool {
