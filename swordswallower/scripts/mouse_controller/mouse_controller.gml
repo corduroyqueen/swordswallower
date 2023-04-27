@@ -5,21 +5,29 @@ if zoom_allow>0 {
 	zoom_allow--	
 }	
 
+if swipe_timer_to_throw > 0 {
+	swipe_timer_to_throw--
+	if left_click_buffer > 0 {
+		left_click_buffer = 8
+	}
+}
+
+if swipe_timer_to_swipe > 0 {
+	swipe_timer_to_swipe--
+}
+
 if !tail_planted && !tail_held {
 	if !tail_pulling {
-		if left_click_buffer>0 && !tail_pulling && !tail_throwing {
-			//if grounded {
-			//	winding = true	
-			//} else {
+		if left_click_buffer>0 && !tail_pulling && !tail_throwing && swipe_timer_to_throw < 1 {
 			tail_obj.moving_platform_bool = false
 			tail_obj.x = player_obj.x
 			tail_obj.y = player_obj.y
-			if input_controller.controller == input_controller.controller_ds4 {
-				//auto_aim_selection(0.8)
+			
+			if input_controller.controller == input_controller.controller_ds4 &&
+			player_obj.x < 66000 {
 				auto_aim_selection(0.7)
 			} else {
-				//auto_aim_selection(0.25)
-				//auto_aim_selection(1)
+				
 			}
 			tail_dest_x = global.mousepx
 			tail_dest_y = global.mousepy
@@ -42,44 +50,28 @@ if !tail_planted && !tail_held {
 			//}
 			
 			with tail_obj {
-				//audio_manager(gsound.s_sword_whoosh,0,true,0)
-				
 				audio_emitter_gain(s_whoosh_emitter,1)
 			}
 		}
 		
+		if tail_carry && k_dash_p && swipe_timer_to_swipe<1 {
+			player_sword_swipe()
+			swipe_timer_to_swipe = 60
+			swipe_timer_to_throw = 20
+		}
 		
-		//if winding {
-		//	if global.mousepcheck_button_released(mb_left) {
-		//		tail_dest_x = global.mousepx
-		//		tail_dest_y = global.mousepy
-		//		//tail_obj.hsp = xl //* tail_obj.tspeed
-		//		//tail_obj.vsp = yl //* tail_obj.tspeed
-		//		tail_carry = false
-		//		tail_throwing = true
-		//		winding = false
-				
-		//		start_throw_x = x
-		//		start_throw_y = y
-		//	}
-		//}
 		if tail_throwing && k_dash_p && !zoom_timer_bool {
 			zoom_buff_timer = 60
-			//tail_planted=false
 		}
 		zoom_buff_timer--
 	}
 	
-	if (tail_carry || tail_pulling )&& tail_obj.nearby_swordgrab_buffer>0 && k_dash_p 
+	if (tail_carry || tail_pulling) && tail_obj.nearby_swordgrab_buffer>0 && k_dash_p 
 	&& level1_master.ability_dash //&& point_distance(x,y,player_hitbox_check_obj.x,player_hitbox_check_obj.y)<135 
 	&& tail_obj.current_obj.object_index!=black_wall_obj
 	&& zoom_on
 	{
-		//shockwave_shader.trigger = true
-		
 		zoom_buff_timer = 0
-		//zoom_ctdn = 4
-		//tail_zooming=true
 		zoom_timer_bool = true
 		zoom_pause = true
 			
@@ -92,36 +84,19 @@ if !tail_planted && !tail_held {
 		audio_play_sound(Ice_Projectile_Shoot_03,0,false)
 		audio_play_sound(swsw_dash_base,0,false)
 		audio_sound_gain(swsw_dash_base,0.5,0)
-		//audio_play_sound(kka,0,false)
 		
 		draw_line_obj.go = true	
 		draw_line_obj.gotimer=50
 		draw_line_obj.alpha = 1
-		//instance_create_depth(x,y,-10,explosion_obj)
 	}
 } else {
-	//if global.mousepcheck_button_released(mb_left) && !tail_pulling && !tail_throwing && !zoom_timer_bool {
-	//	//if grounded {
-	//	//	winding = true	
-	//	//} else {
-				
-	//		tail_dest_x = global.mousepx
-	//		tail_dest_y = global.mousepy
-	//		tail_planted = false
-	//		tail_throwing = true
-				
-	//		start_throw_x = x
-	//		start_throw_y = y
-	//	//}
-	//	audio_manager(gsound.s_sword_whoosh,0,true,0)
-	//} else 
+	
 	if k_fire_p && zoom_timer_bool  && !gem_active {
 		click_out_of_wall_timer = 20
 	}
 	
 	if click_out_of_wall_timer>0 && zoom_timer_bool { 
 		click_out_of_wall_timer-- 
-		//sdm(click_out_of_wall_timer)
 		if !place_meeting(x,y,wall_obj) {
 				
 			sword_pull_check()

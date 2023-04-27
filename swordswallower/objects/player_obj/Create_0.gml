@@ -46,6 +46,7 @@ k_speak = mouse_check_button(mb_right)
 disable =false
 
 hp = 1
+max_hp = 1
 inv_timer = 0
 inv_delay = 4
 inv_count = 0
@@ -250,7 +251,7 @@ ckpt_bool = false
 
 ///ability bools
 ability_held_release_jump = false
-ability_held_release_m=5
+ability_held_release_m = 5
 
 ability_spin_jump = false
 ability_spin_jump_e = true
@@ -260,6 +261,12 @@ ability_dodge_e = false
 ability_dodge_timer = 0
 
 ability_jump = false
+
+ability_swipe = false
+
+
+swipe_timer_to_swipe = 0
+swipe_timer_to_throw = 0
 
 
 ang1 = 0

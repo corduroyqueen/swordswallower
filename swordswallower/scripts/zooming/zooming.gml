@@ -43,6 +43,9 @@ if tail_zooming {
 		//sdm(point_distance(x,y,tail_dest_x,tail_dest_y))
 		if point_distance(x,y,tail_dest_x,tail_dest_y)>2 {
 			//move_towards_point(tail_dest_x,tail_dest_y,ztempspeed)
+			sdm("going")
+			sdm(tail_dest_x)
+			sdm(tail_dest_y)
 			hsp = cos(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * ztempspeed
 			vsp = -sin(degtorad(point_direction(x,y,tail_dest_x,tail_dest_y))) * ztempspeed
 		} else {
@@ -110,7 +113,9 @@ if zoom_timer_bool {
 	zoom_timer++
 	
 	//sdm(object_get_name(tail_obj.current_obj.object_index))
-	if instance_exists(tail_obj.current_obj) && tail_obj.current_obj.object_index==impale_circle_obj {
+	if instance_exists(tail_obj.current_obj) && 
+	(tail_obj.current_obj.object_index==impale_circle_obj
+	|| tail_obj.current_obj.object_index==boss_dada_obj) {
 		player_hitbox_check_obj.x = tail_obj.current_obj.x	
 		player_hitbox_check_obj.y = tail_obj.current_obj.y
 		//sdm("goooo")

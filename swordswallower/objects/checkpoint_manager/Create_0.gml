@@ -6,6 +6,7 @@ rx = x
 ry = y
 
 intro_start = true
+//intro_start = false
 text_bool = false
 text_timer = 0
 //intro_start = false

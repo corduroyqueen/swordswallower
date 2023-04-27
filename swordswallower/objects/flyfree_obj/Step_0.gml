@@ -15,7 +15,17 @@ if level1_master.in_void {
 
 if death {
 	if death_timer< 1 {
-		if player_obj.zoom_timer_bool {
+		
+		sdm("start")
+		if blood_death_override_velocity_x != noone {
+			
+			sdm("wat")
+			just_blood(
+				blood_death_override_velocity_x,
+				blood_death_override_velocity_y,
+				0.3,10,false,x,y)
+			
+		} else if player_obj.zoom_timer_bool {
 			//just_blood(player_obj.hsp*30,player_obj.vsp*30,0.3,10,false,sprite_width/4,sprite_height)
 			just_blood(player_obj.hsp*30,player_obj.vsp*30-100,0.3,10,false,death_blood_spawn_x,death_blood_spawn_y)
 		} else {

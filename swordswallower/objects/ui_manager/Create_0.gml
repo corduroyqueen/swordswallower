@@ -64,3 +64,8 @@ fps_list = ds_list_create()
 fps_avg=0
 sz=0
 fps_timer1 =5
+
+
+health_bar_active = false
+health_bar_hp = false
+health_bar_obj = noone

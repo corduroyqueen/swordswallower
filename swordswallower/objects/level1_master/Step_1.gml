@@ -21,6 +21,8 @@ if firsttime {
 		cgems[i] = instance_find(cgem_obj,i)
 		cgems_b[i] = false
 	}
+	
+	sdm("hello")
 	hello = instance_create_depth(checkpoint_manager.x,checkpoint_manager.y,100,checkpoint1)	
 	checkpoints[0] = hello
 	hello.number = 0
@@ -31,9 +33,9 @@ if firsttime {
 	firsttime = false
 	if room==subtemple01 {
 		px_layer_sky = layer_get_id("px_sky")
-		px_layer_sky_amt = 1.01
+		px_layer_sky_amt = 1.001
 		px_layer_bkd2 = layer_get_id("px_bkd2")
-		px_layer_bkd2_amt = 1.03
+		px_layer_bkd2_amt = 1.01
 		px_layer_bkd1 = layer_get_id("px_bkd1")
 		px_layer_bkd1_amt = 1.04
 		px_layer_near2 = layer_get_id("px_near2")

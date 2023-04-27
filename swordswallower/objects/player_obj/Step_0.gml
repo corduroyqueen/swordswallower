@@ -2,6 +2,7 @@
 // You can write your code in this editor
 mask_index = player_idle
 mask_index = IdleNew21
+
 //dt = room_speed/fps
 //dt = delta_time/(1/60 * 1000000)
 //if sprite.sprite_index == player_crouching || sprite.sprite_index == player_crouching_s {
@@ -21,13 +22,7 @@ if hp<=0 {
 	start_death = true
 	
 }
-if shielded {
-	hp = 2
-} else {
-	if hp>1 {
-		hp = 1	
-	}	
-}
+
 //TO DO
 //make checkpoint organizing array
 

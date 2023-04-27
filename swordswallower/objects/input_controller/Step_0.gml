@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//if room!=subtemple01 {
-//	return
-//}
 
 if controllers_disabled { controller = controller_keyboard }
 if controller = controller_ds4 {

@@ -1,0 +1,1 @@
+return point_direction(player_obj.x,player_obj.y,global.mousepx,global.mousepy)

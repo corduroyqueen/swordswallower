@@ -250,11 +250,11 @@ if !death {
 	camy = floor(camy)
 }
 
-if init_camera_set {
-	camx = checkpoint_manager.checkpoint.x-cam_width_h
-	camy = checkpoint_manager.checkpoint.y-cam_height_h
-	init_camera_set = false
-}
+//if init_camera_set {
+//	camx = checkpoint_manager.checkpoint.x-cam_width_h
+//	camy = checkpoint_manager.checkpoint.y-cam_height_h
+//	init_camera_set = false
+//}
 
 cam_midx = camx + cam_width_h
 cam_midy = camy + cam_height_h

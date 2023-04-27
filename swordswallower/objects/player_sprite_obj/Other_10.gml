@@ -1,9 +1,13 @@
-//fuck yes
+ //fuck yes
 /// @description Insert description here
 // You can write your code in this editor
 
 var spr_mc_head_idle = HeadNewFrontFinal1
+spr_mc_head_idle = headnewtest
 var spr_mc_head_side = HeadNewSideFinal1
+
+spr_mc_head_idle = head_eN1
+spr_mc_head_side = head_eN1
 
 //if keyboard_check_pressed(ord("8")) {
 //	spr_mc_head_idle = e_head_idle
@@ -22,15 +26,23 @@ if !surface_exists(player_surface) {
 //		cape_p_l_wind_timer[|pts]=0
 //	}
 //}
-proc_cape_calc_l_script()
-proc_cape_calc_r_script()
+wind_velocity()
+	
+//proc_cape_calc_l_script()
+//proc_cape_calc_r_script()
+proc_cape_l_script_v3()
+proc_cape_r_script_v3()
+proc_cape_calc_m_script_new()
+
+/*proc_hair_calc_l_script_new()
+proc_hair_calc_r_script_new()
+proc_hair_calc_m_script_new()*/
+
+proc_hair_calc_input_new()
 
 surface_set_target(player_surface)
 draw_clear_alpha(c_black,0)
 
-if player_obj.shielded {
-	draw_sprite(shield_spr,0,x,y)	
-}
 
 
 //gpu_set_colorwriteenable(true,true,true,true);
@@ -58,9 +70,10 @@ with level1_master {
 var headi = level1_master.hats_list[|level1_master.head_spr_i]
 
 //draw_self()
-draw_self()
+//draw_self()
+
 //image_index = max(image_index,0)//laazy debugd
-if sprite_index==spr_mc_somersault || player_obj.zoom_timer_bool {
+if sprite_index==spr_mc_somersault || player_obj.zoom_timer_bool || true {
 	
 } else if (!(player_obj.k_left || player_obj.k_right) && player_obj.grounded) || player_obj.intro {
 	if player_obj.k_down && player_obj.grounded && !player_obj.held_position && !player_obj.intro {
@@ -80,6 +93,10 @@ if sprite_index==spr_mc_somersault || player_obj.zoom_timer_bool {
 	}
 }
 
+var scaletest = 0.935
+
+draw_sprite_ext(bodynodress_small,0,x,y-7,-image_xscale * scaletest,image_yscale * scaletest,0,c_white,1)
+
 if !player_obj.zoom_timer_bool {
 	gpu_set_blendenable(false)
 	gpu_set_colorwriteenable(false,false,false,true);
@@ -90,8 +107,12 @@ if !player_obj.zoom_timer_bool {
 	draw_set_alpha(1);
 	
 	
-	draw_self()
-	if sprite_index==spr_mc_somersault {
+	
+	
+	//draw_self()
+	draw_sprite_ext(bodynodress_small,0,x,y-7,-image_xscale * scaletest,image_yscale * scaletest,0,c_white,1)
+	
+	if sprite_index==spr_mc_somersault|| true  {
 		
 	} else if (!(player_obj.k_left || player_obj.k_right) && player_obj.grounded) || player_obj.intro  {
 		if player_obj.k_down && player_obj.grounded && !player_obj.held_position  && !player_obj.intro  {
@@ -151,6 +172,8 @@ if !player_obj.zoom_timer_bool {
 	
 	gpu_set_alphatestenable(false);
 	gpu_set_blendmode(bm_normal);
+	
+	
 	//draw_sprite(sprite_index,image_index,x,y)
 	if player_obj.k_down && !player_obj.held_position && player_obj.grounded  {
 		arm_pin_x = x + 2 * image_xscale
@@ -159,14 +182,29 @@ if !player_obj.zoom_timer_bool {
 		arm_pin_x = x + arm_pos_table_x[image_index] * image_xscale
 		arm_pin_y = y + arm_pos_table_y[image_index]
 	} else {
-		arm_pin_x = x + 8 * image_xscale
+		arm_pin_x = x + 12 * image_xscale
 		arm_pin_y = y - 29
 	}
 	player_sword_calc()
-	player_arm_draw()
+	
 	draw_set_color(c_green)
 }	
 
+proc_cape_draw_m_script_new(c_gray)
+
+player_arm_draw()
+
+if !player_obj.zoom_timer_bool {
+	var crouch_y =0
+	if player_obj.k_down && player_obj.grounded {
+		crouch_y = 30
+	}
+	if ((player_obj.grounded && (player_obj.k_left || player_obj.k_right)) || !player_obj.grounded) && !player_obj.intro {
+		//draw_sprite_ext(spr_e_CharacterNewSideCollar,0,x+(head_pos_table_x[image_index]-2)*-image_xscale,y+head_pos_table_y[image_index]-15+crouch_y,image_xscale,image_yscale,0,c_white,1)
+	} else {
+		//draw_sprite_ext(top_cape,0,x+(head_pos_table_x[image_index]-3)*-image_xscale+0.5,y+head_pos_table_y[image_index]-15+crouch_y,-image_xscale*0.9,image_yscale*0.9,0,c_white,1)
+	}
+}
 
 //gpu_set_colorwriteenable(true,true,true,false);
 surface_reset_target()
@@ -179,26 +217,22 @@ y=player_obj.y
 
 
 if !player_obj.zoom_timer_bool {
-	proc_cape_draw_r_script(cape_p_r_x,cape_p_r_y,  cloak_color)
-	proc_cape_draw_m_script(cloak_color_dark)
+	//proc_cape_draw_r_script(cape_p_r_x,cape_p_r_y,  cloak_color)
+	//proc_cape_draw_m_script(cloak_color_dark)
 }
 
-draw_surface(player_surface,player_obj.x-150,player_obj.y-150)
-if !player_obj.zoom_timer_bool {
-	proc_cape_draw_l_script(cape_p_l_x,cape_p_l_y,  cloak_color)
-}
+//proc_hair_draw_script_new(c_gray)
+//proc_hair_draw_new()
+
+draw_surface_ext(player_surface,player_obj.x-150,player_obj.y-150,1,1,0,c_white,0.5)
 
 if !player_obj.zoom_timer_bool {
-	var crouch_y =0
-	if player_obj.k_down && player_obj.grounded {
-		crouch_y = 30
-	}
-	if ((player_obj.grounded && (player_obj.k_left || player_obj.k_right)) || !player_obj.grounded) && !player_obj.intro {
-		draw_sprite_ext(spr_e_CharacterNewSideCollar,0,x+(head_pos_table_x[image_index]-2)*-image_xscale,y+head_pos_table_y[image_index]-15+crouch_y,image_xscale,image_yscale,0,c_white,1)
-	} else {
-		draw_sprite_ext(top_cape,0,x+(head_pos_table_x[image_index]-3)*-image_xscale+0.5,y+head_pos_table_y[image_index]-15+crouch_y,-image_xscale*0.9,image_yscale*0.9,0,c_white,1)
-	}
+	//proc_cape_draw_l_script(cape_p_l_x,cape_p_l_y,  cloak_color)
+	//proc_cape_draw_m_script_new(c_gray)
+	
+	//proc_hair_draw_script(hair_p_l_x,hair_p_l_y,c_white)
 }
+
 //draw_set_color(c_green)
 //draw_circle(arm_pin_x-150+player_obj.x,arm_pin_y-150+player_obj.y,6,false)
 //draw_sprite(spr_leftestpupil,0,arm_pin_y-150+player_obj.x,arm_pin_y-150+player_obj.y)
@@ -226,6 +260,10 @@ if player_obj.tail_carry && player_obj.out_of_dash_t>=00 && !player_obj.held_pos
 	
 	//draw_circle(sword_pos_x, sword_pos_y, 7, false);
 }
+if player_obj.hp>1 {
+	draw_sprite(shield_spr,0,x,y)	
+}
+
 floor_particle_script()	
 
 draw_set_color(c_fuchsia)

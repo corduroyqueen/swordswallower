@@ -135,7 +135,10 @@ if sword_s==sword_s_air {
 	
 } 
 if sword_s==sword_s_dragging {
-	if sword_pos_y<temp_pin_y+45  {
+	var y_grav_cutoff = 45
+	y_grav_cutoff = 35
+	
+	if sword_pos_y<temp_pin_y + y_grav_cutoff  {
 		sword_pos_y+=6
 	} 
 	sword_angle_calc()	

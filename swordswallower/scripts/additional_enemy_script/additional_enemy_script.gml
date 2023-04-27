@@ -167,6 +167,29 @@ if obj==fatfly_obj || obj==spikyguy_obj {
 	player_obj.tail_pulling = false
 	player_obj.shake_d=5
 	player_obj.camera_shake_d = true
+	
+	
+	audio_manager(false,0,false,3)
+}
+
+if local_obj.object_index == boss_dada_obj {
+	
+	local_obj.met = true
+	planted = true
+	
+	x = local_obj.x
+	y = local_obj.y
+	
+	player_obj.tail_dest_x = x
+	player_obj.tail_dest_y = y
+	player_obj.tail_planted = true
+	player_obj.tail_throwing = false
+	player_obj.tail_pulling = false
+	player_obj.shake_d=5
+	player_obj.camera_shake_d = true
+	
+	zombie_interact_script(local_obj)
+	
 	audio_manager(false,0,false,3)
 }
 

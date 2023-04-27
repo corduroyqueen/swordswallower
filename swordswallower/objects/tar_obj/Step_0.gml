@@ -5,6 +5,11 @@ if player_obj.death {
 			audio_stop_sound(sound)
 		}
 }
+if player_obj.y + player_obj.sprite_height/2 - 20 > y - sprite_height/2
+&& place_meeting(x,y,player_obj) {
+	damage_script(10,sign(player_obj.x-x),5,-1)
+	audio_stop_sound(s_tar_bubbling)
+}
 if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 	if !p_met {
@@ -53,9 +58,5 @@ if place_meeting(x,y,player_obj) && !player_obj.zoom_timer_bool {
 	
 //}
 
-if player_obj.y - player_obj.sprite_height - 40 > y - sprite_height/2
-&& place_meeting(x,y,player_obj) {
-	damage_script(10,sign(player_obj.x-x),5,-1)
-	audio_stop_sound(s_tar_bubbling)
-}
+
 depth = -2303

@@ -239,6 +239,82 @@ ds_list_add(cape_p_r_wind_timer,(2/7)*wind_timer_m)
 ds_list_add(cape_p_r_wind_timer,(1/7)*wind_timer_m)
 ds_list_add(cape_p_r_wind_timer,(0/7)*wind_timer_m)
 
+cape_p_springs = ds_list_create()
+
+ds_list_add(cape_p_springs,150) // 80
+ds_list_add(cape_p_springs,150) // 110
+ds_list_add(cape_p_springs,150) // 160
+ds_list_add(cape_p_springs,150) // 200
+
+
+ds_list_add(cape_p_springs,220)
+ds_list_add(cape_p_springs,150)
+ds_list_add(cape_p_springs,200)
+ds_list_add(cape_p_springs,300)
+
+hair_p_springs = ds_list_create()
+
+ds_list_add(hair_p_springs,0)
+ds_list_add(hair_p_springs,30)
+ds_list_add(hair_p_springs,45)
+ds_list_add(hair_p_springs,50)
+ds_list_add(hair_p_springs,55)
+ds_list_add(hair_p_springs,40)
+ds_list_add(hair_p_springs,10)
+ds_list_add(hair_p_springs,5)
+
 head_spr_i = 0
 
 spr_mc_head_idle = e_head_idle
+
+hair_p_l_x = ds_list_create()
+hair_p_l_y = ds_list_create()
+
+hair_p_r_x = ds_list_create()
+hair_p_r_y = ds_list_create()
+
+ds_list_add(hair_p_l_x,0)
+ds_list_add(hair_p_l_x,0)
+ds_list_add(hair_p_l_x,0)
+ds_list_add(hair_p_l_x,0)
+ds_list_add(hair_p_l_x,0)
+ds_list_add(hair_p_l_x,0)
+
+ds_list_add(hair_p_l_y,0)
+ds_list_add(hair_p_l_y,10)
+ds_list_add(hair_p_l_y,20)
+ds_list_add(hair_p_l_y,30)
+ds_list_add(hair_p_l_y,40)
+ds_list_add(hair_p_l_y,50)
+
+ds_list_add(hair_p_r_x,0)
+ds_list_add(hair_p_r_x,0)
+ds_list_add(hair_p_r_x,0)
+ds_list_add(hair_p_r_x,0)
+ds_list_add(hair_p_r_x,0)
+ds_list_add(hair_p_r_x,0)
+
+ds_list_add(hair_p_r_y,0)
+ds_list_add(hair_p_r_y,10)
+ds_list_add(hair_p_r_y,20)
+ds_list_add(hair_p_r_y,30)
+ds_list_add(hair_p_r_y,40)
+ds_list_add(hair_p_r_y,50)
+
+temp_wind_velocity_x = 0
+temp_wind_velocity_y = 0
+
+hair_length = 5
+
+hair_1_x = ds_list_create()
+hair_1_y = ds_list_create()
+
+hair_1_vx = ds_list_create()
+hair_1_vy = ds_list_create()
+
+for(var i =0;i<hair_length;i++) {
+	ds_list_add(hair_1_x,0)
+	ds_list_add(hair_1_y,0)
+	ds_list_add(hair_1_vx,0)
+	ds_list_add(hair_1_vy,0)
+}

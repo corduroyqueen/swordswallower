@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "kill_notondash_parent_obj",
     "eventList": [
-        
+        {
+            "id": "eae25752-70fa-4b0c-b8e8-661f7e4d80db",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "8c5bd8c6-f8b9-4d33-92a3-9a2f294c461c",
+            "enumb": 0,
+            "eventtype": 4,
+            "m_owner": "6d44ed72-8997-43b9-b2bd-ef9b23d51856"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

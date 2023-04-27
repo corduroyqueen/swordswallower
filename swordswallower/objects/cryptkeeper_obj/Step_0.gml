@@ -166,7 +166,14 @@ if death {
 		instance_destroy(id)
 		return
 	}
-	if player_obj.zoom_timer_bool {
+	
+	
+	if blood_death_override_velocity_x != noone {
+		just_blood(
+			blood_death_override_velocity_x,
+			blood_death_override_velocity_y,
+			0.3,10,false,death_blood_spawn_x,death_blood_spawn_y)
+	} else if player_obj.zoom_timer_bool {
 		just_blood(player_obj.hsp*2,player_obj.vsp*2,0.2,80,true,death_blood_spawn_x,death_blood_spawn_y)
 	} else {
 		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,80,true,death_blood_spawn_x,death_blood_spawn_y)

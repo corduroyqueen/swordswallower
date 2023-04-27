@@ -8,8 +8,14 @@ if keyboard_check_pressed(ord("R")) {
 if death {
 	
 
-	if death_timer< 1 {
-		just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
+	if death_timer< 1 {if blood_death_override_velocity_x != noone {
+		just_blood(
+			blood_death_override_velocity_x,
+			blood_death_override_velocity_y,
+			0.3,10,false,death_blood_spawn_x,death_blood_spawn_y)
+		} else {
+			just_blood(tail_obj.hsp,tail_obj.vsp,0.2,30,false,sprite_width/4,sprite_height)
+		}
 		audio_stop_sound(s_fly_buzz)
 		audio_manager(false,0,false,3)
 	

@@ -15,7 +15,8 @@ if !player_obj.k_dash
 || place_meeting(x,y,ghost_obj) 
 || current_obj.object_index==hummingbird_obj
 || current_obj.object_index==hum_food_obj
-|| current_obj.object_index==circle_friend_obj {
+|| current_obj.object_index==circle_friend_obj
+|| current_obj.object_index == boss_dada_obj {
 	player_obj.zoom_timer_bool = false
 	player_obj.zoom_timer = 0
 	player_obj.bounced = false
@@ -29,12 +30,21 @@ if !player_obj.k_dash
 	player_obj.hsp = clamp(player_obj.hsp,-25,25)
 	player_obj.vsp = clamp(player_obj.vsp,-25,25)
 	player_sprite_obj.sword_ang = point_direction(0,0,player_obj.hsp,player_obj.vsp)+90
-	if place_meeting(x,y,hum_food_obj) {
-		current_obj.death = true
-	}
+	
 	if current_obj.object_index==circle_friend_obj {
 		current_obj.active = false
 	}
+	
+	if current_obj.object_index == boss_dada_obj {
+		with current_obj {
+			event_user(7)
+		}
+	}
+	
+	if place_meeting(x,y,hum_food_obj) {
+		current_obj.death = true
+	}
+	
 	if player_hitbox_check_obj.down_wall && abs(player_hitbox_check_obj.y-player_obj.y)<8 {
 		hsp*=0.2
 	}

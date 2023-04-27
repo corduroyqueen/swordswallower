@@ -20,6 +20,9 @@ material_type = 3
 
 can_sword_be_planted = false
 sword_ignore = false
+
+blood_death_override_velocity_x = noone
+blood_death_override_velocity_y = noone
 /*
 if current_time-player_obj.start_time>50 {
 	with enemy_activation_handler {

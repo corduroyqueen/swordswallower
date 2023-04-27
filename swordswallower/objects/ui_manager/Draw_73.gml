@@ -57,7 +57,10 @@ if speaking {
 
 	//draw_sprite(scary_skull,0,player_obj.camx+40,player_obj.camy+40)
 
-
+if health_bar_active {
+	draw_sprite_ext(healthbar_spr,0,player_obj.camx+95,player_obj.camy+95,1730,80,0,c_green,1);
+	draw_sprite_ext(healthbar_spr,0,player_obj.camx+100,player_obj.camy+100,health_bar_obj.health_proportion * 1720,70,0,c_red,1);
+}
 
 
 //draw_circle(tail_obj.x+tail_hilt_x,tail_obj.y+tail_hilt_y,5,false)
